@@ -1,5 +1,4 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/style.css">
 <link rel="stylesheet" href="/styles/pic_log.css">
 {{ end }}
 
@@ -9,16 +8,16 @@
   <a href="/">{ ♖ }</a>
 </div>
 <div class="pic-log">
-  {{ range $.Site.Data.piclog }}
+  {{ range .Pages.ByDate.Reverse }}
   <div class="pic">
-    <div class="picture" style="background-image: url({{ .altImage }})">
-      <img src="{{ .image }}">
+    <div class="picture" style="background-image: url({{ .Params.altImage }})">
+      <img src="{{ .Params.image }}">
     </div>
     <div class="pic-date">
-      {{ .date }}
+      {{ .Params.displayDate }}
     </div>
     <div class="pic-desc">
-      {{ .description }}
+      {{ .Params.description }}
     </div>
   </div>
   {{ end }}

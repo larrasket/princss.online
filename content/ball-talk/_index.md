@@ -1,3 +1,0 @@
----
-title: "Ball Talk"
----

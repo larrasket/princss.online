@@ -3,9 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
-{{ range .Site.Data.updates }}
-<div class="update"{{ if eq .last true }} style="border-bottom: none;"{{ end }}>
-  <strong>{{ .date }}</strong> - {{ .content | safeHTML }}
+{{ range $index, $page := .Pages.ByDate.Reverse }}
+<div class="update"{{ if eq $index (sub (len $.Pages) 1) }} style="border-bottom: none;"{{ end }}>
+  <strong>{{ $page.Params.displayDate }}</strong> - {{ $page.Content }}
 </div>
 {{ end }}
 {{ end }}

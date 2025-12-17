@@ -12,33 +12,22 @@
   <div class="left-header">
     <span style="font-weight: bold;">the castle</span> ----------→ <a href="https://neocities.org/site/princss" style="text-decoration: none; color: var(--darkbrown);">♕</a>
   </div>
-  <div class="right-header">
+  <div class="hamburger" onclick="toggleNav()">☰ menu</div>
+  <div class="right-header" id="mainNav">
     <div class="nav-link">
       <a href="/diary/" class="link">diary</a>
     </div>
     <div class="nav-link">
-      <a class="dropdown">personal</a>
-      <div class="dropdown-menu">
-        <a href="/habits/" class="dropdown-link" style="border-top: none;">habits</a>
-        <a href="/calendar/" class="dropdown-link" style="border-bottom: none;">calendar</a>
-      </div>
-    </div>
-    <div class="nav-link">
       <a href="/microblog/" class="link">microblog</a>
     </div>
-    <div class="nav-link" style="--dropdown-height: 65px;">
-      <a class="dropdown">media</a>
-      <div class="dropdown-menu">
-        <a href="/films/" class="dropdown-link" style="border-top: none;">films</a>
-        <a href="/television/" class="dropdown-link">television</a>
-        <a href="/music/" class="dropdown-link" style="border-bottom: none;">music</a>
-      </div>
+    <div class="nav-link">
+      <a href="/films/" class="link">films</a>
     </div>
     <div class="nav-link">
-      <a href="/ball-talk/" class="link">ball talk</a>
+      <a href="/music/" class="link">music</a>
     </div>
     <div class="nav-link">
-      <a href="/liquid-log/" class="link">liquid log</a>
+      <a href="/pic-log/" class="link">pic log</a>
     </div>
     <div class="nav-link" style="border-right: none;">
       <a href="/guestbook/" class="link">guestbook</a>
@@ -315,16 +304,11 @@ function moveCalendar(e) {
 document.querySelector("#prev").addEventListener("click", moveCalendar);
 document.querySelector("#next").addEventListener("click", moveCalendar);
 showCalendar(year, month);
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const dropdowns = document.querySelectorAll('.dropdown-menu');
-  dropdowns.forEach(dropdown => {
-    if (!dropdown.parentElement.style.getPropertyValue('--dropdown-height')) {
-      const height = dropdown.scrollHeight + 2 + 'px';
-      dropdown.parentElement.style.setProperty('--dropdown-height', height);
-    }
-  });
-});
+
+// Hamburger menu toggle
+function toggleNav() {
+  const nav = document.getElementById('mainNav');
+  nav.classList.toggle('nav-open');
+}
 </script>
 {{ end }}
