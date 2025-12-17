@@ -10,15 +10,15 @@
 <body>
   <div class="page-header">discoveries</div>
   <div class="content">
-    <p>{{ .Params.description }}</p>
+    <p>{{ .Site.Data.music.discoveries.description }}</p>
     <div class="discoveries">
-      {{ range $i, $disc := .Params.discoveries }}
-      <div class="discovery"{{ if eq $i (sub (len $.Params.discoveries) 1) }} style="border-bottom: none;"{{ end }}>
+      {{ range $i, $disc := .Site.Data.music.discoveries.discoveries }}
+      <div class="discovery"{{ if eq $i (sub (len $.Site.Data.music.discoveries.discoveries) 1) }} style="border-bottom: none;"{{ end }}>
         <div class="discovery-left">
           <img src="{{ $disc.image }}">
           <div class="discovery-info">
             <div class="artist">{{ $disc.artist }}</div>
-            <div class="title">{{ $disc.album }}</div>
+            <div class="title">{{ $disc.title }}</div>
           </div>
         </div>
         <div class="discovery-right">
