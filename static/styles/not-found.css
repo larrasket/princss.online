@@ -1,0 +1,23 @@
+html {
+    image-rendering: pixelated;
+}
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+a:hover {
+    letter-spacing: 1px;
+    opacity: 75%;
+    -webkit-transition: 0.25s;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.not-found {
+    margin-top: -30px;
+    text-align: center;
+}

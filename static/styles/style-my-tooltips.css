@@ -1,0 +1,16 @@
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+	/* basic */
+	max-width: max-content;
+	z-index:10;
+	margin-left: 15px;
+	/* style and design */
+	padding: 3px;
+	background-color: var(--darkbrown);
+	color: var(--white);
+	border: 1px dotted var(--white);
+	/* font */
+	font-family: 'MS UI Gothic';
+	font-size:12px;
+	color:var(--white);
+}

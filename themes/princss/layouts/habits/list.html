@@ -1,0 +1,18 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/habits.css">
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/habits_header.png">
+<div class="content">
+  <div class="header">
+    <div class="left-header">
+      <a href="/">the castle</a> / <a href="/habits/" style="font-weight: bold;">habits</a>
+    </div>
+    <div class="right-header">
+      (X) Done (-) Exempt (O) Missed
+    </div>
+  </div>
+  {{ .Content }}
+</div>
+{{ end }}

@@ -1,0 +1,267 @@
+html {
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline;
+    -webkit-transition: 0.25s;
+}
+
+a:hover {
+    opacity: 70%;
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+}
+
+body {
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 700px;
+}
+
+.header {
+    margin-top: -2px;
+    display: flex;
+    border-bottom: 1px dotted var(--darkbrown);
+    background-color: var(--white);
+}
+
+.header a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+
+.left-header {
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 151px;
+    border-right: 1px dotted var(--darkbrown);
+}
+
+.right-header {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 549px;
+}
+
+.content {
+    box-sizing: border-box;
+}
+
+.ball-post {
+    display: flex;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+
+.left-post {
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    width: 150px;
+}
+
+.right-post {
+    border-left: 1px dotted var(--darkbrown);
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 550px;
+}
+
+.date {
+    background-color: var(--darkbrown);
+    color: var(--white);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted var(--white);
+}
+
+.game-title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted var(--darkbrown);
+    display: flex;
+}
+
+.team-one,
+.team-two {
+    width: 70px;
+}
+
+.middle {
+    cursor: default;
+    width: 10px;
+    text-align: center;
+}
+
+.team-two {
+    padding-right: 5px;
+    text-align: right;
+}
+
+.stat {
+    padding-top: 5px;
+    display: flex;
+}
+
+.stat .middle {
+    font-weight: bold;
+}
+
+.writing {
+    padding-left: 10px;
+}
+
+.writing p {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+.players {
+    margin-top: 5px;
+    display: flex;
+}
+
+.player {
+    display: flex;
+    border-right: 1px dotted var(--darkbrown);
+    height: 130px;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+
+.profile {
+    border-right: 1px dotted var(--darkbrown);
+}
+
+.name {
+    padding: 3px;
+    margin-top: -3px;
+    text-align: center;
+}
+
+.info {}
+
+.player-stats {
+    display: flex;
+}
+
+.player-stats-left,
+.player-stats-right {
+    width: 80px;
+}
+
+.individual-stat {
+    display: flex;
+    padding-bottom: 2px;
+}
+
+.player-stats-value,
+.player-stat {
+    box-sizing: border-box;
+    width: 40px;
+}
+
+.player-stat {
+    cursor: default;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.player-stats-value {
+    padding-right: 5px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.stat-table-title,
+.stat-table-stat,
+.stat-table-name {
+    padding: 3px;
+}
+
+.stat-table-title {
+    font-weight: bold;
+    background-color: var(--darkbrown);
+    color: var(--white);
+    text-align: center;
+    border-bottom: 1px dotted var(--white);
+}
+
+.stat-table-title a {
+    -webkit-transition: 0.25s;
+}
+
+.stat-table-title a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+
+.stat-table-title a {
+    color: var(--white);
+}
+
+.stat-table-player {
+    display: flex;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+
+.stat-table-name {
+    box-sizing: border-box;
+    width: 110px;
+    border-right: 1px dotted var(--darkbrown);
+}
+
+.stat-table-name .stat-table-stat-group .stat-table-stat:hover {
+    cursor: default;
+}
+
+.stat-table-stat-group {
+    box-sizing: border-box;
+    display: flex;
+    width: 430px;
+}
+
+.stat-table-stat {
+    box-sizing: border-box;
+    border-right: 1px dotted var(--darkbrown);
+    text-align: center;
+    width: 100%;
+}
+
+.stat-table-disclaimer {
+    opacity: 70%;
+    font-style: italic;
+    padding: 3px;
+    text-align: right;
+}
+
+.vjs-control-bar {
+    background-color: var(--darkbrown);
+}
+
+.video {}
+
+.ball-post-img {
+    margin-top: 5px;
+    overflow: hidden;
+    border: 1px dotted var(--darkbrown);
+}
+
+.ball-post-img img {
+    margin-bottom: -2px;
+    opacity: 0%;
+    -webkit-transition: 0.25s;
+}
+
+.ball-post-img img:hover {
+    opacity: 100%;
+    -webkit-transition: 0.25s;
+}

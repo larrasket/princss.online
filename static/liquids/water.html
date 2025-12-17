@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/liquid.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="liquid-nav">
+        <a href="water.html#heb-sweetened-lemon-sparkling-water-beverage" class="single" onclick="clickSingleA(this)">H-E-B Sweetened Lemon Sparkling Water Beverage</a>
+        <a href="water.html#propel-zero-grape" class="single" onclick="clickSingleA(this)">Propel Zero, Grape</a>
+        <a href="water.html#propel-zero-berry" class="single" onclick="clickSingleA(this)">Propel Zero, Berry</a>
+      </div>
+      <div class="liquids">
+        <div class="liquid" id="heb-sweetened-lemon-sparkling-water-beverage">
+          <div class="liquid-left">
+            <div class="liquid-image" style="background-image: url(/media/images/drinks-images/heb-sweetened-lemon-sparkling-water-beverage-alt.png);">
+              <img src="/media/images/drinks-images/heb-sweetened-lemon-sparkling-water-beverage.png">
+            </div>
+          </div>
+          <div class="liquid-right">
+            <div class="liquid-title">H-E-B Sweetened Lemon Sparkling Water Beverage</div>
+            <div class="date-logged"><strong>Date logged:</strong> 03/26/2025</div>
+              <p>Pretty much a daily drink for me. I can't stop putting down the lemon-flavored drinks, man. Could probably go through 3-4 cans a day if I didn't know that sucralose wasn't all the good for you. Still can crush a 12-pack of these in a couple of days. God I love lemon-flavored stuff.</p>
+            <div class="rating"><strong>Rating: </strong>9.5/10</div>
+          </div>
+        </div>
+        <div class="liquid" id="propel-zero-grape">
+          <div class="liquid-left">
+            <div class="liquid-image" style="background-image: url(/media/images/drinks-images/propel-zero-grape-alt.png);">
+              <img src="/media/images/drinks-images/propel-zero-grape.png">
+            </div>
+          </div>
+          <div class="liquid-right">
+            <div class="liquid-title">Propel Zero, Grape</div>
+            <div class="date-logged"><strong>Date logged:</strong> 03/11/2025</div>
+            <p>On par with <a href="water.html#propel-zero-berry">Propel Zero, Berry</a> -- but tastes like grape! I don't usually like grape drinks, but this was good as hell. I think maybe if something is clear and has no color and doesn't taste like water it tricks my brain into liking it more than I would actually.</p>
+            <div class="rating"><strong>Rating:</strong> 8/10</div>
+          </div>
+        </div>
+        <div class="liquid" id="propel-zero-berry" style="border-bottom: none;">
+          <div class="liquid-left">
+            <div class="liquid-image" style="background-image: url(/media/images/drinks-images/propel-zero-berry-alt.png);">
+              <img src="/media/images/drinks-images/propel-zero-berry.png">
+            </div>
+          </div>
+          <div class="liquid-right">
+            <div class="liquid-title">Propel Zero, Berry</div>
+            <div class="date-logged"><strong>Date logged:</strong> 02/26/2025</div>
+            <p>This was <i>the</i> refresher in my middle school gym class after class was over. Everyone would crowd in the men's locker room, right by the coach's office, and hand over $2 to Coach 'B' for a choice of Berry, Grape, or Strawberry Kiwi. I would either choose Berry or Grape. This drink has a lot of nostalgic attachment; I remember when I had already "graduated" middle school, I asked my Dad to get me a case of Propel to have at home. Now I drink it almost every day -- it's become a cornerstone of my life. Berry is good.</p>
+            <div class="rating"><strong>Rating:</strong> 8/10</div>
+          </div>
+        </div>
+        <div style="height: 530px;"></div>
+      </div>
+    </div>
+    <script src="../scripts/active.js"></script>
+    <script type="text/javascript">
+      function iframeLoaded() {
+          var iFrameID = document.getElementById('idIframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+    </script>
+  </body>
+</html>

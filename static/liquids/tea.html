@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/liquid.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="liquid-nav">
+        <a href="tea.html#gold-peak-sweet-tea" class="single" onclick="clickSingleA(this)">Gold Peak Sweet Tea</a>
+        <a href="tea.html#arizona-sun-brewed-style-iced-tea-with-lemon-flavor">AriZona Sun Brewed Style Iced Tea with Lemon Flavor</a>
+      </div>
+      <div class="liquids">
+        <div class="liquid" id="gold-peak-sweet-tea">
+          <div class="liquid-left">
+            <div class="liquid-image" style="background-image: url(/media/images/drinks-images/gold-peak-sweet-tea-alt.png);">
+              <img src="/media/images/drinks-images/gold-peak-sweet-tea.png">
+            </div>
+          </div>
+          <div class="liquid-right">
+            <div class="liquid-title">Gold Peak Sweet Tea</div>
+            <div class="date-logged"><strong>Date logged:</strong> 02/27/2025</div>
+            <p>Drank some of this while I was working today. Not bad. Don't think I'm a fan of 'sweet tea' in general because the sweetness is kind of weak compared to the all-time GOAT tea, Texas sweet tea. This was pretty refreshing though and got me through the day. The Gold Peak Sweet Tea with Lemonade is way better, but this meets code.</p>
+            <div class="rating"><strong>Rating:</strong> 5/10</div>
+          </div>
+        </div>
+        <div class="liquid" id="arizona-sun-brewed-style-iced-tea-with-lemon-flavor" style="border-bottom: none;">
+          <div class="liquid-left">
+            <div class="liquid-image" style="background-image: url(/media/images/drinks-images/arizona-sun-brewed-style-iced-tea-with-lemon-flavor-alt.png);">
+              <img src="/media/images/drinks-images/arizona-sun-brewed-style-iced-tea-with-lemon-flavor.png">
+            </div>
+          </div>
+          <div class="liquid-right">
+            <div class="liquid-title">AriZona Sun Brewed Style Iced Tea with Lemon Flavor</div>
+            <div class="date-logged"><strong>Date logged:</strong> 07/13/2023</div>
+            <p>Really refreshing, especially on a hot day. I find that a lot of sweet tea, especially Texas Tea, is a bit too harsh in its sweetness. Also I automatically like anything that is lemon flavored, which makes this my favorite AriZona tea flavor out of all of them.</p>
+            <div class="rating"><strong>Rating:</strong> 8.5/10</div>
+          </div>
+        </div>
+        <div style="height: 530px;"></div>
+      </div>
+    </div>
+    <script src="../scripts/active.js"></script>
+    <script type="text/javascript">
+      function iframeLoaded() {
+          var iFrameID = document.getElementById('idIframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+    </script>
+  </body>
+</html>

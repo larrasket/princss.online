@@ -1,0 +1,51 @@
+baseURL = 'https://princss.online/'
+languageCode = 'en-us'
+title = 'The Castle'
+theme = 'princss'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "diary"
+    url = "/diary/"
+    weight = 1
+  [[menu.main]]
+    name = "habits"
+    url = "/habits/"
+    weight = 2
+  [[menu.main]]
+    name = "calendar"
+    url = "/calendar/"
+    weight = 3
+  [[menu.main]]
+    name = "microblog"
+    url = "/microblog/"
+    weight = 4
+  [[menu.main]]
+    name = "films"
+    url = "/films/"
+    weight = 5
+  [[menu.main]]
+    name = "television"
+    url = "/television/"
+    weight = 6
+  [[menu.main]]
+    name = "music"
+    url = "/music/"
+    weight = 7
+  [[menu.main]]
+    name = "ball talk"
+    url = "/ball-talk/"
+    weight = 8
+  [[menu.main]]
+    name = "liquid log"
+    url = "/liquid-log/"
+    weight = 9
+  [[menu.main]]
+    name = "guestbook"
+    url = "/guestbook/"
+    weight = 10

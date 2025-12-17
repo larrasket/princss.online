@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/liquid.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="liquid-nav">
+
+      </div>
+      <div class="liquids">
+        <div style="height: 530px;"></div>
+      </div>
+    </div>
+    <script src="../scripts/active.js"></script>
+    <script type="text/javascript">
+      function iframeLoaded() {
+          var iFrameID = document.getElementById('idIframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+    </script>
+  </body>
+</html>

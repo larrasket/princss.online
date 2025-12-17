@@ -1,0 +1,167 @@
+html {
+    background-color: var(--white);
+}
+
+body {
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 900px;
+}
+
+div {}
+
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+
+a:hover {
+    opacity: 75%;
+    -webkit-transition: 0.25s;
+}
+
+.header {
+    box-sizing: border-box;
+    margin-top: -2px;
+    display: flex;
+    width: 900px;
+    border-bottom: 1px dotted var(--darkbrown);
+    background-color: var(--white);
+}
+
+.header a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+
+.content {}
+
+.left-header {
+    box-sizing: border-box;
+    width: 702px;
+    height: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px dotted var(--darkbrown);
+}
+
+.right-header {
+    box-sizing: border-box;
+    text-align: right;
+    padding-top: 5px;
+    width: 198px;
+}
+
+.lists-content {
+    border-bottom: 1px dotted var(--darkbrown);
+    display: flex;
+    width: 900px;
+}
+
+.list {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100%;
+}
+
+.list-title {
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: var(--white);
+    color: var(--darkbrown);
+    border-bottom: 1px dotted var(--darkbrown);
+}
+
+.list ul {
+    margin: 5px;
+    padding-left: 17px;
+}
+
+.list li {}
+
+.check {
+    padding-left: 3px;
+    list-style-type: '✔';
+}
+
+.calendar-header {
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-shadow:
+        -1px 1px 0 var(--white),
+        1px 1px 0 var(--white),
+        1px -1px 0 var(--white),
+        -1px -1px 0 var(--white);
+    width: 700px;
+    height: 100px;
+    background-image: url(../media/images/halloween_daily.png);
+}
+
+.calendar {
+    border-right: 1px dotted var(--darkbrown);
+}
+
+.weekdays {
+    background-color: var(--darkbrown);
+    color: var(--white);
+    width: 700px;
+    display: flex;
+}
+
+.weekday {
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100px;
+}
+
+.week {
+    box-sizing: border-box;
+    display: flex;
+    border-top: 1px dotted var(--darkbrown);
+    border-left: 1px dotted var(--darkbrown);
+    height: 100px;
+    width: 700px;
+}
+
+.day {
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-right: 1px dotted var(--darkbrown);
+    height: 100px;
+    width: 100px;
+    -webkit-transition: 0.25s;
+}
+
+.day span {
+    margin-left: 5px;
+    margin-top: 5px;
+    display: block;
+    font-weight: bold;
+    text-shadow:
+        -1px 1px 0 var(--white),
+        1px 1px 0 var(--white),
+        1px -1px 0 var(--white),
+        -1px -1px 0 var(--white);
+}
+
+.day a {
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: block;
+}
+
+.day:hover {
+    opacity: 50%;
+    -webkit-transition: 0.25s;
+}

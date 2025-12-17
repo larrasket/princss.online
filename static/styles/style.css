@@ -1,0 +1,29 @@
+:root {
+    --darkbrown: #190503;
+    --white: #f5e8e7;
+}
+html {
+    background-color: var(--white);
+    font-family: 'MS UI Gothic';
+    font-size: 14px;
+    color: var(--darkbrown);
+    image-rendering: pixelated;
+}
+::selection {
+    background-color: var(--darkbrown);
+    color: var(--white);
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border: 1px dotted var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+p {
+    text-align: justify;
+}

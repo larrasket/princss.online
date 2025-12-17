@@ -1,0 +1,81 @@
+body {
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 800px;
+}
+div {
+    box-sizing: border-box;
+}
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline;
+    -webkit-transition: 0.25s;
+}
+.left-header a:hover {
+    opacity: 70%;
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+}
+.header {
+    z-index: 3;
+    margin-top: -2px;
+    display: flex;
+    background-color: var(--white);
+    position: sticky;
+    top: 0px;
+}
+.header a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+.left-header {
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    border-right: 1px dotted var(--darkbrown);
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.right-header {
+    text-align: center;
+    display: flex;
+    width: 660px;
+}
+.right-header a {
+    border-right: 1px dotted var(--darkbrown);
+    border-bottom: 1px dotted var(--darkbrown);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.25s;
+}
+.right-header a:hover {
+    border-right: 1px dotted var(--white);
+    border-bottom: 1px dotted var(--white);
+    color: var(--white);
+    background: var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+.right-header a.active {
+    pointer-events: none;
+    background-color: var(--darkbrown);
+    color: var(--white);
+    border-right: 1px dotted var(--white);
+    border-bottom: 1px dotted var(--white);
+    letter-spacing: 1px;
+}
+.liquid-log-frame {
+    overflow: hidden;
+    display: block;
+    position: sticky;
+    top: 25px;
+}
+iframe {
+    border: none;
+    box-sizing: border-box;
+    width: 800px;
+    height: 730px;
+}

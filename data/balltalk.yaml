@@ -1,0 +1,38 @@
+# Sample ball talk entry - add more entries as needed
+- id: "04072025_fla_hou"
+  date: "04/07/2025"
+  team1: "FLA"
+  score1: 65
+  team2: "HOU"
+  score2: 63
+  stats:
+    - label: "FG"
+      title: "Field Goals"
+      team1: "21/53"
+      team2: "24/69"
+    - label: "3FG"
+      title: "3-Point Field Goals"
+      team1: "6/24"
+      team2: "6/25"
+    - label: "FTS"
+      title: "Free Throws"
+      team1: "17/21"
+      team2: "9/14"
+    - label: "TO"
+      title: "Turnovers"
+      team1: "13"
+      team2: "9"
+    - label: "REB"
+      title: "Rebounds"
+      team1: "40"
+      team2: "39"
+    - label: "AST"
+      title: "Assists"
+      team1: "14"
+      team2: "5"
+    - label: "BLK"
+      title: "Blocks"
+      team1: "5"
+      team2: "3"
+  content: |
+    <p>Game recap content goes here...</p>

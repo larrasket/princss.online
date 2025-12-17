@@ -1,0 +1,89 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/diary.css">
+{{ end }}
+
+{{ define "bodyAttrs" }} onload="startTime()"{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/diary_header.png">
+<div class="header">
+  <div class="left-header">
+    <a href="/">the castle</a> / <strong><a href="/diary/">diary</a></strong>
+  </div>
+  <div class="right-header">
+    "and so, the pen withers away at the page"
+  </div>
+</div>
+<div class="content">
+  <!-- Diary Nav -->
+  <nav>
+    {{ range .Site.Data.diary }}
+    <a href="/diary/#{{ .id }}">{{ .date }}</a>
+    {{ end }}
+  </nav>
+  <!-- Diary Entries -->
+  <main>
+    {{ range .Site.Data.diary }}
+    <article id="{{ .id }}"{{ if eq .last true }} style="border-bottom: none;"{{ end }}>
+      <div class="page-content">
+        <div class="date">{{ .date }}</div>
+        <div class="page-writing">
+          {{ .content | safeHTML }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </main>
+</div>
+<div class="header" style="border-bottom: 0px; border-top: 1px dotted var(--darkbrown); position: sticky; bottom: 0px;">
+  <div class="left-header"></div>
+  <div class="right-header" style="padding-top: 5px;">c. princss 2023</div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  const txtEl = document.getElementById('txt');
+  if (txtEl) txtEl.innerHTML = h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+  if (i < 10) { i = "0" + i };
+  return i;
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const anchors = document.querySelectorAll('a');
+  const articles = document.querySelectorAll('article'); 
+
+  const observerOptions = {
+    root: null, 
+    rootMargin: '124px', 
+    threshold: 0.2 
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      const anchor = document.querySelector(`a[href="#${entry.target.id}"]`);
+      if (entry.isIntersecting) {
+        anchors.forEach(anchor => anchor.classList.remove('active'));
+        anchor.classList.add('active');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, observerOptions);
+  articles.forEach(article => {
+    observer.observe(article);
+  });
+});
+</script>
+{{ end }}

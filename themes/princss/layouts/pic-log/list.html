@@ -1,0 +1,44 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/pic_log.css">
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/pic_log_header.png" style="text-align: center; display: block; margin: auto; margin-bottom: -9px;">
+<div class="back-home">
+  <a href="/">{ ♖ }</a>
+</div>
+<div class="pic-log">
+  {{ range $.Site.Data.piclog }}
+  <div class="pic">
+    <div class="picture" style="background-image: url({{ .altImage }})">
+      <img src="{{ .image }}">
+    </div>
+    <div class="pic-date">
+      {{ .date }}
+    </div>
+    <div class="pic-desc">
+      {{ .description }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+<script>
+  document.querySelectorAll('.pic').forEach(pic => {
+    const desc = pic.querySelector('.pic-desc');
+    pic.style.maxHeight = '202px';
+    pic.addEventListener('mouseenter', () => {
+      if (desc) {
+        pic.style.maxHeight = pic.scrollHeight + 5 + 'px';
+        desc.style.opacity = '1';
+      }
+    });
+    pic.addEventListener('mouseleave', () => {
+      if (desc) {
+        pic.style.maxHeight = '202px';
+        desc.style.opacity = '0';
+      }
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,18 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/calendar_page.css">
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/calendar_header.png">
+<div class="header" style="margin-top: -2px; position: sticky; top: 0px; display: flex;">
+  <div style="width: 100%">
+    <a href="/">the castle</a> / <a href="/calendar/" style="font-weight: bold;">calendar</a>
+  </div>
+  <div style="width: 100%; text-align: right;">
+    (*) Holiday (!) Birthday (+) Event (-) To-Do
+  </div>
+</div>
+<div class="container">
+  {{ .Content }}
+</div>
+{{ end }}

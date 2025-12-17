@@ -1,0 +1,11 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/updates.css">
+{{ end }}
+
+{{ define "main" }}
+{{ range .Site.Data.updates }}
+<div class="update"{{ if eq .last true }} style="border-bottom: none;"{{ end }}>
+  <strong>{{ .date }}</strong> - {{ .content | safeHTML }}
+</div>
+{{ end }}
+{{ end }}

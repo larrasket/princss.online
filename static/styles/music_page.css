@@ -1,0 +1,193 @@
+html {
+    background-color: var(--white);
+    background-position: center;
+    color: var(--darkbrown);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::selection {
+    background-color: var(--darkbrown);
+    color: var(--white);
+}
+h2 {
+    text-align: center;
+    font-size: 14px;
+    text-decoration: 1px dotted underline var(--darkbrown);
+}
+a {
+    color: var(--gold);
+    text-decoration: 1px dotted underline;
+}
+body {
+    box-sizing: border-box;
+    width: 600px;
+    margin: 0px;
+}
+.page-header {
+    z-index: 2;
+    width: 600px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 1px dotted var(--darkbrown);
+    background-color: var(--white);
+    color: var(--darkbrown);
+    font-weight: bold;
+    position: sticky;
+    top: 0px;
+}
+.content {
+    padding-left: 10px;
+}
+.collection {
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+}
+.collection img {
+    margin: 2.5px;
+}
+.discovery {
+    display: flex;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.discovery-info {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.artist {
+    font-weight: bold;
+}
+.title {
+    color: var(--gold);
+}
+.discovery-left {
+    border-right: 1px dotted var(--darkbrown);
+}
+.discovery-right {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.favorites {
+
+}
+.titles {
+    display: block;
+    padding-left: 10px;
+    min-width: 259px;
+    max-width: 259px;
+}
+.wrapped-header {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--darkbrown);
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px dotted var(--white);
+    border-bottom: 1px dotted var(--white);
+}
+.equipment-label {
+    text-align: center;
+    position: relative;
+    width: 120px;
+    padding: 3px;
+    background-color: var(--white);
+    border: 1px dotted var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+.equipment-label a {
+    display: block;
+}
+.equipment-label:hover {
+    color: var(--white);
+    background-color: var(--darkbrown);
+    border: 1px dotted var(--white);
+    -webkit-transition: 0.25s;
+}
+.my-equipment {
+    width: 590px;
+    height: 307px;
+    background-position: center;
+    background-image: url(../media/images/setup_bg_1.png);
+    -webkit-transition: 0.25s;
+}
+.my-equipment:hover {
+    background-image: url(../media/images/setup_bg_2.png);
+    -webkit-transition: 0.25s;
+}
+.collection-album {
+    width: 118px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: 0.15s;
+}
+.collection-album span {
+    cursor: default;
+    background-color: var(--white);
+    border: 1px dotted var(--darkbrown);
+    width: fit-content;
+    padding: 3px;
+    opacity: 0%;
+    flex: 0 0 110px;
+    -webkit-transition: 0.15s;
+}
+.collection-album:hover {
+    -webkit-transition: 0.15s;
+}
+.collection-album:hover span {
+    opacity: 200%;
+    -webkit-transition: 0.15s;
+}
+.favorite-album div {
+    box-sizing: border-box;
+}
+.favorite-album {
+    display: flex;
+    width: 590px;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.favorite-left {
+    border-right: 1px dotted var(--darkbrown);
+}
+.favorite-image {
+    box-sizing: border-box;
+    height: 118px;
+}
+.favorite-rank {
+    font-weight: bold;
+    border-bottom: 1px dotted var(--darkbrown);
+    padding: 5px;
+}
+.favorite-right {
+    width: 480px;
+}
+.favorite-name {
+    height: 25px;
+    display: flex;
+    padding-right: none;
+    padding: 5px;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.name {
+    width: 100%;
+}
+.favorite-desc {
+    height: 113px;
+    text-align: justify;
+    padding-left: 5px;
+}
+.favorite-desc p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.favorite-track {
+    width: 100%;
+    text-align: right;
+}

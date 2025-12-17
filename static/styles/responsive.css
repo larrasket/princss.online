@@ -1,0 +1,429 @@
+/* Responsive CSS for princss.online */
+/* This file adds mobile and tablet responsiveness while maintaining the original design */
+
+/* Base responsive variables */
+:root {
+  --mobile-padding: 10px;
+  --tablet-breakpoint: 900px;
+  --mobile-breakpoint: 600px;
+}
+
+/* Tablet styles (under 900px) */
+@media screen and (max-width: 900px) {
+  /* Index page */
+  body {
+    padding: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .header-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: column !important;
+  }
+
+  .left {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px dotted var(--darkbrown);
+    padding-bottom: 10px;
+  }
+
+  .right {
+    width: 100% !important;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .left-header {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px dotted var(--darkbrown);
+    text-align: center;
+  }
+
+  .right-header {
+    width: 100% !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .right-header .nav-link {
+    flex: 1 1 auto;
+    min-width: 80px;
+  }
+
+  .main-content {
+    flex-direction: column !important;
+  }
+
+  .main-content-left {
+    width: 100% !important;
+  }
+
+  .main-content-right {
+    width: 100% !important;
+    border-left: none !important;
+    border-top: 1px dotted var(--darkbrown);
+  }
+
+  .updates iframe {
+    width: 100% !important;
+  }
+
+  .footer {
+    width: 100% !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    width: 100% !important;
+    border-left: none !important;
+    border-bottom: 1px dotted var(--darkbrown);
+  }
+
+  .footer-right {
+    border-bottom: none !important;
+    text-align: center !important;
+  }
+
+  /* Calendar */
+  #calendar {
+    justify-content: center;
+  }
+
+  .calendar-buttons {
+    justify-content: center;
+  }
+
+  /* Neighbors */
+  .neighbors-buttons {
+    height: auto !important;
+    max-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  /* Audio player */
+  .audio-player {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Featured image */
+  .featured-image {
+    width: 100% !important;
+    max-width: 177px;
+    margin: 0 auto;
+  }
+
+  /* Diary page */
+  .diary-content,
+  .content {
+    flex-direction: column !important;
+  }
+
+  nav {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 150px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    position: relative !important;
+  }
+
+  nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  main {
+    width: 100% !important;
+    border-left: none !important;
+  }
+
+  /* Films page */
+  .body-div {
+    width: 100% !important;
+  }
+
+  /* Music page */
+  .music-container,
+  .container {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+
+  .music-nav,
+  .liquid-nav {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .music-nav a,
+  .liquid-nav a {
+    flex: 1;
+    text-align: center;
+    width: auto !important;
+  }
+
+  /* Habits page */
+  .habit-tracker {
+    overflow-x: auto;
+  }
+
+  /* Calendar page */
+  .calendar {
+    width: 100% !important;
+    overflow-x: auto;
+  }
+
+  /* Microblog */
+  .post {
+    width: 100% !important;
+  }
+
+  /* Guestbook */
+  .guestbook-content {
+    width: 100% !important;
+  }
+
+  /* Pic log */
+  .pic-log {
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  /* Sitemap */
+  .sitemap-container {
+    width: 100% !important;
+    overflow-x: auto;
+  }
+}
+
+/* Mobile styles (under 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 5px !important;
+    font-size: 12px;
+  }
+
+  .header-image {
+    max-width: 100%;
+  }
+
+  .right-header .nav-link {
+    min-width: 60px;
+    font-size: 11px;
+  }
+
+  .dropdown-menu {
+    width: 100% !important;
+    left: 0 !important;
+  }
+
+  .dropdown-menu a.dropdown-link {
+    width: 100% !important;
+  }
+
+  /* Calendar smaller */
+  table {
+    width: 100% !important;
+    max-width: 180px;
+  }
+
+  td {
+    padding: 2px !important;
+    font-size: 11px;
+  }
+
+  button {
+    width: 50% !important;
+    font-size: 11px;
+  }
+
+  /* Welcome text */
+  .welcome {
+    padding: 5px !important;
+  }
+
+  /* Updates iframe */
+  .updates iframe {
+    height: 150px !important;
+  }
+
+  /* About section */
+  .about-desc {
+    font-size: 12px;
+  }
+
+  .about-status {
+    font-size: 11px;
+  }
+
+  /* Neighbors */
+  .neighbors-buttons {
+    max-height: 150px;
+  }
+
+  .neighbors-buttons img {
+    width: 44px;
+    height: auto;
+  }
+
+  /* Featured image */
+  .featured-image {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Diary */
+  article {
+    padding: 5px !important;
+  }
+
+  .page-writing {
+    padding: 5px !important;
+  }
+
+  .page-writing img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Films */
+  .film-calendar {
+    overflow-x: auto;
+  }
+
+  /* Music page */
+  .collection img {
+    width: 60px !important;
+    height: auto;
+  }
+
+  .discovery {
+    flex-direction: column;
+  }
+
+  /* Habits */
+  .habit-row {
+    font-size: 10px;
+  }
+
+  /* Pic log */
+  .pic {
+    width: calc(50% - 6px) !important;
+    max-height: none !important;
+  }
+
+  /* Ball talk */
+  .game-writeup {
+    padding: 5px !important;
+  }
+
+  .shot-chart img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Liquid log */
+  iframe {
+    width: 100% !important;
+    height: 400px !important;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 400px) {
+  .right-header {
+    flex-direction: column;
+  }
+
+  .right-header .nav-link {
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px dotted var(--darkbrown);
+  }
+
+  .right-header .nav-link:last-child {
+    border-bottom: none !important;
+  }
+
+  .dropdown-menu {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  .calendar-buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100% !important;
+    border-right: none !important;
+    border-left: none !important;
+  }
+
+  .neighbors-buttons img {
+    width: 40px;
+  }
+
+  .pic {
+    width: 100% !important;
+  }
+}
+
+/* Ensure images are responsive everywhere */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scrollable containers on mobile */
+.habit-tracker,
+.film-calendar,
+.calendar,
+.sitemap-container {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link a {
+    padding: 10px 5px;
+  }
+
+  nav a {
+    padding: 10px;
+  }
+}

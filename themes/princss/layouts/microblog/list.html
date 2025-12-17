@@ -1,0 +1,32 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/microblog.css">
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/microblog_header.png">
+<div class="header">
+  <div class="left-header">
+    <a href="/">the castle</a> / <a href="/microblog/" style="font-weight: bold;">m-blog</a>
+  </div>
+  <div class="right-header">
+    inspired by <a href="https://sugarforbrains.neocities.org/words/microblog/woofs">sugarforbrains</a> microblog
+  </div>
+</div>
+<div class="content">
+  {{ range .Site.Data.microblog }}
+  <div class="post" id="{{ .id }}">
+    <div class="post-info">
+      <img src="/media/images/pfp.png" style="width: 60px; height: 60px;">
+      <div class="info">
+        <div class="name">princss</div>
+        <div class="date">{{ .date }}</div>
+        <div class="time">@{{ .time }}</div>
+      </div>
+    </div>
+    <div class="post-content">
+      {{ .content | safeHTML }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,35 @@
+- date: "08/20/2025"
+  content: 'Updated <a href="/calendar/" target="_top">calendar</a>, <a href="/films/lists/" target="_top">lists</a>, <a href="/habits/" target="_top">habits</a> and <a href="/music/" target="_top">music</a>.'
+- date: "05/01/2025"
+  content: 'Updated <a href="/films/lists/" target="_top">lists</a> in April 2025 and added May 2025. Also added the <a href="/calendar/#may_2025" target="_top">May 2025 calendar</a> and <a href="/habits/#may-2025" target="_top">May 2025 habit tracker</a>.'
+- date: "04/07/2025"
+  content: 'New writeup on the <a href="/ball-talk/#04072025_fla_uh" target="_top">March Madness Championship Game</a>.'
+- date: "04/06/2025"
+  content: 'New <a href="/diary/#04-06-2025" target="_top">diary entry</a>. Added new vinyls to the <a href="/music/" target="_top">collection page</a>.'
+- date: "04/03/2025"
+  content: 'Noodled around in code and found a way to add arrows to my <a href="/calendar/" target="_top">calendar</a> to extend events past one date. Only viewable in 100% zoom though. Removed <a style="text-decoration: 1px dotted underline line-through;" href="https://princss.online/archive.html" target="_top">archive</a> because it slowed the fuck out of my page uploads, and also don''t really see a reason to have it still seeing as every archived page is bugged anyway. Moved <a href="/guestbook/" target="_top">guestbook</a> in its place on the navbar. Also, changed the styling in <a href="/habits/" target="_top">habits</a> to the habit table header, making it darker. Should create more visual distinction between the different months when they are added later.'
+- date: "04/02/2025"
+  content: 'Finished <a href="/calendar/" target="_top">calendar</a>. Removed to-do list under personal dropdown.'
+- date: "03/31/2025"
+  content: 'Added two dropdowns in the navbar -- personal (drops down to <a href="/habits/" target="_top">habits</a>, <a href="https://princss.online/to-do_list.html" target="_top">to-do list</a>, and <a href="/calendar/" target="_top">calendar</a>) and media (drops down to <a href="/films/" target="_top">films</a>, <a href="https://princss.online/television.html" target="_top">television</a>, and <a href="/music/" target="_top">music</a>). Removed sitemap temporarily, going to revamp it.'
+- date: "03/26/2025"
+  content: 'New <a href="/diary/#03-26-2025" target="_top">diary entry</a>. Added the onClick active script to the <a href="/liquid-log/" target="_top">liquid log</a> on the the sidebar nav for the specific liquids.'
+- date: "03/12/2025"
+  content: 'Added a <a href="/films/lists/#march-2025" target="_top">March 2025</a> calendar for <a href="/films/lists/" target="_top">lists</a>, and added a corresponding link in the <a href="/sitemap/" target="_top">sitemap.</a> Added the Wilco CDs I got over the weekend to the <a href="https://princss.online/music.html?iframeSrc=music-pages/collection.html" target="_top">collection</a>.'
+- date: "03/10/2025"
+  content: 'Added descriptions to each picture in the <a href="/pic-log/" target="_top">pic log</a>, which can be made visible when hovering over a pic.'
+- date: "03/07/2025"
+  content: 'New <a href="/diary/#03-06-2025" target="_top">diary entry</a> and new writeup on the <a href="/ball-talk/#03062025_hou_nop" target="_top">HOU @ NOP</a> game that took place on 03/06/2025. Also made it so that the stat abbreviations can be hovered over for tooltips, providing extra information about the stat or the stat''s full, unabbreviated name (provided via <a href="https://manos.malihu.gr/style-my-tooltips-jquery-plugin/" target="_top">tooltip script</a>). Tweaked the index calendar so that each date highlights when hovered -- just because I''m addicted to :hover css styling.'
+- date: "03/04/2025"
+  content: 'Updated the button wall. If I''m missing you, please kindly leave a message letting me know on either my <a href="/guestbook/" target="_top">guestbook</a> or my <a href="https://neocities.org/site/princss" target="_top">neocities profile</a>'
+- date: "03/03/2025"
+  content: 'New writeup on the <a href="/ball-talk/#03012025_sac_hou" target="_top">SAC @ HOU</a> game that took place on 03/01/2025.'
+- date: "03/02/2025"
+  content: 'Finished making the <a href="/sitemap/" target="_top">sitemap</a>. Tweaked the <a href="/diary/" target="_top">diary</a> <i>again</i> because I wanted to make it more responsive to different resolutions/screen heights--added a script that made it so that when a diary entry is visible the links in the navbar are highlighted ''active'' on that particular entry. Changed the ''active'' color of navbar links in <a href="/music/" target="_top">music</a> and <a href="/liquid-log/" target="_top">liquid log</a> as well.'
+- date: "02/27/2025"
+  content: 'Created a <a href="/pic-log/" target="_top">pic log</a> for featured images. Clicking on the image takes you to the page. Cleaned up the diary by adding the <a href="https://stackoverflow.com/questions/25579888/keeping-a-active-until-another-link-is-clicked" target="_top">script</a> that I used for both the <a href="/music/" target="_top">music</a> & <a href="/liquid-log/" target="_top">liquid log</a> for the navigation. Made a <a href="/updates/#" target="_top">sitemap</a> link that doesn''t lead to anywhere yet.'
+- date: "02/26/2025"
+  content: 'Added a <a href="/guestbook/" target="_top">guestbook</a> using HTML Comment Box. Also, finished the <a href="/liquid-log/" target="_top">liquid log</a> that was on my fourth(?) version of my site, logged a new liquid: Propel Zero, Berry. Made some marginal changes to the <a href="/music/" target="_top">music</a> by adding a <a href="https://stackoverflow.com/questions/25579888/keeping-a-active-until-another-link-is-clicked" target="_top">script</a> to tweak the navigation menu.'
+  last: true
+- date: "02/24/2025"
+  content: 'A new index! Added links to navigation for <a href="/updates/#" target="_top">liquid log</a> (doesn''t link yet) and <a href="https://princss.online/archive.html" target="_top">archive</a>. New index features a calendar, button wall for neighbors, a little ''about me'', a music player, and a featured image section.'

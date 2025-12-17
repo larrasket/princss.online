@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline;
+    -webkit-transition: 0.25s;
+}
+a:hover {
+    opacity: 70%;
+    -webkit-transition: 0.25s;
+}
+.update {
+    text-align: justify;
+    border-bottom: 1px dotted var(--darkbrown);
+    padding: 10px;
+}

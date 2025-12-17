@@ -1,0 +1,138 @@
+body {
+    padding-top: 25px;
+    display: block;
+    margin: auto;
+    width: 350px;
+}
+#hcb_msg {
+    margin: 0px;
+}
+#HCB_comment_box {
+    font-family: 'MS UI Gothic';
+}
+#HCB_comment_box input, textarea {
+    font-family: 'MS UI Gothic';
+    border: 1px dotted var(--darkbrown);
+    border-radius: 0px;
+}
+#HCB_comment_box input#hcb_form_name.hcb-shadow-r {
+    font-family: 'MS UI Gothic';
+}
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name {
+    background-color: var(--white);
+    font-family: 'MS UI Gothic';
+    font-size: 14px;
+    padding: 3px;
+    margin: 0;
+}
+#HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+    font-family: 'MS UI Gothic';
+    letter-spacing: auto;
+    border: 1px dotted var(--darkbrown);
+    outline: 0;
+    background: none;
+    background-color: var(--white);
+    color: var(--darkbrown);
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 5px;
+    margin-right: 6px;
+    font-weight: 500;
+    -webkit-transition: 0.25s;
+}
+#HCB_comment_box #hcb_form .btn:hover, #HCB_comment_box #HCB_comment_form_box .btn:hover {
+    color: var(--white);
+    background-color: var(--darkbrown);
+    border: 1px dotted var(--white);
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+}
+#HCB_comment_box #hcb_form .hcb-door-in {
+    width: 0px;
+}
+#HCB_comment_box .hcb-icon {
+    width: 0px;
+}
+.comment {
+    border-bottom: 1px dotted var(--darkbrown);
+    margin-bottom: 10px;
+}
+#HCB_comment_box .hcb-comment-tb button {
+    font-family: 'MS UI Gothic';
+    font-size: 14px;
+    color: var(--darkbrown);
+    text-decoration: none;
+    font-weight: lighter;
+    border: none;
+    padding: 0;
+    margin-right: 4px;
+    background: none;
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+}
+#HCB_comment_box .hcb-comment-tb button:hover {
+    letter-spacing: 1px;
+    opacity: 50%;
+    -webkit-transition: 0.25s;
+}
+#HCB_comment_box .hcb-comment-tb {
+    text-align: right;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+#HCB_comment_box .comment {
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+#hcb_msg {
+    padding-bottom: 5px;
+    margin: 0px;
+}
+#HCB_comment_box #hcb_form .home-desc a, #HCB_comment_box .home-desc a {
+    text-decoration: 1px dotted underline;
+    color: var(--darkbrown);
+    text-decoration: none;
+}
+#HCB_comment_box #hcb_form .hcb-door-out {
+    width: 0px;
+}
+#HCB_comment_box blockquote {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#HCB_comment_box #hcb_form .btn-secondary, #HCB_comment_box #HCB_comment_form_box .btn-secondary {
+    display: none;
+    width: 0px;
+}
+#HCB_comment_box #hcb_form #hcb_subscribe input {
+    border: 1px dotted var(--darkbrown);
+    background-color: var(--white);
+    display: inline;
+}
+#HCB_comment_box #hcb_form #hcb_settings {
+    text-decoration: none;
+    color: var(--darkbrown);
+}
+#HCB_comment_box #HCB_comment_form_box {
+    border-bottom: 1px dotted var(--darkbrown);
+    padding-bottom: 1em;
+}
+.back-home {
+    margin: auto;
+    text-align: center;
+}
+.back-home a {
+    color: var(--darkbrown);
+    text-decoration: none;
+    -webkit-transition: 0.25s;
+}
+.back-home a:hover {
+    letter-spacing: 2px;
+    -webkit-transition: 0.25s;
+}
+
+

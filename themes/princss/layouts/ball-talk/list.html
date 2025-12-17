@@ -1,0 +1,221 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/ball_talk.css">
+<link rel="stylesheet" href="https://unpkg.com/video.js/dist/video-js.min.css">
+<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+<link href="/styles/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+<style>
+    .video-js {
+        font-family: 'MS UI Gothic';
+        color: var(--white);
+    }
+    .vjs-control-bar {
+        border: 1px dotted var(--white);
+    }
+    .vjs-default-skin .vjs-big-play-button {
+        image-rendering: pixelated;
+        width: 0px;
+        height: 0px;
+        font-size: 5em;
+        background-color: none;
+        border: none;
+        left: 60%;
+    }
+    .video-js .vjs-control-bar,
+    .video-js .vjs-big-play-button,
+    .video-js .vjs-menu-button .vjs-menu-content {
+        background-color: var(--darkbrown);
+    }
+    button.vjs-big-play-button {
+        color: var(--darkbrown);
+        width: 0px;
+        height: 0px;
+    }
+    .video-js .vjs-slider {
+        background-color: #5f4d4c;
+    }
+    .video-js .vjs-load-progress {
+        background-color: #372422;
+    }
+    .video-js .vjs-load-progress div {
+        background-color: #372422;
+    }
+    .vjs-icon-placeholder {
+        font-family: 'MS UI Gothic';
+    }
+    button.vjs-play-control.vjs-control.vjs-button.vjs-playing {
+        border-right: 1px dotted var(--white);
+        -webkit-transition: 0.25s;
+    }
+    button.vjs-play-control.vjs-control.vjs-button.vjs-paused {
+        border-right: 1px dotted var(--white);
+        -webkit-transition: 0.25s;
+    }
+    button.vjs-play-control.vjs-control.vjs-button.vjs-paused:hover {
+        color: var(--darkbrown);
+        background-color: var(--white);
+        -webkit-transition: 0.25s;
+    }
+    button.vjs-play-control.vjs-control.vjs-button.vjs-playing:hover {
+        color: var(--darkbrown);
+        background-color: var(--white);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal {
+        border-right: 1px dotted var(--white);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal:hover {
+        background-color: var(--white);
+        color: var(--darkbrown);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-progress-control.vjs-control {
+        border-right: 1px dotted var(--white);
+    }
+    .vjs-remaining-time.vjs-time-control.vjs-control {
+        border-right: 1px dotted var(--white);
+    }
+    .video-js .vjs-time-tooltip, .video-js .vjs-volume-tooltip {
+        font-size: 12px;
+        font-family: 'MS UI Gothic';
+    }
+    .vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
+        font-size: 10px;
+        border-right: 1px dotted var(--white);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button:hover {
+        background-color: var(--white);
+        color: var(--darkbrown);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-menu-item {
+        font-family: 'MS UI Gothic';
+        -webkit-transition: 0.25s;
+    }
+    .vjs-menu-item:hover {
+        background-color: var(--white);
+        color: var(--darkbrown);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-picture-in-picture-control.vjs-control.vjs-button {
+        border-right: 1px dotted var(--white);
+    }
+    li.vjs-menu-item.vjs-selected .vjs-menu-item-text{
+        background-color: var(--white);
+        color: var(--darkbrown);
+    }
+    .vjs-menu-item-text {
+        color: var(--white);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-menu-item-text:hover {
+        color: var(--white);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-picture-in-picture-control.vjs-control.vjs-button {
+        -webkit-transition: 0.25s;
+    }
+    .vjs-picture-in-picture-control.vjs-control.vjs-button:hover {
+        background-color: var(--white);
+        color: var(--darkbrown);
+        -webkit-transition: 0.25s;
+    }
+    .vjs-fullscreen-control.vjs-control.vjs-button {
+        -webkit-transition: 0.25s;
+    }
+    .vjs-fullscreen-control.vjs-control.vjs-button:hover {
+        background-color: var(--white);
+        color: var(--darkbrown);
+        -webkit-transition: 0.25s;
+    }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="/scripts/jquery.style-my-tooltips.js"></script>
+<script>
+    (function($){
+        $(document).ready(function(){
+            $("[title]").style_my_tooltips();
+        });
+    })(jQuery);
+</script>
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/ball_header.png">
+<div class="header" style="position: sticky; top: 0; z-index: 2;">
+    <div class="left-header">
+        <a href="/">the castle</a> / <strong><a href="/ball-talk/">ball talk</a></strong>
+    </div>
+    <div class="right-header">
+        Mainly Rockets talk -- a little diary of all the games I watch throughout the season.
+    </div>
+</div>
+<div class="content">
+    {{ range $.Site.Data.balltalk }}
+    <div class="ball-post" id="{{ .id }}">
+        <div class="left-post">
+            <div class="date">
+                {{ .date }}
+            </div>
+            <div class="game-title">
+                <div class="team-one">
+                    <strong>{{ .team1 }}</strong> - {{ .score1 }}
+                </div>
+                <div class="middle"></div>
+                <div class="team-two">
+                    {{ .score2 }} - <strong>{{ .team2 }}</strong>
+                </div>
+            </div>
+            {{ if .stats }}
+            <div class="team-stats">
+                {{ range .stats }}
+                <div class="stat">
+                    <div class="team-one" style="width: 50px;">{{ .team1 }}</div>
+                    <div class="middle" style="width: 50px;" title="{{ .title }}">{{ .label }}</div>
+                    <div class="team-two" style="width: 50px;">{{ .team2 }}</div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ if .players }}
+            <div class="players">
+                {{ range .players }}
+                <div class="player">
+                    <div class="header">
+                        <img src="{{ .image }}">
+                        <div class="right">
+                            <div class="name">{{ .name | safeHTML }}</div>
+                            <div class="stats">{{ .stats }}</div>
+                        </div>
+                    </div>
+                    {{ if .shotchart }}
+                    <img src="{{ .shotchart }}" class="shot-chart">
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ if .clips }}
+            <div class="clips">
+                {{ range .clips }}
+                <div class="clip">
+                    <video id="{{ .id }}" class="video-js" preload="auto" width="315" height="177.19" data-setup='{"playbackRates": [0.5, 1, 1.5, 2], "fluid": true}'>
+                        <source src="{{ .src }}" type="video/mp4">
+                    </video>
+                    <div class="caption">{{ .caption | safeHTML }}</div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="right-post">
+            <div class="text">
+                {{ .content | safeHTML }}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

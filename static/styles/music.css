@@ -1,0 +1,141 @@
+html {
+    background-color: var(--white);
+}
+body {
+    width: 800px;
+    display: block;
+    margin: auto;
+    padding-bottom: 25px;
+    padding-top: 20px;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+a {
+    color: var(--gold);
+    text-decoration: 1px dotted underline;
+    -webkit-transition: 0.25s;
+}
+a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+.header {
+    margin-top: -2px;
+    display: flex;
+    width: 800px;
+    background-color: var(--white);
+}
+.header a {
+    -webkit-transition: 0.25s;
+}
+.header a:hover {
+    letter-spacing: 1px;
+    -webkit-transition: 0.25s;
+}
+.left-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    border-right: 1px dotted var(--darkbrown);
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.right-header {
+    width: 600px;
+}
+.navigation {
+    display: flex;
+}
+.navigation a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--darkbrown);
+    text-align: center;
+    width: 100%;
+    border-right: 1px dotted var(--darkbrown);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted var(--darkbrown);
+    -webkit-transition: 0.25s;
+}
+.navigation a:hover {
+    border-right: 1px dotted var(--white);
+    border-bottom: 1px dotted var(--white);
+    background-color: var(--darkbrown);
+    color: var(--white);
+    -webkit-transition: 0.25s;
+}
+.navigation a.active {
+    pointer-events: none;
+    background-color: var(--darkbrown);
+    color: var(--white);
+    border-right: 1px dotted var(--white);
+    border-bottom: 1px dotted var(--white);
+    letter-spacing: 1px;
+}
+.main-content {
+    display: flex;
+    border-bottom: 1px dotted var(--lightgold);
+}
+.left {
+    box-sizing: border-box;
+    border-right: 1px dotted var(--darkbrown);
+    min-width: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-y: hidden;
+}
+.left ::-webkit-scrollbar {
+    width: 0px;
+}
+.music-section {
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--white);
+    color: var(--darkbrown);
+    border-bottom: 1px dotted var(--darkbrown);
+}
+#trackart {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+.trackInfo {
+    border: 1px dotted var(--lightgold);
+    padding: 2px;
+    display: block;
+    margin: auto;
+    width: 200px;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+#trackartist {
+    text-decoration: none;
+    color: var(--lightgold);
+    font-weight: bold;
+    display: block;
+}
+#tracktitle {
+    color: var(--gold);
+    text-decoration: 1px dotted underline;
+}
+.artist {
+    font-weight: bold;
+}
+.tracktitle a {
+    color: var(--gold);
+    text-decoration: 1px dotted underline;
+}
+.right {
+    border-left: 1px dotted var(--lightgold);
+    width: 600px;
+}

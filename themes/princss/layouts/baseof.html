@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+  {{ block "styles" . }}{{ end }}
+</head>
+<body{{ block "bodyAttrs" . }}{{ end }}>
+  {{ block "main" . }}{{ end }}
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

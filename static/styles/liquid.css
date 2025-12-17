@@ -1,0 +1,98 @@
+body {
+    overflow-y: hidden;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0px;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+.container {
+    min-height: 500px;
+    width: 800px;
+    display: flex;
+}
+.liquid-nav {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    border-right: 1px dotted var(--darkbrown);
+    width: 148.16px;
+}
+.liquid-nav a {
+    border-bottom: 1px dotted var(--darkbrown);
+    box-sizing: border-box;
+    display: block;
+    width: 148.16px;
+    padding: 5px;
+    padding-left: 0px;
+    color: var(--darkbrown);
+    text-decoration: none;
+    -webkit-transition: 0.25s;
+}
+.liquid-nav a:hover {
+    color: var(--white);
+    background-color: var(--darkbrown);
+    padding-left: 5px;
+    border-bottom: 1px dotted var(--white);
+    -webkit-transition: 0.25s;
+}
+a.active {
+    color: var(--white);
+    background-color: var(--darkbrown);
+    padding-left: 5px;
+    border-bottom: 1px dotted var(--white); 
+}
+.liquids {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 148.16px;
+    min-width: 650.84px;
+}
+.liquid {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-top: none;
+    border-bottom: 1px dotted var(--darkbrown);
+}
+.liquid a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline;
+    -webkit-transition: 0.25s;
+}
+.liquid a:hover {
+    opacity: 70%;
+    -webkit-transition: 0.25s;
+}
+.liquid-left {
+    width: 191px;
+}
+.liquid-right {
+    padding-left: 10px;
+    width: 460.83px;
+}
+.liquid-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.liquid-image {
+    overflow: hidden;
+    border: 1px dotted var(--darkbrown);
+    width: 190.84px;
+    height: 190.84px;
+}
+.liquid-image img {
+    opacity: 0%;
+    -webkit-transition: 0.25s;
+}
+.liquid-image img:hover {
+    opacity: 100%;
+    -webkit-transition: 0.25s;
+}
