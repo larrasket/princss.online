@@ -6,7 +6,9 @@ body {
 }
 a {
     color: var(--darkbrown);
-    text-decoration: 1px dotted underline;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
     -webkit-transition: 0.25s;
 }
 a:hover {
@@ -17,4 +19,8 @@ a:hover {
     text-align: justify;
     border-bottom: 1px dotted var(--darkbrown);
     padding: 10px;
+}
+.update p {
+    margin: 0;
+    display: inline;
 }
