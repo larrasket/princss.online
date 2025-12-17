@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/music_page.css">
+</head>
+<body>
+  <div class="page-header">collection</div>
+  <div class="content">
+    <p>{{ .Site.Data.music.collection.description }}</p>
+    <h2>my equipment</h2>
+    <div class="my-equipment">
+      {{ range $i, $eq := .Site.Data.music.collection.equipment }}
+      <div class="equipment-label" style="{{ if eq $i 0 }}top: 35px; left: 35px;{{ else if eq $i 1 }}top: 13px; left: 320px;{{ else }}top: 95px; left: 190px;{{ end }}">
+        <a href="{{ $eq.url }}" target="_blank">{{ $eq.name }}</a>
+      </div>
+      {{ end }}
+    </div>
+    <h2>vinyl collection</h2>
+    <div class="collection">
+      {{ range .Site.Data.music.collection.albums }}
+      <div class="collection-album" style="background-image: url({{ .image }});">
+        <span>{{ .title }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/music_page.css">
+</head>
+<body>
+  <div class="page-header">favorite albums</div>
+  <div class="content">
+    <p>{{ .Site.Data.music.favorite_albums.description }}</p>
+    <p>{{ .Site.Data.music.favorite_albums.note }}</p>
+    <div class="favorites">
+      {{ range .Site.Data.music.favorite_albums.albums }}
+      <div class="favorite-album">
+        <div class="favorite-left">
+          <div class="favorite-rank">{{ .rank }}.</div>
+          <div class="favorite-image">
+            <img src="{{ .image }}">
+          </div>
+        </div>
+        <div class="favorite-right">
+          <div class="favorite-name">
+            <div class="name"><strong>{{ .artist }}</strong> - {{ .title }}</div>
+            <div class="favorite-track">⊹ {{ .favoriteTrack }}</div>
+          </div>
+          <div class="favorite-desc">
+            {{ .description | markdownify }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</body>
+</html>

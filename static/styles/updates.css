@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    font-size: 14px;
+    font-family: "MS UI Gothic";
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -19,6 +21,7 @@ a:hover {
     text-align: justify;
     border-bottom: 1px dotted var(--darkbrown);
     padding: 10px;
+    padding-left: 0;
 }
 .update p {
     margin: 0;

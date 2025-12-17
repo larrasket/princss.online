@@ -3,4 +3,8 @@
 
 This is my attempt to use LLMs to make the beautiful-looking website https://princss.online to be generated using Hugo, the static website generator. I will document my journey in this Org file.
 
+* Log
+- [2025-12-18 Thu 00:07] \\
+  Currently investigating fixing few UI issues, and trying to figure out how to make the titles and pictures with that effect that the owner has.
 - [2025-12-17 Wed 23:52] Works properly, was able to reproduce most of the site, and added responsiveness.
+

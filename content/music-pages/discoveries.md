@@ -1,0 +1,4 @@
+---
+title: "Discoveries"
+layout: "discoveries"
+---
