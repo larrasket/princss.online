@@ -10,10 +10,10 @@
 <body>
   <div class="page-header">collection</div>
   <div class="content">
-    <p>{{ .Site.Data.music.collection.description }}</p>
+    <p>{{ .Params.description }}</p>
     <h2>my equipment</h2>
     <div class="my-equipment">
-      {{ range $i, $eq := .Site.Data.music.collection.equipment }}
+      {{ range $i, $eq := .Params.equipment }}
       <div class="equipment-label" style="{{ if eq $i 0 }}top: 35px; left: 35px;{{ else if eq $i 1 }}top: 13px; left: 320px;{{ else }}top: 95px; left: 190px;{{ end }}">
         <a href="{{ $eq.url }}" target="_blank">{{ $eq.name }}</a>
       </div>
@@ -21,7 +21,7 @@
     </div>
     <h2>vinyl collection</h2>
     <div class="collection">
-      {{ range .Site.Data.music.collection.albums }}
+      {{ range .Params.albums }}
       <div class="collection-album" style="background-image: url({{ .image }});">
         <span>{{ .title }}</span>
       </div>
