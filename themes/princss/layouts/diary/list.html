@@ -12,7 +12,7 @@
   <!-- Diary Nav -->
   <nav>
     {{ range .Pages.ByDate.Reverse }}
-    <a href="/diary/#{{ .Params.id }}">{{ .Params.displayDate }}</a>
+    <a href="/diary/#{{ .Params.id }}">{{ .Date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
   <!-- Diary Entries -->
@@ -35,7 +35,7 @@
       }}
     >
       <div class="page-content">
-        <div class="date">{{ $page.Params.displayDate }}</div>
+        <div class="date">{{ $page.Date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ $page.Content }}</div>
       </div>
     </article>

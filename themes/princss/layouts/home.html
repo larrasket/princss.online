@@ -239,7 +239,7 @@
     () => {
       audioPlayer.querySelector(".time .length").textContent =
         getTimeCodeFromNum(audio.duration);
-      audio.volume = 0.75;
+      audio.volume = 1;
     },
     false,
   );
@@ -334,7 +334,8 @@
       if (pushEvent) {
         const repo = pushEvent.repo.name.split("/")[1];
         const commit = pushEvent.payload.commits?.[0];
-        const msg = commit ? commit.message.split("\n")[0] : "pushed code";
+        const msg = commit ? commit.message.split("\n")[0] : "committed
+       ";
         const time = new Date(pushEvent.created_at);
         const ago = getTimeAgo(time);
         container.innerHTML = `<span class="github-emoji">code:</span> ${ago}: <em>${msg.substring(

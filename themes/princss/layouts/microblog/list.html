@@ -22,7 +22,7 @@
       <img src="/media/images/pfp.png" style="width: 60px; height: 60px" />
       <div class="info">
         <div class="name">larrasket</div>
-        <div class="date">{{ .Params.displayDate }}</div>
+        <div class="date">{{ .Date.Format "02/01/2006" }}</div>
         <div class="time">@{{ .Params.time }}</div>
       </div>
     </div>

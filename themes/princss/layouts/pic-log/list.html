@@ -14,7 +14,7 @@
       <img src="{{ .Params.image }}">
     </div>
     <div class="pic-date">
-      {{ .Params.displayDate }}
+      {{ .Date.Format "02/01/2006" }}
     </div>
     <div class="pic-desc">
       {{ .Params.description }}

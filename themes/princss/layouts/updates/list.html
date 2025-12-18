@@ -17,6 +17,6 @@
   end
   }}
 >
-  <strong>{{ $page.Params.displayDate }}</strong> - {{ $page.Content }}
+  <strong>{{ $page.Date.Format "02/01/2006" }}</strong> - {{ $page.Content }}
 </div>
 {{ end }} {{ end }}
