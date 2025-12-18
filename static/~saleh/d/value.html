@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Theory of Value and Surplus Value: A Comprehensive Introduction</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">The Theory of Value and Surplus Value: A Comprehensive Introduction</h1>
+</header><div class="BACKLINKS" id="org33bc0ea">
+<p>
+This section was referenced in <a href="../stack.html#ci6k4440dnk0">Introduction the theory of value</a>.
+</p>
+
+</div>
+
+<div class="tag" id="orgbeed983">
+<p>
+This section was labeled under, or is related to Economics and Marxism
+</p>
+
+</div>
+<div class="PREVIEW" id="org56c2efd">
+<p>
+Following is an LLM written introduction into the theory of value. It&rsquo;s easy to
+understand and I thought it might be useful for people who want to quickly
+understand how value works.
+</p>
+
+</div>
+<div id="outline-container-org0c2b244" class="outline-2">
+<h2 id="org0c2b244">Introduction</h2>
+<div class="outline-text-2" id="text-org0c2b244">
+<p>
+The theory of value and surplus value forms the cornerstone of Marxist economic
+analysis, providing a framework for understanding how capitalist economies
+function and how wealth is created and distributed. Developed primarily by Karl
+Marx in his monumental work &ldquo;Das Kapital,&rdquo; this theory offers insights into the
+fundamental mechanisms of capitalist production and the sources of profit and
+exploitation.
+</p>
+
+<p>
+At its core, this theory seeks to answer fundamental questions: What determines
+the value of goods? How is wealth created in society? Why do some people
+accumulate vast fortunes while others remain poor despite working hard? The
+answers lie in understanding the nature of commodities, labor, and the social
+relationships that govern production.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc4dbb7d" class="outline-2">
+<h2 id="orgc4dbb7d">Commodities: Use Value and Exchange Value</h2>
+<div class="outline-text-2" id="text-orgc4dbb7d">
+</div>
+<div id="outline-container-orgd007e16" class="outline-3">
+<h3 id="orgd007e16">What is a Commodity?</h3>
+<div class="outline-text-3" id="text-orgd007e16">
+<p>
+A commodity is any good or service produced primarily for exchange in the market
+rather than for direct consumption by its producer. In capitalist societies,
+most products become commodities - from bread and clothing to smartphones and
+healthcare services.
+</p>
+
+<p>
+Every commodity possesses two fundamental characteristics:
+</p>
+</div>
+</div>
+<div id="outline-container-orgd337bed" class="outline-3">
+<h3 id="orgd337bed">Use Value</h3>
+<div class="outline-text-3" id="text-orgd337bed">
+<p>
+Use value refers to the utility or usefulness of a commodity - its ability to
+satisfy human needs or wants. A coat&rsquo;s use value lies in its ability to keep
+someone warm; a smartphone&rsquo;s use value includes communication, entertainment,
+and information access. Use value is qualitative and varies among individuals
+based on their specific needs and circumstances.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdef701f" class="outline-3">
+<h3 id="orgdef701f">Exchange Value</h3>
+<div class="outline-text-3" id="text-orgdef701f">
+<p>
+Exchange value represents the quantitative relationship in which commodities
+trade against each other in the market. It appears as the price of a commodity
+but is fundamentally different from use value. While a diamond may have little
+practical use value compared to water, it commands a much higher exchange value
+in the market.
+</p>
+
+<p>
+Marx argued that behind exchange value lies something more fundamental: value
+itself, which is determined by the socially necessary labor time required to
+produce the commodity.
+</p>
+
+
+<p>
+The law of value is the fundamental economic principle governing commodity
+production and exchange. It states that commodities exchange in proportion to
+the socially necessary labor time required for their production.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org840cb2f" class="outline-2">
+<h2 id="org840cb2f">What is Socially Necessary Labour?</h2>
+<div class="outline-text-2" id="text-org840cb2f">
+<p>
+Socially necessary labor time is the labor time required to produce a commodity
+under normal conditions of production, with average skill and intensity of
+labor, using the prevailing technology and methods.
+</p>
+</div>
+<div id="outline-container-orgee5a3bf" class="outline-3">
+<h3 id="orgee5a3bf">Key Characteristics:</h3>
+<div class="outline-text-3" id="text-orgee5a3bf">
+<ul class="org-ul">
+<li>Average Conditions: Not the time taken by the fastest or slowest worker, but
+the average time under typical production conditions.</li>
+<li>Current Technology: Based on the technology and methods currently available
+and commonly used in society, not outdated or exceptionally advanced
+techniques.</li>
+<li>Social Average: Considers the average skill level and intensity of work across
+society, not individual variations.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5447e16" class="outline-3">
+<h3 id="org5447e16">Example:</h3>
+<div class="outline-text-3" id="text-org5447e16">
+<p>
+If most shoe factories can produce a pair of shoes in 2 hours using standard
+equipment and methods, then 2 hours represents the socially necessary labor time
+for shoes, regardless of whether one particularly efficient factory can do it in
+1.5 hours or an inefficient one takes 3 hours.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2df44b" class="outline-2">
+<h2 id="orge2df44b">Determination of Exchange Value of Commodities</h2>
+<div class="outline-text-2" id="text-orge2df44b">
+<p>
+The exchange value of commodities is ultimately determined by the socially
+necessary labor time embodied in their production, but this determination
+operates through complex market mechanisms.
+</p>
+</div>
+<div id="outline-container-org9e295f5" class="outline-3">
+<h3 id="org9e295f5">The Process:</h3>
+<div class="outline-text-3" id="text-org9e295f5">
+<ol class="org-ol">
+<li>Direct Labor: The immediate labor applied to transform raw materials into
+finished products.</li>
+
+<li>Indirect Labor: The labor embodied in tools, machinery, and raw materials
+used in production (transferred to the new commodity).</li>
+
+<li>Market Validation: The market ultimately validates whether the labor expended
+was socially necessary through the process of exchange.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgefdd541" class="outline-3">
+<h3 id="orgefdd541">Factors Affecting Exchange Value:</h3>
+<div class="outline-text-3" id="text-orgefdd541">
+<ul class="org-ul">
+<li>Productivity Changes: Improvements in technology or methods reduce socially
+necessary labor time and thus exchange value.</li>
+<li>Supply and Demand: While they cause price fluctuations around value, they
+don&rsquo;t determine value itself.</li>
+<li>Competition: Forces individual producers to match socially necessary labor
+time or face losses.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org195b1d4" class="outline-2">
+<h2 id="org195b1d4">Social Surplus Product</h2>
+<div class="outline-text-2" id="text-org195b1d4">
+<p>
+The social surplus product represents the portion of total social production
+that exceeds what is necessary to reproduce society at its current level -
+essentially, society&rsquo;s &ldquo;extra&rdquo; production beyond basic maintenance and survival
+needs.
+</p>
+</div>
+<div id="outline-container-org36b10ae" class="outline-3">
+<h3 id="org36b10ae">Components:</h3>
+<div class="outline-text-3" id="text-org36b10ae">
+<p>
+Necessary Product: The portion of social production required to maintain workers
+and their families at their customary standard of living.
+</p>
+
+<p>
+Surplus Product: Everything produced beyond the necessary product, which can be
+used for:
+</p>
+<ul class="org-ul">
+<li>Expanding production (accumulation)</li>
+<li>Supporting non-productive classes</li>
+<li>Improving living standards</li>
+<li>Social services and infrastructure</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e70b4a" class="outline-3">
+<h3 id="org7e70b4a">Historical Significance:</h3>
+<div class="outline-text-3" id="text-org7e70b4a">
+<p>
+Different economic systems organize the creation and distribution of surplus
+product differently. In feudalism, surplus was extracted through rent and
+service; in capitalism, it appears as profit, rent, and interest.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga3576ab" class="outline-2">
+<h2 id="orga3576ab">The Theory of Surplus Value</h2>
+<div class="outline-text-2" id="text-orga3576ab">
+<p>
+Surplus value is the cornerstone of Marx&rsquo;s explanation of profit in capitalist
+economies. It represents the difference between the value a worker creates and
+the value of their labor power (wages).
+</p>
+</div>
+<div id="outline-container-org8f84614" class="outline-3">
+<h3 id="org8f84614">The Process:</h3>
+<div class="outline-text-3" id="text-org8f84614">
+<ol class="org-ol">
+<li>Labor Power as Commodity: Workers sell their capacity to work (labor power)
+to capitalists for wages.</li>
+
+<li>Value of Labor Power: Determined by the socially necessary labor time
+required to produce and reproduce the worker and their family.</li>
+
+<li>Value Creation: During the working day, workers create value through their
+labor.</li>
+
+<li>Surplus Value Extraction: Workers create more value than they receive in
+wages; this excess becomes surplus value, appropriated by the capitalist.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd272777" class="outline-3">
+<h3 id="orgd272777">Example:</h3>
+<div class="outline-text-3" id="text-orgd272777">
+<p>
+If a worker&rsquo;s labor power costs $100 per day (their wages) but they create $150
+worth of value during their working day, the $50 difference represents surplus
+value captured by the employer.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org10a206b" class="outline-2">
+<h2 id="org10a206b">The Marxist Theory of Alienation</h2>
+<div class="outline-text-2" id="text-org10a206b">
+<p>
+Alienation describes the estrangement workers experience under capitalist
+production, where they become disconnected from their labor, its products, their
+fellow workers, and their human essence.
+</p>
+</div>
+<div id="outline-container-org97cb5e4" class="outline-3">
+<h3 id="org97cb5e4">Four Forms of Alienation:</h3>
+<div class="outline-text-3" id="text-org97cb5e4">
+<ol class="org-ol">
+<li>Alienation from the Product of Labor: Workers don&rsquo;t own what they produce.
+The products of their labor become commodities owned by capitalists and sold
+back to workers in the market.</li>
+
+<li>Alienation from the Act of Production: Work becomes a means of survival
+rather than creative self-expression. Workers have little control over how
+they work, what they produce, or the pace of production.</li>
+
+<li>Alienation from Species-Being: Humans are naturally creative beings who
+transform their environment through conscious labor. Under capitalism, this
+creative capacity becomes merely a means to earn wages for survival.</li>
+
+<li>Alienation from Other Workers: Competition for jobs and individual wage
+relationships prevent workers from recognizing their common interests and
+collective power.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfcf937d" class="outline-3">
+<h3 id="orgfcf937d">Consequences:</h3>
+<div class="outline-text-3" id="text-orgfcf937d">
+<ul class="org-ul">
+<li>Loss of meaning and fulfillment in work</li>
+<li>Psychological and social disconnection</li>
+<li>Reduced human potential and creativity</li>
+<li>Class conflict and social instability</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e6ffb1" class="outline-2">
+<h2 id="org6e6ffb1">The Rate of Surplus Value (Rate of Exploitation)</h2>
+<div class="outline-text-2" id="text-org6e6ffb1">
+<p>
+The rate of surplus value measures the degree of exploitation by comparing
+surplus value to the value of labor power:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+Rate of Surplus Value = Surplus Value / Variable Capital (Wages)
+</p>
+
+</blockquote></div>
+
+<p>
+This ratio indicates how much unpaid labor workers perform relative to paid
+labor. A rate of 100% means workers work equally for themselves and for the
+capitalist; 200% means they work twice as long for the capitalist as for
+themselves.
+</p>
+</div>
+</div>
+<div id="outline-container-org360210c" class="outline-2">
+<h2 id="org360210c">Absolute vs. Relative Surplus Value</h2>
+<div class="outline-text-2" id="text-org360210c">
+</div>
+<div id="outline-container-orgccd872b" class="outline-3">
+<h3 id="orgccd872b">Absolute Surplus Value</h3>
+<div class="outline-text-3" id="text-orgccd872b">
+<p>
+Increasing surplus value by extending the working day while keeping wages
+constant. This method has physical and social limits.
+</p>
+</div>
+</div>
+<div id="outline-container-orge7d9c6f" class="outline-3">
+<h3 id="orge7d9c6f">Relative Surplus Value</h3>
+<div class="outline-text-3" id="text-orge7d9c6f">
+<p>
+Increasing surplus value by reducing the value of labor power through increased
+productivity in industries producing workers&rsquo; necessities. This allows wages to
+remain constant while workers&rsquo; real purchasing power increases, yet surplus
+value still grows.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0131a3" class="outline-2">
+<h2 id="orge0131a3">The Organic Composition of Capital</h2>
+<div class="outline-text-2" id="text-orge0131a3">
+<p>
+Capital consists of two components:
+</p>
+<ul class="org-ul">
+<li>Constant Capital (c): Machinery, raw materials, and other means of production</li>
+<li>Variable Capital (v): Wages paid to workers</li>
+</ul>
+
+<p>
+The organic composition of capital (c/v) tends to rise over time as capitalists
+replace workers with machinery, leading to what Marx called the &ldquo;tendency of the
+rate of profit to fall.&rdquo;
+</p>
+</div>
+</div>
+<div id="outline-container-orgf96ae0e" class="outline-2">
+<h2 id="orgf96ae0e">Conclusion</h2>
+<div class="outline-text-2" id="text-orgf96ae0e">
+<p>
+The theory of value and surplus value provides a powerful analytical framework
+for understanding capitalist economies. It reveals how value is created through
+labor, how surplus value is extracted from workers, and how this process shapes
+social relationships and economic development.
+</p>
+
+<p>
+While markets appear to operate through supply and demand, Marx&rsquo;s analysis shows
+deeper structural relationships based on labor and class positions.
+Understanding these concepts helps explain persistent inequalities, economic
+instability, and the ongoing tensions between capital and labor in modern
+economies.
+</p>
+
+<p>
+The theory suggests that as long as production is organized around profit
+maximization rather than meeting human needs, these fundamental contradictions
+will persist, generating both tremendous productive capacity and significant
+social problems. Whether through reform or more fundamental change, addressing
+these contradictions remains one of the central challenges of our time.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-07-29 Tue 21:36. Last build date: 2025-07-29 Tue 22:47.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

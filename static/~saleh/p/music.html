@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>رأيي في تحريم الموسيقى</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">رأيي في تحريم الموسيقى</h1>
+</header><div class="tag" id="orgaffce14">
+<p>
+This section was labeled under, or is related to <a href="../t/islam.html#nm0dxtp02wj0">Islam</a>
+</p>
+
+</div>
+<div class="epigraph"><blockquote>
+رُبَّ وَرقاءَ هتوفٍ في الضُحى<br>
+ذاتِ شَجوٍ صَدَحت في فَنَنِ<br>
+<br>
+ذكرت إِلفاً ودهراً صالحاً<br>
+فبكت حزناً وهاجت حَزني<br>
+<br>
+فبكائي ربما أرَّقَها<br>
+وبكاها ربما أرَّقَني<br>
+<br>
+ولقد تشكو فما أفهمها<br>
+ولقد أشكو فما تفهمني<br>
+<br>
+غير أنّي بالجوى أعرِفُها<br>
+وهي أيضاً بالجَوى تعرفُني<br>
+<br>
+(أبو بكر الشبلي)<br>
+
+</blockquote></div>
+<head>
+<style>
+
+p,h1,h2,h3,h4,h5,h6,h7,h8 {
+    text-align: justify;
+    unicode-bidi: plaintext !important;
+    line-height: 1.4;
+}
+
+span.sidenote {
+    unicode-bidi: plaintext;
+}
+
+</style>
+</head>
+
+
+
+
+<p>
+يُعلِق بعض الباحثين المُعاصرين، وبالأخص المُعممين (mainstreamed) —لأسباب لا نخوض
+فيها هنا— تحريم الموسيقى التاريخي في الإسلام على واقعتين أساسيتين: الصراع
+الإسلامي التاريخي بين الممالك الإسلامية التي حاربت بعضها ثقافيًا ونيل من أمر
+المعازف خلالها، وهذه كمعارك الأندلسيين مع العباسيين (بفترات الانقلابات السياسية)
+أو كصراعات الحجازيين والشاميين المبكرة<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+فيما قاله الأوزاعي الشامي مثلًا &ldquo;نتجنب من قول أهل العراق شرب المسكر، ومن
+قول أهل الحجاز استماع الملاهي&rdquo; (ترجمة الأوزاعي في سير أعلام النبلاء في الطبقة السادسة.)
+</span>، أو على حدث سياسي
+أيضًا معاصر أكثر من هذا وهو صحوة بلاد الحرمين في فترة حكم الملك فهد.
+</p>
+
+<p>
+إن الهدف من القراءة المادية التاريخية (historical materialist) لتحريم الموسيقى
+هو وضعها في حيز الأفكار الناشئة لتحقيق مبتغى سياسي في حدود ما، كالحرب الثقافية
+على فصيل ما أو بناء شخصية سياسية-اجتماعية (sociopolitical character) ما يدعو
+لاستنباط أنها ليست فكرة قائمة بحد ذاتها، ولإهمال أدلتها ونقدها، فهي لم تكن
+لتتواجد من الأساس.
+</p>
+
+<p>
+والدين في رأيي ليس له مواقف وإنما يُبنى عليه المواقف، وقد يطول الجدل في هذا على
+خلاف ما هو في موضوع الموسيقى، فهي لم تُنهَ عنها مباشرة في نص قرآني، والشكل الحالي
+للموسيقى (من حيث تكوينها وطُرق استهلاكها) يختلف عما كان عليه زمن النبي واللاحقين
+به، وما كانت عليه شكل الموسيقى أيام النبي تبدل عما كانت عليه زمن الفقهاء
+والمحدثين، ولفظا النبي وأصحابه عن الموسيقى، المعازف واللهو، يُختلف في شموليتهما
+وتأويلهما، وما بعد الاتفاق على تأويلها يصبح الخلاف على كرهها أم تحريمها (فعادة
+ما كانت دلالة التحريم الفقهية في الحديث هي دلالة الاقتران، وهي دلالة ضعيفة في
+الفقه الإسلامي). سأخوض في هذه الرسالة حول رؤيتي عن تحريم الموسيقى، ورأيي أنها
+ليست حراماً.
+</p>
+<div id="outline-container-orgfc0cb19" class="outline-2">
+<h2 id="orgfc0cb19">عن الإجماع</h2>
+<div class="outline-text-2" id="text-orgfc0cb19">
+<div class="epigraph"><blockquote>
+<p>
+من قال بالإجماع فقد كذب (أحمد)
+</p>
+
+</blockquote></div>
+
+<p>
+إن وُجد خلافٌ تاريخي على حرمانية الموسيقى فقد وُجد إجماعٌ معاصرٌ على وجود إجماعٍ
+تاريخي علي حرمانيتها. يقول الشيخ ابن باز في <a href="https://web.archive.org/web/20240116010949/https://binbaz.org.sa/fatwas/17415/%D8%AD%D9%83%D9%85-%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A-%D9%88%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%8A%D9%82%D9%89">فتوى</a>: &ldquo;[أجمع] أهل العلم على
+تحريم ما يكون فيه اجتماع الغناء مع آلات الملاهي يكون الشر أعظم والفتنة أكبر،
+وإذا انفرد الغناء وحده ليس معه آلة لهو فالذي عليه جمهور أهل العلم وهو كالإجماع
+منهم التحريم لما فيه من الفساد، فإذا انضاف إلى ذلك آلات الملاهي من موسيقى أو
+مزمار أو غير ذلك من آلات الملاهي كالطبل وكالرباب وأشباه ذلك كل ذلك يجعله أشد
+تحريمًا وأشد فساداً&rdquo;. وأما الشيوخ الأكثر عصرية انتقلت فتاويهم نحو الحكمة من تحريم
+الموسيقى وليس شكوكية تحريمها، وينشر اليافعون في العلم هُنا وهناك مقالات علمية
+شعبية تؤيد الحكمة من هذا التحريم لضرر الموسيقى العظيم على الدماغ.
+</p>
+
+
+<p>
+إن اللمحة التاريخية عن استقبال المسلمين للموسيقى هامة كي تُبطل الصورة التي خلقها
+المعاصرون، ولعلها أيضًا تخفف من وطئة الحديث عن حرمانية الموسيقى للقارئ، وأنا أعلم
+أن بعض القراء قد يكتفي عند قولي إن الإمام الفلاني قد سمع الأغاني، ورخصها أو عند
+أن عزة الميلاء كانت مطربة شهيرة في التاريخ الإسلامي وهذا غير صائب، فالإمامة لا
+تُنبط العصمة، وقد شاعت فترات في التاريخ الإسلامي قل فيها القدح تجاه المجون
+واللواط (أنظر قصيدة علي بن أبي طالب الأعمى الشهيرة مثلًا أو أخبار شعراء حمص في
+القرن الثاني الهجري) ولم يعني هذا خروجها من التحريم.
+</p>
+
+<p>
+لفظ &ldquo;السماع&rdquo; أو &ldquo;التسميع&rdquo; في التاريخ الإسلامي يعني سماع الموسيقى، يقول ابن عبد
+البر عن مفتي المدينة عبد الملك عبد العزيز الماجشون، وكان تلميذًا لمالك: كان مولعًا
+بالسماع<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+سير أعلام النبلاء، الطبقة الحادية عشر، ابن الماجشون.
+</span>. ويروي أيضًا عن الإمام أحمد أن الماجشون قد جاءه ومعه جواري تغني<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">
+وفيات ابن خلكان، ابن الماجشون (فصل العين).
+</span> . وكان عبد
+العزيز بن الماجشون<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">
+(ترجمه ابن سعد &ldquo;كان فقيها ورعا متابعا لمذاهب أهل الحرمين مفرعا على أصولهم، ذابا عنهم.&rdquo;)
+</span>، كما روى الذهبي، &ldquo;يُعلم الغناء&rdquo;<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">
+سير أعلام النبلاء، الطبقة الثالثة، الماجشون.
+</span> أي يدرسه وينشره
+(وسنرى لهذا نظائر لاحقة عند علماء المسلمين الذين أسهموا في نظرية الموسيقى music
+theory)، ونقل الإمام الشوكاني عن المغيرة بن شعبة في كتابه &ldquo;إبطال دعوى الإجماع
+على تحريم مطلق السماع&rdquo;، وهو كتاب ينقد فيه مزاعم إجماع تحريم الغناء، أن الصحابي
+مغيرة بن شعبة، وكان من الطائف، أباح السماع. وذكر ابن حجر العسقلاني أن ابن سيرين
+كان يستمتع بضرب الدف<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">
+المطالب العالية بزوائد المسانيد الثمانية، رقم 1679، عن هشام بن حسان.
+</span> . وذكر الشوكاني في نيل الأوطار أثرًا عن ابن أبي الدم
+أن عبد الله بن الزبير كان له جوار عوادات، أي يلعبن على العود، وأن ابن عمر دخل
+عليه وإلى جنبه عود فقال: ما هذا يا صاحب رسول الله؟ فناوله إياه فتأمله ابن عمر
+فقال: هذا ميزان شامي، قال ابن الزبير: يوزن به العقول<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">
+فصل أقوال العلماء في سماع العود والغناء وبيان مذاهبهم وحجج كل وتحقيق
+المقام بما يشفي ويكفي.
+</span>. وقال أبو طالب المكي، وهو
+أحد من أخذ عنهم الغزالي: مَن أنكر السماعَ مطلقًا غيرَ مقيَّد فقد أنكر على سبعين صدّيقًا،
+ومن الطريف أن ابن القيم كان يستنكر شيوع السماع، فأخرج هذا القول في كتابه &ldquo;الكلام
+على مسألة السماع&rdquo;، وعلق عليه قائلًا: &ldquo;هذا في زمانه، ولا ريبَ أن المنكر بعده يكون
+إنكاره على أضعاف هؤلاء&rdquo;<label for="8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="8" class="margin-toggle"/><span class="sidenote">
+كتاب الكلام على مسألة السماع، فصل: بطلان قول أهل السماع: إن السماع يحصل
+محبوب الله، وما حصل محبوب الله فهو محبوب له، قول صاحب القرآن: المنكرون على
+السماع أضعاف أضعاف من حضروه.
+</span> أي إن عد &ldquo;الصديقين&rdquo; قد تضاعف في زمن ابن القيم. وانتشرت
+إسهامات المسلمين في نظرية الموسيقى في زهاء ممالك الإسلام، وكان صفي الدين الأرموي
+البغدادي أحد أشهر منظري الموسيقى المسلمين، وقد كتب أبو نصر الفارابي، وله ينسب
+الفضل في اختراع أداة القانون الموسيقية، عن العلاج بالموسيقى<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote">
+al-Hasan ibn
+Ahmad al-Kâtib, La Perfection des connaissances musicales, trans. by A. Shiloah, Paris, 1972, pp. 99ff.
+</span>.
+</p>
+
+
+
+<p>
+وقد كثرت الأخبار عن أصحاب النبي المدنيين وغيرهم من الصالحين في استماعهم
+للموسيقى، وقد أورد الشوكاني جملة منهم في كتابه، وهو ما اعترف به الألباني في
+كتابه تحريم آلات الطرب في رده على رسالة ابن حزم، فقال في رده على ما أورده
+الشوكاني: &ldquo;[وإن] صحت نسبتها إلى قائلها وفيهم الكوفي والمدني وغيرهم [وهو ما ثَبُت]
+فلا حجة فيها لمخالفتها لما تقدم من الأحاديث الصحيحة الصريحة الدلالة&rdquo;<label for="10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="10" class="margin-toggle"/><span class="sidenote">
+كتاب تحريم آلات الطرب، الرد على رسالة ابن حزم وبيان سبب الرد، الفصل
+الخامس: مذاهب العلماء في تحريم آلات الطرب.
+</span> أي إن هناك
+من الأصحاب الصالحين من كان يستمع للموسيقى، ولكن، بالنسبة للألباني، هذا لا يغير
+شيئًا فالأحاديث &ldquo;صريحة الدلالة&rdquo;.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc1f91df" class="outline-2">
+<h2 id="orgc1f91df">ما أذهب عليه في الموسيقى</h2>
+<div class="outline-text-2" id="text-orgc1f91df">
+<p>
+وأما مُعتقدي في أمر الموسيقى فهو مُعتقد الإمام أبو حامد الغزالي في كتاب آداب
+السماع والوجد، ورؤيتي لتحريم فقهاء المذاهب للغناء (الذي لا أنكرهُ) هي رؤيته. إن
+&ldquo;السماع&rdquo; كما وُصف لنا في التاريخ الإسلامي كان مقترنًا دائمًا بالفتن كاقتران
+البلوتوث بالإباحيات في زهرته بداية الألفية (وقد وُجد من شيوخ الحرمين من رأى
+بتحريم البلوتوث وقتها بسبب ذلك الاقتران)، والواضح أنه لم يُبين في فتاوي أئمة
+المذاهب أمر الغناء تجريديًا، لأن سماع الموسيقى دون الجلوس في مجلس خمر لم يكن أمرًا
+واردًا (ويبدوا أنه حتى إن وجد كان يستحي الفقهاء أن يقترنوا به، لارتباطه في
+أذهانهم بما يعدونه مشينًا لأنفسهم، وقد روُي عن مالك أنه إذا اقتنى جارية فوجدها
+تغني أعادها) كما هو اليوم.
+</p>
+
+
+<p>
+وهذا قريب مما اعتقده الغزالي، وفي كتاب آداب السماع بعد أن يستدل بحديث مزامير آل
+داود، أن تحريم السماع كان كتحريم الخلو بالأجنبية، فهو حرام لأنه مُحث على الزنا
+فيقول في أسباب تحريم الموسيقى: &ldquo;الاجتماع عليها لما أن صار من عادة أهل الفسق
+فيمنع من التشبه بهم؛ لأن من تشبه بقوم فهو منهم [&#x2026;] فحرم معها ما هو شعار أهل
+الشرب وهي الأوتار والمزامير فقط، وكان تحريمها من قبل الأتباع كما حرمت الخلوة
+بالأجنبية لأنها مقدمة الجماع، وحرم النظر إلى الفخذ لاتصاله بالسوأتين، وحرم قليل
+الخمر وإن كان لا يسكر لأنه يدعو إلى السكر&rdquo;. ولست أدري كيف وصل الغزالي لهذه
+الرؤية التحليلية المبكرة، وكأنه كان يدري أن الموسيقى يمكن أن تخلوا من هذه
+الأسباب لتتجرد في جمالية الصوت دوم المنكرات، ولعله رأى ذلك فعلًا في التغني بالحب
+الإلهي بعد تصوفه.
+</p>
+
+
+
+<p>
+ولن أذكر المزيد في تفصيل الغزالي هنا، وعلى القارئ إن كان مهتمًا، بالفائدة في
+العلم وفي قوت القلب، أن يعود لفصل آداب السماع والوجد في الإحياء.
+</p>
+
+
+
+<p>
+يبقى هنا الأحاديث التي خرجت واستدل عليها بتحريم الموسيقى، ومنها الصحاح. على أن
+ابن حزم قد رأى أن لا يصح أي منها وله تعليقات على البخاري في تخريجهم، وذكر هذا في
+رسالته القصيرة &ldquo;رسالة في الغناء الملهي أمباح هو أم محظور&rdquo;، ومن ناحية الغزالي فهو
+يجيب فقط على حديث &ldquo;كل شيء يلهو به الرجل فهو باطل&rdquo; وحديث تحريم القينة، أما في
+الأخير فهو يرى حرمتها استنباطية كما ورد، أي إن القينة تعرفيها عنده هي الجارية
+التي تغني في الرجال في مجلس شرب، ولا شك في حرمانية هذا، وأما الأول فيرى أن مقصد
+النبي فيه هو القصر الإضافي يلحق بالمحصور غير المحصور قياسًا فيه، كأن يقول &ldquo;لا يحل
+دم امرئ مسلم إلا بإحدى ثلاث&rdquo; أو قول &ldquo;وما الحياة الدنيا إلا متاع&rdquo;.
+</p>
+
+<p>
+وأعلى حديث بدرجة الصحاح عن الموسيقى، وأكثرهم وضوحًا هو حديث الخمر والمعازف:
+&ldquo;ليكونن من أمتي أقوام يستحلون الحر والحرير والخمر والمعازف&rdquo; فهو يعتمد على
+التحريم بالاقتران وهو حجة ضعيفة كما أوردت، فالحرير ليس حرامًا مطلقًا مثلًا، فقد جاز
+بيعه للكفار ولبسه للمسلمات، ولعل المعازف ذكرت هُنا لاقترانها بالخمر في جلسات
+الأُنس. وعلى كلٍ فالقول بالتحريم هنا يخالف ما كان عليه أصحاب النبي كعبد الله بن
+جعفر وقد اقتنى العود.
+</p>
+
+<p>
+إن ما أتبعهُ في قراءة النص النقلي الذي يخالف ما يسير الاستنتاج العقلي إليه هو أن
+التأويل النقلي ليس في محله أو أن النص النقلي يتطلب قراءة أكثر سياقية (وهو ما
+فعله الغزالي في هذه المسألة كما أظهرنا)، فالموسيقى والغناء هي من زينة الله في
+الحياة الدنيا يطرب بهما الوجد ويتحرك القلب، ومثلها كالمبصرات الجميلة والأطعمة
+الحسنة والأصل بها جميعًا الحلال &ldquo;وقد فصل لكم ما حرم عليكم&rdquo;. بل إن القول بتحريم
+الموسيقى لا يستقيم تطبيقيًا، فالموسيقى نظريًا (بالتعريف الحديث) هي ما استقام فيها
+الانسجام، واللحن والإيقاع ولا يوجد قياس رشيد يقول يبين لنا ما درجات الثلاثة في
+المُقاس لتبيين دخوله في نطاق الحرمانية أم لا، على عكس تحريم المسكرات والكحوليات
+مثلًا (وقد فُصلت)، فهناك قياسٌ للشيء أكان مُسكرًا أم لا، ولكن يستحيل أن يوجد قياس في
+شيء غير موضوعي (subjective) كالموسيقى: لا وجد لخط حدودي واضح يخبرنا ما هو موسيقيٌ
+أم لا.
+</p>
+
+
+
+<p>
+وأخيرًا فأحد الأدلة المشهورة بين العوام هي الآية في سورة لقمان &ldquo;ومن الناس من
+يشتري لهو الحديث ليضل عن سبيل الله بغير علم&rdquo;، وهي حجة ضعيفة لذا أردت أن أوردها
+في ختامي، فقد قيل هنا أن لهو الحديث هو الموسيقى والغناء، وهذا ليس بمصيب وإن
+اتفقت عليه فئة كثيرة من المفسرين، فلهو الحديث قد يكون أي شيء به صورة كلامية،
+كالشعر أو الكلام الزور واللغو، بل وإن كان كلامًا قدسيًا (كما طرح ابن حزم)، كأن
+يلهوا أحدهم بالقرآن ليصد به عن سبيل الله لانطبقت عليه الآية، ولو كرر أحدهم لفظ
+الجلالة بصوت عال وقت الدجى ليزعج به المسلمين لكان هذا من لهو الحديث، وغير ذلك
+فالآية تضع شرط الصد عن سبيل الله، هل يصد أن يسمع أحدهم مجموعة التشيلو سويت
+ليوهان سباستيان باخ عن طاعة الله؟ لا. وإني لأحسب أن قول المفسرين بأن المقصود هنا
+هو الغناء ينطبق عليه ما ذكرت أعلاه بأن جلسات السماع ما كانت تخلوا من المعصية
+بزمانهم، أو ما ظهر في زمين النبي بتغني الكفار بسجع الكهان وبالشعر الذي يؤذي
+النبي.
+</p>
+</div>
+<div id="outline-container-org2440a2f" class="outline-3">
+<h3 id="org2440a2f"><span class="timestamp-wrapper"><span class="timestamp">[2024-03-29 Fri 09:10]</span></span></h3>
+<div class="outline-text-3" id="text-org2440a2f">
+<p>
+وأخيرًا فإني أعتقد أن حكم الموسيقى عند الشيوخ سيجري عليه يومًا ما حكم التصوير
+الفوتوغرافي، وقد قال الكثير من علماء المسلمين المعاصرين بتحريم التصوير لحديث
+النبي &ldquo;أشد الناس عذابا يوم القيامة المصورون&rdquo; وكإقامة تشريعية للسلطة &ldquo;للمراقبة
+والمعاقبة&rdquo; رأى ابن باز أن التصوير محرم إلا بما فيه الضرورة، وكانت الضرورة عنده
+هي تمكين دولة آل سعود. أما غيره فقد وجدوا أن لا معنى للحديث بمعناه المعاصر، وأن
+النبي لم يعرف التصوير الفوتوغرافي بل عرف التصوير الذي يُرسم فيه صنم فيعبد، فيحرم
+التصوير في تحريم ما يُصور.
+</p>
+
+<p>
+وكما أوضحت فالنبي ومن لحق زمانه من المسلمين لم يعرفوا السماع دون ارتباطه بما
+يستنكرونه، وقد اُستثني الغزالي من هذا. والسؤال (والمعضلة أيضًا) هنا، إذا كان ما
+جعل علماء المسلمين ينتبهون لسخافة تحريم التصوير هو حاجة السلطة له، فأنى لهم أن
+ينتبهوا لسخافة الأمر في الموسيقى؟
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+فيما قاله الأوزاعي الشامي مثلًا &ldquo;نتجنب من قول أهل العراق شرب المسكر، ومن
+قول أهل الحجاز استماع الملاهي&rdquo; (ترجمة الأوزاعي في سير أعلام النبلاء في الطبقة السادسة.)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+سير أعلام النبلاء، الطبقة الحادية عشر، ابن الماجشون.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+وفيات ابن خلكان، ابن الماجشون (فصل العين).
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+(ترجمه ابن سعد &ldquo;كان فقيها ورعا متابعا لمذاهب أهل الحرمين مفرعا على أصولهم، ذابا عنهم.&rdquo;)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+سير أعلام النبلاء، الطبقة الثالثة، الماجشون.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+المطالب العالية بزوائد المسانيد الثمانية، رقم 1679، عن هشام بن حسان.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+فصل أقوال العلماء في سماع العود والغناء وبيان مذاهبهم وحجج كل وتحقيق
+المقام بما يشفي ويكفي.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+كتاب الكلام على مسألة السماع، فصل: بطلان قول أهل السماع: إن السماع يحصل
+محبوب الله، وما حصل محبوب الله فهو محبوب له، قول صاحب القرآن: المنكرون على
+السماع أضعاف أضعاف من حضروه.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+al-Hasan ibn
+Ahmad al-Kâtib, La Perfection des connaissances musicales, trans. by A. Shiloah, Paris, 1972, pp. 99ff.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10" role="doc-backlink">10</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+كتاب تحريم آلات الطرب، الرد على رسالة ابن حزم وبيان سبب الرد، الفصل
+الخامس: مذاهب العلماء في تحريم آلات الطرب.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2024-02-20 Tue 21:09. Last build date: 2025-07-25 Fri 00:00.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

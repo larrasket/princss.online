@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Concurrency and Parallelism in Go</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Concurrency and Parallelism in Go</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc58573d">Why?</a>
+<ul>
+<li><a href="#orgd60a5d4">Moore&rsquo;s Law, Web, And the Current Mess</a></li>
+</ul>
+</li>
+<li><a href="#org1f830dc">Problems</a>
+<ul>
+<li><a href="#orgf93baad">Race Conditions</a></li>
+<li><a href="#org128a1b1">Atomicity</a></li>
+<li><a href="#org322fde3">Deadlocks</a></li>
+<li><a href="#org512c67a"><span class="done KILL">KILL</span> Livelock</a></li>
+<li><a href="#org479f2e5"><span class="done KILL">KILL</span> Starvation</a></li>
+</ul>
+</li>
+<li><a href="#y6c6tzo02wj0">Concurrency vs Parallelism</a></li>
+<li><a href="#ddj750p02wj0">CPS</a></li>
+<li><a href="#org4ee85d7"><code>Goroutine</code></a></li>
+<li><a href="#org6d941ea"><code>sync</code></a>
+<ul>
+<li><a href="#org830d2fb"><code>WaitGroup</code></a></li>
+<li><a href="#orgef87579"><code>Mutex</code> and <code>RWMutex</code></a></li>
+<li><a href="#orgfcea48c"><code>Cond</code></a>
+<ul>
+<li><a href="#orgbfc0045"><span class="done KILL">KILL</span> <code>Brodcast</code></a></li>
+</ul>
+</li>
+<li><a href="#orged1a8a3"><code>Once</code></a></li>
+</ul>
+</li>
+<li><a href="#03ogh2p02wj0">Concurrency Patterns in Go</a>
+<ul>
+<li><a href="#org28cedc8">Confinement</a>
+<ul>
+<li><a href="#orgb79656d">Ad Hoc</a></li>
+<li><a href="#org3314894">Lexical</a></li>
+</ul>
+</li>
+<li><a href="#org0f05274">For-Select</a></li>
+<li><a href="#org8966660">Preventing Goroutine Leaks</a></li>
+</ul>
+</li>
+<li><a href="#org3b974fe">Notes</a>
+<ul>
+<li><a href="#orgf5ca763"><span class="done KILL">KILL</span> Rendezvous</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>
+<b>This is incomplete!!</b>
+</p>
+
+<div class="PREVIEW" id="orge2dd4ff">
+<p>
+A tutorial in concurrency and parallelism with the Go programming language.
+</p>
+
+</div>
+
+
+
+<p>
+When most people use the word “concurrent,” they’re usually referring to a
+process that occurs simultaneously with one or more processes. It is also
+usually implied that all of these processes are making progress at about the
+same time. Under this definition, an easy way to think about this is people. You
+are currently reading this sentence while others in the world are simultaneously
+living their lives. They are existing <i>concurrently</i> to you.
+</p>
+
+
+<div class="propert" id="org543a34e">
+<p>
+Part of a series on <a href="../cs/go.html#lvkhzyo02wj0">The Go Programming Language</a>
+</p>
+
+</div>
+<div id="outline-container-orgc58573d" class="outline-2">
+<h2 id="orgc58573d">Why?</h2>
+<div class="outline-text-2" id="text-orgc58573d">
+<p>
+As with most paths toward understanding, we’ll begin with a bit of history. Let’s first
+take a look at how concurrency became such an important topic.
+</p>
+</div>
+<div id="outline-container-orgd60a5d4" class="outline-3">
+<h3 id="orgd60a5d4">Moore&rsquo;s Law, Web, And the Current Mess</h3>
+<div class="outline-text-3" id="text-orgd60a5d4">
+<p>
+In 1965, Gordon Moore wrote a three-page paper that described both the consolidation of
+the electronics market toward integrated circuits and the doubling of the number of
+components in an integrated circuit every year for at least a decade. In 1975, he revised
+this prediction to state that the number of components on an integrated circuit would
+double every two years. This prediction more or less held until just
+recently—around 2012.
+</p>
+
+<p>
+Several companies foresaw this slowdown in the rate Moore’s law predicted and began to
+investigate alternative ways to increase computing power. As the saying goes, necessity is
+the mother of innovation, and so it was in this way that multicore processors were born.
+</p>
+
+<p>
+This looked like a clever way to solve the bounding problems of Moore’s law, but computer
+scientists soon found themselves facing down the limits of another law: Amdahl’s law, named
+after computer architect Gene Amdahl.  Amdahl’s law describes a way in which to model the
+potential performance gains from implementing the solution to a problem in a parallel
+manner. Simply put, it states that the gains are bounded by how much of the program must be
+written sequentially.
+</p>
+
+<p>
+For example, imagine you were writing a program that was largely GUI based: a user is
+presented with an interface, clicks on some buttons, and stuff happens. This type of program
+is bounded by one very large sequential portion of the pipeline: human interaction. No
+matter how many cores you make available to this program, it will always be bounded by how
+quickly the user can interact with the interface.  Now consider a different example,
+calculating the digits of pi. Thanks to a class of algorithms called spigot algorithms, this
+problem is called embarrassingly parallel, which —despite sounding made up—is a technical
+term that means that it can easily be divided into parallel tasks. In this case,
+significant gains can be made by making more cores available to your program, and your new
+problem becomes how to combine and store the results.
+</p>
+
+<p>
+For problems that are embarrassingly parallel, it is recommended that you write your
+application so that it can scale horizontally. This means that you can take instances of
+your program, run it on more CPUs, or machines, and this will cause the runtime of
+the system to improve. Embarrassingly parallel problems fit this model so well
+because it’s very easy to structure your program in such a way that you can send
+chunks of a problem to different instances of your application.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1f830dc" class="outline-2">
+<h2 id="org1f830dc">Problems</h2>
+<div class="outline-text-2" id="text-org1f830dc">
+<p>
+Concurrent code is notoriously difficult to get right. It usually takes a few iterations to
+get it working as expected, and even then it’s not uncommon for bugs to exist in code for
+years before some change in timing (heavier disk utilization, more users logged into the
+system, etc.) causes a previously undiscovered bug to rear its head. Indeed, for this very
+book, I’ve gotten as many eyes as possible on the code to try and mitigate this.
+</p>
+</div>
+<div id="outline-container-orgf93baad" class="outline-3">
+<h3 id="orgf93baad">Race Conditions</h3>
+<div class="outline-text-3" id="text-orgf93baad">
+<p>
+A race condition occurs when two or more operations must execute in the correct order, but
+the program has not been written so that this order is guaranteed to be maintained.
+</p>
+
+<p>
+Most of the time, this shows up in what’s called a data race, where one concurrent operation
+attempts to read a variable while at some undetermined time another concurrent operation
+is attempting to write to the same variable.
+</p>
+
+<p>
+Here’s a basic example:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">var</span> <span style="color: #383a42;">data</span> <span style="font-weight: bold;">int</span>
+<span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+    data++
+}()
+<span style="font-weight: bold;">if</span> data == 0 {
+    fmt.<span style="font-weight: bold;">Printf</span>(<span style="color: #8a3b3c;">"the value is %v.\n"</span>, data)
+}
+</code></pre>
+</div>
+</div>
+<div id="outline-container-org128a1b1" class="outline-3">
+<h3 id="org128a1b1">Atomicity</h3>
+<div class="outline-text-3" id="text-org128a1b1">
+<p>
+When something is considered atomic, or has the property of atomicity, this means that
+within the context that it is operating, it is indivisible, or uninterruptible.
+</p>
+
+<p>
+So what does that mean, and why is this important to know when working with
+concurrent code?
+</p>
+
+<p>
+The first and very important thing is the word “context.” Something may be atomic in one
+context, but not another. Operations that are atomic within the context of your process may
+not be atomic in the context of the operating system; operations that are atomic within the
+context of the operating system may not be atomic within the context of your machine, and
+operations that are atomic within the context of your machine may not be atomic within the
+context of your application. In other words, the atomicity of an operation can change
+depending on the currently defined scope.  This fact can work both for and against you.
+</p>
+
+<p>
+When thinking about atomicity, very often the first thing you need to do is to define
+the context or scope, and the operation will be considered to be atomic. Everything
+follows from this.
+</p>
+
+<p>
+Now let’s look at the terms “indivisible” and “uninterruptible.” These terms mean that
+within the context you’ve defined, something that is atomic will happen in its entirety
+without anything happening in that context simultaneously. That’s still a mouthful, so let’s
+look at an example:
+</p>
+
+<pre class="example" id="org93051ea">
+i++
+</pre>
+<p>
+This is about as simple an example as anyone can contrive, and yet it easily demonstrates
+the concept of atomicity. It may look atomic, but a brief analysis reveals several
+operations:
+</p>
+
+<ul class="org-ul">
+<li>Retrieve the value of <code>i</code>.</li>
+<li>Increment the value <code>o</code>.</li>
+<li>Store the value of <code>i</code>.</li>
+</ul>
+
+<p>
+While each of these operations alone is atomic, the combination of the three may not be,
+depending on your context. This reveals an interesting property of atomic operations:
+combining them does not necessarily produce a larger atomic operation. Making the operation
+atomic is dependent on which context you’d like it to be atomic within. If your context is a
+program with no concurrent processes, then this code is atomic within that context. If your
+context is a goroutine that doesn’t expose I to other goroutines, then this code is atomic.
+</p>
+</div>
+</div>
+<div id="outline-container-org322fde3" class="outline-3">
+<h3 id="org322fde3">Deadlocks</h3>
+<div class="outline-text-3" id="text-org322fde3">
+<p>
+A deadlocked program is one in which all concurrent processes are waiting on one
+another. In this state, the program will never recover without outside intervention.
+If that sounds grim, it’s because it is! The Go runtime attempts to do its part and will
+detect some deadlocks (all goroutines must be blocked, or “asleep”), but this doesn’t
+do much to help you prevent deadlocks.
+</p>
+
+<p>
+To help solidify what a deadlock is, let’s first look at an example.<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+There is an accepted proposal to allow the runtime to detect partial deadlocks, but
+it has not been implemented. For more information, see
+<a href="https://github.com/golang/go/issues/13759">https://github.com/golang/go/issues/13759</a>.
+</span>
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">var</span> <span style="color: #383a42;">wg</span> <span style="font-weight: bold;">sync.WaitGroup</span>
+<span style="color: #383a42;">printSum</span> := <span style="font-weight: bold;">func</span>(<span style="color: #383a42;">v1</span>, <span style="color: #383a42;">v2</span> *<span style="font-weight: bold;">value</span>) {
+    <span style="font-weight: bold;">defer</span> wg.<span style="font-weight: bold;">Done</span>()
+    v1.mu.<span style="font-weight: bold;">Lock</span>() <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Here we attempt to enter the critical section for the incoming value.
+</span>    <span style="font-weight: bold;">defer</span> v1.mu.<span style="font-weight: bold;">Unlock</span>() <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Here we use the defer statement to exit the critical section before printSum returns.
+</span>    time.<span style="font-weight: bold;">Sleep</span>(2*time.Second) <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Here we sleep for a period of time to simulate wor
+</span>    v2.mu.<span style="font-weight: bold;">Lock</span>()
+    <span style="font-weight: bold;">defer</span> v2.mu.<span style="font-weight: bold;">Unlock</span>()
+    fmt.<span style="font-weight: bold;">Printf</span>(<span style="color: #8a3b3c;">"sum=%v\n"</span>, v1.value + v2.value)
+}
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">a</span>, <span style="color: #383a42;">b</span> <span style="font-weight: bold;">value</span>
+wg.<span style="font-weight: bold;">Add</span>(2)
+<span style="font-weight: bold;">go</span> <span style="font-weight: bold;">printSum</span>(&amp;a, &amp;b)
+<span style="font-weight: bold;">go</span> <span style="font-weight: bold;">printSum</span>(&amp;b, &amp;a)
+wg.<span style="font-weight: bold;">Wait</span>()
+</code></pre>
+
+<p>
+If you were to try and run this code, you’d probably see:
+</p>
+<pre class="example" id="orga1b3de7">
+fatal error: all goroutines are asleep - deadlock!
+</pre>
+
+<p>
+Why? If you look carefully, you’ll see a timing issue in this code. Following is a graph‐
+local representation of what’s going on. The boxes represent functions, the horizontal lines
+calls to these functions and the vertical bars lifetimes of the function at the head of the
+graphic
+</p>
+
+
+<figure id="orgdfc16c5">
+<img src="../i/old/2022-10-03_04-44-38_screenshot.png" alt="2022-10-03_04-44-38_screenshot.png">
+
+</figure>
+
+<p>
+It seems pretty obvious why this deadlock is occurring when we lay it out graphically like
+that, but we would benefit from a more rigorous definition. It turns out there are a few
+conditions that must be present for deadlocks to arise, and in 1971, Edgar Coff‐ man
+enumerated these conditions in a paper. The conditions are now known as the Coffman
+Conditions are the basis for techniques that help detect, prevent, and correct
+deadlocks.
+</p>
+
+<ul class="org-ul">
+<li>Mutual Exclusion
+A concurrent process holds exclusive rights to a resource at any one time.</li>
+<li>Wait For the Condition
+A concurrent process must simultaneously hold a resource and be waiting for an</li>
+<li>additional resources.
+No Preemption</li>
+<li>A resource held by a concurrent process can only be released by that process, so
+it fulfills this condition.</li>
+<li>Circular Wait
+A concurrent process (P1) must be waiting on a chain of other concurrent pro‐
+cesses (P2), which are in turn waiting on it (P1), so it fulfills this final condition
+too.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org512c67a" class="outline-3">
+<h3 id="org512c67a"><span class="done KILL">KILL</span> Livelock</h3>
+<div class="outline-text-3" id="text-org512c67a">
+<p>
+Livelocks are programs that are actively performing concurrent operations, but these
+operations do nothing to move the state of the program forward.
+</p>
+
+<p>
+Have you ever been in a hallway walking toward another person? She moves to one side to let
+you pass, but you’ve just done the same. So you move to the other side, but she’s also done
+the same. Imagine this going on forever, and you understand livelocks.
+</p>
+</div>
+</div>
+<div id="outline-container-org479f2e5" class="outline-3">
+<h3 id="org479f2e5"><span class="done KILL">KILL</span> Starvation</h3>
+</div>
+</div>
+<div id="outline-container-y6c6tzo02wj0" class="outline-2">
+<h2 id="y6c6tzo02wj0">Concurrency vs Parallelism</h2>
+<div class="outline-text-2" id="text-org7e4e814">
+<p>
+The fact that concurrency is different from parallelism is often overlooked or
+misunderstood. In conversations between many developers, the two terms are often used
+interchangeably to mean “something that runs at the same time as something else.”  Sometimes
+using the word “parallel” in this context is correct, but usually, if the developers are
+discussing code, they really ought to be using the word “concurrent.”
+</p>
+
+<p>
+The reason to differentiate goes well beyond pedantry. The difference between concurrency
+and parallelism turns out to be a very powerful abstraction when modeling your code, and Go
+takes full advantage of this. Let’s take a look at how the two concepts are different so
+that we can understand the power of this abstraction. We’ll start with a very simple
+statement:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+Concurrency is a property of the code; parallelism is a property of the running program.
+</p>
+
+</blockquote></div>
+
+<p>
+Don’t we usually think about these two things the same way? We write our code so that it
+will execute in parallel. Right?
+</p>
+
+<p>
+Well, let’s think about that for a second. If I write my code with the intent that two chunks
+of the program will run in parallel, do I have any guarantee that will happen when
+the program is run? What happens if I run the code on a machine with only one core? Some may
+be thinking, It will run in parallel, but this isn’t true!
+</p>
+
+
+<p>
+The chunks of our program may appear to be running in parallel, but they’re executing
+sequentially faster than is distinguishable. The CPU context switches to share
+time between different programs, and over a coarse enough granularity of time, the tasks
+appear to be running in parallel. If we were to run the same binary on a machine with two
+cores, the program’s chunks might be running in parallel.
+</p>
+
+<p>
+This reveals a few interesting and important things. The first is that we do not write
+parallel code, only concurrent code that we hope will be run in parallel. Once again,
+parallelism is a property of the runtime of our program, not the code.
+</p>
+
+<p>
+The second interesting thing is that we see it is possible—maybe even desirable—to be
+ignorant of whether our concurrent code is running in parallel. This is only made
+possible by the layers of abstraction that lie beneath our program’s model: the concurrency
+primitives, the program’s runtime, the operating system, the platform the operating system
+runs on (in the case of hypervisors, containers, and virtual machines), and ultimately the
+CPUs. These abstractions are what allow us to make the distinction between concurrency and
+parallelism, and ultimately what gives us the power and flexibility to express ourselves.
+We’ll come back to this.
+</p>
+</div>
+</div>
+<div id="outline-container-ddj750p02wj0" class="outline-2">
+<h2 id="ddj750p02wj0">CPS</h2>
+<div class="outline-text-2" id="text-org03281e8">
+<p>
+A CSP stands for “Communicating Sequential Processes,” which is both a technique and
+the name of the paper that introduced it. In 1978, Charles Antony Richard Hoare
+published a paper in the Association for Computing Machinery (more popularly
+referred to as ACM).
+</p>
+
+<p>
+In this paper, Hoare suggests that input and output are two overlooked primitives of
+programming—particularly in concurrent code. At the time Hoare authored this paper, research
+was still being done on how to structure programs, but most of this effort was being
+directed to techniques for sequential code: usage of the goto statement was being debated
+(yeah funny history), and the object-oriented paradigm was beginning to take root.
+Concurrent operations weren’t being given much thought. Hoare set out to correct this, and
+thus his paper, and CSP, were born.
+</p>
+
+<p>
+In the 1978 paper, CSP was only a simple programming language constructed solely to
+demonstrate the power of communicating sequential processes; in fact, he even says in the
+paper:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+Thus the concepts and notations introduced in this paper should … not be regarded as
+suitable for use as a programming language, either for abstract or concrete programming.
+</p>
+
+</blockquote></div>
+
+<p>
+Hoare was deeply concerned that the techniques he was presenting did nothing to further the
+study of the correctness of programs, and that the techniques may not be performant in a real
+language based on his own. Over the next six years, the idea of CSP was refined into a
+formal representation of something called process calculus to take the ideas of
+communicating sequential processes and beginning to reason about <i>program correctness</i>.
+Process calculus is a way to mathematically model concurrent systems and also provides
+algebraic laws to perform transformations on these systems to analyze their various
+properties, e.g., efficiency and correctness
+</p>
+
+<p>
+To support his assertion that inputs and outputs needed to be considered language
+primitives, Hoare’s CSP programming language contained primitives to model input and output,
+or communication, between processes correctly (this is where the paper’s name comes from).
+Hoare applied the term processes to any encapsulated portion of logic that required input to
+run and produced output other processes would consume. Hoare probably could have used the
+word “function” were it not for the debate on how to structure programs occurring in the
+community when he wrote his paper.
+</p>
+
+<p>
+For communication between the processes, Hoare created input and output commands: <code>!</code> for
+sending input into a process, and <code>?</code> for reading output from a process.  Each command had to
+specify either an output variable (in the case of reading a variable out of a process) or
+a destination (in the case of sending input to a process).  Sometimes these two would refer
+to the same thing, in which case the two processes would be said to correspond. In other
+words, output from one process would flow directly into the input of another process.
+</p>
+
+<p>
+History has judged Hoare’s suggestion to be correct; however, it’s interesting to note that
+before Go was released, few languages brought support for these primitives into
+the language. Most popular languages favor sharing and synchronizing access to the memory
+to CSP’s message-passing style. There are exceptions, but unfortunately, these are confined
+to languages that haven’t seen wide adoption. Go is one of the first languages to
+incorporate principles from CSP in its core, and bring this style of concurrent programming
+to the masses. Its success has led other languages to attempt to add these primitives as
+well.
+</p>
+</div>
+</div>
+<div id="outline-container-org4ee85d7" class="outline-2">
+<h2 id="org4ee85d7"><code>Goroutine</code></h2>
+<div class="outline-text-2" id="text-org4ee85d7">
+<p>
+The Goroutines are one of the most basic units of organization in a Go program, so it’s
+important we understand what they are and how they work. Every Go program has at
+least one goroutine: the main goroutine, which is automatically created and started when the
+process begins. In almost any program you’ll probably find yourself reaching for a goroutine
+sooner or later to assist in solving your problems. So what are they?
+</p>
+
+<p>
+Goroutines are unique to Go (though some other languages have a concurrency primitive that
+is similar).  They’re not OS threads, and they’re not exactly green threads—threads that are
+managed by a language’s runtime—they’re a higher level of abstraction known as coroutines.
+Coroutines are simply concurrent subroutines (functions, closures, or methods in Go) that
+are nonpreemptive—that is, they cannot be interrupted. Instead, coroutines have multiple
+points throughout which allow for suspension or reentry.
+</p>
+
+<p>
+What makes goroutines unique to Go is their deep integration with Go’s runtime.  Goroutines
+don’t define their suspension or reentry points; Go’s runtime observes the runtime
+behavior of goroutines and automatically suspends them when they block and then resumes them
+when they become unblocked. In a way, this makes them preemptable, but only at points where
+the goroutine has become blocked. It is an elegant partnership between the runtime and a
+goroutine’s logic. Thus, goroutines can be considered a special class of coroutine.
+</p>
+
+<p>
+Coroutines, and thus goroutines, are implicitly concurrent constructs, but concurrency is
+not a property of a coroutine: something must host several coroutines simultaneously and
+allow each to execute—otherwise, they wouldn’t be concurrent.
+</p>
+
+<p>
+Go’s mechanism for hosting goroutines is an implementation of what’s called an M: N
+scheduler, which means it maps M green threads to N OS threads. Goroutines are then
+scheduled onto the green threads. When we have more goroutines than green threads available,
+the scheduler handles the distribution of the goroutines across the available threads and
+ensures that when these goroutines become blocked, other goroutines can be run.
+</p>
+
+<p>
+The go statement is how Go performs a fork, and the forked threads of execution are
+goroutines. Let’s return to our simple goroutine example:
+</p>
+<pre class="code"><code><span style="color: #383a42;">sayHello</span> := <span style="font-weight: bold;">func</span>() {
+fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"hello"</span>)
+}
+<span style="font-weight: bold;">go</span> <span style="font-weight: bold;">sayHello</span>()
+</code></pre>
+
+<p>
+Here, the <code>sayHello</code> function will be run on its goroutine, while the rest of the
+program continues executing. In this example, there is no join point. The goroutine
+executing <code>sayHello</code> will simply exit at some undetermined time in the future, and the rest
+of the program will have already continued executing.
+</p>
+
+<p>
+There is one problem with this example: as written, it’s undetermined whether the <code>sayHello</code>
+the function will ever be run at all. The goroutine will be created and scheduled with Go’s
+runtime to execute, but it may not get a chance to run before the main goroutine
+exits.
+</p>
+
+<p>
+Indeed, because we omit the rest of the main function for simplicity, when we
+run this small example, it is almost certain that the program will finish executing before
+the goroutine hosting the call to <code>sayHello</code> is ever started. As a result, you won’t see the
+word “hello” printed to <code>stdout</code>. You could put a <code>time.Sleep</code> after you create the goroutine,
+but recall that this doesn’t actually create a join point, only a race condition.
+</p>
+
+<p>
+To a create a join point, you have to synchronize the main goroutine and the
+sayHello goroutine. This can be done in a number of ways.
+</p>
+<pre class="code"><code><span style="font-weight: bold;">import</span> (
+    <span style="color: #8a3b3c;">"fmt"</span>
+    <span style="color: #8a3b3c;">"sync"</span>
+)
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+
+    <span style="color: #383a42;">sayhello</span> := <span style="font-weight: bold;">func</span>() {
+        <span style="font-weight: bold;">defer</span> wg.<span style="font-weight: bold;">Done</span>()
+        fmt.<span style="font-weight: bold;">Print</span>(<span style="color: #8a3b3c;">"hello"</span>)
+    }
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">sayhello</span>()
+    wg.<span style="font-weight: bold;">Add</span>(1)
+    wg.<span style="font-weight: bold;">Wait</span>()
+}
+</code></pre>
+</div>
+</div>
+<div id="outline-container-org6d941ea" class="outline-2">
+<h2 id="org6d941ea"><code>sync</code></h2>
+<div class="outline-text-2" id="text-org6d941ea">
+<p>
+The sync package contains the concurrency primitives that are most useful for low- level
+memory access synchronization.
+</p>
+</div>
+<div id="outline-container-org830d2fb" class="outline-3">
+<h3 id="org830d2fb"><code>WaitGroup</code></h3>
+<div class="outline-text-3" id="text-org830d2fb">
+<p>
+<code>WaitGroup</code> is a great way to wait for a set of concurrent operations to complete when you
+either don’t care about the result of the concurrent operation, or you have other means of
+collecting their results. If neither of those conditions is true, I suggest you use
+channels and a select statement instead. <code>WaitGroup</code> is so useful, I’m introducing it first
+so I can use it in subsequent sections. Here’s a basic example of using a <code>WaitGroup</code> to
+wait for <code>goroutines</code> to complete:
+</p>
+<pre class="code"><code><span style="font-weight: bold;">import</span> (
+    <span style="color: #8a3b3c;">"fmt"</span>
+    <span style="color: #8a3b3c;">"sync"</span>
+)
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">wg</span> <span style="font-weight: bold;">sync.WaitGroup</span>
+    wg.<span style="font-weight: bold;">Add</span>(1)
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+        <span style="font-weight: bold;">defer</span> wg.<span style="font-weight: bold;">Done</span>()
+        fmt.<span style="font-weight: bold;">Print</span>(<span style="color: #8a3b3c;">"1"</span>)
+    }()
+
+    wg.<span style="font-weight: bold;">Add</span>(1)
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+        <span style="font-weight: bold;">defer</span> wg.<span style="font-weight: bold;">Done</span>()
+        fmt.<span style="font-weight: bold;">Print</span>(<span style="color: #8a3b3c;">"2"</span>)
+    }()
+
+    wg.<span style="font-weight: bold;">Add</span>(1)
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+        <span style="font-weight: bold;">defer</span> wg.<span style="font-weight: bold;">Done</span>()
+        fmt.<span style="font-weight: bold;">Print</span>(<span style="color: #8a3b3c;">"3"</span>)
+    }()
+    wg.<span style="font-weight: bold;">Wait</span>()
+}
+</code></pre>
+
+<p>
+The output will differ probably in your machine.
+</p>
+</div>
+</div>
+<div id="outline-container-orgef87579" class="outline-3">
+<h3 id="orgef87579"><code>Mutex</code> and <code>RWMutex</code></h3>
+<div class="outline-text-3" id="text-orgef87579">
+<p>
+Mutex stands for “mutual exclusion” and is a way to guard critical sections of your program.
+A critical section is an area of your program that requires exclusive access to a shared
+resource. A Mutex provides a concurrent-safe way to express exclusive access to these shared
+resources. To borrow a Goism, whereas channels share memory by communicating, a Mutex shares
+memory by creating a convention developer must follow to synchronize access to the memory.
+You are responsible for coordinating access to this memory by guarding access to it with a
+mutex. Here’s a simple example of two goroutines that are attempting to increment and
+decrement a common value; they use a Mutex to synchronize:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">count</span> <span style="font-weight: bold;">int</span>
+    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">lock</span> <span style="font-weight: bold;">sync.Mutex</span>
+    <span style="color: #383a42;">increment</span> := <span style="font-weight: bold;">func</span>() {
+        lock.<span style="font-weight: bold;">Lock</span>()
+        <span style="font-weight: bold;">defer</span> lock.<span style="font-weight: bold;">Unlock</span>()
+        count++
+        fmt.<span style="font-weight: bold;">Printf</span>(<span style="color: #8a3b3c;">"Incrementing: %d\n"</span>, count)
+    }
+    <span style="color: #383a42;">decrement</span> := <span style="font-weight: bold;">func</span>() {
+        lock.<span style="font-weight: bold;">Lock</span>()
+        <span style="font-weight: bold;">defer</span> lock.<span style="font-weight: bold;">Unlock</span>()
+        count--
+        fmt.<span style="font-weight: bold;">Printf</span>(<span style="color: #8a3b3c;">"Decrementing: %d\n"</span>, count)
+    }
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Increment
+</span>    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">arithmetic</span> <span style="font-weight: bold;">sync.WaitGroup</span>
+    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt;= 5; i++ {
+        arithmetic.<span style="font-weight: bold;">Add</span>(1)
+        <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+            <span style="font-weight: bold;">defer</span> arithmetic.<span style="font-weight: bold;">Done</span>()
+            <span style="font-weight: bold;">increment</span>()
+        }()
+    }
+
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Decrement
+</span>    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt;= 5; i++ {
+        arithmetic.<span style="font-weight: bold;">Add</span>(1)
+        <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+            <span style="font-weight: bold;">defer</span> arithmetic.<span style="font-weight: bold;">Done</span>()
+            <span style="font-weight: bold;">decrement</span>()
+        }()
+    }
+    arithmetic.<span style="font-weight: bold;">Wait</span>()
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Arithmetic complete."</span>)
+}
+</code></pre>
+
+<p>
+Critical sections are so named because they reflect a bottleneck in your program. It is
+somewhat expensive to enter and exit a critical section, and so generally people attempt to
+minimize the time spent in critical sections.  One strategy for doing so is to reduce the
+cross-section of the critical section. There may be a memory that needs to be shared between
+multiple concurrent processes, but perhaps not all of these processes will read and write to
+this memory. If this is the case, you can take advantage of a different type of mutex:
+<code>sync.RWMutex</code>.  The <code>sync.RWMutex</code> is conceptually the same thing as a Mutex: it guards
+memory access; however, <code>RWMutex</code> gives you a little bit more control over the memory.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfcea48c" class="outline-3">
+<h3 id="orgfcea48c"><code>Cond</code></h3>
+<div class="outline-text-3" id="text-orgfcea48c">
+<p>
+The comment for the <code>Cond</code> type does a great job of describing its purpose:
+</p>
+<div class="epigraph"><blockquote>
+<p>
+&#x2026;a rendezvous point for goroutines waiting for or announcing the occurrence of an event.
+</p>
+
+</blockquote></div>
+
+<p>
+In that definition, an “event” is any arbitrary signal between two or more goroutines that
+carries no information other than the fact that it has occurred. Very often you’ll want to
+wait for one of these signals before continuing execution on a goroutine. If we were to look
+at how to accomplish this without the Cond type, one naive approach is to use an infinite
+loop:
+</p>
+
+<pre class="example" id="org5a6acee">
+for conditionTrue() == false {
+}
+</pre>
+
+<p>
+However, this would consume all cycles of one core. To fix that, we could introduce a
+<code>time.sleep</code>
+</p>
+<pre class="example" id="orgb074f22">
+time.Sleep:
+for conditionTrue() == false {
+    time.Sleep(1*time.Millisecond)
+}
+</pre>
+
+<p>
+This is better, but it’s still inefficient, and you have to figure out how long to sleep
+for: too long, and you’re artificially degrading performance; too short, and you’re
+unnecessarily consuming too much CPU time.  It would be better if there were some kind of
+a way for a goroutine to efficiently sleep until it was signaled to wake and check its
+condition.  This is exactly what the Cond type does for us. Using a Cond, we could write the
+example like:
+</p>
+<pre class="example" id="org979f0ec">
+c := sync.NewCond(&amp;sync.Mutex{})
+c.L.Lock()
+for conditionTrue() == false {
+    c.Wait()
+}
+c.L.Unlock()
+</pre>
+
+<p>
+Let’s expand on this example and show both sides of the equation: a goroutine that is
+waiting for a signal, and a goroutine that is sending signals. Say we have a queue of fixed
+length 2, and 10 items we want to push onto the queue. We want to enqueue items as soon as
+there is room, so we want to be notified as soon as there’s room in the queue. Let’s try
+using a Cond to manage this coordination:
+</p>
+
+<pre class="code"><code><span style="color: #383a42;">c</span> := sync.<span style="font-weight: bold;">NewCond</span>(&amp;<span style="font-weight: bold;">sync.Mutex</span>{})
+<span style="color: #383a42;">queue</span> := <span style="font-weight: bold;">make</span>([]<span style="font-weight: bold;">interface</span>{}, 0, 10)
+<span style="color: #383a42;">removeFromQueue</span> := <span style="font-weight: bold;">func</span>(<span style="color: #383a42;">delay</span> <span style="font-weight: bold;">time.Duration</span>) {
+    time.<span style="font-weight: bold;">Sleep</span>(delay)
+    c.L.<span style="font-weight: bold;">Lock</span>()
+    queue = queue[1:]
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Removed from queue"</span>)
+    c.L.<span style="font-weight: bold;">Unlock</span>()
+    c.<span style="font-weight: bold;">Signal</span>()
+}
+<span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt; 10; i++{
+    c.L.<span style="font-weight: bold;">Lock</span>()
+    <span style="font-weight: bold;">for</span> <span style="font-weight: bold;">len</span>(queue) == 2 {
+        c.<span style="font-weight: bold;">Wait</span>()
+    }
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Adding to queue"</span>)
+    queue = <span style="font-weight: bold;">append</span>(queue, <span style="font-weight: bold;">struct</span>{}{})
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">removeFromQueue</span>(1*time.Second)
+    c.L.<span style="font-weight: bold;">Unlock</span>()
+}
+</code></pre>
+
+<p>
+We also have a new method in this example, Signal. This is one of two methods that the Cond
+type provides for notifying goroutines blocked on a Wait call that the condition has been
+triggered. The other is a method called Broadcast. Internally, the run-time maintains a
+FIFO list of goroutines waiting to be signaled; Signal finds the goroutine that’s been
+waiting for the longest and notifies that, whereas Broadcast sends a signal to all goroutines
+that are waiting. Broadcast is arguably the more interesting of the two methods as it
+provides a way to communicate with multiple goroutines at once.
+</p>
+</div>
+<div id="outline-container-orgbfc0045" class="outline-4">
+<h4 id="orgbfc0045"><span class="done KILL">KILL</span> <code>Brodcast</code></h4>
+</div>
+</div>
+<div id="outline-container-orged1a8a3" class="outline-3">
+<h3 id="orged1a8a3"><code>Once</code></h3>
+<div class="outline-text-3" id="text-orged1a8a3">
+<p>
+Once is an object that will perform exactly one action.  Sounds simple enough, what’s so
+useful about it then?
+</p>
+
+<p>
+Well for some reason this isn’t particularly well documented, but a <code>sync.Once</code> will wait
+until the execution of <code>.Do</code> completes. This makes it incredibly useful when performing
+relatively expensive operations that you would typically cache in a map.
+</p>
+
+<p>
+Say for example you have a popular website that hits a backend API that isn’t particularly
+fast, so you decide to cache API results in-memory with a map. A naive solution might look
+like this:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">package</span> main
+
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">cache</span> = <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">map</span>[<span style="font-weight: bold;">string</span>][]<span style="font-weight: bold;">byte</span>)
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">mutex</span> = <span style="font-weight: bold;">new</span>(<span style="font-weight: bold;">sync.Mutex</span>)
+
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">DoQuery</span>(<span style="color: #383a42;">name</span> <span style="font-weight: bold;">string</span>) []<span style="font-weight: bold;">byte</span> {
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Check if the result is already cached.
+</span>    mutex.<span style="font-weight: bold;">Lock</span>()
+    <span style="font-weight: bold;">if</span> <span style="color: #383a42;">cached</span>, <span style="color: #383a42;">found</span> := cache[name]; found {
+        mutex.<span style="font-weight: bold;">Unlock</span>()
+        <span style="font-weight: bold;">return</span> cached, <span style="color: #383a42;">nil</span>
+    }
+    mutex.<span style="font-weight: bold;">Unlock</span>()
+
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Make the request if it's uncached.
+</span>    <span style="color: #383a42;">resp</span>, <span style="color: #383a42;">err</span> := http.<span style="font-weight: bold;">Get</span>(<span style="color: #8a3b3c;">"https://upstream.api/?query="</span> + url.<span style="font-weight: bold;">QueryEscape</span>(name))
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Error handling and resp.Body.Close omitted for brevity.
+</span>    <span style="color: #383a42;">result</span>, <span style="color: #383a42;">err</span> := ioutil.<span style="font-weight: bold;">ReadAll</span>(resp)
+
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Store the result in the cache.
+</span>    mutex.<span style="font-weight: bold;">Lock</span>()
+    cache[name] = result
+    mutex.<span style="font-weight: bold;">Unlock</span>()
+
+    <span style="font-weight: bold;">return</span> result
+}
+</code></pre>
+
+<p>
+Well what happens if there are two calls to <code>DoQuery</code> that happen simultaneously? The calls
+would race, neither would see the cache is populated, and both would perform the HTTP
+request to upstream.api unnecessarily, when only one would need to complete it.
+</p>
+
+
+<p>
+Well, you can do something like this:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">package</span> main
+
+<span style="font-weight: bold;">type</span> <span style="font-weight: bold;">CacheEntry</span> <span style="font-weight: bold;">struct</span> {
+    data []<span style="font-weight: bold;">byte</span>
+    wait &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">struct</span>{}
+}
+
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">cache</span> = <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">map</span>[<span style="font-weight: bold;">string</span>]*<span style="font-weight: bold;">CacheEntry</span>)
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">mutex</span> = <span style="font-weight: bold;">new</span>(<span style="font-weight: bold;">sync.Mutex</span>)
+
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">DoQuery</span>(<span style="color: #383a42;">name</span> <span style="font-weight: bold;">string</span>) []<span style="font-weight: bold;">byte</span> {
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Check if the operation has already been started.
+</span>    mutex.<span style="font-weight: bold;">Lock</span>()
+    <span style="font-weight: bold;">if</span> <span style="color: #383a42;">cached</span>, <span style="color: #383a42;">found</span> := cache[name]; found {
+        mutex.<span style="font-weight: bold;">Unlock</span>()
+        <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Wait for it to complete.
+</span>        &lt;-cached.wait <span style="color: #556b2f;">// </span><span style="color: #556b2f;">remember that when a channel is closed, you get the zero value without blocking.
+</span>        <span style="font-weight: bold;">return</span> cached.data, <span style="color: #383a42;">nil</span>
+    }
+
+    <span style="color: #383a42;">wait</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">struct</span>{})
+
+    <span style="color: #383a42;">entry</span> := &amp;<span style="font-weight: bold;">CacheEntry</span>{
+        <span style="color: #383a42;">data</span>: result,
+        <span style="color: #383a42;">wait</span>: wait,
+    }
+    cache[name] = entry
+    mutex.<span style="font-weight: bold;">Unlock</span>()
+
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Make the request if it's uncached.
+</span>    <span style="color: #383a42;">resp</span>, <span style="color: #383a42;">err</span> := http.<span style="font-weight: bold;">Get</span>(<span style="color: #8a3b3c;">"https://upstream.api/?query="</span> + url.<span style="font-weight: bold;">QueryEscape</span>(name))
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Error handling and resp.Body.Close omitted for brevity
+</span>    entry.data, err = ioutil.<span style="font-weight: bold;">ReadAll</span>(resp)
+
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Signal that the operation is complete, receiving on closed channels returns immediately.
+</span>    <span style="font-weight: bold;">close</span>(wait)
+
+    <span style="font-weight: bold;">return</span> result
+}
+
+</code></pre>
+
+<p>
+That’s good and all but the code’s readability has taken a hit. It’s not immediately clear
+what’s going on with <code>cached.wait</code> and the flow of operations under different situations is
+not very intuitive.
+</p>
+
+
+<p>
+Let&rsquo;s try again with <code>sync.Once</code>:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">package</span> main
+
+<span style="font-weight: bold;">type</span> <span style="font-weight: bold;">CacheEntry</span> <span style="font-weight: bold;">struct</span> {
+    data []<span style="font-weight: bold;">byte</span>
+    once *<span style="font-weight: bold;">sync.Once</span>
+}
+
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">cache</span> = <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">map</span>[<span style="font-weight: bold;">string</span>]*<span style="font-weight: bold;">CacheEntry</span>)
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">mutex</span> = <span style="font-weight: bold;">new</span>(<span style="font-weight: bold;">sync.Mutex</span>)
+
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">DoQuery</span>(<span style="color: #383a42;">name</span> <span style="font-weight: bold;">string</span>) []<span style="font-weight: bold;">byte</span> {
+    mutex.<span style="font-weight: bold;">Lock</span>()
+    <span style="color: #383a42;">entry</span>, <span style="color: #383a42;">found</span> := cache[name]
+    <span style="font-weight: bold;">if</span> <span style="color: #383a42; font-weight: bold;">!</span>found {
+        <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Create a new entry if one does not exist already.
+</span>        entry = &amp;<span style="font-weight: bold;">CacheEntry</span>{
+            <span style="color: #383a42;">once</span>: <span style="font-weight: bold;">new</span>(<span style="font-weight: bold;">sync.Once</span>),
+        }
+        cache[name] = entry
+    }
+    mutex.<span style="font-weight: bold;">Unlock</span>()
+
+    entry.once.<span style="font-weight: bold;">Do</span>(<span style="font-weight: bold;">func</span>() {
+        <span style="color: #383a42;">resp</span>, <span style="color: #383a42;">err</span> := http.<span style="font-weight: bold;">Get</span>(<span style="color: #8a3b3c;">"https://upstream.api/?query="</span> + url.<span style="font-weight: bold;">QueryEscape</span>(name))
+        <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Error handling and resp.Body.Close omitted for brevity
+</span>        entry.data, err = ioutil.<span style="font-weight: bold;">ReadAll</span>(resp)
+    })
+
+    <span style="font-weight: bold;">return</span> entry.data
+}
+</code></pre>
+
+<p>
+That’s it. This achieves the same as the previous example, but is now much easier to
+understand (at least in my opinion). There is only a single return, and the code flows
+intuitively from top to bottom without having to read and understand what’s going on with
+the <code>entry.wait</code> channel as before.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-03ogh2p02wj0" class="outline-2">
+<h2 id="03ogh2p02wj0">Concurrency Patterns in Go</h2>
+<div class="outline-text-2" id="text-org9b0b988">
+<div class="BACKLINKS" id="orge988469">
+<p>
+This section was referenced in <a href="go.html#uq35rvn02wj0">[draft][don&rsquo;t take it seriously] Go Incomplete Guide</a>.
+</p>
+
+</div>
+
+<p>
+We’ve explored the fundamentals of Go’s concurrency primitives and discussed how to properly
+use these primitives. In this chapter, we’ll do a deep-dive into how to compose these
+primitives into patterns that will help keep your system scalable and maintainable.
+</p>
+
+<p>
+However, before we get started, we need to touch upon the format of some of the pat‐ terns
+contained in this chapter. In a lot of the examples, we’ll be using channels that pass empty
+interfaces (interface{}) around.
+</p>
+</div>
+<div id="outline-container-org28cedc8" class="outline-3">
+<h3 id="org28cedc8">Confinement</h3>
+<div class="outline-text-3" id="text-org28cedc8">
+<p>
+When working with concurrent code, there are a few different options for safe operation.
+We’ve gone over two of them:
+</p>
+
+<ul class="org-ul">
+<li>Synchronization primitives for sharing memory (e.g., <code>sync.Mutex</code>)</li>
+<li>Synchronization via communicating (e.g., <code>channels</code>)</li>
+</ul>
+
+<p>
+However, there are a couple of other options that are implicitly safe within multiple
+concurrent processes:
+</p>
+
+<ul class="org-ul">
+<li>Immutable data</li>
+<li>Data protected by confinement</li>
+</ul>
+
+<p>
+In some sense, immutable data is ideal because it is implicitly concurrent-safe. Each
+concurrent process may operate on the same data, but it may not modify it. If it wants to
+create new data, it must create a new copy of the data with the desired modifications. This
+allows not only a lighter cognitive load on the developer but can also lead to faster
+programs if it leads to smaller critical sections (or eliminates them altogether). In Go,
+you can achieve this by writing code that utilizes copies of values instead of pointers to
+values in memory.
+</p>
+
+<p>
+Confinement is the simple yet powerful idea of ensuring information is only ever available
+from one concurrent process. When this is achieved, a concurrent program is implicitly safe
+and no synchronization is needed. There are two kinds of confinement possible: ad hoc and
+lexical.
+</p>
+</div>
+<div id="outline-container-orgb79656d" class="outline-4">
+<h4 id="orgb79656d">Ad Hoc</h4>
+<div class="outline-text-4" id="text-orgb79656d">
+<p>
+Ad hoc confinement is when you achieve confinement through a convention whether it be set by
+the languages community, the group you work within, or the code-base you work within. In my
+opinion, sticking to convention is difficult to achieve on projects of any size unless you
+have tools to perform static analysis on your code every time someone commits some code.
+Here’s an example of ad hoc confinement that demonstrates why:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">import</span> <span style="color: #8a3b3c;">"fmt"</span>
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="color: #383a42;">data</span> := <span style="font-weight: bold;">make</span>([]<span style="font-weight: bold;">int</span>, 4)
+    <span style="color: #383a42;">loopData</span> := <span style="font-weight: bold;">func</span>(<span style="color: #383a42;">handleData</span> <span style="font-weight: bold;">chan</span>&lt;- <span style="font-weight: bold;">int</span>) {
+        <span style="font-weight: bold;">defer</span> <span style="font-weight: bold;">close</span>(handleData)
+        <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := <span style="font-weight: bold;">range</span> data {
+            handleData &lt;- data[i]
+        }
+    }
+    <span style="color: #383a42;">handleData</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">int</span>)
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">loopData</span>(handleData)
+    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">num</span> := <span style="font-weight: bold;">range</span> handleData {
+        fmt.<span style="font-weight: bold;">Println</span>(num)
+    }
+}
+</code></pre>
+
+<p>
+We can see that the data slice of integers is available from both the loopData function and
+the loop over the handleData channel; however, by convention we’re only accessing it from
+the loopData function.
+</p>
+</div>
+</div>
+<div id="outline-container-org3314894" class="outline-4">
+<h4 id="org3314894">Lexical</h4>
+<div class="outline-text-4" id="text-org3314894">
+<p>
+Lexical confinement involves using lexical scope to expose only the correct data and
+concurrency primitives for multiple concurrent processes to use. It makes it impossible to
+do the wrong thing.
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">package</span> main
+
+<span style="font-weight: bold;">import</span> (
+    <span style="color: #8a3b3c;">"fmt"</span>
+    <span style="color: #8a3b3c;">"time"</span>
+)
+
+<span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="color: #383a42;">chanOwner</span> := <span style="font-weight: bold;">func</span>() &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">int</span> {
+        <span style="color: #383a42;">results</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">int</span>, 5)
+        <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+            <span style="font-weight: bold;">defer</span> <span style="font-weight: bold;">close</span>(results)
+
+            <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt;= 5; i++ {
+                time.<span style="font-weight: bold;">Sleep</span>(1 * time.Second)
+                results &lt;- i
+            }
+        }()
+
+        <span style="font-weight: bold;">return</span> results
+    }
+
+    <span style="color: #383a42;">consumer</span> := <span style="font-weight: bold;">func</span>(<span style="color: #383a42;">results</span> &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">int</span>) {
+        fmt.<span style="font-weight: bold;">Println</span>(results)
+
+        <span style="font-weight: bold;">for</span> <span style="color: #383a42;">result</span> := <span style="font-weight: bold;">range</span> results {
+            fmt.<span style="font-weight: bold;">Printf</span>(<span style="color: #8a3b3c;">"Received: %d\n"</span>, result)
+        }
+
+        fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Done receiving!"</span>)
+    }
+
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"initiate channel"</span>)
+    <span style="color: #383a42;">results</span> := <span style="font-weight: bold;">chanOwner</span>()
+
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"consumer ready - OK"</span>)
+    <span style="font-weight: bold;">consumer</span>(results)
+}
+</code></pre>
+<p>
+ Why pursue confinement if we have synchronization available to us? The answer is improved
+performance and reduced cognitive load on developers.  Synchronization comes with a cost,
+and if you can avoid it you won’t have any critical sections, and therefore you won’t have
+to pay the cost of synchronizing them.<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+Note that lexical might abuse the memory usage in this example; for larger types
+(which should be passed as pointers)
+</span>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f05274" class="outline-3">
+<h3 id="org0f05274">For-Select</h3>
+<div class="outline-text-3" id="text-org0f05274">
+<p>
+Obviously.
+</p>
+</div>
+</div>
+<div id="outline-container-org8966660" class="outline-3">
+<h3 id="org8966660">Preventing Goroutine Leaks</h3>
+<div class="outline-text-3" id="text-org8966660">
+<p>
+When you are dealing with a memory leak in Go, there is a possability by 99% that your
+dealing with goroutines leak.
+</p>
+
+
+<p>
+The goroutine has a few paths to termination:
+</p>
+
+<ul class="org-ul">
+<li>When it has completed its work.</li>
+<li>When it cannot continue its work due to an unrecoverable error.</li>
+<li>When it’s told to stop working.</li>
+</ul>
+
+<p>
+We get the first two paths for free—these paths are your algorithm—but what about work
+cancellation? This turns out to be the most important bit because of the network effect: if
+you’ve begun a goroutine, it’s most likely cooperating with several other goroutines in some
+sort of organized fashion. We could even represent this interconnectedness as a graph:
+whether or not a child goroutine should continue executing might be predicated on knowledge
+of the state of many other goroutines. The parent
+</p>
+
+
+<p>
+goroutine (often the main goroutine) with this full contextual knowledge should be able to
+tell its child goroutines to terminate. Let’s start with a simple exam ple of a goroutine
+leak:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="color: #383a42;">doWork</span> := <span style="font-weight: bold;">func</span>(<span style="color: #383a42;">strings</span> &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">string</span>) &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{} {
+        <span style="color: #383a42;">completed</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{})
+        <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+            <span style="font-weight: bold;">defer</span> fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"doWork exited."</span>)
+            <span style="font-weight: bold;">defer</span> <span style="font-weight: bold;">close</span>(completed)
+            <span style="font-weight: bold;">for</span> <span style="color: #383a42;">s</span> := <span style="font-weight: bold;">range</span> strings {
+                <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Do something interesting
+</span>                fmt.<span style="font-weight: bold;">Println</span>(s)
+            }
+        }()
+        <span style="font-weight: bold;">return</span> completed
+    }
+    <span style="font-weight: bold;">doWork</span>(<span style="color: #383a42;">nil</span>)
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Perhaps more work is done here
+</span>    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Done."</span>)
+    fmt.<span style="font-weight: bold;">Println</span>(runtime.<span style="font-weight: bold;">NumGoroutine</span>())
+}
+</code></pre>
+
+<p>
+Here we see that the main goroutine passes a nil channel into doWork. Therefore, the strings
+channel will never actually gets any strings written onto it, and the goroutine containing
+doWork will remain in memory for the lifetime of this process (we would even deadlock if we
+joined the goroutine within doWork and the main goroutine).
+</p>
+
+<p>
+In this example, the lifetime of the process is very short, but in a real program,
+goroutines could easily be started at the beginning of a long-lived program. In the worst
+case, the main goroutine could continue to spin up goroutines throughout its life, causing
+creep in memory utilization.
+</p>
+
+
+<p>
+The way to successfully mitigate this is to establish a signal between the parent goroutine
+and its children that allows the parent to signal cancellation to its children. By
+convention, this signal is usually a read-only channel named done. The parent goroutine
+passes this channel to the child goroutine and then closes the channel when it wants to
+cancel the child goroutine. Here’s an example:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
+    <span style="color: #383a42;">doWork</span> := <span style="font-weight: bold;">func</span>(
+        <span style="color: #383a42;">done</span> &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{},
+        <span style="color: #383a42;">strings</span> &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">string</span>,
+    ) &lt;-<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{} {
+        <span style="color: #383a42;">terminated</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{})
+        <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+            <span style="font-weight: bold;">defer</span> fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"doWork exited."</span>)
+            <span style="font-weight: bold;">defer</span> <span style="font-weight: bold;">close</span>(terminated)
+            <span style="font-weight: bold;">for</span> {
+                <span style="font-weight: bold;">select</span> {
+                <span style="font-weight: bold;">case</span> <span style="color: #383a42;">s</span> := &lt;-strings:
+                    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Do something interesting
+</span>                    fmt.<span style="font-weight: bold;">Println</span>(s)
+                <span style="font-weight: bold;">case</span> &lt;-done:
+                    <span style="font-weight: bold;">return</span>
+                }
+            }
+        }()
+        <span style="font-weight: bold;">return</span> terminated
+    }
+    <span style="color: #383a42;">done</span> := <span style="font-weight: bold;">make</span>(<span style="font-weight: bold;">chan</span> <span style="font-weight: bold;">interface</span>{})
+    <span style="color: #383a42;">terminated</span> := <span style="font-weight: bold;">doWork</span>(done, <span style="color: #383a42;">nil</span>)
+    <span style="font-weight: bold;">go</span> <span style="font-weight: bold;">func</span>() {
+        <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Cancel the operation after 1 second.
+</span>        time.<span style="font-weight: bold;">Sleep</span>(1 * time.Second)
+        fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Canceling doWork goroutine..."</span>)
+        <span style="font-weight: bold;">close</span>(done)
+    }()
+    &lt;-terminated
+    fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;">"Done."</span>)
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3b974fe" class="outline-2">
+<h2 id="org3b974fe">Notes</h2>
+<div class="outline-text-2" id="text-org3b974fe">
+<ul class="org-ul">
+<li>It is useful to use the buffered channel, but only when you have a good reason to (since they
+might help hiding race conditions)</li>
+</ul>
+</div>
+<div id="outline-container-orgf5ca763" class="outline-3">
+<h3 id="orgf5ca763"><span class="done KILL">KILL</span> Rendezvous</h3>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+There is an accepted proposal to allow the runtime to detect partial deadlocks, but
+it has not been implemented. For more information, see
+<a href="https://github.com/golang/go/issues/13759">https://github.com/golang/go/issues/13759</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Note that lexical might abuse the memory usage in this example; for larger types
+(which should be passed as pointers)
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2022-09-30 Fri 09:17. Last build date: 2025-07-25 Fri 00:00.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

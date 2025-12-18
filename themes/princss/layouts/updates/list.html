@@ -1,11 +1,22 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/updates.css">
-{{ end }}
-
-{{ define "main" }}
-{{ range $index, $page := .Pages.ByDate.Reverse }}
-<div class="update"{{ if eq $index (sub (len $.Pages) 1) }} style="border-bottom: none;"{{ end }}>
-  <strong>{{ $page.Params.displayDate }}</strong> -{{ $page.Content }}
+<link rel="stylesheet" href="/styles/updates.css" />
+{{ end }} {{ define "main" }} {{ range $index, $page := .Pages.ByDate.Reverse }}
+<div
+  class="update"
+  {{
+  if
+  eq
+  $index
+  (sub
+  (len
+  $.Pages)
+  1)
+  }}
+  style="border-bottom: none"
+  {{
+  end
+  }}
+>
+  <strong>{{ $page.Params.displayDate }}</strong> - {{ $page.Content }}
 </div>
-{{ end }}
-{{ end }}
+{{ end }} {{ end }}

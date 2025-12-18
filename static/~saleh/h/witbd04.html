@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Real goodness</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Real goodness</h1>
+</header><div class="propert" id="org1031295">
+<p>
+Part of a series on <a href="../p/witbd.html#x0egwn81crk0">What is it to be done?</a>
+</p>
+
+</div>
+
+<p>
+I began again to analyze the matter from a third and purely personal point of view. Among the phenomena which particularly impressed me during my benevolent activity, there was one,—a very strange one,—which I could not understand for a long time.
+</p>
+
+<p>
+Whenever I happened, in the street or at home, to give a poor person a trifling sum without entering into conversation with him, I saw on his face, or imagined I saw, an expression of pleasure and gratitude, and I myself experienced an agreeable feeling at this form of charity. I saw that I had done what was expected of me. But when I stopped and began to question the man about his past and present life, entering more or less into particulars, I felt it was impossible to give him 3 or 20 kopeks; and I always began to finger the money in my purse, and, not knowing how much to give, I always gave more under these circumstances; but, nevertheless, I saw that the poor man went away from me dissatisfied. When I entered into still closer intercourse with him, my doubts as to how much I should give increased; and, no matter what I gave, the recipient seemed more and more gloomy and dissatisfied.
+</p>
+
+<p>
+As a general rule, it always happens that if, upon nearer acquaintance with the poor man I gave him three rubles or even more, I always saw gloominess, dissatisfaction, even anger depicted on his face; and sometimes, after having received from me ten rubles, he has left me without even thanking me, as if I had offended him.
+</p>
+
+<p>
+In such cases I was always uncomfortable and ashamed, and felt myself guilty. When I watched the poor person during weeks, months, or years, helped him, expressed my views, and became intimate with him, then our intercourse became a torment, and I saw that the man despised me. And I felt that he was right in doing so. When in the street a beggar asks me, along with other passers-by, for three kopeks, and I give it him, then, in his estimation, I am a kind and good man who gives “one of the threads which go to make the shirt of a naked one”: he expects nothing more than a thread, and, if I give it, he sincerely blesses me.
+</p>
+
+<p>
+But if I stop and speak to him as man to man, show him that I wish to be more than a mere passer-by, and, if, as it often happened, he shed tears in relating his misfortune, then he sees in me not merely a chance helper, but that which I wish him to see,—a kind man. If I am a kind man, my kindness cannot stop at twenty kopeks, or at ten rubles, or ten thousand. One cannot be a slightly kind man. Let us suppose that I give him much; that I put him straight, dress him, and set him on his legs so that he can help himself; but, from some reason or other, either from an accident or his own weakness, he again loses the great-coat and clothing and money I gave him, he is again hungry and cold, and he again comes to me, why should I refuse him assistance? For if the cause of my benevolent activity was merely the attainment of some definite, material object, such as giving him so many rubles or a certain great-coat, then, having given them I could be easy in my mind; but the cause of my activity was not this: the cause of it was my desire to be a kind man—i.e., to see myself in everybody else. Everyone understands kindness in this way, and not otherwise.
+</p>
+
+<p>
+Therefore if such a man should spend in drink all you gave him twenty times over, and be again hungry and cold, then, if you are a benevolent man, you cannot help giving him more money, you can never leave off doing so while you have more than he has; but if you draw back, you show that all you did before was done not because you are benevolent, but because you wish to appear so to others and to him. And it was because I had to back out of such cases, and to cease to give, and thus to disown the good, that I felt a painful sense of shame.
+</p>
+
+<p>
+What was this feeling, then?
+</p>
+
+<p>
+I had experienced it in Liapin&rsquo;s house and in the country, and when I happened to give money or anything else to the poor, and in my adventures among the town people. One case which occurred lately reminded me of it forcibly, and led me to discover its cause.
+</p>
+
+<p>
+It happened in the country. I wanted twenty kopeks to give to a pilgrim. I sent my son to borrow it from somebody. He brought it to the man, and told me that he had borrowed it from the cook. Some days after, other pilgrims came, and I was again in need of twenty kopeks. I had a ruble. I recollected what I owed the cook, went into the kitchen, hoping that he would have some more coppers. I said,—
+</p>
+
+<p>
+“I owe you twenty kopeks: here is a ruble.”
+</p>
+
+<p>
+I had not yet done speaking when the cook called to his wife from the adjoining room: “Parasha, take it,” he said.
+</p>
+
+<p>
+Thinking she had understood what I wanted, I gave her the ruble. I must tell you that the cook had been living at our house about a week, and I had seen his wife, but had never spoken to her. I merely wished to tell her to give me the change, when she briskly bowed herself over my hand and was about to kiss it, evidently thinking I was giving her the ruble. I stammered out something and left the kitchen. I felt ashamed, painfully ashamed, as I had not felt for a long time. I actually trembled, and felt that I was making a wry face; and, groaning with shame, I ran away from the kitchen.
+</p>
+
+<p>
+This feeling, which I fancied I had not deserved, and which came over me quite unexpectedly, impressed me particularly, because it was so long since I had felt anything like it and also because I fancied that I, an old man, had been living in a way I had no reason to be ashamed of.
+</p>
+
+<p>
+This surprised me greatly. I related the case to my family, to my acquaintances, and they all agreed that they also would have felt the same. And I began to reflect: Why is it that I felt so?
+</p>
+
+<p>
+The answer came from a case which had formerly occurred to me in Moscow. I reflected upon this case, and I understood the shame which I felt concerning the incident with the cook&rsquo;s wife, and all the sensations of shame I had experienced during my charitable activity in Moscow, and which I always feel when I happen to give anything beyond trifling alms to beggars and pilgrims, which I am accustomed to give, and which I consider not as charity, but as politeness and good breeding. If a man asks you for a light, you must light a match if you have it. If a man begs for three or twenty kopeks, or a few rubles, you must give if you have them. It is a question of politeness, not of charity.
+</p>
+
+<p>
+The following is the case I referred to. I have already spoken about the two peasants with whom I sawed wood three years ago. One Saturday evening, in the twilight, I was walking with them back to town. They were going to their master to receive their wages. On crossing the Dragomilor bridge we met an old man. He begged, and I gave him twenty kopeks. I gave, thinking what a good impression my alms would make upon Simon, with whom I had been speaking on religious questions.
+</p>
+
+<p>
+Simon, the peasant from Vladímir, who had a wife and two children in Moscow, also stopped, turned up the lappet of his kaftan, and took out his purse; and, after having looked over his money, he picked out a three-kopek piece, gave it to the old man, and asked for two kopeks back. The old man showed him in his hand two three-kopek pieces and a single kopek. Simon looked at it, was about to take one kopek, but, changing his mind, took off his cap, crossed himself, and went away, leaving the old man the three-kopek piece.
+</p>
+
+<p>
+I was acquainted with all Simon&rsquo;s pecuniary circumstances. He had neither house nor other property. When he gave the old man the three kopeks, he possessed six rubles and fifty kopeks, which he had been saving up, and this was all the capital he had.
+</p>
+
+<p>
+My property amounted to about six hundred thousand rubles. I had a wife and children, so also had Simon. He was younger than I, and had not so many children; but his children were young, and two of mine were grown-up men, old enough to work, so that our circumstances, independently of our property, were alike, though even in this respect I was better off than he.
+</p>
+
+<p>
+He gave three kopeks, I gave twenty. What was, then, the difference in our gifts? What should I have given in order to do as he had done? He had six hundred kopeks; out of these he gave one, and then another two. I had six hundred thousand rubles. In order to give as much as Simon gave, I ought to have given three thousand rubles, and asked the man to give me back two thousand; and, in the event of his not having change, to leave him these two also, cross myself, and go away calmly, conversing about how people live in the manufactories, and what is the price of liver in the Smolensk market.
+</p>
+
+<p>
+I thought about it at the time, but it was long before I was able to draw from this case the conclusion which inevitably follows from it. This conclusion appears to be so uncommon and strange, notwithstanding its mathematical accuracy, that it requires time to get accustomed to it. One is inclined to think there is some mistake, but there is none. It is only the terrible darkness of prejudice in which we live.
+</p>
+
+<p>
+This conclusion, when I arrived at it and recognized its inevitableness, explained to me the nature of my feelings of shame in the presence of the cook&rsquo;s wife, and before all the poor to whom I gave and still give money. Indeed, what is that money which I give to the poor, and which the cook&rsquo;s wife thought I was giving her? In the majority of cases it forms such a minute part of my income that it cannot be expressed in a fraction comprehensible to Simon or to a cook&rsquo;s wife,—it is in most cases a millionth part or thereabout. I give so little that my gift is not, and cannot be, a sacrifice to me: it is only a something with which I amuse myself when and how it pleases me. And this was indeed how my cook&rsquo;s wife had understood me. If I gave a stranger in the street a ruble or twenty kopeks, why should I not give her also a ruble? To her, such a distribution of money is the same thing as a gentleman throwing gingerbread nuts into a crowd. It is the amusement of people who possess much “fool&rsquo;s money.” I was ashamed, because the mistake of the cook&rsquo;s wife showed me plainly what ideas she and all poor people must have of me. “He is throwing away ‘fool&rsquo;s money’”; that is, money not earned by him.
+</p>
+
+<p>
+And, indeed, what is my money, and how did I come by it? One part of it I collected in the shape of rent for my land, which I had inherited from my father. The peasant sold his last sheep or cow in order to pay it.
+</p>
+
+<p>
+Another part of my money I received from the books I had written. If my books are harmful, and yet sell, they can only do so by some seductive attraction, and the money which I receive for them is badly earned money; but if my books are useful, the thing is still worse. I do not give them to people, but say, “Give me so many rubles, and I will sell them to you.”
+</p>
+
+<p>
+As in the former case a peasant sells his last sheep, here a poor student or a teacher does it: each poor person who buys denies himself some necessary thing in order to give me this money. And now that I have gathered much of such money what am I to do with it? I take it to town, give it to the poor only when they satisfy all my fancies and come to town to clean pavements, lamps, or boots, to work for me in the factories, and so on. And with this money I draw from them all I can. I try to give them as little as I can and take from them as much as possible.
+</p>
+
+<p>
+Now, quite unexpectedly, I begin to share all this said money with these same poor persons for nothing; but not with everyone, only as fancy prompts me. And why should not every poor man expect that his turn might come to-day to be one of those with whom I amuse myself by giving them my “fool&rsquo;s money”?
+</p>
+
+<p>
+So everyone regards me as the cook&rsquo;s wife did. And I had gone about with the notion that this was charity,—this taking away thousands with one hand, and with the other throwing kopeks to those I select!
+</p>
+
+<p>
+No wonder I was ashamed. But before I can begin to do good I must leave off the evil and put myself in a position in which I should cease to cause it. But all my course of life is evil. If I were to give away a hundred thousand, I should not yet have put myself in a condition in which I could do good, because I have still five hundred thousand left.
+</p>
+
+<p>
+It is only when I possess nothing at all that I shall be able to do a little good; such as, for instance, the poor prostitute did who nursed a sick woman and her child for three days. Yet this seemed to me to be but so little! And I ventured to think of doing good! One thing only was true, which I at first felt on seeing the hungry and cold people outside Liapin&rsquo;s house,—that I was guilty of that; and that to live as I did was impossible, utterly impossible. What shall we do then? If somebody still needs an answer to this question, I will, by God&rsquo;s permission, give one, in detail.
+</p>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-11-15 Sat 22:51. Last build date: 2025-11-15 Sat 22:58.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

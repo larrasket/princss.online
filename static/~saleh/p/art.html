@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deciding my favorite artist</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Deciding my favorite artist</h1>
+</header><style type="text/css">
+  /*<![CDATA[*/
+  pre {
+    max-height: 300px;
+    overflow: auto;
+  }
+  /*]]>*/
+</style>
+
+<div class="tag" id="org29871ee">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a> and <a href="../h/art_paintings_media.html#mvk9gc7014k0">Art</a>
+</p>
+
+</div>
+
+<p>
+I enjoy art and paintings, someone dear to me gifted me recently<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+I wrote this &ldquo;recently&rdquo; around 7 months ago when I got the idea of writing this post, and it was left as a draft. I was gifted that book in Jan 2024, almost a year. 
+</span> an encyclopedia of art, it has the names of &ldquo;every&rdquo;<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+More like the ones we get to know 
+</span> artist, starting from roughly where civilization striated, or to be more accurate it starts 600 B.C. and attributes everything before that to &ldquo;unknown&rdquo;, which is not a big deal for me.
+</p>
+
+<p>
+I started reading from it, checking artworks on daily-basis, and document the ones I like in my PKMS. I do skip so many modern artists (for reasons I can explain somewhere else, and I should) but I believe I can cover them later. As of today, I kept my habit for exploring an artwork everyday, for 253 day, I&rsquo;m still on the &ldquo;D&rdquo; letter.
+</p>
+
+<p>
+I didn&rsquo;t encounter yet many artists that I love. When I was asked before about my favorite artist, I usually responded with Caspar David Friedrich, I loved the man&rsquo;s journals before his art. Sometimes I would answer with Karl Friedrich Schinkel or Francois-Auguste Ravier. Sometimes just Leonadrdo da Vinci so the other person can relate and contribute to the conversation about the artist.
+</p>
+
+<p>
+For me, choosing a favorite artist is much more difficult that choosing a favorite sonata. I still think that both are not possible, I usually answer such questions only to keep the conversation warm. But what if we can define &ldquo;favorite&rdquo;? Because it&rsquo;s really hard to tell, is it asking about the most enjoyable? The most noble? The one I endorse the most?
+</p>
+
+<p>
+I had that discussion regarding the word favorite with a colleague, and she had a nice suggestion, what if we could decide a formula (thus, a definition) of the most &ldquo;favored&rdquo; artists? her approach was; the most favorable is the one that occurs the most, as simple as that. But I wanted more sophisticated approach. Here&rsquo;s how her approach might be represented formally: 
+</p>
+
+<p>
+\[\text{Favor Score} = \frac{L}{T} \times \log(L + 1)\]
+</p>
+
+<p>
+where \(L\) represents the number of loved artworks and \(T\) represents the total artworks in your library by that artist.
+</p>
+
+<p>
+It simply tries to care more about the <i>density</i> of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you&rsquo;ve encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
+I will call this algorithm 1. Let&rsquo;s see how we can implement it.
+</p>
+<div id="outline-container-org991e5b7" class="outline-2">
+<h2 id="org991e5b7">Implementing naive occurrence counting (algorithm 1)</h2>
+<div class="outline-text-2" id="text-org991e5b7">
+<p>
+We will need first to start with data collection. The book didn&rsquo;t include a number for how many each artist has of works, and I didn&rsquo;t like all of them so I can&rsquo;t depend on my PKMS, nor did I count them. Lucky enough, <a href="https://www.wikiart.org">wikiart.org</a> provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
+</p>
+
+<pre class="example" id="orgba2b546">
+Ivan Aivazovsky :nworks:   700
+Benjamin West :nworks:   156
+Emile Claus :nworks:   26
+John Constable :nworks:   190
+William Ashford :nworks:   87
+Carl Aagaard :nworks:   220
+</pre>
+<p>
+<code>nworks</code> here stands for number of works. I also needed to populate this into my PKMS, which is just Org mode file, I loaded the above result into an EMACS buffer, and evaluated the following:
+</p>
+
+<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/org-set-nworks-from-buffer</span> (data-buffer org-buffer)
+  (<span style="font-weight: bold;">interactive</span>
+   (<span style="color: #383a42;">list</span> (<span style="color: #383a42;">read-buffer</span> <span style="color: #8a3b3c;">"Data buffer: "</span> (<span style="color: #383a42;">current-buffer</span>))
+         (<span style="color: #383a42;">read-buffer</span> <span style="color: #8a3b3c;">"Org buffer: "</span>)))
+  (<span style="font-weight: bold;">let</span> (alist)
+    (<span style="font-weight: bold;">with-current-buffer</span> data-buffer
+      (<span style="color: #383a42;">goto-char</span> (<span style="color: #383a42;">point-min</span>))
+      (<span style="font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span>
+              <span style="color: #8a3b3c;">"^</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">(</span><span style="color: #8a3b3c;">[</span><span style="color: #383a42; font-weight: bold;">^</span><span style="color: #8a3b3c;">:]+?</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">)</span><span style="color: #8a3b3c;">[[:space:]]*:nworks:[[:space:]]*</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">(</span><span style="color: #8a3b3c;">[0-9]+</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">)</span><span style="color: #8a3b3c;">"</span> nil t)
+        (<span style="font-weight: bold;">let</span> ((name   (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">match-string</span> 1)))
+              (count  (<span style="color: #383a42;">match-string</span> 2)))
+          (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"Parsed: %s -&gt; %s"</span> name count)
+          (<span style="font-weight: bold;">push</span> (<span style="color: #383a42;">cons</span> name count) alist))))
+    (<span style="font-weight: bold;">with-current-buffer</span> org-buffer
+      (<span style="color: #383a42;">org-map-entries</span>
+       (<span style="font-weight: bold;">lambda</span> ()
+         (<span style="font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">nth</span> 4 (<span style="color: #383a42;">org-heading-components</span>))))
+                (entry   (<span style="color: #383a42;">assoc-string</span> heading alist t)))
+           (<span style="font-weight: bold;">if</span> entry
+               (<span style="font-weight: bold;">progn</span>
+                 (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"Setting %s NWORKS=%s"</span> heading (<span style="color: #383a42;">cdr</span> entry))
+                 (<span style="color: #383a42;">org-set-property</span> <span style="color: #8a3b3c;">"NWORKS"</span> (<span style="color: #383a42;">cdr</span> entry)))
+             (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"No data for: %s"</span> heading))))
+       t <span style="color: #383a42;">'</span><span style="color: #383a42;">file</span>))))
+</code></pre>
+
+<p>
+This means that each artist entity in the file will look like the following:
+</p>
+<pre class="code"><code><span style="color: #383a42; font-weight: bold;">Nicolai Abildgaard
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">i0jf8l21fkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">i0jf8l21fkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">30</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42; font-weight: bold;">Jacques-Laurent Agasse
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">dcjcb680hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">dcjcb680hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">45</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42; font-weight: bold;">Mariotto Albertinelli
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">2um0gc80hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">2um0gc80hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">19</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42; font-weight: bold;">Domenico Ghirlandaio
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">1dq2tj80hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">1dq2tj80hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">108</span>
+</code></pre>
+
+<p>
+Now we can implement \(\frac{L}{T} \times \log(L + 1)\\) easily in Elisp; 
+</p>
+
+<pre class="code"><code>(simple-score (loved total)
+              <span style="color: #8a3b3c;">"Simple approach: (L/T) * log(L+1)"</span>
+              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
+                  (<span style="color: #383a42;">*</span> (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total)
+                     (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> loved)))
+                0.0))
+</code></pre>
+
+<p>
+Here&rsquo;s the simple score result:
+</p>
+
+
+<div class="postscript" id="org449c71e">
+<p>
+Note I&rsquo;m running this here as of the date of writing it <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:02]</span></span>, as I mentioned above, I only browsed the artists of the D letter. I will add here &ldquo;Last run&rdquo; property, so reader can relate to the last update date
+</p>
+
+<p>
+Last run <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:28]</span></span>
+</p>
+
+</div>
+
+<pre class="example" id="orgaa7752f">
+Artist                            Total  Simple Eval. 
+
+Thomas Cole                         130       0.5943      
+Alexey Bogolyubov                    46       0.5213      
+Mariotto Albertinelli                19       0.2189      
+Pellizza da Volpedo                  54       0.2162      
+Charles Courtney Curran              32       0.2012      
+Frank Dicksee                        27       0.1540      
+Giuseppe Abbati                      28       0.1485      
+Jasper Francis Cropsey               31       0.1342      
+Frank Cadogan Cowper                 20       0.1099      
+William Ashford                      87       0.1030      
+Pierre-Henri de Valenciennes        100       0.0896      
+Gustav Pope                           9       0.0770      
+Pietro da Cortona                    29       0.0758      
+Ivan Aivazovsky                     700       0.0757      
+Jacques Clement Wagrez               10       0.0693      
+Thomas Francis Dicksee               12       0.0578      
+Gustave-Claude-Etienne Courtois      13       0.0533      
+Jacques-Laurent Agasse               45       0.0488      
+Frederic William Burton              50       0.0439      
+Jean-Joseph-Xavier Bidauld           16       0.0433      
+Edouard Debat-Ponsan                 17       0.0408      
+Denis van Alsloot                    61       0.0360      
+Jean-Baptiste Camille Corot         600       0.0345      
+Arnold Böcklin                      124       0.0335      
+Jacques-Louis David                 128       0.0325      
+Reza Abbasi                          23       0.0301      
+Carl Aagaard                        220       0.0293      
+William-Adolphe Bouguereau          822       0.0292      
+Emile Claus                          26       0.0267      
+Sir Lawrence Alma-Tadema            444       0.0263      
+Thomas Couture                       28       0.0248      
+Hermann David Salomon Corrodi        28       0.0248      
+Alexandre Cabanel                    90       0.0244      
+Nicolai Abildgaard                   30       0.0231      
+Joachim Wtewael                      30       0.0231      
+Charles-Francois Daubigny           102       0.0215      
+Mattia Preti                         33       0.0210      
+Eduard Quitton                       37       0.0187      
+Domingos Sequeira                    40       0.0173      
+Jacques Stella                       41       0.0169      
+Walter Crane                         50       0.0139      
+Battistello Caracciolo               52       0.0133      
+Joseph DeCamp                        54       0.0128      
+John Constable                      190       0.0116      
+Jurriaan Andriessen                  60       0.0116      
+Edwin Austin Abbey                   61       0.0114      
+Oswald Achenbach                     65       0.0107      
+Anselm Feuerbach                     66       0.0105      
+Alexandre Antigna                    67       0.0103      
+Frederic Edwin Church                76       0.0091      
+Giulio Cesare Procaccini             76       0.0091      
+Knud Baade                           79       0.0088      
+Francesco Albani                     80       0.0087      
+Johan Christian Dahl                100       0.0069      
+Domenico Ghirlandaio                108       0.0064      
+Guido Reni                          148       0.0047      
+Benjamin West                       156       0.0044      
+Sandro Botticelli                   207       0.0033      
+</pre>
+
+
+<p>
+However, the issue with depending on occurrence is that, it&rsquo;s very likely that the artists who made significantly more artworks than others, to unfairly be on top of the list, e.g. I love around 63 artworks of <a href="../h/art_paintings_media.html#2lq0ch91vik0">Ivan Aivazovsky</a>, but my library of his consists of around 700 artworks (he reportedly made much more than that), it&rsquo;s unfair in my opinion to evaluate this number to another artist, like <a href="../h/art_paintings_media.html#34feald0fmk0">Thomas Cole</a> for example, who only had around 200 artworks. 
+</p>
+</div>
+</div>
+<div id="outline-container-orge20f0f4" class="outline-2">
+<h2 id="orge20f0f4">Entropy approach (algorithm 2)</h2>
+<div class="outline-text-2" id="text-orge20f0f4">
+<p>
+The problem with that approach is that, it does not calculate my preference entropy which causes favoritism. For example, I love Caspir&rsquo;s works, I know his melody and life, I would probably relate to any of his works and catch the reference quickly, it&rsquo;s unlikely for me to do the same for someone like John Constable, who I barely know his life. We can count for this like follows:
+</p>
+
+
+<p>
+\[\text{Favor Score} = \frac{L}{T} \cdot \left(1 - \frac{1}{\sqrt{T}}\right) \cdot \left(1 + \frac{H(L,T)}{\log(T+1)}\right)\]
+</p>
+
+<p>
+It looks a bit scary, but I promise it&rsquo;s as simple as the previous one, let me explain it. Information theory tells us there&rsquo;s something fundamentally missing from the simple ratio approach: the shape of your preference matters.
+</p>
+
+
+<p>
+Imagine you&rsquo;re at a museum. Artist A has 100 paintings on display, and you love exactly 50 of them. Artist B has 100 paintings, and you love 95 of them. The simple counting method says they&rsquo;re both “50% favorable” and “95% favorable” respectively, okay, sure. But there&rsquo;s something it misses: with Artist A, you&rsquo;re constantly unsure. Will the next painting move you? It&rsquo;s a coin flip. With Artist B, you <i>know</i> you&rsquo;re going to love it, you know him/her, you know you will relate to it and you probably have a backstory already about the painting. That certainty, that decisive connection is what favoritism actually feels like. Information theory gives us a way to measure this decisiveness through something called “entropy” basically, how surprised you are by your own reactions. When you&rsquo;re consistently in love or consistently unmoved, entropy is low (good!). When you&rsquo;re all over the place, entropy is high (suggests a less meaningful relationship). The formula also builds in a confidence check: if you&rsquo;ve only seen 4 works by an artist, you can&rsquo;t be <i>that</i> sure yet, so it gently downweights your score until you&rsquo;ve seen enough to really know. 
+</p>
+
+
+<p>
+So The \(L/T\) ratio treats all proportions as equal. Loving 50 out of 100 works scores identically to loving 5 out of 10. The key insight from information theory is that entropy captures the decisiveness of your taste.
+</p>
+
+<p>
+Consider Shannon entropy:
+</p>
+
+<p>
+\(H(L,T) = -\frac{L}{T}\log\frac{L}{T} - \frac{T-L}{T}\log\frac{T-L}{T}\)
+</p>
+
+<p>
+This measures the uncertainty in predicting whether you&rsquo;ll love a random work by that artist. When \(L/T \approx 0.5\), entropy maximizes, you&rsquo;re ambivalent, essentially coin-flipping. When \(L/T \to 0\) or \(L/T \to 1\), entropy minimizes, your preference is sharp and predictable. A <i>favorite</i> artist should provoke a strong signal, not statistical noise.
+</p>
+
+<p>
+The full equation integrates three components: base affinity (\(L/T\)), confidence scaling (\((1 - 1/\sqrt{T})\) which asymptotically approaches 1 with more samples), and entropy bonus (rewarding low-entropy, decisive preferences). 
+</p>
+
+<p>
+Now let&rsquo;s bring both together, but sort by algorithm 2:
+</p>
+
+<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/calculate-artist-favor-scores</span> (org-file)
+  (<span style="font-weight: bold;">cl-flet</span> ((simple-score (loved total)
+              <span style="color: #8a3b3c;">"Simple approach: (L/T) * log(L+1)"</span>
+              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
+                  (<span style="color: #383a42;">*</span> (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total)
+                     (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> loved)))
+                0.0))
+            (entropy-score (loved total)
+              <span style="color: #8a3b3c;">"approach with entropy"</span>
+              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">or</span> (<span style="color: #383a42;">&lt;=</span> total 0) (<span style="color: #383a42;">&lt;</span> loved 0))
+                  0.0
+                (<span style="font-weight: bold;">let*</span> ((ratio (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total))
+                       (confidence (<span style="color: #383a42;">-</span> 1 (<span style="color: #383a42;">/</span> 1 (<span style="color: #383a42;">sqrt</span> total))))
+                       (p1 ratio)
+                       (p2 (<span style="color: #383a42;">-</span> 1 ratio))
+                       (entropy (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> p1 0) (<span style="color: #383a42;">&gt;</span> p2 0))
+                                    (<span style="color: #383a42;">-</span> (<span style="color: #383a42;">+</span> (<span style="color: #383a42;">*</span> p1 (<span style="color: #383a42;">log</span> p1))
+                                          (<span style="color: #383a42;">*</span> p2 (<span style="color: #383a42;">log</span> p2))))
+                                  0.0))
+                       (entropy-bonus (<span style="font-weight: bold;">if</span> (<span style="color: #383a42;">&gt;</span> total 1)
+                                          (<span style="color: #383a42;">/</span> entropy (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> total)))
+                                        0.0)))
+                  (<span style="color: #383a42;">*</span> ratio
+                     confidence
+                     (<span style="color: #383a42;">1+</span> entropy-bonus))))))
+    
+    (<span style="font-weight: bold;">with-temp-buffer</span>
+      (<span style="color: #383a42;">insert-file-contents</span> org-file)
+      (<span style="color: #383a42;">org-mode</span>)
+      (<span style="color: #383a42;">goto-char</span> (<span style="color: #383a42;">point-min</span>))
+      
+      (<span style="font-weight: bold;">let</span> ((results <span style="color: #383a42;">'</span>()))
+        (<span style="font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span> <span style="color: #8a3b3c;">"^\\*\\* "</span> nil t)
+          (<span style="font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">org-get-heading</span> t t t t))
+                 (id (<span style="color: #383a42;">org-entry-get</span> (<span style="color: #383a42;">point</span>) <span style="color: #8a3b3c;">"ID"</span>))
+                 (nworks (<span style="color: #383a42;">org-entry-get</span> (<span style="color: #383a42;">point</span>) <span style="color: #8a3b3c;">"NWORKS"</span>)))
+            
+            (<span style="font-weight: bold;">when</span> (<span style="font-weight: bold;">and</span> id nworks)
+              (<span style="font-weight: bold;">let*</span> ((total (<span style="color: #383a42;">string-to-number</span> nworks))
+                     (node (<span style="color: #383a42;">org-roam-node-from-id</span> id))
+                     (backlinks (<span style="font-weight: bold;">when</span> node (<span style="color: #383a42;">org-roam-backlinks-get</span> node)))
+                     (loved (<span style="color: #383a42;">length</span> backlinks))
+                     (simple (simple-score loved total))
+                     (entropy (entropy-score loved total)))
+                
+                (<span style="font-weight: bold;">push</span> (<span style="color: #383a42;">list</span> <span style="font-weight: bold;">:name</span> heading
+                            <span style="font-weight: bold;">:id</span> id
+                            <span style="color: #556b2f;">;; </span><span style="color: #556b2f;">:loved loved
+</span>                            <span style="color: #556b2f;">;; </span><span style="color: #556b2f;">:total total
+</span>                            <span style="font-weight: bold;">:simple-score</span> simple
+                            <span style="font-weight: bold;">:entropy-score</span> entropy)
+                      results)))))
+        
+        (<span style="color: #383a42;">sort</span> results (<span style="font-weight: bold;">lambda</span> (a b)
+                        (<span style="color: #383a42;">&gt;</span> (<span style="color: #383a42;">plist-get</span> a <span style="font-weight: bold;">:entropy-score</span>)
+                           (<span style="color: #383a42;">plist-get</span> b <span style="font-weight: bold;">:entropy-score</span>))))))))
+</code></pre>
+
+
+<p>
+This gives us:
+</p>
+
+<pre class="example" id="org5a2536f">
+Artist                          Total      Entropy    Simple
+-------------------------------------------------------------------
+Alexey Bogolyubov                  46       0.2105    0.5213
+Thomas Cole                       130       0.1849    0.5943
+Mariotto Albertinelli              19       0.1394    0.2189
+Charles Courtney Curran            32       0.1140    0.2012
+Pellizza da Volpedo                54       0.1043    0.2162
+Frank Dicksee                      27       0.0991    0.1540
+Giuseppe Abbati                    28       0.0957    0.1485
+Jasper Francis Cropsey             31       0.0867    0.1342
+Frank Cadogan Cowper               20       0.0859    0.1099
+Gustav Pope                         9       0.0853    0.0770
+Jacques Clement Wagrez             10       0.0776    0.0693
+Thomas Francis Dicksee             12       0.0659    0.0578
+Gustave-Claude-Etienne Courtois    13       0.0613    0.0533
+Pietro da Cortona                  29       0.0603    0.0758
+William Ashford                    87       0.0538    0.1030
+Jean-Joseph-Xavier Bidauld         16       0.0507    0.0433
+Edouard Debat-Ponsan               17       0.0480    0.0408
+Pierre-Henri de Valenciennes      100       0.0469    0.0896
+Jacques-Laurent Agasse             45       0.0396    0.0488
+Reza Abbasi                        23       0.0363    0.0301
+Frederic William Burton            50       0.0358    0.0439
+Emile Claus                        26       0.0324    0.0267
+Thomas Couture                     28       0.0303    0.0248
+Hermann David Salomon Corrodi      28       0.0303    0.0248
+Denis van Alsloot                  61       0.0296    0.0360
+Nicolai Abildgaard                 30       0.0284    0.0231
+Joachim Wtewael                    30       0.0284    0.0231
+Mattia Preti                       33       0.0260    0.0210
+Ivan Aivazovsky                   700       0.0252    0.0757
+Eduard Quitton                     37       0.0234    0.0187
+Arnold Böcklin                    124       0.0225    0.0335
+Jacques-Louis David               128       0.0219    0.0325
+Domingos Sequeira                  40       0.0217    0.0173
+Jacques Stella                     41       0.0212    0.0169
+Alexandre Cabanel                  90       0.0203    0.0244
+Charles-Francois Daubigny         102       0.0180    0.0215
+Walter Crane                       50       0.0176    0.0139
+Carl Aagaard                      220       0.0172    0.0293
+Battistello Caracciolo             52       0.0170    0.0133
+Joseph DeCamp                      54       0.0164    0.0128
+Jurriaan Andriessen                60       0.0148    0.0116
+Edwin Austin Abbey                 61       0.0146    0.0114
+Jean-Baptiste Camille Corot       600       0.0146    0.0345
+Oswald Achenbach                   65       0.0137    0.0107
+Anselm Feuerbach                   66       0.0135    0.0105
+Alexandre Antigna                  67       0.0133    0.0103
+Sir Lawrence Alma-Tadema          444       0.0130    0.0263
+William-Adolphe Bouguereau        822       0.0119    0.0292
+Frederic Edwin Church              76       0.0118    0.0091
+Giulio Cesare Procaccini           76       0.0118    0.0091
+Knud Baade                         79       0.0114    0.0088
+Francesco Albani                   80       0.0113    0.0087
+John Constable                    190       0.0099    0.0116
+Johan Christian Dahl              100       0.0091    0.0069
+Domenico Ghirlandaio              108       0.0085    0.0064
+Guido Reni                        148       0.0063    0.0047
+Benjamin West                     156       0.0059    0.0044
+Sandro Botticelli                 207       0.0045    0.0033
+Gustav Klimt                      245       0.0038    0.0028
+Peter Paul Rubens                 684       0.0014    0.0010
+Nicolas Poussin                   300       0.0000    0.0000
+</pre>
+
+<p>
+Some of my favorite ones were not affected by approach change, like <a href="../h/art_paintings_media.html#34feald0fmk0">Thomas Cole</a>, <a href="../h/art_paintings_media.html#zgec92i0dkk0">Alexey Bogolyubov</a> and <a href="../h/art_paintings_media.html#dcy99130zrk0">Frank Dicksee</a>, which says that I&rsquo;m not a lot into favoritism after all :). 
+</p>
+
+<p>
+I will add an agenda TODO here to remember to update the evaluation every couple of months.
+</p>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 02:32]</span></span> Honestly I was expecting much more surprises than that, but I guess once the data inflate more (having more artists in my PKMS, finishing more from the encyclopedia) will help.
+</p>
+</div>
+</div>
+<div id="outline-container-org9d7d103" class="outline-2">
+<h2 id="org9d7d103"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
+<div class="outline-text-2" id="text-org9d7d103">
+<div class="notes"> <ul class="org-ul">
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:35]</span></span></li>
+</ul>
+ </div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I wrote this &ldquo;recently&rdquo; around 7 months ago when I got the idea of writing this post, and it was left as a draft. I was gifted that book in Jan 2024, almost a year. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+More like the ones we get to know 
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-12-06 Sat 23:36. Last build date: 2025-12-07 Sun 14:52.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

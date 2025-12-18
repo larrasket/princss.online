@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts on langauges</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Thoughts on langauges</h1>
+</header><div class="BACKLINKS" id="orgd361aa9">
+<p>
+This section was referenced in <a href="../sh/2023.html#bkuf5ac0fzj0">Reconsidering SBCL</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, and <a href="../sh/2024.html#vbl22tf0z3k0">Another killer feature for Go</a>.
+</p>
+
+</div>
+
+<div class="tag" id="orga16c1b3">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+
+
+<head>
+<style>
+.footdef {display: block !important;}
+.sidenote {display: none;}
+.footnotes {display: block !important; }
+ .styledtable { overflow-x: auto; }
+</style>
+</head>
+
+
+<p>
+I do not like programming languages wars and I believe they are
+vastly stupid; every programming language out there had its own views that
+matched with feasible many usages. I claim however that some common ways of
+designing some languages were not optimal at all.
+</p>
+
+<p>
+My main use case for a programming language is software engineering,
+although sometimes I do scientific computing, most programming languages out
+there fit for my &rsquo;scientific&rsquo; needs. My favorite language for scientific
+computing currently is Julia, my favorite language generally is <a href="../cs/go.html#lvkhzyo02wj0">Go</a>. The
+following table shows the aspect that I consider when I pickup a programming
+language for my need. I will only list the language I know and tried.
+</p>
+
+
+<div style="overflow-x: auto;">
+  <table>
+    <thead>
+      <tr>
+        <th>Language/Feature</th>
+        <th>Fast and Performant</th>
+        <th>No Centralized Package Repository</th>
+        <th>No Exception Handling</th>
+        <th>Static Linking Supported</th>
+        <th>Usable REPL (Officially Supported)</th>
+        <th>No Classical OOP</th>
+        <th>Parallel Computing with Coroutines and Channels Supported (Bonus)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Common Lisp (SBCL)</td>
+        <td>Yes</td>
+        <td>Yes/No</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Julia</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Go</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Rust</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>No</td>
+        <td>No</td>
+        <td>No</td>
+        <td>No (interpreted)</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes (sorta, using libmil)</td>
+      </tr>
+      <tr>
+        <td>C#</td>
+        <td>Yes (sorta of)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Not sure</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<p>
+Side notes:
+</p>
+
+<ul class="org-ul">
+<li>Common Lisp: Although the programming language itself does not suggest any
+method to manage packages, the community of CL programmers is heavily inclined
+into using the quicklisp utility to manage packages, see <a href="#g5tg5e01qxj0">Programmers can make languages horrible</a>
+and <a href="#uau7ou11qxj0">Centralized Package Repository</a> sections.</li>
+<li>Julia: You still can install packages directly from a git repository that is
+out of the Julia registry. See <a href="https://julialang.org/contribute/developing_package/#step_5_register_your_package">How to develop a Julia package</a>.</li>
+<li>Go: There is no an officially supported REPL for Go, however, the
+<a href="https://github.com/cosmos72/gomacro">cosmos72/gomacro</a> totally covers it up.</li>
+<li>Rust:
+<ul class="org-ul">
+<li>The package Julie note applies here too.</li>
+<li>There are implementation for Rust REPLs, however non of them are fast enough
+to call them usable.</li>
+</ul></li>
+<li>C:  Although there is the <a href="http://www.artificialworlds.net/wiki/IGCC/IGCC">IGCC</a>, the unmanaged nature of C makes it reckless to
+use the REPL while programming.</li>
+</ul>
+<div id="outline-container-x0z0fu11qxj0" class="outline-2">
+<h2 id="x0z0fu11qxj0">Exception handling</h2>
+<div class="outline-text-2" id="text-orgc2f33fb">
+<div class="BACKLINKS" id="org635417c">
+<p>
+This section was referenced in <a href="#g5tg5e01qxj0">Programmers can make languages horrible</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, <a href="../stack.html#qow1lzo0aqk0">Some other notes on exception handling</a>, and <a href="../sh/2024.html#vbl22tf0z3k0">Another killer feature for Go</a>.
+</p>
+
+</div>
+
+<p>
+Some of the features that I look for are obvious; however some of them might be
+questionable for other people, for example people who have been using C#/Java
+for all of their life would be surprised that someone does not like exceptions,
+this is like saying <code>if</code> statements are harmful.
+</p>
+
+<p>
+However, this is only because this is what people used to engage with, but when
+you think carefully about exceptions you can see that in their essences they are
+nothing different than GOTO calls (which you rarely find someone nowadays
+question them being considered harmful), actually one might consider arguing
+about some <a href="https://stackoverflow.com/a/11065448">benefits</a> over using GOTO calls sometimes; but if you deeply
+compare GOTO with exceptions, you will see how terrible exceptions are, that
+is, they include only the bad parts of GOTOs. There
+is a type of GOTO calls that was just bad that no body talks about, and it was
+actually the one from which all this hate emerged against GOTO calls, that&rsquo;s
+BASIC&rsquo;s GOTO. C-like GOTOs are much more constrained compared to the former, yet
+if you compare both to exceptions, exceptions are akin to classical BASIC&rsquo;s
+GOTOs. Since I do not like this post to be transferred into a &ldquo;case against the
+exception handling&rdquo;, I&rsquo;d recommend reading the following; Edsger W. Dijkstra&rsquo;s
+<a href="https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">A Case against the GOTO statement</a> with exception handling in mind (i.e. replace
+every occurrence of GOTO with try catch throw) and reading Dave Cheney&rsquo;s
+<a href="https://dave.cheney.net/2012/01/18/why-go-gets-exceptions-right">Why Go gets exceptions right</a>.
+</p>
+
+<p>
+I like to mention that my first programming language was C/C++. Then I learned
+C#, which I still believe is a very nice language (I will try to discuss it
+later here). When I learned C# for the first time and I shot myself in the foot
+I experienced exceptions for the first time. I was really surprised by how
+errors were being handled, I felt something really strange: it could not be that
+naive. Of course I did not tell myself that because what I did in C (which was
+just a variable passed by reference indicates whether everything is alright,
+like the Go way, the way I prefer: simple) was actually no error handling at
+all. I told myself it might be a screwed way of designing the language but I
+tried just to get adapted to it (like probably everyone did) once I discovered
+that this is the way to handle errors in many other languages as well; think
+about this flow, you are using a library that uses set of other libraries, it
+does set of complicated scenarios, including using multiple http clients,
+intensive writing/reading operation on the file system, high memory usage, etc..
+</p>
+
+<p>
+Now each of these might have many factors contributing a failure, the http
+client might have an issue during the early initialization due to inadequate
+memory or something (actually any other possible reasons), the file system might
+return an error code because of mismatching/unsafe/unsatisfying permissions, or
+it might be full, it might be busy, and so on and so forth: too many
+possibilities, computers are complex.
+</p>
+
+<p>
+In exception handling, you can just use a single outer catch to all these
+scenarios:
+</p>
+
+<pre class="example" id="orgc853675">
+// in your main function:
+try
+{
+  //  start your program here
+}
+
+// genaric type to catch
+// any possible exceptions
+// inherits this class
+//        ^
+//        |
+catch (Exception e)
+{
+  //  Block of code to handle errors
+  // some debuging flags here
+  System.SoyFriendly.SoyendFriendlyMessageToUser("sorry bro something went wrong")
+}
+
+</pre>
+
+<p>
+However, a sophisticated software developer will have many exception handling
+for cases like the ones I mentioned above; like memory and network errors. The
+problem here is, there is no way the developer can handle all possible
+exceptions<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+Some language designer had the decision to make their STD never throw
+exceptions, however the majority of languages that use exception use it in their
+STDs too. This makes the number of the possible exception very huge.
+</span>  so they are going only to fix things that either their user
+will report them later with some logs, or things that are obvious to occur
+(network errors are likely to happen for example).
+</p>
+
+<p>
+This makes the use of that outer <code>try..catch</code> inevitable unless you do not care
+about the user experience. This engenders many possible scenarios that might
+have been manageable by the programmer to get out till they add it to their
+handled exceptions in some new versions. What is the alternative? the programmer
+should (or must) handle all the possible cases, which is the case with some new
+languages like Go and Rust.
+</p>
+</div>
+</div>
+<div id="outline-container-uau7ou11qxj0" class="outline-2">
+<h2 id="uau7ou11qxj0">Centralized Package Repository</h2>
+<div class="outline-text-2" id="text-orgcedb59d">
+<div class="BACKLINKS" id="orgea982db">
+<p>
+This section was referenced in <a href="#g5tg5e01qxj0">Programmers can make languages horrible</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, and <a href="languages.html#jb9efrq00xj0">Thoughts on langauges</a>.
+</p>
+
+</div>
+
+<p>
+This is not a major issue, but it is very annoying in my opinion, which is just
+as common as exception handling or even more. I think that people will consider
+it very soon as the internet is moving more towards decentralization and
+distribution.  You can see the issue of centralization when you look at the
+number of &ldquo;please&rdquo;s in their repository <a href="https://github.com/quicklisp/quicklisp-projects/issues?q=is%3Aissue+please">quicklisp/quicklisp-projects</a>. The
+<a href="https://ultralisp.org/">Ultralisp Repository</a> tries to resolve this issue for the Common Lisp programming
+language.
+</p>
+
+<p>
+However this issue of &ldquo;approving&rdquo; packages is not common (yet)<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+I think it starts to be a little common with Julia, though the language
+makes it very easy to install package directly from any git repository, just
+like Go does.
+</span> , I used to
+use nuget and I used cargo and both are actually very okay to use, yet there are
+0 guarantee that they are going to stay like that or even that they will
+&rsquo;behave&rsquo; right. This is because the maintainers have the whole absolute power,
+can we be sure that Microsoft will not add some 0.3$ subscription to be able to
+use nuget? Can we be sure that Mozilla maintainers will not decide that
+programming is bad and just dropout cargo for good? Will all of these
+possibilities have very low likelihood, however, there is a very important
+lesson that all of you might have learned from software design: we never trust,
+we constrain; you wouldn&rsquo;t give your user all permissions and trut them that
+they are faithful nice people.
+</p>
+
+<p>
+This is the cause with centralized package repositories, we have nothing but to
+trust the maintainers who have all the power, if they do not put restrictions
+already on who is going add his package or why (like quicklisp does), no one can
+guarantees that they do not misconduct due to whatever reason towards some
+package. Remember the <a href="https://blog.rust-lang.org/2022/11/03/Rust-1.65.0.html">Rust 1.65.0 Announcement</a>? When the Rust team added some
+political correctness spices to their release note about the Mahsa Amini
+incident. Well what will be their reaction to a package in cargo that all it
+does is printing some pro-Irani propaganda about the deceased? There should be
+no one to supervise whether X is right or wrong in programming environments.
+</p>
+</div>
+</div>
+<div id="outline-container-g5tg5e01qxj0" class="outline-2">
+<h2 id="g5tg5e01qxj0">Programmers can make languages horrible</h2>
+<div class="outline-text-2" id="text-orga983de6">
+<div class="BACKLINKS" id="org117814c">
+<p>
+This section was referenced in <a href="languages.html#jb9efrq00xj0">Thoughts on langauges</a>.
+</p>
+
+</div>
+
+<p>
+I think last 2 sections elaborate in the most 2 controversial things in my view,
+though unlike <a href="#uau7ou11qxj0">Centralized Package Repository</a>, I do not think that <a href="#x0z0fu11qxj0">Exception
+handling</a> is ultimately bad, still I think it should not be allowed. This also
+applies to things like macros and inheritance.
+</p>
+
+<p>
+Common Lisp is the most language that I think the following applies to it.
+Actually I want you to have a look at <a href="https://news.ycombinator.com/item?id=37209654">this</a> post from Hacker News:
+</p>
+<pre class="example" id="orgf5542ed">
+I thought Lisp was suppose to be simple in that: it's all just lists.
+
+I thought everything would just be s-expressions, and be consistent, so it would be
+easy to read to figure out what is going on.
+
+But it seems like there are so many special constructs and macros, that make it hard
+to read. And behind the scenes of these macros it gets really complicated. Whereas in
+other languages its readable the whole way down.
+
+E.g. How am I suppose to read this? How does it de-construct to s-expressions...and
+does it even? What is implemented natively in the interpreter? Does that language
+have built-in keywords?
+
+I thought everything was suppose to be like: `(left . (left . right) )`.
+
+    (loop for i in '(1 2 3)
+        when (&gt; i 1)
+        return i)
+It seems as if there are actually a ton more special case primitives I need to know,
+when I could get away with a lot less syntax in other languages to be productive.
+
+Like maybe there is some simplicity at the very bottom, but that doesn't seem to
+matter in day-to-day programming.
+
+Another example, the first think I see when I look at the language basics of how to
+make a function:
+
+https://lispcookbook.github.io/cl-cookbook/functions.html:
+
+    (defun  (list of arguments)
+      "docstring"
+      (function body))
+How do I read this as an s-expression?
+</pre>
+
+<p>
+Want I want you to notice here is the macro part (loop for), this macro was very
+controversial back in the day, many people believed that it is not &ldquo;lispy
+enough&rdquo; to be used, however, it was &ldquo;ok&rdquo; since it was &ldquo;up to you to use it or
+not&rdquo;, and it ended up being a part of the common lisp implementation.
+</p>
+
+<p>
+Another thing to mention is that I&rsquo;m one of the people who believe that
+inheritance is pretty much okay, even multiple inheritance actually which I used
+to use in C++ sometimes, however, you might have noticed that I really do not
+like to use languages that do support inheritance
+</p>
+
+<p>
+This applies to another thing in Common Lisp, the Common Lisp Object System
+(CLOS) which implements the old (hesitated to add &rsquo;good&rsquo;) classical OOP. I
+believe that it is one of the greatest things about Common Lisp, but what I&rsquo;ve
+always and always noticed, that people are really, really abusing it badly,
+seems applies to inheritance, multiple inheritance and exceptions.
+</p>
+
+<p>
+Back in the day when I was learning programming for the first time, in C++, and
+I learned that many languages adds restrictions on things like multiple
+inheritance and even inheritance, I asked myself: why? I mean, well they are
+nice things it should be up only to the programmer to decide when to use it or
+not.
+</p>
+
+<p>
+This is still true, however, when you think about your experience in the
+software industry, you understand how much consideration of the community
+matters as well.
+</p>
+
+<p>
+Some reason that I recall for my experience with JavaScript was very bad, was
+that unlike other languages that I used back in the day, JavaScript had many, so many
+incomplete developers who just came from some twitter hips and whatnot. Why
+does this matter? Well, many times you are going to use packages and libraries
+that this community did build. Here is it: in the modern software industry, the
+community surrounding a programming language actually matters too.
+</p>
+
+<p>
+And this what happened with language allowing inheritance, exceptions, GOTOs,
+and the like, people just abused it and the language became very horrible to
+use because many packages became badly written.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Some language designer had the decision to make their STD never throw
+exceptions, however the majority of languages that use exception use it in their
+STDs too. This makes the number of the possible exception very huge.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I think it starts to be a little common with Julia, though the language
+makes it very easy to install package directly from any git repository, just
+like Go does.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2023-08-10 Thu 09:35. Last build date: 2025-12-11 Thu 19:48.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

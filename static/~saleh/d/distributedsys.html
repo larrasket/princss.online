@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is a distributed system</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">What is a distributed system</h1>
+</header><div id="outline-container-orgd2d688a" class="outline-2">
+<h2 id="orgd2d688a"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-orgd2d688a">
+<p>
+I&rsquo;ve been reading recently Distributed Systems by Steen, M. v., &amp;
+Tanenbaum, A. S..<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</span> And it provides a very nice
+introduction into the topic. Something I liked really from the book, how it
+starts with distinguishing between convoluted terms like distributed systems and
+decentralized systems. I experience this issue a lot while talking in an
+engineering context and I find someone suggesting a distributed approach,
+however, many of the listeners confuse it with other definitions like
+service-based architecture and the like.
+</p>
+
+
+<figure id="org85b9a78">
+<img src="../i/2025-04-01_14-04-55_screenshot.png" alt="2025-04-01_14-04-55_screenshot.png">
+
+</figure>
+
+
+<p>
+In this article I will go quickly over that distinction.
+</p>
+
+<p>
+To understand the difference between distributed and decentralized
+systems, we must first consider how networked systems emerge. There are
+typically two distinct evolutionary paths that lead to computers being
+connected together.
+</p>
+
+<p>
+The first path, which we might call the integrative approach, starts
+with independent, often heterogeneous systems that need to be connected
+to enable new functionalities or services. These systems typically exist
+within different administrative domains, were created separately, and
+are brought together because of emerging needs to share data or
+functionality. The European air traffic control system exemplifies this
+approach - numerous national systems, each independently developed and
+operated, must interconnect to enable coordinated management of
+continental airspace.
+</p>
+
+<p>
+The second path, which we call the expansive approach, begins with a
+single system that grows beyond the capabilities of a single computer,
+requiring additional machines to meet operational demands. This
+expansion is typically driven by performance needs, reliability
+requirements, or geographic distribution of users. Amazon&rsquo;s retail
+platform followed this trajectory - what began as a simple online
+bookstore running on a few servers has expanded to a massive
+infrastructure of hundreds of thousands of computers spread across the
+globe.
+</p>
+
+<p>
+These different origins lead to fundamentally different system
+characteristics, which we can distinguish as follows:
+</p>
+
+<ul class="org-ul">
+<li><b>A decentralized system</b> is a networked computer system in which
+processes and resources are <i>necessarily</i> spread across multiple
+computers.</li>
+<li><b>A distributed system</b> is a networked computer system in which
+processes and resources are <i>sufficiently</i> spread across multiple
+computers.</li>
+</ul>
+
+<p>
+The key distinction here lies in the words &ldquo;necessarily&rdquo; versus
+&ldquo;sufficiently.&rdquo; In decentralized systems, distribution is a fundamental
+requirement dictated by constraints that make centralization impossible.
+In distributed systems, distribution is a design choice implemented to
+achieve specific quality attributes.
+</p>
+</div>
+</div>
+<div id="outline-container-org5d92285" class="outline-2">
+<h2 id="org5d92285">When Distribution Cannot Be Avoided</h2>
+<div class="outline-text-2" id="text-org5d92285">
+<p>
+Decentralized systems emerge when resources and processes must be
+distributed across multiple computers due to constraints that make
+centralization impossible or infeasible. These constraints typically
+fall into several categories:
+</p>
+</div>
+<div id="outline-container-org8318999" class="outline-3">
+<h3 id="org8318999">Administrative and Organizational Boundaries</h3>
+<div class="outline-text-3" id="text-org8318999">
+<p>
+Many systems must operate across organizational boundaries where each
+participant maintains independent control over their resources. Medical
+research provides a clear example of this constraint. Patient data is
+typically stored within individual hospital systems due to privacy
+regulations, institutional policies, and legal requirements. When
+researchers want to develop machine learning models that leverage data
+from multiple hospitals, they cannot simply aggregate all data in one
+location.
+</p>
+
+<p>
+This necessity drives the development of federated learning systems,
+where the model training algorithm travels to each hospital&rsquo;s local data
+center, performs computations on the local data, and then shares only
+the model updates (not the raw data) with a central coordinating
+service. Stanford University&rsquo;s DAWN project has implemented such a
+system for medical image analysis, allowing multiple medical centers to
+collectively train diagnostic algorithms without sharing protected
+patient data.
+</p>
+
+<p>
+The constraint here is not technical but organizational and regulatory -
+the data must remain under the control of the original institution. The
+decentralization is necessary, not optional.
+</p>
+</div>
+</div>
+<div id="outline-container-org96d85e8" class="outline-3">
+<h3 id="org96d85e8">Trust Limitations</h3>
+<div class="outline-text-3" id="text-org96d85e8">
+<p>
+Some systems operate in environments where no single entity can or
+should be trusted with complete control. Financial systems often
+encounter this constraint, particularly when facilitating transactions
+between parties with limited trust relationships.
+</p>
+
+<p>
+Bitcoin and other blockchain-based systems represent quintessential
+examples of trust-driven decentralization. Participants in these
+networks do not trust any single authority to maintain a ledger of
+transactions. Instead, the ledger is fully replicated across thousands
+of nodes, with a consensus protocol ensuring agreement on the
+transaction history despite potentially malicious actors.
+</p>
+
+<p>
+The Bitcoin network processes hundreds of millions of dollars in
+transactions daily without requiring users to trust any central
+authority. This approach fundamentally differs from traditional banking
+systems where a central authority (the bank) maintains transaction
+records. The decentralization isn&rsquo;t merely a design preference—it&rsquo;s
+the core innovation that enables the system&rsquo;s trustless operation.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd928548" class="outline-3">
+<h3 id="orgd928548">Geographic and Physical Constraints</h3>
+<div class="outline-text-3" id="text-orgd928548">
+<p>
+Some systems are decentralized because their physical components must
+exist in specific geographic locations. Weather monitoring networks
+illustrate this constraint clearly. Weather sensors must be physically
+distributed across the geography they monitor—sensors in New York tell
+us nothing about the weather in Los Angeles.
+</p>
+
+<p>
+The National Weather Service operates thousands of monitoring stations
+across the United States, each collecting local atmospheric data. This
+data feeds into predictive models that forecast weather patterns. The
+decentralization of data collection is an inherent requirement of the
+system&rsquo;s purpose, not a design choice.
+</p>
+
+<p>
+Similarly, the control systems for power grids must be partially
+decentralized because of the physical distribution of generation and
+transmission infrastructure. While centralized oversight exists, local
+control systems must make real-time decisions based on local conditions,
+as the time required to communicate with a central authority would make
+the system too slow to respond to rapidly changing conditions.
+</p>
+</div>
+</div>
+<div id="outline-container-org65a66bd" class="outline-3">
+<h3 id="org65a66bd">Regulatory Requirements</h3>
+<div class="outline-text-3" id="text-org65a66bd">
+<p>
+Increasingly, regulatory frameworks require certain types of data to
+remain within specific geographic or jurisdictional boundaries. The
+European Union&rsquo;s General Data Protection Regulation (GDPR) and similar
+regulations worldwide have forced many global companies to decentralize
+their data storage and processing.
+</p>
+
+<p>
+Microsoft, for example, operates distinct Azure cloud regions throughout
+the world, with data centers that keep European customer data within EU
+borders. This decentralization isn&rsquo;t driven by technical considerations
+but by regulatory requirements that make centralization legally
+impossible.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb8c147" class="outline-2">
+<h2 id="orgbb8c147">When Distribution Is a Choice</h2>
+<div class="outline-text-2" id="text-orgbb8c147">
+<p>
+Distributed systems, by contrast, involve spreading processes and
+resources across multiple computers to achieve goals like scalability,
+fault tolerance, or performance optimization—not because such
+distribution is fundamentally necessary. In these systems,
+centralization would be theoretically possible, if not always practical.
+</p>
+</div>
+<div id="outline-container-orgda382ad" class="outline-3">
+<h3 id="orgda382ad">Web Search Engines</h3>
+<div class="outline-text-3" id="text-orgda382ad">
+<p>
+Google&rsquo;s search engine handles billions of queries daily across a
+massive distributed infrastructure. When users enter a search query,
+their request is processed by multiple systems: one to parse the query,
+others to search different portions of the index, and still others to
+rank and assemble the results.
+</p>
+
+<p>
+This distribution isn&rsquo;t necessary in the sense that a single
+(theoretical) supercomputer could perform all these functions. Rather,
+Google distributes its system to achieve specific quality attributes:
+scalability to handle the query volume, fault tolerance to maintain
+service despite hardware failures, and performance to deliver results
+within milliseconds.
+</p>
+
+<p>
+The company famously built its infrastructure using thousands of
+commodity servers rather than a few high-end machines, making an
+explicit design choice to distribute processing horizontally. This
+approach provided cost advantages and simplified scaling as demand grew.
+</p>
+</div>
+</div>
+<div id="outline-container-org34984c9" class="outline-3">
+<h3 id="org34984c9">Content Delivery Networks</h3>
+<div class="outline-text-3" id="text-org34984c9">
+<p>
+Akamai operates over 340,000 servers in more than 135 countries. When
+users visit websites served through Akamai&rsquo;s CDN, they&rsquo;re transparently
+redirected to nearby servers that host copies of the requested content.
+</p>
+
+<p>
+This distribution isn&rsquo;t necessary for the content to be accessible—a
+single central server could theoretically serve all users. However, by
+distributing content based on geographic proximity to users, CDNs reduce
+latency, improve bandwidth utilization, and enhance the user experience.
+The system makes sophisticated decisions about which content to
+replicate where, based on usage patterns and performance metrics.
+</p>
+
+<p>
+Netflix employs a similar strategy, placing content caching servers
+within internet service providers&rsquo; networks. This distributed approach
+allows them to deliver high-definition video streams to millions of
+concurrent users without overwhelming internet backbones—a sufficient
+distribution to achieve their performance requirements.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org81aa1b3" class="outline-2">
+<h2 id="org81aa1b3">Centralized Solutions Work</h2>
+<div class="outline-text-2" id="text-org81aa1b3">
+<p>
+A persistent misconception in system design holds that centralized
+solutions are inherently flawed—unable to scale, vulnerable to
+failures, and limited in performance. This view often leads to
+unnecessary distribution, introducing complexity without corresponding
+benefits.
+</p>
+
+<p>
+In reality, logically centralized systems can be implemented in
+physically distributed ways that provide excellent scalability and
+reliability. The Domain Name System (DNS) exemplifies this approach.
+Logically, DNS is organized as a global hierarchical tree, with the root
+of the tree appearing to be a centralization point and potential single
+point of failure. However, the root is physically implemented as 13 sets
+of servers, each set itself implemented as a distributed system using
+anycast routing to direct queries to the nearest instance.
+</p>
+
+<p>
+This design delivers the simplicity and consistency of a centralized
+approach with the resilience and scalability of distribution. Despite
+numerous distributed denial-of-service attacks targeting the DNS root
+servers over the years, the system has maintained remarkable stability.
+</p>
+
+<p>
+Similarly, many modern cloud services present centralized interfaces to
+users while implementing distributed architectures behind the scenes.
+Amazon&rsquo;s S3 storage service appears to users as a single, infinitely
+scalable storage system, hiding the complex distribution mechanisms that
+enable this illusion.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcaf0c2c" class="outline-2">
+<h2 id="orgcaf0c2c">Necessity versus Sufficiency</h2>
+<div class="outline-text-2" id="text-orgcaf0c2c">
+<p>
+The key distinction between decentralized and distributed systems stems
+from whether the distribution is necessary or merely sufficient:
+</p>
+
+<ol class="org-ol">
+<li>In decentralized systems, distribution is a fundamental requirement
+imposed by external constraints. The system cannot function without
+distribution because administrative boundaries, trust limitations,
+geographic constraints, or regulatory requirements make
+centralization impossible.</li>
+
+<li>In distributed systems, distribution is a design choice made to
+achieve specific quality attributes like scalability, fault
+tolerance, or performance. Centralization would be theoretically
+possible, though perhaps impractical for various reasons.</li>
+</ol>
+
+<p>
+This distinction has profound implications for system design,
+implementation, and operation:
+</p>
+</div>
+<div id="outline-container-orgd81057e" class="outline-3">
+<h3 id="orgd81057e">Complexity Management</h3>
+<div class="outline-text-3" id="text-orgd81057e">
+<p>
+Decentralized systems must manage the inherent complexity of
+distribution without the option of simplifying through centralization.
+This often requires sophisticated consensus mechanisms, complex security
+models, and careful handling of partial failures.
+</p>
+
+<p>
+The Google Spanner database illustrates how challenging this can be. To
+maintain consistent data across globally distributed data centers,
+Spanner relies on GPS receivers and atomic clocks to provide precise
+time synchronization. This extraordinary complexity is necessary because
+the system must maintain consistency across administrative domains while
+supporting global distribution.
+</p>
+
+<p>
+Distributed systems can often leverage centralized control planes even
+while distributing data and processing. Kubernetes, the container
+orchestration system, uses a centralized control plane to manage
+distributed container workloads, simplifying many aspects of system
+management.
+</p>
+</div>
+</div>
+<div id="outline-container-org8c38d12" class="outline-3">
+<h3 id="org8c38d12">Performance Expectations and Tradeoffs</h3>
+<div class="outline-text-3" id="text-org8c38d12">
+<p>
+Decentralized systems typically incur performance penalties for their
+necessary distribution. Bitcoin processes only a few transactions per
+second compared to Visa&rsquo;s tens of thousands, because its decentralized
+consensus mechanism prioritizes trustlessness over throughput.
+</p>
+
+<p>
+Distributed systems can often achieve performance improvements through
+their distribution. Hadoop distributes data processing across computer
+clusters to enable analysis of datasets too large for single machines,
+turning distribution into a performance advantage rather than a
+liability.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbc1ce16" class="outline-3">
+<h3 id="orgbc1ce16">Evolution and Governance</h3>
+<div class="outline-text-3" id="text-orgbc1ce16">
+<p>
+Decentralized systems face unique challenges in evolution. Changes to
+the Bitcoin protocol, for example, require broad consensus among a
+diverse community of miners, developers, and users. This governance by
+consensus makes rapid evolution difficult but protects the system&rsquo;s
+decentralized nature.
+</p>
+
+<p>
+Distributed systems that remain under unified administrative control can
+evolve more rapidly. Amazon can update its distributed retail platform
+without seeking consensus beyond its own engineering teams, allowing for
+more agile responses to changing requirements.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org93db65a" class="outline-2">
+<h2 id="org93db65a">Minimal Distribution</h2>
+<div class="outline-text-2" id="text-org93db65a">
+<p>
+The distinction between distributed and decentralized systems—based on whether
+distribution is sufficient or necessary—provides a powerful framework for
+understanding networked computer systems. Decentralized systems distribute
+because they must, accepting the inherent complexity as the cost of addressing
+administrative, trust, geographic, or regulatory constraints. Distributed
+systems distribute because doing so provides benefits that outweigh the added
+complexity.
+</p>
+
+<p>
+This distinction isn&rsquo;t merely academic. It guides fundamental architectural
+decisions, influences technology selection, shapes operational practices, and
+determines how systems evolve over time. By understanding whether your system
+needs to be decentralized or merely distributed, you can make more informed
+tradeoffs between simplicity and distribution.
+</p>
+
+<p>
+As computing continues to expand across organizational and geographic
+boundaries, more systems will incorporate both necessary decentralization and
+sufficient distribution. The most successful architectures will be those that
+apply each approach judiciously—decentralizing what must be decentralized,
+distributing what benefits from distribution, and centralizing everything else.
+</p>
+
+<p>
+The principle of minimal distribution—distribute only what is necessary or
+sufficiently beneficial—serves as a valuable guide for navigating the
+complexity of modern networked systems. By embracing this principle, architects
+can build systems that balance the benefits of distribution against its
+significant costs, delivering solutions that are as simple as possible but as
+distributed as necessary.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-04-01 Tue 13:55. Last build date: 2025-12-11 Thu 19:46.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

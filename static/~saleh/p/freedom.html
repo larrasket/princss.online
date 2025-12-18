@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Limits on The (allowed) Freedom of Speech</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">The Limits on The (allowed) Freedom of Speech</h1>
+</header><div class="BACKLINKS" id="org06fa2aa">
+<p>
+This section was referenced in <a href="freedom.html#0p936gp0kzj0">The Limits on The (allowed) Freedom of Speech</a> and <a href="democracy.html#wgze7ho0i2k0">Democracy and Irresponsibility: Eghbariah&rsquo;s Case</a>, and in 3 other private notes.
+</p>
+
+</div>
+
+<div class="PREVIEW" id="orga565095">
+<p>
+People are free to do exactly what they are told. ― Ward Churchill
+</p>
+
+</div>
+
+<div class="tag" id="orgcc5302f">
+<p>
+This section was labeled under, or is related to <a href="../t/political.html#thc4j6p02wj0">Politics</a>
+</p>
+
+</div>
+
+
+<div class="UNEXPORTEDTAG" id="org7993b18">
+<p>
+<a href="freedom.html#0p936gp0kzj0">How free is freedom?</a>
+</p>
+
+</div>
+
+<p>
+Freedom of speech has limits, some argue that they must
+have<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Gehan Gunatilleke, “Justifying Limitations on the Freedom of Expression,” <i>Human Rights Review</i> 22, no. 1 (November 2020): 91–108, <a href="https://doi.org/10.1007/s12142-020-00608-8">https://doi.org/10.1007/s12142-020-00608-8</a>.</span> especially on &ldquo;dangerous&rdquo; content that
+could be described as &ldquo;harmful and offensive&rdquo;, which is arguable of course. I
+call those limits the <i>overt limits</i>, the ones that you might get sued of
+criminal speech in many countries.
+</p>
+
+<p>
+However, there are always the <i>undercover limits</i>, those that you are not likely
+to get sued for practicing them, although you are very likely to get (at the very
+least) marginalized, defamed and underrepresented. The Nazis used this technique for a
+while against the Jews in Germany, it was called the Judenboykott and it was
+years before the Nuremberg Laws (the antisemitic laws that were enacted in Nazi
+Germany), it was a method for marginalizing and underrepresenting the Jewish
+people without the usage of any kind of law enforcement.<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">Bruce F. Pauley, <i>From Prejudice to Persecution: A History of Austrian Anti-Semitism</i> (University of North Carolina Press, 1998).</span>
+</p>
+
+<p>
+Marginalization and underrepresentation are indispensable tools for an
+oligarchic democracy, or any state that will find a burden in using law
+enforcement. It&rsquo;s basically the punishment by the elites to align the view for
+the public stakeholders (i.e. the people), they should be only exposed to
+certain views, this way it will prevent them from engaging in any
+unpleasant actions<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">Noam Chomsky, <i>Media Control: The Spectacular Achievements of Propaganda</i>, 1st ed., The Open Media Pamphlet Series , No 1 (Seven Stories Press, 1997), 24, <a href="https://libgen.li/file.php?md5=83cb03795333049481911669b3f5fe4c">https://libgen.li/file.php?md5=83cb03795333049481911669b3f5fe4c</a>.</span>
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+As long as people are marginalized and distracted, [they] have no way to
+organize or articulate their sentiments, or even know that others have these
+sentiments. People assume that they are the only people with a crazy idea in
+their heads.
+</p>
+
+</blockquote></div>
+
+<p>
+Now this comes on a price: teaching the public the lesson of what happens to
+those who are disaligned, they get defamed, marginalized and basically
+<i>undercover</i> oppressed and sometimes proscribed.
+</p>
+
+<p>
+As the time of writing this it has been a few weeks since the beginning of the
+Israel-Gaza 2023 war. Compared to clashes that has been going for the past
+couple of decades between the Palestinian people and the Israeli forces, that
+most recent conflict has been discussed in much bigger scale, many
+Israeli-affiliated systems are doing there hard work to make sure that everyone
+is having standards of support for Israeli militancy.
+</p>
+
+<p>
+The kinds of defamation that I mentioned have been always happening with mostly
+all of the past clashes<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">
+Of course the ones that the Israeli side were obviously to be blamed for,
+like Cave of the Patriarchs massacre, would just be kept silent about.
+</span>, Dr. Matthew Abraham&rsquo;s great book &ldquo;Out of Bounds:
+Academic Freedom and the Question of Palestine&rdquo;<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">Matthew Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i> (Bloomsbury Publishing, 2014).</span>
+collects many examples for that violation but in academic publishing boundaries.
+Due to that exceptional case of the current conflict, we are seeing that
+violation of freedom in much clearer forms and everywhere in public media.
+</p>
+
+<p>
+The purpose of this page page to document news and events that
+are considered to indicate a violation on the freedom of thought and speech,
+especially but not exclusively on views related to the Israeli–Palestinian conflict.
+</p>
+<div id="outline-container-qk0eo7u064k0" class="outline-2">
+<h2 id="qk0eo7u064k0">Web Summit CEO Resigns After Condemnation of Israeli War Crimes</h2>
+<div class="outline-text-2" id="text-org7ad5baa">
+<p>
+Paddy Cosgrave, the chief executive officer of a prominent European tech
+conference called Web Summit, resigned from his role on Saturday amid backlash
+for his public statements that suggested Israel was committing war crimes.<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">Anne D’Innocenzio, “Ceo of a Prominent Tech Conference Resigns amid Backlash for Public Statements over Israel-Hamas War,” <i>Associated Press</i>, October 2023, <a href="https://apnews.com/article/web-summit-paddy-cosgrave-gaza-israel-hamas-war-0b085e4004f6d87974975d275eac9ef7">https://apnews.com/article/web-summit-paddy-cosgrave-gaza-israel-hamas-war-0b085e4004f6d87974975d275eac9ef7</a>.</span>
+</p>
+
+<p>
+Right after the publication of that statement, his organization, Web Summit,
+suffered from boycotts by Google, Strip and Meta,<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">Tabitha Monahan and Adrian Weckler, “Meta, Google and Stripe to Boycott Web Summit on Back of Paddy Cosgrave’s Israel Comments,” <i>Irish Independent</i>, October 2023, <a href="https://www.independent.ie/irish-news/meta-google-and-stripe-to-boycott-web-summit-on-back-of-paddy-cosgraves-israel-comments/a1235054615.html">https://www.independent.ie/irish-news/meta-google-and-stripe-to-boycott-web-summit-on-back-of-paddy-cosgraves-israel-comments/a1235054615.html</a>.</span>
+which probably caused his resignation.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf52f7e3" class="outline-2">
+<h2 id="orgf52f7e3">Florida Governor Ban of Pro-Palestinian Student Organization</h2>
+<div class="outline-text-2" id="text-orgf52f7e3">
+<p>
+The Florida governor and Republican presidential candidate Ron DeSantis has
+ordered colleges ban pro-Palestinian groups student organization.
+</p>
+
+<p>
+&ldquo;Based on the National SJP’s support of terrorism, in consultation with Governor
+DeSantis, the student chapters must be deactivated&rdquo; Rodrigues wrote in a memo
+to university leaders, <a href="https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/">as reported</a>.<label for="8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="8" class="margin-toggle"/><span class="sidenote">Andrew Hay, “Florida’s Desantis Bans pro-Palestinian Student Group,” <i>Reuters</i>, October 2023, <a href="https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/">https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-sare4ib000k0" class="outline-2">
+<h2 id="sare4ib000k0">British Ministerial Aide Sacked After Calling for Gaza Ceasefire</h2>
+<div class="outline-text-2" id="text-orgb858ca2">
+<p>
+A ministerial aide has been sacked from his government role after calling for a
+ceasefire in Gaza.<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote">Becky Morton, “Paul Bristow: Ministerial Aide Sacked after Call for Israel-Gaza Ceasefire,” <i>The British Broadcasting Corporation (Bbc)</i>, October 2023, <a href="https://www.bbc.com/news/uk-politics-67264814">https://www.bbc.com/news/uk-politics-67264814</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-xd74xnp0kzj0" class="outline-2">
+<h2 id="xd74xnp0kzj0">Many CEOs Promoted by Mass Media Are Calling for Blacklist of Harvard Students After Israel Condemnation Statement</h2>
+<div class="outline-text-2" id="text-org6d885bc">
+<p>
+In 9 Oct 2023 &ldquo;large number of Harvard student organizations&rdquo; made a statement
+that&rsquo;s clear about the Israeli conflict. I personally agree with their views,
+what happened in 7 October was a consequence of the Israeli actions for the last
+couple of decades, killing and oppressing Palestinian whilst running the
+greatest open air prison in the world (Gaza).
+</p>
+
+<p>
+Though this is what many CEOs did not like, and now they are calling on Harvard
+University to shut them down, asking for a full list of their names.<label for="10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="10" class="margin-toggle"/><span class="sidenote">Matt Egan, “Ceos Call on Harvard to Name Students Linked to Statement Blaming Israel for Hamas Attack,” <i>Cnn Bussiness</i>, October 2023, <a href="https://edition.cnn.com/2023/10/11/business/harvard-israel-hamas-ceos-students/index.html">https://edition.cnn.com/2023/10/11/business/harvard-israel-hamas-ceos-students/index.html</a>.</span> As of the end of October 2023, media has reported
+that millions of &rsquo;funds&rsquo; for top U.S. universities are gone due to disaligned
+views of student about the Israeli–Palestinian Conflict..<label for="11" class="margin-toggle sidenote-number"></label><input type="checkbox" id="11" class="margin-toggle"/><span class="sidenote">Andrew Jack, “Us Universities Lose Millions as Donors Pull Funding over Hamas Stance,” <i>Financial Times</i>, October 2023, <a href="https://www.ft.com/content/22316ef9-f71e-4076-8d95-b3fa18fcb520">https://www.ft.com/content/22316ef9-f71e-4076-8d95-b3fa18fcb520</a>.</span>
+</p>
+
+<p>
+In 17 October 2023; many &ldquo;top law firm&rdquo; rescinds their job offers to many of
+these top universities<label for="12" class="margin-toggle sidenote-number"></label><input type="checkbox" id="12" class="margin-toggle"/><span class="sidenote">Kat Tenbarge, “Top Law Firm Rescinds Job Offers to Ivy League Students over Israel Letters,” <i>Nbc News</i>, October 2023, <a href="https://www.nbcnews.com/business/corporations/harvard-letter-israel-columbia-ivy-davis-polk-law-firm-student-rcna120881">https://www.nbcnews.com/business/corporations/harvard-letter-israel-columbia-ivy-davis-polk-law-firm-student-rcna120881</a>.</span> due to the same reasons.
+All of these are means for lobbying the universities to either suspend the
+students or shut them up somehow (to make sure that only aligned views are
+exposed). The suspension of these students or rescinding them from jobs as top
+companies are doing both serve as an example of the process of alignment
+mentioned on the top of the article.
+</p>
+</div>
+</div>
+<div id="outline-container-ysr4rxd0nzj0" class="outline-2">
+<h2 id="ysr4rxd0nzj0">Norman Finkelstein Tenure Rejection and Resignation After Debunking Pro-Israeli Book</h2>
+<div class="outline-text-2" id="text-org4efc009">
+<p>
+After the <a href="https://en.wikipedia.org/wiki/Dershowitz%E2%80%93Finkelstein_affair">Dershowitz–Finkelstein affair</a>, Alan Dershowitz started
+campaigned to block Norman Finkelstein tenure bid at DePaul University. His
+campaign began in 2004 when he sent DePaul president Dennis Holtschneider a
+manuscript, &ldquo;Literary McCarthyism,&rdquo; arguing that the university should fire
+Finkelstein. He also contacted DePaul political science department chair
+Patrick Callahan.
+</p>
+
+<p>
+In 2005, Dershowitz announced his intent to block Finkelstein&rsquo;s tenure bid,
+saying, &ldquo;I will come at my own expense, and I will document the case against
+Finkelstein&rdquo; and &ldquo;I&rsquo;ll demonstrate that he doesn&rsquo;t meet the academic standards
+of the Association of American Universities&rdquo;,<label for="13" class="margin-toggle sidenote-number"></label><input type="checkbox" id="13" class="margin-toggle"/><span class="sidenote">Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i>, 85.</span> sounds like Dershowitz view of being associated with American
+Universities implies an ultimate support of Israel<label for="14" class="margin-toggle sidenote-number"></label><input type="checkbox" id="14" class="margin-toggle"/><span class="sidenote">
+As of the time of writing this he has being confirming that, <a href="https://twitter.com/AlanDersh/status/1714635187521192417">calling</a> for
+a condemnation of Harvard students who stands against the Israeli actions.
+</span>
+</p>
+
+<p>
+In October 2006, he sent members of DePaul&rsquo;s law and political science faculties
+what he called &ldquo;a dossier of Norman Finkelstein&rsquo;s most egregious academic sins,
+and especially his outright lies, misquotations, and distortions&rdquo; and lobbied
+DePaul&rsquo;s professors, alumni and administrators to deny Finkelstein tenure.<label for="15" class="margin-toggle sidenote-number"></label><input type="checkbox" id="15" class="margin-toggle"/><span class="sidenote">Jennifer Howard, “Harvard Law Professor Works to Disrupt Tenure Bid of Longtime Nemesis at Depaul U.,” <i>The Chronicle of Higher Education</i>, April 5, 2007, <a href="https://www.chronicle.com/article/harvard-law-professor-works-to-disrupt-tenure-bid-of-longtime-nemesis-at-depaul-u/">https://www.chronicle.com/article/harvard-law-professor-works-to-disrupt-tenure-bid-of-longtime-nemesis-at-depaul-u/</a>.</span>
+</p>
+
+<p>
+In May 2007, Dershowitz spoke at Northwestern University and claimed that
+Finkelstein had recently attended a Holocaust denial conference in Iran.<label for="16" class="margin-toggle sidenote-number"></label><input type="checkbox" id="16" class="margin-toggle"/><span class="sidenote">Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i>, 86.</span>
+</p>
+
+<p>
+DePaul&rsquo;s political science committee investigated Dershowitz&rsquo;s accusations
+against Finkelstein and concluded that they were unsubstantiated. The department
+subsequently invited John Mearsheimer and Ian Lustick, two previously uninvolved
+academics with expertise on the Israel–Palestinian conflict, to evaluate the
+academic merit of Finkelstein&rsquo;s work; they came to the same conclusion.<label for="17" class="margin-toggle sidenote-number"></label><input type="checkbox" id="17" class="margin-toggle"/><span class="sidenote">Richard Forer, <i>Breakthrough: Transforming Fear into Compassion: A New Perspective on the Israel-Palestine Conflict</i>, 2010.</span>
+</p>
+
+<p>
+In early 2007, DePaul&rsquo;s political science department voted nine to three, and
+the College of Liberal Arts and Sciences Personnel Committee five to zero, to
+give Finkelstein tenure. The three opposing faculty members subsequently filed a
+minority report opposing tenure, supported by the Dean of the College, Chuck
+Suchar.
+</p>
+</div>
+</div>
+<div id="outline-container-ob983m50rzj0" class="outline-2">
+<h2 id="ob983m50rzj0">CEO of eLife Fired After Retweeting &ldquo;The Onion&rdquo; Parody Post About Israel/Palestine</h2>
+<div class="outline-text-2" id="text-orgbee2fa8">
+<p>
+&ldquo;I have been informed that I am being replaced as the Editor in Chief of @eLife
+for retweeting a @TheOnion piece that calls out indifference to the lives of
+Palestinian civilians.&rdquo; as reported on his twitter account.<label for="18" class="margin-toggle sidenote-number"></label><input type="checkbox" id="18" class="margin-toggle"/><span class="sidenote">Michael Eisen, “I Have Been Informed That I Am Being Replaced as the Editor in Chief of @Elife for Retweeting a @Theonion Piece That Calls out Indifference to the Lives of Palestinian Civilians.,” October 2023, <a href="https://twitter.com/dasaptaerwin/status/465577518565580801">https://twitter.com/dasaptaerwin/status/465577518565580801</a>.</span>
+</p>
+
+<p>
+Ironically, the post that he retweeted The Onion was very expressive! it <a href="https://www.theonion.com/the-onion-stands-with-israel-because-it-seems-like-yo-1850922505">says</a>:
+&ldquo;‘The Onion’ Stands With Israel Because It Seems Like You Get In Less Trouble
+For That&rdquo;
+</p>
+
+<p>
+In fact, the article does a great job in depicting the situation:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+In moments of turmoil such as this, some believe it is the responsibility of a
+newspaper of record like The Onion to delve fully into the nuances of a complex
+and multifaceted conflict that stretches back not just decades but centuries.
+These people are wrong.
+</p>
+
+<p>
+Instead, this editorial board wishes to take this opportunity to declare its
+full and unequivocal support for Israel because, frankly, it seems like you get
+in way less trouble for that.
+</p>
+
+</blockquote></div>
+</div>
+</div>
+<div id="outline-container-0mde5bo000k0" class="outline-2">
+<h2 id="0mde5bo000k0">Artforum Fires Chief Editor Because of His Position From Palestine</h2>
+<div class="outline-text-2" id="text-orgfc7c31d">
+<p>
+David Velasco was removed after the magazine’s publishers said there was a
+flawed editorial process behind the publication of a letter that supported
+Palestinian liberation.<label for="19" class="margin-toggle sidenote-number"></label><input type="checkbox" id="19" class="margin-toggle"/><span class="sidenote">Zachary Small, “Artforum Fires Top Editor after Its Open Letter on Israel-Hamas War,” <i>The New York Times</i>, October 2023, <a href="https://www.nytimes.com/2023/10/26/arts/artforum-editor-fired-david-velasco-palestine-gaza.html">https://www.nytimes.com/2023/10/26/arts/artforum-editor-fired-david-velasco-palestine-gaza.html</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-fb3797q030k0" class="outline-2">
+<h2 id="fb3797q030k0">MP Andy McDonald Suspends After Speech at Pro-Palestinian Rally</h2>
+<div class="outline-text-2" id="text-org0a2b7aa">
+<p>
+Andy McDonald has been suspended as a Labour MP, after the party said he had
+made &ldquo;deeply offensive&rdquo; comments relating to the Israel-Gaza war, as reported in
+the BBC.<label for="20" class="margin-toggle sidenote-number"></label><input type="checkbox" id="20" class="margin-toggle"/><span class="sidenote">BBC Stuff, “Andy Mcdonald: Labour Suspends Mp after Speech at pro-Palestinian Rally,” <i>The British Broadcasting Corporation (Bbc)</i>, October 2023, <a href="https://www.bbc.com/news/uk-politics-67268154">https://www.bbc.com/news/uk-politics-67268154</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-0sdaary0e0k0" class="outline-2">
+<h2 id="0sdaary0e0k0">Columbia University Suspends Jewish Voice for Peace and Justice in Palestine</h2>
+<div class="outline-text-2" id="text-org5f5f2a8">
+<p>
+Columbia University is suspending Students for Justice in Palestine (SJP) and
+Jewish Voice for Peace (JVP) as they &ldquo;repeatedly violated University policies
+related to holding campus events, culminating in an unauthorized
+event.&rdquo;<label for="21" class="margin-toggle sidenote-number"></label><input type="checkbox" id="21" class="margin-toggle"/><span class="sidenote">Columbia News Editorial, “Statement from Gerald Rosberg, Chair of the Special Committee on Campus Safety,” <i>Columbia News</i> (Columbia University in the City of New York, November 2023), <a href="https://news.columbia.edu/news/statement-gerald-rosberg-chair-special-committee-campus-safety">https://news.columbia.edu/news/statement-gerald-rosberg-chair-special-committee-campus-safety</a>.</span>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Gehan Gunatilleke, “Justifying Limitations on the Freedom of Expression,” <i>Human Rights Review</i> 22, no. 1 (November 2020): 91–108, <a href="https://doi.org/10.1007/s12142-020-00608-8">https://doi.org/10.1007/s12142-020-00608-8</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Bruce F. Pauley, <i>From Prejudice to Persecution: A History of Austrian Anti-Semitism</i> (University of North Carolina Press, 1998).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Noam Chomsky, <i>Media Control: The Spectacular Achievements of Propaganda</i>, 1st ed., The Open Media Pamphlet Series , No 1 (Seven Stories Press, 1997), 24, <a href="https://libgen.li/file.php?md5=83cb03795333049481911669b3f5fe4c">https://libgen.li/file.php?md5=83cb03795333049481911669b3f5fe4c</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Of course the ones that the Israeli side were obviously to be blamed for,
+like Cave of the Patriarchs massacre, would just be kept silent about.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Matthew Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i> (Bloomsbury Publishing, 2014).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Anne D’Innocenzio, “Ceo of a Prominent Tech Conference Resigns amid Backlash for Public Statements over Israel-Hamas War,” <i>Associated Press</i>, October 2023, <a href="https://apnews.com/article/web-summit-paddy-cosgrave-gaza-israel-hamas-war-0b085e4004f6d87974975d275eac9ef7">https://apnews.com/article/web-summit-paddy-cosgrave-gaza-israel-hamas-war-0b085e4004f6d87974975d275eac9ef7</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Tabitha Monahan and Adrian Weckler, “Meta, Google and Stripe to Boycott Web Summit on Back of Paddy Cosgrave’s Israel Comments,” <i>Irish Independent</i>, October 2023, <a href="https://www.independent.ie/irish-news/meta-google-and-stripe-to-boycott-web-summit-on-back-of-paddy-cosgraves-israel-comments/a1235054615.html">https://www.independent.ie/irish-news/meta-google-and-stripe-to-boycott-web-summit-on-back-of-paddy-cosgraves-israel-comments/a1235054615.html</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Andrew Hay, “Florida’s Desantis Bans pro-Palestinian Student Group,” <i>Reuters</i>, October 2023, <a href="https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/">https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Becky Morton, “Paul Bristow: Ministerial Aide Sacked after Call for Israel-Gaza Ceasefire,” <i>The British Broadcasting Corporation (Bbc)</i>, October 2023, <a href="https://www.bbc.com/news/uk-politics-67264814">https://www.bbc.com/news/uk-politics-67264814</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10" role="doc-backlink">10</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Matt Egan, “Ceos Call on Harvard to Name Students Linked to Statement Blaming Israel for Hamas Attack,” <i>Cnn Bussiness</i>, October 2023, <a href="https://edition.cnn.com/2023/10/11/business/harvard-israel-hamas-ceos-students/index.html">https://edition.cnn.com/2023/10/11/business/harvard-israel-hamas-ceos-students/index.html</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11" role="doc-backlink">11</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Andrew Jack, “Us Universities Lose Millions as Donors Pull Funding over Hamas Stance,” <i>Financial Times</i>, October 2023, <a href="https://www.ft.com/content/22316ef9-f71e-4076-8d95-b3fa18fcb520">https://www.ft.com/content/22316ef9-f71e-4076-8d95-b3fa18fcb520</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12" role="doc-backlink">12</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Kat Tenbarge, “Top Law Firm Rescinds Job Offers to Ivy League Students over Israel Letters,” <i>Nbc News</i>, October 2023, <a href="https://www.nbcnews.com/business/corporations/harvard-letter-israel-columbia-ivy-davis-polk-law-firm-student-rcna120881">https://www.nbcnews.com/business/corporations/harvard-letter-israel-columbia-ivy-davis-polk-law-firm-student-rcna120881</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.13" class="footnum" href="#fnr.13" role="doc-backlink">13</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i>, 85.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14" role="doc-backlink">14</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+As of the time of writing this he has being confirming that, <a href="https://twitter.com/AlanDersh/status/1714635187521192417">calling</a> for
+a condemnation of Harvard students who stands against the Israeli actions.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.15" class="footnum" href="#fnr.15" role="doc-backlink">15</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Jennifer Howard, “Harvard Law Professor Works to Disrupt Tenure Bid of Longtime Nemesis at Depaul U.,” <i>The Chronicle of Higher Education</i>, April 5, 2007, <a href="https://www.chronicle.com/article/harvard-law-professor-works-to-disrupt-tenure-bid-of-longtime-nemesis-at-depaul-u/">https://www.chronicle.com/article/harvard-law-professor-works-to-disrupt-tenure-bid-of-longtime-nemesis-at-depaul-u/</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.16" class="footnum" href="#fnr.16" role="doc-backlink">16</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Abraham, <i>Out of Bounds: Academic Freedom and the Question of Palestine</i>, 86.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.17" class="footnum" href="#fnr.17" role="doc-backlink">17</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Richard Forer, <i>Breakthrough: Transforming Fear into Compassion: A New Perspective on the Israel-Palestine Conflict</i>, 2010.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.18" class="footnum" href="#fnr.18" role="doc-backlink">18</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Michael Eisen, “I Have Been Informed That I Am Being Replaced as the Editor in Chief of @Elife for Retweeting a @Theonion Piece That Calls out Indifference to the Lives of Palestinian Civilians.,” October 2023, <a href="https://twitter.com/dasaptaerwin/status/465577518565580801">https://twitter.com/dasaptaerwin/status/465577518565580801</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.19" class="footnum" href="#fnr.19" role="doc-backlink">19</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Zachary Small, “Artforum Fires Top Editor after Its Open Letter on Israel-Hamas War,” <i>The New York Times</i>, October 2023, <a href="https://www.nytimes.com/2023/10/26/arts/artforum-editor-fired-david-velasco-palestine-gaza.html">https://www.nytimes.com/2023/10/26/arts/artforum-editor-fired-david-velasco-palestine-gaza.html</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.20" class="footnum" href="#fnr.20" role="doc-backlink">20</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">BBC Stuff, “Andy Mcdonald: Labour Suspends Mp after Speech at pro-Palestinian Rally,” <i>The British Broadcasting Corporation (Bbc)</i>, October 2023, <a href="https://www.bbc.com/news/uk-politics-67268154">https://www.bbc.com/news/uk-politics-67268154</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.21" class="footnum" href="#fnr.21" role="doc-backlink">21</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Columbia News Editorial, “Statement from Gerald Rosberg, Chair of the Special Committee on Campus Safety,” <i>Columbia News</i> (Columbia University in the City of New York, November 2023), <a href="https://news.columbia.edu/news/statement-gerald-rosberg-chair-special-committee-campus-safety">https://news.columbia.edu/news/statement-gerald-rosberg-chair-special-committee-campus-safety</a>.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2023-10-30 Mon 22:40. Last build date: 2025-10-18 Sat 17:11.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

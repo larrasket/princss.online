@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes about the pornography industry</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Notes about the pornography industry</h1>
+</header><div class="BACKLINKS" id="orgcb38b80">
+<p>
+This section was referenced in <a href="../p/commodity.html#4fb240m099k0">The Age of Commodity</a> and <a href="../sh/2024.html#ffc2i8a0ahk0">Jean Baudrillard theory on Adult Content</a>.
+</p>
+
+</div>
+<div id="outline-container-org9bcb67b" class="outline-2">
+<h2 id="org9bcb67b"><span class="timestamp-wrapper"><span class="timestamp">[2025-12-11 Thu 19:53]</span></span> Update</h2>
+<div class="outline-text-2" id="text-org9bcb67b">
+<p>
+I must note that this post is a draft, incomplete, and not even self-reviewed.
+</p>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2023-10-16 Mon 12:15]</span></span> <i>Update</i>: I much concentrated in few resources for
+writing this post, most of them were authored by feminists whose view on
+pornography is centered upon Women&rsquo;s Liberation/Oppression Theory <b>only</b>.
+Although this view is not present in the post, it&rsquo;s important to alert that all
+mentioned about acts against women is applicable to men too, even if it was in
+narrower domains.
+</p>
+
+<p>
+I have begun to yearn for the days when pornography held a less normalized
+stance in society, and when people would jest about others who engaged with it.
+Meanings are lost in a post-modernist area of mindsets, it&rsquo;s much harder to
+explain to people how such a thing is not normal and very malicious. In this
+article I&rsquo;m going to discuss my views on how both consumption and industry of
+pornography are dangerous for individuals.
+</p>
+
+<div class="PREVIEW" id="orgd945179">
+<p>
+This page contains my views about both the consumption and industry of
+pornographic content. along with other related sexual activies.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org0065d00" class="outline-2">
+<h2 id="org0065d00">Consumption</h2>
+<div class="outline-text-2" id="text-org0065d00">
+<div class="epigraph"><blockquote>
+<p>
+Men who read it [beauty pornography] don&rsquo;t do so because they want women who
+look like that. The attraction of what they are holding is that it is not a
+woman, but a two-dimensional woman-shaped blank. The appeal of the material is
+not the fantasy that the model will come to life; it is precisely that she will
+not, ever. Her coming to life would ruin the vision. It is not about life.
+</p>
+
+<p>
+― Naomi Wolf
+</p>
+
+</blockquote></div>
+
+<p>
+From The Beauty Myth<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">N. Wolf, <i>The Beauty Myth</i> (Chatto &#38; Windus, 1990), <a href="https://books.google.com.eg/books?id=D0naAAAAMAAJ">https://books.google.com.eg/books?id=D0naAAAAMAAJ</a>.</span>
+</p>
+
+<p>
+In this section I&rsquo;m going to discuss the effect that  pornographic content holds
+on its consumers. <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+Unless specified, I&rsquo;m talking about heterosexual porn only.
+</span>
+</p>
+</div>
+<div id="outline-container-7y88co21swj0" class="outline-3">
+<h3 id="7y88co21swj0">Porn as a media platform for sexual violation</h3>
+<div class="outline-text-3" id="text-org355f7b8">
+<div class="tag" id="orgcb78fd3">
+<p>
+This section was labeled under, or is related to <a href="../h/propaganda.html#9kk956p02wj0">Propaganda</a>
+</p>
+
+</div>
+
+<p>
+It&rsquo;s a known claim by porn propagandists that &ldquo;since rapists are likely to use
+adult content to relieve themselves because it&rsquo;s easier than raping someone&rdquo; as
+seen <a href="https://youtu.be/9BcX4evzDjI?t=10">here</a>.
+</p>
+
+<p>
+However, the vast majority of porn content is correlated with things like the
+degradation of women. If you ask someone to categorize a film for you as
+pornographic or erotic, their categorization will be largely based on the level of
+degradation that is being applied to women; on the other hand, erotica has more
+of a depiction of a real relationship. As described by Ikram Hawramani:<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">Ikram Hawramani, “The Philosophy of Pornography and Masturbation,” <i>Hawramanicom</i>, April 2019, <a href="https://hawramani.com/the-philosophy-of-pornography-and-masturbation/">https://hawramani.com/the-philosophy-of-pornography-and-masturbation/</a>.</span>
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+Pornography equalizes all humans into a new world order of bodies. One body can
+be as good as another for satisfying one’s needs. But love and romance require
+treating a person as if they are infinitely worthy and irreplaceable. The
+“morality” that pornography teaches is entirely opposed to the morality of love.
+The two cannot coexist.
+</p>
+
+</blockquote></div>
+
+<p>
+This is generally related to a primitive untamed instinct in many humans that
+relates sex to will and domination over women, some researchers suggested that
+it is related to the evolutionary history of men and how rape was the thing
+until romantic relationships emerged, in which some types of violence is
+employed.<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">Patrick Lussier and Jesse Cale, “Understanding the Origins and the Development of Rape and Sexual Aggression against Women: Four Generations of Research and Theorizing,” <i>Aggression and Violent Behavior</i> 31 (2016): 66–81, <a href="https://doi.org/https://doi.org/10.1016/j.avb.2016.07.008">https://doi.org/https://doi.org/10.1016/j.avb.2016.07.008</a>.</span> Such a norm is so common that made
+researchers define it as a normal act which is &ldquo;natural&rdquo;.<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">Clellan S. Ford and Frank A. Beach, <i>Patterns of Sexual Behavior</i> (Harper &#38;amp; Row, 1981).</span> Personally I totally dislike any kind of eroticization
+of power through sexual intercourse, I argue that pornography helped much
+establishing this sickness.
+</p>
+
+<p>
+Porn is a media for sex. What is media? It is the system that is &ldquo;to inculcate
+individuals with the values, beliefs, and codes of behavior that will integrate
+them into the institutional structures of the larger society&rdquo;.<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">Noam Chomsky and Edward S. Herman, “Perface,” in <i>Manufacturing Consent: The Political Economy of the Mass Media</i> (Bodley Head, 2008), <a href="https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67">https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67</a>.</span> What is represented in whatever collective consent
+of pornography, is the how individuals are expected to act from. This is to say,
+porn is very related to common memes of domination. Other norms are being
+affected as well, such as the designation of &ldquo;stepsister, stepfather&rdquo;, or any
+other step-first family relative, it is being linked to porn films, since it&rsquo;s a
+common standard in the industry to use such prefixes to  bypass the legal
+limitation on incest content.
+</p>
+
+<p>
+Studies found that typical pornographic content introduces women mostly depicted in
+subordinate, submissive and forced position,<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">Brosius Hans‐Bernd, James B. Weaver III, and Joachim F. Staab, “Exploring the Social and Sexual ‘Reality’ of Contemporary Pornography,” <i>The Journal of Sex Research</i> 30, no. 2 (1993): 161–70, <a href="https://doi.org/10.1080/00224499309551697">https://doi.org/10.1080/00224499309551697</a>.</span>,<label for="8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="8" class="margin-toggle"/><span class="sidenote">Gail Dines, Bob Jensen, and Ann Russo, <i>Pornography: The Production and Consumption of Inequality</i> (Routledge, 2013).</span>,<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote">Meagan Tyler, ““Now, That’s Pornography!’: Violence and Domination in Adult Video News,” in <i>Everyday Pornography</i> (Routledge, 2010), 62–74.</span> such positions are known to
+be animalistic and were common in brothels where consumers are never into the
+personhood of whom they are having the intercourse with, since they are interchangeable
+objects of sex. Porn producers do not usually try to hide such things, a porn
+director talked once of the animalistic nature of relationship that is embedded
+in porn content as it was like &ldquo;a dog marking its territory&rdquo;<label for="10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="10" class="margin-toggle"/><span class="sidenote">Chyng Sun and Miguel Picker, <i>The Price of Pleasure: Pornography, Sexuality, and Relationships</i> (Northampton: Media Education Foundation, 2008).</span> and other shows the interest of violence
+acts:<label for="11" class="margin-toggle sidenote-number"></label><input type="checkbox" id="11" class="margin-toggle"/><span class="sidenote">Robert J. Stoller and I. S. Levine, <i>Coming attractions : the making of an x-rated video / robert j. stoller and i.s. levine</i>, Book (Yale University Press New Haven, 1993).</span>
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+“I’d like to really show what I believe the men want to see:
+violence against women … [but] the most violent we can get is the cum
+shot in the face. Men get off behind that, because they get even with the
+women they can’t have”
+</p>
+
+</blockquote></div>
+
+
+<p>
+The general pattern of the behavior of women in porn can be described as
+follows:<label for="12" class="margin-toggle sidenote-number"></label><input type="checkbox" id="12" class="margin-toggle"/><span class="sidenote">Dines, Jensen, and Russo, <i>Pornography: The Production and Consumption of Inequality</i>.</span>
+</p>
+
+<ul class="org-ul">
+<li>Women are generally sexually active creatures at any possible position, let it be public
+or private and let the woman be any human being that can be described as a
+female, including family member (see <a href="#inf">Intrafamilial rape</a>).</li>
+<li>Women who do not respond with the same amount of phantasy are actually
+responding but in their special way because they like to be forced into it.
+Some porn creators indicate that the actress would &ldquo;beg him to stop&rdquo;.</li>
+<li>Women are rarely coherent, which is to say they mostly exhibit whore-like
+behavior. No matter how much elevation and nobility a wman may
+show, she sums up whoring.</li>
+</ul>
+
+<p>
+Since porn consumption is being a common thing, such regularization is to be
+normalized by many males and females, in my opinion such ideology will never
+help maintaining a healthy relationship.
+</p>
+
+<p>
+Studies indicate that pornography is a factor in male attitude of aggression.<label for="13" class="margin-toggle sidenote-number"></label><input type="checkbox" id="13" class="margin-toggle"/><span class="sidenote">Neil M. Malamuth and Eileen V. Pitpitan, “The Effects of Pornography Are Moderated by Men’s Sexual Aggression Risk,” in <i>Pornography: Driving the Demand in International Sex Trafficking</i>, ed. David E. Guinn and Julie DiCaro (Los Angeles: Captive Daughters Media, 2007), 125–43.</span> In contemplating a typical porn site, observers
+find &ldquo;forceful sex with infliction of pain on the girl or woman is the norm.[..]
+she is penetrated any-which way – into her mouth, anus or vagina – sometimes
+simultaneously. Verbal abuse is showered on her by the man (or men) as they
+penetrate her. Subjugation and humiliation of girls and women are depicted
+repeatedly.&rdquo;.<label for="14" class="margin-toggle sidenote-number"></label><input type="checkbox" id="14" class="margin-toggle"/><span class="sidenote">Ruchira Gupta, “Pornography in India,” in <i>Big Porn Inc.: Exposing the Harms of the Global Pornography Industry</i>, ed. Melinda Tankard Reist and Abigail Bray (North Melbourne, Victoria: Spinifex Press, 2011), 239–48.</span>
+</p>
+</div>
+<div id="outline-container-inf" class="outline-4">
+<h4 id="inf">Intrafamilial rape</h4>
+<div class="outline-text-4" id="text-inf">
+<p>
+Studies highlighted that a significant amount of porn materials is dedicated to
+intrafamilial porn in which wife is presented as either sexual unattractive or
+is in the picture, she is always looking for being penetrated by her father.<label for="15" class="margin-toggle sidenote-number"></label><input type="checkbox" id="15" class="margin-toggle"/><span class="sidenote">Diana Russell and Natalie J. Purcell, “Exposure to Pornography as a Cause of Child Sexual Victimization,” in <i>Handbook of Children, Culture, and Violence</i>, ed. Nancy E. Dowd, Dorothy G. Singer, and Robin Fretwell Wils (London: Sage Publications, 2006).</span>
+</p>
+
+<p>
+Engaging in sexual activities with children undergoes a transformation with
+pornography from a sickness to a natural activity, which, as Gail Dines argues,
+was an achievement for pornography to have such a normalization.<label for="16" class="margin-toggle sidenote-number"></label><input type="checkbox" id="16" class="margin-toggle"/><span class="sidenote">Gail Dines, <i>Pornland: How Porn Has Hijacked Our Sexuality</i> (Boston: Beacon Press, 2010).</span>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-qw5hfo21swj0" class="outline-3">
+<h3 id="qw5hfo21swj0">Porn and sexual kinkiness</h3>
+<div class="outline-text-3" id="text-org0b594ed">
+<p>
+There is a reason why top porn content are usually kinky stuff, continuous
+consumption of porn and hence the objectification of women causes people to look
+for other kinds of domination (or humiliation) As explained, women are no more
+than mere objects for porn consumers and directors, the same goes for real animals.
+Jeffrey Moussaieff Masson puts it:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+Pornography involving animals satisfies both the urge to
+see women as animals, and to see animals as under the control of a
+dominating male. Some males wish to see both suffer. This is true even
+when there is a cover, for example pretending that the woman or the
+animal likes the suffering or in some sense deserves it.
+</p>
+
+</blockquote></div>
+
+<p>
+BDSM is an example of how that view reflects on real humans, following is a
+description of typical BDSM porn content by Margot Wieiss:<label for="17" class="margin-toggle sidenote-number"></label><input type="checkbox" id="17" class="margin-toggle"/><span class="sidenote">Donald L. Donham, “7. White Slavery,” in <i>The Erotics of History</i> (Berkeley: University of California Press, 2018), 65–77, <a href="https://doi.org/doi:10.1515/9780520968875-010">https://doi.org/doi:10.1515/9780520968875-010</a>.</span>
+</p>
+<div class="epigraph"><blockquote>
+<p>
+My copy of the monthly newsletter of a San Francisco SM organization
+included a scene report, a written description of a consensual BDSM play
+scene. The scene took place at a San Francisco dungeon in March 2004.
+It was an interrogation scene, involving a Colonel, a Captain, a General,
+and a spy. The spy was hooded, duct-taped to a chair, and slapped in the
+face. As she resisted, the spy was threatened with physical and sexual
+violence, stripped naked, cut with glass shards, vaginally penetrated with
+a condom-sheathed hammer, force-fed water, shocked with a cattle
+prod, and anally penetrated with a flashlight. The scene ended when the
+spy screamed out her safeword, the word that ends the scene: ‘Fucking
+Rumsfeld!’.
+</p>
+
+</blockquote></div>
+
+<p>
+Specifically speaking about BDSM, studies have shown that
+BDSM are interests for oppressed communities who have endured torment under
+dictatorial governments or have suffered under racist regimes, as well as the
+struggles faced by lesbians in fundamentalist and militarized environments.<label for="18" class="margin-toggle sidenote-number"></label><input type="checkbox" id="18" class="margin-toggle"/><span class="sidenote">Susan Hawthorne, “Ancient Hatred and Its Contemporary Manifestation: The Torture of Lesbians,” <i>Journal of Hate Studies</i>, January 2005, <a href="https://doi.org/10.33972/jhs.32">https://doi.org/10.33972/jhs.32</a>.</span>
+</p>
+
+<p>
+Modern studies have found that there is an association between men being sexually
+interested in consensual kinky practices and using pornography (pornography
+generally, not just violent pornography).<label for="19" class="margin-toggle sidenote-number"></label><input type="checkbox" id="19" class="margin-toggle"/><span class="sidenote">Alan McKee et al., “The Relationship between Consumption of Pornography and Consensual Sexual Practice: Results of a Mixed Method Systematic Review,” <i>The Canadian Journal of Human Sexuality</i> 30, no. 3 (2021): 387–96, <a href="https://doi.org/10.3138/cjhs.2021-0010">https://doi.org/10.3138/cjhs.2021-0010</a>.</span>
+</p>
+
+<p>
+The consumption of porn is also linked to other kind of kinkiness, like being
+more likely to engage in multipartner sex.<label for="20" class="margin-toggle sidenote-number"></label><input type="checkbox" id="20" class="margin-toggle"/><span class="sidenote">Emily Harkness, Barbara Mullan, and Alex Blaszczynski, “Association between Pornography Use and Sexual Risk Behaviors in Adult Consumers: A Systematic Review,” <i>Cyberpsychology, Behavior and Social Networking</i> 18 (2015), <a href="https://doi.org/10.1089/cyber.2014.0343">https://doi.org/10.1089/cyber.2014.0343</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgc30fd81" class="outline-3">
+<h3 id="orgc30fd81">Health</h3>
+<div class="outline-text-3" id="text-orgc30fd81">
+<p>
+Health should be one of the most important aspect for porn consumers, however,
+in our modern world people are less convinced by how it affect them badly;
+better inform them about smoking. Unlike smoking though, pornography has a very
+decent propaganda. I will try to list some of the proven effects of consuming
+pornographic content on one&rsquo;s health and productivity.
+</p>
+
+<ul class="org-ul">
+<li>Pornographic picture processing interferes with working memory performance.<label for="21" class="margin-toggle sidenote-number"></label><input type="checkbox" id="21" class="margin-toggle"/><span class="sidenote">Christian Laier, Frank P. Schulte, and Matthias Brand, “Pornographic Picture Processing Interferes with Working Memory Performance,” <i>The Journal of Sex Research</i> 50, no. 7 (2013): 642–52, <a href="https://doi.org/10.1080/00224499.2012.716873">https://doi.org/10.1080/00224499.2012.716873</a>.</span></li>
+</ul>
+
+<p>
+Generally porn is known to affect one&rsquo;s productivity, it desensitizes dopamine
+receptors and rewires your pathways to respond to porn more than other
+stimulus (like achieving your long-term goals and what actually matters).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org48f8f63" class="outline-2">
+<h2 id="org48f8f63">Industry</h2>
+<div class="outline-text-2" id="text-org48f8f63">
+<div class="epigraph"><blockquote>
+<p>
+Pornography is humiliation and degradation of women, it&rsquo;s disgraceful activity
+[..] women are degraded as vulgar sex objects, it&rsquo;s not what human beings are.
+</p>
+
+<p>
+&ldquo;But didn&rsquo;t porn performers are choose to do the job and get paid for it?&rdquo;
+</p>
+
+<p>
+The that we should be in favor of sweatshops and China or where women are locked
+into a factory and work 15 hours a day and then the factory burns down and they
+all die yeah they were paid and they consented [..] as to the fact that it&rsquo;s
+some people&rsquo;s erotica well you know that&rsquo;s their problem doesn&rsquo;t mean I have to
+contribute to it if they get enjoyment out of humiliation of women they have a
+problem.
+</p>
+
+
+<p>
+Suppose there&rsquo;s at a starving child in the slums and you say well I&rsquo;ll give you
+food if you&rsquo;ll let me abuse you well I suppose there have to be laws against
+child abuse fortunately but suppose somewhere to give your argument well you
+know after all a child starving otherwise so you&rsquo;re taking away his chance to
+get some food if you ban abuse and is that an argument the argument the answer
+to that is stop the conditions in which the child is starving and the same is
+true here eliminate the conditions in which women can&rsquo;t get decent jobs not
+permit abusive and destructive behavior.
+</p>
+
+<p>
+— Noam Chomsky
+</p>
+
+</blockquote></div>
+
+<p>
+From a YouTube interview.<label for="22" class="margin-toggle sidenote-number"></label><input type="checkbox" id="22" class="margin-toggle"/><span class="sidenote"><i>The Price of Pleasure - Noam Chomsky on Pornography</i> (YouTube, 2008), <a href="https://www.youtube.com/watch?v=SNlRoaFTHuE">https://www.youtube.com/watch?v=SNlRoaFTHuE</a>.</span>
+</p>
+</div>
+<div id="outline-container-anpcko21swj0" class="outline-3">
+<h3 id="anpcko21swj0">Porn as a new prostitution</h3>
+<div class="outline-text-3" id="text-org5a5c521">
+<p>
+Karl Marx stated that prostitution is only a particular expression of the
+general prostitution of the labor, Eveline Goibbe explained how “pornography is
+pictures of [that] prostitution”. Some porn consumers who don&rsquo;t like to have the
+moral guilt of it and other people whose benefits will shrink if pornography is
+declared legally to be a kind of prostitution will try hard to make unimaginable
+allegations that try to unlink porn from prostitution, however, everybody
+acknowledges the link.
+</p>
+
+<iframe width="100%" height="515" src="https://www.youtube.com/embed/JDscdmOwDNA?controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<p>
+One individual who has experienced prostitution firsthand went on to elaborate,
+stating that in their view saying &ldquo;pornography is prostitution that is legalized
+as long as someone gets to take pictures&rdquo;.<label for="23" class="margin-toggle sidenote-number"></label><input type="checkbox" id="23" class="margin-toggle"/><span class="sidenote">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 355.</span>
+</p>
+
+<p>
+There is a common area between the reasons that might make someone get into
+prostitution and porn industry as of poverty and extortion (sometimes porn
+workers are filmed secretly to blackmail them<label for="24" class="margin-toggle sidenote-number"></label><input type="checkbox" id="24" class="margin-toggle"/><span class="sidenote">Seiya Morita, “Pornography, Prostitution, and Women’s Human Rights in Japan,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 64–83.</span>).
+A porn worker states it :<label for="25" class="margin-toggle sidenote-number"></label><input type="checkbox" id="25" class="margin-toggle"/><span class="sidenote">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 352.</span> 
+</p>
+<div class="epigraph"><blockquote>
+<p>
+“The owner of the ‘nude photo agency’ offered me a place to live and a
+lot of other work if I did film. At that point in my life, I really didn’t have
+any other options”
+</p>
+
+</blockquote></div>
+
+<p>
+Studies have shown that there is a direct link between being abused as a kid and
+participating in sex industry,<label for="26" class="margin-toggle sidenote-number"></label><input type="checkbox" id="26" class="margin-toggle"/><span class="sidenote">Mimi H. Silbert and Ayala M. Pines, “Early Sexual Exploitation as an Influence in Prostitution,” <i>Social Work</i> 28, no. 4 (1983): 285–89, <a href="http://www.jstor.org/stable/23714392">http://www.jstor.org/stable/23714392</a>.</span>,<label for="27" class="margin-toggle sidenote-number"></label><input type="checkbox" id="27" class="margin-toggle"/><span class="sidenote">Susan M. Nadon, Catherine Koverola, and Eduard H. Schludermann, “Antecedents to Prostitution: Childhood Victimization,” <i>Journal of Interpersonal Violence</i> 13, no. 2 (1998): 206–21, <a href="https://doi.org/10.1177/088626098013002003">https://doi.org/10.1177/088626098013002003</a>.</span> ,<label for="28" class="margin-toggle sidenote-number"></label><input type="checkbox" id="28" class="margin-toggle"/><span class="sidenote">C S Widom and J B Kuhns, “Childhood Victimization and Subsequent Risk for Promiscuity, Prostitution, and Teenage Pregnancy: A Prospective Study.,” <i>American Journal of Public Health</i> 86, no. 11 (1996): 1607–12, <a href="https://doi.org/10.2105/AJPH.86.11.1607">https://doi.org/10.2105/AJPH.86.11.1607</a>.</span>  one can argue that
+the trauma makes it harder for the abused to fit in with community easily, so they do
+their best trying to make living which ends to be in sex industry if they were
+lucky enough to have selling bodies.
+</p>
+
+<p>
+In 2007, Peter Acworth, a British individual associated with explicit and
+extreme adult content, acquired a building in San Francisco worth 14 million
+dollars for his business. Acworth, though he identifies himself as a
+pornographer, denies any involvement in pimping. His work revolves around
+catering to fetishes and involves paying women to engage in scenarios that may
+include distressing situations such as being terrorized, confined in tight
+spaces, hogtied, subjected to physical violence, near-drowning experiences, and
+suspension from ceilings..<label for="29" class="margin-toggle sidenote-number"></label><input type="checkbox" id="29" class="margin-toggle"/><span class="sidenote">Jesse Mckinley, “A Neighbor Moves in with Ropes and Shackles, and Some Are Not so Pleased,” <i>The New York Times</i> (The New York Times, February 2007), <a href="https://www.nytimes.com/2007/02/12/us/12armory.html">https://www.nytimes.com/2007/02/12/us/12armory.html</a>.</span>
+</p>
+
+<p>
+Acworth offers porn actress some enticing pay, in 2007, he paid &gt; 1.4K USD for
+&ldquo;forced vaginal fingering.&rdquo;<label for="30" class="margin-toggle sidenote-number"></label><input type="checkbox" id="30" class="margin-toggle"/><span class="sidenote">Will Harper, “Kinky Town,” <i>San Francisco Weekly</i>, 2007, <a href="http://www.sfweekly.com/content/printVersion/459991/">http://www.sfweekly.com/content/printVersion/459991/</a>.</span> The experience is no much
+difference from known torture, as described be survivor<label for="31" class="margin-toggle sidenote-number"></label><input type="checkbox" id="31" class="margin-toggle"/><span class="sidenote">Martin Amis, “A Rough Trade,” <i>The Guardian</i>, 2001, <a href="http://www.guardian.co.uk/books/2001/mar/17/society.martinamis1">http://www.guardian.co.uk/books/2001/mar/17/society.martinamis1</a>.</span>
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+‘I got the shit kicked out of me,’ … ‘I was told before the video – and they
+said this very proudly, mind you – that in this line most of the girls start
+crying because they’re hurting so bad … I couldn’t breathe. I was being hit
+and choked. I was really upset, and they didn’t stop. They kept filming.
+You can hear me say, “Turn the fucking camera off,” and they kept going’
+</p>
+
+</blockquote></div>
+
+<p>
+Following are common areas between prostitution and pornography, shows that
+pornography is just as bad but actually worse.
+</p>
+
+<p>
+— Research indicates that women engaged in prostitution, whose clients or pimps
+  created pornography featuring them, experienced more pronounced symptoms of
+  post-traumatic stress disorder (PTSD) compared to women who did not have such
+  explicit content produced of them.<label for="32" class="margin-toggle sidenote-number"></label><input type="checkbox" id="32" class="margin-toggle"/><span class="sidenote">Melissa Farley, “Renting an Organ for 10 Minutes: What Tricks Tell Us About Prostitution, Pornography, and Trafficking,” in <i>Pornography: Driving the Demand for International Sex Trafficking</i>, ed. David E. Guinn and Julie DiCaro (Los Angeles: Captive Daughters Media, 2007), 146.</span> The connection between the production of
+  pornography within the context of prostitution and heightened PTSD symptoms
+  suggests that the experiences of being recorded and potentially exploited in
+  this manner can have a detrimental impact on the mental health and well-being
+  of those involved.
+</p>
+
+<p>
+— Sex workers are suffering for ever from pornography unlike prostitution, one
+  of them:<label for="33" class="margin-toggle sidenote-number"></label><input type="checkbox" id="33" class="margin-toggle"/><span class="sidenote">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 356.</span>
+</p>
+<div class="epigraph"><blockquote>
+<p>
+[P]ornography is much worse than prostitution because it affects me for the
+rest of my life. It’s not like I just … had sex with a john, collected my
+money, and went home … I’m still exploited all over the Internet ten years
+later. People recognize me. I’m harassed because of it. My kids are being
+harassed.
+</p>
+
+</blockquote></div>
+</div>
+</div>
+<div id="outline-container-org0150218" class="outline-3">
+<h3 id="org0150218"><span class="todo TODO">TODO</span> Porn as a capitalism lobbying machine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span>&#xa0;<span class="_later">@later</span></span></h3>
+<div class="outline-text-3" id="text-org0150218">
+<p>
+Porn is very profitable, The Global Online Adult Entertainment Market by
+ResearchAndMarkets.com estimates the global online adult entertainment market to
+be worth $97.05 billion in 2022 and is expected to grow at a CAGR of 11.3% from
+2022 to 2027.<label for="34" class="margin-toggle sidenote-number"></label><input type="checkbox" id="34" class="margin-toggle"/><span class="sidenote">ResearchAndMarkets.com, “The Global Online Adult Entertainment Market,” <i>Researchandmarkets.Com</i>, 2022, <a href="https://www.researchandmarkets.com/reports/5512037/global-online-adult-entertainment-market">https://www.researchandmarkets.com/reports/5512037/global-online-adult-entertainment-market</a>.</span>
+</p>
+
+<p>
+In August 1994, Dr. M. Buthelezi, the Minister of Home Affairs at that time,
+commissioned a Task Group to develop a new act that would replace the existing
+Publications Act of 1974. The new act&rsquo;s scope included addressing issues related
+to the production and distribution of pornography.<label for="35" class="margin-toggle sidenote-number"></label><input type="checkbox" id="35" class="margin-toggle"/><span class="sidenote">Kobus van Rooyen, “Drafting a New Film and Publication Bill for South Africa,” in <i>Between Speech and Silence. Hate Speech, Pornography and the New South Africa</i>, ed. Jane Duncan (Freedom of Expression Institute and Institute for Democracy in South Africa, 1996).</span>
+The Task Group&rsquo;s initial research involved international consultations, leading
+them to conclude that a mere amendment to the Act would not be sufficient to
+address the situation. Instead, they believed that the approach to handling
+pornographic material needed to shift from a focus on morality to considering
+potential harm.<label for="36" class="margin-toggle sidenote-number"></label><input type="checkbox" id="36" class="margin-toggle"/><span class="sidenote">ibid.</span>
+</p>
+
+<p>
+During this period of research, there was also a widely circulated national
+petition opposing the legalization of pornography. The petition, organized by
+Pat and Horace van Rensburg&rsquo;s organization STOP Pornography, amassed an
+impressive 250,000 signatures. Additionally, approximately 1800 submissions were
+presented during the Portfolio Committee Hearings, and an overwhelming 95% of
+these submissions urged the government not to legalize pornography (pers. comm.
+retired MP Horace van Rensburg). Despite these numerous appeals from the public,
+it appears that their concerns were not heeded by the authorities.
+</p>
+
+<p>
+Within a surprisingly short period of six weeks, the research was completed, and
+the new Act was drafted. Despite the involvement of internationally recognized
+anti-pornography feminists, sociologists, legal experts, and psychologists, as
+well as substantial input from a significant portion of the South African
+public, their findings and perspectives were entirely disregarded. Instead, the
+opinion of international patriarchal &rsquo;legal experts&rsquo; took precedence in shaping
+the new Act. This decision raised concerns about the exclusion of diverse
+viewpoints and the potential influence of gender-biased perspectives in the
+legislative process.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga543bda" class="outline-2">
+<h2 id="orga543bda">Masturbation</h2>
+<div class="outline-text-2" id="text-orga543bda">
+<div class="tag" id="org52c832c">
+<p>
+This section was labeled under, or is related to <a href="../t/ethics.html#v3b25op0r1k0">Philosophy of Ethics</a>
+</p>
+
+</div>
+<p>
+This is a little bit an off-topic, but I do not usually discuss sexual topics
+on this website, and pornography is usually associated with masturbation, so I
+will put my views here too.
+</p>
+
+<p>
+While I have other reasons for which I abandon masturbation, I will try to discuss
+a philosophy that was (and still is) very convincing for me; <a href="../t/ethics.html#0ay33tp0r1k0">deontological ethics</a>
+and <a href="../t/ethics.html#yix9gup0r1k0">consequentialism</a>:
+</p>
+<div class="epigraph"><blockquote>
+<p>
+That such an unnatural use (and so misuse) of one&rsquo;s sexual attributes is a
+violation of one&rsquo;s duty to himself and is certainly in the highest degree
+opposed to morality strikes everyone upon his thinking of it. Furthermore, the
+thought of it is so revolting that even calling such a vice by its proper name
+is considered a kind of immorality.
+</p>
+
+</blockquote></div>
+
+<p>
+— Immanuel Kant.<label for="37" class="margin-toggle sidenote-number"></label><input type="checkbox" id="37" class="margin-toggle"/><span class="sidenote">I. Kant, L. Denis, and M. Gregor, <i>Kant: The Metaphysics of Morals</i>, Cambridge Texts in the History of Philosophy (Cambridge University Press, 2017).</span>
+</p>
+
+<p>
+Deontology is an ethical theory that maintains that the morality of an action is
+determined by its adherence to certain moral principles or rules. In this
+context, the act of masturbation may be considered immoral if it violates a
+fundamental moral rule set forth by the deontological framework. Some
+deontological perspectives, such as certain religious beliefs, may view
+masturbation as immoral because it violates specific commandments or divine
+decrees.
+</p>
+
+<p>
+The principle of autonomy is crucial in deontological ethics, as it upholds the
+individual&rsquo;s right to self-determination and rational decision-making. However,
+critics of masturbation within a deontological framework may argue that
+self-gratification conflicts with the broader principles of self-control,
+moderation, and respect for the human body as a vessel for spiritual and
+procreative purposes. As such, masturbation is forbidden under deontology
+due to its perceived violation of these principles.
+</p>
+
+<p>
+Consequentialism, on the other hand, evaluates the morality of actions based on
+their consequences. The central idea is to promote the greatest overall good or
+minimize harm for the greatest number of people. Under this ethical framework,
+the morality of masturbation would depend on its impact on individual well-being
+and societal welfare.
+</p>
+
+<p>
+Consequentialists standpoint argue that excessive indulgence in solitary
+pleasure could have detrimental effects on personal well-being and social
+interactions. They assert that masturbation lead to diminished motivation,
+decreased sexual satisfaction with a partner, or even social withdrawal, which
+can negatively impact relationships and social cohesion.
+</p>
+
+
+<p>
+In deontological ethics, it&rsquo;s known for a fact that happiness &ldquo;is only good on
+the condition that the happiness is deserved&rdquo; which is basically not the case
+with these things.
+</p>
+
+<p>
+In a consequentialist view, how does masturbation affect one? This is an
+important question that we should ask to determine how “good” would it be to us
+(if deontology were to be thrown away). I personally have the belief that it
+only worked as a damper, which definitely has bad effects on one’s mettle, I
+have no scientific citation for this claim, but it is my personal experience,
+and I bet you have a similar one. Actually, this can be observed in animal
+behavior if you have seen a cat before and after being castrated. Sexual
+motivation has always been a major factor in our inducements throughout history,
+some psychologists (psychoanalysis  specifically) argue that it has always been
+the main motivation, and the instant dissimulation of such a motivation
+throughout masturbation will definitely have a bad effect in one’s activity.
+</p>
+
+
+
+<p>
+Amin,
+</p>
+
+<p>
+Thanks for reaching out and for the generous offer. I’d love to take over
+lr0.org. Please let me know the steps you prefer for the transfer and which
+details you need from my side.
+</p>
+
+<p>
+That’s a lovely coincidence that you saw my post. I recognized your name when
+your email came in though, to be honest, the first thing came to mind was the
+interview with Prot rather than EmacsConf.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">N. Wolf, <i>The Beauty Myth</i> (Chatto &#38; Windus, 1990), <a href="https://books.google.com.eg/books?id=D0naAAAAMAAJ">https://books.google.com.eg/books?id=D0naAAAAMAAJ</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Unless specified, I&rsquo;m talking about heterosexual porn only.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Ikram Hawramani, “The Philosophy of Pornography and Masturbation,” <i>Hawramanicom</i>, April 2019, <a href="https://hawramani.com/the-philosophy-of-pornography-and-masturbation/">https://hawramani.com/the-philosophy-of-pornography-and-masturbation/</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Patrick Lussier and Jesse Cale, “Understanding the Origins and the Development of Rape and Sexual Aggression against Women: Four Generations of Research and Theorizing,” <i>Aggression and Violent Behavior</i> 31 (2016): 66–81, <a href="https://doi.org/https://doi.org/10.1016/j.avb.2016.07.008">https://doi.org/https://doi.org/10.1016/j.avb.2016.07.008</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Clellan S. Ford and Frank A. Beach, <i>Patterns of Sexual Behavior</i> (Harper &#38;amp; Row, 1981).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Noam Chomsky and Edward S. Herman, “Perface,” in <i>Manufacturing Consent: The Political Economy of the Mass Media</i> (Bodley Head, 2008), <a href="https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67">https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Brosius Hans‐Bernd, James B. Weaver III, and Joachim F. Staab, “Exploring the Social and Sexual ‘Reality’ of Contemporary Pornography,” <i>The Journal of Sex Research</i> 30, no. 2 (1993): 161–70, <a href="https://doi.org/10.1080/00224499309551697">https://doi.org/10.1080/00224499309551697</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Gail Dines, Bob Jensen, and Ann Russo, <i>Pornography: The Production and Consumption of Inequality</i> (Routledge, 2013).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Meagan Tyler, ““Now, That’s Pornography!’: Violence and Domination in Adult Video News,” in <i>Everyday Pornography</i> (Routledge, 2010), 62–74.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10" role="doc-backlink">10</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Chyng Sun and Miguel Picker, <i>The Price of Pleasure: Pornography, Sexuality, and Relationships</i> (Northampton: Media Education Foundation, 2008).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11" role="doc-backlink">11</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Robert J. Stoller and I. S. Levine, <i>Coming attractions : the making of an x-rated video / robert j. stoller and i.s. levine</i>, Book (Yale University Press New Haven, 1993).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12" role="doc-backlink">12</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Dines, Jensen, and Russo, <i>Pornography: The Production and Consumption of Inequality</i>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.13" class="footnum" href="#fnr.13" role="doc-backlink">13</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Neil M. Malamuth and Eileen V. Pitpitan, “The Effects of Pornography Are Moderated by Men’s Sexual Aggression Risk,” in <i>Pornography: Driving the Demand in International Sex Trafficking</i>, ed. David E. Guinn and Julie DiCaro (Los Angeles: Captive Daughters Media, 2007), 125–43.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14" role="doc-backlink">14</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Ruchira Gupta, “Pornography in India,” in <i>Big Porn Inc.: Exposing the Harms of the Global Pornography Industry</i>, ed. Melinda Tankard Reist and Abigail Bray (North Melbourne, Victoria: Spinifex Press, 2011), 239–48.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.15" class="footnum" href="#fnr.15" role="doc-backlink">15</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Diana Russell and Natalie J. Purcell, “Exposure to Pornography as a Cause of Child Sexual Victimization,” in <i>Handbook of Children, Culture, and Violence</i>, ed. Nancy E. Dowd, Dorothy G. Singer, and Robin Fretwell Wils (London: Sage Publications, 2006).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.16" class="footnum" href="#fnr.16" role="doc-backlink">16</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Gail Dines, <i>Pornland: How Porn Has Hijacked Our Sexuality</i> (Boston: Beacon Press, 2010).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.17" class="footnum" href="#fnr.17" role="doc-backlink">17</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Donald L. Donham, “7. White Slavery,” in <i>The Erotics of History</i> (Berkeley: University of California Press, 2018), 65–77, <a href="https://doi.org/doi:10.1515/9780520968875-010">https://doi.org/doi:10.1515/9780520968875-010</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.18" class="footnum" href="#fnr.18" role="doc-backlink">18</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Susan Hawthorne, “Ancient Hatred and Its Contemporary Manifestation: The Torture of Lesbians,” <i>Journal of Hate Studies</i>, January 2005, <a href="https://doi.org/10.33972/jhs.32">https://doi.org/10.33972/jhs.32</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.19" class="footnum" href="#fnr.19" role="doc-backlink">19</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Alan McKee et al., “The Relationship between Consumption of Pornography and Consensual Sexual Practice: Results of a Mixed Method Systematic Review,” <i>The Canadian Journal of Human Sexuality</i> 30, no. 3 (2021): 387–96, <a href="https://doi.org/10.3138/cjhs.2021-0010">https://doi.org/10.3138/cjhs.2021-0010</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.20" class="footnum" href="#fnr.20" role="doc-backlink">20</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Emily Harkness, Barbara Mullan, and Alex Blaszczynski, “Association between Pornography Use and Sexual Risk Behaviors in Adult Consumers: A Systematic Review,” <i>Cyberpsychology, Behavior and Social Networking</i> 18 (2015), <a href="https://doi.org/10.1089/cyber.2014.0343">https://doi.org/10.1089/cyber.2014.0343</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.21" class="footnum" href="#fnr.21" role="doc-backlink">21</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Christian Laier, Frank P. Schulte, and Matthias Brand, “Pornographic Picture Processing Interferes with Working Memory Performance,” <i>The Journal of Sex Research</i> 50, no. 7 (2013): 642–52, <a href="https://doi.org/10.1080/00224499.2012.716873">https://doi.org/10.1080/00224499.2012.716873</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.22" class="footnum" href="#fnr.22" role="doc-backlink">22</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara"><i>The Price of Pleasure - Noam Chomsky on Pornography</i> (YouTube, 2008), <a href="https://www.youtube.com/watch?v=SNlRoaFTHuE">https://www.youtube.com/watch?v=SNlRoaFTHuE</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.23" class="footnum" href="#fnr.23" role="doc-backlink">23</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 355.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.24" class="footnum" href="#fnr.24" role="doc-backlink">24</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Seiya Morita, “Pornography, Prostitution, and Women’s Human Rights in Japan,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 64–83.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.25" class="footnum" href="#fnr.25" role="doc-backlink">25</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 352.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.26" class="footnum" href="#fnr.26" role="doc-backlink">26</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Mimi H. Silbert and Ayala M. Pines, “Early Sexual Exploitation as an Influence in Prostitution,” <i>Social Work</i> 28, no. 4 (1983): 285–89, <a href="http://www.jstor.org/stable/23714392">http://www.jstor.org/stable/23714392</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.27" class="footnum" href="#fnr.27" role="doc-backlink">27</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Susan M. Nadon, Catherine Koverola, and Eduard H. Schludermann, “Antecedents to Prostitution: Childhood Victimization,” <i>Journal of Interpersonal Violence</i> 13, no. 2 (1998): 206–21, <a href="https://doi.org/10.1177/088626098013002003">https://doi.org/10.1177/088626098013002003</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.28" class="footnum" href="#fnr.28" role="doc-backlink">28</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">C S Widom and J B Kuhns, “Childhood Victimization and Subsequent Risk for Promiscuity, Prostitution, and Teenage Pregnancy: A Prospective Study.,” <i>American Journal of Public Health</i> 86, no. 11 (1996): 1607–12, <a href="https://doi.org/10.2105/AJPH.86.11.1607">https://doi.org/10.2105/AJPH.86.11.1607</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.29" class="footnum" href="#fnr.29" role="doc-backlink">29</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Jesse Mckinley, “A Neighbor Moves in with Ropes and Shackles, and Some Are Not so Pleased,” <i>The New York Times</i> (The New York Times, February 2007), <a href="https://www.nytimes.com/2007/02/12/us/12armory.html">https://www.nytimes.com/2007/02/12/us/12armory.html</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.30" class="footnum" href="#fnr.30" role="doc-backlink">30</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Will Harper, “Kinky Town,” <i>San Francisco Weekly</i>, 2007, <a href="http://www.sfweekly.com/content/printVersion/459991/">http://www.sfweekly.com/content/printVersion/459991/</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.31" class="footnum" href="#fnr.31" role="doc-backlink">31</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Martin Amis, “A Rough Trade,” <i>The Guardian</i>, 2001, <a href="http://www.guardian.co.uk/books/2001/mar/17/society.martinamis1">http://www.guardian.co.uk/books/2001/mar/17/society.martinamis1</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.32" class="footnum" href="#fnr.32" role="doc-backlink">32</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Melissa Farley, “Renting an Organ for 10 Minutes: What Tricks Tell Us About Prostitution, Pornography, and Trafficking,” in <i>Pornography: Driving the Demand for International Sex Trafficking</i>, ed. David E. Guinn and Julie DiCaro (Los Angeles: Captive Daughters Media, 2007), 146.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.33" class="footnum" href="#fnr.33" role="doc-backlink">33</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Seiya Morita, “Who Are Women in Pornography,” in <i>Not for Sale: Feminists Resisting Prostitution and Pornography</i> (Independent Publishers Group, 2004), 356.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.34" class="footnum" href="#fnr.34" role="doc-backlink">34</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">ResearchAndMarkets.com, “The Global Online Adult Entertainment Market,” <i>Researchandmarkets.Com</i>, 2022, <a href="https://www.researchandmarkets.com/reports/5512037/global-online-adult-entertainment-market">https://www.researchandmarkets.com/reports/5512037/global-online-adult-entertainment-market</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.35" class="footnum" href="#fnr.35" role="doc-backlink">35</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Kobus van Rooyen, “Drafting a New Film and Publication Bill for South Africa,” in <i>Between Speech and Silence. Hate Speech, Pornography and the New South Africa</i>, ed. Jane Duncan (Freedom of Expression Institute and Institute for Democracy in South Africa, 1996).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.36" class="footnum" href="#fnr.36" role="doc-backlink">36</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">ibid.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.37" class="footnum" href="#fnr.37" role="doc-backlink">37</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">I. Kant, L. Denis, and M. Gregor, <i>Kant: The Metaphysics of Morals</i>, Cambridge Texts in the History of Philosophy (Cambridge University Press, 2017).</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2023-07-21 Fri 21:05. Last build date: 2025-12-12 Fri 06:55.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

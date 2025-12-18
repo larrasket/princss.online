@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anthology and Treasury</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Anthology and Treasury</h1>
+</header><div class="BACKLINKS" id="org7f640bf">
+<p>
+This section was referenced in <a href="p/witbd.html#x0egwn81crk0">What is it to be done?</a>.
+</p>
+
+</div>
+
+<head>
+<style>
+.timestamp-wrapper {display: none !important;}
+
+p {
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+}
+
+</style>
+</head>
+
+<p>
+Here I collect my highlights from readings. More details of how this works can be found <a href="whata.html">here</a>.
+</p>
+<hr>
+<div id="outline-container-org63cf6ea" class="outline-2">
+<h2 id="org63cf6ea">Content</h2>
+<div class="outline-text-2" id="text-org63cf6ea">
+<p>
+وليس يفرح العاقل بالمال الكثير، ولا يحزنه قلته. ولكن ماله عقله وما قدمُ من صالح عمله.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_21">ibn Al-Muqaffa’a, 1997</a>), no. 131. Appeared: 2025-12-12 (16:31)
+</p>
+<hr>
+<p>
+ولا تقل كما يقول السفهاء أُخبر بما سمعتُ؛ فإن الكذب أكثر ما أنت سامع، وإن السفهاء أكثر من هو قائل، وإنك إن صرت للأحاديث واعيًا وحاملًا، كان ما تعي وتحمل عن العامة أكثرها مما يخترع المخترع بأضعاف.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 34. Appeared: 2025-12-03 (22:35)
+</p>
+<hr>
+<p>
+إن استطعت أن تنزل نفسك دون غايتك في كل مجلس ومقام ومقال ورأي وفعل فافعل، فإنَّ رفْع الناس إياك فوق المنزلة التي تحطُّ إليها نفسك، وتقريبهم إياك في المجلس الذي تباعدت عنه، وتعظيمهم من أمرك ما لم تعظم، وتزيينهم من كلامك ورأيك ما لم تزين؛ هو الجمال.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 32. Appeared: 2025-12-03 (22:24)
+</p>
+<hr>
+<p>
+لِيكُن مما تصرف به الأذى والعذاب عن نفسك ألا تكون حسودًا؛ فإن الحسد خلق لئيم، ومن لؤمه أنه يؤكل بالأدنى من الأقارب والأكفاء، فليكن ما تُقابِل به الحسد أن تعلم أن خير ما تكون حين تكون مع من هو خير منك، وأن غُنمًا لك أن يكون عشيرُك وخليطُك أفضل منك في القوة، فيدفع عنك بقوته، وأفضل منك في الجاه فتصيب حاجتك بجاهه، وأفضل منك في الدين فتزداد صلاحًا بصلاحه. ليكن ما تنظر فيه من أمر عدوك وحاسدك أن تعلم أنه لا ينفعك أن تخبر عدوك أنك له عدو، فتنذره نفسك، وتؤذنه بحربك قبل الإعداد والفرصة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 30. Appeared: 2025-12-03 (22:13)
+</p>
+<hr>
+<p>
+اﻋﻠﻢ أن إﺧﻮان اﻟﺼﺪق ﻫﻢ ﺧير ﻣﻜﺎﺳﺐ اﻟﺪﻧﻴﺎ، زﻳﻨﺔٌ ﰲ اﻟﺮﺧﺎء، وﻋﺪةٌ ﰲ اﻟﺸﺪة، وﻣﻌﻮﻧﺔٌ
+ﻋﲆ المعاش والمعاد، ﻓﻼ ﺗﻔﺮﻃﻦ ﰲ اﻛﺘﺴﺎﺑﻬﻢ واﺑﺘﻐﺎء اﻟﻮﺻﻼت واﻷﺳﺒﺎب إﻟﻴﻬﻢ. اﻋﻠﻢ أﻧﻚ
+واﺟﺪٌ رﻏﺒﺘﻚ ﻣﻦ اﻹﺧﺎء ﻋﻨﺪ أﻗﻮام ﻗﺪ ﺣﺎﻟﺖ ﺑﻴﻨﻚ وﺑﻴﻨﻬﻢ ﺑﻌﺾ اﻷﺑﻬﺔ اﻟﺘﻲ ﻗﺪ ﺗﻌﱰي أﻫﻞ
+المروءات ﻓﺘﺤﺠﺰ ﻣﻨﻬﻢ ﻛﺜيرًا ﻣﻤﻦ ﻳﺮﻏﺐ ﰲ أﻣﺜﺎﻟﻬﻢ، ﻓﺈذا رأﻳﺖ أﺣﺪًا ﻣﻦ أوﻟﺌﻚ ﻗﺪ ﻋﺜﺮ ﺑﻪ
+اﻟﺰﻣﺎن ﻓﺄﻗﻠﻪ.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 20. Appeared: 2025-12-03 (20:59)
+</p>
+<hr>
+<p>
+قال القيرواني عن الشطرنج: الشطرنج حرب سجال، وخيل عجال، وفرسان ورجال، قريبة
+الآجال، سريعة عودة المحال، تستغرق الفكرة، وتسلب اللبّ استلاب السكرة. وتترك اللسان
+وما أراد، أساء أو أجاد، إلا أنها تدني مجلس الصعلوك من أشرف الملوك.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_1">Al-Bahai, 1990</a>), no. 234. Appeared: 2025-12-02 (17:21)
+</p>
+<hr>
+<p>
+In the matter of moral law we witness a strange phenomenon to which men pay too little attention. If I speak to an unlearned man about geology, astronomy, history, natural philosophy, or mathematics, he receives the information as quite new to him, and never says to me, “There is nothing new in what you tell me; every one knows it, and I have known it for a long time.” But tell a man one of the highest moral truths in the simplest manner, in such a way as it has never been before formulated, and every ordinary man, particularly one who does not take any interest in moral questions, and, above all, one who dislikes them, is sure to say, “Who does not know that? It has been always known and expressed.” And he really believes this. Only those who can appreciate moral truths know how to value their elucidation and simplification by a long and laborious process, or can prize the transition from a proposition or desire at first vaguely understood to a firm and determined expression calling for a corresponding change of conduct.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_17">Tolstoy, 2022</a>), no. 72. Appeared: 2025-11-15 (23:04)
+</p>
+<hr>
+<p>
+وجميع أحداث الدهر وأمور الناس لا تأثير لها في رجل بنيته كمنل بنيتي، وما من تأثير
+تحدثه لي الهموم المستمرة إلا إذا تجددت انطباعاتها لحظة بعد لحظة. لأن الفترات
+التي تنقضي ما بين همّ وهمّ، مهما كانت قصيرة، تكفي لأن ترجعني إلى نفسي. أنا هو
+الذي يرضى الناس ما داموا قادرين على أن يؤثروا في حواسي. فإذا انقضت هذه الفترة،
+أصبحت من جديد ذلك الذي أرادت الطبيعة أن أكون.  هذه هي، مهما أمكنهم أن يعملوا،
+حالتي الأكثر ثباتاً والحالة التي بها أتنوق، رغم أنف القدر، السعادة التي أشعر بأني
+قد خلقت لها. لقد وصفت هذه الحال في ماجس من هواجي، فهي تلازمني جدّ الملازمة، حتى
+إني لا أغني إلا أن تطول مدتها ولا أخشى إلا أن أراها مكدّرة مكرّرة. إن الضرر الذي
+أنزله الناس بي لا يمسني بوجه من الوجوه. فإن خشيتي مما يمكنهم أن ينزلوه بي ضرر هي
+وحدها جديرة بأن تملأ نفسي اضطراباً. ولقد أيقنت بأنهم أصبحوا خلواً من مأخذ جديد
+يتيح لهم أن يؤثروا في بعاطفة مستمرة، ولذلك أستهزئ بجميع دسائسهم، وأتمتع بنفسي
+رغم أنوفهم.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 156. Appeared: 2025-09-02 (16:51)
+</p>
+<hr>
+<p>
+ويبدو أن النباتات قد زرعت بسخاء على الأرض، كما نثرت الكواكب على وجه السماء،
+لتدعو الإنسان، بجاذب من اللذة والفضول، إلى دراسة الطبيعة، ولكن الكواكب نثرت
+بعيداً عنا، فلا بدّ من معارف تمهيدية، ومن أدوات وآلات، ومن مراصد طويلة جدّ الطول
+لنصل إليها ونقرّبها من متناولنا. وأما النباتات فهي بطبيعتها في متناولنا، ثبتت تحت
+أقدامنا بل في أيدينا، وإذا كان صغر أجزائها الجوهرية يُخفيها، أحياناً عن الأنظار،
+فإن الأدوات التي تكبرها وتبرزها للعيان هي أسهل جداً في الاستعمال من أدوات علم
+الفلك.  وعلم النبات هو دراسة عاطل من العمل كسول منفرد بنفسه، فلا حاجة لمحراث هذا
+العلم إلا إلى حدّ وعدسيّة مكبّرة، فهو يتنقّل، حراً هائماً، من غرض إلى آخر ويستعرض كل
+زهرة وفضول، ولا يكاد يبين قوانين تكوينها حتى يتذوّق، في مراقبتها، لذة من دون مشقة
+تعادل تلك اللذة التي يستمتعها بعد تعب. وفي هذه الهواية فتنة لا يشعر بها المرء
+إلا في تمام سكون الشهوات ولكنها تكفي وحدها لجعل الحياة سعيدة حلوة، ولكن ما إن
+يمتزج بهذه الهواية داعٍ مصلحة أو كبرياء، سواء أكان ذلك لمال، وظائف أم لتأليف كتاب
+أم بغية التعلّم لتثقيف الناس أم ليصبح جامع الحشائش مؤلفاً أو أستاذاً، ما إن تمتزج
+هذه الدواعي، حتى تتوارى تلك البهجة العذبة وتزول.
+</p>
+
+<p>
+لذّة هذه الدراسة، لأن المنشغل بها لا يطلب معرفة ولكن تبجّحاً بالمعرفة، وكأنه، وهو
+في الغابات، على مسرح من مسارح المدن، لا همّ له إلا إعجاب الناس به. وهناك أناس
+يكتفون بالاشتغال بعلم النبات في مكاتبهم أو في حدائقهم بدل أن يراقبوا النبات في
+الطبيعة، فلا يرون النبات إلا إلى الأساليب وطرق الترتيب، مما يبعث مواضيع للنقاش
+والنزاع لا نهاية لها، ولكنها لا تلقي النور على نبتة جديدة غير معروفة، ولا على
+التاريخ الطبيعي وعالم النبات. ومن هذا تتولد حروب البغض والحسد التي تثيرها
+المزاحمة على الشهرة في قلوب المنشغلين بعلم النبات أكثر مما تثيرها في قلوب غيرهم
+من العلماء.  ثم إنهم، يتشوّههم هذه الدراسة المستعصبة، ينقلونها إلى وسط المدن
+والمجامع العلمية، حيث يتسرب إليها من الفساد ما لا يقل عما يتسرب إلى النباتات
+الغريبة في الحدائق المعدّة للنباتات النادرة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 133. Appeared: 2025-09-02 (16:51)
+</p>
+<hr>
+<p>
+أيتها الأزهار الملائكة، طلاء الروح، وأنت أيتها الظلال المنعشة الرطبة والجداول
+والرياض والخضرة! تعالي طهري أخيلتي من الدنس الذي تلطخه به هذه الأمور البشعة. إن
+نفسي التي ماتت في السعي وراء عظام الأمور، أصبحت لا تنفعل إلا بكل ما هو مؤثر. لم
+يبق لي إلا الأحاسيس، وربها وحدها يستطيع الحزن أو السرور أن يصلا إلي في هذه
+الدنيا. وإذا أراني وقد تبنيت الأشياء الضاحكة المحدقة بي، فها إني أمعن النظر
+فيها، وأتأملها وأقابل بينها، وها إني قد أصبحت، على حين فجأة، مشتغلاً بعلم النبات،
+بقدر ما يحتاج إليه من لا يقبل على دراسة علوم الطبيعة إلا ليجد، يوماً بعد يوم،
+دواعي جديدة للإغرام بها.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 132. Appeared: 2025-09-02 (16:51)
+</p>
+<hr>
+<p>
+إن الأشجار والشجيرات والنباتات هي حُلى الطبيعة وكساها. ولا شيء أدعى إلى الكآبة من
+برية عارية جرداء لا تبسط للناظر إلا حجارة وطيناً ورملاً. ولكن إذا بعثت فيها الحياة
+الطبيعة وكستها ثوب عرسها ما بين مجاري المياه وتغريد الطيور، فإن الأرض تعرض على
+الإنسان، في تناسق العوالم الثلاثة منظراً مليئاً بالحياة والسحر ومثيراً للاهتمام،
+وهو، في العالم، المنظر الوحيد الذي لا يمله العين والقلب أبداً.
+</p>
+
+<p>
+وكلما كانت نفس المتأمل مرهفة الإحساس، ازداد استسلاماً إلى الانجذابات الروحية التي
+تجيرها فيه هذا الانسجام، فيستولي على حواسه عند ذاك تخيلات حوله عميقة، ويتيه، وهو
+في نشوة لذيذة، في لا نهاية هذا التنظيم الجميل الذي يُحسُّ أن ذاتيته قد اندمجت فيه،
+وعندئذٍ تختفي أمام عينيه جميع الأشياء الجزئية، فلا يرى شيئاً إلا في الأشياء
+الكلية، ولا يحسُّ شيئاً سواها. ولا بد من ظروف خاصة تضيِّق أفكاره وتطوِّق خياله حتى
+يستطيع أن يمعن النظر، جزءاً فجزءاً، في هذا العالم الذي يحاول أن يحتضنه.
+</p>
+
+<p>
+وطالبت في فترة هذه الاستراحة، استراحة العينين التي، إذا ما خان المرء التوفيق،
+تريح وتسلي وتلهي الذهن، وتتوقف إلى وقت ما الشعور بالهموم. وطبيعة الأشياء تساعد
+على هذا التلاهي جداً المساعدة وتجعله أكثر فتنة. إن الروائح الذكية، والألوان
+الضارخة، والأشكال البالغة الحُسن في الأناقة تبدو وكأنها تتنازع، بجميع قواها، حقَّ
+استرعاء انتباهنا. ولا يقتضي الاستسلام إلى هذه الأحاسيس المتناهية في العذوبة إلا
+الشعور متذوق اللذة، وإذا لم يشعر باللذة جميع من وقعت هذه المناظر تحت أعينهم،
+فلأن بعضهم يعوزه الإحساس الطبيعي، ولأن معظمهم إذا ملكت عليه مشاعره أفكار أخرى،
+لا يستسلم، إلا خلسة، إلى الأشياء التي تؤثر في حواسه.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 123. Appeared: 2025-09-02 (16:51)
+</p>
+<hr>
+<p>
+ولكن الصبر والرفق والتسليم والنزاهة والعدل الذي لا يحابي، هي كلها مقتنى يحمله
+المرء معه، مقتنى يمكن أن يحرز الغنى به من دون انقطاع ومن دون أن يخشى أن يسلبه
+إياه سالب ولو كان الموت.  وسأكرس ما بقي من شيخوختي للقيام بهذه الدراسة النافعة
+وحدها.  وما أسعدني لو أني باستكمالي لفضائل نفسي، أعرف أن أخرج من الحياة لا أحسن
+مما أنا - لاستحالة إمكان هذا - ولكن أكثر فضيلة مني يوم دخلتها.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 63. Appeared: 2025-09-02 (16:51)
+</p>
+<hr>
+<p>
+اعلم أن قابل المدح كمادح نفسه، والمرء جدير أن يكون حبُّه المدحَ هو الذي يحمله على
+ردِّه، فإن الرادَّ له محمود، والقابل له معيب. لتكن حاجتك في الولاية إلى ثلاث خصال:
+رضى ربِّك، ورضى سلطانٍ إن كان فوقك، ورضى صالح من تلي عليه. ولا عليك أن تلهو عن
+المال والذكر، فسيأتيك منهما ما يكفي ويطيب. واجعل الخصال الثلاث بمكانِ ما لا بد لك
+منه، والمال والذكر بمكانِ ما أنت واجدٌ منه بدًّا.
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-08-08 Fri 21:10]</span></span> Salih Muhammed: Might be related to: <a href="p/eulogy.html#7eskndp02wj0">Nietzsche on Eulogy</a>.</li>
+</ul>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 17. Appeared: 2025-09-02 (16:46)
+</p>
+<hr>
+<p>
+والنتيجة التي يمكن أن أستخلصها من جميع هذه الاعتبارات هي أني لم أكن قط قابلاً
+للاندماج في المجتمع المدني، حيث تجد كل شيء إزعاجاً وارتباكاً والتزاماً وواجباً ولأن
+طبعي المستقل جعلني دائماً غير قابل لإرغام النفس على اتباع ما تواضع الناس عليه،
+وما لا بد منه لمن أراد أن يعيش معهم. وما دمت أعمل حراً فأنا طيب ولا أعمل إلا
+خيراً، ولكن لا أكاد أشعر بوطأة النير، سواء أكانت من العزم أم من الناس، حتى أصبح
+ثائراً بل جامعاً، وحتى أراني لست شيئاً. وإذا
+اضطررت إلى عمل عكس ما تقضي به إرادتي، امتنع عن العمل أياً كانت غبني هذا الامتناع،
+بل إني لا أعمل بوحي إرادتي نفسها، لأني ضعيف. فامتنع عن العمل لأن كل ضعفي منصب
+على العمل، وكل قوتي هي في الامتناع، وجميع خطاياي هي من الإهمال، ونادراً جداً أن
+تكون من الفعل.
+</p>
+
+<p>
+ولم أعتقد قط أن حرية المرء تقوم على أن يعمل ما يريد، ولكنها تقوم على ألا يعمل
+أبداً ما لا يريده، وهذه هي الحرية التي طالما طالبت بها، وكثيراً ما حرصت عليها وبها
+كنت موضع فضيحة عند معاصري، لأنهم، إذ كانوا ذوي نشاط وطموح وحركة، كانوا يعتدون
+الحرية عند غيرهم، ولا عند أنفسهم؛ إذ لا يريدونها لأنفسهم، شرط أن يعملوا في بعض
+الأحيان، إرادتهم أو بالأحرى أن يسلطوا على حرية غيرهم، قلت ولأنهم يكلفون أنفسهم،
+طول حياتهم، عمل ما يشمئزون منه ولا يترددون عنا به غفلة كي يكونوا آمرين. فجعلتهم
+على لم يكن إذن في تبحثي من المجتمع على أني عضو غير نافع، بل رباعدي عنه من دون
+عاكمة، على أني عضو مفسد؛ وأنا أصرح بأني أقللت من عمل الخير لكني لم أعمل شراً ولا
+غني الشر إرادتي طول حياتي، وأملك أن يكون في العالم رجل قد عمل من الشر في الحقيقة
+والواقع، أقل مما عملت.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 117. Appeared: 2025-08-22 (16:59)
+</p>
+<hr>
+
+<p>
+هناك أنواع من البلايا تسمو بالنفس وتقوّيها كما أن هناك ضروباً أخرى تحطمها وتقضي
+عليها، ومن هذا النوع المصائب التي أصبحت فريسة لها. ولو مزج قليل من الخمير في
+مصيبتي لزاد في اختبارها إلى أقصى حد ولأصبحت هائجاً ثائراً، ولكنها لم تجعلني إلا
+صفراً. وإذ أصبحت عاجزاً عن أن أحسن عملاً يفيدني أو يفيد غيري، فقد امتنعت عن أن
+أعمل، وهذه الحال ليست بحال براءة إلا لأنها تجعلني أجد نوعاً من العذرية أن أستسلم،
+بلا لوم، إلى سجيتي. إني تجاوزت الحد بلا شك، لأنني أتجنب الفرص المواتية للعمل،
+حتى في الحالات التي لا يكون فيها العمل إلا صالحاً، ولكني ليتبقى أنهم لا بتركوني
+أنظر إلى الأشياء كما هي، أمتنع عن الحكم على الظاهر الذي يموهونها به، وعلى ضروب
+المخادعة التي يخفون وراءها الأسباب الدافعة للعمل، ويكفي أن أترك هذه الأسباب في
+متناولي لأكون على يقين أنها خداعة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 112. Appeared: 2025-08-22 (16:57)
+</p>
+<hr>
+<p>
+وإذا  أنا مطمئن لهذه الاستعدادات، فإني أجد فيها، مع رضاي عن نفسي، الأمل والتعزية
+اللذين أنا في حاجة إليهما في حالي الحاضرة. وليس من الممكن أن عزلة تامة كعزلتي،
+دائمة كل الدوام، مليئة بالحزن والوحشة، وأن العداوة الحساسة كل الإحساس، الدائمة
+العمل، عداوة الجيل الحاضر وما ترميني به من خزي بلا انقطاع - قلت ليس من الممكن
+ألا يلقي به كل هذا في أحضان الخور والانهيار؛ وإذا ما وجدتني مزعزع الأمل، فإن
+الشكوك المثبطة للهمم تعود من وقت إلى وقت إلى تعكير صفاء نفسي تملؤها حزناً وكآبة.
+وعند ذلك، إذ أراني عاجزاً عن ممارسة أعمال الذهن، اللازمة لإدخال الطمأنينة إلى
+نفسي، فإني أشعر بحاجة إلى تذكر ما صممت عليه قديماً، فضروب العناية، والانتباه،
+وإخلاص القلب، كل هذا الذي تكلفته في سبيل ذلك التصميم يعود عندئذ إلى ذاكرتي وبعيد
+إلى ملء نفسي. وهكذا فإني أطرح جميع الفكر الجديدة كما تُطرح الأخطاء المشؤومة التي
+ليس لها إلا مظهر مزين لا تصلح إلا لإقلاق راحتي.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_15">Rousseau, 2015</a>), no. 62. Appeared: 2025-08-22 (16:50)
+</p>
+<hr>
+<p>
+لا تكوننَّ نزِر الكلام والسلام، ولا تُفرِّطنَّ بالهشاشة والبشاشة، فإن إحداهما من الكِبْر، والأخرى من السخف.
+</p>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2025-12-03 Wed 20:55]</span></span> Salih Muhammed: I translate like the follows: Do not be miserly with your words and greetings, nor excessive in fragility and cheerfulness; for one stems from arrogance, and the other from frivolity.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 18. Appeared: 2025-08-08 (21:24)
+</p>
+<hr>
+<p>
+اعلم أن رأيك لا يتسع لكل شيء ففَرِّغْه للمهم، وأن مالك لا يغني الناس كلَّهم فاختص به
+ذوي الحقوق، وأن كرامتك لا تطيق العامة فتَوِّجْ بها أهل الفضائل، وأن ليلك ونهارك لا
+يستوعبان حاجاتك وإن دأبت فيهما، وأنه ليس لك إلى أدائهما سبيلٌ مع حاجة جسدك إلى
+نصيبه منهما، فأحسن قسمتهما بين دَعَتِك وعملك. واعلم أنك ما شغلت من رأيك بغير المهم
+أزرى بالمهم، وما صرفت من مالك بالباطل فَقَدْتَه حين تريدُه للحق، وما عدلت به من
+كرامتك إلى أهل النقص أضرُّ بك في العجز عن أهل الفضل، وما شغلت من ليلك ونهارك في
+غير الحاجة أزرى بك في الحاجة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 18. Appeared: 2025-08-08 (21:15)
+</p>
+<hr>
+<p>
+The social moresh of capitalism have induced the view that virtually every
+subjectively felt need or unhappiness can be eliminated if one can buy more
+commodities. The competitive and economically insecure world within which
+workers function generally creates subjective feelings of anxiety, loneliness,
+and alienation. The cause of these feelings has been perceived by most working
+people as their inability to buy enough commodities to make them happy.  But as
+workers have received higher w ages and bought more commodities, the general
+unhappiness and anxiety have continued. The problem, they have tended to
+conclude, is that the increase in wages was insufficient. Misperceiving the root
+cause of their condition, they have frequently gotten aboard an Alice in
+Wonderland treadmill, where the more one gets the more needy one feels, the
+faster one runs the more inadequate one&rsquo;s pace appears to be, the harder one
+works the greater appears to be the need for even harder work in the future.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_7">Hunt and Lautzenheiser, 2011</a>), no. 32. Appeared: 2025-07-12 (20:03)
+</p>
+<hr>
+<p>
+في وقت السِّلم، يُهاجم المقاتلُ ذاتهُ.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_9">Nietzsche, 2009a</a>), no. 187. Appeared: 2025-07-11 (01:11)
+</p>
+<hr>
+<div class="epigraph"><blockquote>
+خاطفًا أريد أن أصير فأنطلق<br>
+مع البريق الأول للصّبح الجديد<br>
+عاليًا في الفضاء<br>
+فوق الواديّ والغاب والهوّة<br>
+
+</blockquote></div>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_9">Nietzsche, 2009a</a>), no. 28. Appeared: 2025-07-11 (00:47)
+</p>
+<hr>
+<p>
+So great is my unhappiness at this time that in my dreams I am indescribably happy.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-25 (13:52)
+</p>
+<hr>
+<div class="epigraph"><blockquote>
+<p>
+The whole of existence makes me anxious, from the smallest fly to the mysteries of the Incarnation. It’s all
+inexplicable, myself most of all. For me all existence is contaminated, myself most of all. Great is my distress,
+unlimited. No one knows it but God in heaven and he will not comfort me. No one but God in heaven can console me
+and he will not take pity on me – Young man, you who are still at the beginning of your endeavour, if you have lost
+your way, turn back! Turn to God and under his tutelage you will take with you a youthfulness fortified for adult deeds.
+You will never know the suffering of one who, having wasted the strength and courage of youth in rebellion against
+him, must now, exhausted and faint, begin a retreat through ruined lands and ravaged regions, surrounded on all sides
+by the abomination of destruction, by gutted cities and the smoking ruins of disappointed hopes, by prosperity
+trampled down and strength brought low – a retreat as slow as a bad year, long as eternity, interrupted monotonously
+by the constantly repeated plaint: ‘These days give me no pleasure.’
+</p>
+
+</blockquote></div>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-25 (13:52)
+</p>
+<hr>
+<p>
+What has often caused me suffering was that a reflective I has tried as if to imprint on my mind and preserve what my
+real I, out of doubt, anxiety, disquiet, wanted in its concern with forming a view of the world to forget – to preserve it
+partly because it was a necessary component, partly because it was a transitional factor of some consequence, for
+fear that I should fake a result for myself.
+</p>
+
+<p>
+So now, for instance, when my life seems set in such a way that I appear to be assigned in perpetuity to reading for
+exams, and that no matter how long it lasts, my life will in any case progress no further than where I once arbitrarily
+broke it off (just as one occasionally sees mentally deranged people who forget everything that occurred in between
+and recall only their childhood, or forget everything except some single moment in their lives) – that I should be thus
+reminded, by the thought of being a theology student, of that happy time of possibilities (what one might call one’s
+pre-existence) and of my stopping there, in a state of mind rather like that of a child which has been given brandy and
+had his growth stunted. When my active I now tries to forget this in order to act, my reflective I would so much rather
+keep hold of it because it seems interesting and, as reflection raises itself to the level of a general consciousness,
+abstract from my own personal consciousness.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-25 (12:30)
+</p>
+<hr>
+<p>
+Man hardly ever makes use of the freedoms he has, such as freedom of thought; in compensation he demands
+freedom of speech instead.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:40)
+</p>
+<hr>
+<p>
+Everyone takes his revenge on the world. My revenge consists in bearing my distress and anguish enclosed deeply
+within me while my laughter entertains everyone. If I see someone suffer I give him my sympathy, console him as best
+I can, and listen to him calmly when he assures me that I am fortunate. If I can only keep this up until the day I die I
+shall have had my revenge.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:32)
+</p>
+<hr>
+<p>
+I’ve often wondered why I am so reluctant to commit single observations to paper. But
+the more I come to know great men in whose writings there is no sign of a kaleidoscopic
+jostling together of some bundle of ideas (the example of Jean Paul has perhaps made
+me prematurely anxious in this respect), and the more I bear in mind that a writer as
+refreshing as Hoffmann has kept a journal, and that Lichtenberg recommends it, the
+greater the urge to find out just why I should find this in itself innocent practice so
+unpleasant, almost repellent. The reason has obviously been that I have thought every
+time of possible publication, which might have called for a fuller treatment, which I didn’t
+want to bother with. And enervated by such an abstract possibility (a kind of literary
+hiccoughing and squeamishness), the aroma of the idea and mood evaporated. I think it
+would be better instead, by frequent note-taking, to let the thoughts emerge with the
+umbilical cord of the original mood intact and forget as far as possible any concern for
+their possible use (which I would never realize anyway by looking up my journals) but
+more as though unburdening myself in a letter to an intimate friend, so gaining on the
+one hand the possibility of self-knowledge at a later moment, and on the other fluency,
+the same articulateness in written expression which I have to some extent in speaking,
+knowledge of many little traits to which I have given no more than a passing glance, and
+finally, an advantage, if what Hamann says is true in another sense, in that there are
+ideas which one gets only once in one’s life. Such backstage practice is certainly
+necessary for anyone not so gifted that his development is in some way a public
+phenomenon.
+</p>
+
+<p>
+صالح محممد: أترجمها للعربية: كثيراً ما تساءلت لِمَ أتردد هكذا في إيداع الملاحظات
+المفردة إلى الورق. لكن كلما ازددت معرفة بالعظماء الذين لا يُرى في كتاباتهم أثر
+لذلك التزاحم الكاليدوسكوبي لحزمة من الأفكار (ولعل مثال جان بول قد أثار قلقي في
+هذا الصدد قبل الأوان)، وكلما تذكرت أن كاتباً منعشاً كهوفمان قد احتفظ بيومياته، وأن
+ليختنبرغ يوصي بذلك، ازداد إلحاح الرغبة في معرفة السبب وراء استياق هذه الممارسة
+البريئة في ذاتها، بل واشمئزازي منها تقريباً. السبب واضح: أنني فكرت في كل مرة
+بإمكانية النشر، مما قد يستدعي معالجة أوفى لم أكن أريد إرهاق نفسي بها. وإذ
+أنهكتني هذه الإمكانية المجردة (نوع من الفواق الأدبي والتقزز)، تبخرت عبقة الفكرة
+والمزاج. أعتقد أنه من الأفضل بدلاً من ذلك، عبر التدوين المتكرر، أن أدع الأفكار
+تنبثق والحبل السري للمزاج الأصلي سليماً، وأن أنسى قدر الإمكان كل اهتمام
+باستخدامها المحتمل (والذي لن أحققه أبداً على أي حال بمراجعة يومياتي) بل أكثر
+كأنني أبثُّ همومي في رسالة إلى صديق حميم، فأكسب من جهة إمكانية معرفة الذات في لحظة
+لاحقة، ومن جهة أخرى الطلاقة، نفس البلاغة في التعبير الكتابي التي أملكها إلى حد
+ما في الكلام، ومعرفة السمات الصغيرة الكثيرة التي لم ألقِ عليها سوى نظرة عابرة،
+وأخيراً، ميزة - إن صح ما يقوله هامان بمعنى آخر - في أن ثمة أفكاراً لا تأتي المرء
+سوى مرة واحدة في حياته. مثل هذه الممارسة خلف الكواليس ضرورية حتماً لكل من لم يُوهب
+موهبة تجعل نموه بطريقة ما ظاهرة عامة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:31)
+</p>
+<hr>
+<p>
+How awful on Judgement Day, when all souls return to life, to stand completely alone, alone and unknown to all, all.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:31)
+</p>
+<hr>
+<p>
+It’s terrible how I have to buy every day, every hour – and the price fluctuates so!
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:26)
+</p>
+<hr>
+<p>
+God in heaven, let me really feel my nothingness, not to despair over it but to feel all the more intensely the greatness
+of your goodness.
+</p>
+
+<p>
+(This wish is not, as the scoffer in me would say, an Epicureanism, as when a gourmand starves himself so that food
+will taste all the better.)
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-20 (14:25)
+</p>
+<hr>
+<p>
+You, my heart’s sovereign mistress, stored in the deepest recesses of my heart, in my most brimmingly vital
+thoughts, there where it is equally far to heaven as to hell – unknown divinity! Oh, can I really believe what the poets
+say: that when a man sees the beloved object for the first time he believes he has seen her long before, that all love,
+as all knowledge, is recollection, that love in the single individual also has its prophecies, its types, its myths, its Old
+Testament? Everywhere, in every girl’s face, I see features of your beauty, yet I think I’d need all the girls in the world
+to extract, as it were, your beauty from theirs, that I’d have to criss-cross the whole world to find the continent I lack
+yet that which the deepest secret of my whole ‘I’ magnetically points to – and the next moment you are so near me, so
+present, so richly supplementing my spirit that I am transfigured and feel how good it is to be here.
+</p>
+
+<p>
+You blind god of love! You who see in secret, will you make it known to me? Am I to find here in this world what I
+seek, am I to experience the conclusion of all my life’s eccentric premises, am I to conclude you in my embrace34 – or:
+</p>
+
+<p>
+Do the orders say: march on?
+</p>
+
+<p>
+Have you gone on before me, you, my yearning; are you beckoning to me, transfigured, from another world? Oh, I will
+throw everything overboard to become light enough to follow you.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-16 (23:45)
+</p>
+<hr>
+<p>
+I too have combined the tragic with the comic: I make witticisms, people laugh – I cry.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-16 (23:24)
+</p>
+<hr>
+<p>
+When Adam lived in Paradise, it was: Pray; when he was cast out, it was: Work; when Christ came to the
+world, it was: pray and work (ora et labora).
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-13 (15:29)
+</p>
+<hr>
+<p>
+I simply can’t stand these pseudo-intellectuals. How often at a party haven’t I deliberately put myself beside
+some elderly spinster who lives on family gossip and with the utmost gravity listened to everything she had
+to offer.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 9. Appeared: 2025-06-13 (15:09)
+</p>
+<hr>
+<p>
+It’s rather strange with superstition – you would expect a person, once he has seen his morbid dreams fail of
+fulfilment, to give them up in the future; but on the contrary, the dreams become stronger, just as your desire to gamble
+increases once you have lost in the lottery.
+</p>
+
+<p>
+صالح محمد: ترجمتي للعربية: من الغريب أمر الخرافة - فأنت تظن أن المرء، متى شهد
+أوهامه العليلة تتبدد دون تحقيق، سيهجرها فيما بعد؛ غير أن العكس يحدث، فتشتد
+الأحلام وتقوى، كما تتأجج شهوة القمار في نفسك بعد أن تمنى بالخسران في اليانصيب.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 8. Appeared: 2025-06-10 (10:30)
+</p>
+<hr>
+<p>
+People understand me so little that they fail even to understand my complaints that they do not understand me.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 8. Appeared: 2025-06-09 (19:13)
+</p>
+<hr>
+<p>
+There are authors who, like those beggars who try to arouse
+sympathy by exposing the defects and deformities of their
+bodies, strive to attract attention by revealing the lacerated
+states of their hearts.
+</p>
+
+<p>
+صالح محمد: أترجمها للعربية كالتالي بتصرف بسيط: ثمة أناس، كأولئك الشحاذين الذين
+يسعون لاستدرار العطف بكشف نقائص أبدانهم وعيوبها، يجتهدون في استمالة الأنظار بفضح
+جراح قلوبهم النازفة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 8. Appeared: 2025-06-09 (18:55)
+</p>
+<hr>
+<p>
+Probably few fields of study bestow on man the serene and happy frame of mind that the
+natural sciences give him. Out into nature he goes, everything is familiar, it is as though
+he had talked with the plants and the animals beforehand. He sees not only the uses
+man can put them to (for that is quite secondary) but their significance in the whole
+universe. He stands like Adam of old – all the animals come to him and he gives them
+names.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_6">Hannay, 2015</a>), no. 8. Appeared: 2025-06-06 (20:39)
+</p>
+<hr>
+<div class="epigraph"><blockquote>
+<p>
+ولا تعني عبارة «حقيقة تكون حقيقية بالنسبة إليَّ» أن الحقيقة اعتباطية أو محكومة
+بالهوى الشخصي، أو أن للفرد الاعتقادَ فيما يحلو له. لكنها تشير إلى حلٍّ داخلي، حيث
+تعني «بالنسبة إليَّ» الحقيقة التي تغيِّر حياتي شخصيًّا؛ وهو تعبير يقول كيركجارد إنه
+قرأه للمرة الأولى في كتابات الراهب مارتن لوثر. ونقيض الحقيقة «التي تكون حقيقية
+بالنسبة إليَّ» هو الحقيقة الخامدة التي تخلو من الحياة؛ مجرَّد لغوٍ للتملُّص من متطلبات
+الحياة عبر الكلمات الفارغة. فانْشُد أولًا مملكة الله: أي إن على المرء أولًا أن يقوم
+بتحويل حياته الباطنية، وليس مراكمة زخارف المعرفة التكهنية. فحقيقة المسيحية ليست
+في توفير مادة خام لتأملات الميتافيزيقا الألمانية، وليست أيضًا في قصرها على الطقوس
+الدينية في صباح يوم الأحد، وتجاهلها بقيةَ أيام الأسبوع. إذا كانت المسيحية
+«حقيقية» فهي حقيقية بالمعنى الذي يتحدَّث عنه الكتاب المقدَّس الذي يقول إن المسيح هو
+«الطريق، والحقيقة، والحياة»، وهو ما يعني أن الحقيقة المسيحية هي طريقة للعيش في
+الحقيقة. إذا لم تحمِل في قلبك حبَّ جارك، الذي تحدَّث عنه العهد الجديد؛ إذا لم تكن محبًّا
+متسامحًا في حياتك؛ إذا لم تنقش هذا الحب في وجودك الشخصي، فأنت لا تعيش «في الحقيقة»
+بمعناها «الوجودي». تفتح تدوينة كيركجارد في يومياته البابَ أمام نظرية جديدة
+للحقيقة، تتجاوز التعريف العقلاني الكلاسيكي للحقيقة باعتبارها تمثيلًا عقليًّا لشيء
+موجود في العالم الخارجي. أعاد كيركجارد وصفَ الحقيقة بناءً على المعايير الذاتية
+للفرد، التي نجدها في كتابات القديس أغسطينوس، وتقاليد الفرنسيسكان.
+</p>
+
+</blockquote></div>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_3">Caputo and Critchley, 2008</a>), no. 20. Appeared: 2025-06-06 (06:26)
+</p>
+<hr>
+<p>
+ما أحتاج إليه فعلًا هو أن أحسِم ما أنا عازم على فعله، لا ما يجب أن أعرفه، لولا أن
+المعرفة يجب أن تسبق كل الأفعال. إنها مسألة تتعلق بفهمٍ قَدَري، أن أرى ما يريدني
+الله أن أفعله؛ الأمر يتعلق بإيجاد حقيقة تكون حقيقية بالنسبة إليَّ، إيجاد الفكرة
+التي أكون على استعدادٍ للعيش والموت من أجلها. وما نفعُ أن أكتشف ما يُسمَّى بالحقيقة
+الموضوعية، أو إذا سلكت طريقي عبر النُّظم الفكرية للفلاسفة وكنت قادرًا على محاسبتهم
+جميعًا، مشيرًا إلى تناقضاتهم في كل موضع؟ وما نفعُ أن أكون قادرًا على تطوير نظرية
+للدولة، مجمعًا كلَّ الأجزاء من مواضع مختلفة لأُكوِّن نظرية واحدة كلية، وأنشئ عالَمًا لم
+أقطنه بنفسي بل شيدته فقط كي يراه الآخرون؟ وما فائدةُ أن أكون قادرًا على إبراز معنى
+المسيحية وتوضيح حقائق عديدة منفصلة بخصوصها، إذا لم تكن تحمل معنًى أعمق بالنسبة
+إليَّ وإلى حياتي؟ بالتأكيد، لا أنكر أنني ما زلت أقرُّ بأهمية المعرفة، وأن المرء يمكن
+أن يتأثر بها، لكن يجب حينها أن تحيا هذه المعرفة داخلي، وهذا ما أراه النقطة
+الرئيسية في الموضوع … ولكن كي أجد هذه الفكرة أو بمعنًى أدق كي أجد نفسي، فلا فائدة
+من انغماسي أكثرَ في هذا العالم … كان هذا ما ينقصني كي أحيا حياة إنسانية كاملة،
+بدلًا من أن أعيش حياة معرفية فقط، كي أتجنَّب بناء تطوري العقلي على — شيء يسميه
+الناس بالموضوعي — شيء لا يخصُّني بكل الأحوال، وأن أبنيَه، بدلًا من ذلك، على شيء يتصل
+بجذور وجودي كي أنموَ من خلاله وأصل إلى الله، وأتشبَّث به حتى وإن تهاوى العالم كلُّه
+حولي. هذا، كما ترى، ما أحتاج إليه، وما أسعى إليه … إن هذه الحركة الداخلية
+للإنسان، هذا الجانب الإلهي فيه، هو ما يشكِّل فارقًا، لا أكوام المعلومات … كم سعيتُ
+هباءً للبحث عن ملاذٍ ليس فقط في أعماق المعرفة بل أيضًا في بحر المُتَع الذي لا قاع له
+… وماذا وجدت؟ لم أجد نفسي، فهذا ما كنت أسعى إلى العثور عليه بهذه الطريقة … على
+المرء أن يتعلم أولًا أن يعرِف نفسه قبل أن يعرِف أيَّ شيء آخر … وفيما يتعلق بعلاقتي
+بالآخرين، ليس لديَّ الكثير لأكسبه أو أخسره … فلم يُحدِث رفاقي أثرًا واضحًا فيَّ باستثناء
+قلة منهم … لذا أقف مجددًا عند نقطة، حيث يجب أن أتخذ طريقًا آخر. سأحاول الآن أن
+أنظر إلى نفسي بهدوءٍ، وأن أبدأ في التحرك إلى داخلي. فبهذه الطريقة فقط، يمكن أن
+أطلِق على نفسي «أنا» بمعنًى أعمق … لقد عزمتُ أمري؛ وها أنا ذا أعبر نهرَ روبيكون. لا
+شك في أن هذا الطريق سيفضي بي إلى معركةٍ، لكنني لن أستسلم.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_3">Caputo and Critchley, 2008</a>), no. 17. Appeared: 2025-06-06 (06:03)
+</p>
+<hr>
+<p>
+``‘To produce’, he remarked on a later occasion, ‘was my life.’&rsquo;&rsquo;
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_5">Gardiner, 2002</a>), no. 10. Appeared: 2025-06-06 (05:53)
+</p>
+<hr>
+<div class="epigraph"><blockquote>
+<p>
+‘what good would it do me if truth stood before me, cold and naked, not caring
+whether I recognized her or not?
+</p>
+
+</blockquote></div>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_5">Gardiner, 2002</a>), no. 10. Appeared: 2025-06-06 (05:43)
+</p>
+<hr>
+<div class="epigraph"><blockquote>
+فلا عبرت بي ساعةٌ لا تُعِزني<br>
+ولا صَحبتني مُهجة تَقبل الظُّلما<br>
+
+</blockquote></div>
+<p>
+أبو الطيب
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_18">al-Akbari et al., 1997</a>), no. 109. Appeared: 2025-03-07 (16:13)
+</p>
+<hr>
+<p>
+ومن الأسباب المتمنَّاة في الحُب أن يهب الله عزَّ وجل للإنسان صديقًا مُخلصًا، لطيفَ القول، بسيطَ
+الطَّول، حسنَ المأخذ، دقيقَ المنفذ، متمكنَ البيان، مُرهف اللسان، جليل الحلم، واسع العلم، قليل
+المخالفة، عظيم المساعفة، شديد الاحتمال، صابرًا على الإدلال، جم الموافقة، جميل المخالفة،
+مستوي المطابقة، محمود الخلائق، مكفوف البوائق، محتوم المساعدة، كارهًا للمباعدة، نبيل المدخل،
+مصروف الغوائل، غامض المعاني، عارفًا بالأماني، طيب الأخلاق، سريَّ الأعراق، مكتوم السر، كثير
+البر، صحيح الأمانة، مأمون الخيانة، كريم النفس، نافذ الحس، صحيح الحدْس، مضمون العون، كامل
+الصون، مشهور الوفاء، ظاهر الغَناء، ثابت القريحة، مبذول النصيحة، مستيقن الوداد، سهل
+الانقياد، حسن الاعتقاد، صادق اللهجة، خفيف المهجة، عفيف الطباع، رحب الذراع، واسع الصدر،
+متخلقًا بالصبر، يألف الإمحاض، ولا يعرف الإعراض، يستريح إليه ببلابله، ويشاركه في خلوة فكره،
+ويفاوضه في مكتوماته.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_8">Ibn Hazm, 1993</a>), no. 48. Appeared: 2024-11-18 (02:37)
+</p>
+<hr>
+<p>
+واعلم أن العين تنوب عن الرُّسل، ويدرك بها المراد. والحواس الأربع أبواب إلى القلب ومنافذ نحو
+النفس، والعين أبلغها وأصحها دلالة وأوعاها عملًا، وهي رائد النفس الصادق ودليلها الهادي
+ومرآتها المجلوة التي بها تقف على الحقائق وتميّز الصفات وتفهم المحسوسات.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_8">Ibn Hazm, 1993</a>), no. 32. Appeared: 2024-11-17 (02:33)
+</p>
+<hr>
+<p>
+Anyone who knows how to breathe the air of my writings knows that it is an air of the
+heights, a bracing air. You must be made for it, or else you are in no little danger of
+catching cold in it. The ice is near, the solitude is immense—but how peacefully
+everything lies in the light! how freely you breathe! how much you feel to be beneath
+you!—Philosophy, as I have understood and lived it so far, is choosing to live in ice and
+high mountains—seeking out everything alien and questionable in existence, everything that
+has hitherto been excluded by morality.
+</p>
+
+<p>
+From the long experience which such a wandering in the forbidden gave me, I learnt to view
+the reasons people have moralized and idealized so far very differently from what may be
+wished: the hidden history of philosophers, the psychology of their great names came to
+light for me.—How much truth can a spirit stand, how much truth does it dare?—for me that
+became more and more the real measure of value. Error (belief in the ideal) is not
+blindness, error is cowardice&#x2026; Every achievement, every step forwards in knowledge is
+the consequence of courage, of toughness towards oneself, of sincerity* towards oneself&#x2026;
+I do not refute ideals, I just put gloves on to protect myself against them&#x2026; Nitimur in
+vetitum: under this sign my philosophy will triumph one day, for the only thing that has
+been altogether forbidden so far is the truth.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_10">Nietzsche, 2009b</a>), no. 5. Appeared: 2024-11-04 (04:34)
+</p>
+<hr>
+<p>
+&ldquo;فمنهم غزير الدمع هامل الشؤون، تُجيبه عينه وتحضره عبرته إذا شاء، ومنهم جَمود العين عديم
+الدّمع، وأنا منهم. [&#x2026;] فإني لأجد قلبي يتفطّر ويتقطّع وأحِس غُضة أمرَّ من العلقم، وتكاد تشوقني
+النفس أحيانًا ولا تجيب عيني البتة إلا بالشيء اليسير من الدمع&rdquo;.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_8">Ibn Hazm, 1993</a>), no. 17. Appeared: 2024-11-04 (02:15)
+</p>
+<hr>
+<p>
+لا يعجبنَّك إكرامُ من يكرمك لمنزلة أو سلطان، فإن السلطة أوشك أمور الدنيا زوالًا، ولا يعجبنك
+إكرامهم إيَّاك للنسب، فإن الأنساب أقل مناقب الخير غناءً عن أهلها في الدين والدنيا، ولكن إذا
+أكرمت على دين أو مروءة فذلك فليعجبك، فإن المروءة لا تزايلك في الدنيا، والدين لا يزايلك في
+الآخرة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 34. Appeared: 2024-08-08 (09:36)
+</p>
+<hr>
+<p>
+اعلم أن بعض العطية لؤم، وبعض البيان عيٌّ، وبعض العلم جهل، فإن استطعت ألا يكون عطاؤك جورًا،
+ولا بيانك هذرًا، ولا علمك جهلًا؛ فافعل.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 33. Appeared: 2024-08-08 (09:34)
+</p>
+<hr>
+<p>
+إذا تراكمت الأعمال عليك، فلا تلتمس الروح في مدافعتها والروعان منها، فإنه لا راحة لك إلا في
+إصدارها، وإن الصبر عليها هو يخفها، وإن الضجر منها هو يُراكمها عليك، فتعهَّد من ذلك في نفسك
+خصلة قد رأيتُها تعتري بعض أصحاب الأعمال أن الرجل يكون في أمر من أمره، فيرد عليه شغل آخر،
+ويأتيه شاغلٌ من الناس يكره تأخيره، فيكدِّر ذلك بنفسه تكديرًا يفسد ما كان فيه وما ورد عليه حتى
+لا يحكم واحدًا منها، فإن ورد عليك مثل ذلك، فليكن معك رأيك الذي تختار به الأمور، ثم اختر
+أَوْلى الأمرين بشغلك فاشتغل به؛ حتى تفرغ منه، ولا تُعظمن عليك فوت ما فات، وتأخير ما تأخر، إذا
+أعملت الرأي معمله، وجعلت شغلك في حقه. اجعل لنفسك في كل شيء غاية ترجو القوة والتمام عليها،
+واعلم أنك إن جاوزت الغاية في العبادة صرت إلى التقصير، وإن جاوزتها في حمل العلم صرت من
+الجهال، وإن جاوزتها في تكلُّف رضى الناس والخفة معهم في حاجاتهم، كنت المصنع المحسود.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 33. Appeared: 2024-08-08 (09:32)
+</p>
+<hr>
+<ul class="org-ul">
+<li><p>
+<span class="timestamp-wrapper"><span class="timestamp">[2025-12-03 Wed 22:08]</span></span> <br>
+Salih Muhammed: I translate it as:
+</p>
+
+<p>
+Discipline yourself with patience toward a bad neighbor, a troublesome companion, and an unpleasant associate; for such trials are hardly avoidable. Patience is of two kinds: a man’s patience in enduring what he dislikes, and his patience in restraining himself from what he desires. Patience in the face of what is disliked is the more common, for its bearer is often compelled to it. Know that the base are hardier in body, while the noble are more steadfast in soul. Praiseworthy patience is not that a man be thick-skinned, brazen, or merely strong of foot against toil or strong of hand in labor—for such traits belong to donkeys. Rather, true patience is that the soul be resolute; that one bear affairs with composure; that he remain collected in distress; that he be firmly anchored in judgment and self-possession; inclined toward prudence; abandoning caprice; lightly regarding the hardship whose outcome he hopes for; persevering in resisting desires and passions; and, with the strength of his resolve, seeing his resolve through.
+</p></li>
+</ul>
+
+<p>
+ذلِّل نفسك بالصبر على جار السوء، وعشير السوء، وجليس السوء؛ فإن ذلك ما لا يكاد يُخطِبك، فإن
+الصبر صبران؛ صبر الرجل على ما يكره، وصبره عمَّا يحب، فالصبر على المكروه أكثرهما وأشبههما أن
+يكون صاحبه مضطرًّا، واعلم أن اللئام أصبر أجسادًا، والكرام أصبر نفوسًا، وليس الصبر الممدوح بأن
+يكون جلد الرجل وقاحًا أو رجله قوية على المشي أو يده قوية على العمل، فإنما هذا من صفات
+الحمير، ولكن أن يكون للنفس غلوبًا، وللأمور مُحتمِلًا، وفي الضر مُجمِلًا، ولنفسه عند الرأي والحفاظ
+مرتبطًا، وللحزم مؤثرًا، وللهوى تاركًا، وللمشقة التي يرجو عاقبتها مستخفًّا، وعلى مجاهدة الأهواء
+والشهوات مواظبًا، ولبصره بعزمه منفدًا.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_20">ibn Al-Muqaffa’a, 2019</a>), no. 30. Appeared: 2024-08-08 (09:22)
+</p>
+<hr>
+<p>
+الهرب من الحب هو الاقتراب من ثمار فينوس دون دفع غرامة. من يفكرون ببرود تكون لذتهم أكبرّ
+وأنقى مما لدى الأرواح التعسة الذين يترجرج شوفهم. لحظةً الامتلاك. بين أمواج عدم اليقين. فلا
+تعرف عيونهم وأيديهم وأجسادُهم بأي شيءٍ تستمتع أولا. يعانقون الجسدّ المشتهى بقوةٍ تحمله على
+الصراخ وتترك أسنائهم أثرها فوق الشفاه التي يحبون. ونظراً لعدم صفاء لذَتَهِم فإنها تكون فظةً
+تدفعهم لجَرح الجسد الذي أيقظ فيهم بذورّ ذلك السعار، أَيَاً كان ذلك الجسد. لا أحد يطفئ الشعلةً
+بالحريق.  الطبيعةٌ تعارض ذلك. إنها الحالة الوحيدة التي كلما امتلَكُنَا فيها أكثر أَلهَبَ الامتلاك
+القلبّ أكثر برغبةٍ مخيفة. الشراب والطعام الماء وصورة الخبز. لكن الجسد لا يستطيع امتصاصّ شيء
+من جمال وجه أو من ألق بشرة. لا شيء: إنه يأكل أطيافاً وآمالا تبلغ من الخفة حداً يجعل الهواء
+يخطفها. شأن رجلٍ يلتهمه العطش في منتصف الحلم؛ ولا يتمكن من الوصول إلى أي ماء في قلبٍ سعيره
+فيلجاً إلى صورٍ سَواقٍ. لكنه عبثاً يستبسل، فهو يموت عَطَّشاً وسط السيل الذي يشرب منه. هكذا العشاق
+في الحب. إنهم الألعوبة التي تلهو بها أطيافٌ فينوس. في النهاية تستحثُ أجسادهم لحظةً وقوع الفرح
+الوشيك. إنها اللحظة التي تَبذر فيها فينوسش حقلَ المرأة.  يغرزون أجسادهم بشراهة. ويجمعون
+لعابهم. وفوق الشفاه التي يهرسون أسنائّهم عليهاء لا يمتصُون بأفواههم شيئاً سوى الهواء.  ومهما
+حاولوا لا يستطيعون انتزاع أية قطعةٍ من ذلك الجسدء لايستطيعون دس جسدهم بكامله داخل جسد. لا
+يستطيعون الانتقال بأكملهم إلى الجسد الآخر. نّخال أحياناً بأن هذا هو ما يريدونه لشدةٍ ما
+يوثقون بجشع، مِن حولهم، العرّى التي تربطهم إليه. وحين لا تعود الأعصابُ قادرةٌ على احتواء
+الرغبة التي توترهم، حين تظهر تلك الرغبة فجأة، تحدث استراحة قصيرة، تهدأ الحمية العنيفة لحظة
+قصيرة، ثم يعود السعار نفسه، الهياج نفسه. ومن جديد يبحثون عما يتوقون إليه. من جديد يتساؤلون
+عما يشتهونه.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_14">Quignard, 2019</a>), no. 69. Appeared: 2024-07-19 (16:41)
+</p>
+<hr>
+
+<p>
+إذا كنت مخيرًا في هذا الشيء فلماذا فعلته؟ أما إذا كان غيرك هو المُخيَّر فيه فمن
+تُراك تلوم؛ الذرات (المصادفة) أم الآلهة؟ كلاهما حماقة؛ فلا محل للوم، بل قَوِّم هذا
+الفاعل إن استطعتَ، فإذا لم تستطع فقَوِّم الشيء على الأقل. فإذا لم تستطع فأي هدفٍ
+يُحقِّقه اللوم؛ إذ كل فعلٍ ينبغي أن يتم لهدف.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 114. Appeared: 2024-06-04 (19:26)
+</p>
+<hr>
+
+<p>
+لا تكن متثاقلًا في فعلك، ولا مُشوَّشًا في محادثتك، ولا غامضًا في تفكيرك. ولا تترك عقلك نهبًا للانقباض ولا للتيه، واجعل في وقتك ساعةً للفراغ والترويح.
+</p>
+
+<p>
+– «إنهم يقتلونني، يمزقونني، يلعنونني.»
+</p>
+
+<p>
+– وكيف يمكن لكل ذلك أن يحول بين عقلك وبين الصفاء والحكمة والرصانة والعدل؟ هب
+واحدًا أتى إلى نبعٍ من الماء النمير وأخذ يلعنه، فهل سيمنع النبعَ من أن يظل يتدفق
+بالماء الزُّلال؟ وهَبْه ألقى فيه بشيءٍ من الطين والرَّوْث … فلن يلبث النبع أن يُفتِّته
+ويُزيحه ويعود إلى نقائه. كيف إذن تُؤمِّن لنفسك نبعًا دائمًا لا مجرد صِهريج؟ بأن تُوطِّن
+نفسك طول الوقت على الحرية، وتظل قانعًا، بسيطًا، متواضعًا.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 121. Appeared: 2024-06-04 (18:57)
+</p>
+<hr>
+<p>
+بِحسبِك ثلاث؛ أن يكون حكمك الراهن قائمًا على الفَهم، وفعلُك على الخير الاجتماعي، وميلُك
+على الرضا بكل ما يحدُث.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 125. Appeared: 2024-06-04 (18:57)
+</p>
+<hr>
+<p>
+لا شيء يحدُث للإنسان خارج نطاق الخبرةِ الطبيعية للإنسان. كذلك الأمر في الثور فلا
+شيء في خبراته غريبٌ على طبيعة الثور، والكرمة لا شيء لديها غريبٌ على طبيعة الكرم،
+والحجر لا شيء لديه خارج خصائص الحجر. فإذا كان كل شيءٍ يخبر ما هو معتادٌ وطبيعي
+بالنسبة له ففيم تشكو؟ ما دامت طبيعة العالَم لم تجلب لك شيئًا فوق احتمالك.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 119. Appeared: 2024-06-04 (18:50)
+</p>
+<hr>
+
+<p>
+خذني وارمِ بي في أيِّ مكانٍ شئت؛ فأينما كنت فسوف أحفظ الجانب الإلهي مني سعيدًا؛ أي
+قانعًا، ما دام وِجداني وفِعلي يتبعان فطرته الخاصة.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 119. Appeared: 2024-06-04 (18:48)
+</p>
+<hr>
+<p>
+لقد طوَّفتَ ما طوفتَ ومضيتَ في دروبٍ كثيرة ولم تعثُر على السعادة في أيِّ دربٍ منها؛ لم تعثر
+عليها في المنطق، ولا في الثروة، ولا في المجد، ولا في المتعة، ولا في أي شيء. أين
+إذن يمكن أن تجدها؟ في أن تفعل ما تقتضيه طبيعةُ الإنسان. وكيف تفعل ذلك؟ بأن تكون
+لديك مبادئُ تحكم رغباتك وأفعالك. ما هي هذه المبادئ؟ تلك المتصلة بالخير والشر؛
+اليقين بأنه لا شيء يُعَد خيرًا للإنسان ما لم يجعله عادلًا، ومعتدلًا، وشهمًا، وحرًّا، ولا
+شيء يُعَد شرَّا ما لم يجعله عكس ذلك.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 112. Appeared: 2024-06-04 (18:45)
+</p>
+<hr>
+<p>
+كيف تفهم خيرك الخاص؟ عاشق الشهرة يجعل خيره في استجابات غيره. عاشق اللذة يجعل
+خيره في خبرته السلبية. أما الحكيم فيرى خيره هو أفعاله ذاتها.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 93. Appeared: 2024-06-04 (18:41)
+</p>
+<hr>
+<p>
+أفِق من نومك، عُد لرشك، لتدرك أن كل الذي عكر صفوك كان أضغاث أحلام. وقد استعدت وعيك
+مرة ثانية انظر إلى هذه الأشياء مثلما كنت تنظر إلى تلك الأحلام.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 88. Appeared: 2024-06-04 (18:39)
+</p>
+<hr>
+<p>
+من العار أن تخذلك الروح في هذه الحياة قبل أن يخذلك جسمك.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 88. Appeared: 2024-06-04 (18:38)
+</p>
+<hr>
+<p>
+إنه الليل: هي ذي الينابيع الفياضة ترفع صوتها في حديث مسموع. روحي أيضًا هي ينبوعٌ
+فياض. إنه الليل: هي ذي أغاني المحبين تستقيظ الآن. وروحي أيضًا هي أغنية محبّ. نورٌ
+أنا، ليلٌ أنا، تلك هي وحدتي؛ أن أكون متمنطقًا بحزامٍ من نور.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 210. Appeared: 2024-04-25 (19:54)
+</p>
+<hr>
+<p>
+ينبغي أن نضع في حُسباننا، ليس فقط أن الحياةَ تنقضي يومًا بعد يوم وأن رصيدَنا الباقي
+يتناقص، بل أيضًا أننا إذا امتدَّ بنا الأجلُ فلا ضامن لنا أن عقولنا ستظل محتفظةً
+بالقُدرة على فهم العالم وتأمُّله، تلك القدرة التي تُشكِّل خبرتنا بالأمور الإلهية
+والإنسانية. فإذا أدرَكَنا العَتَهُ فلن يتوقَّفَ فينا التنفسُ ولا الغذاءُ ولا الخيالُ ولا
+الرغبة، بل قبل أن تذهب هذه سيذهب استخدامُ المرء لنفسه استخدامًا صحيحًا، تقديرُه
+الدقيق لما يتوجب فعله، قدرتُه على تحليل الانطباعات، وعلى معرفة هل عليه أن يرحل
+مختارًا عن الحياة٢ أو لا، هذه وكل الأمور الأخرى التي تتطلب حسابًا حصيفًا. فلنُعجِّل
+إذن، ليس فقط لأن الموت يدنو حثيثًا، بل أيضًا لأن قدرتنا الفكرية على معرفةِ الطبيعةِ
+الحقَّة للأشياء وتسيير أفعالنا وفقًا لهذه المعرفة سيعروها الزوال قبلنا.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 45. Appeared: 2024-04-25 (19:31)
+</p>
+<hr>
+<p>
+لا تُضيِّع ما تبقَّى من عمرك في الانشغال بالغير، ما لم يكن ذلك تصلًا بوجهٍ ما من أوجه
+الخير العام. لماذا تُجرد نفسك من الوقت من أجل مهمةٍ أخرى؟ أعني أن التفكير حول
+فلان، ماذا عساه يفعل ولماذا يقول أو يُضمر أو يُخطِّط وكل هذا الخط من التفكير، يَضِلُّ
+بك عن التأمُّل الدقيق في عقلك المُوجِّه نفسه.
+</p>
+
+<p>
+لا … عليك أن تجتنب في مسار فكرك كل ما ليس له هدفٌ أو فائدة، وبخاصةٍ كلَّ ما هو فضوليٌّ
+خبيث. رُض نفسك على ألا تُجيل بخاطرك إلا تلك الأفكارَ التي بوُسعِكَ إن سُئلتَ فجأةً: «فيم
+تفكر الآن؟» أن تقول لتوِّك ما هي بصراحةٍ فتكون إجابتك دليلًا على أن أفكارك مستقيمةٌ
+وحسنةٌ وتليق بكائنٍ اجتماعيٍّ لا يُلقي بالًا لخيالات اللذة أو المُتع الحسية على
+الإطلاق، ومُبرَّأٍ من أي غَيرةٍ أو حسدٍ أو شكٍّ أو أي شيءٍ يُخجِل المرء من أن يعترف أنه خَطَرَ
+له.
+</p>
+
+<p>
+فإنسانٌ مثل هذا، إذا لم يعُد يتنازل عن مكانه بين الصفوة الأخيار، هو أَشبَه بكاهنٍ
+وخادمٍ للآلهة، إنه يُلبِّي نداء الأُلوهة القابعة داخله، والتي تجعل المرء غير مُلطَّخ
+بالملذَّات وغير مُنغَّص بالآلام، لا تناله الإهانة ولا يعرف الخبث … مقاتلًا في أنبل حرب
+… لا يَجرِفه أيُّ انفعال، مُتشرِّبًا بالعدل حتى النُّخاع، يتقبل بمِلءِ قلبِه كُلَّ ما يُصِيبه وكلَّ
+ما هو مقسومٌ له، وقلما يتطلع إلى الآخرِين ما عساهم يقولون أو يفعلون أو يُفكِّرون؛
+فبِحَسْبه ما يُكِبُّ عليه من عمل لكي يُتِمَّه، وبِحَسْبه نصيبُه المقدورُ من «الكل» لكي ينصرف
+إليه بهمةٍ لا تنقطع. فأمَّا عمله فيتقنه أيَّما إتقان، وأما نصيبه المقدور فهو قانع به؛
+فنصيب كل امرئٍ هو رفيق رحلته وهو حادِيه في آنٍ معًا. <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+Perhaps this description might be used to answer the nightly self-questioning states; who I am? who I want to be? what do I admire?
+</span>
+</p>
+
+<p>
+وهو يذكر أيضًا أن كل كائنٍ عاقلٍ هو قريبُه، وأن رعاية جميع البشر هي أمرٌ تقتضيه طبيعة
+الإنسان. وعلى المرء ألَّا يتخذ آراء الجميع بل آراء الذين يعيشون وفق الطبيعة فحَسْب.
+أمَّا أولئك الذين لا يعيشون كذلك فإنه لَيذكر دائما أي صِنفٍ من البشر هم في بيوتهم
+وخارجها، في ليلهم ونهارهم، يذكر ماذا يكونون ومع من يعيشون حياتهم الآثمة؛ وبالتالي
+فهو يزدري أي إطراءٍ يأتي من مثل هؤلاء، إنهم أناسٌ غيرُ راضِين حتى عن أنفسهم.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 48. Appeared: 2024-04-25 (19:27)
+</p>
+<hr>
+<p>
+ما كان يومًا جهل المرء بما يدور في رءوس الآخرين سببًا للتعاسة والشقاء. إنما الشقي
+من لا ينتبه إلى خَطَرات عقله هو، ولا يهتدي؛ من ثم، بعديه وإرشاده.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 40. Appeared: 2024-04-17 (11:25)
+</p>
+<hr>
+<p>
+كم ذا تُسوفِف هذا وتُرجئه، وكم تمنحك الآلهة فرصة فتضيعها. ألم يأن لك أن تفهم هذا
+العالم الذي أنت جزءٌ منه وتفهم مُدبر هذا العالم الذي أنت فيقٌ منه؟ ألا تدرك أن هناك
+حدًا لعمرك، فإذا لم تستغله لتبديد غيومك فسوف يذهب العمر وسوف تذهب ولن تعود الفرصة
+مرة أخرى؟
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 39. Appeared: 2024-04-09 (23:30)
+</p>
+<hr>
+<p>
+إعراب القلوب على أربعة أنواع: رفع وفتح وخفض ووقف، فرفع القلب في ذكر الله، وفتح
+القلب في الرضا عن الله، وخفض القلب في الاشتغال بغير الله، ووقف القلب في الغفلة
+عن الله، ألا ترى أن العبد إذا ذكر الله بالتعظيم خالصا ارتفع كل حجاب كان بينه
+وبين الله من قبل ذلك، وإذا انقاد القلب لمورد قضاء الله بشرط الرضا عنه كيف ينفتح
+القلب بالسرور والروح والراحة، وإذا اشتغل قلبه بشئ من أسباب الدنيا كيف تجده إذا
+ذكر الله بعد ذلك وآياته منخفضا [مظلما] كبيت خراب خاويا، وليس فيه العمارة ولا
+مؤنس، وإذا غفل عن ذكر الله كيف تراه بعد ذلك موقوفا محجوبا قد قسي وأظلم منذ فارق
+نور التعظيم.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_19">al-Ghazali and (editor), 1993</a>), no. 231. Appeared: 2024-03-06 (04:43)
+</p>
+<hr>
+<p>
+A worm squirms when it is trodden on. Clever move. By doing so it reduces the probability of being trodden on again. In the language of morality: humility.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_11">Nietzsche and Large, 1998</a>), no. 16. Appeared: 2024-02-24 (03:29)
+</p>
+<hr>
+<p>
+What? you are searching? you would like to multiply yourself by ten, by a
+hundred? you are looking for followers? Look for zeros<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+Zarathustra always rejected his followers: &ldquo;&#x2026; and only when you have
+all denied me will I return to you. Indeed, with different eyes, my brothers,
+will I then seek my lost ones; with a different love will I love you
+then.&rdquo; (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a> p. 59)
+</span>
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_11">Nietzsche and Large, 1998</a>), no. 12. Appeared: 2024-02-24 (03:19)
+</p>
+<hr>
+
+<p>
+When your heart flows broad and full like a river, a blessing and a danger
+to adjacent dwellers: there is the origin of your virtue. <br>
+When you are sublimely above praise and blame, and your will wants
+to command all things, as the will of a lover: there is the origin of your
+virtue. <br>
+When you despise pleasantness and the soft bed, and cannot bed down
+far enough away from the softies: there is the origin of your virtue. <br>
+When you are the ones who will with a single will, and this turning
+point of all need points to your necessity: there is the origin of your virtue.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 153. Appeared: 2024-02-24 (02:43)
+</p>
+<hr>
+<p>
+Die at the right time: thus Zarathustra teaches it.  To be sure, how could the
+person who never lives at the right time ever die at the right time? Would that
+he were never born! – Thus I advise the superfluous.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 143. Appeared: 2024-02-19 (21:42)
+</p>
+<hr>
+<p>
+The scientist does not study nature because it is useful; he studies it because
+he delights in it, and he delights in it because it is beautiful. If nature were
+not beautiful, it would not be worth knowing, and if nature were not worth
+knowing, life would not be worth living. Of course I do not here speak of that
+beauty that strikes the senses, the beauty of qualities and appearances; not
+that I undervalue such beauty, far from it, but it has nothing to do with
+science; I mean that profounder beauty which comes from the harmonious order of
+the parts, and which a pure intelligence can grasp.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_4">Flake, 1998</a>), no. 11. Appeared: 2024-02-09 (12:27)
+</p>
+<hr>
+<p>
+We ought to observe also that even the things which follow after the things
+which are produced according to nature contain something pleasing and
+attractive. For instance, when bread is baked some parts are split at the
+surface, and these parts which thus open, and have a certain fashion contrary to
+the purpose of the baker&rsquo;s art, are beautiful in a manner, and in a peculiar way
+excite a desire for eating. And again, figs, when they are quite ripe, gape
+open; and in the ripe olives the very circumstance of their being near to
+rottenness adds a peculiar beauty to the fruit. And the ears of corn bending
+down, and the lion&rsquo;s eyebrows, and the foam which flows from the mouth of wild
+boars, and many other things,—though they are far from being beautiful if a man
+should examine them severally,—still, because they are consequent upon the
+things which are formed by nature, help to adorn them, and they please the mind;
+so that if a man should have a feeling and deeper insight with respect to the
+things which are produced in the universe, there is hardly one of those which
+follow by way of consequence which will not seem to him to be in a manner
+disposed so as to give pleasure. And so he will see even the real gaping jaws of
+wild beasts with no less pleasure than those which painters and sculptors show
+by imitation; and in an old woman and an old man he will be able to see a
+certain maturity and comeliness; and the attractive loveliness of young persons
+he will be able to look on with chaste eyes; and many such things will present
+themselves, not pleasing to every man, but to him only who has become truly
+familiar with Nature and her works.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 46. Appeared: 2024-02-05 (22:40)
+</p>
+<hr>
+<p>
+Courageous, unconcerned, sarcastic, violent – thus wisdom wants us: she is a
+woman and always loves only a warrior. <br>
+You say to me: “Life is hard to bear.” But why would you have your
+pride in the morning and your resignation in the evening?
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 105. Appeared: 2024-02-04 (23:11)
+</p>
+<hr>
+<p>
+Mankind is a rope fastened between animal and overman – a rope over
+an abyss. <br>
+A dangerous crossing, a dangerous on-the-way, a dangerous looking
+back, a dangerous shuddering and standing still.
+</p>
+
+<p>
+I love those who do not know how to live unless by going under, for
+they are the ones who cross over. <br>
+I love the great despisers, because they are the great venerators and
+arrows of longing for the other shore. <br>
+</p>
+
+<p>
+I love those who do not first seek behind the stars for a reason to go
+under and be a sacrifice, who instead sacrifice themselves for the earth, so
+that the earth may one day become the overman’s. <br>
+I love the one who lives in order to know, and who wants to know so
+that one day the overman may live. And so he wants his going under. <br>
+I love the one who works and invents in order to build a house for the
+overman and to prepare earth, animals and plants for him: for thus he
+wants his going under. <br>
+I love the one who loves his virtue: for virtue is the will to going under
+and an arrow of longing. <br>
+I love the one who does not hold back a single drop of spirit for himself,
+but wants instead to be entirely the spirit of his virtue: thus he strides as
+spirit over the bridge. <br>
+I love the one who makes of his virtue his desire and his doom: thus
+for the sake of his virtue he wants to live on and to live no more. <br>
+I love the one who does not want to have too many virtues. One virtue
+is more virtue than two, because it is more of a hook on which his doom
+may hang.<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">This view is very similar to the one mentioned in
+(<a href="#citeproc_bib_item_13">Nietzsche, 1998, 325</a>): The means of becoming the prophet and wonder-worker
+of one&rsquo;s age are the same to-day as in former times: one must live apart, with
+little knowledge, some ideas, and a great deal of presumption—we then finish by
+believing that mankind cannot do without us, because it is clear that we can do
+without it.  When we are inspired with this belief we find faith. Finally, a
+piece of advice to him who needs it (it was given to Wesley by Boehler, his
+spiritual teacher): “Preach faith until you have it; then you will preach it
+because you have it!</span> <br>
+I love the one whose soul squanders itself, who wants no thanks and
+gives none back: for he always gives and does not want to preserve
+himself. <br>
+I love the one who is ashamed when the dice fall to his fortune and who
+then asks: am I a cheater? – For he wants to perish. <br>
+I love the one who casts golden words before his deeds and always does
+even more than he promises: for he wants his going under. <br>
+I love the one who justifies people of the future and redeems those of
+the past: for he wants to perish of those in the present. <br>
+I love the one who chastises his god, because he loves his god: for he
+must perish of the wrath of his god. <br>
+I love the one whose soul is deep even when wounded, and who can
+perish of a small experience: thus he goes gladly over the bridge. <br>
+I love the one whose soul is overfull, so that he forgets himself, and all
+things are in him: thus all things become his going under. <br>
+I love the one who is free of spirit and heart: thus his head is only the
+entrails of his heart, but his heart drives him to his going under. <br>
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 47. Appeared: 2024-01-16 (01:11)
+</p>
+<hr>
+<p>
+“They do not understand me. I am not the mouth for these ears.  Too long
+apparently I lived in the mountains, too much I listened to brooks and trees:
+now I speak to them as to goatherds.
+</p>
+
+<p>
+My soul is calm and bright as the morning mountains. But they believe I am cold,
+that I jeer, that I deal in terrible jests.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a>), no. 53. Appeared: 2024-01-16 (01:08)
+</p>
+<hr>
+<p>
+يسلب دين الاستحمار مسؤولياتي تجاه مجتمعي بطريقتين: الأولى يأخذ مني إمكانياتي
+ومواهبي التي أملكها ويحرمني منها، فيلزمني أن استعيدها من أجل كوني &ldquo;إنسانًا&rdquo; ومن
+أجل &ldquo;درايتي الإنسانية&rdquo;. كما ينبغي علي أن أرفض الظلم من أجل الحاجة إلى العدالة.
+أما دين الاستحمار فيدعوني إلى التمكين من الظلم والفقر والسكون والصبر، ويكلني إلى
+الله ويزيح عني كل مسؤولية.
+</p>
+
+<p>
+والثانية: حين أرى نفسي مقصرًا ، خائنًا، مسيئًا إلى المجتمع ومصيره، أقع تحت ضغط
+مسؤولية ضميري فتجرني &ldquo;الدراية الاجتماعية&rdquo; إلى أن أرجع حقوق الناس إليهم،
+واستسمحهم فيما فرط في جانبهم [والحق هنا قد يكون أي شيء، كالدفاع عن الناس مثلًا].
+لكن دين الاستحمار يموه علي ويقول لي: صحيح أنك خنت وبعت مصير الناس الآخرين، إلا
+أنك لا تستطيع أن ترجع حقوقهم عليهم وليس هذا صوابًا، هناك ما هو أسهل. ما هو؟ أن
+تقرأ هذه الكلمات ست مرات وأنت متجه نحو القبلة، ولن يبقى عليك شيء، وستغفر ذنوبك
+كلها لأنك حينها ستنال الشفاعة.
+</p>
+
+<p>
+ثم تتساءل: إذًا لأي شيء أتحمل ثقل المسؤولية الاجتماعية؟ لماذا؟ إذا كانت مسؤولياتي
+نحو الناس وحياتهم الاجتماعية تلزمني أن أموت من أجلهم، وأضحي بنفسي في سبيلهم،
+فهناك طريقة أسهل! وهي كتاب الأدعية. فإنه يفتح لي أبواب الجنان من غير تعب ولا
+نصب، ولا مشقة، ولا تشويش، وبدون (إحساس) أو فكر، وبدون أي مسؤولية. كفى أن تدخل
+السرور في قلب أحدهم أو تقضي حاجة أحد، فإنه سيمحي كل ذنوبك ويبدل سيئاتك حسنات،
+ويقضي عنك كل المسؤوليات الاجتماعية. هذا هو دين الاستحمار.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_16">Shariati, 2007</a>), no. 111. Appeared: 2024-01-08 (20:01)
+</p>
+<hr>
+<p>
+أريد بالدين هُنا الدين غير التوارث حسب السنن والعادات، لأن الأديان الوراثية كلها
+متشابهة، فالشيء الذي يتخذ وراثة وسنة واعتيادًا من غير علم وبصيرة كيف كان، ومهما
+كان، هو مردود لا فرق بين أن يكون مذهب الشيعة أو السنة أو الدين البوذي أو المسيحي
+أو الإسلامي. إذ لا درجات في الجهل. لذا فإن البحث يدور على &ldquo;الدين الأرقى من
+العلم&rdquo; لا الدين الذي لقن تلقينًا واستلمه الخلف عن السلف كمجموعة عادات وسنن
+تقليدية مكررة. إن الجيل الواعي يرفض هذه السنن والخصائص الموروثة اللاعقلانية ولا
+يستمع لها، وإن لم يكن قد القاها في المهملات بعد، فإنه سيلقيها غدًا. هذا شيء
+محتوم.
+</p>
+
+<p>
+إني اتطلع وأفكر في خط السير الذي تسير عليه هذه البادرة. مثلًا يتمرد الجيل الوراثي
+في مجتعمنا على السنن اللاعقلانية التي حملت إليه أولًا فيرفضها كلها، ثم يصل إلى
+مرحلة فارغة تمامًا، هي الوجل والاضطراب والبحث والريبة والحاجة إلى كشف الطريق، وفي
+النهاية يجده. إن اكتشاف الدين بعد رفض السنن الوراثية المتحجرة، هو الشيء الذي
+يعرض اليوم على مستوى إيران، وليس على مستوى مجتمعاتنا الدينية فحسب، بل على مستوى
+المثقفين في العالم كله. وعلى مستوى ضمير هذا الجيلمن لشباب الواعد المتمرد في
+عصرنا الحاضر.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_16">Shariati, 2007</a>), no. 70. Appeared: 2024-01-08 (20:01)
+</p>
+<hr>
+<div class="notes"> <p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2023-09-10 Sun 12:58]--[2023-09-10 Sun 13:08] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+ </div>
+<p>
+إلى أي حد يحب المفكر عدوه. يجب ألا تحتفظ أبدًا أو تخفي أمام نفسك أي شيء مما قد
+تتم به معارضة أفكارك. اقطع على نفسك نذرًا بهذا. هذا جزء من الاستقامة الأساسية.
+يجب كذلك أن تقوم بحملة ضد نفسك كل يوم. لم يعد من شأنك الانتصار أو احتلال قلعة
+ما، بل من شأن الحقيقة، — كما أن هزيمتك لم تعد من شأنك هي الأخرى.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_13">Nietzsche, 1998</a>), no. 201. Appeared: 2024-01-08 (20:01)
+</p>
+<hr>
+<p>
+لا زالت الوسيلة التي يصبح بها المرء نبي عصره وصانع معجزاته كما كانت في الماضي
+لم تتغير: عليه أن يعيش على الهامش، بقليل من المعرفة، بعض الأفكار والكثير من
+الزهو، وفي الأخير سيشعر بأن الإنسانية لا يمكنها الاستغناء عنه لأنه من الواضح جدًا
+أنه يستطيع الاستغناء عنها. بمجرد ما يصبح هذا الشعور قويًا لديه يحظى بتصديق الناس
+عليه.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_13">Nietzsche, 1998</a>), no. 190. Appeared: 2024-01-08 (20:01)
+</p>
+<hr>
+<p>
+إن لي ست طرق على الأقل في محاربة عنف غريزة ما. أولًا، يمكننا أن نتملص من
+الاستجابة لبواعث تربية رغبة ما، أو أن نضعف تلك الرغبة بامتناعنا عن تلبيتها عبر
+مدد زمنية تصبح أطول وأطول. ثانيًا، قد نسن لأنفسنا قانونًا صارمًا ومنتظمًا بخصوص
+إشباع شهواتنا: وهكذا نخضعها لقاعدة، نحصر مدها وجزرها بين حدود ثابتة، لنربح
+الفواصل التي لا تكون فيها مزعجة؛ وربما نصل بهذا للطريقة الأولى. ثالثًا، قد نستسلم،
+عن قصد، لإشباع رغبة جامحة وشرسة إلى حد الاشمئزاز، لتصبح لنا، من خلال ذلك
+الاشمئزاز، سلطة على الغريزة: إذا سلمنا بأننا لن نفعل مثل الفارس الذي تكسرت عنقه
+وهو يحاول إنهاك حصانه—وتلك هي القاعدة مع الأسف في تلك المحاولات. رابعًا، هناك
+ممارسة فكرية تقضي ربط فكرة شاقة بفكرة الإشباع بشكل مكثف بحيث تصبح هاته الفكرة
+نفسها مع الاعتياد عليها، شاقة في كل مرة أكثر فأكثر. يجب كذلك أن نذكر هنا كبرياء
+الإنسان الذي يثور كما فعل بايرون ونابليون، الذين شعرا بهيمنة الهوى على مظهر
+العقل وقاعدته العامة كإهانة: وهذا هو مصدر عادة وفرحة الطغيان على الغريزة
+وتحطيمها نوعًا ما، &ldquo;لا أريد أن أكود عبد أية رغبة كانت&rdquo;. خامسًا: يشرع المرء في
+التخلص من القوى التي راكمها بإرغام نفسه على القيام بعمل شاق ومتعب، أو باستسلامه
+عن قصد لإغراءات وملذات جديدة ليوجه بذلك أفكاره ولعبة قواه البدنية وجهة جديدة.
+[..] سادسًا وأخيرًا: الذي يتحمل إضعاف وإحباط كل قواه البدنية والنفسية ويجد ذلك
+أمرًا معقولًا، يتمكن في نفس الوقت من إضعاف غريزة خاصة شديدة العنف: كما يفعل الذي
+لا يشبع شهوته الجنسية ويدمر في الوقت ذاته قوته، وعقله في الغالب، على طريقة
+الزاهد. الطرق الست هي إذًا: تفادي الفرص السانحة، إقحام القاعدة في الغريزة، إثارة
+الشعور بالشبع والنفور من الغريزة وربطه بفكرة معذبة (كفكرة الخجل، والعواقب
+الوخيمة أو الكبرياء والمهانة)، ثم تشتت القُوَى وأخيرًا الضعف والإنهاك الشامل. لكننا
+لا نملك إرادة محاربة عنف غريزة ما، مثلما لا نملك الطريقة التي قد نهتدي إليها
+والنجاح الذي قد نحققه من ورائها. وما عقلنا في هاته القضية سوى أداة عمياء في يد
+غريزة هي منافسة الغريزة التي تعذبنا، سواء كانت الحاجة للراحة، أو الخوف من العار
+وغيره من العواقب الوخيمة، أو الحب. لهذا حين نعتقد أننا نشتكي من عنف غريزة ما،
+فإنها في الحقيقة غريزة هي التي تشتكي غريزة أخرى. وهو ما يعني أن إدراك المعاناة
+التي يسببها لنا مثل هذا العنف يكون مشروطًا بغريزة أخرى عنيفة مثله، أو أشد منه
+عنفًا، وأن صراعًا ما يتهيأ وسيكون عقلنا مجبرًا على خوض غماره.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_13">Nietzsche, 1998</a>), no. 77. Appeared: 2024-01-08 (20:00)
+</p>
+<hr>
+
+<p>
+Remember how long thou hast been putting off these things, and how often thou
+hast received an opportunity from the gods, and yet dost not use it. Thou must
+now at last perceive of what universe thou art a part, and of what administrator
+of the universe thy existence is an efflux, and that a limit of time is fixed
+for thee, which if thou dost not use for clearing away the clouds from thy mind,
+it will go and thou wilt go, and it will never return.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 9. Appeared: 2024-01-08 (20:00)
+</p>
+<hr>
+<p>
+الأحاسيس وارتباطها بالأحكام. — &ldquo;ثق في إحساسك!&rdquo; — ولكن الأحاسيس ليست نهائية، ليست
+أصلية؛ وراء الأحاسيس هناك الأحكام والتقديرات التي نقلت إلينا على شكل أحاسيس
+(الميل لهذا العمل والنفور من ذاك). الإلهام الذي يأتينا من إحساس ما هو وليد —
+وغالبًا ما يكون حكمًا خاطئًا — هو لا يكون حكمًا أصدرته أنت. أن يثق المرء في أحاسيسه
+معناه أن يطيع جده، وجدته وآباءهم الأولين أكثر ما يطيع الآلهة التي فينا، أي عقلنا
+وتجربتنا.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_13">Nietzsche, 1998</a>), no. 33. Appeared: 2024-01-08 (20:00)
+</p>
+<hr>
+<p>
+Through not observing what is in the mind of another a man has seldom been seen
+to be unhappy; but those who do not observe the movements of their own minds
+must of necessity be unhappy.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_2">Aurelius, 2012</a>), no. 9. Appeared: 2024-01-08 (19:59)
+</p>
+<hr>
+<p>
+تعلم الوحدة. — أيها الصعاليك، يا من تقطنون المدن الكبرى للسياسة العالمية، أيها
+الشبان الموهوبون، الذين يعذبكم الغرور، أتعتقدون أن واجبكم هو أن تعبروا عن رأيكم
+في الأحداث (لأن هناك دائمًا حدثا ما)! تعتقدون أنكم حين تثيرون هذا الغبار والضجيج
+تصبحون أنتم من يقود التاريخ! تترقبون دائمًا وتنتظرون اللحظة المناسبة لتخاطبوا
+الجماهير، وبهذا تفقدوا كل إبداعية حقيقية! مهما تكن الرغبة التي تبدونها في تحقيق
+أعمال كبرى فإن صمت النضج المطبق لا يأتي إليكم! يسوقكم حدث اليوم كما تذهب الريح
+بالقش الخفيف، وأنتم تتوهمون أنكم تسوقون الحدث.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_13">Nietzsche, 1998</a>), no. 125. Appeared: 2024-01-08 (19:59)
+</p>
+<hr>
+<p>
+إن المجتمعات المتأخرة لها مصير متشابه وحاجة واحدة وانتخاب واحد، لأنها تواجه قدرة
+متشابهة في زمان واحد ومشترك. إما أن يختار الفكر أولًا أو الحضارة من غير الفكر.
+وأعني بالحضارة الشيء الذي يخرجه المتحضرون لنا. كشفت التجارب طيلة الثلاثين
+والعشرين سنة الأخيرة، أن المجتمعات التي بدأت من نقطة عقائدية، وتحركت بعد تحقق
+وعيها الفردي والاجتماعي، قد وقفت اليوم في صف القدرات التي تصنع الحضارة العالمية.
+لكن المجتمعات التي اقتدت بالحضارة الغربية بدون وعي اجتماعي، أو شعور إنساني
+بالوعي الفردي، وبدون عقيدة بل نهضة كاذة، قد ظلت مسخرة للحضارة الغربية، مستهلكة
+على الدوام، خاضعة للذل والعبودية
+</p>
+
+
+<p>
+— فرانز فنون.
+</p>
+
+<p>
+أما ذا كان ليس همه سوى الصنعة والاقتدار والرأسمالية وما يسمى اليوم بالتقدم
+العلمي والصناعي فإنه يبقى مستهلكًا وإن ظن نفسه منتجًا. وهذه الخديعة الكبرى التي
+وقعت فيها جميع البلاد المتأخرة.
+</p>
+
+<p>
+— علي شريعتي.
+</p>
+
+
+
+<p>
+<i>Derived from</i> (<a href="#citeproc_bib_item_16">Shariati, 2007</a>), no. 68. Appeared: 2024-01-08 (19:59)
+</p>
+<hr>
+</div>
+</div>
+<div id="outline-container-orgc909eba" class="outline-2">
+<h2 id="orgc909eba">Bibliography</h2>
+<div class="outline-text-2" id="text-orgc909eba">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Al-Bahai, B.A.-D.M.B.A.-H.A.-H.A.-A., 1990. Al-kashkool.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Aurelius, M., 2012. <a href="https://libgen.li/file.php?md5=1169f89cf3cb237fa6b11a8acad7ea9a">The thoughts of marcus aurelius</a>. Duke Classics.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Caputo, J.D., Critchley, S., 2008. <a href="http://gen.lib.rus.ec/book/index.php?md5=6b2b51bd1ced94aca081bd78fdad10fc">How to read kierkegaard</a>, 1st American ed. ed, How to read. W. W. Norton &#38; Co.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Flake, G.W., 1998. <a href="https://libgen.li/file.php?md5=4011fa58915a5e21af7680dabb8afec0">The computational beauty of nature: Computer explorations of fractals, chaos, complex systems, and adaptation</a>, Hardcover. ed. MIT Press (MA).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Gardiner, P., 2002. Kierkegaard: A Very Short Introduction. Oxford University Press. <a href="https://doi.org/10.1093/actrade/9780192802569.001.0001">https://doi.org/10.1093/actrade/9780192802569.001.0001</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Hannay, S.K.A., 2015. <a href="https://libgen.li/file.php?md5=faa092728057f0073426c26b92f5eb8a">Papers and journals</a>. Penguin Books Ltd.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>Hunt, E.K., Lautzenheiser, M., 2011. <a href="https://libgen.li/file.php?md5=188a57ff70f7f07f017ce5229b33a5ee">History of economic thought: A critical perspective</a>, 3rd ed. M.E. Sharpe.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>Ibn Hazm, A.M.A., 1993. Tawq al-hamamah fi al-ulfah wa-al-ullaf. Dar al-Hilal, Cairo.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_9"></a>Nietzsche, F., 2009a. Diwan nietzsche, 2nd ed. Manshurat al-Jamal, Beirut–Baghdad.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_10"></a>Nietzsche, F., 2009b. Ecce homo. Oxford University Press. <a href="https://doi.org/10.1093/owc/9780199552566.001.0001">https://doi.org/10.1093/owc/9780199552566.001.0001</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_11"></a>Nietzsche, F., Large, D., 1998. <a href="https://libgen.li/file.php?md5=7bb38c07f15bbd85dc7122a97bf80c16">Twilight of the idols: or how to philosophize with a hammer</a>, Oxford world’s classics. Oxford University Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_12"></a>Nietzsche, F.W., 2007. Thus spoke zarathustra history of philosophy friedrich nietzsche. Al-Kamel Verlag.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_13"></a>Nietzsche, F.W., 1998. The dawn of day. Dover Publications.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_14"></a>Quignard, P., 2019. Sex and terror. Seagull Books.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_15"></a>Rousseau, J.-J., 2015. Reveries of the solitary walker, First. ed. Arab Organization for Translation, Beirut.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_16"></a>Shariati, A., 2007. Al-nanahaah and al-estehmar, Complete wroks. Dar al-Amir, Lebanon.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_17"></a>Tolstoy, L., 2022. What should we do? Jadal Publishing, Kuwait.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_18"></a>al-Akbari, A.a.-B., al-Saqa, M., al-Ibiari, I., Shalabi, A., 1997. Al-tibyan fi sharh al-diwan. Dar al-Ma’rifah, Lebanon.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_19"></a>al-Ghazali, A.H., (editor), I.A., 1993. Majmu’at rasail al-imam al-ghazali. Al-Maktaba Al-Tawfiqiyya, Cairo, Egypt.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_20"></a>ibn Al-Muqaffa’a, A., 2019. Al-durrah al-yateemah. Hindawi.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_21"></a>ibn Al-Muqaffa’a, A., 1997. Al-athar al-kamila. Dar al-Arqam ibn Abi al-Arqm for Printing, Publishing and Distribution, Lebanon.</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.-14-1" class="footnum" href="#fnr.-14-1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Perhaps this description might be used to answer the nightly self-questioning states; who I am? who I want to be? what do I admire?
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-17-1" class="footnum" href="#fnr.-17-1" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Zarathustra always rejected his followers: &ldquo;&#x2026; and only when you have
+all denied me will I return to you. Indeed, with different eyes, my brothers,
+will I then seek my lost ones; with a different love will I love you
+then.&rdquo; (<a href="#citeproc_bib_item_12">Nietzsche, 2007</a> p. 59)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This view is very similar to the one mentioned in
+(<a href="#citeproc_bib_item_13">Nietzsche, 1998, 325</a>): The means of becoming the prophet and wonder-worker
+of one&rsquo;s age are the same to-day as in former times: one must live apart, with
+little knowledge, some ideas, and a great deal of presumption—we then finish by
+believing that mankind cannot do without us, because it is clear that we can do
+without it.  When we are inspired with this belief we find faith. Finally, a
+piece of advice to him who needs it (it was given to Wesley by Boehler, his
+spiritual teacher): “Preach faith until you have it; then you will preach it
+because you have it!</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2024-01-07 Sun 12:25. Last build date: 2025-10-18 Sat 16:35.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

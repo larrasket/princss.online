@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bibliography</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+<script>document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-books'));</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Bibliography</h1>
+</header><div class="BACKLINKS" id="org0ad84aa">
+<p>
+This section was referenced in <a href="h/lingustics.html#8lucl1d0swj0">Linguistics</a>, <a href="h/propaganda.html#9kk956p02wj0">Propaganda</a>, <a href="h/me.html#a8bf37c4-358e-4f6c-866b-33c50e4e2b80">I can also paint</a>, <a href="t/mathematics.html#ej076sp02wj0">Mathematics</a>, <a href="p/nosalgic_bib.html#jene6a516ak0">Nostalgic Bibliography</a>, <a href="t/islam.html#nm0dxtp02wj0">Islam</a>, <a href="rlfo.html#p6s5gi81a3k0">Reading List (for others)</a>, <a href="t/chess.html#rgogo9p02wj0">Chess</a>, <a href="t/political.html#thc4j6p02wj0">Politics</a>, <a href="rbooks.html#uu37kln02wj0">Reading List</a>, and <a href="t/modus.html#ydb1kfn02wj0">Modus Vivendi</a>, and in 13 other private notes.
+</p>
+
+</div>
+
+<head>
+<style>
+
+
+@media screen and (max-width: 1089px) {
+
+.org-ul {
+font-size: 13px;
+    padding: 0;
+
+}
+
+}
+
+p:has(> a:target) {
+  background-color: #ffa;
+}
+
+
+  .footdef {
+    display: block !important;
+  }
+
+.tag span {
+    float: right;
+    margin-right: 0.5em;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    background-color: #eee;
+    line-height: 1;
+}
+
+.org-ul {
+}
+
+# .sidenote {
+#         display: none;
+# }
+
+
+.sidenote a, .footpara a {
+    word-break: break-all !important;
+}
+
+  .footnotes {
+    display: block !important;
+  }
+</style>
+</head>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-11-22 Sat 03:01]</span></span> I had a &ldquo;he is literally me&rdquo; reading a biography about Leonadrdo da Vinci: &ldquo;His notebooks are ﬁlled with lists of books he acquired and passages he copied.&rdquo; (<a href="#citeproc_bib_item_4">Isaacson, 2017</a>)</li>
+</ul>
+
+<p>
+These are neither the books I recommend nor the ones I countenance their views.
+This is a list of the documents/textbooks that I own (either physically or
+digitally), with some side notes that could be helpful.
+</p>
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-10-01 Tue 17:37]</span></span> A useful source for cultures and arts <a href="http://www.infocobuild.com/">http://www.infocobuild.com/</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2023-10-03 Tue 05:13]</span></span> If you are looking for new courses/topics to learn
+about, it&rsquo;s highly recommended that you watch this lecture by professor Noam Chomsky:
+<a href="https://youtu.be/2p9aKa08cRI">https://youtu.be/2p9aKa08cRI</a> <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+If the link is somehow broken, please search for &ldquo;Noam Chomsky University of Arizona
+on Feb. 8, 2012&rdquo; or by the title of the lecture: &ldquo;Noam Chomsky: Education For
+Whom and For What&rdquo;.
+</span></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2023-03-06 Mon 00:13]</span></span> I added some papers here too, I think this makes the
+&rsquo;books&rsquo; title a little bit misleading. Also I moved the books I regret
+reading, or the ones I wouldn&rsquo;t definitely reread to the &ldquo;inexpedient&rdquo; <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+As of <span class="timestamp-wrapper"><span class="timestamp">[2024-11-15 Fri 09:15]</span></span> this section no longer exists.
+</span>
+sections.</li>
+</ul>
+<div id="outline-container-org1e085bc" class="outline-2">
+<h2 id="org1e085bc">Humanities and the like</h2>
+<div class="outline-text-2" id="text-org1e085bc">
+<ul class="org-ul">
+<li>Conjectures and Refutations (Popper, K.)</li>
+<li>Analytic Philosophy of Religion (Harris, J. F.) <label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">
+An inequilateral note about reading <i>philosophy</i>; the vast majority of
+philosophy books is not worth reading, in fact it&rsquo;s painful to read it, which is
+a thing I realized too late (~1 year ago, thanks to a friend of mine allowed me
+to read his dissertation in <i>Obscurantism</i> of philosophers), a lot of philosophy
+books I&rsquo;ve read in my life was useful but not really that &rsquo;useful&rsquo;, this is not
+the best place to explain why, but I&rsquo;ll talk about this in the future Inshaa&rsquo;
+Allah. Also, read <a href="https://sophy.ca/blog/2013/03/how-not-to-write-in-philosophy/">How not to write in philosophy &#x2013; Against obscurantism</a>.
+</span></li>
+<li>The Concept of Religion (Schilbrack, K.)</li>
+<li>A History of Western Philosophy (Russell, B.)</li>
+<li>Utilitarianism (Lazari-Radek et al.)</li>
+<li>The Hero With a Thousand Faces (Campbell, J.)</li>
+<li>The Poetics of Iblis (Bodman, W.)</li>
+<li>Beyond Good and Evil (Nietzsche, F.)</li>
+<li>A Theologico-Political Treatise (Spinoza, B.)</li>
+<li>In Praise of Idleness and Other Essays (Russell, B.)</li>
+<li>History of the Western Philosophy and Theologyy (Frame, J.)</li>
+<li>Discipline and Punish (Foucault, M.)</li>
+<li>The Fragility of Consciousness (Lawrence, F.)</li>
+<li>The Conquest of Happiness (Russell, B.)</li>
+<li>The Interpretation of Cultures (Geertz, C.)</li>
+<li>The Open Society and its Enemies (Popper, K. R.)</li>
+<li>The Myth of the Framework (Popper, K. R.)</li>
+<li>All Life is Problem Solving (Popper, K. R.)</li>
+<li>After The Open Society (Popper, K. R.)</li>
+<li>Culture in a Liquid Modern World (Bauman, Z.)</li>
+<li>Anatomy of an Epidemic (Whitaker, R.)</li>
+<li>Sources of the Self (Taylor, C.)</li>
+<li>Against Method (Feyerabend, P.)</li>
+<li>Meditations on First Philosophy (Descartes, R.)</li>
+<li>The Cambridge Dictionary of Philosophy (Audi, R.)</li>
+<li>The History of Sexuality (Foucault, M.)</li>
+<li>A Culture of Ambiguity(Ahmed, L.)</li>
+<li>The Philosophical Question of Christ (Gilson, É.)</li>
+<li>Women in the Medieval Islamic World (Hambly, G. R. G.)</li>
+<li>The World (Descartes, R.)</li>
+<li>Desire and Love in Descartes&amp;rsquo;s Late Philosophy (Beavers, A)</li>
+<li>History of Religion (Tokarev, S.)</li>
+<li>Heidelberg, Spinoza and Academic Freedom (Gardiner, M.)</li>
+<li>Grounding for The Metaphysics of Morals (Kant, E.)</li>
+<li>Chomsky on Democracy and Education (Chomsky et al.)</li>
+<li>Schopenhauer: A Very Short Introduction (Janaway, C.)</li>
+<li>Spinoza: A Very Short Introduction (Scruton, R.)</li>
+<li>Kierkegaard: A Very Short Introduction (Gardiner, P.)</li>
+<li>How to Read Kierkegaard (Caputo et al.)</li>
+<li>Papers and Journals (Kierkegaard et al.)</li>
+<li>Animal Rights: A Very Short Introduction (DeGrazia, D.)</li>
+<li>The Highest Good in Aristotle and Kant (Aufderheide et al.)</li>
+<li>Violence and the Pornographic Imaginary (Purcell, N)</li>
+<li>Exposing the Harms of the Global Pornography Industry (Reist et al.)</li>
+<li>“The Rebirth of The West Begins With You!” (Elley, B.)</li>
+<li>On The Contrast Between Pity and Compassion in Nietzsche Philosophy (Obdrzalek, S.)</li>
+<li>Critical Thinking: A Concise Guide (Bowell et al.)</li>
+<li>The Story of Art (Gombrich, E. H.)</li>
+<li>Bodies as Objects and Property (Phillips, A.)</li>
+<li>The Problem of Induction (Henderson, L.)</li>
+<li>Philosophical Reflections on Black Mirror (Shaw et al.)</li>
+<li>Black Mirror: ‘The National Anthem’ (González et al.)<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">
+Very poor review.
+</span></li>
+<li>The National Anthem and Weighing Moral Obligations (Collins et al.)</li>
+<li>What is art? (Tolstoy, L.)</li>
+<li>The Structure of Scientific Revolutions (Kuhn, T. S.)</li>
+<li>Metaphysics of Love (Schopenhauer, A.)</li>
+<li>An Introduction to The Philosophy of Language (Morris, M.)</li>
+<li>The Revolutionary Ideas of Karl Marx (Callinicos, A.)</li>
+<li>LLMs Should Not Replace Mental Health Providers (Moore et al.)</li>
+<li>All Life is Problem Solving (Popper, K.)</li>
+</ul>
+</div>
+<div id="outline-container-org7a05f7a" class="outline-3">
+<h3 id="org7a05f7a">Modernism and Postmodernism</h3>
+<div class="outline-text-3" id="text-org7a05f7a">
+<ul class="org-ul">
+<li>Liquid Modernity (Bauman, Z.)</li>
+<li>Community: Seeking Safety in an Insecure World (Bauman, Z.)</li>
+<li>The Happiness Industry (Davies, W.)</li>
+<li>Thinking Sociologically (Bauman, Z.)</li>
+<li>Liquid Times: Living in an Age of Uncertainty (Bauman, Z.)</li>
+<li>Modernity and the Holocaust (Bauman, Z.)</li>
+<li>Consuming Life (Bauman, Z.)</li>
+<li>Liquid Love (Bauman, Z.)</li>
+<li>Liquid Life (Bauman, Z.)</li>
+<li>Liquid Fear (Bauman, Z.)</li>
+<li>Born Liquid (Bauman, Z.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org267e1bd" class="outline-3">
+<h3 id="org267e1bd">Other</h3>
+<div class="outline-text-3" id="text-org267e1bd">
+<ul class="org-ul">
+<li>ما وراء الحجاب (المرسيني، ف.)<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">
+Mernissi forces herself to act like an orientalist, however she ain&rsquo;t. Since I
+can&rsquo;t write a lot in this small box, I&rsquo;d like to point 3 important issues in
+this dissertation; 1. Usage of past-criticized Takhrij of some Hadiths, which
+was claimed by her in <i>Political Harem: The Prophet and Women</i> that it cannot
+be noted after the prophet, but was &rsquo;made up&rsquo; for interests. 2. Which is sorta
+correlated with 1, is the inference from history book like Tabaqat al-Kubra.
+We can not tell what is &rsquo;Islamic&rsquo; based on such late area of the Islamic
+History. However, if Mernissi surfs what is told to be &rsquo;Islamic&rsquo;, not what is
+&rsquo;Islamic&rsquo;, those 2 points are not valid. 3. Al-Ghazali used to address his
+students that were always men, which clarify why he gives advices about
+treating women, I couldn&rsquo;t interpret it like Mernissi did, that he meant
+&rsquo;Women are tools for men to help them pass through the hurdles of life&rsquo;. This
+is meaningless.
+</span></li>
+<li>الحريم السياسي (المرسيني، ف.)</li>
+<li>لعنة الألفية، لماذا يفشل النشاط التغييري؟ (صغبيني، ط)</li>
+<li>التخلف الاجتماعي، مدخل إلى سيكولوجية الإنسان المقهور (حجازي، م)</li>
+<li>Wahhabism (Subhani, J. A.)<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">
+It&rsquo;s sad that non-scientific (in the academic means) Islamic scholars can not
+write a readable argument without bloat it with x10 hate and swearing.
+</span></li>
+<li>Fifth Gospel of Nietzsche (Sloterdijk, P)<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">
+I think this book could make a use for me in the future in giving instances of
+how most of philosophy authors &amp; books are either pointless or obscure.
+</span></li>
+<li>هشام شرابي ونقد النظام الأبوي في المجتمع العربي (معزوز، ع)</li>
+<li>المأزق في الفكر الديني بين النص والواقع (الصالح، ن)</li>
+<li>المدينة الإسلامية والأصولية والإرهاب (الديالمي، ع)</li>
+<li>عنف اللغة (لوسركل، ج)</li>
+<li>مغامرة العقل الأولى (السواح، ف)</li>
+<li>قضايا (دراغمة، ج)</li>
+<li>دكتاتورية المستنيرين روح الإنسانوية العابرة وأهدافها <label for="8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="8" class="margin-toggle"/><span class="sidenote">
+Pretty much up-to-date version of &ldquo;The Protocols of the Elders of Zion&rdquo;.
+</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga460706" class="outline-2">
+<h2 id="orga460706">Science</h2>
+<div class="outline-text-2" id="text-orga460706">
+<ul class="org-ul">
+<li>The Computational Beauty of Nature (Flake, G. W.)<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote">
+On fractals, for computer scientists.
+</span></li>
+<li>Chaos and Fractals (Peitgen et al.)<label for="10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="10" class="margin-toggle"/><span class="sidenote">
+An advanced textbook on fractals.
+</span></li>
+<li>Fractals: A Very Short Introduction (Falconer, K. J.)</li>
+<li>Chaos (Gleick, J.)</li>
+<li>The Human Web (McNeill et al.)<label for="11" class="margin-toggle sidenote-number"></label><input type="checkbox" id="11" class="margin-toggle"/><span class="sidenote">
+I used to read it in my high school, I still remember that I enjoyed it more
+than any other history book I&rsquo;ve ever read.
+</span></li>
+<li>The Reluctant Mr. Darwin (Quammen, D.)</li>
+<li>Why We Get Sick (Nesse, R. M.)</li>
+<li>Being Mortal (Gawande, A.)</li>
+<li>Straight and Crooked Thinking (Thouless, R. H.)</li>
+<li>Quantum Theory: A Very Short Introduction (Polkinghorne, J.)</li>
+<li>Mathematics: A Very Short Introduction (Gowers, T.)</li>
+<li>The Fall of The Faculty (Ginsberg, B.)</li>
+<li>Cryptography: A Very Short Introduction (Piper et al.)</li>
+<li>Cosmology: A Very Short Introduction (Coles, P.)</li>
+<li>Choice Theory: A Very Short Introduction (Allingham, M.)</li>
+<li>Introduction to Probability and Statistics for Engineers and Scientists (Ross, S.)</li>
+<li>Enhancing Cognitive Abilities with Comprehensive Training (Hardy et al.)</li>
+<li>Thinking, Fast and Slow (Kahneman, D.)</li>
+<li>Expressive Writing Can Increase Working Memory Capacity (Klein et al.)</li>
+<li>Differentiation of Zaghrouta (Elshourbagy et al.)</li>
+<li>Holy Tweets: Exploring The Sharing of The Quran on Twitter (Abokhodair)</li>
+<li>Opening The Black Box of QS World University Rankings (Huang, M.)</li>
+<li>The Limits of Democratizing Science (Schroeder, S. A.)<label for="12" class="margin-toggle sidenote-number"></label><input type="checkbox" id="12" class="margin-toggle"/><span class="sidenote">
+I think the concept of democratizing science that this paper demonstrate
+falls to social norms: the author find that there are &ldquo;indeed certain situations
+in which scientists can reject the public’s judgments while remaining committed
+to democratizing science&rdquo; when some of those views are unacceptable by the
+&ldquo;scientist veto&rdquo;. But what&rsquo;s an unacceptable view (that still holds to be
+non-epistemic) that will not be subjective? The author gives an example: &ldquo;the
+public offers a horribly racist set of value judgments.&rdquo; A <i>horribly racist</i> is
+a highly subjective argument unlike it sounds, in fact, a racist government will
+accuse someone who is not racist (i.e. doesn&rsquo;t believe in their superiority) an
+infidel, blasphemer (in such a situation those words would have the same impact
+as racist) or even just racist for belittling the &ldquo;main race&rdquo;.
+</span></li>
+<li>The Unreasonable Effectiveness of Mathematics in the Natural Sciences (Wigner, E. P)
+Related: <a href="https://youtu.be/dK_narib4do?list=PLE418513C3CDF6C11&amp;t=152">https://youtu.be/dK_narib4do?list=PLE418513C3CDF6C11&amp;t=152</a></li>
+</ul>
+</div>
+<div id="outline-container-l9scma0070k0" class="outline-3">
+<h3 id="l9scma0070k0">Evolution and Evolutionary Science</h3>
+<div class="outline-text-3" id="text-org7661ea6">
+<p>
+The scientific theory of evolution by natural selection was conceived
+independently by two British naturalists, Charles Darwin and Alfred Russel
+Wallace, in the mid-19th century as an explanation for why organisms are adapted
+to their physical and biological environments. The theory was first set out in
+detail in Darwin&rsquo;s book On the Origin of Species.
+</p>
+<ul class="org-ul">
+<li>Why Evolution Is True (Coyne, J. A.)</li>
+<li>The Selfish Gene (Dawkins, R.)</li>
+<li>The Naked Ape (Morris, D.)<label for="13" class="margin-toggle sidenote-number"></label><input type="checkbox" id="13" class="margin-toggle"/><span class="sidenote">
+One of the most books I&rsquo;ve ever enjoyed when I was a kid, it might be not very
+accurate in many scientific aspects that it ties to approach, however it&rsquo;s
+nice to unlock those roads of thinking, I generally recommend it if you are
+new to thinking about evolution.
+</span></li>
+<li>Fossils: A Very Short Introduction (Briggs, D. E. G.)</li>
+<li>Your Inner Fish (Shubin, N.)</li>
+<li>Life Ascending: The Ten Great Inventions of Evolution (Lane, N.)</li>
+<li>The Greatest Show on Earth: The Evidence for Evolution (Dawkins, R.)</li>
+<li>Evolution and the Myth of Creationism (Berra, T. M.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb95a637" class="outline-3">
+<h3 id="orgb95a637">Linguistics</h3>
+<div class="outline-text-3" id="text-orgb95a637">
+<ul class="org-ul">
+<li>The Atoms of Language (Baker, M.)</li>
+<li>An Introduction to Language (Fromkin et al.)
+<label for="14" class="margin-toggle sidenote-number"></label><input type="checkbox" id="14" class="margin-toggle"/><span class="sidenote">I didn&rsquo;t finish this in favor of (<a href="#citeproc_bib_item_2">Fasold and Connor-Linton, 2014</a>) which claims to be
+&ldquo;only introduction to linguistics in which each chapter is written by an
+expert who teaches courses on that topic&rdquo;, also the print is much nicer.</span></li>
+<li>An Introduction to Language and Linguistics (Fasold et al.)</li>
+<li>How arbitrary is language? (Monaghan et al.)</li>
+<li>For F*ck&amp;rsquo;s Sake (Roache, R.)</li>
+</ul>
+</div>
+<div id="outline-container-607e726d-e2f5-4a32-b430-2fb8e157feaa" class="outline-4">
+<h4 id="607e726d-e2f5-4a32-b430-2fb8e157feaa">Stemming</h4>
+<div class="outline-text-4" id="text-org501b91f">
+<ul class="org-ul">
+<li>A Comparative Survey on Arabic Stemming (Mustafa et al.)</li>
+<li>Pattern-based Stemmer Analysis and Implementation on Arabic Text (Wulandari et al.)<label for="15" class="margin-toggle sidenote-number"></label><input type="checkbox" id="15" class="margin-toggle"/><span class="sidenote">
+Does not include a testing/accuracy section.
+</span></li>
+<li>New Rules-based Algorithm to Improve Arabic Stemming Accuracy (Cherif et al.)</li>
+<li>New Arabic Root Extraction Algorithm (Thalji et al.)</li>
+<li>Corpus for Test, Compare and Enhance Arabic Root Extraction Algorithms (Thalji et al.)</li>
+<li>Light Stemming for Arabic Information Retrieval (Larkey et al.)</li>
+<li>Enhanced Algorithm for Extracting The Root of Arabic Words (Ghwanmeh et al.)</li>
+<li>A Novel Root Based Arabic Stemmer (al-Kabi et al.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org807cb03" class="outline-3">
+<h3 id="org807cb03">Intelligence</h3>
+<div class="outline-text-3" id="text-org807cb03">
+<ul class="org-ul">
+<li>Intelligence: History of the Concept (Carson, J.)</li>
+<li>Intelligence Science: Leading the Age of Intelligence (Shi, Z.)</li>
+<li>Intelligence and Chess (Gobet et al.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf56bdd" class="outline-3">
+<h3 id="orgdf56bdd">Psychology</h3>
+<div class="outline-text-3" id="text-orgdf56bdd">
+<ul class="org-ul">
+<li>Psychology’s Status as a Science (Uher, J.)</li>
+<li>The Social Animal (Aronson, E.)</li>
+<li>The Crowd (Le Bon, G.)</li>
+<li>Group Psychology (Freud, S.) <label for="16" class="margin-toggle sidenote-number"></label><input type="checkbox" id="16" class="margin-toggle"/><span class="sidenote">
+The reason I put LeBon&rsquo;s book first is that Frued text is very correlated to
+it, actually it responds to it, and I much agree with Frued regarding the fact
+that Le Bon is just describing Crowds but not analyzing them at all. Of
+course, Frued&rsquo;s analysis is considered to be pure obsolete by common tropes
+today, however, I still find it an interesting method to understand crowds&rsquo;
+behavior.
+</span></li>
+<li>Totem and taboo (Freud, S.)</li>
+<li>The Ego and the Id (Freud, S.)</li>
+<li>Evolutionary Forensic Psychology (Duntley, J. D.)</li>
+<li>Evolutionary Psychology: The New Science of the Mind (Buss, D. M.)</li>
+<li>The Lucifer Effect (Zimbardo, P. G.)</li>
+<li>Faces of the Enemy (Keen, S.)</li>
+<li>Is Psychoanalysis Still Relevant to Psychiatry? (Paris, J.)</li>
+<li>Sex and Self (Camal, A.)</li>
+<li>Sex and Terror (Quignard, P.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeae07c9" class="outline-3">
+<h3 id="orgeae07c9">Cognitive Science</h3>
+<div class="outline-text-3" id="text-orgeae07c9">
+<ul class="org-ul">
+<li>Mind as Machine: a History of Cognitive Science (Boden, A.)
+<label for="17" class="margin-toggle sidenote-number"></label><input type="checkbox" id="17" class="margin-toggle"/><span class="sidenote">I really liked (<a href="#citeproc_bib_item_7">Muller, 2008</a>) description of this work (I will cut it
+out of context): The bad news is that this is not a book for you. Neither is
+it for me, or for anybody else, in a word: it is not a book for readers.</span></li>
+<li>Cognitive Science: An Introduction to the Study of Mind (Friednberg et al.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgadf2ce8" class="outline-3">
+<h3 id="orgadf2ce8">Mathematics</h3>
+<div class="outline-text-3" id="text-orgadf2ce8">
+<ul class="org-ul">
+<li>Introduction to Linear Algebra (Strang, G.)</li>
+<li>The Calculus Wars (Bardi, J. S.)</li>
+<li>Differential Equations for Dummies (Holzner, S.)</li>
+<li>Differential Equations w/ Applications and Historical Notes (Simmons, G.)</li>
+<li>Philosophical and Mathematical Logic (De Swart, H.)</li>
+<li>Beginning Mathematical Logic (Smith, P.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-cs" class="outline-3">
+<h3 id="cs">Computer Science</h3>
+<div class="outline-text-3" id="text-cs">
+<p>
+Those are mostly not books of &rsquo;recommendations&rsquo;, at least in my opinion. Those are the
+must-read books, or must experience, references and books that any computer scientist should
+read (or crash with).
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-03 Sat 00:55]</span></span> This might be worth checking out: <a href="t/programming.html#37i71rz00ik0">What can be computed?
+A practical guide to the theory of computation (2018) [pdf] ​</a></li>
+<li>Logic (S, Nicholas.)</li>
+<li>Structure and Interpretation of Computer Programs (Sussman et al.)</li>
+<li>Discrete and Combinatorial Mathematics (Grimaldi, R.)</li>
+<li>Data Structures and Algorithm Analysis (Shaffer, C.)<label for="18" class="margin-toggle sidenote-number"></label><input type="checkbox" id="18" class="margin-toggle"/><span class="sidenote">
+I&rsquo;ve many special memories with this book &lt; 3.
+</span></li>
+<li>The Art of Unix Programming (Raymond, E.)</li>
+<li>Operating Systems: Three Easy Pieces (Arpaci-Dusseau et al.)</li>
+<li>Computer Algebra and Polynomials (Guiterrez, J.)</li>
+<li>An Introduction to Genetic Algorithms (Mitchell, M.)</li>
+<li>Speech and Language Processing (Jurafsky et al.)</li>
+<li>Computer Organization and Design (Patterson et al.)</li>
+<li>Fundamentals of Computer Graphics Peter (Shirley et al.)</li>
+<li>The Art of Concurrency (Breshears, C.)</li>
+<li>Mathematical Theory of Communication (Shannon, C.)</li>
+<li>Introduction to Data Comparison (Sayood, K.)</li>
+<li>Database System Concepts (Silerschatz, A.)</li>
+<li>Foundation of Cryptography (Goldreich, O.)</li>
+<li>Signals and Systems (Ghosh, S.)</li>
+<li>Digital Signal Processing (Proakis et al.)<label for="19" class="margin-toggle sidenote-number"></label><input type="checkbox" id="19" class="margin-toggle"/><span class="sidenote">
+This was one of my most enjoyable classes ever, however, that&rsquo;s all what
+I can recall about it (as of <span class="timestamp-wrapper"><span class="timestamp">[2025-04-01 Tue 00:13]</span></span>), I forgot most of the
+course material.. it will be very nice if I could interact with this subject
+again someday in a master class.
+</span></li>
+<li>Distributed Systems (Steen et al.)</li>
+<li>Network Programming (Hall, B.)<label for="20" class="margin-toggle sidenote-number"></label><input type="checkbox" id="20" class="margin-toggle"/><span class="sidenote">
+<span class="timestamp-wrapper"><span class="timestamp">[2025-09-16 Tue 00:23]</span></span> I&rsquo;m reading this along with doing <a href="https://codingchallenges.fyi/challenges/challenge-webserver/">https://codingchallenges.fyi/challenges/challenge-webserver/</a>
+</span></li>
+<li>A Concise Introduction to Data Compression (Salomon, D.)</li>
+<li>Introduction to Information Theory and Data Compression (Hankerson et al.)</li>
+</ul>
+</div>
+<div id="outline-container-org6322b78" class="outline-4">
+<h4 id="org6322b78">Miscellaneous</h4>
+<div class="outline-text-4" id="text-org6322b78">
+<p>
+Those are very important writings, however they are more &rsquo;optional&rsquo; if mentioned with the
+above list.
+</p>
+
+<ul class="org-ul">
+<li>Generative Art (Pearson, M.)</li>
+<li>Computational Geometry Algorithms and Applications (Kreveld et al.)</li>
+<li>Algorithms (Sedgewick, R.)<label for="21" class="margin-toggle sidenote-number"></label><input type="checkbox" id="21" class="margin-toggle"/><span class="sidenote">
+I really recommend Shaffer&rsquo;s book, however, this one contained additional
+algorithms that were not included in the former.
+</span></li>
+<li>Coding Theory (Kuhn, V.)<label for="22" class="margin-toggle sidenote-number"></label><input type="checkbox" id="22" class="margin-toggle"/><span class="sidenote">
+Do not confuse for computer code. See: <a href="https://en.wikipedia.org/w/index.php?title=Code&amp;oldid=1194309533">https://en.wikipedia.org/w/index.php?title=Code&amp;oldid=1194309533</a>
+</span></li>
+<li>A Functional Pattern System for Object Oriented Programming</li>
+<li>Quantum Computing for Computer Scientists (Mannucci, M. A.)</li>
+<li>Mastering Clojure Data Analysis (Rochester, E.)</li>
+</ul>
+</div>
+<div id="outline-container-org171f4d6" class="outline-5">
+<h5 id="org171f4d6">Cryptography and Computer Security</h5>
+<div class="outline-text-5" id="text-org171f4d6">
+<ul class="org-ul">
+<li>Gray Hat Hacking (Harper et al.)</li>
+<li>Foundation of Cryptography (Goldreich.)</li>
+<li>Cryptographical Mathematics (Lewand.)</li>
+<li>A Course in Number Theory and Cryptography</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1347db2" class="outline-5">
+<h5 id="org1347db2">Databases</h5>
+<div class="outline-text-5" id="text-org1347db2">
+<ul class="org-ul">
+<li>Database Internal (Petrov, A.)</li>
+<li>Querying Databases Privately (Asonov, D.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ac305a" class="outline-4">
+<h4 id="org0ac305a">Books of Beauty</h4>
+<div class="outline-text-4" id="text-org0ac305a">
+<ul class="org-ul">
+<li>Beauty is Our Business (Feijen et al.)</li>
+<li>A Discipline of Programming (Dijkstra, E.)</li>
+<li>Selected Writings on Computing: A Personal Perspective (Dijkstra, E.)</li>
+<li>Hackers and Painters (Graham, P.)</li>
+<li>Core Techniques and Algorithms in Game Programming (Dalmau, D.)<label for="23" class="margin-toggle sidenote-number"></label><input type="checkbox" id="23" class="margin-toggle"/><span class="sidenote">
+I&rsquo;m not into game programming, but it was very fun to read this book.
+</span></li>
+<li>Structured Computer Organization (Tanenbaum, A.)</li>
+<li>UNIX: A History and a Memoir (Kernighan, B.)</li>
+<li>The Mythical Man-Month (Brooks, F.)</li>
+<li>Understanding Cryptography (Paar et al.)</li>
+<li>The Nature of Code (Shiffman, D.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d13f6d" class="outline-4">
+<h4 id="org4d13f6d">Artificial Intelligence</h4>
+<div class="outline-text-4" id="text-org4d13f6d">
+<ul class="org-ul">
+<li>An Introduction to Statistical Learning (James et al.)</li>
+<li>Paradigms of Artificial Intelligence Programming (Norvig, P.)</li>
+<li>Deep Learning (Goodfellow et al.)</li>
+<li>Mathematics for Machine Learning (Deisenroth et al.)<label for="24" class="margin-toggle sidenote-number"></label><input type="checkbox" id="24" class="margin-toggle"/><span class="sidenote">
+I&rsquo;m not reading this, just using it as a reference book.
+</span></li>
+<li>A First Course in Probability for Computer and Data Science (Tijms, H.)</li>
+<li>Hands-on Machine Learning (Géron, A.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfd0010f" class="outline-4">
+<h4 id="orgfd0010f">Unscientific</h4>
+<div class="outline-text-4" id="text-orgfd0010f">
+<p>
+Books that focuses on applications rather than theory.  
+  Good code, Bad Code (Long, T.)
+</p>
+<ul class="org-ul">
+<li>Distributed Services with Go (Jeffery, T.)</li>
+<li>Building Microservices (Newman, S.)</li>
+<li>Microservices with Go (Shuiskov, A.)</li>
+<li>Building Event-Driven Microservices (Bellemare, A.)</li>
+<li>Designing Distributed Systems (Burns, B.)</li>
+<li>Practical Binary Analysis (Andriesse, D.)</li>
+<li>Designing BSD Rootkits (Kong, J.)</li>
+<li>Language Implementation Patterns (Parr, T.)</li>
+<li>Build Your Own Lisp (Holden, D.)</li>
+<li>Mongodb in Action (Borucki, A.)</li>
+<li>Rabbitmq Essentials (Johansson, D.)</li>
+</ul>
+</div>
+<div id="outline-container-orgdaa1db0" class="outline-5">
+<h5 id="orgdaa1db0">Languages</h5>
+<div class="outline-text-5" id="text-orgdaa1db0">
+<ul class="org-ul">
+<li>The C Programming Language (Kernighan et al.)<label for="25" class="margin-toggle sidenote-number"></label><input type="checkbox" id="25" class="margin-toggle"/><span class="sidenote">
+For a better PDF version of this great book, please <del>find this link</del>
+contact me.
+</span></li>
+<li>Living Clojure (Meier, C.)<label for="26" class="margin-toggle sidenote-number"></label><input type="checkbox" id="26" class="margin-toggle"/><span class="sidenote">I left this for (<a href="#citeproc_bib_item_3">Higginbotham, 2015</a>)</span></li>
+<li>Clojure for The Brave and True (Higginbotham, D.)<label for="27" class="margin-toggle sidenote-number"></label><input type="checkbox" id="27" class="margin-toggle"/><span class="sidenote">
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-04 Sun 06:35]</span></span>: funny enough that I didn&rsquo;t complete this book
+either and left it for Renzo Borgatti&rsquo;s, I think it&rsquo;s great learning recoruce though.
+</span></li>
+<li>Clojure, The Essential Reference (Borgatti, R.)</li>
+<li>On Lisp (Graham , P.)<label for="28" class="margin-toggle sidenote-number"></label><input type="checkbox" id="28" class="margin-toggle"/><span class="sidenote">
+I also read Seibel&rsquo;s Practical Common Lisp, this is my book of choice for
+people who want to get into Lisp.
+</span></li>
+<li>Let Over Lambda (Hoyte, D.)</li>
+<li>Learning Perl (Schwartz et. al.)<label for="29" class="margin-toggle sidenote-number"></label><input type="checkbox" id="29" class="margin-toggle"/><span class="sidenote">
+I unlearned it later.
+</span></li>
+<li>Writing a Compiler In Go (Ball, T.)</li>
+<li>Writing an Interpreter In Go (Ball, T.)</li>
+<li>C# (Price, J.)</li>
+<li>System Analysis &amp; Design (Dennis, A.)<label for="30" class="margin-toggle sidenote-number"></label><input type="checkbox" id="30" class="margin-toggle"/><span class="sidenote">
+Enjoyable work.
+</span></li>
+<li>Object Thinking (West, D.)</li>
+</ul>
+</div>
+<div id="outline-container-org3901fa5" class="outline-6">
+<h6 id="org3901fa5">Go</h6>
+<div class="outline-text-6" id="text-org3901fa5">
+<ul class="org-ul">
+<li>Hands-on Software Engineering with Go (Anagnostopoulos, A.)</li>
+<li>Concurrency in Go (Cox-Buday, K.)</li>
+<li>Pro Go (Freeman, A.)</li>
+<li>Go Brain Teasers (Tebeka, M.)</li>
+<li>Ultimate Go Notebook (William Kennedy, H. A.)</li>
+<li>Know Go: Generics (Arundel, J.)</li>
+<li>Efficient Go (Plotka, B.)</li>
+<li>Hands-on Dependency Injection in Go (Scott, C.)</li>
+<li>100 Go Mistakes (Harsanyi, T.)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org28a6f93" class="outline-2">
+<h2 id="org28a6f93">Politics</h2>
+<div class="outline-text-2" id="text-org28a6f93">
+<ul class="org-ul">
+<li><p>
+Manifesto of the Communist Party (Marx et al.)<label for="31" class="margin-toggle sidenote-number"></label><input type="checkbox" id="31" class="margin-toggle"/><span class="sidenote">
+I won&rsquo;t usually recommend reading this, but I want to make sure that
+everyone will read it, even if you are not going to study Marxism, reading the
+Manifesto at least is أضعف الإيمان to prevent yourself from the odds and the
+ends of the anti-bolshevism propaganda (which usually includes &ldquo;Marxism&rdquo;). A
+better alternative would be Nikoalai Bukharin&rsquo;s &ldquo;ABC of Communism&rdquo;, or even
+better, read Marx carefully.
+</span>
+</p>
+<div class="epigraph"><blockquote>
+<p>
+Nothing would be more erroneous than to stamp the whole of the Communist
+Manifesto simply as an historic document. On the contrary. The principles
+developed by it, the method to which it leads us, the characteristic it gives by
+a few strokes of the capitalist mode of production, are to-day more valid than
+ever. The whole actual development, as well as the whole theoretic
+investigation, of the time since the drawing-up of the Manifesto, are nothing
+but an unbroken line of confirmations of its fundamental conceptions. Never was
+the principle more universally accepted that the history of all hitherto
+existing (civilised) society is the history of class wars; and never has it
+appeared plainer that the great moving power of our times is the class war
+between bourgeoisie and proletariat.
+</p>
+
+</blockquote></div>
+<p>
+From (<a href="#citeproc_bib_item_5">Kautsky, 2009</a>)
+</p></li>
+<li>Out of Bounds: Academic Freedom and the Question of Palestine (Abraham, M.)</li>
+<li>The Myth of The Rational Voter  (Caplan, B.)</li>
+<li>Foundations of Christianity (Kautsky, K.)<label for="32" class="margin-toggle sidenote-number"></label><input type="checkbox" id="32" class="margin-toggle"/><span class="sidenote">
+Also known as: religion and class struggle
+</span></li>
+<li>The Dark Side of Democracy (Mann, M.)</li>
+<li>Global Culture, Globalization and Modernity (Robertson et al.)</li>
+<li>The Road to Unfreedom (Snyder, T.)</li>
+<li>Discourse on Voluntary Servitude (Boétie, E.)<label for="33" class="margin-toggle sidenote-number"></label><input type="checkbox" id="33" class="margin-toggle"/><span class="sidenote">
+I consider this as a very nice literary message, actually it reminds
+me of how the intellectual treated &ldquo;crowds&rdquo; in the early 19 and 20 centuries,
+read about this here [DELETED]. Simply, like Le Bon and Frizer did in there
+psychology and anthropology papers, Étienne de La Boétie is cursing the scum
+peoples who let tyrant governors control and torture them. Of course without
+giving any explanation on why they do so. It&rsquo;s very obsolete to take it as an
+&rsquo;intellectual&rsquo; or &rsquo;anthropological&rsquo; approach.
+</span></li>
+<li>Understanding Power: The Indispensable Chomsky (Chomsky et al.)</li>
+<li>The Great Revolt (Zito, S.)</li>
+<li>Who Rules the World? (Chomsky, N.)</li>
+<li>Who is Charlie, Xenophobia and New Middle Class (Todd, E.)<label for="34" class="margin-toggle sidenote-number"></label><input type="checkbox" id="34" class="margin-toggle"/><span class="sidenote">
+This books is about the laïcité (the f*ricnh secularism) and how the
+xenophobia works as very good engine for moving the French people towards more
+and more so-called &rsquo;free speech&rsquo; movements. A very important and related book is
+Jean Baubérot&rsquo;s La laïcité Française et ses Mutations.
+</span></li>
+<li>The Myth of Development (Oswaldo, R.)<label for="35" class="margin-toggle sidenote-number"></label><input type="checkbox" id="35" class="margin-toggle"/><span class="sidenote">
+أوهَمَ رأس المال الناس أنّ الدُّول &ldquo;المتقدِّمة&rdquo; هي كذلك بفعل خفض الإنفاق
+العمومي. ولكن الإنفاق العمومي، مقارنة بالناتِج القومي، لم ينخفِض إلاّ لدى الدُّول
+الفقيرة، وبالذّات بإكراهات من الدُّول &ldquo;المتقدِّمة&rdquo;. (عباس برهام)
+</span></li>
+<li>How Much is a Seat On the Security Council Worth? (Kuziemko et al.)</li>
+<li>Al-nanahaah and al-estehmar (Shariati, A.)</li>
+<li>The Israel Lobby and U.S. Foreign Policy (Mearsheimer et al.)</li>
+<li>Global Language Dictionary (Luntz, F.)</li>
+<li>Civil Society: A Critical Study (Beshara, A.)</li>
+<li>في الثورة والقابلية للثورة (بشارة، ع.)</li>
+<li>أشياء لن تسمع بها أبدًا (تشومسكي، ن.)</li>
+<li>معضلة التنمية الإستعمارية: نظرات في دعاوي إيجابيات الاستعمار (صوان، م.)</li>
+<li>مدخل إلى الأيدولوجيات السياسية (هيود، أ.)</li>
+<li>قواعد في الممارسة السياسية (سلطان، ج.) <label for="36" class="margin-toggle sidenote-number"></label><input type="checkbox" id="36" class="margin-toggle"/><span class="sidenote">
+Both of these books are good reads for kids.
+</span></li>
+<li><b><i>غزو غير مسلح</i></b><label for="37" class="margin-toggle sidenote-number"></label><input type="checkbox" id="37" class="margin-toggle"/><span class="sidenote">
+I don&rsquo;t know who authored this book/article; however it is not
+available for some reason on the internet and I can&rsquo;t even remember where did I
+download it from, anyway I&rsquo;ve reuploaded it; you can get it from <i>(link is
+broken)</i>.
+</span></li>
+<li>Wreckonomics (Andersson et al.)</li>
+<li>Punishing The Poor (Wacquant, L.)</li>
+<li>War in Ukraine (Benjamin et al.)</li>
+</ul>
+</div>
+<div id="outline-container-orgd1621bd" class="outline-3">
+<h3 id="orgd1621bd">Propaganda</h3>
+<div class="outline-text-3" id="text-orgd1621bd">
+<p>
+Are you interested in reading about the propaganda model? Following related
+literature is recommended, however, I recommend starting with a small modern
+paper: (<a href="#citeproc_bib_item_10">Robinson, 2015</a>). It examines each filter proposed in the propaganda
+model assessing its relevancy and giving modern examples.
+</p>
+
+<ul class="org-ul">
+<li>Manufacturing Consent: The Political Economy of the Mass Media (Chomsky et al.)
+<label for="38" class="margin-toggle sidenote-number"></label><input type="checkbox" id="38" class="margin-toggle"/><span class="sidenote">(NOTE: for a readable PDF version, see <a href="h/x.html#acx9s711gzj0">Better PDF version of
+Manufacuring Consent</a>) While it&rsquo;s one of my favorite works ever, I do not
+think that it was best-written. The book is full with examples for propaganda
+promoted mainly by the US-based media (of course the book gave a reasoning for
+that, that&rsquo;s the US provides highly accessible information systems if compared
+to any other place) instead of forming and answering questions related to the
+propaganda model. It&rsquo;s still highly recommended book for people who are new to
+the real uncovered US politics against enemy states. For further investigation
+about propaganda models, (<a href="#citeproc_bib_item_9">Pedro-Caranana et al., 2018</a>) is recommended
+instead.</span></li>
+<li>Media Control: The Spectacular Achievements of Propaganda (Chomsky, N.)<label for="39" class="margin-toggle sidenote-number"></label><input type="checkbox" id="39" class="margin-toggle"/><span class="sidenote">This is an oversimplified Manufacturing Consent, however the latter is about
+to be an out-of-date model, see (<a href="#citeproc_bib_item_9">Pedro-Caranana et al., 2018</a>)</span></li>
+<li>The Propaganda Model Today (Broudy et al.)</li>
+<li>The Propaganda Model: Still Relevant Today? (Robinson, P.)</li>
+<li>Media and The Neoliberal Swindle (Freedman, D.)</li>
+<li>Too Polemical or Too Critical? Chomsky on the Study of the News Media and us Foreign Policy
+(Herring, E.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org85d455d" class="outline-2">
+<h2 id="org85d455d">Economics/ Capitalism</h2>
+<div class="outline-text-2" id="text-org85d455d">
+<ul class="org-ul">
+<li>Capitalism, Socialism and Democracy (Schumpeter, J. A.)</li>
+<li>History of Economic Thought (Hunt et al.)<label for="40" class="margin-toggle sidenote-number"></label><input type="checkbox" id="40" class="margin-toggle"/><span class="sidenote">
+Also check Dr Anwar&rsquo;s: <a href="https://www.youtube.com/playlist?list=PLTMFx0t8kDzc72vtNWeTP05x6WYiDgEx7">Anwar Shaikh: Historical Foundations of Political Economy</a>
+</span></li>
+<li>Socialism: A Very Short Introduction (Newman, M.)</li>
+<li>Understanding Socialism (Wolff, R. D.)</li>
+<li>Introduction to Marxist Economy (Mandel, E.)</li>
+<li>Marx&amp;rsquo;s Capital Illustrated (Smith, D.)</li>
+<li>Marxism and Marketing (Berger, A.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb9a33b4" class="outline-2">
+<h2 id="orgb9a33b4">Religion</h2>
+<div class="outline-text-2" id="text-orgb9a33b4">
+<ul class="org-ul">
+<li>al-Sirah al-Nabawiyyah (Ibn Hisham, a.)</li>
+<li>The Origins and Early Development of Shia Islam (Ja&rsquo;fari, S)</li>
+<li>Khilafat o Malukiyat (Maududi, A)</li>
+<li>Zaid&amp;rsquo;s Tafsir Ghareeb al-Quran (al-Jalali, J.)<label for="41" class="margin-toggle sidenote-number"></label><input type="checkbox" id="41" class="margin-toggle"/><span class="sidenote">
+whoever attributed this to Zaid, they did not spend enough time writing
+it.
+</span></li>
+<li>Islam and Science (Hoodbhoy, P.)<label for="42" class="margin-toggle sidenote-number"></label><input type="checkbox" id="42" class="margin-toggle"/><span class="sidenote">
+Check my (very old unrevised) review: <a href="a/islam.html#c1c6b159-608c-4db1-9c55-88f33883f079">Pervez Hoodbhoy&rsquo;s Islam and Science</a>.
+</span></li>
+<li>Avesta (Abdulrahman, K.)<label for="43" class="margin-toggle sidenote-number"></label><input type="checkbox" id="43" class="margin-toggle"/><span class="sidenote">
+Dr. Abdulrahman Khalil&rsquo;s introduction is extremely interesting. Avesta is
+very interesting to read as well, however, the current version is filled with
+paganism. It&rsquo;s hard for a plain reader like me to filter all it to reach for
+some wisdom, but I might do it someday.
+</span></li>
+<li>Burahin al-Nubuwwah (Amery, S.)</li>
+<li>Writing Sirah Among Arab Scholars (Bziouech, H.)</li>
+<li>Jadl al-Tanzeel (al-Khayyun, R.)</li>
+<li>The debates of the Createdness of the Qur’an (Ediwibowo, S.)</li>
+<li>Freewill, Qadar, and Kasb (Salem, F.)</li>
+<li>The Prophet&amp;rsquo;s Life (Hussien, T.)</li>
+<li>Repetition in the Story of Moses and Pharaoh in Holy Quran (Ghiyasvand et al.)</li>
+<li>al-Sirah al-Nabawiyyah al-Sahihah (al-Umari, A. D.)</li>
+<li>ابن رشد (الجابري، م.)</li>
+<li>مذاهب الإسلاميين (البدوي، ع.)</li>
+<li>الفتنة الكبرى (حسين، ط.)</li>
+<li>محي الدين بن عربي، حياته ومذهبه (بلاتيوس، أ.)</li>
+<li>الوحدة الإسلامية (أبو زهرة، م.)</li>
+<li>الأحوال الشخصية (أبو زهرة، م.)</li>
+<li>من قاموس التراث (العلوي، هـ.)</li>
+<li>الإمام زيد (أبو زهرة، م.)</li>
+<li>أبو حنيفة (أبو زهرة، م.)</li>
+<li>ابن حنبل (أبو زهرة، م.)</li>
+<li>الشافعي (أبو زهرة، م.)</li>
+<li>مالك (أبو زهرة، م.)</li>
+<li>ابن حزم (أبو زهرة، م.)</li>
+</ul>
+</div>
+<div id="outline-container-org8803c50" class="outline-3">
+<h3 id="org8803c50">Wahhabism</h3>
+<div class="outline-text-3" id="text-org8803c50">
+<ul class="org-ul">
+<li>Wahhabism and the World Understanding Saudi Arabia&amp;rsquo;s Global Influence on Islam (Mandaville, P.)</li>
+<li>Intellectual Life in the Ḥijāz before Wahhabism (al-Abduljabbar, N. A.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa12e6e" class="outline-3">
+<h3 id="orgaa12e6e">Other</h3>
+<div class="outline-text-3" id="text-orgaa12e6e">
+<ul class="org-ul">
+<li>مثالب معاوية (المالكي، ف.)<label for="44" class="margin-toggle sidenote-number"></label><input type="checkbox" id="44" class="margin-toggle"/><span class="sidenote">
+Poorly written book, nothing new or special in the study, the author
+tends to have an evident ignorance on Takhrij al-hadith.
+</span></li>
+<li>مثالب معاوية 2 (المالكي، ف.)</li>
+<li>نقد رأي ابن تيمية في إسلام معاوية (المالكي، ف.)</li>
+<li>الإغتيال السياسي في الإسلام (العلوي، ط.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org07a25a5" class="outline-2">
+<h2 id="org07a25a5">History</h2>
+<div class="outline-text-2" id="text-org07a25a5">
+<p>
+&ldquo;There&rsquo;s a good reason why nobody studies history, it just teaches you too much&rdquo;. — Noam Chomsky.
+</p>
+
+<p>
+«إنّ التَارْيخَ فيْ ظَاهِرهِ لا يّزْيدُ عَنِ الإِخْبَار، ولَكِنْ فْي بَاطِنهِ نَظَرٌ وتَحْقيق». — إبن خَلْدُون.
+</p>
+
+<p>
+«وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ وَمَا يَعْقِلُهَا إِلَّا الْعَالِمُونَ».
+</p>
+
+<hr>
+
+<ul class="org-ul">
+<li>The Russian Revolution: A Very Short Introduction (Smith, S. A.)</li>
+<li>A People History of The World (Harman, C.)</li>
+<li>History of The French Revolution (Soboul, A.)</li>
+<li>Forced Secularization in Soviet Russia (Froese, P.)</li>
+<li>Yugoslavia (Chomsky, N.)</li>
+</ul>
+</div>
+<div id="outline-container-org2cb8a25" class="outline-3">
+<h3 id="org2cb8a25">Ancient World</h3>
+<div class="outline-text-3" id="text-org2cb8a25">
+<ul class="org-ul">
+<li>Our Oriental Heritage (Durant et al.)</li>
+<li>The First Social Revolution in Ancient Egypt (Mahran, M. B.)</li>
+<li>Poems of Heaven and Hell (Sandars, N.)</li>
+<li>The Pyramids Texts (Faulkner, R.)</li>
+<li>A History of the Ancient Near East (Mieroop, M.)</li>
+<li>The Epic of Gilgamesh (George, A.)</li>
+<li>تاريخ روسيا (غوميليوف، م.)</li>
+<li>المدن الفينيقية (مهران، م. ب.)</li>
+<li>بنو إسرائيل (مهران، م. ب.)</li>
+<li>المدن الكبرى (مهران، م. ب.)</li>
+<li>تاريخ العراق القديم (مهران، م. ب.)</li>
+<li>دراسات في تاريخ العرب (مهران، م. ب.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5794eba" class="outline-3">
+<h3 id="org5794eba">Middle East/ Ummah</h3>
+<div class="outline-text-3" id="text-org5794eba">
+<ul class="org-ul">
+<li>The Arabs: A History (Rogan, E.)<label for="45" class="margin-toggle sidenote-number"></label><input type="checkbox" id="45" class="margin-toggle"/><span class="sidenote">
+Very good book. I recommend it as a good start for anybody who wants to
+understand how we got &ldquo;the middle east&rdquo;.
+</span></li>
+<li>The Egyptian Intelligence Service (Sirrs, O. L.)</li>
+<li>Engineers of Jihad (Gambetta et al.)<label for="46" class="margin-toggle sidenote-number"></label><input type="checkbox" id="46" class="margin-toggle"/><span class="sidenote">
+An important research to understand the uprising of Jihad movements between
+pan-Arabists, ex pan-Arabists in general, and between engineers and the middle
+class in particular. I think it&rsquo;s even a good introduction to answer the
+question of why Muslims might bomb themselves. It&rsquo;s one of the greatest books
+I&rsquo;ve ever read about the armed Jihad.
+</span></li>
+<li>All The Shah Men (Kinzer, S.)</li>
+<li>Siyar A&amp;rsquo;lam al-Nubala (al-Dhababi)<label for="47" class="margin-toggle sidenote-number"></label><input type="checkbox" id="47" class="margin-toggle"/><span class="sidenote">
+I only used it to read the first two volumes about Sirah.
+</span></li>
+<li>From Beirut to Jerusalem (Friedman, L.)</li>
+<li>Confronting an Empire, Constructing a Nation (Zeine, N.)</li>
+<li>The Unmaking of the Middle East (Salt, J.)</li>
+<li>Islamic Response to Imperialism (Keddie, R.)</li>
+<li>Mapping the Middle East (Antrim, Z.)</li>
+<li>Faisal I of Iraq (Allawi, A.) <label for="48" class="margin-toggle sidenote-number"></label><input type="checkbox" id="48" class="margin-toggle"/><span class="sidenote">
+If there is only one book that is neutral in the history of The Middle East,
+it would be this book. I recommend it for everyone needs to understand how we
+winded up with the 2000s pitiful middle east. Note that the books is
+oversimplified in the post-caliphate era.
+</span></li>
+<li>The Ottoman Age of Exploration (Casale, G.)</li>
+<li>Before Taliban: Genealogies of The Afghan Jihad (Edwards, D. B.)</li>
+<li>The Balfour Declaration (Schneer, J.)</li>
+<li>Destiny Disrupted (Ansary, T.)</li>
+<li>After the Prophet (Hazleton, L.)</li>
+<li>Blood and Rage (Burleigh, M.)</li>
+<li>America&rsquo;s Kingdom (Vitalis, R.)</li>
+<li>Yemen in Crisis: Road to War (Lackner, H)</li>
+<li><p>
+al-Kamel fi al-Tarikh (al-Athir, I.)
+</p>
+<div class="epigraph"><blockquote>
+<p>
+فأما فوائدها الدنيوية فمنها ان الإنسان لا يخفي أنه يحب البقاء ويؤثر أن يكون في زمرة
+الأحياء فياليت شعري أي فرق بين ما رآه أمس أو سمعه وبين ما قرأه في الكتب المتضمنة أخبار
+الماضين وحوادث المتقدمين فإذا طالعها فكأنه عاصرهم وإذا علمها فكأنه حاضرهم. ومنها ما يحصل
+للانسان من التجارب والمعرفة بالحوادث وما تصير إليه عواقبها فإنه لا يحدث أمر إلا قد تقدم هو
+أو نظيره فيزداد بذلك عقلا ويصبح لأن يفتدى به أهلا. ومنها التخلق بالصبر والتأسي وهما من
+محاسن الأخلاق فإن العاقل إذا رأى ان مصاب الدنيا لم يسلم منه نبي مكرم ولا ملك معظم بل ولا
+أحد من البشر علم أنه يصيبه ما أصابهم وينوبه ما نابهم.
+</p>
+
+</blockquote></div></li>
+<li>من داخل الجهادية، فهم الحركات الجهادية (خاور، ف.)</li>
+<li>نحو إعادة بناء قضايا الفكر العربي المعاصر (الجابري، م.)</li>
+<li>المجتمع والدولة في الوطن العربي (سعدالدين، إ.)</li>
+<li>الخروج من زقاق التاريخ (سعد الدين، إ.)</li>
+<li>النظام الاجتماعي العربي الجديد (سعد الدين، إ.)</li>
+<li>تأملات في مسألة الأقليات (سعد الدين، إ.)</li>
+<li>نحن والتراث، قراءة معاصرة في تراثنا الفلسفي (الجابري، م.)</li>
+<li>تكوين العقل العربي (الجابري، م.)</li>
+</ul>
+</div>
+<div id="outline-container-org872d3e9" class="outline-4">
+<h4 id="org872d3e9">Iran</h4>
+<div class="outline-text-4" id="text-org872d3e9">
+<ul class="org-ul">
+<li>تاريخ إيران بعد الإسلام (إقبال، ع.) <label for="49" class="margin-toggle sidenote-number"></label><input type="checkbox" id="49" class="margin-toggle"/><span class="sidenote">
+Too much informative, in the sense that it doesn&rsquo;t really provide a historical
+context rather than historical information. I will consider searching for
+another book on the early history of Iran soon.
+</span></li>
+<li>إيران من الداخل (هويدي، ف.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc7f5512" class="outline-4">
+<h4 id="orgc7f5512">Algeria</h4>
+<div class="outline-text-4" id="text-orgc7f5512">
+<ul class="org-ul">
+<li>الثورة الجزائرية (الزبيري، م.)</li>
+<li>كيف دخل الفرنسيون الجزائر (الجزائري، ا.)</li>
+<li>فرانز فنون والثورة الجزائرية (الميلي، م.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb672ae7" class="outline-4">
+<h4 id="orgb672ae7">Zionism/ Palestine</h4>
+<div class="outline-text-4" id="text-orgb672ae7">
+<ul class="org-ul">
+<li>Prelude to Israel: Zionist Diplomacy (Schulze, K.)</li>
+<li>State of Terror (Suarez, Y.)</li>
+<li>Out of the Frame (Pappe, I.)</li>
+<li>The General&rsquo;s Son (Peled, M.)</li>
+<li>On Palestine (Pappe et al.)</li>
+<li>اليد الخفية، دراسة في الحركات اليهودية الهدامة والسرية (المسيري، ع.)</li>
+<li>من هو اليهودي؟ (المسيري، ع.)</li>
+<li>الصراع العربي الإسرائيلي (بريجر، ب.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8efb6f7" class="outline-4">
+<h4 id="org8efb6f7">Other</h4>
+<div class="outline-text-4" id="text-org8efb6f7">
+<ul class="org-ul">
+<li>الحداثة والإمبريالية: الغزو الفرنسي وإشكالية نهضة مصر (الشلق، أ)</li>
+<li>نجد قبل الوهابية (الجهني، ع)</li>
+<li>حقائق حول أزمة الخليج (الحوالي، س)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8192c7e" class="outline-3">
+<h3 id="org8192c7e">The United States</h3>
+<div class="outline-text-3" id="text-org8192c7e">
+<ul class="org-ul">
+<li>A People History of The United States (Zinn, H.)</li>
+<li>Killing Hope (Blum, W.)</li>
+<li>Tories: Fighting for the King in America&rsquo;s First Civil War (B. Allen, T)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org66e4bd6" class="outline-2">
+<h2 id="org66e4bd6">Modus Vivendi</h2>
+<div class="outline-text-2" id="text-org66e4bd6">
+<ul class="org-ul">
+<li>Les Passions de L&amp;rsquo;âme (Descartes, R.)</li>
+<li>Reveries of The Solitary Walker (Rousseau, J.)</li>
+<li><p>
+Thus Spoke Zarathustra (Nietzsche, F.)
+From (<a href="#citeproc_bib_item_8">Nietzsche, 2009</a>):
+</p>
+<div class="epigraph"><blockquote>
+<p>
+Among my writings my Zarathustra stands alone. With it I have given humanity the greatest
+gift it has ever been given. This book, with a voice that stretches over millennia, is not
+only the most exalted book there is, the real book of the mountain air—the entire fact of
+man lies at a vast distance beneath it—it is also the most profound book, born of the
+innermost richness of the truth, an inexhaustible well into which no bucket descends that
+does not come back up ﬁlled with gold and goodness. Here speaks no ‘prophet’, none of
+those gruesome hybrids of sickness and will to power* called founders of religions. Above
+all you have to hear properly the tone that comes out of this mouth, this halcyon tone, if
+you are not to be pitifully unjust towards the meaning of its wisdom. ‘It is the stillest
+words that bring on the storm; thoughts that come on doves’ feet direct the world—’
+</p>
+
+</blockquote></div></li>
+<li>Ecce Homo (Nietzsche, F.)</li>
+<li>The Responsibility of The Intellectual (Shariati, A.)</li>
+<li>Back to Self (Shariati, A.)</li>
+<li>Majmu&amp;rsquo;at Rasail al-Imam al-Ghazali (al-Ghazali, A.)</li>
+<li>Fadl al-I&amp;rsquo;tizal wa Tabqat al-Mu&amp;rsquo;tazilah (al-Balkhi et al.)</li>
+<li>Human, All-Too-Human (Nietzsche, F.)</li>
+<li>Tawq al-Hamamah fi al-Ulfah wa-al-Ullaf (Ibn Hazm, A.)</li>
+<li>Imam Ali in His Three Ordeals (Shariati, A.)</li>
+<li>The Coiled Serpent (Vanvliet, C.)<label for="50" class="margin-toggle sidenote-number"></label><input type="checkbox" id="50" class="margin-toggle"/><span class="sidenote">
+This was very beautiful, I need to reread it multiple times in the future.
+</span></li>
+<li>The Peacock and The Buffalo (Nietzsche, F.)</li>
+<li>Deliverance From Error (al-Ghazali, A.)</li>
+<li>The Dawn of The Day (Nietzsche, F.)</li>
+<li>The Thoughts of Marcus Aurelius (Aurelius, M.)</li>
+<li>Islam and The Destiny of Man (Eaton, G)</li>
+<li>The Polymath (Ahmed, W)</li>
+<li>Bina&amp;rsquo; al-Dhat al-Thawriyya (Shariati, A.)</li>
+<li>The Cat &amp;amp; The Mouse (Al-Amily, B.)</li>
+<li>Rehlati al-Fikriah (El-Messiri, A.)</li>
+<li>Critical Thinking (Waller, B. N.)</li>
+<li>Philosophy of Desire (Lenoir, F.)</li>
+<li>Command-line Finances (Dean, C.)</li>
+<li>الأخلاق (شريعتي، ع) <label for="51" class="margin-toggle sidenote-number"></label><input type="checkbox" id="51" class="margin-toggle"/><span class="sidenote">
+If I were to raise someone one day, I&rsquo;d definitely use this book.
+</span></li>
+<li>عن المثقف والثورة (بشارة، ع.)</li>
+<li>مقالة في الحرية (بشارة، ع.)</li>
+<li>You&amp;rsquo;re not Listening (Murphy, K.)</li>
+<li>Crucial Conversations (Patterson et al.)</li>
+<li>Leonardo da Vinci (Isaacson, W.)</li>
+<li>What Should We Do? (Tolstoy, L.)</li>
+<li>&amp;rsquo;Uluw al-Himmah (al-Muqaddim, I.)</li>
+<li>al-Durrah al-Yateemah (al-Muqaffa&rsquo;a, A.)</li>
+<li>al-Athar al-Kamila (al-Muqaffa&rsquo;a, A.)</li>
+<li>Ibn Abi al-Dunya Letters (al-Dunya, I.)</li>
+<li>Twilight of The Idols (Nietzsche, F.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org754a81b" class="outline-2">
+<h2 id="org754a81b">Aesthetics</h2>
+<div class="outline-text-2" id="text-org754a81b">
+<p>
+All ancient books which have once been called sacred by man, will have their
+lasting place in the history of mankind, and those who possess the courage, the
+perseverance, and the self-denial of the true miner, and of the true scholar,
+will find even in the darkest and dustiest shafts what they are seeking
+for,—real nuggets of thought, and precious jewels of faith and hope.
+— Max Müller, Introduction to the Upanishads Vol. II.
+</p>
+
+<ul class="org-ul">
+<li>Testimony: The Memoirs of Dmitri Shostakovich (Volkov, S.)</li>
+<li>Fear of Life (Lowen, A.)</li>
+<li>Letters From a Stoic (Seneca, A.)</li>
+<li>Kifayat al-Talib fi Manaqib Ali ibn abi-Talib (al-Kinji, M.)</li>
+<li>Mujm&amp;rsquo;a al-&amp;rsquo;amthal (Meydani et al.)<label for="52" class="margin-toggle sidenote-number"></label><input type="checkbox" id="52" class="margin-toggle"/><span class="sidenote">
+ثمَّ إِنِّي مَا رَأَيْت حَاجَة الشريف إِلَى شَيْء من أدب اللِّسَان بعد سَلَامَته من اللّحن كحاجته إِلَى
+الشَّاهِد والمثل والشذرة والكلمة السائرة فَإِن ذَلِك يزِيد الْمنطق تفخيما ويكسبه قبولاً وَيجْعَل لَهُ
+قدرا فِي النُّفُوس وحلاوةً فِي الصُّدُور وَيَدْعُو الْقُلُوب إِلَى وعيه ويبعثها على حفظه ويأخذها باستعداده
+لأوقات المذاكرة والاستظهار بِهِ أَوَان المجاولة فِي ميادين المجادلة والمصاولة فِي حلبات المقاولة
+وَإِنَّمَا هُوَ فِي الْكَلَام كالتفصيل فِي العقد والتنوير فِي الرَّوْض والتسهيم فِي الْبرد فَيَنْبَغِي أَن يستكثر
+من أَنْوَاعه لَان الإقلال مِنْهَا كاسمه إقلال وَالتَّقْصِير فِي التماسه قُصُور وَمَا كَانَ مِنْهُ مثلا سائراً
+فمعرفته ألزم لَان منفعَته أَعم وَالْجهل بِهِ أقبح (العسكري)
+</span></li>
+<li>Jamharat al-Amthāl (al-&rsquo;Askari, A.)</li>
+<li>Al-Kashkool (Al-Bahai, A)</li>
+<li>ربيع الأبرار في نصوص الأخبار (الزمخشري، ج)</li>
+<li>ديوان ترجمان الأشواق (ابن عربي، م)</li>
+<li>يتيمة الدهر في محاسن أهل العصر (النيسابوري، ع)</li>
+<li>قلائد الجمان في فرائد شعراء هذا الزمان (الموصلي، ك)</li>
+<li>المستجاد من فعلات الأجواد (التنوخي، ا)</li>
+<li>نسمة السحر بذكر من تشيع وشعر (اليمني، ا)</li>
+<li>ريحاينة الألبا وزاهرة الحياة الدنيا (شهاب الدين، أ)</li>
+<li>الموازنة بين أبي تمام والبحتري (الأمدي، أ)</li>
+<li>فوائد الظمئان لدروس الزمان (السلمان، ع)</li>
+<li>التذكرة (الحسيني، ص)</li>
+<li>قول على قول (الكرمي، ح)</li>
+<li>Confucian Analects (Legge, J.)</li>
+<li>The Executioner (de Maistre,</li>
+</ul>
+
+<ul class="org-ul">
+<li>Gardens of Renaissance Europe and the Islamic Empires (Reggles, D)</li>
+<li>طبائع الاستبداد ومصارع الاستعباد (الكواكبي، ع)</li>
+<li><del>Love Letters of Nathaniel Hawthorne</del></li>
+<li><del>Culture and Value (Wittgenstein)</del></li>
+<li>No Apologies (Esolen, A)<label for="53" class="margin-toggle sidenote-number"></label><input type="checkbox" id="53" class="margin-toggle"/><span class="sidenote">
+Was that really a book about &ldquo;women are so weak omg&rdquo;?
+</span></li>
+</ul>
+</div>
+<div id="outline-container-org793e963" class="outline-3">
+<h3 id="org793e963">Literature</h3>
+<div class="outline-text-3" id="text-org793e963">
+<p>
+This section will not be updated anymore.
+</p>
+
+<p>
+This section will not be updated anymore
+</p>
+
+<ul class="org-ul">
+<li><p>
+<span class="timestamp-wrapper"><span class="timestamp">[2025-06-16 Mon 23:35]</span></span> Also see this interesting part by Kierkegaard on fiction:
+</p>
+<div class="epigraph"><blockquote>
+<p>
+What does the soul find so recuperative about reading fairy-tales? When I am tired of everything and ‘full of days’,
+fairy-tales are for me always the refreshing bath that proves so beneficial. There all earthly, all finite cares vanish; joy,
+yes sorrow even, are infinite (which is just why they are so expanding and beneficial). One sets out to find the
+bluebird, just like the princess who, chosen to be queen, lets someone else take care of the kingdom so that she
+herself can seek out her unhappy lover. What infinite sorrow is implied in her saying to the old woman she meets, as
+she roams about dressed as a peasant girl: ‘I am not alone, good mother, I have with me a great following of trouble,
+cares and suffering.’ […]
+</p>
+
+</blockquote></div></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2023-10-24 Tue 18:19]</span></span>  I wrote the sentence above &ldquo;This section will not be updated anymore&rdquo; years
+ago, after a discussion with someone that really convinced me that reading
+literature is an absolute waste of time, since it is not possible to extract
+concrete expressive knowledge, at best it might help you at giving parables
+before telling a theory, making you look more eloquent. I also believe that it
+might deeply help in understanding how people might act in some situation,
+literature is human experience after all. What I&rsquo;ve understood recently is
+that entertainment is necessary in man&rsquo;s life, no matter how disciplined and
+optimized you are, at some point you will need a rest, whereupon you will be
+interested in an ease and have two options cinema and TV <i>or</i> literature. Here
+you can see where this is going. Sadly, the current state of producing art
+forms it onto a mere proprietor tool used for whatever reasons.  Although
+literature always has been like that (see for example <a href="#citeproc_bib_item_6">McCall, 2021</a>),
+but much less if compared to media (<a href="#citeproc_bib_item_1">Alford, 2018</a>).
+One can actually tell that the major reveal of &ldquo;correctness&rdquo; was a recent
+change in media. If you are like me, you won&rsquo;t be much interesting in watching
+works from the 30s to avoid that, however, people can easily read works from
+past centuries without a problem. So, this</li>
+</ul>
+
+<p>
+قال مُخلِد بن حسين (تـ191 هـ) لابن المبارك: &ldquo;نحنُ إلى كثيرٍ من الأدب أحوَجَ منّا إلى كثيرٍ من
+الحديث&rdquo;.
+</p>
+
+<ul class="org-ul">
+<li>Ḥayy ibn Yaqẓān (Ibn Tufayl et al.)</li>
+<li>Don Quixote (Cervantes, M. d.)</li>
+<li>Biyad wa Riyad (Arbnikel)</li>
+<li>Rameau&amp;rsquo;s Nephew and First Satire (Diderot, D.)</li>
+<li>The Double and The Gambler (Dostoevsky, F.)</li>
+<li>The Faerie Queene (Spenser, E.)</li>
+<li>The Bride of Lammermoor (Scott, W)</li>
+<li>The Canterbury Tales, and Other Poems (Chaucer, G.)</li>
+<li>Complete Works of Frans Kafka (Kafka, F.)</li>
+<li>Manfred (Byron, L)</li>
+<li>The Lover (Duras, M.)</li>
+<li>Ibn Sina or The Road to Isfahan (Sinoue, G.) <label for="54" class="margin-toggle sidenote-number"></label><input type="checkbox" id="54" class="margin-toggle"/><span class="sidenote">
+Not a very nice work, I&rsquo;d prefer Youssef Ziedan&rsquo;s novel about Ibn Sina. I never
+thought of Ibn Sina in such an erotic context, ever.
+</span></li>
+<li>Selected Works (Chekhov, A.)</li>
+<li>Siddhartha (Hesse, H.)</li>
+<li>Momo (Ende, M.)</li>
+<li>A Streetcar Named Desire (Williams, T)</li>
+<li>The Kite Runner (Khalid, H)</li>
+<li>Lolita (Nabokob, V)</li>
+<li>Suddenly Last Summer (Williams, T)</li>
+<li>The Brothers Karamazov (Dostoevsky, F)</li>
+<li>Umm Sa&rsquo;d (Ghassan, K)</li>
+<li>Children of the Alley (Mahfouz, N)</li>
+<li>Cat on a Hot Tin Roof (Williams, T)</li>
+<li>Crime and Punishment (Dostoevsky, F)</li>
+<li>The Idiot (Dostoevsky, F)</li>
+<li>Orpheus Descending (Williams, T)</li>
+<li>Marx in Soho (Zinn, H)</li>
+<li>One Arm and Other Stories (Williams, T)</li>
+<li>The Misunderstanding (Camus)</li>
+<li>Notes from Underground (Dostoevsky, F)</li>
+<li>Crime and Punishment (Dostoevsky, F)</li>
+<li>The Dream of a Ridiculous Man (Dostoevsky, F)</li>
+<li>Chronicle of a Death Foretold (Márquez, G)</li>
+<li>The Unbearable Lightness of Being (Kundera, M)</li>
+<li>Poor Folk (Dostoevsky, F)</li>
+<li>In the Penal Colony (Kafka, F)</li>
+<li>Men in the Sun (Kanafani, G)</li>
+<li>Animal Farm (Orwell, G)</li>
+<li>Karnak Kafe (Mahfouz, N)</li>
+<li>The Insulted and Humiliated (Dostoevsky, F)</li>
+<li>Love in the Time of Cholera (Márquez, G)</li>
+<li>One Hundred Years of Solitude (Márquez, G)</li>
+<li>Adrift on the Nile (Mahfouz, N)</li>
+<li>The Overcoat (Gogol, N)</li>
+<li>The Land of Sad Oranges (Kanafani, G)</li>
+<li>The Bet and Other Stories (Chekhov, A)</li>
+<li>The Death of Ivan Ilyich &amp;amp; Confession  (Tolostoy, L)</li>
+<li>The Picture of Dorian Gray (Wilde, O)</li>
+<li>1984 (Orwell, G)</li>
+<li>The Festival of Insignificance (Kundera, M)</li>
+<li>When Nietzsche Wept (Yalom, I)</li>
+<li>The Death of a Government Clerk (Gogol, N)</li>
+<li>The Silent Patient (Michaelides, A)</li>
+<li>Season of Migration to the North (Salih, A)</li>
+<li>The Inspector General (Gogol, N)</li>
+<li>Oscar And The Lady In Pink (Schmitt, E)</li>
+<li>No One Sleeps in Alexandria (AbdelMeguid, I)</li>
+<li>يوم غائم في البر الغربي (قنديل، م)</li>
+<li>Alexander Pope: Selected Works (Pope, A)</li>
+<li>Agamemnon (Aeschylus, A)</li>
+<li>A Confession (Tolstoy, L)</li>
+<li>Make Something Up (Palahniuk, C)</li>
+<li>Fight Club (Palahniuk, C.)</li>
+<li>The Antiquary (Scott, W.)</li>
+<li>القميص المسروق (كنفاني، غ)</li>
+<li>الزيتون لا يموت (نصر، ع)</li>
+<li>Letters from Ansi al-Hajj to Ghada al-Samman (al-Haj, A.)</li>
+<li>Letters from Ghassan Kanafani to Ghada al-Samman (Kanafani, G.)</li>
+</ul>
+
+<p>
+Ones I didn&rsquo;t enjoy reading:
+</p>
+
+<ul class="org-ul">
+<li>Memories of My Melancholy Whores (Márquez, G.)<label for="55" class="margin-toggle sidenote-number"></label><input type="checkbox" id="55" class="margin-toggle"/><span class="sidenote">
+(<span class="timestamp-wrapper"><span class="timestamp">[2024-07-22 Mon 18:23]</span></span>) One of the most distasteful works I&rsquo;ve ever read.
+</span></li>
+<li>The Metamorphosis</li>
+<li>Hidden Figures</li>
+<li>War and Peace</li>
+<li>Wind, Sand and Stars</li>
+<li>Testaments Betrayed, An Essay in Nine Parts</li>
+<li>A Tale of Two Cities</li>
+<li>The Hunchback of Notre-Dame</li>
+<li>Sundays in August</li>
+<li>الحكايات الشعبية من آسيا</li>
+<li>A Confession (Tolstoy, L)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge30c4ba" class="outline-3">
+<h3 id="orge30c4ba">Heritage</h3>
+<div class="outline-text-3" id="text-orge30c4ba">
+<p>
+<b>Note</b>: the author names in this list are to be fixed, there is a small bug in
+the script I use to generate them, and I&rsquo;m too lazy to check for them by hand.
+</p>
+
+<ul class="org-ul">
+<li>Muhadarat al-Udaba (Isfahani, A.)</li>
+<li>Nawadir al-Ayk (Suyuti, A.)</li>
+<li>المقامات (الزمخشري، ج)</li>
+<li>كتاب الأمالي (القالي، أ)</li>
+<li>فقه القلوب (التويجري، م)</li>
+<li>فضائل الأعمال (المقدسي، ض)</li>
+<li>لباب الأداب (منقذ، أ)</li>
+<li>كتاب المِحن (التميمي، أ)</li>
+<li>روضة العقلاء (حبان، ا)</li>
+<li>تصفية القلوب (الذماري، ي)</li>
+<li>البيان والتبيان (الحاحظ، أ)</li>
+<li>شرح كتاب الشهاب (القضياعي، أ)</li>
+<li>الوابل الطيب (الجوزية، أ)</li>
+<li>العزلة (البستي، م)</li>
+<li>المنازل والديار (منقذ، أ)</li>
+<li>العزلة والانفراد (الدنيا، أ)</li>
+<li>الزهد الكبير (البيهقي)</li>
+<li>الإعتبار (أسامه بن منقذ)</li>
+<li>أحسن ما سمعت (الثعالبي)</li>
+<li>أدب الدين والدنيا (الماوردي، أ)</li>
+<li>الفوائد (الجوزية، ا)</li>
+<li>الفرج بعد الشدة (التنوخي، ع)</li>
+<li>أخبار الظراف ومتماجنين (ابن الجوزي، أ)</li>
+<li>نسمة السحر (الحريري، ب)</li>
+<li>جواهر الحكم (ابن يعلى، ع)</li>
+<li>أنيس المسافر وجليس الخاطر (البحراني، ع)</li>
+<li>روائع الكلم في شرح قصار الحكم (العجلوني، ج)</li>
+<li>تحف العقول عن آل الرسول (التستري، ع)</li>
+<li>مِصباحُ المُتَهجِّد وسلاحُ المُتَعَبّد (الزركشي، م)</li>
+<li>عيون الأخبار (ابن قتيبة، ع)</li>
+<li>سمط الآلي (العقاد، ع)</li>
+<li>زهرة الأكم (الحريري، ب)</li>
+<li>بهجة المجالس (ابن حجر، أ)</li>
+<li>الموازنة بين أبي تمام والبحترى (السمرقندي، ع)</li>
+<li>بين الثقافة والسياسة (العتيبي، ط)</li>
+<li>العقد الفريد (الأصفهاني، ع)</li>
+<li>التذكرة الحمدونية (القرطبي، ا)</li>
+<li>المستطرف في كل فن مستظرف (الغزالي، ا)</li>
+<li>إحياء علوم الدين (الغزالي، ا)</li>
+<li>مدارج السالكين (ابن القيم، ا)</li>
+<li>الإمتاع والمؤانسة (التوحيدي، م)</li>
+<li>النساء في لوحات المستشرقين (الباز، ل)</li>
+<li>اتحاف النبلاء بأخبار الثقلاء (الحراني، ع)</li>
+<li>ألف باء في أنواع الآداب (الجاحظ، ع)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org47a8cb7" class="outline-3">
+<h3 id="org47a8cb7">Poetry</h3>
+<div class="outline-text-3" id="text-org47a8cb7">
+<ul class="org-ul">
+<li>The Norton Anthology of Poetry (Ferguson et al.)</li>
+<li>Abuzun al-Omani&amp;rsquo;s Poetry (al-Omani, A.)</li>
+<li>Hamasah (Tamam, H.)</li>
+<li>al-Tibyan fi Sharh al-Diwan (al-Akbari, A.)</li>
+<li>al-Mutanabbi (Shakir, M. M.)</li>
+<li>Nietzsche&amp;rsquo;s Poetry (Nietzsche, F.)</li>
+<li>Mahmoud Sami al-Barudi (al-Barudi, M. S.)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org456abd3" class="outline-2">
+<h2 id="org456abd3">Chess</h2>
+<div class="outline-text-2" id="text-org456abd3">
+<ul class="org-ul">
+<li>Play Winning Chess (Seirawan, W)<label for="56" class="margin-toggle sidenote-number"></label><input type="checkbox" id="56" class="margin-toggle"/><span class="sidenote">
+I wish if I&rsquo;ve started with this book instead of chess for dummies.
+</span></li>
+<li>A First Book of Morphy (Lawson, D)</li>
+<li>Chess Openings for Dummies (Eade, J)</li>
+<li>7 Deadly Chess Sins (Rowson, J)</li>
+<li>Improve Your Chess Pattern Recognition (Oudeweetering, A)</li>
+<li>The Soviet Chess Primer (Maizelis, I)</li>
+<li>Logical Chess: Move by Move (Chernev, I)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4e917ee" class="outline-2">
+<h2 id="org4e917ee">Other</h2>
+<div class="outline-text-2" id="text-org4e917ee">
+<ul class="org-ul">
+<li>The Subtle Art of Not Giving a F*ck (Manson, M.).</li>
+<li>Why is it so hard to do my work? (Leroy, S.)</li>
+<li>Ubersleep: Nap-based Sleep Schedules and the Polyphasic Lifestyle (Doxyk, P)</li>
+<li>Qusr al-Kalam (Amer, G.)</li>
+<li>Discipline is Destiny (Holiday, R.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17db3f7" class="outline-2">
+<h2 id="org17db3f7">References</h2>
+<div class="outline-text-2" id="text-org17db3f7">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Alford, M., 2018. A screen entertainment propaganda model, in: Pedro-Carañana, J., Broudy, D., Klaehn, J. (Eds.), The Propaganda Model Today: Filtering Perception and Awareness. University of Westminster Press, London, pp. 145–158. <a href="https://doi.org/https://doi.org/10.16997/book27.j">https://doi.org/https://doi.org/10.16997/book27.j</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Fasold, R.W., Connor-Linton, J., 2014. An introduction to language and linguistics. Cambridge university press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Higginbotham, D., 2015. <a href="https://libgen.li/file.php?md5=ad87b4ff9e15fc72ae8f5f91a4b1e7ce">Clojure for the brave and true: Learn the ultimate language and become a better programmer</a>, 1st ed. No Starch Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Isaacson, W., 2017. Leonardo da vinci, First Simon and Schuster hardcover edition. ed. Simon and Schuster, New York, NY.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Kautsky, K., 2009. Chapter four. ‘to what extent is the communist manifesto obsolete?’ (first edition: 1903 – revised edition: June 1906), in: Witnesses to Permanent Revolution: The Documentary Record. BRILL, pp. 169–185. <a href="https://doi.org/10.1163/ej.9789004167704.i-684.30">https://doi.org/10.1163/ej.9789004167704.i-684.30</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>McCall, K.I., 2021. <a href="https://purl.lib.fsu.edu/diginole/2020_Summer_Fall_McCall_fsu_0071N_16538">Money as a powerful function in fyodor dostoevsky’s works</a>. Florida State University.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>Muller, V.C., 2008. Margaret a. boden, mind as machine: A history of cognitive science, 2 vols. Minds and machines 18, 121–125. <a href="https://doi.org/10.1007/s11023-008-9091-9">https://doi.org/10.1007/s11023-008-9091-9</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>Nietzsche, F., 2009. Ecce homo. Oxford University Press. <a href="https://doi.org/10.1093/owc/9780199552566.001.0001">https://doi.org/10.1093/owc/9780199552566.001.0001</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_9"></a>Pedro-Caranana, J., Broudy, D., Klaehn, J., 2018. Propaganda model today: Filtering perception and awareness. University of Westminster.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_10"></a>Robinson, P., 2015. The propaganda model: Still relevant today?, in: Edgley, A. (Ed.), Noam Chomsky. Palgrave Macmillan UK, London, pp. 77–96. <a href="https://doi.org/10.1007/978-1-137-32021-6_5">https://doi.org/10.1007/978-1-137-32021-6_5</a></div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+If the link is somehow broken, please search for &ldquo;Noam Chomsky University of Arizona
+on Feb. 8, 2012&rdquo; or by the title of the lecture: &ldquo;Noam Chomsky: Education For
+Whom and For What&rdquo;.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+As of <span class="timestamp-wrapper"><span class="timestamp">[2024-11-15 Fri 09:15]</span></span> this section no longer exists.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-2" class="footnum" href="#fnr.-0-2" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+An inequilateral note about reading <i>philosophy</i>; the vast majority of
+philosophy books is not worth reading, in fact it&rsquo;s painful to read it, which is
+a thing I realized too late (~1 year ago, thanks to a friend of mine allowed me
+to read his dissertation in <i>Obscurantism</i> of philosophers), a lot of philosophy
+books I&rsquo;ve read in my life was useful but not really that &rsquo;useful&rsquo;, this is not
+the best place to explain why, but I&rsquo;ll talk about this in the future Inshaa&rsquo;
+Allah. Also, read <a href="https://sophy.ca/blog/2013/03/how-not-to-write-in-philosophy/">How not to write in philosophy &#x2013; Against obscurantism</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-1" class="footnum" href="#fnr.-0-1" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Very poor review.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-4" class="footnum" href="#fnr.-0-4" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Mernissi forces herself to act like an orientalist, however she ain&rsquo;t. Since I
+can&rsquo;t write a lot in this small box, I&rsquo;d like to point 3 important issues in
+this dissertation; 1. Usage of past-criticized Takhrij of some Hadiths, which
+was claimed by her in <i>Political Harem: The Prophet and Women</i> that it cannot
+be noted after the prophet, but was &rsquo;made up&rsquo; for interests. 2. Which is sorta
+correlated with 1, is the inference from history book like Tabaqat al-Kubra.
+We can not tell what is &rsquo;Islamic&rsquo; based on such late area of the Islamic
+History. However, if Mernissi surfs what is told to be &rsquo;Islamic&rsquo;, not what is
+&rsquo;Islamic&rsquo;, those 2 points are not valid. 3. Al-Ghazali used to address his
+students that were always men, which clarify why he gives advices about
+treating women, I couldn&rsquo;t interpret it like Mernissi did, that he meant
+&rsquo;Women are tools for men to help them pass through the hurdles of life&rsquo;. This
+is meaningless.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-5" class="footnum" href="#fnr.-0-5" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+It&rsquo;s sad that non-scientific (in the academic means) Islamic scholars can not
+write a readable argument without bloat it with x10 hate and swearing.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-6" class="footnum" href="#fnr.-0-6" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I think this book could make a use for me in the future in giving instances of
+how most of philosophy authors &amp; books are either pointless or obscure.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-0-7" class="footnum" href="#fnr.-0-7" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Pretty much up-to-date version of &ldquo;The Protocols of the Elders of Zion&rdquo;.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-2" class="footnum" href="#fnr.-1-2" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+On fractals, for computer scientists.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-1" class="footnum" href="#fnr.-1-1" role="doc-backlink">10</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+An advanced textbook on fractals.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-8" class="footnum" href="#fnr.-1-8" role="doc-backlink">11</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I used to read it in my high school, I still remember that I enjoyed it more
+than any other history book I&rsquo;ve ever read.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-3" class="footnum" href="#fnr.-1-3" role="doc-backlink">12</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I think the concept of democratizing science that this paper demonstrate
+falls to social norms: the author find that there are &ldquo;indeed certain situations
+in which scientists can reject the public’s judgments while remaining committed
+to democratizing science&rdquo; when some of those views are unacceptable by the
+&ldquo;scientist veto&rdquo;. But what&rsquo;s an unacceptable view (that still holds to be
+non-epistemic) that will not be subjective? The author gives an example: &ldquo;the
+public offers a horribly racist set of value judgments.&rdquo; A <i>horribly racist</i> is
+a highly subjective argument unlike it sounds, in fact, a racist government will
+accuse someone who is not racist (i.e. doesn&rsquo;t believe in their superiority) an
+infidel, blasphemer (in such a situation those words would have the same impact
+as racist) or even just racist for belittling the &ldquo;main race&rdquo;.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-9" class="footnum" href="#fnr.-1-9" role="doc-backlink">13</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+One of the most books I&rsquo;ve ever enjoyed when I was a kid, it might be not very
+accurate in many scientific aspects that it ties to approach, however it&rsquo;s
+nice to unlock those roads of thinking, I generally recommend it if you are
+new to thinking about evolution.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14" role="doc-backlink">14</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">I didn&rsquo;t finish this in favor of (<a href="#citeproc_bib_item_2">Fasold and Connor-Linton, 2014</a>) which claims to be
+&ldquo;only introduction to linguistics in which each chapter is written by an
+expert who teaches courses on that topic&rdquo;, also the print is much nicer.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-2-3" class="footnum" href="#fnr.-2-3" role="doc-backlink">15</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Does not include a testing/accuracy section.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-4-10" class="footnum" href="#fnr.-4-10" role="doc-backlink">16</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+The reason I put LeBon&rsquo;s book first is that Frued text is very correlated to
+it, actually it responds to it, and I much agree with Frued regarding the fact
+that Le Bon is just describing Crowds but not analyzing them at all. Of
+course, Frued&rsquo;s analysis is considered to be pure obsolete by common tropes
+today, however, I still find it an interesting method to understand crowds&rsquo;
+behavior.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.17" class="footnum" href="#fnr.17" role="doc-backlink">17</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">I really liked (<a href="#citeproc_bib_item_7">Muller, 2008</a>) description of this work (I will cut it
+out of context): The bad news is that this is not a book for you. Neither is
+it for me, or for anybody else, in a word: it is not a book for readers.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-1" class="footnum" href="#fnr.-7-1" role="doc-backlink">18</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I&rsquo;ve many special memories with this book &lt; 3.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-11" class="footnum" href="#fnr.-7-11" role="doc-backlink">19</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This was one of my most enjoyable classes ever, however, that&rsquo;s all what
+I can recall about it (as of <span class="timestamp-wrapper"><span class="timestamp">[2025-04-01 Tue 00:13]</span></span>), I forgot most of the
+course material.. it will be very nice if I could interact with this subject
+again someday in a master class.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-12" class="footnum" href="#fnr.-7-12" role="doc-backlink">20</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<span class="timestamp-wrapper"><span class="timestamp">[2025-09-16 Tue 00:23]</span></span> I&rsquo;m reading this along with doing <a href="https://codingchallenges.fyi/challenges/challenge-webserver/">https://codingchallenges.fyi/challenges/challenge-webserver/</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-8" class="footnum" href="#fnr.-7-8" role="doc-backlink">21</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I really recommend Shaffer&rsquo;s book, however, this one contained additional
+algorithms that were not included in the former.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-7" class="footnum" href="#fnr.-7-7" role="doc-backlink">22</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Do not confuse for computer code. See: <a href="https://en.wikipedia.org/w/index.php?title=Code&amp;oldid=1194309533">https://en.wikipedia.org/w/index.php?title=Code&amp;oldid=1194309533</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-2" class="footnum" href="#fnr.-7-2" role="doc-backlink">23</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I&rsquo;m not into game programming, but it was very fun to read this book.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-10" class="footnum" href="#fnr.-7-10" role="doc-backlink">24</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I&rsquo;m not reading this, just using it as a reference book.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-6" class="footnum" href="#fnr.-7-6" role="doc-backlink">25</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+For a better PDF version of this great book, please <del>find this link</del>
+contact me.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.26" class="footnum" href="#fnr.26" role="doc-backlink">26</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">I left this for (<a href="#citeproc_bib_item_3">Higginbotham, 2015</a>)</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-9" class="footnum" href="#fnr.-7-9" role="doc-backlink">27</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-04 Sun 06:35]</span></span>: funny enough that I didn&rsquo;t complete this book
+either and left it for Renzo Borgatti&rsquo;s, I think it&rsquo;s great learning recoruce though.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-3" class="footnum" href="#fnr.-7-3" role="doc-backlink">28</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I also read Seibel&rsquo;s Practical Common Lisp, this is my book of choice for
+people who want to get into Lisp.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-4" class="footnum" href="#fnr.-7-4" role="doc-backlink">29</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I unlearned it later.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-7-5" class="footnum" href="#fnr.-7-5" role="doc-backlink">30</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Enjoyable work.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-11" class="footnum" href="#fnr.-8-11" role="doc-backlink">31</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I won&rsquo;t usually recommend reading this, but I want to make sure that
+everyone will read it, even if you are not going to study Marxism, reading the
+Manifesto at least is أضعف الإيمان to prevent yourself from the odds and the
+ends of the anti-bolshevism propaganda (which usually includes &ldquo;Marxism&rdquo;). A
+better alternative would be Nikoalai Bukharin&rsquo;s &ldquo;ABC of Communism&rdquo;, or even
+better, read Marx carefully.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-1" class="footnum" href="#fnr.-8-1" role="doc-backlink">32</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Also known as: religion and class struggle
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-12" class="footnum" href="#fnr.-8-12" role="doc-backlink">33</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I consider this as a very nice literary message, actually it reminds
+me of how the intellectual treated &ldquo;crowds&rdquo; in the early 19 and 20 centuries,
+read about this here [DELETED]. Simply, like Le Bon and Frizer did in there
+psychology and anthropology papers, Étienne de La Boétie is cursing the scum
+peoples who let tyrant governors control and torture them. Of course without
+giving any explanation on why they do so. It&rsquo;s very obsolete to take it as an
+&rsquo;intellectual&rsquo; or &rsquo;anthropological&rsquo; approach.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-13" class="footnum" href="#fnr.-8-13" role="doc-backlink">34</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This books is about the laïcité (the f*ricnh secularism) and how the
+xenophobia works as very good engine for moving the French people towards more
+and more so-called &rsquo;free speech&rsquo; movements. A very important and related book is
+Jean Baubérot&rsquo;s La laïcité Française et ses Mutations.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-2" class="footnum" href="#fnr.-8-2" role="doc-backlink">35</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+أوهَمَ رأس المال الناس أنّ الدُّول &ldquo;المتقدِّمة&rdquo; هي كذلك بفعل خفض الإنفاق
+العمومي. ولكن الإنفاق العمومي، مقارنة بالناتِج القومي، لم ينخفِض إلاّ لدى الدُّول
+الفقيرة، وبالذّات بإكراهات من الدُّول &ldquo;المتقدِّمة&rdquo;. (عباس برهام)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-16" class="footnum" href="#fnr.-8-16" role="doc-backlink">36</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Both of these books are good reads for kids.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-8-15" class="footnum" href="#fnr.-8-15" role="doc-backlink">37</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I don&rsquo;t know who authored this book/article; however it is not
+available for some reason on the internet and I can&rsquo;t even remember where did I
+download it from, anyway I&rsquo;ve reuploaded it; you can get it from <i>(link is
+broken)</i>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.38" class="footnum" href="#fnr.38" role="doc-backlink">38</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">(NOTE: for a readable PDF version, see <a href="h/x.html#acx9s711gzj0">Better PDF version of
+Manufacuring Consent</a>) While it&rsquo;s one of my favorite works ever, I do not
+think that it was best-written. The book is full with examples for propaganda
+promoted mainly by the US-based media (of course the book gave a reasoning for
+that, that&rsquo;s the US provides highly accessible information systems if compared
+to any other place) instead of forming and answering questions related to the
+propaganda model. It&rsquo;s still highly recommended book for people who are new to
+the real uncovered US politics against enemy states. For further investigation
+about propaganda models, (<a href="#citeproc_bib_item_9">Pedro-Caranana et al., 2018</a>) is recommended
+instead.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.39" class="footnum" href="#fnr.39" role="doc-backlink">39</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This is an oversimplified Manufacturing Consent, however the latter is about
+to be an out-of-date model, see (<a href="#citeproc_bib_item_9">Pedro-Caranana et al., 2018</a>)</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-10-1" class="footnum" href="#fnr.-10-1" role="doc-backlink">40</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Also check Dr Anwar&rsquo;s: <a href="https://www.youtube.com/playlist?list=PLTMFx0t8kDzc72vtNWeTP05x6WYiDgEx7">Anwar Shaikh: Historical Foundations of Political Economy</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-11-2" class="footnum" href="#fnr.-11-2" role="doc-backlink">41</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+whoever attributed this to Zaid, they did not spend enough time writing
+it.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-11-1" class="footnum" href="#fnr.-11-1" role="doc-backlink">42</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Check my (very old unrevised) review: <a href="a/islam.html#c1c6b159-608c-4db1-9c55-88f33883f079">Pervez Hoodbhoy&rsquo;s Islam and Science</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-11-3" class="footnum" href="#fnr.-11-3" role="doc-backlink">43</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Dr. Abdulrahman Khalil&rsquo;s introduction is extremely interesting. Avesta is
+very interesting to read as well, however, the current version is filled with
+paganism. It&rsquo;s hard for a plain reader like me to filter all it to reach for
+some wisdom, but I might do it someday.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-11-19" class="footnum" href="#fnr.-11-19" role="doc-backlink">44</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Poorly written book, nothing new or special in the study, the author
+tends to have an evident ignorance on Takhrij al-hadith.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-12-1" class="footnum" href="#fnr.-12-1" role="doc-backlink">45</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Very good book. I recommend it as a good start for anybody who wants to
+understand how we got &ldquo;the middle east&rdquo;.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-12-17" class="footnum" href="#fnr.-12-17" role="doc-backlink">46</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+An important research to understand the uprising of Jihad movements between
+pan-Arabists, ex pan-Arabists in general, and between engineers and the middle
+class in particular. I think it&rsquo;s even a good introduction to answer the
+question of why Muslims might bomb themselves. It&rsquo;s one of the greatest books
+I&rsquo;ve ever read about the armed Jihad.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-12-2" class="footnum" href="#fnr.-12-2" role="doc-backlink">47</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I only used it to read the first two volumes about Sirah.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-12-18" class="footnum" href="#fnr.-12-18" role="doc-backlink">48</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+If there is only one book that is neutral in the history of The Middle East,
+it would be this book. I recommend it for everyone needs to understand how we
+winded up with the 2000s pitiful middle east. Note that the books is
+oversimplified in the post-caliphate era.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-12-20" class="footnum" href="#fnr.-12-20" role="doc-backlink">49</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Too much informative, in the sense that it doesn&rsquo;t really provide a historical
+context rather than historical information. I will consider searching for
+another book on the early history of Iran soon.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-13-21" class="footnum" href="#fnr.-13-21" role="doc-backlink">50</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This was very beautiful, I need to reread it multiple times in the future.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-13-22" class="footnum" href="#fnr.-13-22" role="doc-backlink">51</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+If I were to raise someone one day, I&rsquo;d definitely use this book.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-14-2" class="footnum" href="#fnr.-14-2" role="doc-backlink">52</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+ثمَّ إِنِّي مَا رَأَيْت حَاجَة الشريف إِلَى شَيْء من أدب اللِّسَان بعد سَلَامَته من اللّحن كحاجته إِلَى
+الشَّاهِد والمثل والشذرة والكلمة السائرة فَإِن ذَلِك يزِيد الْمنطق تفخيما ويكسبه قبولاً وَيجْعَل لَهُ
+قدرا فِي النُّفُوس وحلاوةً فِي الصُّدُور وَيَدْعُو الْقُلُوب إِلَى وعيه ويبعثها على حفظه ويأخذها باستعداده
+لأوقات المذاكرة والاستظهار بِهِ أَوَان المجاولة فِي ميادين المجادلة والمصاولة فِي حلبات المقاولة
+وَإِنَّمَا هُوَ فِي الْكَلَام كالتفصيل فِي العقد والتنوير فِي الرَّوْض والتسهيم فِي الْبرد فَيَنْبَغِي أَن يستكثر
+من أَنْوَاعه لَان الإقلال مِنْهَا كاسمه إقلال وَالتَّقْصِير فِي التماسه قُصُور وَمَا كَانَ مِنْهُ مثلا سائراً
+فمعرفته ألزم لَان منفعَته أَعم وَالْجهل بِهِ أقبح (العسكري)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-14-1" class="footnum" href="#fnr.-14-1" role="doc-backlink">53</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Was that really a book about &ldquo;women are so weak omg&rdquo;?
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-15-2" class="footnum" href="#fnr.-15-2" role="doc-backlink">54</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Not a very nice work, I&rsquo;d prefer Youssef Ziedan&rsquo;s novel about Ibn Sina. I never
+thought of Ibn Sina in such an erotic context, ever.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-15-1" class="footnum" href="#fnr.-15-1" role="doc-backlink">55</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+(<span class="timestamp-wrapper"><span class="timestamp">[2024-07-22 Mon 18:23]</span></span>) One of the most distasteful works I&rsquo;ve ever read.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-18-1" class="footnum" href="#fnr.-18-1" role="doc-backlink">56</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I wish if I&rsquo;ve started with this book instead of chess for dummies.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-11-22 Sat 03:06.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

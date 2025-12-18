@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Legacy Commentary</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Legacy Commentary</h1>
+</header>	<a id="hide-link" href="#/" onclick="hideDates()">Click to hide dates</a>
+	<a id="show-link" href="#/" class="hide" onclick="showDates()">Click to display dates</a>
+    <script>
+window.onload = function() {
+  hideDates();
+};
+    </script>
+
+
+
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/4EMcm9vzlnI?t=115">How GO Was Created - Less Is More</a> &ldquo;I do not think people who love rust could
+go to another language they&rsquo;re kind of sucked into rusthole&rdquo; lmao. <i>(2023/07/24)</i></li>
+<li><a href="https://youtu.be/YbYpGmp1ij0">Keep Linux Open and Free!!!! Oracle Dunks on IBM</a> kek. <i>(2023/07/12)</i></li>
+<li><a href="https://youtu.be/MDy7JQN5MN4">The Most Efficient Struct Configuration Pattern For Go</a>. It&rsquo;s actually very
+useful pattern to use. I&rsquo;ve used it a lot in Go, it was inspired to me from
+<a href="cs/lisp.html#vlm4vsn02wj0">Lisp</a> (I can tell that is one of the most common patterns in Lisp). I was
+thinking today if it will be possible to have a fantastic control-statement
+function in Go like Lisp&rsquo;s <code>IF</code>. <i>(2023/06/30)</i></li>
+<li><a href="https://old.reddit.com/r/rust/comments/12b7p2p/the_rust_programming_language_absolutely/">The Rust programming language absolutely positively sucks</a>. I like the fact
+that they published it in r/rust. <i>(2023/06/22)</i></li>
+<li><a href="https://youtu.be/cNWhyadNbCk">Prompt Engineering is The New C++</a> <i>(2023/06/19)</i></li>
+<li><a href="https://medium.com/@bjax_/a-tale-of-unwanted-disruption-my-week-without-amazon-df1074e3818b">A Tale of Unwanted Disruption: My Week Without Amazon</a>. Smart housing is
+one of the worst ideas that we have been through so far. Just as bad as
+thinking in the 90s that people in the next millennium would execute programs
+that they don&rsquo;t know how they are implemented. <i>(2023/06/19)</i></li>
+<li><a href="https://stallman.org/archives/2023-mar-jun.html#12_June_2023_(Robot_taxi_killed_dog)">Robot taxi killed dog</a> Is rms&rsquo; comment very irrelevant? <i>(2023/06/18)</i></li>
+<li><a href="https://youtu.be/odi248rgkw8?t=4058">Editor/IDE Tier List</a> &ldquo;I&rsquo;ve never met someone who used emacs that I&rsquo;m not just
+impressed with&rdquo;. Okay he fixed it right away. <i>(2023/06/13)</i>
+<ul class="org-ul">
+<li><a href="https://youtu.be/odi248rgkw8?t=4018">Editor/IDE Tier List</a> &ldquo;I never opened it I never used it there was only that
+weird guy at work who uses it&rdquo;. This way to describe emacs hits me hard
+actually. <i>(2023/06/13)</i></li>
+</ul></li>
+<li><a href="https://youtu.be/urcL86UpqZc">Interview with an Emacs Enthusiast in 2023 [Colorized]​</a>. &ldquo;- So you are going to
+treat it as a text buffer? - I treat my whole life as a text buffer&rdquo; lol. <i>(2023/06/11)</i></li>
+<li><a href="https://tinyclouds.org/rant">I hate almost all software</a>. Totally agree. This industry is just horrible. <i>(2023/06/06)</i></li>
+<li><a href="https://github.com/nolimits4web/Swiper/issues/1631">drag gets all fucked to fuck when you click and drag and release outside of the slider shit · Issue #1631 · nolimits4web/swiper</a>.
+This is how we handle technical documentation for bugs, ladies and gentlemen. <i>(2023/06/06)</i></li>
+<li><a href="https://www.washingtonpost.com/world/interactive/2023/israel-palestinians-raids-west-bank/">Israeli agents conducted targeted killings in West Bank, killing a child</a>. I&rsquo;ve
+studied some propaganda modules years ago that explained me much of what I&rsquo;m
+seeing in the mass media, yet it is never enough to make you see what is going
+behind the scene that would make the washingtonpost publish such a report. <i>(2023/05/30)</i></li>
+</ul>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/7KVY8zW2zXU?t=101">The Stack Overflow Survey</a>. &ldquo;I did do crystalmeth but that&rsquo;s different than
+crystal&rdquo; this actually hits hard if you know that theprimeagen is an
+ex-crystalmeth addict. <i>(2023/05/23)</i></li>
+<li><a href="https://www.youtube.com/@DirectorZ333/videos">DirectorZ333.</a> Found this fan youtube channel today, seems that they used to
+make nice music videos for their favorite songs a decade ago. It&rsquo;s sad how
+such things being buried forever. <i>(2023/05/20)</i></li>
+<li><a href="https://youtu.be/UKCW4nJmIwE">Episode 01: The Great Idea of Wisdom</a> <i>(2023/05/20)</i></li>
+<li><a href="https://old.reddit.com/r/golang/comments/13jvo70/go_job_interview_questions/">Go job interview questions</a>. Software industry is going always into worse and
+worse situation due to its dim hiring process. <i>(2023/05/19)</i></li>
+<li><a href="https://youtu.be/v53okHVQZuA">Vim vs Emacs | Prime Reacts</a>. &ldquo;Those who run terminal emulator inside
+of their text editor have already screwed up&rdquo; lmao. <i>(2023/05/19)</i></li>
+<li><a href="https://en.wikipedia.org/wiki/Hero%27s_journey">Hero&rsquo;s journey - Wikipedia</a>. I was much younger when I read Campell&rsquo;s &ldquo;The hero with a thousand faces&rdquo; for the first time. My thoughts now towards
+psychoanalyses are much developed compared to then, yet they are not decisive.
+I think I&rsquo;m going to reread it to have more definitive view of psychoanalysis. <i>(2023/05/19)</i></li>
+<li><a href="https://old.reddit.com/r/cscareerquestions/comments/13iwhqm/why_cant_i_land_a_job/">Why can&rsquo;t I land a job : cscareerquestions</a>. &ldquo;challenging challenges&rdquo;. Btw, let
+me put my opinion on language models here too. I don&rsquo;t think they are bad in
+general but in fact they solve only one problem; the bureaucratic writings.
+You can ask it to write you any useless load of &ldquo;scalable&rdquo;, &ldquo;ascendable&rdquo; or
+whatever words the HR will be happy seeing while checking your resume. <i>(2023/05/16)</i></li>
+<li><a href="http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html">Writing academic papers with org-mode</a>. A thorough explanation. I feel
+confidence when I see this kind of intuition of teleportation; the explained
+workflow is very similar to what I&rsquo;ve been doing, however I thought that what
+I&rsquo;m doing is special workflow of mine. <i>(2023/05/12)</i></li>
+<li><a href="https://theframeblog.com/2020/12/28/olympian-frames-frederic-lord-leighton/">Olympian frames: Frederic, Lord Leighton</a>. <i>(2023/05/06)</i></li>
+<li><a href="https://wiki2.org/en/Poetry_of_Catullus">Poetry of Catullus — Wikipedia Republished // WIKI 2</a>. <i>(2023/05/05)</i></li>
+<li><p>
+<a href="https://math.stackexchange.com/questions/697096/prove-that-any-palindrome-with-an-even-number-of-digits-is-divisible-by-11%5D">Prove that any palindrome with an even number of digits is divisible by 11</a> Was solving some euler problems today, found this interesting pattern in palindrome product:
+</p>
+
+<pre class="example" id="org1a40f26">
+    3 digits:            913 x            993 =                       906609, 7ms
+    4 digits:           9999 x           9901 =                     99000099, 0ms
+    5 digits:          99681 x          99979 =                   9966006699, 11ms
+    6 digits:         999999 x         999001 =                 999000000999, 0ms
+    7 digits:        9997647 x        9998017 =               99956644665999, 812ms
+    8 digits:       99999999 x       99990001 =             9999000000009999, 0ms
+    9 digits:      999920317 x      999980347 =           999900665566009999, 508259ms
+   10 digits:     9999999999 x     9999900001 =         99999000000000099999, 0ms
+   11 digits:    99999943851 x    99999996349 =       9999994020000204999999, 420031ms
+   12 digits:   999999999999 x   999999000001 =     999999000000000000999999, 0ms
+   13 digits: ?
+   14 digits: 99999999999999 x 99999990000001 = 9999999000000000000009999999, 0ms
+</pre>
+
+<p>
+<i>(2023/04/10)</i>
+</p></li>
+<li><a href="https://github.com/kmx-io/repo">kmx-io/repo: Source repository utilities in Common Lisp</a> Sometimes all what you are missing is one piece. <i>(2023/03/18)</i></li>
+<li><a href="https://old.reddit.com/r/lisp/comments/11szcrl/microsoft_excel_as_lisp_ide/">Microsoft Excel as Lisp IDE</a> Do people even hear themselves? <i>(2023/03/17)</i></li>
+<li><a href="https://youtu.be/q2A-MkGjvmI">Let’s try ChatGPT. Is it any good?</a>. A nice review. <i>(2023/01/30)</i></li>
+<li><a href="https://poweruser.blog/embedding-python-in-go-338c0399f3d5">Embedding Python in Go.</a> <i>(2022/12/22)</i></li>
+<li><a href="https://kristoff.it/blog/why-go-and-not-rust/">Why Go and not Rust?</a> <i>(2022/12/18)</i></li>
+<li><a href="https://www.draketo.de/software/decentralized-moderation.html">The path towards decentralized moderation</a> I wish if the web stayed like that, when
+everyone has its place that they really own and control. <i>(2022/12/13)</i></li>
+<li><a href="https://www.salkosuo.net/2015/10/22/elite-for-emacs.html">Elite for Emacs</a> <i>(2022/12/09)</i></li>
+<li><a href="http://www.catb.org/~esr/faqs/hacker-howto.html">How To Become A Hacker</a>
+Why this guide is not ubiquitous enough? I found it months ago when I was browsing Paul
+Geraham blog (he was arguing about an entry about Lisp <i><a href="http://www.paulgraham.com/avg.html?viewfullsite=1">here</a></i>). I think it&rsquo;s a very
+suitable guide for everyone who is involved into using computer, it&rsquo;s a sad fact that even
+modern &rsquo;computer scientests&rsquo; need such a guide. <i>(2022/12/05)</i></li>
+<li><a href="https://www.iwriteiam.nl/index.html">I write, therefore I am</a>
+I respect this place. <i>(2022/12/01)</i></li>
+<li><a href="http://lists.warhead.org.uk/pipermail/iwe/2005-July/000130.html">Why Lisp macros are cool, a Perl perspective</a> <i>(2022/11/26)</i></li>
+<li><a href="https://github.com/ThreeDotsLabs/go-web-app-antipatterns">Go Web App Anti-Patterns</a> <i>(2022/11/22)</i></li>
+<li><p>
+<a href="https://appliedgo.net/limericks/?utm_source=reddit">Poetry time! Go proverbs as limericks</a>
+</p>
+
+<div class="epigraph"><blockquote>
+There once was a programmer named Joe<br>
+Who loved coding in Go, don&rsquo;t you know?<br>
+He found it quite neat<br>
+With concurrency sweet<br>
+And a syntax that was oh so low-key<br>
+<br>
+With goroutines running in parallel<br>
+His code ran faster than a serial<br>
+He could handle many tasks<br>
+With ease and with panache<br>
+Thanks to Go&rsquo;s ability to scale.<br>
+<br>
+So if you want your code to be lean<br>
+And run faster than you&rsquo;ve ever seen<br>
+Give Go a try<br>
+And watch your code fly<br>
+And see what it can do for your machine<br>
+
+</blockquote></div>
+
+<p>
+<i>(2022/12/18)</i>
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="https://harmful.cat-v.org/software/c++/I_did_it_for_you_all">Bjarne Stroustrup: &ldquo;I Did It For You All&#x2026;&rdquo;</a> lmao. <i>(2022/11/05)</i></li>
+<li><a href="https://hacks.mozilla.org/2022/11/improving-firefox-stability-with-this-one-weird-trick/">Improving Firefox stability with this one weird trick</a> This is funny. <i>(2022/11/01)</i></li>
+<li><a href="https://youtu.be/Wy9WvF5gWYg">Org-roam-bibtex - Quick Presentation</a>. One of the best workflows I&rsquo;ve ever seen. <i>(2022/11/29)</i></li>
+<li><a href="https://youtu.be/M6iZaOYPq60?list=TLPQMTExMjIwMjIEoACD7ER6ew">What are your thoughts on ChatGPT?</a> <i>(2022/11/25)</i></li>
+<li><a href="https://youtu.be/p2tdFE28Jdg">How do you maintain a large code base?</a> <i>(2022/11/21)</i></li>
+<li><a href="https://youtu.be/o9pEzgHorH0">Stop Writing Classes</a> <i>(2022/11/16)</i></li>
+<li><a href="https://youtu.be/d7KHAVaX_Rs">Just In Time (JIT) Compilers</a> <i>(2022/11/12)</i></li>
+<li><a href="https://youtu.be/3TBq__oKUzk">RubyConf 2017: 4 Programming Paradigms in 45 Minutes by Aja Hammerly</a> <i>(2022/11/08)</i></li>
+<li><a href="https://youtu.be/J2YdjpWJJHs">Embedding WebKit in Emacs: XWidgets+WebKit Feature Preview</a> Seems very
+interesting. I used to think it&rsquo;s a hopeless technological when I tried it
+with
+<code>M-x xwidget-webkit-browse-url</code>, damn it I don&rsquo;t want even to remember. However I recently
+tried <a href="https://github.com/akirakyle/emacs-webkit">akirakyle/emacs-webkit</a> and it rocks, I&rsquo;ve been thinking of replacing chromium with
+it. Now, XWidgets seems very promising to me. I wish I had some free time to develop
+great things with it. <i>(2022/11/04)</i></li>
+<li><a href="https://youtu.be/DWzprRWPI68">We have a problem.</a> <i>(2022/11/12)</i>
+<i>(2022/12/19)</i></li>
+<li><a href="https://www.youtube.com/shorts/wBIjv5g-loM">Three reasons YouTube loves #shorts</a> <i>(2022/09/20)</i></li>
+</ul>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-10-18 Sat 17:08.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

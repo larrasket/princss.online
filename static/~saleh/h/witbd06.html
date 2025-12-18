@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moral blindness</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Moral blindness</h1>
+</header><div class="propert" id="orgae7542a">
+<p>
+Part of a series on <a href="../p/witbd.html#x0egwn81crk0">What is it to be done?</a>
+</p>
+
+</div>
+
+<p>
+Last March I was returning home late in the evening. On turning into a bye-lane I perceived on the snow in a distant field some black shadows. I should not have noticed this but for the policeman who stood at the end of the lane and cried in the direction of the shadows, “Vasili, why don&rsquo;t you come along?”
+</p>
+
+<p>
+“She won&rsquo;t move,” answered a voice; and thereupon the shadows came towards the policeman. I stopped and asked him,—
+</p>
+
+<p>
+“What is the matter?”
+</p>
+
+<p>
+He said, “We have got some girls from Rzhanoff&rsquo;s house, and are taking them to the police-station; and one of them lags behind, and won&rsquo;t come along.”
+</p>
+
+<p>
+A night-watchman in sheepskin coat appeared now driving on a girl who slouched along while he prodded her from behind. I, the watchman and the policeman, were wearing winter coats: she alone had none, having only her gown on. In the dark I could distinguish only a brown dress and a kerchief round her head and neck. She was short, like most starvelings, and had a broad, clumsy figure.
+</p>
+
+<p>
+“We aren&rsquo;t going to stay here all night for you, you hag! Get on, or I&rsquo;ll give it you!” shouted the policeman. He was evidently fatigued and tired of her. She walked some paces and stopped again.
+</p>
+
+<p>
+The old watchman, a good-natured man (I knew him), pulled her by the hand. “I&rsquo;ll wake you up! come along!” said he, pretending to be angry. She staggered, and began to speak with a croaking hoarse voice, “Let me be; don&rsquo;t you push. I&rsquo;ll get on myself.”
+</p>
+
+<p>
+“You&rsquo;ll be frozen to death,” he returned.
+</p>
+
+<p>
+“A girl like me won&rsquo;t be frozen: I&rsquo;ve lots of hot blood.”
+</p>
+
+<p>
+She meant it as a joke, but her words sounded like a curse. By a lamp, which stood not far from the gate of my house, she stopped again, leaned back against the paling, and began to seek for something among her petticoats with awkward, frozen hands. They again shouted to her; but she only muttered and continued searching. She held in one hand a crumpled cigarette and matches in the other. I remained behind her: I was ashamed to pass by or to stay and look at her. But I made up my mind and came up to her. She leaned with her shoulder against the paling and vainly tried to light a match on it.
+</p>
+
+<p>
+I looked narrowly at her face. She was indeed a starveling and appeared to me to be a woman of about thirty. Her complexion was dirty; her eyes small, dim, and bleared with drinking; she had a squat nose; her lips were wry and slavering, with downcast angles; from under her kerchief fell a tuft of dry hair. Her figure was long and flat; her arms and legs short.
+</p>
+
+<p>
+I stopped in front of her. She looked at me and grinned as if she knew all that I was thinking about. I felt that I ought to say something to her. I wanted to show her that I pitied her.
+</p>
+
+<p>
+“Have you parents?” I asked. She laughed hoarsely, then suddenly stopped, and, lifting her brows, began to look at me steadfastly.
+</p>
+
+<p>
+“Have you parents?” I repeated.
+</p>
+
+<p>
+She smiled with a grimace which seemed to say, “What a question for him to put!”
+</p>
+
+<p>
+“I have a mother,” she said at last; “but what&rsquo;s that to you?”
+</p>
+
+<p>
+“And how old are you?”
+</p>
+
+<p>
+“I am over fifteen,” she said, at once answering a question she was accustomed to hear.
+</p>
+
+<p>
+“Come, come! go on; we shall all be frozen for you, the deuce take you!” shouted the policeman; and she edged off from the paling and staggered along the lane to the police-station: and I turned to the gate and entered my house, and asked whether my daughters were at home. I was told that they had been to an evening party, had enjoyed themselves much, and now were asleep.
+</p>
+
+<p>
+The next morning I was about to go to the police-station to enquire what had become of this unhappy girl. I was ready to start early enough, when one of those unfortunate men called, who from weakness have dropped out of the gentlemanly line of life to which they have been accustomed, and who rise and fall by turns. I had been acquainted with him three years. During this time he had several times sold every thing he had,—even his clothes; and, having just done so again, he passed his nights temporarily in Rzhanoff&rsquo;s house, and his days at my lodgings. He met me as I was going out, and, without listening to me, began at once to relate what had happened at Rzhanoff&rsquo;s house the night before.
+</p>
+
+<p>
+He began to relate it, yet had not got through one-half when, all of a sudden, he, an old man, who had gone through much in his life, began to sob, and, ceasing to speak, turned his face away from me. This was what he related. I ascertained the truth of his story on the spot, where I learned some new particulars, which I shall relate too.
+</p>
+
+<p>
+A washerwoman thirty years of age, fair, quiet, good-looking, but delicate, passed her nights in the same lodging-house, the ground-floor of No. 32 where my friend slept among various shifting night-lodgers, men and women, who for five kopeks slept with each other.
+</p>
+
+<p>
+The landlady at this lodging was the mistress of a boatman. In summer her lover kept a boat; and in winter they earned their living by letting lodgings to night-lodgers at three kopeks without a pillow, and at five kopeks with one.
+</p>
+
+<p>
+The washerwoman had been living here some months, and was a quiet woman; but lately they began to object to her because she coughed, and prevented the other lodgers from sleeping. An old woman in particular, eighty years old, half silly, and a permanent inmate of this lodging, began to dislike the washerwoman and kept annoying her because she disturbed her sleep; for all night she coughed like a sheep.
+</p>
+
+<p>
+The washerwoman said nothing. She owed for rent, and felt herself guilty, and was therefore compelled to endure. She began to work less and less, for her strength failed her; and that was why she was unable to pay her rent. She had not been to work at all the whole of the last week; and she had been making the lives of all, and particularly of the old woman, miserable by her cough.
+</p>
+
+<p>
+Four days ago the landlady gave her notice to leave. She already owed sixty kopeks, and could not pay them, and there was no hope of doing so; and other lodgers complained of her cough.
+</p>
+
+<p>
+When the landlady gave the washerwoman notice, and told her she must go away if she did not pay the rent, the old woman was glad, and pushed her out into the yard. The washerwoman went away, but came back again in an hour, and the landlady had not the heart to send her away again&#x2026;. During the second and the third day the landlady left her there. “Where shall I go?” she kept saying. On the third day the landlady&rsquo;s lover, a Moscow man, who knew all the rules and regulations, went for a policeman. The policeman, with a sword and a pistol slung on a red cord, came into the lodging and quietly and politely turned the washerwoman out into the street.
+</p>
+
+<p>
+It was a bright, sunny, but frosty day in March. The melting snow ran down in streams, the house-porters were breaking the ice. The hackney sledges bumped on the ice-glazed snow, and creaked over the stones. The washerwoman went up the hill on the sunny side, got to the church, and sat down in the sun at the church-porch. But when the sun began to go down behind the houses and the pools of water began to be covered with a thin sheet of ice, the washerwoman felt chilly and terrified. She got up and slowly walked on&#x2026;. Where? Home,—to the only house in which she had been living lately.
+</p>
+
+<p>
+While she was walking there, several times resting herself, it began to get dark. She approached the gate, turned into it, her foot slipped, she gave a shriek, and fell down.
+</p>
+
+<p>
+One man passed by, then another. “She must be drunk,” they thought. Another man passed, and stumbled up against her, and said to the house-porter, “Some tipsy woman is lying at the gate. I very nearly broke my neck over her. Won&rsquo;t you take her away?”
+</p>
+
+<p>
+The house-porter came. The washerwoman was dead. This was what my friend related to me.
+</p>
+
+<p>
+The reader will perhaps fancy I have picked out particular cases in the prostitute of fifteen years of age and the story of this washerwoman; but let him not think so: this really happened in one and the same night. I do not exactly remember the date, only it was in March, 1884.
+</p>
+
+<p>
+Having heard my friend&rsquo;s story I went to the police-station, intending from there to go to Rzhanoff&rsquo;s house to learn all the particulars of the washerwoman&rsquo;s story.
+</p>
+
+<p>
+The weather was fine and sunny; and again under the ice of the previous night, in the shade, you could see the water running; and in the sun, in the square, everything was melting fast. The trees of the garden appeared blue from over the river; the sparrows that were reddish in winter, and unnoticed then, now attracted people&rsquo;s attention by their merriness; men also tried to be merry, but they all had too many cares. The bells of the churches sounded; and blending with them were heard sounds of shooting from the barracks,—the hiss of the rifle balls, and the crack when they struck the target.
+</p>
+
+<p>
+I entered the police-station. There some armed men—policemen—led me to their chief. He, also armed with a sword, sabre, and pistol, was busy giving some orders about a ragged, trembling old man who was standing before him, and from weakness could not clearly answer what was asked of him. Having done with the old man, he turned to me. I inquired about the prostitute of last night. He first listened to me attentively, then he smiled, not only because I did not know why they were taken to the police-station, but more particularly at my astonishment at her youth. “Goodness! there are some of twelve, thirteen, and fourteen years of age often,” said he, in a lively tone.
+</p>
+
+<p>
+To my question about the girl of yesterday, he told me that she had probably been already sent to the committee (if I understood him right). To my question where such women passed the night, he gave a vague answer. The one about whom I spoke he did not remember. There were so many of them every day.
+</p>
+
+<p>
+At Rzhanoff&rsquo;s house, in No. 32, I already found the sacristan reading prayers over the dead washerwoman. She had been brought in and laid on her former pallet; and the lodgers, all starvelings themselves, contributed money for the prayers, the coffin, and the shroud; the old woman had dressed her, and laid her out. The clerk was reading something in the dark; a woman in a cloak stood holding a wax taper; and with a similar wax taper stood a man (a gentleman, it is fair to state), in a nice great-coat, trimmed with an astrachan collar, in bright goloshes, and with a starched shirt. That was her brother. He had been hunted up.
+</p>
+
+<p>
+I passed by the dead woman to the landlady&rsquo;s room in order to ask her all the particulars. She was afraid of my questions,—afraid probably of being charged with something; but by and by she grew talkative and told me all. On passing by again, I looked at the dead body. All the dead are beautiful; but this one was particularly beautiful and touching in her coffin, with her clear, pale face, with closed, prominent eyes, sunken cheeks, and fair, soft hair over her high forehead; her face looked weary, but kind, and not sad at all, but rather astonished. And indeed, if the living do not see, the dead may well be astonished.
+</p>
+
+<p>
+On the day I wrote this there was a great ball in Moscow. On the same night I left home after eight o&rsquo;clock. I live in a locality surrounded by factories; and I left home after the factory whistle had sounded, and when, after a week of incessant work, the people were freed for their holiday. Factory-men passed by me, and I by them, all turning their steps to the public-houses and inns. Many were already tipsy: many were with women.
+</p>
+
+<p>
+Every morning at five I hear each of the whistles, which means that the labour of women, children, and old people has begun. At eight o&rsquo;clock another whistle,—this means half an hour&rsquo;s rest; at twelve the third whistle,—this means an hour for dinner. At eight o&rsquo;clock the fourth whistle, indicating cessation from work. By a strange coincidence, all the three factories in my neighbourhood produce only the articles necessary for balls.
+</p>
+
+<p>
+In one factory,—the one nearest to me,—they make nothing but stockings; in the other opposite, silk stuffs; in the third, perfumes and pomades.
+</p>
+
+<p>
+One may, on hearing these whistles, attach to them no other meaning than that of the indication of time. “There, the whistle has sounded: it is time to go out for a walk.”
+</p>
+
+<p>
+But one may associate with them also the meaning they have in reality,—that at the first whistle at five o&rsquo;clock in the morning, men and women, who have slept side by side in a damp cellar, get up in the dark, and hurry away into the noisy building to take their part in a work of which they see neither cessation nor utility for themselves, and work often so in the heat, in suffocating exhalations, with very rare intervals of rest, for one, two, or three, or even twelve or more hours. They fall asleep, and get up again, and again do this work, meaningless for themselves, to which they are goaded only by want. So it goes on from one week to another, interrupted only by holidays.
+</p>
+
+<p>
+And now I see these working-people freed for one of these holidays. They go out into the street: everywhere there are inns, public-houses, and gay women. And they, in a drunken state, pull each other by the arms, and carry along with them girls like the one whom I saw conducted to the police-station: they hire hackney-coaches, and ride and walk from one inn to another, and abuse each other, and totter about, and say they know not what.
+</p>
+
+<p>
+Formerly when I saw the factory people knocking about in this way I used to turn aside with disgust, and almost reproached them; but since I hear these daily whistles, and know what they mean, I am only astonished that all these men do not come into the condition of the utter beggars with whom Moscow is filled, and the women into the position of the girl whom I had met near my house.
+</p>
+
+<p>
+Thus I walked on, looking at these men, observing how they went about the streets, till eleven o&rsquo;clock. Then their movements became quieter: there remained here and there a few tipsy people, and I met some men and women who were being conducted to the police-station. And now, from every side, carriages appeared, all going in one direction. On the coach-box sat a coachman, sometimes in a sheepskin coat, and a footman,—a dandy with a cockade. Well-fed horses, covered with cloth, trotted at the rate of fifteen miles an hour. In the carriages sat ladies wrapped in shawls, taking great care not to spoil their flowers and their toilets. All, beginning with the harness on the horses, the carriages, indiarubber wheels, the cloth of the coachman&rsquo;s coat, down to the stockings, shoes, flowers, velvet, gloves, scents,—all these articles have been made by those men, some of whom fell asleep on their own pallets in their mean rooms, some in night-houses with prostitutes, and others in the police-station.
+</p>
+
+<p>
+The ball-goers drive past these men, in and with things made by them; and it does not even enter into their minds that there could possibly be any connection between the ball they are going to, and these tipsy people to whom their coachmen shout out so angrily. With easy minds and assurance that they are doing nothing wrong, but something very good, they enjoy themselves at the ball.
+</p>
+
+<p>
+Enjoy themselves!
+</p>
+
+<p>
+From eleven o&rsquo;clock in the evening till six in the morning, in the very depth of the night; while with empty stomachs men are lying in night-lodgings, or dying as the washer-woman had done!
+</p>
+
+<p>
+The enjoyment of the ball consists in women and girls uncovering their bosoms, putting on artificial protuberances at the back, and altogether getting themselves up as no girl and no woman who is not yet depraved would, on any account, appear before men; and in this half-naked condition, with uncovered bosoms, and arms bare up to the shoulders, with dresses puffed behind and tight round the hips, in the brightest light, women and girls, whose first virtue has always been modesty, appear among strange men, who are also dressed in indecently tight-fitting clothes, embrace each other, and pivot round and round to the sound of exciting music. Old women, often also half naked like the younger ones, are sitting looking on, and eating and drinking: the old men do the same. No wonder it is done at night when everyone else is sleeping, so that no one may see it!
+</p>
+
+<p>
+But it is not done at night in order to hide it; there is nothing indeed to hide; all is very nice and good; and by this enjoyment, in which is swallowed up the painful labour of thousands, not only is nobody harmed, but by this very thing poor people are fed!
+</p>
+
+<p>
+The ball goes on very merrily, may be, but how did it come to do so? When we see in society or among ourselves one who has not eaten, or is cold, we are ashamed to enjoy ourselves, and cannot begin to be merry until he is fed, to say nothing of the fact that we cannot even imagine that there are people who can enjoy themselves by means of anything which produces the sufferings of others.
+</p>
+
+<p>
+We are disgusted with and do not understand the enjoyment of brutal boys who have squeezed a dog&rsquo;s tail into a piece of split wood. How is it, then, that in our enjoyment we become blind, and do not see the cleft in which we have pinched those men who suffer for our enjoyment.
+</p>
+
+<p>
+We know that each woman at this ball whose dress costs a hundred and fifty rubles was not born at the ball, but has lived in the country, has seen peasants, is acquainted with a nurse and maid whose fathers and brothers are poor, for whom the earning of a hundred and fifty rubles to build a cottage with is the end and aim of a long, laborious life. She knows all this; how can she, then, enjoy herself, knowing that on her half-naked body she is wearing the cottage which is the dream of her housemaid&rsquo;s brother?
+</p>
+
+<p>
+But let us suppose she has not thought about this: still she cannot help knowing that velvet and silk, sweetmeats and flowers, and laces and dresses, do not grow of themselves, but are made by men. One would think she could not help knowing that men make all these things, and under what circumstances, and why. She cannot help knowing that her dressmaker, whom she scolded to-day, made this dress not at all out of love to her, therefore she cannot help knowing that all these things—her laces, flowers, and velvet—were made from sheer want.
+</p>
+
+<p>
+But perhaps she is so blinded that she does not think of this. Well, but, at all events, she could not help knowing that five people, old, respectable, often delicate men and women, have not slept all night, and have been busy on her account. She saw their tired, gloomy faces. This, also, she could not help knowing,—that on this night there were twenty-eight degrees of frost, and that her coachman—an old man—was sitting in this frost all night on his coach-box.
+</p>
+
+<p>
+But I know that they do not really see this. If from the hypnotic influence of the ball these young women and girls fail to see all this, we cannot judge them. Poor things! They consider all to be good which is pronounced so by their elders. How do these elders explain their cruelty? They, indeed, always answer in the same way: “I compel no one; what I have, I have bought; footmen, chambermaids, coachman, I hire. There is no harm in engaging and in buying. I compel none; I hire; what wrong is there in that?”
+</p>
+
+<p>
+Some days ago I called on a friend. Passing through the first room I wondered at seeing two women at a table, for I knew my acquaintance was a bachelor. A skinny yellow, old-looking woman, about thirty, with a kerchief thrown over her shoulders, was briskly doing something over the table with her hands, jerking nervously, as if in a fit. Opposite to her sat a young girl, who was also doing something and jerking in the same way. They both seemed to be suffering from St. Vitus&rsquo;s dance. I came nearer and looked closer to see what they were about.
+</p>
+
+<p>
+They glanced up at me and then continued their work as attentively as before.
+</p>
+
+<p>
+Before them were spread tobacco and cigarettes. They were making cigarettes. The woman rubbed the tobacco fine between the palms of her hands, caught it up by a machine, put on the tubes, and threw them to the girl. The girl folded the papers, put them over the cigarette, threw it aside, and took up another.
+</p>
+
+<p>
+All this was performed with such speed, with such dexterity, that it was impossible to describe it. I expressed my wonder at their quickness. “I have been at this business fourteen years,” said the woman.
+</p>
+
+<p>
+“Is it hard work?”
+</p>
+
+<p>
+“Yes: my chest aches, and the air is choky with tobacco.”
+</p>
+
+<p>
+But it was not necessary for her to have said so: you need only have looked at her or at the girl. The latter had been at this business three years; but anyone not seeing her at this work would have said that she had a strong constitution which was already beginning to be broken.
+</p>
+
+<p>
+My acquaintance, a kind-hearted man of liberal views, hired these women to make him cigarettes at two rubles and a half (5s.) a thousand. He has money, and he pays it away for this work: what harm is there in it?
+</p>
+
+<p>
+My acquaintance gets up at twelve. His evenings, from six to two, he spends at cards or at the piano; he eats and drinks well; other people do all the work for him. He has devised for himself a new pleasure,—smoking. I can remember when he began to smoke. Here are a woman and a girl who can scarcely earn their living by transforming themselves into machines, and who pass all their lives in breathing tobacco, thus ruining their lives. He has money which he has not earned, and he prefers playing at cards to making cigarettes for himself. He gives these women money only on condition that they continue to live as miserably as they lived before in making cigarettes for him.
+</p>
+
+<p>
+I am fond of cleanliness; and I give money on condition that the washerwoman washes my shirts, which I change twice a day; and the washing of these shirts having taxed the utmost strength of the washerwoman, she has died.
+</p>
+
+<p>
+What is wrong in this?
+</p>
+
+<p>
+Men who buy and hire will continue doing so whether I do or do not; they will force other people to make velvets and dainties, and will buy them whether I do or do not; so also they will hire people to make cigarettes and to wash shirts. Why should I, then, deprive myself of velvets, sweetmeats, cigarettes, and clean shirts, when their production is already set in going. Often,—almost constantly I hear this reasoning.
+</p>
+
+<p>
+This is the very reasoning which a crowd, maddened with the passion of destruction, will employ. It is the same reasoning which leads a pack of dogs, when one of their number runs against another and knocks it down, the rest attack it and tear it to pieces. Others have already begun, have done a little mischief; why shouldn&rsquo;t I, too, do the same? What can it possibly signify if I wear a dirty shirt and make my cigarettes myself? could that help any one? men ask who desire to justify themselves.
+</p>
+
+<p>
+Had we not wandered so far from truth one would be ashamed to answer this question; but we are so entangled that such a question seems natural to us, and, therefore, though I feel ashamed, I must answer it.
+</p>
+
+<p>
+What difference would it be if I should wear my shirt a week instead of a day, and make my cigarettes myself, or leave off smoking altogether?
+</p>
+
+<p>
+The difference would be this,—that a certain washerwoman, and a certain cigarette-maker, would exert themselves less, and what I gave formerly for the washing of my shirt, and for the making of my cigarettes, I may give now to that or to another woman; and working-people who are tired by their work, instead of overworking themselves, will be able to rest and to have tea. But I have heard objections to this, so ashamed are the rich and luxurious to understand their position.
+</p>
+
+<p>
+They reply, “If I should wear dirty linen, leave off smoking, and give this money away to the poor, then this money would be all the same taken away from them, and my drop will not help to swell the sea.”
+</p>
+
+<p>
+I am still more ashamed to answer such a reply, but at the same time I must do so. If I came among savages who gave me chops which I thought delicious, but the next day I learned (perhaps saw myself) that these delicious chops were made of a human prisoner who had been slain in order to make them; and if I think it bad to eat men, however delicious the cutlets may be, and however general the custom to eat men among the persons with whom I live, and however small the utility of my refusal to eat them may be,—to the prisoners who have been prepared for food,—I shall not and cannot eat them.
+</p>
+
+<p>
+It may be that I shall eat human flesh when urged by hunger; but I shall not make a feast of it, and shall not take part in feasts with human flesh, and shall not seek such feasts, nor be proud of my partaking of them.
+</p>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-11-15 Sat 22:57. Last build date: 2025-11-15 Sat 22:58.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

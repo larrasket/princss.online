@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reading List (for others)</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Reading List (for others)</h1>
+</header><div class="BACKLINKS" id="org5069350">
+<p>
+This section was referenced in <a href="rbooks.html#uu37kln02wj0">Reading List</a>.
+</p>
+
+</div>
+<div id="outline-container-org299eb1c" class="outline-2">
+<h2 id="org299eb1c">NOTE: DRAFT!</h2>
+<div class="outline-text-2" id="text-org299eb1c">
+<head>
+<style>
+
+
+
+.tag span {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    background-color: #eee;
+}
+
+
+</style>
+</head>
+
+<p>
+People usually misunderstand my <a href="rbooks.html#uu37kln02wj0">Reading List</a>, which is my personal &ldquo;wishlist&rdquo; of
+titles I think I need to check at some point<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+It&rsquo;s actually more of a legacy list, I usually handle titles that I need
+to check later inside Emacs, but I&rsquo;m too busy to organize those inside my
+Org-agenda.
+</span>, as some list of books I
+recommend reading (this also happens with my <a href="fullbooks.html#omy9ejo02wj0">Books</a> list). My <a href="fullbooks.html#omy9ejo02wj0">bibliography</a> list
+contains the titles that I open in my reading system<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+As you can guess, inside Emacs.
+</span>. They are not sorted
+by any means. I was asked multiple times to provide a reading list for people
+who are not into reading. Important note here, it&rsquo;s very important that I won&rsquo;t
+add it as a side note: <b>do not fall for &ldquo;reading cults&rdquo;</b>. You do not have to
+read books to be a &rsquo;bookworm&rsquo;.
+</p>
+
+<p>
+Reading is not a thing you should be doing as an end for itself, but something
+that we do as an end for something else (more on this at <a href="sh/2023.html#1g48iao02wj0">About &rsquo;Book
+Communities&rsquo;</a>). This was one of the reasons that made me stand always against
+reading lists; if you want to learn about something, you should read about it,
+not because reading is good but it happens to be the most efficient way to get
+information, if those information were possible to be held in other formats (let
+it be voice) that were efficient than books, I&rsquo;d definitely stop reading books.
+</p>
+
+<p>
+Why am I changing my view now? I&rsquo;m not. I still think that people should only
+read about things that interests them (like a certain set of topics they would
+love investigate). However, nowadays most people have programmed and mainstreamed
+soft interests, they lack simple knowledge about what&rsquo;s around to even be
+interested in. I&rsquo;d sort this list in the same way I&rsquo;d like my child to read
+about the world, history, science and arts. It&rsquo;s a short list, you should pick
+up your path from here. Although of that, I will, as aforementioned, write it as
+it were the same path I&rsquo;d go to educate my child<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">
+This should imply of course that this list is totally biased.
+</span> .
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-01-31 Wed 17:12]</span></span>: this list is still in beta and open for suggestions.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf26bb1" class="outline-2">
+<h2 id="orgbf26bb1">Format note</h2>
+<div class="outline-text-2" id="text-orgbf26bb1">
+<ul class="org-ul">
+<li>All titles must not be skipped unless tagged with &ldquo;op.&rdquo; (optional").</li>
+<li>Each title has a number appended to it in this form: d. 3. This is a
+difficultly indicator. Do not take it seriously, nothing is really hard.</li>
+<li>The first section &ldquo;Fundamentals, logic, thinking and critical thinking&rdquo;&rsquo;s
+required books (books that are not tagged with op.) are required in the next
+lists, and they are sorted.</li>
+<li>Some titles will have a single digit after them, this digit refers to a
+footnote, the footnotes are at the end of the page.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga17ba62" class="outline-2">
+<h2 id="orga17ba62">Start by knowing what you want</h2>
+<div class="outline-text-2" id="text-orga17ba62">
+<p>
+It was hesitating where to put this section: after or before the <a href="#org33d6bb8">Fundamentals</a>, I
+decided finally to put it before it. Most people do not have a clear position
+from their desires and goals (let those be a limited desires -like achieving
+something or buying a product- or a longtime goal).
+</p>
+
+<p>
+The average desires are —just similarly to the average mindset and views—
+usually manipulated and programmed, unlike consciousness, desires are
+manipulated unintentionally [most of the time], rather that manipulation usually
+results from the social structure.
+</p>
+
+<p>
+So, how to know what do you really want/need/desire? First by understanding how
+those can be subconsciously manipulated. The following articles and videos
+should be a good start.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://psyche.co/guides/how-to-know-what-you-really-want-and-be-free-from-mimetic-desire">How to know what you really want (Psyche Guides)</a></li>
+<li><a href="https://www.youtube.com/watch?v=OgB9p2BA4fw">[video][02 min] René Girard Explains Mimetic Desire</a></li>
+<li><a href="https://www.youtube.com/watch?v=lNJq6BlVyhM">[video][16 min] The Scapegoat Mechanism</a></li>
+<li><a href="https://alexdanco.com/2019/04/28/secrets-about-people-a-short-and-dangerous-introduction-to-rene-girard/comment-page-1/">Secrets about People: A Short and Dangerous Introduction to René Girard</a></li>
+<li><a href="https://youtu.be/5Qu6vBebwwg">[video][103 min]Introduction to Mimetic Theory</a></li>
+</ul>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-03-29 Sat 22:03]</span></span> Many people have the problem of not listening. This
+might be caused by brainrot, short attention span or ADHD-related disorders or
+by the fact that you just did not learn to listen. If you think that you are
+not a very well listener, it&rsquo;s better if you start by reading the book: You&amp;rsquo;re
+Not Listening: what you&amp;rsquo;re missing and why it matters by Kate Murphy. I didn&rsquo;t
+read it myself (only a few chapters), but trusted sources told me that it will
+teach you a lot.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org33d6bb8" class="outline-2">
+<h2 id="org33d6bb8">Fundamentals</h2>
+<div class="outline-text-2" id="text-org33d6bb8">
+<p>
+Logic, thinking, and critical thinking and introductory philosophy.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<a id="thinking101"></a>Informal Logical Fallacies (Vleet, J.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="1">d. 1/10</span></span>
+</p>
+
+<p>
+Logical fallacies are things we experience everyday in native conversation and
+our daily exposure to media. We use many fallacies all the time in arguments,
+and they usually help. Take for example ad hominem:
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+A: &ldquo;I believe we should invest more in renewable energy sources to help combat
+climate change.&rdquo;
+</p>
+
+<p>
+B: &ldquo;You&rsquo;re not even a scientist, you&rsquo;re just a musician. Why should anyone
+listen to your opinion on climate change?&rdquo;
+</p>
+
+</blockquote></div>
+
+<p>
+&rsquo;A&rsquo; indeed does not have a reason to justify his questioning. But is that a
+good argument enough for B? for most people the discussion ends there.
+</p>
+
+<p>
+There are many logical fallacies that are not easily recognizable, learning
+about them and how to refute them should be a very fun process. This book is
+about 90 pages and it&rsquo;s easy to read. <b>If you speak Arabic</b>, check المغالطات
+المنطقية لعادل مصطفى, much better version.
+</p></li>
+<li><a id="philosophy101"></a> A History of Western Philosophy (Russell, B.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>The Polymath (Ahmed, W)<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">
+I disagree with the author on some aspects, however, this book is very
+important to escape some of the limits that modern educational systems impose on
+us, mainly: the myth of specialization.
+</span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="4">d. 4/10</span></span></li>
+<li>Critical Thinking (Bowell et al.)  &#xa0;&#xa0;&#xa0;<span class="tag"><span class="3">d. 3/10</span></span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="op">op.</span></span></li>
+<li><a id="logic101"></a>Beginning Mathematical Logic (Smith, P.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>In Praise of Idleness (Russell, B.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="3">d. 3/10</span></span></li>
+<li>Philosophical and Mathematical Logic (De Swart, H.)<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">
+Read this if you found <a href="#logic101">logic101</a> an interesting read.
+</span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="8">d. 8/10</span></span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="op">op.</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6e601f8" class="outline-2">
+<h2 id="org6e601f8">History</h2>
+<div class="outline-text-2" id="text-org6e601f8">
+<p>
+My goal in this section will be giving you a generic view on human history and
+its anthropological interpretation, but also with learning about real human
+historical events.
+</p>
+<ul class="org-ul">
+<li>The Naked Ape (Morris, D.)<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">
+<a href="#humanhistory101">humanhistory101</a> provides some critique for this book.
+</span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="3">d. 3/10</span></span></li>
+<li><a id="humanhistory101"></a>A People History of The World (Harman, C.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li><a id="humanhistory101op"></a>The Human Web (McNeill et al.)<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">
+This is a great alternative for <a href="#humanhistory101">humanhistory101</a>, although it
+gets replaced by it. It has an Arabic version.
+</span>  &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="op">op.</span></span></li>
+<li>The Russian Revolution (Smith, S. A.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="3">d. 3/10</span></span></li>
+<li>The Ottoman Age of Exploration (Casale, G.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>The Arabs: A History (Rogan, E.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Killing Hope (Blum, W.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Before Taliban (Edwards, D. B.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>All The Shah Men (Kinzer, S.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Engineers of Jihad (Gambetta et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>State of Terror (Suarez, Y.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>A People History of The United States (Zinn, H.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdc1657e" class="outline-2">
+<h2 id="orgdc1657e">Science</h2>
+<div class="outline-text-2" id="text-orgdc1657e">
+<ul class="org-ul">
+<li>The Atoms of Language (Baker, M.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>Quantum Theory (Polkinghorne, J.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Cosmology (Coles, P.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="4">d. 4/10</span></span></li>
+<li>Thinking, Fast and Slow (Kahneman, D.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>Choice Theory (Allingham, M.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Cryptography (Piper et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Why Evolution Is True (Coyne, J. A.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Evolutionary Psychology (Buss, D. M.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7404425" class="outline-2">
+<h2 id="org7404425">Humanities</h2>
+<div class="outline-text-2" id="text-org7404425">
+<p>
+Although I do not regard psychoanalysis as a science, those books by Freud
+mention many interesting facts to think about, and will encourage you to question
+many things.
+</p>
+
+<ul class="org-ul">
+<li>Group Psychology (Freud, S.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Totem and Taboo (Freud, S.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Psychology of Sex Relations (Kinsey, A. C.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>The Social Animal (Aronson, E.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>Cognitive Science (Friednberg et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="8">d. 8/10</span></span></li>
+<li>The Story of Art (Gombrich, E) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org796e4bc" class="outline-2">
+<h2 id="org796e4bc">Computer Science</h2>
+<div class="outline-text-2" id="text-org796e4bc">
+<p>
+I personally believe that being a power user is necessary even for people who
+do not have IT-related lives, computer science is the mechanical engineering
+of the modern world.
+</p>
+
+
+<ul class="org-ul">
+<li>Structure and Interpretation of Computer Programs (Sussman et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Algorithm Analysis (Shaffer, C.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Operating Systems (Arpaci-Dusseau et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Database System Concepts (Silerschatz, A.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Introduction to Probability and Statistics (Ross, S.)<label for="8" class="margin-toggle sidenote-number"></label><input type="checkbox" id="8" class="margin-toggle"/><span class="sidenote">
+This book is an advanced read for new learners, it&rsquo;s a post-graduate
+level course. Why it&rsquo;s here? It will show you how data (even shallow data, like
+metadata) can be critically useful for gathering useful information, and teach
+you how to do it too.
+</span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="8">d. 8/10</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49134f8" class="outline-2">
+<h2 id="org49134f8">Politics</h2>
+<div class="outline-text-2" id="text-org49134f8">
+<ul class="org-ul">
+<li>Capitalism, Socialism and Democracy (Schumpeter, J. A.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>The Indispensable Chomsky (Chomsky et al.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>Who Rules the World? (Chomsky, N.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Media Control (Chomsky, N.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>The Myth of Development (Oswaldo, R.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="5">d. 5/10</span></span></li>
+<li>Discourse on Voluntary Servitude (Boétie, E.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>The Myth of The Rational Voter (Caplan, B.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="6">d. 6/10</span></span></li>
+<li>The Dark Side of Democracy (Mann, M.) &#xa0;&#xa0;&#xa0;<span class="tag"><span class="7">d. 7/10</span></span></li>
+<li>History of Economic Thought (Hunt et al.)<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote">
+Also check Dr Anwar&rsquo;s: <a href="https://www.youtube.com/playlist?list=PLTMFx0t8kDzc72vtNWeTP05x6WYiDgEx7">Anwar Shaikh: Historical Foundations of Political Economy</a>
+</span> &#xa0;&#xa0;&#xa0;<span class="tag"><span class="8">d. 8/10</span></span></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b062ac" class="outline-2">
+<h2 id="org2b062ac">&ldquo;Non-Non Fictional&rdquo;</h2>
+<div class="outline-text-2" id="text-org2b062ac">
+<p>
+The previous sections had non fictional books, those ones are not &ldquo;fictional&rdquo;,
+although some of them are, or more precisely not introduced here as fictional
+</p>
+</div>
+<div id="outline-container-orge360ab7" class="outline-3">
+<h3 id="orge360ab7">Modus Vivendi</h3>
+<div class="outline-text-3" id="text-orge360ab7">
+<ul class="org-ul">
+<li>Islam and The Destiny of Man (Eaton, G)</li>
+<li>The Responsibility of The Intellectual (Shariati, A.)</li>
+<li>The Thoughts of Marcus Aurelius (Aurelius, M.)</li>
+<li>Thus Spoke Zarathustra (Nietzsche, F.)</li>
+<li>The Dawn of The Day (Nietzsche, F.)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc99eb4" class="outline-3">
+<h3 id="orgbc99eb4">Classics</h3>
+<div class="outline-text-3" id="text-orgbc99eb4">
+<p>
+Some other must-read books and literature, mostly a part of our pop-culture. And
+they are fun.
+</p>
+
+<div class="epigraph"><blockquote>
+<p>
+he groups a complete history of French Society from which, even in economic
+details (for instance the rearrangement of real and personal property after the
+Revolution) I have learned more than from all the professed historians,
+economists, and statisticians of the period together.
+</p>
+
+</blockquote></div>
+
+<p>
+Frederick Engels talking bout Honoré de Balzac.<label for="10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="10" class="margin-toggle"/><span class="sidenote">Friedrich Engels, <i>Marx-Engels Correspondence 1888</i> (Letter to Margaret Harkness, 2000), <a href="https://www.marxists.org/archive/marx/works/1888/letters/88_04_15.htm">https://www.marxists.org/archive/marx/works/1888/letters/88_04_15.htm</a>.</span>
+</p>
+
+<ul class="org-ul">
+<li>Manfred (Byron, L)</li>
+<li>The Death of Ivan Ilyich (Tolostoy, L)</li>
+<li>Lolita (Nabokob, V)</li>
+<li>Suddenly Last Summer (Williams, T)</li>
+<li>The Brothers Karamazov (Dostoevsky, F)</li>
+<li>Children of the Alley (Mahfouz, N)</li>
+<li>The Idiot (Dostoevsky, F)</li>
+<li>Cat on a Hot Tin Roof (Williams, T)</li>
+<li>Crime and Punishment (Dostoevsky, F)</li>
+<li>Orpheus Descending (Williams, T)</li>
+<li>Marx in Soho (Zinn, H)</li>
+<li>Crime and Punishment (Dostoevsky, F)</li>
+<li>The Dream of a Ridiculous Man (Dostoevsky, F)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc01fd3c" class="outline-2">
+<h2 id="orgc01fd3c">Thoughts?</h2>
+<div class="outline-text-2" id="text-orgc01fd3c">
+<p>
+Comments? Suggestions? Email me at <code>lr0[at]gmx[dot]com</code>.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+It&rsquo;s actually more of a legacy list, I usually handle titles that I need
+to check later inside Emacs, but I&rsquo;m too busy to organize those inside my
+Org-agenda.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+As you can guess, inside Emacs.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This should imply of course that this list is totally biased.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I disagree with the author on some aspects, however, this book is very
+important to escape some of the limits that modern educational systems impose on
+us, mainly: the myth of specialization.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Read this if you found <a href="#logic101">logic101</a> an interesting read.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="#humanhistory101">humanhistory101</a> provides some critique for this book.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This is a great alternative for <a href="#humanhistory101">humanhistory101</a>, although it
+gets replaced by it. It has an Arabic version.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8" role="doc-backlink">8</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This book is an advanced read for new learners, it&rsquo;s a post-graduate
+level course. Why it&rsquo;s here? It will show you how data (even shallow data, like
+metadata) can be critically useful for gathering useful information, and teach
+you how to do it too.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9" role="doc-backlink">9</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Also check Dr Anwar&rsquo;s: <a href="https://www.youtube.com/playlist?list=PLTMFx0t8kDzc72vtNWeTP05x6WYiDgEx7">Anwar Shaikh: Historical Foundations of Political Economy</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10" role="doc-backlink">10</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Friedrich Engels, <i>Marx-Engels Correspondence 1888</i> (Letter to Margaret Harkness, 2000), <a href="https://www.marxists.org/archive/marx/works/1888/letters/88_04_15.htm">https://www.marxists.org/archive/marx/works/1888/letters/88_04_15.htm</a>.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-10-18 Sat 17:08.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

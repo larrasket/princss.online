@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>I can also paint</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">I can also paint</h1>
+</header><div class="PREVIEW" id="orgbfe09a5">
+<p>
+Or; An Introduction to the Fragments of Self
+</p>
+
+</div>
+
+<p>
+Around the time that he reached the unnerving milestone of turning thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing the reasons he should be given a job. He had been moderately successful as a painter in Florence, but he had trouble ﬁnishing his commissions and was searching for new horizons. In the ﬁrst ten paragraphs, he touted his engineering skills, including his ability to design bridges, waterways, cannons, armored vehicles, and public buildings. Only in the eleventh paragraph, at the end, did he add that he was also an artist. <span style="background-color: #FFFF00;">“Likewise in painting I can do everything possible,” he wrote.</span><label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Walter Isaacson, <i>Leonardo Da Vinci</i>, First Simon and Schuster hardcover edition (New York, NY: Simon and Schuster, 2017).</span>
+</p>
+
+
+
+<figure class="resright"><img src="/i/me.jpg" title="Salih M." style="
+    width: 130px;
+    clip-path: circle();
+">
+    <figcaption style="
+    font-size: smaller;
+    /* font-style: italic; */
+    font-weight: bold;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    color: gray;
+">Me.</figcaption>
+
+</figure>
+
+<p>
+I don&rsquo;t usually post many stuff about myself online, this page tries to make up for this. I don&rsquo;t like the aspect in general to have a virtual life, this was why I didn&rsquo;t care much to post details about myself online. However, this tended to make people presume things about. I hope that this page will help reducing the severity of unsupported thoughts about me.
+</p>
+<div id="outline-container-org990d256" class="outline-2">
+<h2 id="org990d256">Interests</h2>
+<div class="outline-text-2" id="text-org990d256">
+<p>
+I&rsquo;m interested in the following fields: computer programming, cognitive science, linguistics, history, scientific socialism, propaganda and media studies, moral philosophy and <del>philosophy of mind</del>, Islamic philosophy, <del>Islamic biographical evaluation</del> and <del>modern Takhrij studies</del>. I&rsquo;ve developed a growing interest in the following fields: chemistry and economics.
+</p>
+
+<p>
+Other interests are implied in my <a href="../fullbooks.html#omy9ejo02wj0">Books</a> list.
+</p>
+
+<p>
+I consider myself to be an intermediate chess player, my peak rating (<a href="https://en.wikipedia.org/wiki/Glicko_rating_system">Glicko</a>) was 1950, my current rating on my only active account is 1808 (after a long strike of losing). For my thoughts on chess, see the post <a href="../d/chess2.html#b8u34341owj0">Thoughts on Chess</a>.
+</p>
+
+<p>
+Generally I think chess is one of the few games that I&rsquo;d like to play (I think gaming is a great waste of time in general), the game GO seems interesting too.
+</p>
+
+<p>
+What I like about this kind of games that it is free of anything but the free will of one&rsquo;s decisions. See more on that on <a href="../d/chess2.html#mp56qej0fzj0">A View on Chess</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6ecf60" class="outline-2">
+<h2 id="orgf6ecf60">On the web</h2>
+<div class="outline-text-2" id="text-orgf6ecf60">
+<p>
+I exist in other places on the web. <del>I&rsquo;m on Stack Exchange network. Especially: <a href="https://skeptics.stackexchange.com/users/69248/">Skeptics SE</a> and <a href="https://islam.stackexchange.com/users/56455/">Islam SE</a>.</del> I also exist on <a href="https://news.ycombinator.com/user?id=lr0">HN</a> and <a href="https://lobste.rs/~lr0/stories">Lobsters</a>. I don&rsquo;t use social media to connect with people. Even when I do, I do not appreciate people who I don&rsquo;t know in person communicating with me there. 
+</p>
+</div>
+<div id="outline-container-orgc79991c" class="outline-3">
+<h3 id="orgc79991c">If you want to know me</h3>
+<div class="outline-text-3" id="text-orgc79991c">
+<p>
+This gets me to another point. Some people think I&rsquo;m avoidant for new people. I&rsquo;m not at all, if you find that we share interests, I&rsquo;d be glad to know more about you. The best way to communicate with me can be found on the footer of the home page.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-ixhffy31d8k0" class="outline-2">
+<h2 id="ixhffy31d8k0">Projects</h2>
+<div class="outline-text-2" id="text-org907ad0a">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-10-24 Fri 14:33]</span></span> <br>
+Looking at this now, this is highly outdated, but I&rsquo;ve no time to update it at the current moment.</li>
+<li><del><a href="https://sr.ht/~lr0/statusless/">statusless</a>. A dynamic, programmable, user-defined status bar for dwm</del> (and
+other window managers that use xroot) that follows suckless philosophy. -
+<span class="timestamp-wrapper"><span class="timestamp">[2025-05-07 Wed 04:00]</span></span> I moved to MacOS.</li>
+<li><del><a href="https://sr.ht/~lr0/bo/">bo</a>. Bin organizer using trash-cli as a backend.</del> <span class="timestamp-wrapper"><span class="timestamp">[2024-11-03 Sun 23:47]</span></span> I stopped
+using/maintining bo</li>
+<li><a href="https://git.sr.ht/~lr0/euler">euler</a>. solving project euler.</li>
+<li><a href="https://sr.ht/~lr0/ps/">ps</a>. other problem solving.</li>
+<li><a href="https://sr.ht/~lr0/tadwin.el/">tadwin.el</a>. Emacs publishing blog system (tightly coupled to my org-roam setup)
+using org-mode. It&rsquo;s used to make this website.</li>
+<li><del><a href="https://sr.ht/~lr0/agenda-notifier.go/">agenda-notifier.go</a>. agenda-notifier.̶e̶l̶ go is a basic notification daemon for
+org-mode agenda</del>. Last time I used it was years ago.</li>
+<li><a href="https://sr.ht/~lr0/rssc/">rssc</a>. real-time, self-hostable regex-oriented customization service for atom, rss and
+json feeds. Many people are using it, but I stopped using it and moved to r2e
+eventually.</li>
+<li><a href="https://sr.ht/~lr0/RedditorDump/">RedditorDump</a>. An open-source intelligence tool to get all the subreddits a
+reddit user was involved in.</li>
+</ul>
+</div>
+<div id="outline-container-org5d2d22d" class="outline-3">
+<h3 id="org5d2d22d"><span class="todo TODO">TODO</span> Planned&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_idea">@idea</span></span></h3>
+<div class="outline-text-3" id="text-org5d2d22d">
+<p>
+Projects that I&rsquo;m considering to get into next.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<del>musql</del>. I&rsquo;d love a queryable music player that would support generating sets of
+music using a complex tagging system. Let&rsquo;s say that you have a playlist for
+sad songs and another one for you when you feel proud. What if you feel both?
+like a success depression. A possible solution would be creating a new list
+that includes both. However, what if you need a list that contains only the
+sad songs that are not about love? It will be impossible with that linear
+system to do it without manual intervention.
+</p>
+
+<p>
+But if you were able to tag each song as &ldquo;sad, love&rdquo;, and you had a DSL
+language for querying (let it be even just SQL), such scenario is very
+feasible.
+</p>
+
+<p>
+I&rsquo;ve been thinking about this idea for a fairly long time. But I&rsquo;m horrible at
+designing/implementing UI ends. If you can help, contact me.
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-03-29 Sat 21:50]</span></span> Just found out that Apple Music has this feature. I&rsquo;m
+canceling this project. See more <a href="../d/apple.html#p4pacx81lik0">The reason that makes Apple&rsquo;s software better</a>.</li>
+</ul></li>
+
+<li>(as of <span class="timestamp-wrapper"><span class="timestamp">[2024-10-17 Thu 18:15]</span></span>, I&rsquo;m no longer interested in this)  <a href="https://sr.ht/~lr0/cblocks/">cblocks</a>. I started
+this project as an exercise for my C fluency and because I needed an alternative for the
+dwm bar I&rsquo;m using, with more flexibility. This project was successful (it reads a
+compiled C module, load, evaluate it and update the status bar with the evaluated
+string), however, I wanted to add concurrency which is an essential feature for me.
+Sadly I totally forgot how hard was it to work with concurrency in C. I think I might
+rewrite it in Go, but I&rsquo;m not sure who to implement the dynamism in Go.</li>
+
+<li>Chronological art browser.</li>
+<li>Gustave Doré Arabic Divine Comedy. Basically something that shows Doré&rsquo;s work on the
+divine comedy, with verses in Arabic, showing various translations.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga113a11" class="outline-2">
+<h2 id="orga113a11"><span class="todo TODO">TODO</span> Religion&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-orga113a11">
+<p>
+I&rsquo;m Muslim. I disagree with the mainstream definition of Islamic faith, this includes my views of the early history of Islam, caliphate and Shiism. I plan to write about that soon on this website.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeed7ebe" class="outline-2">
+<h2 id="orgeed7ebe">Languages</h2>
+<div class="outline-text-2" id="text-orgeed7ebe">
+<p>
+I speak Arabic and English. As my course of learning linguistics, I&rsquo;m learning
+another language, it&rsquo;s supposed to be German (as of <span class="timestamp-wrapper"><span class="timestamp">[2024-02-29 Thu 01:05]</span></span>) but
+I&rsquo;m considering moving to French. - <span class="timestamp-wrapper"><span class="timestamp">[2025-05-07 Wed 04:02]</span></span> Update: my language
+course was paused due to other projects and interests.
+</p>
+</div>
+</div>
+<div id="outline-container-org9af7337" class="outline-2">
+<h2 id="org9af7337">My favorite animals</h2>
+<div class="outline-text-2" id="text-org9af7337">
+<div class="epigraph"><blockquote>
+<p>
+واعلم أن الحيوان هو آية الكون وسِحره؛ وإنّما أنتَ استثناء.
+— عباس ابراهام.
+</p>
+
+</blockquote></div>
+<p>
+I like to read and study animal behavior. We humans have many intersection
+points with them, you can notice that while contemplating other mammals
+behavior.  Desmond Morris was the first one to get me interested in reading
+about animal behavior, after I finished his magnum opus (the naked ape) I was
+looking for more by the same author. I like these animals because I admire some
+of their manners: <a href="../i/2024-01-26_21-34-41_screenshot.png">Hare</a>, <a href="../i/2024-01-26_21-35-00_screenshot.png">Python</a>, <a href="../i/2024-01-26_21-35-12_screenshot.png">Jugar</a> and <a href="../i/2024-01-26_21-35-28_screenshot.png">Greyish eagle-owl</a>. I never owned a pet.
+</p>
+</div>
+</div>
+<div id="outline-container-org74dc8d0" class="outline-2">
+<h2 id="org74dc8d0">Some random preferences</h2>
+<div class="outline-text-2" id="text-org74dc8d0">
+<p>
+Olive is my favorite food, most of my favorite recipes contain olive. There is no -generally speaking- any kind of food that I would refuse to eat, however I do refuse to consume any food that contains any form of artificial sweeteners (raw sugar, refined white sugar, etc..). My favorite drink is tea. I do consume lemonade regularly too. My consumption of coffee is high as well, however I do not really prefer it and I only drink it for my need of caffeine. If I can find someday a caffeine substitute (that is comparable to ground coffee) I will quit coffee.
+</p>
+
+<p>
+I drink only ground coffee. I try to avoid manufactured instant coffee for health concerns (also most instance coffee products do not have approximate amount of caffeine that ground coffee posses). I don&rsquo;t like coffee with milk.
+</p>
+</div>
+</div>
+<div id="outline-container-lfoaq730yck0" class="outline-2">
+<h2 id="lfoaq730yck0"><span class="todo TODO">TODO</span> Music&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-org9f469cf">
+<div class="BACKLINKS" id="org1339a39">
+<p>
+This section was referenced in <a href="../stack.html#1xke5u91kqk0">Ghada Ghanem</a>, <a href="../stack.html#5uf8web05kk0">Constanze Mozart and Georg Nikolaus von Nissen</a>, <a href="../stack.html#msribvy0vqk0">Waiting and Music</a>, and <a href="../stack.html#ocvgeod0uqk0">Embarrassing music</a>, and in 1 other private note.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-28 Sat 18:38]</span></span> As of now, some of the following information might be outdated. I plan to
+update this. I have a last.fm account under my username (larrasket) you can
+check it.</li>
+</ul>
+
+<p>
+I used a proprietary music tracker for a while, which informed me that my top
+music artists are:
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-02 Fri 00:04]</span></span> as of today, this list is very outdated. See my last.fm
+reports for insights about my music: <a href="https://www.last.fm/user/larrasket">https://www.last.fm/user/larrasket</a></li>
+
+<li>Matt Elliot</li>
+<li>Leonard Cohen</li>
+<li>Death In June</li>
+<li>Fairuz</li>
+<li>Johan Sebastlan Bach</li>
+<li>Black Hill</li>
+<li>Elliot Smith</li>
+<li>Stranger On a Train</li>
+</ul>
+
+<p>
+I enjoy classics. These are my favorite pieces:
+</p>
+
+<p>
+From Bach:
+</p>
+<pre class="example" id="org4e88559">
+Johann Sebastian Bach - (1704-1750) Toccata and Fugue in D minor, BWV 565.mp3
+Johann Sebastian Bach - (1704-1750) Air on the G String.mp3
+Johann Sebastian Bach - (1704-1750) Brandenburg Concerto No. 3 in G Major, BWV 1048 (Allegro moderato).mp3
+</pre>
+<p>
+From Mozart:
+</p>
+<pre class="example" id="org0a3492f">
+Wolfgang Amadeus Mozart - (1785) Piano Concerto No. 21 KV.467 (II.Andante).mp3
+</pre>
+<p>
+From others:
+</p>
+<pre class="example" id="org2fba7a7">
+ Ludwig van Beethoven - (1801) Sonata No. 14 in C-sharp minor for Piano Op. 27 (No. 2 Moonlight; Adagio sostenuto).mp3
+ Ludwig van Beethoven - (1810) Fur Elise Bagatelle No.25.mp3
+ Ludwig van Beethoven - (1824) Symphony No. 9 In D Minor, Op. 125 Choral (II. Molto vivace; Presto).mp3
+ Gioachino Rossini - (1828) William Tell Overture (excerpt).mp3
+ Johann Strauss - (1864) Marche Persanne, Op. 289.mp3
+ Gabriel Fauré - (1887) Pavane, Op. 50.mp3
+ Nikolai Rimsky-Korsakov - (1899) Flight of the Bumblebee.mp3
+ Francisco Tarrega - (1908) Recuerdos de la Alhambra.mp3
+ Antonín DVOŘÁK - (1893) Symphony No.9 in E Minor, Op. 95 (From The New World, IV. Allegro con fuoco).mp3
+</pre>
+<p>
+I rarely enjoy opera;
+</p>
+<pre class="example" id="org50b4064">
+Léo Delibes                             3. (1883) Lakmé (Flower Duet)
+</pre>
+
+<p>
+<a href="https://youtu.be/F9dBl_pLc3g">TSU! - Prince of Gumbay</a> For me, this is the most peaceful piece of music I&rsquo;ve
+ever heard.
+</p>
+
+<p>
+I do not use Spotify or any other music proprietary platforms. I download and stream music
+offline on my computer machine. <a href="https://en.wikipedia.org/wiki/Cmus">cmus</a> is my music player. See <a href="#org5d2d22d">Planned</a> for my plans for
+building a music player.
+</p>
+
+<p>
+Currently, I&rsquo;m not interested in exploring any new types of music, I prefer to stick to
+the collection I already have.
+</p>
+</div>
+<div id="outline-container-sqw4olv04xj0" class="outline-3">
+<h3 id="sqw4olv04xj0">Leonard Cohen</h3>
+<div class="outline-text-3" id="text-org9715840">
+<div class="BACKLINKS" id="orgb91c330">
+<p>
+This section was referenced in <a href="#lfoaq730yck0">Music</a>, and in 2 other private notes.
+</p>
+
+</div>
+
+<div class="epigraph"><blockquote>
+<p>
+There’s truth that lives <br>
+And truth that dies <br>
+I don’t know which <br>
+So nevermind <br>
+</p>
+
+</blockquote></div>
+<p>
+My first time of experiencing Cohen&rsquo;s music was from opening one of my colleagues Spotify
+accounts, I was in high school back then, when I listened to the music, which was Sing
+Another Song, Boys, the seventh song from Songs Of Love And Hate (my ever favorite album
+of his by now), I didn&rsquo;t like it initially, but I felt that it was very different from
+anything I&rsquo;ve ever listened to (and I still believe that it&rsquo;s indeed a unique work of
+music).
+</p>
+
+<p>
+I remember that I spent days listening to it, I was back then possessing some interest in
+pursuing a biotechnology degree and I was studying a biochemistry textbook; I still get
+some intrusive chemical formulas into my head every time I play the song, because I used
+to study that book while listening to it on repeat, though I do not mind it at all.
+</p>
+
+<p>
+I didn&rsquo;t play any other songs by him since that, so I can say that the real time
+for me to learn about Cohen was from the movie <a href="https://youtu.be/TXwCCWHl5Ak">Exotica (1994)</a>, since then I fell
+in love with his songwritings, following are my favorite works from him (not sorted):
+</p>
+
+<ul class="org-ul">
+<li>Songs Of Love And Hate - 7. Sing Another Song, Boys</li>
+<li>Leonard Cohen - Thanks for the Dance - 6. The Goal</li>
+<li>Thanks for the Dance - 1. Happens to the Heart</li>
+<li>You Want It Darker - 7. It Seemed the Better Way</li>
+<li>Cohen Live - 9. Who By Fire? - Live in Austin, 1988</li>
+<li>Live In Dublin - 8. Amen - Live in Dublin</li>
+<li>Various Positions - 6. The Captain</li>
+<li>Death Of A Ladies&rsquo; Man - 1. True Love Leaves No Traces</li>
+<li>Songs Of Leonard Cohen - 9. Teachers</li>
+<li>I&rsquo;m Your Man - 3. Everybody Knows</li>
+<li>Ten New Songs - 4. Here It Is</li>
+<li>Recent Songs - 2. Humbled in Love</li>
+<li>Recent Songs - 10. Ballad of the Absent Mare - Longer Version</li>
+<li>Songs Of Love And Hate - 1. Avalanche</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3c60f0" class="outline-3">
+<h3 id="orgb3c60f0"><span class="todo TODO">TODO</span> Matt Elliot&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span>&#xa0;<span class="_later">@later</span></span></h3>
+<div class="outline-text-3" id="text-orgb3c60f0">
+<p>
+My Matt Elliot story is as just as special to me as <a href="#sqw4olv04xj0">Leonard Cohen</a>&rsquo;s, but it&rsquo;s still
+ongoing. Someday, I will write about it. I hope it will be soon.
+</p>
+</div>
+</div>
+<div id="outline-container-rsrkab418ck0" class="outline-3">
+<h3 id="rsrkab418ck0">Nostalgical Music</h3>
+<div class="outline-text-3" id="text-org8c920be">
+<p>
+I&rsquo;m easily stirred by music that brings nostalgic melody. I don&rsquo;t dislike it, but it
+extremely affects my mood<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+I was told that I&rsquo;ve a nostalgia issue and that I usually
+suffer from nostalgic depression, which might be related to my mild Plyushkin&rsquo;s disorder.
+Related: <a href="../p/nosalgic_bib.html#jene6a516ak0">Nostalgic Bibliography</a>.
+</span>. Thus I tend to avoid having or listening to any of this
+genre.  Some songs that gives me this kind of vibes are:<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">
+Perhaps every Ahmed Mounib and Hamid El Shaeri songs are qualified here.
+</span>
+</p>
+<ul class="org-ul">
+<li>Ya Waadi Aal Ayame, Ahmed Mounib<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">
+Which made me write this list. As of  <span class="timestamp-wrapper"><span class="timestamp">[2024-09-28 Sat 00:14]</span></span>
+</span></li>
+<li>Dayret El Rehla, Ahmed Mounib</li>
+<li>Eh fi amal, Fayrouz</li>
+<li>Bageelek, Hamid El Shaeri</li>
+<li>Ouda, Hamid El Shaeri</li>
+<li>Hamid El Shaeri</li>
+<li>رماد حلمَك | مرثية لـ نجيب سرور<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">
+I&rsquo;m not sure of the author: <a href="https://soundcloud.com/johnny-singer-81">https://soundcloud.com/johnny-singer-81</a>
+</span></li>
+<li>Ahmed Mounib, Salma</li>
+<li>shbbet thaw al thkryat, Omar</li>
+<li>مع السلامة لو نويت تروح - من تراث السّويداء<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">
+<a href="https://soundcloud.com/user-645622529/xotaoghzb0fh">https://soundcloud.com/user-645622529/xotaoghzb0fh</a>
+</span></li>
+<li>Nesmet Saba, Hamid el-Shaeri</li>
+<li>Long Long Time Ago, Javier Navarrete</li>
+<li>Ana Raga Ashofak, Talal Maddah</li>
+<li>A Vava Inouva, Idir</li>
+<li>Bektob esmak ya habibi, Fairouz</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-10-30 Wed 19:20]</span></span> No Clear Mind - Dream is Destiny - 8. a new sun</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-jqmep830yck0" class="outline-3">
+<h3 id="jqmep830yck0">Pyotr Ilyich Tchaikovsky&rsquo;s &ldquo;1812 Overture Finale&rdquo;.</h3>
+<div class="outline-text-3" id="text-org5332e34">
+<p>
+This piece is a one of my very few specials. I remember learning about it for the first time
+from the movie V for Vendetta (2005), which is one of my ever favorites, but I didn&rsquo;t pay
+much attention back then, and I think I only learnt about it by the 2022 Russian invasion
+of Ukraine. It affects me very much, and it gives me vibes from <a href="https://youtu.be/p3pfJukO5QU">Shadows of Forgotten
+Ancestors (Sergei Parajanov, 1965)</a>. I only listen to / play both in special occasions, due
+to their great effect on me.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Walter Isaacson, <i>Leonardo Da Vinci</i>, First Simon and Schuster hardcover edition (New York, NY: Simon and Schuster, 2017).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I was told that I&rsquo;ve a nostalgia issue and that I usually
+suffer from nostalgic depression, which might be related to my mild Plyushkin&rsquo;s disorder.
+Related: <a href="../p/nosalgic_bib.html#jene6a516ak0">Nostalgic Bibliography</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Perhaps every Ahmed Mounib and Hamid El Shaeri songs are qualified here.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Which made me write this list. As of  <span class="timestamp-wrapper"><span class="timestamp">[2024-09-28 Sat 00:14]</span></span>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I&rsquo;m not sure of the author: <a href="https://soundcloud.com/johnny-singer-81">https://soundcloud.com/johnny-singer-81</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://soundcloud.com/user-645622529/xotaoghzb0fh">https://soundcloud.com/user-645622529/xotaoghzb0fh</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2023-06-22 Thu 13:00. Last build date: 2025-12-15 Mon 14:23.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Implementing Salesforce SSO with Cognito Using SF SessionID</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Implementing Salesforce SSO with Cognito Using SF SessionID</h1>
+</header><div id="outline-container-org0bed1c8" class="outline-2">
+<h2 id="org0bed1c8"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-org0bed1c8">
+<p>
+I&rsquo;ve been reading recently Distributed Systems by Steen, M. v., &amp;
+Tanenbaum, A. S..<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</span> And it provides a very nice
+introduction into the topic. Something I liked really from the book, how it
+starts with distinguishing between convoluted terms like distributed systems and
+decentralized systems. I experience this issue a lot while talking in an
+engineering context and I find someone suggesting a distributed approach,
+however, many of the listeners confuse it with other definitions like
+service-based architecture and the like.
+</p>
+
+
+<figure id="org9b75ff4">
+<img src="../i/2025-04-01_14-04-55_screenshot.png" alt="2025-04-01_14-04-55_screenshot.png">
+
+</figure>
+
+
+<p>
+In this article I will go quickly over that distinction.
+</p>
+
+<p>
+To understand the difference between distributed and decentralized
+systems, we must first consider how networked systems emerge. There are
+typically two distinct evolutionary paths that lead to computers being
+connected together.
+</p>
+
+<p>
+The first path, which we might call the integrative approach, starts
+with independent, often heterogeneous systems that need to be connected
+to enable new functionalities or services. These systems typically exist
+within different administrative domains, were created separately, and
+are brought together because of emerging needs to share data or
+functionality. The European air traffic control system exemplifies this
+approach - numerous national systems, each independently developed and
+operated, must interconnect to enable coordinated management of
+continental airspace.
+</p>
+
+<p>
+The second path, which we call the expansive approach, begins with a
+single system that grows beyond the capabilities of a single computer,
+requiring additional machines to meet operational demands. This
+expansion is typically driven by performance needs, reliability
+requirements, or geographic distribution of users. Amazon&rsquo;s retail
+platform followed this trajectory - what began as a simple online
+bookstore running on a few servers has expanded to a massive
+infrastructure of hundreds of thousands of computers spread across the
+globe.
+</p>
+
+<p>
+These different origins lead to fundamentally different system
+characteristics, which we can distinguish as follows:
+</p>
+
+<ul class="org-ul">
+<li><b>A decentralized system</b> is a networked computer system in which
+processes and resources are <i>necessarily</i> spread across multiple
+computers.</li>
+<li><b>A distributed system</b> is a networked computer system in which
+processes and resources are <i>sufficiently</i> spread across multiple
+computers.</li>
+</ul>
+
+<p>
+The key distinction here lies in the words &ldquo;necessarily&rdquo; versus
+&ldquo;sufficiently.&rdquo; In decentralized systems, distribution is a fundamental
+requirement dictated by constraints that make centralization impossible.
+In distributed systems, distribution is a design choice implemented to
+achieve specific quality attributes.
+Enterprise applications often require robust authentication mechanisms that can
+seamlessly integrate with existing identity providers. For organizations heavily
+invested in Salesforce, leveraging their established identity system for
+authenticating users across other applications presents significant benefits.
+This article explores a detailed implementation of Single Sign-On between
+Salesforce and AWS Cognito using custom authentication challenges, enabling
+applications to authenticate users with their Salesforce credentials without
+requiring additional password management.
+</p>
+
+<p>
+Final flow chart (<a href="../i/sf-cognito.png">click here for full-width image</a>):
+</p>
+
+
+<figure id="orgb91de5e">
+<img src="../i/sf-cognito.png" alt="sf-cognito.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org408474b" class="outline-2">
+<h2 id="org408474b">The Authentication Challenge</h2>
+<div class="outline-text-2" id="text-org408474b">
+<p>
+Standard OAuth flows typically require implementing specific protocols and
+maintaining redirect URIs. However, many enterprise scenarios benefit from a
+different approach - using existing session tokens from Salesforce directly.
+This approach allows applications to verify a user&rsquo;s identity based on their
+active Salesforce session, simplifying the authentication process while
+maintaining security.
+</p>
+
+<p>
+The core challenge lies in validating Salesforce session tokens and mapping them
+to appropriate user identities in AWS Cognito. When Cognito serves as the
+central identity management system for your applications, this mapping becomes
+crucial for maintaining consistent user profiles across platforms.
+</p>
+</div>
+</div>
+<div id="outline-container-org7ffaa6f" class="outline-2">
+<h2 id="org7ffaa6f">Architecture Overview</h2>
+<div class="outline-text-2" id="text-org7ffaa6f">
+<p>
+The solution employs AWS Cognito&rsquo;s custom authentication flow capabilities,
+leveraging Lambda triggers to process Salesforce tokens. Four key Lambda
+functions collaborate to create this authentication experience:
+</p>
+
+<ol class="org-ol">
+<li>A token validator service that verifies Salesforce tokens and manages user creation</li>
+<li>A define-auth-challenge Lambda that controls the authentication flow</li>
+<li>A create-auth-challenge Lambda that requests the Salesforce token</li>
+<li>A verify-auth-challenge Lambda that validates the token against Salesforce APIs</li>
+</ol>
+
+<p>
+The interaction between these components creates a seamless authentication
+experience while ensuring proper validation of user identities.
+</p>
+</div>
+</div>
+<div id="outline-container-org0bea400" class="outline-2">
+<h2 id="org0bea400">Implementation Details</h2>
+<div class="outline-text-2" id="text-org0bea400">
+</div>
+<div id="outline-container-org2f56dd0" class="outline-3">
+<h3 id="org2f56dd0">Setting Up the Cognito User Pool</h3>
+<div class="outline-text-3" id="text-org2f56dd0">
+<p>
+First, we need a Cognito user pool configured to use custom authentication
+challenges. This requires disabling the standard authentication flows and
+connecting our Lambda triggers.
+</p>
+
+<p>
+For AWS Console users, this involves:
+</p>
+<ol class="org-ol">
+<li>Creating a Cognito user pool</li>
+<li>Under &ldquo;Sign-in experience&rdquo;, selecting &ldquo;Custom&rdquo; for the authentication flow</li>
+<li>Under &ldquo;Lambda triggers&rdquo;, connecting the three Lambda functions to their respective triggers</li>
+</ol>
+
+<p>
+For Terraform users, the configuration resembles:
+</p>
+
+<pre class="code"><code>resource <span style="color: #8a3b3c;">"aws_cognito_user_pool"</span> <span style="color: #8a3b3c;">"myUsers_pool"</span> {
+  <span style="color: #383a42;">name</span> = <span style="color: #8a3b3c;">"your_pool_name"</span>
+
+  <span style="font-weight: bold;">lambda_config</span> {
+    <span style="color: #383a42;">define_auth_challenge</span> = module.define-myUsers-auth-challenge-lambda.lambda_function_arn
+    <span style="color: #383a42;">create_auth_challenge</span> = module.create-myUsers-auth-challenge-lambda.lambda_function_arn
+    <span style="color: #383a42;">verify_auth_challenge</span> = module.verify-myUsers-auth-challenge-lambda.lambda_function_arn
+  }
+
+  <span style="color: #556b2f;"># </span><span style="color: #556b2f;">Additional configuration...
+</span>}
+</code></pre>
+</div>
+</div>
+<div id="outline-container-org9ac5918" class="outline-3">
+<h3 id="org9ac5918">The Token Validator Service</h3>
+<div class="outline-text-3" id="text-org9ac5918">
+<p>
+The token validator is a separate Lambda exposed as an API that serves as the
+entry point for authentication. It validates Salesforce tokens and ensures users
+exist in Cognito before starting the auth flow:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>) {
+  <span style="font-weight: bold;">try</span> {
+    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">url</span> = <span style="color: #8a3b3c;">`${SALESFORCE_URL}/services/data/v56.0/chatter/users/me`</span>;
+    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">response</span> = <span style="font-weight: bold;">await</span> fetch(url, {
+      method: <span style="color: #8a3b3c;">"GET"</span>,
+      headers: {
+        Authorization: <span style="color: #8a3b3c;">`Bearer ${sessionId}`</span>,
+        <span style="color: #8a3b3c;">"Content-Type"</span>: <span style="color: #8a3b3c;">"application/json"</span>,
+      },
+    });
+
+    <span style="font-weight: bold;">if</span> (response.status !== 200) {
+      <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Invalid token, status: ${response.status}`</span> };
+    }
+
+    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">responseData</span> = <span style="font-weight: bold;">await</span> response.json();
+    <span style="font-weight: bold;">return</span> responseData.email ? { isValid: <span style="color: #383a42;">true</span>, email: responseData.email } :
+                               { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">"Email not found"</span> };
+  } <span style="font-weight: bold;">catch</span> (error) {
+    <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Validation error: ${error.message}`</span> };
+  }
+}
+</code></pre>
+
+<p>
+This function makes a call to Salesforce&rsquo;s API to validate the token and
+retrieve the user&rsquo;s email, which serves as the basis for identity mapping.
+</p>
+</div>
+</div>
+<div id="outline-container-org2a99308" class="outline-3">
+<h3 id="org2a99308">The Cognito Lambda Triggers</h3>
+<div class="outline-text-3" id="text-org2a99308">
+</div>
+<div id="outline-container-org6d310f9" class="outline-4">
+<h4 id="org6d310f9">Define Auth Challenge</h4>
+<div class="outline-text-4" id="text-org6d310f9">
+<p>
+The define-auth-challenge Lambda controls the authentication flow by determining
+which challenges to present and when to issue tokens:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">export</span> <span style="font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="font-weight: bold;">async</span> (event) =&gt; {
+  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">first challenge in session
+</span>  <span style="font-weight: bold;">if</span> (!event.request.session || event.request.session.length === 0) {
+    event.response.challengeName = <span style="color: #8a3b3c;">"CUSTOM_CHALLENGE"</span>;
+    event.response.failAuthentication = <span style="color: #383a42;">false</span>;
+    event.response.issueTokens = <span style="color: #383a42;">false</span>;
+  } <span style="font-weight: bold;">else</span> {
+    <span style="color: #556b2f;">// </span><span style="color: #556b2f;">subsequent challenges
+</span>    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">lastChallenge</span> = event.request.session[event.request.session.length - 1];
+
+    <span style="font-weight: bold;">if</span> (lastChallenge.challengeResult === <span style="color: #383a42;">true</span>) {
+      <span style="color: #556b2f;">// </span><span style="color: #556b2f;">passed - issue tokens
+</span>      event.response.issueTokens = <span style="color: #383a42;">true</span>;
+      event.response.failAuthentication = <span style="color: #383a42;">false</span>;
+    } <span style="font-weight: bold;">else</span> {
+      <span style="color: #556b2f;">// </span><span style="color: #556b2f;">failed - try again or fail auth
+</span>      event.response.challengeName = <span style="color: #8a3b3c;">"CUSTOM_CHALLENGE"</span>;
+      event.response.failAuthentication = <span style="color: #383a42;">false</span>;
+    }
+  }
+  <span style="font-weight: bold;">return</span> event;
+};
+</code></pre>
+</div>
+</div>
+<div id="outline-container-orgfa0e222" class="outline-4">
+<h4 id="orgfa0e222">Create Auth Challenge</h4>
+<div class="outline-text-4" id="text-orgfa0e222">
+<p>
+This Lambda creates the challenge requesting the Salesforce token:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">export</span> <span style="font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="font-weight: bold;">async</span> (event) =&gt; {
+  event.response = {
+    publicChallengeParameters: {
+      challenge: <span style="color: #8a3b3c;">"Please provide your Salesforce session token"</span>
+    },
+    privateChallengeParameters: {
+      challenge: <span style="color: #8a3b3c;">"salesforce_token"</span>
+    },
+    challengeMetadata: <span style="color: #8a3b3c;">"SALESFORCE_TOKEN"</span>
+  };
+  <span style="font-weight: bold;">return</span> event;
+};
+</code></pre>
+</div>
+</div>
+<div id="outline-container-org529d6c3" class="outline-4">
+<h4 id="org529d6c3">Verify Auth Challenge</h4>
+<div class="outline-text-4" id="text-org529d6c3">
+<p>
+The verify-auth-challenge Lambda performs the critical task of validating the token against Salesforce:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>, <span style="color: #383a42;">instanceUrl</span>, <span style="color: #383a42;">expectedEmail</span>) {
+  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">request to Salesforce API
+</span>  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">options</span> = {
+    hostname: <span style="font-weight: bold;">new</span> <span style="font-weight: bold;">URL</span>(instanceUrl).hostname,
+    path: <span style="color: #8a3b3c;">"/services/data/v56.0/chatter/users/me"</span>,
+    method: <span style="color: #8a3b3c;">"GET"</span>,
+    headers: {
+      Authorization: <span style="color: #8a3b3c;">`Bearer ${sessionId}`</span>,
+      <span style="color: #8a3b3c;">"Content-Type"</span>: <span style="color: #8a3b3c;">"application/json"</span>
+    }
+  };
+
+  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">token and check email match
+</span>  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">...
+</span>
+  <span style="font-weight: bold;">if</span> (expectedEmail &amp;&amp; responseData.email) {
+    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">emailMatches</span> = responseData.email.toLowerCase() === expectedEmail.toLowerCase();
+    <span style="font-weight: bold;">if</span> (!emailMatches) {
+      <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">"Email mismatch"</span> };
+    }
+    <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">true</span> };
+  }
+}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb2db33" class="outline-2">
+<h2 id="orgfb2db33">The Username Dilemma</h2>
+<div class="outline-text-2" id="text-orgfb2db33">
+<p>
+A critical consideration in this implementation revolves around Cognito
+usernames. While it might seem intuitive to use email addresses as usernames in
+Cognito, this approach creates complications in the custom authentication flow.
+When initiating authentication with Cognito, you must provide the actual
+internal Cognito username - not an alias, preferred username, or email, even if
+Cognito is configured to accept these alternate identifiers.
+</p>
+
+<p>
+This becomes particularly problematic when supporting multiple identity
+providers. For instance, if a user authenticates through both Salesforce and
+Facebook, Cognito will generate different usernames for each provider. A user
+authenticating through Facebook might receive a system-generated username like
+&ldquo;Facebook_12345678&rdquo;, while the same user authenticating through Salesforce would
+have a different username.
+</p>
+
+<p>
+To address this challenge, our token validator service uses a deterministic
+approach to generate usernames based on email addresses:
+</p>
+
+<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> createCognitoUser(<span style="color: #383a42;">email</span>) {
+  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">usernameBase</span> = email.replace(<span style="color: #8a3b3c;">/@/</span>g, <span style="color: #8a3b3c;">"-at-"</span>).replace(<span style="color: #8a3b3c;">/\./</span>g, <span style="color: #8a3b3c;">"-"</span>);
+  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">randomSuffix</span> = randomBytes(4).toString(<span style="color: #8a3b3c;">"hex"</span>);
+  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">username</span> = <span style="color: #8a3b3c;">`${usernameBase}-${randomSuffix}`</span>;
+
+  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">createCommand</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold;">AdminCreateUserCommand</span>({
+    UserPoolId: ADMIN_COGNITO_USER_POOL_ID,
+    Username: username,
+    UserAttributes: [
+      { Name: <span style="color: #8a3b3c;">"email"</span>, Value: email },
+      { Name: <span style="color: #8a3b3c;">"email_verified"</span>, Value: <span style="color: #8a3b3c;">"true"</span> }
+    ],
+    MessageAction: <span style="color: #8a3b3c;">"SUPPRESS"</span>
+  });
+
+  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Create user in Cognito
+</span>}
+</code></pre>
+
+<p>
+Applications must first call the token validator service to retrieve the Cognito
+username corresponding to their Salesforce token before initiating the Cognito
+authentication flow with this username. This two-step process maintains the
+integrity of identity mapping across authentication systems.
+</p>
+</div>
+</div>
+<div id="outline-container-orgffc5022" class="outline-2">
+<h2 id="orgffc5022">Infrastructure as Code</h2>
+<div class="outline-text-2" id="text-orgffc5022">
+<p>
+For employing Infrastructure as Code practices, defining these Lambda functions
+and their permissions through Terraform provides consistency and
+reproducibility. The key components include:
+</p>
+
+<ol class="org-ol">
+<li>Lambda function definitions for each component</li>
+<li>IAM policies granting appropriate permissions</li>
+<li>Lambda permissions allowing Cognito to invoke the functions</li>
+</ol>
+
+<p>
+A sample excerpt for the verify-auth-challenge Lambda:
+</p>
+
+<pre class="code"><code>module <span style="color: #8a3b3c;">"verify-myUsers-auth-challenge-lambda"</span> {
+  <span style="color: #556b2f;">#</span><span style="color: #556b2f;">...
+</span>  <span style="color: #383a42;">version</span>      = <span style="color: #8a3b3c;">"~&gt;7.20.0"</span>
+  <span style="color: #383a42;">function_name</span> = <span style="color: #8a3b3c;">"verify-myUsers-auth-challenge"</span>
+  <span style="color: #383a42;">handler</span>      = <span style="color: #8a3b3c;">"index.handler"</span>
+  <span style="color: #383a42;">runtime</span>      = <span style="color: #8a3b3c;">"nodejs22.x"</span>
+
+  <span style="color: #383a42;">environment_variables</span> = {
+    <span style="color: #383a42;">SALESFORCE_URL</span> = var.SALESFORCE_URL
+  }
+
+  <span style="color: #556b2f;"># </span><span style="color: #556b2f;">Additional configuration...
+</span>}
+
+</code></pre>
+
+<p>
+For AWS Console users, similar permissions must be configured manually through
+the IAM console, ensuring Lambda functions have appropriate access to Cognito
+operations and that Cognito can invoke the Lambda triggers.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1c3b1c" class="outline-2">
+<h2 id="orgb1c3b1c">Security Considerations</h2>
+<div class="outline-text-2" id="text-orgb1c3b1c">
+<p>
+This authentication flow involves handling sensitive Salesforce session tokens,
+requiring careful attention to security practices:
+</p>
+
+<ol class="org-ol">
+<li>All Lambda functions should operate within a VPC with appropriate network
+controls</li>
+<li>Token transmission should occur only over encrypted connections</li>
+<li>IAM permissions should follow the principle of least privilege</li>
+<li>Token validation should verify both the token validity and the user&rsquo;s email
+match</li>
+</ol>
+
+<p>
+Additionally, token lifetimes and session management should align with
+organizational security policies, potentially implementing refresh mechanisms
+for long-lived sessions.
+</p>
+</div>
+</div>
+<div id="outline-container-org6bb3775" class="outline-2">
+<h2 id="org6bb3775">Conclusion</h2>
+<div class="outline-text-2" id="text-org6bb3775">
+<p>
+The integration of Salesforce authentication with AWS Cognito through custom
+challenges provides a powerful mechanism for extending Salesforce&rsquo;s identity
+system to other applications. This approach delivers a seamless user experience
+while maintaining robust security controls and identity mapping.
+</p>
+
+<p>
+By leveraging Lambda functions to handle the authentication flow, organizations
+can implement sophisticated validation logic while benefiting from Cognito&rsquo;s
+comprehensive identity management capabilities. The solution accommodates the
+complexities of username management across identity providers and can be
+deployed consistently using infrastructure as code practices.
+</p>
+
+<p>
+As enterprise identity landscapes continue to evolve, this pattern offers a
+flexible foundation for integrating diverse authentication systems within the
+AWS ecosystem, ultimately simplifying the user experience while maintaining
+security and compliance requirements.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-03-29 Sat 02:02. Last build date: 2025-12-11 Thu 19:47.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

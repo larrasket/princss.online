@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2024</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">2024</h1>
+</header><p>
+So many long-form posts are here. This makes me ask, is it any more a &ldquo;TL;DRs&rdquo;?
+</p>
+<div id="outline-container-orge89209d" class="outline-2">
+<h2 id="orge89209d">Posts</h2>
+<div class="outline-text-2" id="text-orge89209d">
+</div>
+<div id="outline-container-ffc2i8a0ahk0" class="outline-3">
+<h3 id="ffc2i8a0ahk0">Jean Baudrillard theory on Adult Content</h3>
+<div class="outline-text-3" id="text-ffc2i8a0ahk0">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-12-18 Wed 05:06]</span></span>
+</p>
+ </div>
+<p>
+I wrote about the <a href="../d/porn.html#yh5juz019wj0">Industry and Consumption of Pornography</a> a while ago. Today I learnt that Jean Baudrillard has a related theory<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Frederic Lenoir, <i>Philosophy of desire</i> (Dar Al Saqi, 2023), 45.</span> that reminded me of the Social Learning theory in the sociobiological theories of rape: Jean Baudrillard wrote the following maxim: &ldquo;Sexuality does not hide in tolerance, repression, or morality, it is certainly hidden in what is more sexual than sex itself: pornography.&rdquo; In Baudrillard&rsquo;s view, the global success of pornography is not a result of sexual liberation but rather the triumph of capitalism, which turns everything into a commodity, including bodies that lose their ability to enjoy and experience desire. Hans Blüher continued where Baudrillard’s works left off and tried to show that the transition from sexual desire to pornography marks the boundary of the &ldquo;unforgivable violation&rdquo; with absolute permission—driven immediately by the urge to fulfill expectations and fantasies. This, he claims, signals the end of otherness in sexual and romantic relationships. The body of the other is consumed and discarded as if it were a consumable and disposable object. The desire for the other becomes a desire for oneself alone. We now strive for comfort, safety, and ease in the field of unity and isolation. Today’s love is free of all excess and all sin (&#x2026;). Eros aims for the other in an emotional sense, yet does not allow itself to recover in the system of the self. In this identical, increasingly homogeneous society, contradictions no longer exist, and hence no erotic experience. This assumes a state of both internal and external dissonance.
+</p>
+</div>
+</div>
+<div id="outline-container-q1v1r670kek0" class="outline-3">
+<h3 id="q1v1r670kek0">The slavery of our time</h3>
+<div class="outline-text-3" id="text-q1v1r670kek0">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-12-10 Tue 10:54]</span></span>
+</p>
+ </div>
+<div class="tag" id="orga307246">
+<p>
+This section was labeled under, or is related to <a href="../t/modus.html#ydb1kfn02wj0">Modus Vivendi</a>
+</p>
+
+</div>
+<p>
+I found an interesting piece by Leo Tolstoy: <a href="https://www.marxists.org/archive/tolstoy/1900/slavery-of-our-times.html">https://www.marxists.org/archive/tolstoy/1900/slavery-of-our-times.html</a> on wage labor: Slavery exists in full vigor, but we do not perceive it, just as in Europe at the end of the Eighteenth Century the slavery of serfdom was not perceived. People of that day thought that the position of men obliged to till the land for their lords, and to obey them, was a natural, inevitable, economic condition of life, and they did not call it slavery.  It is the same among us: people of our day consider the position of the laborer to be a natural, inevitable economic condition, and they do not call it slavery. And as, at the end of the Eighteenth Century, the people of Europe began little by little to understand that what formerly seemed a natural and inevitable form of economic life-namely, the position of peasants who were completely in the power of their lords-was wrong, unjust and immoral, and demanded alteration, so now people today are beginning to understand that the position of hired workmen, and of the working classes in general, which formerly seemed quite right and quite normal, is not what it should be, and demands alteration.
+</p>
+</div>
+</div>
+<div id="outline-container-dn5aojy0bqk0" class="outline-3">
+<h3 id="dn5aojy0bqk0">Buying Votes</h3>
+<div class="outline-text-3" id="text-dn5aojy0bqk0">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-11-12 Tue 04:49]</span></span>
+</p>
+ </div>
+<div class="tag" id="orgc5175e8">
+<p>
+This section was labeled under, or is related to <a href="../t/political.html#thc4j6p02wj0">Politics</a>
+</p>
+
+</div>
+
+<p>
+It&rsquo;s been said we are in the age of pricing. <a href="../p/commodity.html#4fb240m099k0">The Age of Commodity</a>. I had a lot of thoughts about that when I was reading this paragraph from Harper&rsquo;s review (<a href="../t/political.html#klqcz9v0zfk0">“Were all going to be dead soon.”</a>): In the United States, it was reported that the Microsoft founder Bill Gates, the world&rsquo;s twelfth-richest person, secretly gave $50 million to an organization supporting the campaign of the Democratic presidential candidate; and that the Tesla and SpaceX co-founder Elon Musk, the world&rsquo;s richest person, had been warned by federal prosecutors of the potential illegality of his practice of giving $1 million each day to a randomly selected swing-state voter who signed a petition for his super PAC that backs the Republican presidential candidate. <a href="https://www.fox29.com/news/bill-gates-not-10-wealthiest-billionaires-world-who-made-list#">^{1}</a> <a href="https://www.nytimes.com/2024/10/22/us/elections/bill-gates-future-forward-kamala-harris.html">^{2}</a> <a href="https://www.forbes.com/real-time-billionaires/#2bf3dcf3d788">^{3}</a> <a href="https://www.nbcnews.com/tech/tech-news/elon-musk-defends-1-million-petition-giveaway-federal-warning-rcna177377">^{4}</a> In Moldova, where last month it was reported that the Russian government had paid at least 130,000 people more than $15 million to vote against joining the European Union, authorities announced that they had identified an additional $24 million also directed toward purchasing the votes of 20 percent of the entire electorate; violence erupted at polling stations across the country of Georgia, where international observers warned of Russian “vote-buying” in its parliamentary elections and whose president said that the elections&rsquo; results “cannot be accepted” and should be opposed with protests in the streets; and police in Mozambique shot and killed at least ten of the thousands of demonstrators marching against the ruling party&rsquo;s claim that it had just won more than 70 percent of votes nationally. <a href="https://kyivindependent.com/moldova-uncovers-15-million-russian-backed-plot-to-influence-upcoming-elections-with-bribes-and-disinformation/">^{5}</a> <a href="https://kyivindependent.com/moscow-funneled-39-million-into-moldova-ahead-of-presidential-election-in-attempt-to-influence-results-moldovan-authorities-say/">^{6}</a> <a href="https://www.politico.eu/article/georgia-president-protests-election-salome-zourabichvili-widespread-citizens/">^{7}</a> <a href="https://clubofmozambique.com/news/cip-mozambique-elections-up-to-10-dead-in-two-days-of-demonstrations-269621/">^{8}</a> <a href="https://www.aljazeera.com/news/2024/10/24/mozambique-ruling-party-declared-winner-of-election-amid-fraud-claims">^{9}</a> Days before Uzbekistan&rsquo;s parliamentary elections, a would-be assassin fired five bullets at the car of the country&rsquo;s former head of communications, who was lobbying for reforms to protect press freedoms; and in Bulgaria, hackers published a list of more than 200 businessmen and government officials who are alleged to have bought votes under the direction of the former owner of 6 of the country&rsquo;s 12 largest-circulating newspapers. <a href="https://www.forbes.com/sites/melikkaylan/2024/10/26/a-failed-assassination-attempt-in-uzbekistan-as-it-faces-elections/">^{10}</a> <a href="https://www.politico.eu/article/bulgaria-ethical-hacking-group-bg-elves-oligarch-delyan-peevski-election-fraud-vote-buying/">^{11}</a> <a href="https://www.economist.com/eastern-approaches/2013/09/20/breaking-up-with-peevski">^{12}</a> It was reported that an internal battle in the Iranian government over the 85-year-old ayatollah&rsquo;s successor would likely be won by his second son, a former de facto commanding officer in the Basij who was accused of rigging the 2009 election in favor of the incumbent, who later accused him of embezzling money from the treasury; the Vietnamese parliament elected a military general to replace its president, who, while being investigated for bribery, resigned from the presidential office he&rsquo;d taken over from his predecessor, who himself had resigned after 539 of his subordinates were implicated in multiple corruption rackets; and Tunisia&rsquo;s incumbent president, who last month arrested dozens of members of the nation&rsquo;s largest opposition party, was inaugurated for a second term. <a href="https://www.jpost.com/middle-east/iran-news/article-826211">^{13}</a> <a href="https://web.archive.org/web/20090621204752/http://www.atimes.com/atimes/Middle_East/KF19Ak04.html">^{14}</a> <a href="https://english.alarabiya.net/articles/2012/01/15/188461">^{15}</a> <a href="https://www.channelnewsasia.com/commentary/vietnam-president-vo-van-thuong-resign-cpv-national-congress-general-secretary-4211431">^{16}</a> <a href="https://www.reuters.com/world/asia-pacific/vietnams-president-phuc-quits-blamed-ministers-violations-2023-01-17/">^{17}</a> <a href="https://apnews.com/article/tunisia-president-kais-saied-f911f1dfc86445ef8be157a3a792e1e2">^{18}</a> “Vipers,” he said at his swearing in, are “circulating.”  <a href="https://apnews.com/article/tunisia-president-kais-saied-f911f1dfc86445ef8be157a3a792e1e2">^{19}</a>
+</p>
+</div>
+</div>
+<div id="outline-container-1uw1fd21udk0" class="outline-3">
+<h3 id="1uw1fd21udk0">Abdel Wahab al-Messiri, Paul Fussell and Kagi</h3>
+<div class="outline-text-3" id="text-org93d225e">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-10-24 Fri 13:29]</span></span> <br>
+Found a video of Messiri talking about his model and the incident. <a href="https://youtu.be/qs7Dp8ckFO8">https://youtu.be/qs7Dp8ckFO8</a></li>
+</ul>
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-10-17 Thu 18:27]</span></span>
+</p>
+ </div>
+<p>
+I was reading Messiri&rsquo;s &ldquo;Rehlati al-fikriah&rdquo;, and he mentioned something very interesting there about <a href="https://en.wikipedia.org/wiki/Paul_Fussell">Paul Fussell</a>, the renowned literary historian, apparently he was one of his PhD external examiners. But that&rsquo;s not the interesting thing, it is what he mentions about him: being a homosexual pervert. I was shocked from the information that Messiri mentioned about him, that I quickly jumped to Wikipedia searching for anything with the keyword &ldquo;gay&rdquo;, &ldquo;homosexual&rdquo;, etc.. Nothing (surprisingly) was there, I started to think that Messiri might have linked to some other Paul Fussel. I then tried to search Google with keywords like &ldquo;homosexual&rdquo; &ldquo;Paul Fussel&rdquo;, still, nothing there. I was finally certain that either Messiri is talking about someone else, or this information were discrete. Then I read a post on HN that was talking about Kagi, a less screwed (suckless) search engine, it quickly linked me to the information Messiri mentioned about Fussel (his wife article about their relationship and how he would like to enter a room full of guests naked) <a href="https://www.youtube.com/watch?v=wnacdOIoTBQ">https://www.youtube.com/watch?v=wnacdOIoTBQ</a> I don&rsquo;t frequently post here, or anywhere, unlike past times. Lately I explored one of my friend&rsquo;s music library, he told me how it&rsquo;s extremely diverse, he was correct about it. I later wondered if that has anything to do with a disorder that he suffers from, which relates to his ear. I wonder if how his music changes has anything to do with how that acoustic  disorder affect his music taste. I also wondered if there&rsquo;s anything about me that affects my frequency of writing here. Sometimes it&rsquo;s fascinating —even if you believe in free will— how unfree we might be. How we might have the wrong ideas because the search engine chooses not to be helpful enough, or have different views due to a biological state. <a href="../p/nature.html#tixkcwk0gwj0">Related</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-1g2kfzz06nk0" class="outline-3">
+<h3 id="1g2kfzz06nk0">SEP Friendship</h3>
+<div class="outline-text-3" id="text-1g2kfzz06nk0">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-08-03 Sat 03:14]</span></span>
+</p>
+ </div>
+<div class="tag" id="org266bd36">
+<p>
+This section was labeled under, or is related to Philosophy
+</p>
+
+</div>
+<p>
+I really like Stanford Encyclopedia of Philosophy&rsquo;s PDFs (<a href="https://plato.stanford.edu/support/friends.html">preview here</a>), however, they do not allow you to download it without a subscription. It&rsquo;s actually good enough for a subscription if you compare it to the HTML. For someone like me, my HTML appetite can not hold more than few long articles, SEP average entry is about <code>50 pages or so, that's not a long article even. Here's how I get their entries as nice PDFs without subscription, simply save the article part of the HTML page into a file, and using [[https://pandoc.org/][pandoc]] run: ~vpandoc concept_of_religion.html --pdf-engine=xelatex -o concept_of_religion.pdf --variable=documentclass:book -V geometry:b5paper -V margin=3cm -V mainfont="Times New Roman"</code>
+</p>
+</div>
+</div>
+<div id="outline-container-kuh0x3t0p9k0" class="outline-3">
+<h3 id="kuh0x3t0p9k0">I can&rsquo;t find a Lisp</h3>
+<div class="outline-text-3" id="text-org3529b68">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-07-22 Mon 02:01]</span></span>
+</p>
+ </div>
+<div class="tag" id="org5d4742c">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+<p>
+Basically almost every Lisp out there has a major downside that turns me off from using it to the extent I consider using Haskell&rsquo;s s-expression tolerance (like <code>(map odd [1,2,3]) (((.) fst snd) (1,(2,3)))</code>) (which, obviously, would be a very bad practice): 1. Common Lisp: Classical OOP everywhere, very bad build automation and packaging (asdf), available implementations have low support availability, bugs are everywhere due to the limited teams who are working on those. 2. Scheme: Same as CL, in addition to the scarce language support in most editors (not sure even if it has LSP support), also it&rsquo;s hard to find libraries/packages to build something on. 3. EuLisp, ZetaLisp, MacLisp, InterLisp, ISLisp, <a href="https://mumble.net/~jar/tproject/">T</a>, Arc, PicoLisp: I still find it hard to believe those are not in the museum of computing yet. 4. Guile, Racket: both look so promising but the lack of interest from community which results in an effect on the number of available packages to build on, makes it much harder to start a new project in any of them without reinventing the wheel. 5. Clojure: aside from the JVM dependency and the build system hassle, the language is just too big, still the most plausible option in this whole list though.
+</p>
+</div>
+</div>
+<div id="outline-container-vbl22tf0z3k0" class="outline-3">
+<h3 id="vbl22tf0z3k0">Another killer feature for <a href="../cs/go.html#lvkhzyo02wj0">Go</a></h3>
+<div class="outline-text-3" id="text-org9e77a8a">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-16 Fri 14:07]</span></span>
+</p>
+ </div>
+<div class="tag" id="org343858e">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+<p>
+I&rsquo;d always prefer a Lisp. But ideally, Go wins (more at <a href="../d/languages.html#jb9efrq00xj0">The Prefect Programming
+Language</a>) by its unauthoritarian package manager and not using <a href="../d/languages.html#x0z0fu11qxj0">exception
+handling</a>. As aforementioned @ <a href="#gvdlay40j3k0">A thought about Clojure</a>, I think Clojure is the
+modern day Lisp that works very good for interactive programming and rapid
+development. But here&rsquo;s another killer feature of Go that roughly does not exist
+elsewhere: the great STD. With Go, I can feel very comfortable writing a Go
+application without the need of checking the internet for questions or 3rd-party
+libraries, eventually I might need to, but if compared to any other tool I&rsquo;ve
+ever used, it&rsquo;s amazing (back in the day when I used C# I&rsquo;d need a web browser
+always running alongside to my IDE). I do not have internet connection those
+days and while playing tracks I thought of building a simple CLI to handle my
+audio tracks synchronization, I know how to do it without reinventing the wheel
+in Go, with only using the STD, with Clojure, it&rsquo;s going to be unrapid developement.
+</p>
+</div>
+</div>
+<div id="outline-container-ah445bg0y3k0" class="outline-3">
+<h3 id="ah445bg0y3k0">Consolation</h3>
+<div class="outline-text-3" id="text-org867f955">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-15 Thu 19:50]</span></span>
+</p>
+ </div>
+<div class="tag" id="org544a880">
+<p>
+This section was labeled under, or is related to <a href="../t/modus.html#ydb1kfn02wj0">Modus Vivendi</a>
+</p>
+
+</div>
+<div class="epigraph"><blockquote>
+<p>
+الخبث خبثان: خُبث الداهية وخَبث الأحمق. الأخير هو، إلى حدِّ الآن، الأسوأ.
+</p>
+
+<p>
+— عباس ابراهام.
+</p>
+
+</blockquote></div>
+
+<p>
+Here&rsquo;s my consolation for a very big part of my life of which I remind myself
+very frequently especially if I&rsquo;m suspecting the existence of stupidity around.
+A solace that often comes to the forefront.
+Let me establish something that is misconstrued usually, people think that
+smart people tend to be evil much more than stupid people. Which is correct,
+intelligent people would be indeed much more capable of doing harm (i.e. evil).
+However, here&rsquo;s the thing about stupidity; evilness is highly subjective that a
+stupid person does not have to be aware that he/she is seeking something achieved,
+that he/she is harming or even doing anything at all to be &rsquo;evil&rsquo; to an intelligent
+individual. I want to give you some example but لولا النفوس الضعيفة سريعة المرض،
+سيئة الغرض I&rsquo;d skip on that. Anyway, let&rsquo;s get back to my point about where I
+find my consolation about this kind of nefarious and base evilness: it bounces
+back. Stupids, imbeciles and retards 99% of the times hurt themselves back,
+making shitty life decisions or just of being irritating to others. Their
+decisions, marred by imprudence, or merely their presence, vexatious to others,
+invariably rebound upon them. &ldquo;Errare humanum est, sed in errare perseverare
+diabolicum&rdquo;.
+</p>
+</div>
+</div>
+<div id="outline-container-9rmjr9i0o3k0" class="outline-3">
+<h3 id="9rmjr9i0o3k0">Clojure has Go-like channels</h3>
+<div class="outline-text-3" id="text-org730e35f">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-08 Thu 06:45]</span></span>
+</p>
+ </div>
+<div class="tag" id="org9fcd5a7">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+<p>
+Found out that Clojure has <a href="../cs/go.html#lvkhzyo02wj0">Go</a>-like channels.
+<a href="https://clojure.org/guides/async_walkthrough">https://clojure.org/guides/async_walkthrough</a>, very promising to use it (as
+mentioned at <a href="#gvdlay40j3k0">a thought about Clojure</a>)
+</p>
+</div>
+</div>
+<div id="outline-container-gvdlay40j3k0" class="outline-3">
+<h3 id="gvdlay40j3k0">A thought about Clojure</h3>
+<div class="outline-text-3" id="text-org194a9ab">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-03 Sat 23:59]</span></span>
+</p>
+ </div>
+<div class="BACKLINKS" id="org3f6f21e">
+<p>
+This section was referenced in <a href="#9rmjr9i0o3k0">Clojure has Go-like channels</a> and <a href="#vbl22tf0z3k0">Another killer feature for Go</a>.
+</p>
+
+</div>
+
+<div class="tag" id="org0973a91">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+<p>
+I wrote on <a href="../d/languages.html#jb9efrq00xj0">The Prefect Programming Language</a> my thoughts about what would be the
+prefect language out there, and what would be the nearest thing of it. It&rsquo;s C
+and this is not going to change (any far at least), however, perfect is not
+always practical. I still believe in Lisp-like syntax superiority and I love the
+flexibility of dynamic typing and dynamic loading, and C has both already. Still
+C lacks many things like a proper build system (that convince everybody) and
+packaging.
+</p>
+
+<p>
+From the list on that article, I&rsquo;d be left with Julia and <a href="../cs/go.html#lvkhzyo02wj0">Go</a>, Julia has two
+downsides of the <a href="../d/languages.html#uau7ou11qxj0">Centralized Package Repository</a> and the use of <a href="../d/languages.html#x0z0fu11qxj0">Exception
+handling</a>. And Go has the downside of not having a REPL. For me, when it comes to
+the real world, the issue with centralization does not matter more than the
+issue of getting the work done (i.e. REPL weights more).
+</p>
+
+<p>
+Going more practically from there, I see a high potential with Clojure, it
+does not have the OOP trash like Common Lisp and it is a Lisp, it is not too new
+like Jack, and it can interlope with Java. Perhaps it&rsquo;s the go-to language for
+me right now. Displacing Common Lisp.
+</p>
+</div>
+</div>
+<div id="outline-container-81b61ec1b4k0" class="outline-3">
+<h3 id="81b61ec1b4k0">Reading Don Quixote</h3>
+<div class="outline-text-3" id="text-org51074c5">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-02-01 Thu 02:15]</span></span>
+</p>
+ </div>
+<div class="tag" id="org79159bb">
+<p>
+This section was labeled under, or is related to Literature
+</p>
+
+</div>
+<p>
+I am considering reading Don Quixote. But I&rsquo;m still unsure. I think there are
+so many books that are propagated around and everywhere merely because of
+pseudointellectuality. War and Peace by Leo Tolstoy was one of those novels
+that I had a similar experience with. It&rsquo;s one of the most unreadable novels
+in my opinion, however, it&rsquo;s always considered either #1 or #2 best works by people who
+post book ratings on <a href="2023.html#1g48iao02wj0">book communites</a>. After I read it back then, due to the
+severe amount of recommendation, I was surprised that it&rsquo;s hardly a plain, and
+very long, novel, I tried to find later someone to discuss my view with him
+about the novel, I could only find people majored in literature who can discuss
+it, but theoretically only, and I found out that most of the people who
+recommenced it to me never actually read it.
+</p>
+</div>
+</div>
+<div id="outline-container-7vlhf73083k0" class="outline-3">
+<h3 id="7vlhf73083k0">About names</h3>
+<div class="outline-text-3" id="text-org29b653c">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-01-23 Tue 19:43]</span></span>
+</p>
+ </div>
+<p>
+I like thinking about names, they usually reflect people&rsquo;s dreams and values, many times I feel devastated when contemplating names, like when find a convicted thief named Ali I usually think that their parents did find great values in the historical character of Imam Ali that they wished to recall in their child, and how sad it went. I personally believe that names have a great effect on us. Which is not debatable [from a theory-of-complexity perspective]. But how can they shape our personalities? A study once showed that boys who are given names more common among girls are more likely to develop behavioral problems when they reach puberty,<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">David Figlio, <i>Boys Named Sue: Disruptive Children and Their Peers</i> (National Bureau of Economic Research, 2005), <a href="https://doi.org/10.3386/w11277">https://doi.org/10.3386/w11277</a>.</span> but the reason behind that itself is very obvious (likely to be). What about their effect on our innersole? I think there should be. The priming effect is one that proves it, however, it&rsquo;s very controversial, but let me tell you about it. Priming is the idea that exposure to one stimulus may influence a response to a subsequent stimulus, without conscious guidance or intention. The stimulus itself can be a subliminal stimuli, for example, if someone were to read you an article about people in a retirement home, your subconscious recalls old people, who walk very slow, the Priming theorists believe that this might actually cause you to walk slightly slower as result of your subconscious thinking. And if you were to experience the same thing but with talking about top football players, you might walk faster. Interesting theory no? Unfortunately it has great problems in documenting the experiments.<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">Bruce Bower, “The Hot and Cold of Priming: Psychologists Are Divided on Whether Unnoticed Cues Can Influence Behavior,” <i>Science News</i> 181, no. 10 (May 2012): 26–29, <a href="https://doi.org/10.1002/scin.5591811025">https://doi.org/10.1002/scin.5591811025</a>.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-shui29f0w2k0" class="outline-3">
+<h3 id="shui29f0w2k0">Note on marriage</h3>
+<div class="outline-text-3" id="text-org0a6c138">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-01-16 Tue 06:58]</span></span>
+</p>
+ </div>
+<div class="tag" id="org60439ce">
+<p>
+This section was labeled under, or is related to <a href="../t/modus.html#ydb1kfn02wj0">Modus Vivendi</a>
+</p>
+
+</div>
+
+<p>
+I&rsquo;ve a simple take on marriage and relationships that does not involve my radical thoughts about family, I think it should very obvious, but I find myself have to point it out in many discussions. And it&rsquo;s basically about the struggle that occurs because of class differential between couples, it can be reduced to a simple imbalance or dependency issue. My view derives from the historical nature of the relationship between men and women. Historically speaking, there&rsquo;s a very interesting fact in the very maiden year of human slavery, that&rsquo;s, female slavery appeared earlier that male&rsquo;s.<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">Gerda Lerner, “Women and Slavery,” <i>Slavery &#38;Amp; Abolition</i> 4, no. 3 (December 1983): 173–98, <a href="https://doi.org/10.1080/01440398308574858">https://doi.org/10.1080/01440398308574858</a>.</span> To understand the significance of that let us understand why slavery ever appeared; slavery is something that is as new as civilization to the H. sapiens, actually slavery only dates back to 3500 BC,<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">Elisabeth Meier Tetlow, <i>Sumer</i>, vol. 1, Women, Crime, and Punishment in Ancient Law and Society (New York: A&#38;C Black, 2004).</span> most anthropologists explain this emergence as related to the new production techniques that were adopted and led eventually to a the first class division known in history. The interesting thing here is that, this division happened earlier to females, they were enslaved but not only by higher class but by an opposite (equal) gender. This happened because the new intensive production techniques tended to prioritize men’s labour over women’s for the first time which was not the case at all: women used to be as productive and their <i>labour</i> was as much important as men&rsquo;s in the pre-horticulture era.<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">Ernestine Friedl, <i>Women and Men: An Anthropologist’s View</i> (Holt, Rinehart and Winston, 1975), 28.</span> What is to be learnt from this historical fact? Well, basically the more differences in power between parties the more pulverization is likely to occur.  Consequently, when you apply this to modern-relationships decisions you will find that many people did not learn this basic lesson of history yet.
+</p>
+</div>
+</div>
+<div id="outline-container-pdr4b5s0t2k0" class="outline-3">
+<h3 id="pdr4b5s0t2k0">&rsquo;The reason I hate nature&rsquo;</h3>
+<div class="outline-text-3" id="text-org4c757ca">
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-01-15 Mon 20:06]</span></span>
+</p>
+ </div>
+<div class="tag" id="org0e40eef">
+<p>
+This section was labeled under, or is related to <a href="../p/nature.html#tixkcwk0gwj0">The Power of Understanding Human Nature</a>
+</p>
+
+</div>
+<p>
+My friend sent me this episode from a pop-science <del>TV</del> series [Arabic]; <a href="https://youtu.be/CFeW61i_MLA">https://youtu.be/CFeW61i_MLA</a> it has English subtitle. I&rsquo;d love to share Nietzsche view of the matter:<label for="7" class="margin-toggle sidenote-number"></label><input type="checkbox" id="7" class="margin-toggle"/><span class="sidenote">Friedrich Wilhelm Nietzsche, <i>The Dawn of Day</i>, ed. J. M. Kennedy (Dover Publications, 1998), 17.</span> Goodness and malignity. At first men imposed their own personalities on Nature: everywhere they saw themselves and their like, i.e. their own evil and capricious temperaments, hidden, as it were, behind clouds, thunder-storms, wild beasts, trees, and plants: it was then that they declared Nature was evil. Afterwards there came a time, that of Rousseau, when they sought to distinguish themselves from Nature: they were so tired of each other that they wished to have separate little hiding-places where man and his misery could not penetrate: then they invented “nature is good.”
+</p>
+</div>
+</div>
+<div id="outline-container-0dvc5611e2k0" class="outline-3">
+<h3 id="0dvc5611e2k0">A tip on post-achievement depression</h3>
+<div class="outline-text-3" id="text-org427fe4c">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-24 Sat 19:24]</span></span> The fact that such simple instructions are so difficult to implement in a time
+of ordeal and depression makes me feel so sad.</li>
+</ul>
+<div class="notes"> <p>
+<span class="timestamp-wrapper"><span class="timestamp">[2024-01-04 Thu 16:06]</span></span>
+</p>
+ </div>
+<div class="tag" id="org01b111e">
+<p>
+This section was labeled under, or is related to <a href="../t/modus.html#ydb1kfn02wj0">Modus Vivendi</a>
+</p>
+
+</div>
+<p>
+I think I&rsquo;ve a nice tip on that, although it might sounds very naive, it really
+helped me personally. I think that the reason behind post-achievement depression
+is that we forget why we wanted whatever we achieved or that we no longer
+possess the same perspectives that made us want that thing, the reason behind
+that is usually the long period that is dedicated on achieving it, in which you
+are likely to change more. That&rsquo;s why it&rsquo;s most common in academia especially
+with people getting their Ph.D after 5 years of work or even more. So basically
+we forget why we want something and how we felt towards wanting it (think of it
+like someone working 2 years to earn an Ijazah believing it to be a great
+achievement, but they turn atheist in the second year). So my tip is basically a
+usage of intensive imagination in a different stages of what we want.
+</p>
+
+<p>
+And this does not have to be a protection from depression to be honest, but it
+</p>
+
+<p>
+can be used as a refreshing method to really understand our passions and what we
+&ldquo;really&rdquo; want (not what we ought to by collective consciousness or propaganda):
+think of yourself getting it and estimate your happiness or satisfaction.
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-04-12 Sat 18:40]</span></span> As of now, I&rsquo;m not really sure if this method will work
+properly for most people, as most of us generate these delusional views about
+how things are going to be like after the achievement. See also: <a href="../p/depression.html#yh144x4121k0">On Depression</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Frederic Lenoir, <i>Philosophy of desire</i> (Dar Al Saqi, 2023), 45.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">David Figlio, <i>Boys Named Sue: Disruptive Children and Their Peers</i> (National Bureau of Economic Research, 2005), <a href="https://doi.org/10.3386/w11277">https://doi.org/10.3386/w11277</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Bruce Bower, “The Hot and Cold of Priming: Psychologists Are Divided on Whether Unnoticed Cues Can Influence Behavior,” <i>Science News</i> 181, no. 10 (May 2012): 26–29, <a href="https://doi.org/10.1002/scin.5591811025">https://doi.org/10.1002/scin.5591811025</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Gerda Lerner, “Women and Slavery,” <i>Slavery &#38;Amp; Abolition</i> 4, no. 3 (December 1983): 173–98, <a href="https://doi.org/10.1080/01440398308574858">https://doi.org/10.1080/01440398308574858</a>.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Elisabeth Meier Tetlow, <i>Sumer</i>, vol. 1, Women, Crime, and Punishment in Ancient Law and Society (New York: A&#38;C Black, 2004).</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Ernestine Friedl, <i>Women and Men: An Anthropologist’s View</i> (Holt, Rinehart and Winston, 1975), 28.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Friedrich Wilhelm Nietzsche, <i>The Dawn of Day</i>, ed. J. M. Kennedy (Dover Publications, 1998), 17.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2024-01-01 Mon 00:00. Last build date: 2025-12-04 Thu 22:43.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

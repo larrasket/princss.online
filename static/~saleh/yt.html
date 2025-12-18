@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YouTube Channels</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">YouTube Channels</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#classics">Classics</a></li>
+<li><a href="#computers">Computers</a>
+<ul>
+<li><a href="#swww">Software Engineering</a></li>
+<li><a href="#go">Go</a></li>
+<li><a href="#lsp">Lisp</a></li>
+<li><a href="#cp">Competitive Programming</a></li>
+<li><a href="#em">Emacs</a></li>
+<li><a href="#ds">Database Systems</a></li>
+<li><a href="#c">C/C++</a></li>
+<li><a href="#nt">C#/.NET</a></li>
+<li><a href="#os">Operating Systems</a></li>
+<li><a href="#ott">Other</a></li>
+</ul>
+</li>
+<li><a href="#chess">Chess</a></li>
+<li><a href="#sci">Science and Philosophy</a></li>
+<li><a href="#org21d2c87">History</a></li>
+<li><a href="#ath">Aesthetic</a></li>
+<li><a href="#ent">Entertainment</a></li>
+<li><a href="#contv">Controversy</a></li>
+<li><a href="#pd">Podcasts</a>
+<ul>
+<li><a href="#hst">Science and History</a></li>
+<li><a href="#othtt">Other</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div class="BACKLINKS" id="org3dd0801">
+<p>
+This section was referenced in <a href="t/chess.html#rgogo9p02wj0">Chess</a>, <a href="h/go.html#uq35rvn02wj0">[draft][don&rsquo;t take it seriously] Go Incomplete Guide</a>, and <a href="cs/lisp.html#vlm4vsn02wj0">Lisp Programming Language</a>, and in 13 other private notes.
+</p>
+
+</div>
+
+<p>
+Channels are sorted according to my preferences and their level of relativity to
+the heading. Except for the controversy and podcasts.
+</p>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-09 Fri 18:57]</span></span> Extremely out of date.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-06-17 Mon 14:13]</span></span> Updated.</li>
+</ul>
+<div id="outline-container-classics" class="outline-2">
+<h2 id="classics">Classics</h2>
+<div class="outline-text-2" id="text-classics">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@pianushko">pianushko</a></li>
+<li><a href="https://www.youtube.com/@JamesVaughan">James Vaughan</a></li>
+<li><a href="https://www.youtube.com/@MarkFarago">Mark Faragó</a></li>
+<li><a href="https://www.youtube.com/@eunicenortonarchive">eunicenortonarchive</a></li>
+<li><a href="https://www.youtube.com/@enras41">La Stravaganza</a></li>
+<li><a href="https://www.youtube.com/@gullivior">gullivior</a></li>
+<li><a href="https://www.youtube.com/@scartatum">scartatum</a></li>
+<li><a href="https://www.youtube.com/@goodmanmusica">goodmanmusica</a></li>
+<li><a href="https://www.youtube.com/@moderndaymath">moderndaymath</a></li>
+<li><a href="https://www.youtube.com/@punkpoetry">punkpoetry</a></li>
+<li><a href="https://www.youtube.com/@pianopera">pianopera</a></li>
+<li><a href="https://www.youtube.com/@pianotreasures">pianotreasures</a></li>
+<li><a href="https://www.youtube.com/@truecrypt">truecrypt</a></li>
+<li><a href="https://www.youtube.com/@cody71i">Scenes from a Memory&#x2026;</a></li>
+<li><a href="https://www.youtube.com/@ADGO">Strange Name</a></li>
+<li><a href="https://www.youtube.com/@xper2xper">xper2xper</a></li>
+<li><a href="https://www.youtube.com/@Beckmesser2">Beckmesser2 </a></li>
+<li><a href="https://www.youtube.com/@StockhausenIsMyCat">StockhausenIsMyCat</a></li>
+<li><a href="https://www.youtube.com/@ThePianoFiles">The Piano Files</a></li>
+<li><a href="https://www.youtube.com/@danali45">Danali45</a></li>
+<li><a href="https://www.youtube.com/@ClassicalPianoRarities">Classical Piano Rarities</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-computers" class="outline-2">
+<h2 id="computers">Computers</h2>
+<div class="outline-text-2" id="text-computers">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@vcfederation">Vintage Computer Federation</a></li>
+<li><a href="https://www.youtube.com/@StrangeLoopConf">Strange Loop Conference</a></li>
+<li><a href="https://www.youtube.com/@Computerphile">Computerphile</a></li>
+<li><a href="https://www.youtube.com/@VivekHaldar">Vivek Haldar</a></li>
+<li><a href="https://www.youtube.com/@ComputerHistory">Computer History Museum</a></li>
+<li><a href="https://www.youtube.com/@computerenhance2980">Computer, Enhance!</a></li>
+<li><a href="https://www.youtube.com/@BlowFan/">Blow Fan</a></li>
+<li><a href="https://www.youtube.com/@TsodingDaily">Tsoding Daily</a></li>
+<li><a href="https://www.youtube.com/@cryocode1417">cryoCode</a></li>
+<li><a href="https://www.youtube.com/@WGSeminarSeries">WestDRI</a></li>
+<li><a href="https://www.youtube.com/@Bisqwit">Bisqwit</a></li>
+<li><a href="https://www.youtube.com/@catvorg">catvorg </a></li>
+<li><a href="https://www.youtube.com/@K0P">Khalili Oriented Programming</a></li>
+<li><a href="https://www.youtube.com/@DevonCrawford">Devon Crawford</a></li>
+<li><a href="https://www.youtube.com/@WolfgangsChannel">Wolfgang&rsquo;s Channel</a></li>
+<li><a href="https://www.youtube.com/@RobertElderSoftware">RobertElderSoftware</a></li>
+<li><p>
+<a href="https://www.youtube.com/@VLang">The V Programming Language</a>
+</p>
+
+<p>
+This is only here for pure troll purpose.
+</p></li>
+<li><a href="https://www.youtube.com/@sideofburritos">Side Of Burritos</a></li>
+<li><a href="https://www.youtube.com/@codewithryan">Code With Ryan</a></li>
+</ul>
+</div>
+<div id="outline-container-swww" class="outline-3">
+<h3 id="swww">Software Engineering</h3>
+<div class="outline-text-3" id="text-swww">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@TheDeliberateEngineer">The Deliberate Engineer</a></li>
+<li><a href="https://www.youtube.com/@ALifeEngineered">A Life Engineered</a></li>
+<li><a href="https://www.youtube.com/@CodingTech">Coding Tech</a></li>
+<li><a href="https://www.youtube.com/@CodeTechTalks">Code Tech Talks</a></li>
+<li><a href="https://www.youtube.com/@CodeAesthetic">CodeAesthetic</a></li>
+<li><a href="https://www.youtube.com/@ByteByteGo">ByteByteGo</a></li>
+<li><a href="https://www.youtube.com/@cameronmcnz">Cameron McKenzie</a></li>
+<li><a href="https://www.youtube.com/@semicolonsons">Semicolon &amp; Sons</a></li>
+<li><a href="https://www.youtube.com/@GOTO-">GOTO Conferences</a></li>
+<li><a href="https://www.youtube.com/@SebastianDaschnerIT">Sebastian Daschner</a></li>
+<li><a href="https://www.youtube.com/@SoftwareEngenius">SoftwareEngenius</a></li>
+<li><a href="https://www.youtube.com/@ShiranAfergan">Shiran Afergan</a></li>
+<li><a href="https://www.youtube.com/@trash_dev">trash</a></li>
+<li><a href="https://www.youtube.com/@ThePrimeagen">ThePrimeagen</a></li>
+<li><a href="https://www.youtube.com/@ThePrimeTimeagen">ThePrimeTime</a></li>
+<li><a href="https://www.youtube.com/@BackToBackSWE">Back To Back SWE</a></li>
+<li><a href="https://www.youtube.com/@CoderDave">CoderDave</a></li>
+<li><a href="https://www.youtube.com/@BeABetterDev">Be A Better Dev</a></li>
+<li><a href="https://www.youtube.com/@SystemDesignInterview">System Design Interview</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-go" class="outline-3">
+<h3 id="go">Go</h3>
+<div class="outline-text-3" id="text-go">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@mattkdvb5154">Matt KØDVB</a></li>
+<li><a href="https://www.youtube.com/@GolangCafe">Golang Cafe</a></li>
+<li><a href="https://www.youtube.com/@JustForFunc">justforfunc: Programming in Go</a></li>
+<li><a href="https://www.youtube.com/@NicJackson">Nic Jackson</a></li>
+<li><a href="https://www.youtube.com/@anthonygg_">Anthony GG </a></li>
+<li><a href="https://www.youtube.com/@MarioCarrion">Mario Carrion</a></li>
+<li><a href="https://www.youtube.com/@rscgolang">Russ Cox</a></li>
+<li><a href="https://www.youtube.com/@GopherAcademy">Gopher Academy</a></li>
+<li><a href="https://www.youtube.com/@GopherConUK">GopherCon UK</a></li>
+<li><a href="https://www.youtube.com/@gojax">Go Jax</a></li>
+<li><a href="https://www.youtube.com/@DonaldFeury">Donald Feury</a></li>
+<li><a href="https://www.youtube.com/@NerdCademyDev">NerdCademy</a></li>
+<li><a href="https://www.youtube.com/@boldlygo">Boldly Go </a></li>
+<li><a href="https://www.youtube.com/@joncalhoun">Jon Calhoun</a></li>
+<li><a href="https://www.youtube.com/@Tutorialedge">TutorialEdge</a></li>
+<li><a href="https://www.youtube.com/@TECHSCHOOLGURU">TECH SCHOOL</a></li>
+<li><a href="https://www.youtube.com/@GolangDojo">Golang Dojo</a> (Worst)</li>
+<li><a href="https://www.youtube.com/@mathisve">Mathis Van Eetvelde</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-lsp" class="outline-3">
+<h3 id="lsp">Lisp</h3>
+<div class="outline-text-3" id="text-lsp">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@joshbetts1022">Josh Betts</a></li>
+<li><a href="https://www.youtube.com/@GavinFreeborn">Gavin Freeborn</a></li>
+<li><a href="https://www.youtube.com/@CBaggers">Baggers </a></li>
+<li><a href="https://www.youtube.com/@CodeNextDoor">CodeNextDoor</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-cp" class="outline-3">
+<h3 id="cp">Competitive Programming</h3>
+<div class="outline-text-3" id="text-cp">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@Errichto">Errichto</a></li>
+<li><a href="https://www.youtube.com/@tmwilliamlin168">William Lin</a></li>
+<li><a href="https://www.youtube.com/@timc3406">Timothy H Chang</a></li>
+<li><a href="https://www.youtube.com/@WilliamFiset-videos">WilliamFiset</a></li>
+<li><a href="https://www.youtube.com/@timecomplexityinfinity9736">Time Complexity Infinity</a></li>
+<li><a href="https://www.youtube.com/@blakewright6634">Blake Wright </a></li>
+<li><a href="https://www.youtube.com/@FisherCoder">Fisher Coder</a></li>
+<li><a href="https://www.youtube.com/@francescomanicardi8540">Francesco Manicardi</a></li>
+<li><a href="https://www.youtube.com/@RenZhang88">Ren Zhang</a></li>
+<li><a href="https://www.youtube.com/@proofofblake/featured">blake </a></li>
+<li><a href="https://www.youtube.com/@ColinGalen">Colin Galen</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-em" class="outline-3">
+<h3 id="em">Emacs</h3>
+<div class="outline-text-3" id="text-em">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@SystemCrafters">System Crafters</a></li>
+<li><a href="https://www.youtube.com/@emacsnyc3654">Emacs NYC</a></li>
+<li><a href="https://www.youtube.com/@EmacsConf">EmacsConf and Emacs hangouts</a></li>
+<li><a href="https://www.youtube.com/@mzamansky">Mike Zamansky</a></li>
+<li><a href="https://www.youtube.com/@watkinsishere">watkinsr</a></li>
+<li><a href="https://www.youtube.com/@dickmao5177">dickmao</a></li>
+<li><a href="https://www.youtube.com/@uncledave2063">Uncle Dave</a></li>
+<li><a href="https://www.youtube.com/@JakeBox0">Jake B</a></li>
+<li><a href="https://www.youtube.com/@protesilaos">Protesilaos Stavrou</a></li>
+<li><a href="https://www.youtube.com/@YisraelDovL">Yisrael Dov L</a></li>
+<li><a href="https://www.youtube.com/@koenighaunstetten">Rainer König</a></li>
+<li><a href="https://www.youtube.com/@Lukewh">Lukewh</a></li>
+<li><a href="https://www.youtube.com/@zaisteprogramming">Zaiste Programming</a></li>
+<li><a href="https://www.youtube.com/@MatthewKeeler">Matthew Keeler</a></li>
+<li><a href="https://www.youtube.com/@TimothyUnkert">Timothy Unkert</a></li>
+<li><a href="https://www.youtube.com/@LigerLearn">LigerLearn</a></li>
+<li><a href="https://www.youtube.com/@ChristopherMaiorana">Chris Maiorana</a></li>
+<li><a href="https://www.youtube.com/channel/UCqM0zDcFNdAHj7uQkprLszg">Positron&rsquo;s Emacs Channel</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ds" class="outline-3">
+<h3 id="ds">Database Systems</h3>
+<div class="outline-text-3" id="text-ds">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@CMUDatabaseGroup">CMU Database Group</a></li>
+<li><a href="https://www.youtube.com/@DatabaseStar">Database Star</a></li>
+<li><a href="https://www.youtube.com/@SeattleDataGuy">Seattle Data Guy</a></li>
+<li><a href="https://www.youtube.com/@CrazyCornerTV">DataLover</a></li>
+<li><a href="https://www.youtube.com/@jayzern">jayzern</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-c" class="outline-3">
+<h3 id="c">C/C++</h3>
+<div class="outline-text-3" id="text-c">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@JacobSorber">Jacob Sorber</a></li>
+<li><a href="https://www.youtube.com/@cppweekly">Cᐩᐩ Weekly With Jason Turner</a></li>
+<li><a href="https://www.youtube.com/@CppCon">CppCon</a></li>
+<li><a href="https://www.youtube.com/@SwedenCpp">SwedenCpp</a></li>
+<li><a href="https://www.youtube.com/@CppNuts">CppNuts</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-nt" class="outline-3">
+<h3 id="nt">C#/.NET</h3>
+<div class="outline-text-3" id="text-nt">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@nickchapsas">Nick Chapsas</a></li>
+<li><a href="https://www.youtube.com/@Vagelis_Prokopiou">Vagelis Prokopiou</a></li>
+<li><a href="https://www.youtube.com/@net-programmer">NET Programmer</a></li>
+<li><a href="https://www.youtube.com/@RoozbehShad">Roozbeh Shad</a></li>
+<li><a href="https://www.youtube.com/@tonydwire">Tony Dwire</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-os" class="outline-3">
+<h3 id="os">Operating Systems</h3>
+<div class="outline-text-3" id="text-os">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@SystemsWithJT">Systems with JT</a></li>
+<li><a href="https://www.youtube.com/@techiechapchannel">Techiechap</a></li>
+<li><a href="https://www.youtube.com/@1g0rB0hm">Igor Böhm</a></li>
+<li><a href="https://www.youtube.com/@freedosproject">FreeDOS</a></li>
+<li><a href="https://www.youtube.com/@ghassanshobakicomputerscie9478">Ghassan Shobaki Computer Science Lectures</a></li>
+<li><a href="https://www.youtube.com/@ee415intro.tooperatingsyst8">EE415: Intro. to Operating System</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ott" class="outline-3">
+<h3 id="ott">Other</h3>
+<div class="outline-text-3" id="text-ott">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@codecastcommunity8192">CodeCast Community</a></li>
+<li><a href="https://www.youtube.com/channel/UCuNzTdzcO2RwHd_YUrhIFcw">Adam James VODS</a></li>
+<li><a href="https://www.youtube.com/@HaskellatWork">Haskell at Work</a></li>
+<li><a href="https://www.youtube.com/@codingmath">Coding Math</a></li>
+<li><a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw">3Blue1Brown</a></li>
+<li><a href="https://www.youtube.com/@LinuxRecipe/videos">Ahmed Alkabary</a></li>
+<li><a href="https://www.youtube.com/@AI1998">Ahmed ibrahim</a></li>
+<li><a href="https://www.youtube.com/@AmrSGhoneim/featured">Amr S. Ghoneim </a></li>
+<li><a href="https://www.youtube.com/@NoBoilerplate">No Boilerplate</a></li>
+<li><a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship</a></li>
+<li><a href="https://www.youtube.com/channel/UC8wKWWarusivFpIcUx9ilOw">By Default</a></li>
+<li><a href="https://www.youtube.com/channel/UCnHX5FjwtQpxkCGziuh4NJA">Logan Smith </a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-chess" class="outline-2">
+<h2 id="chess">Chess</h2>
+<div class="outline-text-2" id="text-chess">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@STLChessClub">Saint Louis Chess Club</a></li>
+<li><a href="https://www.youtube.com/@Chessfactor">Chessfactor </a></li>
+<li><a href="https://www.youtube.com/@ChessNetwork">ChessNetwork </a></li>
+<li><a href="https://www.youtube.com/@JohnBartholomewChess">John Bartholomew</a></li>
+<li><a href="https://www.youtube.com/@DanielNaroditskyGM">Daniel Naroditsky</a></li>
+<li><a href="https://www.youtube.com/@chesswebsite">thechesswebsite</a></li>
+<li><a href="https://www.youtube.com/@KebuChess">Krishna Prem</a></li>
+<li><a href="https://www.youtube.com/@JimsChessChannel">Jim&rsquo;s Chess Channel</a></li>
+<li><a href="https://www.youtube.com/@pawnbreak">Pawnbreak</a></li>
+<li><a href="https://www.youtube.com/@eric-rosen">Eric Rosen</a></li>
+<li><a href="https://www.youtube.com/@ChessTroll">Chess Troll </a></li>
+<li><a href="https://www.youtube.com/@ChesscomArabic">Chesscom Arabic </a></li>
+<li><a href="https://www.youtube.com/@ChesscomIndia">Chesscom India </a></li>
+<li><a href="https://www.youtube.com/@chess_amature">هواة شطرنج</a></li>
+<li><a href="https://www.youtube.com/@Khatibo_Fish">كش ملك الخطيب</a></li>
+<li><a href="https://www.youtube.com/@Horuschess">حورس للشطرنج</a></li>
+<li><a href="https://www.youtube.com/@7abshtakanat_Shataranj">حبشتكنات شطرنجية</a></li>
+<li><a href="https://www.youtube.com/@user-ml6sc4xm9u">المحترف الاول</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sci" class="outline-2">
+<h2 id="sci">Science and Philosophy</h2>
+<div class="outline-text-2" id="text-sci">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@ThenNow">Then &amp; Now</a></li>
+<li><a href="https://www.youtube.com/@westernbrahmin3253">Western Brahmin</a></li>
+<li><a href="https://www.youtube.com/@TheoryPhilosophy">Theory &amp; Philosophy</a></li>
+<li><a href="https://www.youtube.com/@MauritianStruggle">Mauritian Struggle</a></li>
+<li><a href="https://www.youtube.com/@DanielNaroditskyGM">Daniel Naroditsky</a></li>
+<li><a href="https://www.youtube.com/@mdphdguy1">Mathoma</a></li>
+<li><a href="https://www.youtube.com/@numberphile">Numberphile</a></li>
+<li><a href="https://www.youtube.com/@mathetal">math et al</a></li>
+<li><a href="https://www.youtube.com/@AnotherRoof">Another Roof</a></li>
+<li><a href="https://www.youtube.com/@PenPaper95">Pen&amp;Paper</a> (arabic)</li>
+<li><a href="https://www.youtube.com/@statquest">StatQuest with Josh Starmer</a></li>
+<li><a href="https://www.youtube.com/@acollierastro">acollierastro</a></li>
+<li><a href="https://www.youtube.com/@AndresGomezEmilsson">Andrés Gómez Emilsson</a></li>
+<li><a href="https://www.youtube.com/@worthlessprofessor6477">Worthless Professor</a> (Academia)</li>
+<li><a href="https://www.youtube.com/@ThoughtBubbler">Thought Café</a></li>
+<li><a href="https://www.youtube.com/channel/UC1VzCyqpmCaRh8_BnijbOvg">Carneades.org</a></li>
+<li><a href="https://www.youtube.com/channel/UChVUSXFzV8QCOKNWGfE56YQ">BriTheMathGuy</a></li>
+<li><a href="https://www.youtube.com/channel/UCzBjutX2PmitNF4avysL-vg">Aleph 0</a></li>
+<li><a href="https://www.youtube.com/channel/UCG9ShGbASoiwHwFcLcAh9EA">SEA </a></li>
+<li><a href="https://www.youtube.com/channel/UCxoz4YfS4M3H3C57FD4jW4Q">Science Time</a></li>
+<li><a href="https://www.youtube.com/channel/UC1yNl2E66ZzKApQdRuTQ4tw">Sabine Hossenfelder</a></li>
+<li><a href="https://www.youtube.com/channel/UCQfyToF3E2jfnvOunuG985A">PeakMath</a></li>
+<li><a href="https://www.youtube.com/channel/UCxPtfAOwtyd_N6keP3MnVmw">Nidhal Guessoum</a></li>
+<li><a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q">Kurzgesagt</a></li>
+<li><a href="https://www.youtube.com/channel/UCCrl9a26fDCZvofnCnA5A8g">Johnathan Bi </a></li>
+<li><a href="https://www.youtube.com/channel/UCO6nDCimkF79NZRRb8YiDcA">Storied</a></li>
+<li><a href="https://www.youtube.com/channel/UCl2DdWc5gLhEzu2ri4U1Cog">Vlad Vexler Philosophy </a></li>
+<li><a href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">Veritasium</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21d2c87" class="outline-2">
+<h2 id="org21d2c87">History</h2>
+<div class="outline-text-2" id="text-org21d2c87">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@AncientAmericas">Ancient Americas</a></li>
+<li><a href="https://www.youtube.com/@SandRhomanHistory/videos">SandRhoman History</a></li>
+<li><a href="https://www.youtube.com/@RyanReevesM">Ryan Reeves</a></li>
+<li><a href="https://www.youtube.com/@toldinstone">toldinstone</a></li>
+<li><a href="https://www.youtube.com/@MarkFeltonProductions/videos">Mark Felton Productions</a></li>
+<li><a href="https://www.youtube.com/@HikmaHistory">Hikma History</a></li>
+<li><a href="https://www.youtube.com/@TheLifeGuide/videos">The Life Guide</a></li>
+<li><a href="https://www.youtube.com/@wescecil3920">Wes Cecil</a></li>
+<li><a href="https://www.youtube.com/@TheFallofRome/videos">The Historian&rsquo;s Craft</a></li>
+<li><a href="https://www.youtube.com/@MontemayorChannel">Montemayor</a></li>
+<li><a href="https://www.youtube.com/@EpimetheusHistory">Epimetheus</a></li>
+<li><a href="https://www.youtube.com/channel/UCV-V2lxu5vztT-6yUmVp35A">African Studies Association</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ath" class="outline-2">
+<h2 id="ath">Aesthetic</h2>
+<div class="outline-text-2" id="text-ath">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@SpokenVerse">SpokenVerse</a></li>
+<li><a href="https://www.youtube.com/@moralimagination">The Wardrobe</a></li>
+<li><a href="https://www.youtube.com/@culturevultureuk">Culture Vulture UK</a></li>
+<li><a href="https://www.youtube.com/@user-ls7rq3kx5h">المحترق المنير</a></li>
+<li><a href="https://www.youtube.com/@user-db8wf5ci5z">قناة السماع الصوفي</a></li>
+<li><a href="https://www.youtube.com/@iccq8">د . عادل بن حزمان</a></li>
+<li><a href="https://www.youtube.com/@ii3f">بِالقُرانِ نصَلحُ ونستقيمَ</a></li>
+<li><a href="https://www.youtube.com/@TheBeautyOf">The Beauty Of</a></li>
+<li><a href="https://www.youtube.com/@theguywhoedits7460">the guy who edits</a></li>
+<li><a href="https://www.youtube.com/@kiko22190">kiko22190</a></li>
+<li><a href="https://www.youtube.com/@Menurella">oiseaux-lyres</a></li>
+<li><a href="https://www.youtube.com/@imcyborgbutthatsok">i&rsquo;m cyborg but that&rsquo;s ok</a></li>
+<li><a href="https://www.youtube.com/@Narrator-vz4wm">I&rsquo;m Jack&rsquo;s Edit Channel</a></li>
+<li><a href="https://www.youtube.com/@user-im4rk5fq7s">مقتطفات من مجالس أبو قيس محمد رشيد</a></li>
+<li><a href="https://www.youtube.com/@user-le6nv9bl9g">سفح رامة، قطوف من اللغة والأدب.</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ent" class="outline-2">
+<h2 id="ent">Entertainment</h2>
+<div class="outline-text-2" id="text-ent">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@NorthernHurricane7">NorthernHurricane7</a></li>
+<li><a href="https://www.youtube.com/@whatisantilogic138">WhatisAntiLogic?</a></li>
+<li><a href="https://www.youtube.com/@zerobudgetstories">Zero Budget Stories</a></li>
+<li><a href="https://www.youtube.com/@Sakiayuo">Sakiayuo</a></li>
+<li><a href="https://www.youtube.com/@tameemyouness">tameemyouness</a></li>
+<li><a href="https://www.youtube.com/@Virbox">Virbox</a></li>
+<li><a href="https://www.youtube.com/@RescueRestoreShorts">Rescue &amp; Restore Shorts</a></li>
+<li><a href="https://www.youtube.com/@petergriffin9953">Peter Griffin</a></li>
+<li><a href="https://www.youtube.com/@LowBudgetStories">Low Budget Stories</a></li>
+<li><a href="https://www.youtube.com/@MillenniaThinker">MillenniaThinker</a></li>
+<li><a href="https://www.youtube.com/@haha">Dr Ding&rsquo;s Molecular Cuisine</a></li>
+<li><a href="https://www.youtube.com/@programmersarealsohuman5909">Programmers are also human</a></li>
+<li><a href="https://www.youtube.com/channel/UCePDFpCr78_qmVtpoB1Axaw">Great Art Explained</a></li>
+<li><a href="https://www.youtube.com/channel/UCZlodzngfsaCQAKE6wXiuMw">Fiction Beast</a></li>
+<li><a href="https://www.youtube.com/channel/UCJ_2hNMxOzNjviJBiLWHMqg">DamiLee</a></li>
+<li><a href="https://www.youtube.com/channel/UCqVEHtQoXHmUCfJ-9smpTSg">Answer in Progress</a></li>
+<li><a href="https://www.youtube.com/channel/UClZbmi9JzfnB2CEb0fG8iew">Primal Space</a></li>
+<li><a href="https://www.youtube.com/channel/UC3sznuotAs2ohg_U__Jzj_Q">The Film Theorists</a></li>
+<li><a href="https://www.youtube.com/channel/UC9RM-iSvTu1uPJb8X5yp3EQ">Wendover Productions</a></li>
+<li><a href="https://www.youtube.com/channel/UCL8w_A8p8P1HWI3k6PR5Z6w">Two Cents</a></li>
+<li><a href="https://www.youtube.com/channel/UCqBrZisk79ExL7MN96bEJxA">أيمن العتوم</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-contv" class="outline-2">
+<h2 id="contv">Controversy</h2>
+<div class="outline-text-2" id="text-contv">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@KaneB">Kane B</a></li>
+<li><a href="https://www.youtube.com/@williambarylo">Dr William Barylo</a></li>
+<li><a href="https://www.youtube.com/@ManufacturingIntellect">Manufacturing Intellect</a></li>
+<li><a href="https://www.youtube.com/@BadEmpanada/videos">BadEmpanada </a></li>
+<li><a href="https://www.youtube.com/channel/UChzVhAwzGR7hV-4O8ZmBLHg">Glenn Greenwald</a></li>
+<li><a href="https://www.youtube.com/@BadMouseProductions">BadMouse </a></li>
+<li><a href="https://www.youtube.com/@FreeWill-library">Free Will</a></li>
+<li><a href="https://www.youtube.com/@LukeSmithxyz">Luke Smith</a></li>
+<li><a href="https://www.youtube.com/channel/UCIBYr1IVf54Ho5fRV2s62QA">Alternative Policy Solution</a></li>
+<li><a href="https://www.youtube.com/@Marxism_Today">Marxism Today</a></li>
+<li><a href="https://www.youtube.com/@PhilosophyInsights">PhilosophyInsights</a></li>
+<li><a href="https://www.youtube.com/@SecondThought">Second Thought</a></li>
+<li><a href="https://www.youtube.com/@SpookyScarySocialist">Spooky Scary Socialist</a></li>
+<li><a href="https://www.youtube.com/@TheElectronicIntifada">The Electronic Intifada</a></li>
+<li><a href="https://www.youtube.com/@TheGravelInstitute">The Gravel Institute</a></li>
+<li><a href="https://www.youtube.com/@TheLemonMasterYT">The Lemon Master</a></li>
+<li><a href="https://www.youtube.com/@ThePersianMonarchist">Persian History</a></li>
+<li><a href="https://www.youtube.com/@TovarishchEndymion">Tovarishch Endymion</a></li>
+<li><a href="https://www.youtube.com/@Viki1999">Viki1999</a></li>
+<li><a href="https://www.youtube.com/@YUGOPNIK">YUGOPNIK</a></li>
+<li><a href="https://www.youtube.com/@YaBoiHakim">Hakim</a></li>
+<li><a href="https://www.youtube.com/@abumiz">Palestine Diary</a></li>
+<li><a href="https://www.youtube.com/@ahmedmawlana3361">Ahmed Mawlana </a></li>
+<li><a href="https://www.youtube.com/@almayadeendoc">AlMayadeen Documentaries</a></li>
+<li><a href="https://www.youtube.com/@apartheidadventures8274">Apartheid Adventures </a></li>
+<li><a href="https://www.youtube.com/@berkleycenter">Berkley Center </a></li>
+<li><a href="https://www.youtube.com/channel/UC9dRb4fbJQIbQ3KHJZF_z0g">Let&rsquo;s Talk Religion</a></li>
+<li><a href="https://www.youtube.com/@campaignforpeacedisarmamen8212">Campaign for Peace, Disarmament &amp; Common Security </a></li>
+<li><a href="https://www.youtube.com/@chihabelkhachab3670">Chihab El Khachab</a></li>
+<li><a href="https://www.youtube.com/@chomskysphilosophy">Chomsky&rsquo;s Philosophy</a></li>
+<li><a href="https://www.youtube.com/@edukitchen">EduKitchen</a></li>
+<li><a href="https://www.youtube.com/@gottmituns650">Gott Mit Uns</a></li>
+<li><a href="https://www.youtube.com/@pushroi">Push ROI</a></li>
+<li><a href="https://www.youtube.com/@thefinnishbolshevik2404">TheFinnishBolshevik</a></li>
+<li><a href="https://www.youtube.com/@withhafezalmirazi-8912">From Washington with Hafez Al Mirazi</a></li>
+<li><a href="https://www.youtube.com/@user-tq7sd2mv1s">سالب تمنتاشر</a></li>
+<li><a href="https://www.youtube.com/@user-wl6eh2yx7f">دائرة سليمان الحلبي</a></li>
+<li><a href="https://www.youtube.com/@AbdulwahabAA">Abdelwahab Arafa</a></li>
+<li><a href="https://www.youtube.com/@AlaaAlAswanyWriter">Alaa Al Aswany </a></li>
+<li><a href="https://www.youtube.com/feeds/videos.xml?channel_id=UCtx9oIT_eWp6jIkoULS-ZdQ">الشبكة العربية للأبحاث والنشر</a></li>
+<li><a href="https://www.youtube.com/@AJAmidan">Midan</a></li>
+<li><a href="https://www.youtube.com/@DrAzmiBishara">عزمي بشارة Azmi Bishara</a></li>
+<li><a href="https://www.youtube.com/@ArabCenter">المركز العربي Arab Center</a></li>
+<li><a href="https://www.youtube.com/@mamdouhhamzaofficial335">القناة الرسمية للدكتور ممدوح حمزة  </a></li>
+<li><a href="https://www.youtube.com/@alaabayoumi">علاء بيومي</a></li>
+<li><a href="https://www.youtube.com/@Belalfadl">Belal Fadl بلال فضل </a></li>
+<li><a href="https://www.youtube.com/channel/UCP-PfkMcOKriSxFMH7pTxfA">محمد إلهامي </a></li>
+<li><a href="https://www.youtube.com/channel/UCJJl3hyuWwEw0EtYfzy0g5A">Workplace Democracy</a></li>
+<li><a href="https://www.youtube.com/channel/UCAIOanHUq4tkfNon-e2VEPw">TS/AL COLLECTIVE </a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-pd" class="outline-2">
+<h2 id="pd">Podcasts</h2>
+<div class="outline-text-2" id="text-pd">
+</div>
+<div id="outline-container-hst" class="outline-3">
+<h3 id="hst">Science and History</h3>
+<div class="outline-text-3" id="text-hst">
+<ul class="org-ul">
+<li><a href="https://rss.art19.com/sean-carrolls-mindscape">Sean Carroll&rsquo;s Mindscape</a></li>
+<li><a href="https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/d2c4e775-99ce-4c17-b04c-ac380133d68c/2c6993d0-eac8-4252-8c4e-ac380133d69a/podcast.rss">Hidden Brain</a></li>
+<li><a href="https://notrelated.xyz/rss">Not Related! A Big-Braned Podcast</a></li>
+<li><a href="https://feed.podbean.com/hopwag2/feed.xml">History of Indian and Africana Philosophy</a></li>
+<li><a href="https://feed.podbean.com/hopwag/feed.xml">History of Philosophy Without Any Gaps</a></li>
+<li><a href="https://podcasts.files.bbci.co.uk/b006qk11.rss">Moral Maze</a></li>
+<li><a href="https://rss.acast.com/history-of-ideas">Talking Politics: HISTORY OF IDEAS</a></li>
+<li><a href="http://feeds.feedburner.com/dancarlin/history?format=xml">Dan Carlin&rsquo;s Hardcore History</a></li>
+<li><a href="https://feeds.buzzsprout.com/1129142.rss">يد خفية</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-othtt" class="outline-3">
+<h3 id="othtt">Other</h3>
+<div class="outline-text-3" id="text-othtt">
+<ul class="org-ul">
+<li><a href="https://www.benbenandblue.com/episodes?format=rss">Ben, Ben and Blue Ben</a></li>
+<li><a href="https://fair.org/feed/podcast">CounterSpin</a></li>
+<li><a href="https://feeds.megaphone.fm/darknetdiaries">Darknet Diaries</a></li>
+<li><a href="http://feeds.feedburner.com/TheLastPodcastOnTheLeft?format=xml">Last Podcast On The Left</a></li>
+<li><a href="https://lexfridman.com/feed/podcast/">Lex Fridman Podcast</a></li>
+<li><a href="https://feeds.megaphone.fm/pod-save-the-world">Pod Save the World</a></li>
+<li><a href="https://feeds.megaphone.fm/replyall">Reply All</a></li>
+<li><a href="https://feeds.npr.org/510333/podcast.xml">Throughline</a></li>
+<li><a href="https://omny.fm/shows/baadams/playlists/podcast.rss">بعد أمس</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-07-25 Fri 00:00.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

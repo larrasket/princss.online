@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Raw Definition of Capitalism</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">A Raw Definition of Capitalism</h1>
+</header><div class="tag" id="org15198e1">
+<p>
+This section was labeled under, or is related to Economics and Capitalism
+</p>
+
+</div>
+
+<p>
+I have been reading<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">E. K. Hunt and Mark Lautzenheiser, <i>History of Economic Thought: A Critical Perspective</i>, 3rd ed. (M.E. Sharpe, 2011), <a href="https://libgen.li/file.php?md5=188a57ff70f7f07f017ce5229b33a5ee">https://libgen.li/file.php?md5=188a57ff70f7f07f017ce5229b33a5ee</a>.</span> recently, which contains a very nice, raw, critical, philosophical definition of capitalism; it correlates the existence of capitalism to consumerism, which I have not seen a lot in multiple trails to define capitalism (my old post <a href="commodity.html#4fb240m099k0">The Age of Commodity</a> might be related here). The definition from chapter no. 1:
+</p>
+
+<p>
+It is, of course, simplistic to say that attempts to understand capitalism began with Adam Smith. Capitalism as the dominant social, political, and economic system, first of western Europe and later of much of the world, emerged very slowly over a period of several centuries . As it emerged people sought to understand it.
+</p>
+
+<p>
+To survey the attempts to understand capitalism, it is necessary first to define it and then to review briefly the historical highlights of its emergence. It must be stated at the outset that there is no general agreement among economists or economic historians as to what the essential features of capitalism are. In fact, some economists do not believe that it is fruitful to define distinctly different economic systems at all ; they believe in a historical continuity in which the same general principles suffice to understand all economic arrangements.  Most economists would agree, however, that capitalism is an economic system that functions very differently from previous economic systems and from contemporary noncapitalist systems. This book is based on a methodological approach that defines economic systems according to the mode of production on which the system is based. The mode of production is, in turn, defined by the forces of production and the social relations of production.
+</p>
+
+<p>
+The forces of production constitute what would commonly be called the productive technology of a society. These consist of the current state of productive or technical knowledge, skills, organizational techniques, and so forth, as well as the tools, implements, machines, and buildings involved in production.  Within any given set of forces of production there are certain necessary costs that must be met in order to insure the system&rsquo;s continued existence. Some new resources, or raw materials, must be continuously extracted from the natural environment. Machinery, tools, and other implements of production wear out with use and must be replaced. Most important, the human beings who expend the effort necessary to secure raw materials and to transform these raw materials into finished products must have a minimum level of food, clothing, shelter, and other necessities to sustain social life.
+</p>
+
+<p>
+Modes of production that have not satisfied these minimum requirements of continued production have vanished. Many historical modes of production successfully met these minimum requirements for a period of time and then, due to some change in circumstances, were unable to continue doing so, and, consequently, became extinct. Most modes of production that have continued to exist for very long periods of time have, in fact, produced enough to meet not only these necessary costs but also an excess, or social surplus, beyond these necessary costs . A social surplus is defined as that part of a society&rsquo;s material production that is left over after the necessary material costs of production have been deducted.
+</p>
+
+<p>
+The historical development of the forces of production has resulted in a continuously increasing capacity for societies to produce larger social surpluses.  In this historical evolution, societies have generally divided into two separate groups. The vast majority of people in every society has toiled to produce the output necessary to sustain and perpetuate the mode of production as well as the social surplus, while a small minority has appropriated and controlled it. In this book, social classes are distinguished accordingly ; the social relations of production are defined as the relationships between these two classes. A mode of production, then, is the social totality of the technology of production (the forces of production) and the social arrangements by which one class uses these forces of production to produce all output including the surplus and another class appropriates the surplus (the social relations of production).
+</p>
+
+<p>
+Within the context of this general set of definitions, we can define capitalism, the particular mode of production with which the thinkers surveyed in this book have been concerned. Capitalism is characterized by four sets of institutional and behavioral arrangements : market-oriented commodity production; private ownership of the means of production; a large segment of the population that cannot exist unless it sells its labor power in the market; and individualistic, acquisitive, maximizing behavior by most individuals within the economic system. Each of these features will be discussed briefly.
+</p>
+
+<p>
+In capitalism, the products of human labor are valued for two distinct reasons. First, products have particular physical characteristics by virtue of which they are usable and satisfy human needs. When a commodity is valued for its use in satisfying our needs, it is said to have use value. All products of human labor in all societies have use value. In capitalism, products are also valued because they can be sold for money in the market. This money is desired because it can be exchanged for products that have a desired use value. Insofar as products are valued because they can be exchanged for money, they are said to have exchange value. Products of human labor have exchange value only in modes of production characterized by commodity production. A society must have a well-developed market in which products can be freely bought or sold for money in order for commodity production to exist. Commodity production exists when products are created by producers who have no immediate personal concern for the use value of the product but are interested only in its exchange value. Thus commodity production is not a direct means of satisfying needs. Rather, it is a means of acquiring money by exchanging the product for money, which, in turn, may be used to acquire products desired for their use value. Under such conditions, the products of human labor are commodities, and the society is described as a commodity-producing society.
+</p>
+
+<p>
+Under commodity production, a person&rsquo;s productive activity has no direct connection to that person&rsquo;s consumption; exchange and the market must mediate the two. Furthermore, a person has no direct connection to the people who produce the commodities he or she consumes. This social relationship is also mediated by the market. Commodity production implies a high degree of productive specialization, in which each isolated producer creates only one or a few commodities and then must depend on other individuals, with whom he or she has no direct personal relations, to buy the commodities on the market.  Once the person has exchanged the commodity for money, that person again depends on people with whom he or she has no direct personal relationship to supply on the market the commodities he or she must purchase in order to satisfy personal needs.
+</p>
+
+<p>
+This type of economy is one in which extremely complex economic interrelationships and dependencies exist that do not involve direct personal interaction and association. The individual interacts only with the impersonal social institution of the market, in which the individual exchanges commodities for money and money for commodities . Consequently, what is in reality a set of complex social and economic relations among people appears to each individual to be merely so many impersonal relations among things namely, commodities . Each individual depends on the impersonal forces of the market-of buying and selling or demand and supply-for the satisfaction of needs.
+</p>
+
+
+<p>
+The second defining feature of capitalism is private ownership of the means of production. This means that society grants to private persons the right to dictate how the raw materials, tools, machinery, and buildings necessary for production can be used. Such a right necessarily implies that other individuals are excluded from having any say about how these means of production can be used. Early defenses of private property spoke in terms of each individual producer owning and therefore controlling the means of individual production. But very early in the evolution of capitalism things developed differently. In fact, the third defining feature of capitalism is that most producers do not own the means necessary to carry on their productive activity. Ownership came to be concentrated in the hands of a small segment of society-the capitalists .  An owner-capitalist needed to play no direct role in the actual process of production in order to control it; ownership itself granted control. And it was this ownership that permitted the capitalist to appropriate the social surplus. Thus, ownership of the means of production is the feature of capitalism that bestows the power on the capitalist class by which it controls the social surplus, and, thereby, establishes itself as the dominant social class.
+</p>
+
+
+<p>
+The fourth and final defining feature of capitalism is that most people are motivated by individualistic, acquisitive, maximizing behavior. This is necessary for the successful functioning of capitalism. First, in order to assure an adequate supply of labor and to facilitate the strict control of workers, it is necessary that working people produce commodities whose value is far in excess of the value of the commodities that they consume. In the earliest period of capitalism, workers were paid such low wages that they and their families were kept on the verge of extreme material deprivation and insecurity. The only apparent way of decreasing this deprivation and insecurity was to work longer and harder in order to obtain a more adequate wage and to avoid being forced to join the large army of unemployed workers, which has been an ever-present social phenomenon in the capitalist system.
+</p>
+
+
+<p>
+As capitalism evolved, the productivity of workers increased. They began to organize themselves collectively into unions and workingmen&rsquo;s associations to fight for higher wages. By the late nineteenth and early twentieth centuries, after many hard battles and innumerable setbacks, these struggles began to have an impact. Since that time, the purchasing power of the wages of working people has been slowly and consistently increasing . In place of widespread physical deprivation, capitalism has increasingly had to rely on new types of motivation to keep working people producing the social surplus. A new social ethos, sometimes called consumerism, has become dominant, and is characterized by the belief that more income alone always means more happiness.
+</p>
+
+<p>
+The social mores of capitalism have induced the view that virtually every subjectively felt need or unhappiness can be eliminated if one can buy more commodities. The competitive and economically insecure world within which workers function generally creates subjective feelings of anxiety, loneliness, and alienation. The cause of these feelings has been perceived by most working people as their inability to buy enough commodities to make them happy.  But as workers have received higher w ages and bought more commodities, the general unhappiness and anxiety have continued. The problem, they have tended to conclude, is that the increase in wages was insufficient. Misperceiving the root cause of their condition, they have frequently gotten aboard an Alice in Wonderland treadmill, where the more one gets the more needy one feels, the faster one runs the more inadequate one&rsquo;s pace appears to be, the harder one works the greater appears to be the need for even harder work in the future.
+</p>
+
+<p>
+Secondly, capitalists have also been driven to acquisitive, combative behavior. The most immediate reason for this is the fact that capitalism has always been characterized by a competitive struggle among capitalists to secure larger shares of the social surplus. In this endless struggle the power of any given capitalist depends on the amount of capital that he or she controls.  If a capitalist&rsquo;s competitors acquire capital-and hence size and economic strength-more rapidly than he or she does, then it becomes highly likely that he or she will face extinction. So continued existence as a capitalist depends on the ability to accumulate capital at least as rapidly as competitors. Hence, capitalism has always been characterized by the frantic effort of capitalists to make more profits and to convert these profits into more capital.
+</p>
+
+<p>
+Consumerism among capitalists has also been important for the successful functioning of capitalism. In the process of production, after the workers have produced surplus value, the capitalists own this surplus value in the form of the commodities that the workers have produced. In order for this surplus value to be converted into monetary profit, these commodities must be sold on the market. The workers can usually be counted on to spend all of their wages on commodities, but their wages can purchase only some of the commodities (or else there would be no social surplus). Capitalists will purchase many of the commodities as investments to add to their accumulation of capital. But these two sources of demand have never been adequate to generate enough spending for the capitalists as an entire class to sell all of their commodities. Therefore, a third source of demand, ever-increasing consumption expenditures by capitalists, has also been necessary to assure adequate money demand to enable capitalists to sell all of their commodities.
+</p>
+
+<p>
+When such demand has not been forthcoming, capitalism has experienced depressions in which commodities cannot be sold, workers are laid off, profits decline, and a general economic crisis ensues. Throughout its history, capitalism has suffered from recurring crises of this kind. A major concern of most of the economic thinkers discussed in this book has been to understand the nature and causes of these crises and to ascertain whether remedies can be found to eliminate or at least to alleviate the crises.
+</p>
+
+<p>
+Noam Chomsky also has a nice video on the nature of consumerism: <a href="https://youtu.be/Mg50wCe-Z7U">https://youtu.be/Mg50wCe-Z7U</a>
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">E. K. Hunt and Mark Lautzenheiser, <i>History of Economic Thought: A Critical Perspective</i>, 3rd ed. (M.E. Sharpe, 2011), <a href="https://libgen.li/file.php?md5=188a57ff70f7f07f017ce5229b33a5ee">https://libgen.li/file.php?md5=188a57ff70f7f07f017ce5229b33a5ee</a>.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-06-20 Fri 22:30. Last build date: 2025-11-02 Sun 22:16.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

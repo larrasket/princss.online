@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Do they deserve help?</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Do they deserve help?</h1>
+</header><div class="propert" id="orgc8e67b6">
+<p>
+Part of a series on <a href="../p/witbd.html#x0egwn81crk0">What is it to be done?</a>
+</p>
+
+</div>
+
+
+<p>
+The second class of unfortunates, whom I hoped afterwards to be able to help, were women of the town. These women were very numerous in the Rzhanoff Houses; and they were of every kind, from young girls still bearing some likeness to women, to old and fearful-looking creatures without a vestige of humanity. The hope of helping these women, whom I had not at first in view, was aroused by the following circumstances.
+</p>
+
+<p>
+When we had finished half of our tour, we had already acquired a somewhat mechanical method. On entering a new lodging we at once asked for the landlord. One of us sat down, clearing a space to write; and the other went from one to another, questioning each man and woman in the room, and reporting the information obtained to him who was writing.
+</p>
+
+<p>
+On our entering one of the basement lodgings, the student went to look for the landlord; and I began to question all who were in the place. This place was divided thus: In the middle of the room, which was four yards square, there stood a stove. From the stove four partitions or screens radiated, making a similar number of small compartments. In the first of these, which had two doors in it opposite each other, and four pallets, were an old man and a woman. Next to this was a rather long but narrow room, in which was the landlord, a young, pale, good-looking man dressed in a gray woollen coat. To the left of the first division was a third small room where a man was sleeping, seemingly tipsy, and a woman in a pink dressing-gown. The fourth compartment was behind a partition, access to it being through the landlord&rsquo;s room.
+</p>
+
+<p>
+The student entered the latter, while I remained in the first, questioning the old man and the woman. The former had been a compositor, but now had no means of livelihood whatever.
+</p>
+
+<p>
+The woman was a cook&rsquo;s wife.
+</p>
+
+<p>
+I went into the third compartment, and asked the woman in the dressing-gown about the man who was asleep.
+</p>
+
+<p>
+She answered that he was a visitor.
+</p>
+
+<p>
+I asked her who she was.
+</p>
+
+<p>
+She replied that she was a peasant girl from the county of Moscow.
+</p>
+
+<p>
+“What is your occupation?” She laughed, and made no answer.
+</p>
+
+<p>
+“What do you do for your living?” I repeated, thinking she had not understood the question.
+</p>
+
+<p>
+“I sit in the inn,” she said.
+</p>
+
+<p>
+I did not understand her, and asked again,—
+</p>
+
+<p>
+“What are your means of living?”
+</p>
+
+<p>
+She gave me no answer, but continued to giggle. In the fourth room, where we had not yet been, I heard the voices of women also giggling.
+</p>
+
+<p>
+The landlord came out of his room, and approached us. He had evidently heard my questions and the woman&rsquo;s answers. He glanced sternly at her, and, turning to me, said, “She is a prostitute”; and it was evident that he was pleased that he knew this word,—which is the one used in official circles,—and at having pronounced it correctly. And having said this with a respectful smile of satisfaction towards me, he turned to the woman. As he did so, the expression of his face changed. In a peculiarly contemptuous manner, and with rapid utterance as one would speak to a dog, he said, without looking at her, “Don&rsquo;t be a fool! instead of saying you sit in the inn, speak plainly, and say you are a prostitute.—She does not even yet know her proper name,” he said, turning to me.
+</p>
+
+<p>
+This manner of speaking shocked me.
+</p>
+
+<p>
+“It is not for us to shame her,” I said. “If we were all living according to God&rsquo;s commandment, there would be no such persons.”
+</p>
+
+<p>
+“There are such doings,” said the landlord, with an artificial smile.
+</p>
+
+<p>
+“Therefore we must pity them, and not reproach them. Is it their fault?”
+</p>
+
+<p>
+I do not remember exactly what I said. I remember only that I was disgusted by the disdainful tone of this young landlord, in a lodging filled with females whom he termed prostitutes; and I pitied the woman, and expressed both feelings.
+</p>
+
+<p>
+No sooner had I said this, than I heard from the small compartment where the giggling had been, the noise of creaking bed-boards; and over the partition, which did not reach to the ceiling, appeared the dishevelled curly head of a female with small swollen eyes, and a shining red face; a second, and then a third, head followed. They were evidently standing on their beds; and all three were stretching their necks and holding their breath, and looking silently at me with strained attention.
+</p>
+
+<p>
+A painful silence followed.
+</p>
+
+<p>
+The student, who had been smiling before this happened, now became grave; the landlord became confused, and cast down his eyes; and the women continued to look at me in expectation.
+</p>
+
+<p>
+I felt more disconcerted than all the rest. I had certainly not expected that a casual word would produce such an effect. It was like the field of battle covered with dead bones seen by the prophet Ezekiel, on which, trembling from contact with the spirit, the dead bones began to move. I had casually uttered a word of love and pity, which produced upon all such an effect that it seemed as if they had been only waiting for it, to cease to be corpses, and to become alive again.
+</p>
+
+<p>
+They continued to look at me, as if wondering what would come next, as if waiting for me to say those words and do those acts by which these dry bones would begin to come together,—be covered with flesh and receive life.
+</p>
+
+<p>
+But I felt, alas! that I had no such words or deeds to give, or to continue as I had begun. In the depth of my soul I felt that I had told a lie, that I myself was like them, that I had nothing more to say; and I began to write down on the card the names and the occupations of all the lodgers there.
+</p>
+
+<p>
+This occurrence led me into a new kind of error. I began to think that these unhappy creatures also could be helped. This, in my self deception, it seemed to me would be very easily done. I said to myself, “Now we shall put down the names of these women too; and afterwards, when we (though it never occurred to me to ask who were the we) have written everything down, we can occupy ourselves with their affairs.” I imagined that we, the very persons who, during many generations, have been leading such women into such a condition, and still continue to do so, could one fine morning wake up and remedy it all. And yet, if I could have recollected my conversation with the lost woman who was nursing the baby for the sick mother, I should have understood the folly of such an idea.
+</p>
+
+<p>
+When we first saw this woman nursing the child, we thought that it was hers; but upon our asking her what she was, she answered us plainly that she was a wench. She did not say “prostitute.” It was left for the proprietor of the lodgings to make use of that terrible word.
+</p>
+
+<p>
+The supposition that she had a child gave me the idea of helping her out of her present position.
+</p>
+
+<p>
+“Is this child yours?” I asked.
+</p>
+
+<p>
+“No: it is that woman&rsquo;s there.”
+</p>
+
+<p>
+“Why do you nurse him?”
+</p>
+
+<p>
+“She asked me to. She is dying.”
+</p>
+
+<p>
+Though my surmise turned out to be wrong, I continued to speak with her in the same spirit. I began to question her as to who she was, and how she came to be in such a position. She told me her story willingly, and very plainly. She belonged to the artisan class of Moscow, the daughter of a factory workman. She was left an orphan, and adopted by her aunt, from whose house she began to visit the inns. The aunt was now dead.
+</p>
+
+<p>
+When I asked her whether she wished to change her course of life, my question did not even interest her. How can a supposition about something quite impossible awaken an interest in any one? She smiled and said,—
+</p>
+
+<p>
+“Who would take me with a yellow ticket?”[3]
+</p>
+
+<p>
+“But,” said I, “if it were possible to find you a situation as a cook or something else?” I said this because she looked like a strong woman, with a kind, dull, round face, not unlike many cooks I had seen.
+</p>
+
+<p>
+Evidently my words did not please her. She repeated, “Cook! but I do not understand how to bake bread.”
+</p>
+
+<p>
+She spoke jestingly; but, by the expression of her face, I saw that she was unwilling; that she even considered the position and rank of a cook beneath her.
+</p>
+
+<p>
+This woman, who, in the most simple manner, like the widow in the gospel, had sacrificed all that she had for a sick person, at the same time, like other women of the same profession, considered the position of a workman or workwoman low and despicable. She had been educated to live without work,—a life which all her friends considered quite natural. This was her misfortune. And by this she came into her present position, and is kept in it. This brought her to the inns. Who of us men and women will cure her of this false view of life? Are there among us any men convinced that a laborious life is more respectable than an idle one, and who are living according to this conviction, and who make this the test of their esteem and respect?
+</p>
+
+<p>
+If I had thought about it I should have understood that neither I nor anybody else I know, was able to cure a person of this disease.
+</p>
+
+<p>
+I should have understood that those wondering and awakened faces that looked over the partition expressed merely astonishment at the pity shown to them, but no wish to reform their lives. They did not see the immorality. They knew that they were despised and condemned, but the reason for this they could not understand. They had lived in this manner from their infancy among women like themselves, who, they know very well, have always existed, do exist, and are necessary to society, that there are officials deputed by government to see that they conform to regulations.
+</p>
+
+<p>
+Besides, they know that they have power over men, and subdue them, and often influence them more than any other women. They see that their position in society, notwithstanding the fact that they are always blamed, is recognised by men as well as by women and by the government; and therefore they cannot even understand of what they have to repent, and wherein they should reform.
+</p>
+
+<p>
+During one of our tours the student told me that in one of the lodgings there was a woman who sends out her daughter, thirteen years old, to walk the streets. Wishing to save this little girl I went on purpose to their lodging.
+</p>
+
+<p>
+Mother and daughter were living in great poverty. The mother, a small, dark-complexioned prostitute of forty years of age, was not simply ugly, but disagreeably ugly. The daughter was also bad-looking. To all my indirect questions about their mode of life, the mother replied curtly, with a look of suspicion and animosity, apparently feeling that I was an enemy with bad intentions: the daughter said nothing without looking first at the mother, in whom she evidently had entire confidence.
+</p>
+
+<p>
+They did not awaken pity in my heart, but rather disgust. Still I decided that it was necessary to save the daughter, to awaken an interest in ladies who might sympathize with the miserable condition of these women and might so be brought here.
+</p>
+
+<p>
+Yet if I had thought about the antecedents of the mother, how she had given birth to her daughter, how she had fed and brought her up, certainly without any outside help, and with great sacrifices to herself; if I had thought of the view of life which had formed itself in her mind,—I should have understood, that, in the mother&rsquo;s conduct, there was nothing at all bad or immoral, seeing she had been doing for her daughter all she could; i.e., what she considered best for herself.
+</p>
+
+<p>
+It was possible to take this girl away from her mother by force; but to convince her that she was doing wrong in selling her daughter was not possible. It would first be necessary to save this woman—this mother—from a condition of life approved by every one, and according to which a woman may live without marrying and without working, serving exclusively as a gratification to the passions. If I had thought about this, I should have understood that the majority of those ladies whom I wished to send here for saving this girl were not only themselves avoiding family duties, and leading idle and sensuous lives, but were consciously educating their daughters for this very same mode of existence. One mother leads her daughter to the inn, and another to court and to balls. Both the views of the world held by both mothers are the same; viz., that a woman must gratify the passions of men, and for that she must be fed, dressed, and taken care of.
+</p>
+
+<p>
+How, then, are our ladies to reform this woman and her daughter?
+</p>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-11-15 Sat 22:48. Last build date: 2025-11-15 Sat 22:48.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

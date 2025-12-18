@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programming</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Programming</h1>
+</header><head>
+<style>
+
+h1:not(#preamble h1):before {
+    content: '■';
+    font-size: 0.8em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    color: #ff0101;
+}
+
+
+h1 b, h2 b, h3 b, h4 b {
+background: rgba(38, 38, 38, 0.64);
+padding: 0.1em 0.7em;
+color: white;
+font-size: 0.6em;
+}
+
+
+
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8 {
+  font-style: normal !important;
+  font-family: Arial !important;
+}
+
+
+h3 {
+    margin-block-end: 0;
+}
+
+h2,h3,h4,h5,h6,h7,h8 {
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.outline-2  {
+    display: flex;
+    align-items: baseline;
+}
+
+
+.outline-3  {
+    display: flex;
+    align-items: baseline;
+}
+
+@media screen and (max-width: 1089px) {
+
+.outline-2 {
+    display: grid;
+    grid-template-columns: minmax(0, 3.6fr) minmax(0, 1fr);
+    align-items: baseline;
+}
+
+
+.outline-3 {
+    display: grid;
+    grid-template-columns: minmax(0, 3.6fr) minmax(0, 1fr);
+    align-items: baseline;
+}
+
+}
+
+</style>
+</head>
+<hr>
+<div id="outline-container-orgf6ea36f" class="outline-2">
+<h2 id="orgf6ea36f"><a href="../p/renamings.html#1ix262b1fsk0">Re: Programmers and software developers lost the plot on naming their tools</a></h2>
+<div class="outline-text-2" id="text-orgf6ea36f">
+<div class="smth" id="orgbd9f0ce">
+<p>
+Mon 15 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org745948b" class="outline-2">
+<h2 id="org745948b"><a href="../p/namings.html#v192vmb1ask0">Programmers and software developers lost the plot on naming their tools</a></h2>
+<div class="outline-text-2" id="text-org745948b">
+<div class="smth" id="orgdeb632f">
+<p>
+Thu 11 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org6d1ca05" class="outline-2">
+<h2 id="org6d1ca05"><a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a></h2>
+<div class="outline-text-2" id="text-org6d1ca05">
+<div class="smth" id="orge4b6daa">
+<p>
+Sat 06 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgda26b70" class="outline-2">
+<h2 id="orgda26b70"><a href="../cs/mongo.html#99n69ny03rk0">Some notes from Mongo</a></h2>
+<div class="outline-text-2" id="text-orgda26b70">
+<div class="smth" id="orgda43dd2">
+<p>
+Sat 08 Nov 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgcdc705f" class="outline-2">
+<h2 id="orgcdc705f"><a href="../p/cc.html#056eos30npk0">Conventional Commits considered harmful</a></h2>
+<div class="outline-text-2" id="text-orgcdc705f">
+<div class="smth" id="orgec5aa53">
+<p>
+Tue 30 Sep 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org10d862e" class="outline-2">
+<h2 id="org10d862e"><a href="../p/ossnfoss.html#lkni0t70xmk0">OSS is not free</a></h2>
+<div class="outline-text-2" id="text-org10d862e">
+<div class="smth" id="org1af4b72">
+<p>
+Thu 17 Jul 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf6b89b8" class="outline-2">
+<h2 id="orgf6b89b8"><a href="../d/git.html#pkdgxxi0cmk0">A useful Git &rsquo;trick&rsquo;</a></h2>
+<div class="outline-text-2" id="text-orgf6b89b8">
+<div class="smth" id="org15d41f5">
+<p>
+Wed 02 Jul 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org3eca955" class="outline-2">
+<h2 id="org3eca955"><a href="../d/apple.html#p4pacx81lik0">Why Apple makes better software</a></h2>
+<div class="outline-text-2" id="text-org3eca955">
+<div class="smth" id="org28ab70d">
+<p>
+Mon 17 Mar 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org4d7522a" class="outline-2">
+<h2 id="org4d7522a"><a href="../p/kotebee.html#gffg0lh0bek0">Extract https://www.kotobee.com/</a></h2>
+<div class="outline-text-2" id="text-org4d7522a">
+<div class="smth" id="org848285a">
+<p>
+Sun 24 Nov 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org6d173b0" class="outline-2">
+<h2 id="org6d173b0"><a href="../d/languages.html#jb9efrq00xj0">Thoughts on langauges</a></h2>
+<div class="outline-text-2" id="text-org6d173b0">
+<div class="smth" id="org85dfbaf">
+<p>
+Thu 10 Aug 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org19d4013" class="outline-2">
+<h2 id="org19d4013"><a href="../cs/lisp.html#vlm4vsn02wj0">Lisp Programming Language</a></h2>
+<div class="outline-text-2" id="text-org19d4013">
+<div class="smth" id="org87c4395">
+<p>
+Thu 16 Feb 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org969f9fa" class="outline-2">
+<h2 id="org969f9fa"><a href="../cs/go.html#lvkhzyo02wj0">The Go Programming Language</a></h2>
+<div class="outline-text-2" id="text-org969f9fa">
+<div class="smth" id="org1874fc9">
+<p>
+Sun 09 Jan 2022
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7cf53b1" class="outline-2">
+<h2 id="org7cf53b1">Short Posts</h2>
+</div>
+
+<div id="outline-container-org558bb35" class="outline-3">
+<h3 id="org558bb35"><a href="../stack.html#w462wfd17sk0">The very sad situation of Tony Marston</a></h3>
+<div class="outline-text-3" id="text-org558bb35">
+<div class="smth" id="orgfae5f89">
+<p>
+Tue 09 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org5375bee" class="outline-3">
+<h3 id="org5375bee"><a href="../stack.html#iwkhtjw01sk0">Classical Microsoft</a></h3>
+<div class="outline-text-3" id="text-org5375bee">
+<div class="smth" id="org011fbcd">
+<p>
+Thu 04 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org13c20e6" class="outline-3">
+<h3 id="org13c20e6"><a href="../stack.html#s6728qd0yrk0">The Jargon File</a></h3>
+<div class="outline-text-3" id="text-org13c20e6">
+<div class="smth" id="org399fff5">
+<p>
+Tue 02 Dec 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org49d5fc7" class="outline-3">
+<h3 id="org49d5fc7"><a href="../stack.html#rh9fqrp0rrk0">#14369 · ocaml/ocaml</a></h3>
+<div class="outline-text-3" id="text-org49d5fc7">
+<div class="smth" id="org0fac2d3">
+<p>
+Thu 27 Nov 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgff0b863" class="outline-3">
+<h3 id="orgff0b863"><a href="../stack.html#uymjit20jrk0">Safari was based on KDE</a></h3>
+<div class="outline-text-3" id="text-orgff0b863">
+<div class="smth" id="orge8b522b">
+<p>
+Thu 20 Nov 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org51f708b" class="outline-3">
+<h3 id="org51f708b"><a href="../stack.html#djflu081zqk0">Matt Holiday</a></h3>
+<div class="outline-text-3" id="text-org51f708b">
+<div class="smth" id="org2724607">
+<p>
+Thu 06 Nov 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf630c9b" class="outline-3">
+<h3 id="orgf630c9b"><a href="../stack.html#xh4gzud0uqk0">Designing inefficiency</a></h3>
+<div class="outline-text-3" id="text-orgf630c9b">
+<div class="smth" id="orgcf4944e">
+<p>
+Sat 01 Nov 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org9f5d376" class="outline-3">
+<h3 id="org9f5d376"><a href="../stack.html#zbcfboz0jqk0">Give me more build systems</a></h3>
+<div class="outline-text-3" id="text-org9f5d376">
+<div class="smth" id="orgd6680fc">
+<p>
+Fri 24 Oct 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org7cf2b4f" class="outline-3">
+<h3 id="org7cf2b4f"><a href="../stack.html#qow1lzo0aqk0">Some other notes on exception handling</a></h3>
+<div class="outline-text-3" id="text-org7cf2b4f">
+<div class="smth" id="org22b144e">
+<p>
+Fri 17 Oct 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgbca304c" class="outline-3">
+<h3 id="orgbca304c"><a href="../stack.html#byb2fy71zpk0">&ldquo;Clean Architecture&rdquo;</a></h3>
+<div class="outline-text-3" id="text-orgbca304c">
+<div class="smth" id="org2867555">
+<p>
+Thu 09 Oct 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org61501fc" class="outline-3">
+<h3 id="org61501fc"><a href="../stack.html#tpqa1lq04pk0">Note for Windows Programmers</a></h3>
+<div class="outline-text-3" id="text-org61501fc">
+<div class="smth" id="org8d4fc73">
+<p>
+Tue 16 Sep 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgce74216" class="outline-3">
+<h3 id="orgce74216"><a href="../stack.html#op50qae1ylk0">Supabase</a></h3>
+<div class="outline-text-3" id="text-orgce74216">
+<div class="smth" id="org6a34362">
+<p>
+Sat 21 Jun 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org98aecad" class="outline-3">
+<h3 id="org98aecad"><a href="../stack.html#jvne8ie10lk0">Floyd&rsquo;s tortoise and hare</a></h3>
+<div class="outline-text-3" id="text-org98aecad">
+<div class="smth" id="org0fcba5f">
+<p>
+Tue 27 May 2025
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orga3ad66e" class="outline-3">
+<h3 id="orga3ad66e"><a href="../sh/2024.html#06f35v80xck0">Fix: (org-ql-view.el) Adjust priority for agenda elements by anpandey</a></h3>
+<div class="outline-text-3" id="text-orga3ad66e">
+<div class="smth" id="org1688e5e">
+<p>
+Thu 17 Oct 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org6d995e6" class="outline-3">
+<h3 id="org6d995e6"><a href="../sh/2024.html#kuh0x3t0p9k0">I can&rsquo;t find a Lisp</a></h3>
+<div class="outline-text-3" id="text-org6d995e6">
+<div class="smth" id="org382393c">
+<p>
+Mon 22 Jul 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org58f2f6f" class="outline-3">
+<h3 id="org58f2f6f"><a href="../sh/2024.html#vbl22tf0z3k0">Another killer feature for Go</a></h3>
+<div class="outline-text-3" id="text-org58f2f6f">
+<div class="smth" id="orgb9221a4">
+<p>
+Fri 16 Feb 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgb4f4b16" class="outline-3">
+<h3 id="orgb4f4b16"><a href="../sh/2024.html#9rmjr9i0o3k0">Clojure has Go-like channels</a></h3>
+<div class="outline-text-3" id="text-orgb4f4b16">
+<div class="smth" id="org245a0e8">
+<p>
+Thu 08 Feb 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgd30a5b5" class="outline-3">
+<h3 id="orgd30a5b5"><a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a></h3>
+<div class="outline-text-3" id="text-orgd30a5b5">
+<div class="smth" id="org6f053d0">
+<p>
+Sun 04 Feb 2024
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org5bea0a4" class="outline-3">
+<h3 id="org5bea0a4"><a href="../sh/2023.html#bkuf5ac0fzj0">Reconsidering SBCL</a></h3>
+<div class="outline-text-3" id="text-org5bea0a4">
+<div class="smth" id="org9b670cc">
+<p>
+Sun 15 Oct 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org888f830" class="outline-3">
+<h3 id="org888f830"><a href="../sh/2023.html#bek89831uxj0">Stop naming your libraries.</a></h3>
+<div class="outline-text-3" id="text-org888f830">
+<div class="smth" id="orgf241e0e">
+<p>
+Sat 02 Sep 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org3ed8b23" class="outline-3">
+<h3 id="org3ed8b23"><a href="../sh/2023.html#vw1jrno02wj0">Navigating Computing Boundaries</a></h3>
+<div class="outline-text-3" id="text-org3ed8b23">
+<div class="smth" id="orgc8f3e3b">
+<p>
+Sat 15 Jul 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org5020d9d" class="outline-3">
+<h3 id="org5020d9d"><a href="../stack.html#x3cceno02wj0">TL;DRs</a></h3>
+<div class="outline-text-3" id="text-org5020d9d">
+<div class="smth" id="org5ab1b46">
+<p>
+Sat 15 Jul 2023
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orga52cfb2" class="outline-3">
+<h3 id="orga52cfb2"><a href="../sh/2023.html#zhti90o02wj0">What We Lost</a></h3>
+<div class="outline-text-3" id="text-orga52cfb2">
+<div class="smth" id="org6d89da3">
+<p>
+Sat 15 Jul 2023
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-12-06 Sat 18:46.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

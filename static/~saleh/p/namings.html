@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programmers and software developers lost the plot on naming their tools</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Programmers and software developers lost the plot on naming their tools</h1>
+</header><div class="BACKLINKS" id="orgb1eddc7">
+<p>
+This section was referenced in <a href="renamings.html#1ix262b1fsk0">Re: Programmers and software developers lost the plot on naming their tools</a>.
+</p>
+
+</div>
+
+<div class="tag" id="orgb2c805d">
+<p>
+This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
+</p>
+
+</div>
+
+<div class="PREVIEW" id="orgda64d41">
+<p>
+This post was discussed in <a href="https://news.ycombinator.com/item?id=46234806">HackerNews</a>, <a href="https://lobste.rs/s/qhairc/programmers_software_developers_lost">Lobsters</a>, and <a href="https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/">r/coding</a>. You can check also my <a href="renamings.html#1ix262b1fsk0">response to some comments</a>.
+</p>
+
+</div>
+
+<p>
+In Dec 2022 I watched Richard Stallman&rsquo;s talk on the EmacsConf, it was titled &ldquo;What I&rsquo;d like to see in Emacs&rdquo;. One of the interesting points Mr. Stallman pointed out in this talk was &ldquo;memorable names&rdquo;, &ldquo;I think every package that you [&#x2026;] should have a name that helps you remember what job it does. [&#x2026;] We&rsquo;ve had a tendency to give packages names for the sake of pure wordplay or lack of obvious meaning&rdquo;. That Stallman felt compelled to make this point in 2022 tells you everything about how far we&rsquo;ve fallen, even within the Emacs ecosystem (known for its descriptive naming conventions, dired for directory editor, eshell for Emacs shell).
+</p>
+
+<p>
+There&rsquo;s an odd tendency in modern software development; we&rsquo;ve collectively decided that naming things after random nouns, mythological creatures, or random favorite fictional characters is somehow acceptable professional practice. This would be career suicide in virtually any other technical field.
+</p>
+
+<p>
+I remembered Stallman&rsquo;s comment lately when I had some difficulties following my friend who was describing some situation in their infrastructure. She was saying something like that: &ldquo;We&rsquo;re using Viper for configuration management, which feeds into Cobra for the CLI, and then Melody handles our WebSocket connections, Casbin manages permissions, all through Asynq for our job queue.&rdquo;, perhaps only the last software in this statement was saying something about what the package/software actually does, I spent couple of moments trying to make sense of the names she mentioned, googled some of them, and really while I&rsquo;m doing that I remembered that I never had to do this when interacting with any other fields: the Golden Gate Bridge tells you it spans the Golden Gate strait. The Hoover Dam is a dam, named after the president who commissioned it, not &ldquo;Project Thunderfall&rdquo; or &ldquo;AquaHold.&rdquo; Steel I-beams are called I-beams because they&rsquo;re shaped like the letter I. Even when engineers get creative, there&rsquo;s logic: a butterfly valve actually looks like butterfly wings. You can tell how the name relates to what it actually defines, and how it can be memorable. If you wrote 100 CLIs, you will never counter with a <a href="https://github.com/spf13/cobra">cobra</a>.
+</p>
+
+<p>
+Same thing applies to other fields like chemical engineering, where people there maintain even stricter discipline. IUPAC nomenclature ensures that 2,2,4-trimethylpentane describes exactly one molecule. No chemist wakes up and decides to call it &ldquo;Steve&rdquo; because Steve is a funny name and they think it&rsquo;ll make their paper more approachable.
+</p>
+<div id="outline-container-org996282b" class="outline-2">
+<h2 id="org996282b">It was not always like that (I believe)</h2>
+<div class="outline-text-2" id="text-org996282b">
+<p>
+I read a lot into software history, and I can&rsquo;t really say that there was an era of fantastic naming (even very experienced engineers made <a href="https://en.wikipedia.org/wiki/Inferno_(operating_system)">some</a> <a href="https://en.wikipedia.org/wiki/Go_(programming_language)">very</a> <a href="https://en.wikipedia.org/wiki/Limbo_(programming_language)">silly</a> <a href="https://en.wikipedia.org/wiki/Sam_(text_editor)">naming</a>) but at least some current was trying to make some sense in the 80s; grep (global regular expression print), awk (Aho, Weinberger, Kernighan; the creators&rsquo; initials), sed (stream editor), cat (concatenate), diff (difference). Even when abbreviated, these names were either functional descriptions or systematic derivations. Nobody named the copy command &ldquo;Sparkle&rdquo; or the move command &ldquo;Whisper.&rdquo;
+</p>
+
+<p>
+Early programming languages followed similar logic: FORTRAN (Formula Translation), COBOL (Common Business-Oriented Language), BASIC (Beginner&rsquo;s All-purpose Symbolic Instruction Code), SQL (Structured Query Language), I believe Lisp stands for list processing. The pattern was clear: names conveyed purpose or origin. Somewhere around the 2010s, a memetic virus infected software engineering. Perhaps it started innocently, developers tired of boring corporate naming conventions wanted personality in their open-source projects? maybe. A few quirky names were charming. A database named after an animal? Sure, MongoDB (from &ldquo;humongous&rdquo;) at least has etymological connection to its purpose, even if &ldquo;Mongo&rdquo; became the shorthand.
+</p>
+
+<p>
+But we didn&rsquo;t stop there. We kept going. Now we&rsquo;re drowning in a zoo of meaningless appellations where the connection between name and function has been severed entirely. Probably pattern accelerated with the rise of GitHub and startup culture. Everyone wanted to be the next Google, a meaningless name that became iconic through market dominance. Google could afford to build brand recognition through billions in advertising and becoming a verb. Your MIT-licensed file parser with 45 GitHub stars cannot.
+</p>
+</div>
+</div>
+<div id="outline-container-org2ffb27c" class="outline-2">
+<h2 id="org2ffb27c">The cognitive tax</h2>
+<div class="outline-text-2" id="text-org2ffb27c">
+<p>
+Every obscure name is a transaction cost levied on every developer who encounters it. When you see &ldquo;libsodium,&rdquo; you must context-switch from problem-solving mode to detective mode: &ldquo;What does this do? Let me check the README. Ah, it&rsquo;s a crypto library. Why is it called sodium? Because chemistry? Because NaCl? Clever, I suppose.&rdquo; Now, multiply this by dozens of dependencies in a modern project. Each one demands tribute: a few seconds of mental processing to decode the semantic cipher. Those seconds accumulate into minutes and effort, then career-spanning mountains of wasted cognitive effort.
+</p>
+
+<p>
+Imagine that you are to explain to a new engineer how is your codebase structured, and the general architecture of some project, and go through the dependencies you use to delegate some certain tasks to and explain how they orchestrate together. Actually let me put my friend&rsquo;s statement again instead: &ldquo;We&rsquo;re using Viper for configuration management, which feeds into Cobra for the CLI, and then Melody handles our WebSocket connections, Casbin manages permissions, all through Asynq for our job queue&rdquo;.
+</p>
+
+
+<p>
+Now pause and actually process that sentence. there&rsquo;s a snake, another snake, music, a mysterious proper noun, and&#x2026; async-with-a-q? Half your mental RAM is busy pattern-matching these arbitrary tokens to their actual functions instead of focusing on the architectural decisions being discussed. This is the equivalent of a cardiologist saying &ldquo;we&rsquo;ll install a Butterfly in your Whisper to improve your Thunderbeat&rdquo; instead of &ldquo;we&rsquo;ll place a stent in your artery to improve your cardiac output.&rdquo; Compare this to reading a scientific paper in materials science. When you encounter &ldquo;high-entropy alloys&rdquo; or &ldquo;shape-memory polymers,&rdquo; the name itself conveys information. You can make educated guesses about properties and applications before reading a single word of description.
+</p>
+</div>
+</div>
+<div id="outline-container-org8f15106" class="outline-2">
+<h2 id="org8f15106">Some excuses I&rsquo;ve heard of</h2>
+<div class="outline-text-2" id="text-org8f15106">
+<p>
+I was told some of the following when I shared my concerns about naming <a href="../sh/2023.html#bek89831uxj0">before</a>, here&rsquo;s my thoughts of some:
+</p>
+
+<ul class="org-ul">
+<li><p>
+&ldquo;But memorable names help with marketing!&rdquo;
+</p>
+
+<p>
+Sure, if you&rsquo;re building a consumer product. Your HTTP client, cli utility helper, whatever library is not a consumer product. The people who will ever care about it just want to know what it does.
+</p></li>
+
+<li><p>
+&ldquo;Descriptive names are boring!&rdquo;
+</p>
+
+<p>
+Yes, and surgical instruments are boring. Boring is fine when clarity is paramount. This isn&rsquo;t creative writing class.
+</p></li>
+
+<li><p>
+&ldquo;It&rsquo;s just for fun!&rdquo; Your fun has externalities.
+</p>
+
+<p>
+Every person who encounters your &ldquo;fun&rdquo; name pays a small tax. Across the industry, these taxes compound into significant waste<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+And yeah, I know, this is not our biggest concern nor the biggest problem the industry is facing now, but sorry I had to talk about it. 
+</span>.
+</p></li>
+
+<li><p>
+&ldquo;All the good descriptive names are taken!&rdquo;
+</p>
+
+<p>
+We could have used namespaces, prefixes, or compound terms like every other engineering discipline has done for centuries. We have the technology. But even if you can not do that, at least make the name has anything to do with the product, put a &ldquo;DB&rdquo; post-fix, do some word play like how &ldquo;magit&rdquo; does. If you couldn&rsquo;t be clear, you could have made it relatable at least.
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org15a1c20" class="outline-2">
+<h2 id="org15a1c20">The path forward</h2>
+<div class="outline-text-2" id="text-org15a1c20">
+<p>
+Whatever happened wasn&rsquo;t malicious—it was cultural. As programming shifted from corporate mainframe work to the community builders.<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
+Which was a good thing. 
+</span>, the social norms shifted too. 
+</p>
+
+<p>
+Thus, we need a cultural correction. Not regulation open source thrives on freedom, but a revival of professional standards through social pressure and education.
+</p>
+
+<p>
+Name your library after what it does. Use compound terms. Embrace verbosity if necessary. http-request-validator is infinitely superior to &ldquo;zephyr&rdquo; when someone is scanning dependencies at 2 AM debugging a production incident.
+</p>
+
+<p>
+If you absolutely must have a cute mascot or reference, fine-make it the project mascot, not the name. PostgreSQL has Slonik the elephant. PostgreSQL is still called PostgreSQL. The elephant doesn&rsquo;t replace semantic meaning.
+</p>
+
+<p>
+Reserve the creative names for end-user products where branding matters. For infrastructure, tools, and libraries, choose clarity. Every time.
+</p>
+
+<p>
+The next time you&rsquo;re about to name your project after your favorite anime character, pause. Ask yourself: &ldquo;Would a civil engineer name a bridge support system this way?&rdquo; If the answer is no, choose a better name.
+</p>
+
+<p>
+Our field deserves better than a zoo of random nouns masquerading as professional nomenclature. Clarity isn&rsquo;t boring, it&rsquo;s respect for your users&rsquo; time and cognitive resources. 
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+And yeah, I know, this is not our biggest concern nor the biggest problem the industry is facing now, but sorry I had to talk about it. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Which was a good thing. 
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-12-11 Thu 18:27. Last build date: 2025-12-15 Mon 14:39.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Art</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <base href="/~saleh/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
+    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
+    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div
+    class="header"
+    style="
+    display: block !important;!i;!;
+"
+  >
+    <a href="/">
+      <h1 class="title" style="margin-block-start: auto; color: black">
+        Hereby, all birds fly
+      </h1>
+    </a>
+    <nav class="site-nav">
+      <a href="/~saleh/p/">all posts</a>
+      <span>•</span>
+      <a href="/~saleh/stack.html">short posts</a>
+      <span>•</span>
+      <a href="/~saleh/fullbooks.html">books</a>
+      <span>•</span>
+      <a href="/~saleh/a.html">anthology</a>
+      <span>•</span>
+      <a href="/~saleh/pgp.html">PGP key</a>
+      <span>•</span>
+      <a href="https://www.admonymous.co/larrasket">leave a message</a>
+    </nav>
+    <hr class="header-divider" style="margin-block-end: -1em" />
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Art</h1>
+</header><div class="BACKLINKS" id="org88837fc">
+<p>
+This section was referenced in <a href="../stack.html#1xh6igp0bok0">The Return, by Thomas Cole</a>, <a href="../stack.html#4zt6gc716qk0">The Return of Hajar by Pietro da Cortona</a>, <a href="../stack.html#8518m5z0fqk0">Loving Walk and Spring Idyll</a>, <a href="../stack.html#98ckxai06nk0">View of the Pont au Change from Quai de Gesvres by Jean-Baptiste Camille Corot</a>, <a href="../stack.html#9f3cyn90xlk0">Caravaggio</a>, <a href="../stack.html#9pwhrlo01mk0">Cimabue and Cima da Conegliano</a>, <a href="../stack.html#9rhar4o0dkk0">Skies in Alexey Bogolyubov works</a>, <a href="../stack.html#beyd3x21tik0">Giuseppe Abbati Paintings</a>, <a href="../stack.html#dchk6n80xlk0">Portrait of a North African (1870)</a>, <a href="../stack.html#ejh1rtw05kk0">The Massacre of the Monks of Tamond by Sir Lawrence Alma-Tadema origins</a>, <a href="../stack.html#g180s3g0kpk0">The Romans in their Decadence</a>, <a href="../stack.html#gpp2spb0rlk0">William Bradford</a>, <a href="../stack.html#gxzffkh0glk0">A Young Girl and Eros</a>, <a href="../stack.html#hhikuax0ekk0">Works of Carl Aagaard</a>, <a href="../stack.html#hpyfnfg0dqk0">On the barn by Pellizza da Volpedo</a>, <a href="../stack.html#k4m3s830zrk0">Portrait of Elsa by Frank Dicksee</a>, <a href="../stack.html#l5v2j4k0aqk0">The Triumph of Divine Providence by Pietro da Cortona</a>, <a href="../stack.html#obm0ls01hpk0">The Fountain of the Sweet Waters of Asia</a>, <a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a>, <a href="../stack.html#qvz6ot50hqk0">The life of Pellizza da Volpedo</a>, <a href="../stack.html#up1dphm0qnk0">View on the Catskill, Early Autumn</a>, <a href="../stack.html#uxfk6va0npk0">La Belle Dame sans Merci</a>, <a href="../stack.html#yqe6drb1bqk0">A thought about Realism in Art</a>, <a href="../stack.html#yti352w0ipk0">Adam Et Eve</a>, and <a href="../stack.html#zoq1kz80xlk0">Lilla Cabot Perry</a>, and in 5 other private notes.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-08-08 Fri 01:16]</span></span> Disabling this page again. Sorry if you were redirected from an art-related link, but that&rsquo;s just too messy to host on my small website. If I ever have the time, I will work on making it exportable.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-21 Mon 23:25]</span></span> You can also click on an image to open it in a new tab. This can be helpful if the lazyloader makes the image appear in a late stage (so you will see a gray loader instead of it). The page size is big because it loads a lot of images. I got this feedback from IRC, but the whole purpose of this page, as mentioned before, is only for personal reference.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-19 Sat 21:16]</span></span> Sometimes I find myself continually questioning the fundamental purpose of art and beauty. That tension becomes especially pronounced when I consider how the same aesthetic principles that govern a Bach fugue or a neoclassical building also manifest in engineering: the graceful curve of a suspension bridge&rsquo;s cables, the elegant logic of a well-designed algorithm, or the satisfying economy of a mechanical solution that achieves maximum effect with minimal means. Paul Graham&rsquo;s observations in &ldquo;Hackers and Painters&rdquo; about the fundamental similarity between engineering and painting suggest that perhaps what we call beauty is actually our recognition of deeper structural harmonies—patterns that reveal themselves whether we&rsquo;re contemplating the mathematical relationships in a Mozart sonata, the load distribution in a cathedral&rsquo;s flying buttresses, or the recursive elegance of a piece of code that solves a complex problem with startling simplicity. This leads me to wonder whether aesthetic experience represents not mere decoration or distraction from reality, but rather our most direct method of perceiving the underlying order that governs natural and human-made systems alike. Maybe that&rsquo;s a TODO to discuss in a post later. Or a wondering thought that will die with me.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-17 Thu 20:59]</span></span> I updated the page to include lazy-loading and collapsed all the headings by default, you will have to click them to get them folded. This will require JS to run (for some reason, lazy-loading is not working properly on some mobile phones)</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-16 Wed 05:59]</span></span>: Some artist are only partially included here, because I absolutely adore every work of them, and I find it unnecessary to include each. As of now, these are:
+<ul class="org-ul">
+<li>Thomas Cole</li>
+</ul></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-09 Fri 04:59]</span></span> This part is currently available. It used to be marked as a private note. I&rsquo;m making it available now just for the case of the references I might use in my blog. I plan some day to turn this page into a more pleasant-to-browse website.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-02-17 Sat 23:47]</span></span> I&rsquo;m a bit confused of how to write my notes on the images, including the artist metadata and my points, in an unstructured data format (plaintext) but still, make it easy for me when the day comes and I want to process this data. Maybe I just should go intuitively?</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2024-02-17 Sat 23:30]</span></span> I&rsquo;ve been thinking of building a PKMS-like software but for managing my art collections. By now, I&rsquo;m considering just maintaining them on this node. Thus, here you can find my favorite paintings and my notes on them.</li>
+</ul>
+<div id="outline-container-orgfb97ee3" class="outline-2">
+<h2 id="orgfb97ee3">People</h2>
+<div class="outline-text-2" id="text-orgfb97ee3">
+</div>
+<div id="outline-container-2lq0ch91vik0" class="outline-3">
+<h3 id="2lq0ch91vik0">Ivan Aivazovsky</h3>
+<div class="outline-text-3" id="text-2lq0ch91vik0">
+<div class="BACKLINKS" id="orgad149d2">
+<p>
+This section was referenced in <a href="art_paintings_media.html#2h594wa0yik0">Night in the Crimea, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#2ja4j3b1ajk0">The Ninth Wave, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#5aqgceh0yik0">Night in Amalfi, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#67y0k8h0yik0">Lunar night on the Crimean coast, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#9hzd3ta1vik0">Russian squadron on the raid of Sevastopol, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#bdck5h413kk0">Moonlit night near Yalta, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#c6ecyca1vik0">The Bay of Naples at Moonlight Night, Ivan Aivazovsky</a>, <a href="../stack.html#gpp2spb0rlk0">William Bradford</a>, <a href="art_paintings_media.html#lyl5m2h0yik0">Morning, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#nxsg2cs01kk0">Darial Gorge, Ivan Aivazovsky</a>, <a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a>, <a href="art_paintings_media.html#put6rha1vik0">Azure Grotto. Naples, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#qrl15i91vik0">View of a Fountain and Peterhof Palacel, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#r9genu91vik0">Frigate Under Sails, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#smmcf9913kk0">The Black Sea, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#usm1zwa1vik0">Evening in the Crimea, Ivan Aivazovsky</a>, <a href="art_paintings_media.html#uy18az91vik0">Moonlit Night on the Crimea, Ivan Aivazovsky</a>, and <a href="art_paintings_media.html#z9x9bd805kk0">A Rocky Coastal Landscape in the Aegean, Ivan Aivazovsky</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-rp705yc0erk0" class="outline-3">
+<h3 id="rp705yc0erk0">Benjamin West</h3>
+<div class="outline-text-3" id="text-rp705yc0erk0">
+<div class="BACKLINKS" id="orgf391647">
+<p>
+This section was referenced in <a href="art_paintings_media.html#6zk3zyc0erk0">“Cicero Discovering the Tomb of Archimedes”, Benjamin West</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-ajviyf616mk0" class="outline-3">
+<h3 id="ajviyf616mk0">Emile Claus</h3>
+<div class="outline-text-3" id="text-ajviyf616mk0">
+<div class="BACKLINKS" id="org67ace11">
+<p>
+This section was referenced in <a href="art_paintings_media.html#z322hg616mk0">Afternoon Along The River, Emile Claus</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-mp208ei0ymk0" class="outline-3">
+<h3 id="mp208ei0ymk0">John Constable</h3>
+<div class="outline-text-3" id="text-mp208ei0ymk0">
+<div class="BACKLINKS" id="orgbb1e074">
+<p>
+This section was referenced in <a href="art_paintings_media.html#2nc7rb51zmk0">A Cloud Study, John Constable</a> and <a href="art_paintings_media.html#2o07pji0ymk0">Wooded Landscape, John Constable</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-2jo4pwg0lkk0" class="outline-3">
+<h3 id="2jo4pwg0lkk0">William Ashford</h3>
+<div class="outline-text-3" id="text-2jo4pwg0lkk0">
+<div class="BACKLINKS" id="org46f3949">
+<p>
+This section was referenced in <a href="art_paintings_media.html#7ef5v0h0lkk0">A View of Dublin from Chapelizod, William Ashford</a>, <a href="art_paintings_media.html#g3siw4h0lkk0">Mount Kennedy, County Wicklow, William Ashford</a>, <a href="art_paintings_media.html#logeznh0lkk0">View of Killarney, William Ashford</a>, <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>, and <a href="art_paintings_media.html#r7p77yg0lkk0">View in Mount Merrion Park, William Ashford</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-akcl6pw0ekk0" class="outline-3">
+<h3 id="akcl6pw0ekk0">Carl Aagaard</h3>
+<div class="outline-text-3" id="text-akcl6pw0ekk0">
+<div class="BACKLINKS" id="orgd91809e">
+<p>
+This section was referenced in <a href="art_paintings_media.html#et16c8x0ekk0">View from Jægersborg Dyrehave. Mild daylight, Carl Aagaard</a>, <a href="../stack.html#hhikuax0ekk0">Works of Carl Aagaard</a>, <a href="art_paintings_media.html#m5k91pw0ekk0">The Rose Garden, Carl Aagaard</a>, and <a href="art_paintings_media.html#qnvaxyw0ekk0">Landscape, Carl Aagaard</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-zgec92i0dkk0" class="outline-3">
+<h3 id="zgec92i0dkk0">Alexey Bogolyubov</h3>
+<div class="outline-text-3" id="text-zgec92i0dkk0">
+<div class="BACKLINKS" id="orge8fca66">
+<p>
+This section was referenced in <a href="art_paintings_media.html#1y0immi0dkk0">Castel Sant&rsquo;Angelo, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#4z30nji0dkk0">Moonlit night. Grand Canal (Venice), Alexey Bogolyubov</a>, <a href="art_paintings_media.html#9cg8nfi0dkk0">Smolny as seen from Bolshaya Okhta, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#eaegmli0dkk0">Italian Coast, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#fl9bgoi0dkk0">Moonlit evening in Constantinople, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#hqybz2i0dkk0">Mosque in Istanbul, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#jviicdi0dkk0">View of the Smolny Convent from Bolshaya Okhta, Alexey Bogolyubov</a>, <a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a>, <a href="art_paintings_media.html#rmvi6bi0dkk0">St. Petersburg at Sunset, Alexey Bogolyubov</a>, <a href="art_paintings_media.html#uvbfxai0dkk0">St. Petersburg. Sledging on the Neva, Alexey Bogolyubov</a>, and <a href="art_paintings_media.html#vyldeni0dkk0">The seashore, Alexey Bogolyubov</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-xymdew71bkk0" class="outline-3">
+<h3 id="xymdew71bkk0">Jean-Joseph-Xavier Bidauld</h3>
+<div class="outline-text-3" id="text-xymdew71bkk0">
+<div class="BACKLINKS" id="orgd2bd0b6">
+<p>
+This section was referenced in <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-9o1eac80nik0" class="outline-3">
+<h3 id="9o1eac80nik0">Peter Paul Rubens</h3>
+<div class="outline-text-3" id="text-9o1eac80nik0">
+<div class="BACKLINKS" id="org34b2215">
+<p>
+This section was referenced in <a href="art_paintings_media.html#eom7zf80nik0">The Judgement of Paris, Peter Paul Rubens</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-c893dc71bkk0" class="outline-3">
+<h3 id="c893dc71bkk0">Knud Baade</h3>
+<div class="outline-text-3" id="text-c893dc71bkk0">
+<div class="BACKLINKS" id="org7800e26">
+<p>
+This section was referenced in <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-5bmjog80nik0" class="outline-3">
+<h3 id="5bmjog80nik0">Gustav Pope</h3>
+<div class="outline-text-3" id="text-5bmjog80nik0">
+<div class="BACKLINKS" id="orgbb14869">
+<p>
+This section was referenced in <a href="art_paintings_media.html#uyqhph80nik0">The Judgement of Paris, Gustav Pope</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-j201sk80nik0" class="outline-3">
+<h3 id="j201sk80nik0">Jacques Clement Wagrez</h3>
+<div class="outline-text-3" id="text-j201sk80nik0">
+<div class="BACKLINKS" id="orgc804e33">
+<p>
+This section was referenced in <a href="art_paintings_media.html#oqq8gl80nik0">The Judgement of Paris, Jacques Clement Wagrez</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-hd8csm80nik0" class="outline-3">
+<h3 id="hd8csm80nik0">Walter Crane</h3>
+<div class="outline-text-3" id="text-hd8csm80nik0">
+<div class="BACKLINKS" id="orgbe07177">
+<p>
+This section was referenced in <a href="art_paintings_media.html#yv1i7n80nik0">The Judgement of Paris, Walter Crane</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-dud71p80nik0" class="outline-3">
+<h3 id="dud71p80nik0">Francesco Albani</h3>
+<div class="outline-text-3" id="text-dud71p80nik0">
+<div class="BACKLINKS" id="org9289996">
+<p>
+This section was referenced in <a href="art_paintings_media.html#5dd6lo80nik0">The Judgement of Paris, Francesco Albani</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-0xygoq80nik0" class="outline-3">
+<h3 id="0xygoq80nik0">Jacques Stella</h3>
+<div class="outline-text-3" id="text-0xygoq80nik0">
+<div class="BACKLINKS" id="org898fbe5">
+<p>
+This section was referenced in <a href="art_paintings_media.html#eab86q80nik0">The Judgement of Paris, Jacques Stella</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-ec4fas80nik0" class="outline-3">
+<h3 id="ec4fas80nik0">Joachim Wtewael</h3>
+<div class="outline-text-3" id="text-ec4fas80nik0">
+<div class="BACKLINKS" id="org4c041c2">
+<p>
+This section was referenced in <a href="art_paintings_media.html#4uvbmr80nik0">The Judgement of Paris, Joachim Wtewael</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-9vwjys80nik0" class="outline-3">
+<h3 id="9vwjys80nik0">Anselm Feuerbach</h3>
+<div class="outline-text-3" id="text-9vwjys80nik0">
+<div class="BACKLINKS" id="org3ce0b89">
+<p>
+This section was referenced in <a href="art_paintings_media.html#ufe6ju80nik0">The Judgement of Paris, Anselm Feuerbach</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-2hl40590nik0" class="outline-3">
+<h3 id="2hl40590nik0">Joseph Hauber</h3>
+<div class="outline-text-3" id="text-2hl40590nik0">
+<div class="BACKLINKS" id="orgc6c31f4">
+<p>
+This section was referenced in <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-2z6a49d0nik0" class="outline-3">
+<h3 id="2z6a49d0nik0">Mattia Preti</h3>
+<div class="outline-text-3" id="text-2z6a49d0nik0">
+<div class="BACKLINKS" id="orgb36301b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#lcq3y9d0nik0">Martyrdom of Saint Sebastian, Mattia Preti</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-733kzdd0nik0" class="outline-3">
+<h3 id="733kzdd0nik0">Battistello Caracciolo</h3>
+<div class="outline-text-3" id="text-733kzdd0nik0">
+<div class="BACKLINKS" id="org6484d75">
+<p>
+This section was referenced in <a href="art_paintings_media.html#ulvcsed0nik0">Martyrdom of Saint Sebastian, Battistello Caracciolo</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-twl4pfd0nik0" class="outline-3">
+<h3 id="twl4pfd0nik0">Guido Reni</h3>
+<div class="outline-text-3" id="text-twl4pfd0nik0">
+<div class="BACKLINKS" id="org7c3176b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#6rm27gd0nik0">Martyrdom of Saint Sebastian, Guido Reni</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-oo5jig01tik0" class="outline-3">
+<h3 id="oo5jig01tik0">Domingos Sequeira</h3>
+<div class="outline-text-3" id="text-oo5jig01tik0">
+<div class="BACKLINKS" id="org133618b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#cfb5vk11tik0">Coronation of the Virgin, Domingos Sequeira</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-prygzj11tik0" class="outline-3">
+<h3 id="prygzj11tik0">Giulio Cesare Procaccini</h3>
+<div class="outline-text-3" id="text-prygzj11tik0">
+<div class="BACKLINKS" id="org2b7747c">
+<p>
+This section was referenced in <a href="art_paintings_media.html#2ej3wk11tik0">Coronation of the Virgin, Giulio Cesare Procaccini</a>.
+</p>
+
+</div>
+
+<p>
+Giulio Cesare Procaccini was an Italian painter and sculptor of the early
+Baroque era in Milan.
+</p>
+</div>
+</div>
+<div id="outline-container-2jke0h21tik0" class="outline-3">
+<h3 id="2jke0h21tik0">Reza Abbasi</h3>
+<div class="outline-text-3" id="text-2jke0h21tik0">
+<div class="BACKLINKS" id="org9d945cb">
+<p>
+This section was referenced in <a href="art_paintings_media.html#2ko23k21tik0">Two Lovers, Reza Abbasi</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-bc7b4p21tik0" class="outline-3">
+<h3 id="bc7b4p21tik0">Giuseppe Abbati</h3>
+<div class="outline-text-3" id="text-bc7b4p21tik0">
+<div class="BACKLINKS" id="org01aaeaf">
+<p>
+This section was referenced in <a href="art_paintings_media.html#a88dqt21tik0">Marina in Castiglioncello, Giuseppe Abbati</a>, <a href="art_paintings_media.html#aap3io21tik0">Country Road with Cypresses, Giuseppe Abbati</a>, and <a href="../stack.html#beyd3x21tik0">Giuseppe Abbati Paintings</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-7x6isa31tik0" class="outline-3">
+<h3 id="7x6isa31tik0">Edwin Austin Abbey</h3>
+<div class="outline-text-3" id="text-7x6isa31tik0">
+<div class="BACKLINKS" id="org61d5b9f">
+<p>
+This section was referenced in <a href="art_paintings_media.html#f4w8jc31tik0">O mistress mine, where are you roaming, Edwin Austin Abbey</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-nmx2lf41tik0" class="outline-3">
+<h3 id="nmx2lf41tik0">Oswald Achenbach</h3>
+<div class="outline-text-3" id="text-nmx2lf41tik0">
+<div class="BACKLINKS" id="org43269d8">
+<p>
+This section was referenced in <a href="art_paintings_media.html#x4la6g41tik0">Morning, Oswald Achenbach</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-bjl0v3x0uik0" class="outline-3">
+<h3 id="bjl0v3x0uik0">Eduard Quitton</h3>
+<div class="outline-text-3" id="text-bjl0v3x0uik0">
+<div class="BACKLINKS" id="org7823819">
+<p>
+This section was referenced in <a href="art_paintings_media.html#laxao6x0uik0">First Love Letter, Eduard Quitton</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-res62a71vik0" class="outline-3">
+<h3 id="res62a71vik0">Albrecht Adam</h3>
+<div class="outline-text-3" id="text-res62a71vik0">
+<p>
+His paintings make me want to play Assassin&rsquo;s Creed again.
+</p>
+</div>
+</div>
+<div id="outline-container-b5o5tpw05kk0" class="outline-3">
+<h3 id="b5o5tpw05kk0">Sir Lawrence Alma-Tadema</h3>
+<div class="outline-text-3" id="text-b5o5tpw05kk0">
+<div class="BACKLINKS" id="org6851dd7">
+<p>
+This section was referenced in <a href="art_paintings_media.html#04rd65908kk0">Pleading, Sir Lawrence Alma-Tadema</a>, <a href="art_paintings_media.html#2m761qw05kk0">The Massacre of the Monks of Tamond, Sir Lawrence Alma-Tadema</a>, <a href="art_paintings_media.html#4qi0dq416kk0">Ask Me No more, Sir Lawrence Alma-Tadema</a>, <a href="art_paintings_media.html#cmu84l908kk0">A Declaration, Sir Lawrence Alma-Tadema</a>, <a href="art_paintings_media.html#muj0lsw0akk0">Expectations, Sir Lawrence Alma-Tadema</a>, and <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-xe6f8nh0dkk0" class="outline-3">
+<h3 id="xe6f8nh0dkk0">Arnold Böcklin</h3>
+<div class="outline-text-3" id="text-xe6f8nh0dkk0">
+<div class="BACKLINKS" id="org77a7a20">
+<p>
+This section was referenced in <a href="art_paintings_media.html#9macjth0dkk0">Villa am Meer I, Arnold Böcklin</a>, <a href="art_paintings_media.html#pcl4gvh0dkk0">Villa am Meer II, Arnold Böcklin</a>, and <a href="art_paintings_media.html#q11i1bi0dkk0">Der Gang nach Emmaus, Arnold Böcklin</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-i0jf8l21fkk0" class="outline-3">
+<h3 id="i0jf8l21fkk0">Nicolai Abildgaard</h3>
+<div class="outline-text-3" id="text-i0jf8l21fkk0">
+<div class="BACKLINKS" id="org3ed3a00">
+<p>
+This section was referenced in <a href="art_paintings_media.html#8lf0kl21fkk0">The Prayers of the Potuans at the Feast of the Unfathomable God, Nicolai Abildgaard</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-dcjcb680hkk0" class="outline-3">
+<h3 id="dcjcb680hkk0">Jacques-Laurent Agasse</h3>
+<div class="outline-text-3" id="text-dcjcb680hkk0">
+<div class="BACKLINKS" id="org22ed854">
+<p>
+This section was referenced in <a href="art_paintings_media.html#99b1h880hkk0">The Playground, Jacques-Laurent Agasse</a> and <a href="art_paintings_media.html#wcb7a780hkk0">The Nubian Giraffe, Jacques-Laurent Agasse</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-2um0gc80hkk0" class="outline-3">
+<h3 id="2um0gc80hkk0">Mariotto Albertinelli</h3>
+<div class="outline-text-3" id="text-2um0gc80hkk0">
+<div class="BACKLINKS" id="org1e74622">
+<p>
+This section was referenced in <a href="art_paintings_media.html#fc83ge80hkk0">Visitation, Mariotto Albertinelli</a> and <a href="art_paintings_media.html#ifc3sq80hkk0">Visitation II, Mariotto Albertinelli</a>, and in 1 other private note.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-1dq2tj80hkk0" class="outline-3">
+<h3 id="1dq2tj80hkk0">Domenico Ghirlandaio</h3>
+<div class="outline-text-3" id="text-1dq2tj80hkk0">
+<div class="BACKLINKS" id="org5633d02">
+<p>
+This section was referenced in <a href="art_paintings_media.html#ft813l80hkk0">Visitation, Domenico Ghirlandaio</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-9p5dy1r0ikk0" class="outline-3">
+<h3 id="9p5dy1r0ikk0">Denis van Alsloot</h3>
+<div class="outline-text-3" id="text-9p5dy1r0ikk0">
+<div class="BACKLINKS" id="org2e46af1">
+<p>
+This section was referenced in <a href="art_paintings_media.html#n8g286r0ikk0">Winter Landscape, Denis van Alsloot</a> and <a href="art_paintings_media.html#z58cc8r0ikk0">Winter Landscape II, Denis van Alsloot</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-3ryipgr0ikk0" class="outline-3">
+<h3 id="3ryipgr0ikk0">Jurriaan Andriessen</h3>
+<div class="outline-text-3" id="text-3ryipgr0ikk0">
+<div class="BACKLINKS" id="orgada06dc">
+<p>
+This section was referenced in <a href="art_paintings_media.html#18yh7hr0ikk0">Arcadian Landscape, Jurriaan Andriessen</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-ujv0blg0lkk0" class="outline-3">
+<h3 id="ujv0blg0lkk0">Alexandre Antigna</h3>
+<div class="outline-text-3" id="text-ujv0blg0lkk0">
+<div class="BACKLINKS" id="orgeef641c">
+<p>
+This section was referenced in <a href="art_paintings_media.html#p2sjomg0lkk0">The Lighting, Alexandre Antigna</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-e2d6e3z0nkk0" class="outline-3">
+<h3 id="e2d6e3z0nkk0">Sandro Botticelli</h3>
+<div class="outline-text-3" id="text-e2d6e3z0nkk0">
+</div>
+</div>
+<div id="outline-container-23mfma60wkk0" class="outline-3">
+<h3 id="23mfma60wkk0">William-Adolphe Bouguereau</h3>
+<div class="outline-text-3" id="text-23mfma60wkk0">
+<div class="BACKLINKS" id="orgb218e05">
+<p>
+This section was referenced in <a href="art_paintings_media.html#15t9dm01jlk0">Ladmiration, William-Adolphe Bouguereau</a>, <a href="art_paintings_media.html#388le010olk0">Innocence, William-Adolphe Bouguereau</a>, <a href="#54micc60wkk0">William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#73w095n08lk0">Rest at Harvest, William-Adolphe Bouguereau</a>, <a href="art_paintings_media.html#cbv0qjh0glk0">A Young Girl Defending Herself Against  Eros, William-Adolphe Bouguereau</a>, <a href="art_paintings_media.html#eu755co0glk0">A Little Coaxing, William-Adolphe Bouguereau</a>, <a href="art_paintings_media.html#nc1ltnn0glk0">The Virgin with Angels, William-Adolphe Bouguereau</a>, <a href="art_paintings_media.html#twm55be0elk0">Pieta, William-Adolphe Bouguereau</a>, and <a href="art_paintings_media.html#ya364s00olk0">Elegy, William-Adolphe Bouguereau</a>, and in 1 other private note.
+</p>
+
+</div>
+</div>
+<div id="outline-container-54micc60wkk0" class="outline-4">
+<h4 id="54micc60wkk0"><a href="#23mfma60wkk0">William-Adolphe Bouguereau</a> Motherhood Paintings</h4>
+<div class="outline-text-4" id="text-54micc60wkk0">
+<div class="BACKLINKS" id="orgf3a963f">
+<p>
+This section was referenced in <a href="art_paintings_media.html#068bpg60wkk0">The Kiss, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#1fgdog60wkk0">Sleep, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#6cd12xb1dlk0">Maternal Admiration, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#8vf3gm60wkk0">Charity or The Indigent Family, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#9mrbfpd0elk0">The Bunch Of Grapes, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#acejlxd1ilk0">Pleasant Burden, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#ej6kqh60wkk0">Raising her up, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#i707wz70glk0">A Girl with a Child, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>, <a href="art_paintings_media.html#nbjjhi60wkk0">The Orange, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#okbaxz70glk0">Charity, William-Adolphe Bouguereau Motherhood Paintings</a>, <a href="art_paintings_media.html#r50b9sd0elk0">Young Mother Gazing At Her Child, William-Adolphe Bouguereau Motherhood Paintings</a>, and <a href="art_paintings_media.html#twycng60wkk0">The Elder Sister, William-Adolphe Bouguereau Motherhood Paintings</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-aq08zp10olk0" class="outline-4">
+<h4 id="aq08zp10olk0">Bouguereau early competitions</h4>
+<div class="outline-text-4" id="text-aq08zp10olk0">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-13 Fri 14:13]</span></span> This video: <a href="https://youtu.be/8qA5g4Evg5I">https://youtu.be/8qA5g4Evg5I</a> mentions something very interesting,
+that William Bouguereau won a prize for a figure painting in the École des
+beaux-arts de Bordeaux, although his practice was only two hours in the morning,
+compared to his peers who were full-time students.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-qse5o7c0rlk0" class="outline-3">
+<h3 id="qse5o7c0rlk0">Frederic William Burton</h3>
+<div class="outline-text-3" id="text-qse5o7c0rlk0">
+<div class="BACKLINKS" id="org7c06a7a">
+<p>
+This section was referenced in <a href="art_paintings_media.html#mhm2g8c0rlk0">The Meeting on the Turret Stairs, Frederic William Burton</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-eaphdi80xlk0" class="outline-3">
+<h3 id="eaphdi80xlk0">Alexandre Cabanel</h3>
+<div class="outline-text-3" id="text-eaphdi80xlk0">
+<div class="BACKLINKS" id="org73034b7">
+<p>
+This section was referenced in <a href="../stack.html#dchk6n80xlk0">Portrait of a North African (1870)</a> and <a href="art_paintings_media.html#ym36dj80xlk0">The Fallen Angel, Alexandre Cabanel</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-ig8cxhp01mk0" class="outline-3">
+<h3 id="ig8cxhp01mk0">Frederic Edwin Church</h3>
+<div class="outline-text-3" id="text-ig8cxhp01mk0">
+<div class="BACKLINKS" id="org4beabb6">
+<p>
+This section was referenced in <a href="art_paintings_media.html#o9yhcrp01mk0">Faro, Mount Desert Island, Frederic Edwin Church</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-34feald0fmk0" class="outline-3">
+<h3 id="34feald0fmk0"><span class="done DONE">DONE</span> Thomas Cole&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_check">@check</span></span></h3>
+<div class="outline-text-3" id="text-34feald0fmk0">
+<div class="BACKLINKS" id="org499fb7c">
+<p>
+This section was referenced in <a href="art_paintings_media.html#0ablccm0qnk0">View on the Catskill, Early Autumn, Thomas Cole</a>, <a href="../stack.html#1xh6igp0bok0">The Return, by Thomas Cole</a>, <a href="art_paintings_media.html#38f8zt20zok0">Mount Aetna from Taormina, Thomas Cole</a>, <a href="art_paintings_media.html#5v697ht0kok0">The Architect Dream, Thomas Cole</a>, <a href="art_paintings_media.html#70i91s206ok0">View of Florence from San Miniato, Thomas Cole</a>, <a href="art_paintings_media.html#97q8yd01gmk0">Expulsion. Moon and Firelight, Thomas Cole</a>, <a href="art_paintings_media.html#994dfrq0gok0">View of the Arno, Thomas Cole</a>, <a href="art_paintings_media.html#9ppcg8s03ok0">Sunset of the Arno, Thomas Cole</a>, <a href="art_paintings_media.html#crnateg07ok0">Italian Coast Scene with Ruined Tower, Thomas Cole</a>, <a href="art_paintings_media.html#fch9f381cok0">Schroon, Thomas Cole</a>, <a href="art_paintings_media.html#k5ie5l01vmk0">Distant View of Niagara Falls, Thomas Cole</a>, <a href="art_paintings_media.html#ket9qkd1snk0">Moonlight, Thomas Cole</a>, <a href="art_paintings_media.html#kkfenud0fmk0">Landscape with Figures A Scene from The Last of the Mohicans, Thomas Cole</a>, <a href="art_paintings_media.html#kzr6ylc08ok0">Schroon Mountain, Adirondacks, Thomas Cole</a>, <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>, <a href="art_paintings_media.html#paqfq981xok0">An Evening in Arcadia, Thomas Cole</a>, <a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a>, <a href="art_paintings_media.html#poe2xsk04pk0">River in the Catskills, Thomas Cole</a>, <a href="art_paintings_media.html#pt79j5y09ok0">The Present, Thomas Cole</a>, <a href="art_paintings_media.html#q518iq10smk0">View of L`Esperance on the Schoharie River, Thomas Cole</a>, <a href="art_paintings_media.html#rt7bnld0fmk0">Kaaterskill Falls, Thomas Cole</a>, <a href="art_paintings_media.html#wjgg6fp0bok0">The Return, Thomas Cole</a>, and <a href="art_paintings_media.html#x4na1s902ok0">Summer TWilight, Thomas Cole</a>.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-16 Wed 17:48]</span></span> I need to schedule meditating his works for a full day.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-48iifil01nk0" class="outline-3">
+<h3 id="48iifil01nk0">Jean-Baptiste Camille Corot</h3>
+<div class="outline-text-3" id="text-48iifil01nk0">
+<div class="BACKLINKS" id="org954975b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#31b9ee70pnk0">Souvenir de Mortefontaine, Jean-Baptiste Camille Corot</a>, <a href="../stack.html#98ckxai06nk0">View of the Pont au Change from Quai de Gesvres by Jean-Baptiste Camille Corot</a>, <a href="art_paintings_media.html#eq5bh3g0mnk0">Saint Sebastian in a Landscape, Jean-Baptiste Camille Corot</a>, <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>, <a href="art_paintings_media.html#p181fdq02nk0">View of the Forest of Fontainebleau, Jean-Baptiste Camille Corot</a>, <a href="art_paintings_media.html#r666kfg0mnk0">Fisherman Boating along a Wooded Landscape, Jean-Baptiste Camille Corot</a>, <a href="art_paintings_media.html#tnqaesi06nk0">Democritus and the Abderiti, Jean-Baptiste Camille Corot</a>, <a href="art_paintings_media.html#vjycq8y0ink0">The Italian Goatherd, Jean-Baptiste Camille Corot</a>, and <a href="art_paintings_media.html#w7skvrd1pnk0">Moonlit Landscape, Jean-Baptiste Camille Corot</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-hnuhbcd0cpk0" class="outline-3">
+<h3 id="hnuhbcd0cpk0">Hermann David Salomon Corrodi</h3>
+<div class="outline-text-3" id="text-hnuhbcd0cpk0">
+<div class="BACKLINKS" id="orge46145b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#bzh7sa20fpk0">Camel Train in a Sandstorm, Hermann David Salomon Corrodi</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-qz32hxv0ipk0" class="outline-3">
+<h3 id="qz32hxv0ipk0">Gustave-Claude-Etienne Courtois</h3>
+<div class="outline-text-3" id="text-qz32hxv0ipk0">
+<div class="BACKLINKS" id="org209bb83">
+<p>
+This section was referenced in <a href="art_paintings_media.html#fzsf1xv0ipk0">Adam Et Eve, Gustave-Claude-Etienne Courtois</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-7guc32g0kpk0" class="outline-3">
+<h3 id="7guc32g0kpk0">Thomas Couture</h3>
+<div class="outline-text-3" id="text-7guc32g0kpk0">
+<div class="BACKLINKS" id="orgf604eef">
+<p>
+This section was referenced in <a href="art_paintings_media.html#3xifm2g0kpk0">The Romans in their Decadence, Thomas Couture</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-782jrqa0npk0" class="outline-3">
+<h3 id="782jrqa0npk0">Frank Cadogan Cowper</h3>
+<div class="outline-text-3" id="text-782jrqa0npk0">
+<div class="BACKLINKS" id="orgd6ee8a5">
+<p>
+This section was referenced in <a href="art_paintings_media.html#34e0lua0npk0">La Belle Dame sans Merci, Frank Cadogan Cowper</a> and <a href="../stack.html#uxfk6va0npk0">La Belle Dame sans Merci</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-fli4avf0opk0" class="outline-3">
+<h3 id="fli4avf0opk0"><span class="todo TODO">TODO</span> Louis-Philippe Crépin</h3>
+<div class="outline-text-3" id="text-fli4avf0opk0">
+</div>
+</div>
+<div id="outline-container-kglj7vf0opk0" class="outline-3">
+<h3 id="kglj7vf0opk0">Jasper Francis Cropsey</h3>
+<div class="outline-text-3" id="text-kglj7vf0opk0">
+<div class="BACKLINKS" id="org6133d4d">
+<p>
+This section was referenced in <a href="art_paintings_media.html#gtzgnzt0ppk0">Warwick Castle, England, Jasper Francis Cropsey</a>, <a href="art_paintings_media.html#v1ucp950wpk0">Autumn on the Hudson, Jasper Francis Cropsey</a>, and <a href="art_paintings_media.html#vjnbhwf0opk0">The Coast of Genoa, Jasper Francis Cropsey</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-xohgxop01qk0" class="outline-3">
+<h3 id="xohgxop01qk0">Charles Courtney Curran</h3>
+<div class="outline-text-3" id="text-xohgxop01qk0">
+<div class="BACKLINKS" id="org7998270">
+<p>
+This section was referenced in <a href="art_paintings_media.html#a82fv5s01qk0">Green Lattice, Charles Courtney Curran</a>, <a href="art_paintings_media.html#hzhg8vr01qk0">Hollyhocks and Sunlight, Charles Courtney Curran</a>, <a href="art_paintings_media.html#j4vafyq01qk0">Lady with a Bouquet, Charles Courtney Curran</a>, and <a href="art_paintings_media.html#tje75zr01qk0">Peonies, Charles Courtney Curran</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-73l48b716qk0" class="outline-3">
+<h3 id="73l48b716qk0">Pietro da Cortona</h3>
+<div class="outline-text-3" id="text-73l48b716qk0">
+<div class="BACKLINKS" id="orgcb8e3d6">
+<p>
+This section was referenced in <a href="art_paintings_media.html#50fllvj0aqk0">The Triumph of Divine Providence, Pietro da Cortona</a> and <a href="art_paintings_media.html#gvy5r9716qk0">The Return of Hajar, Pietro da Cortona</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-ied5qr60aqk0" class="outline-3">
+<h3 id="ied5qr60aqk0">Gustav Klimt</h3>
+<div class="outline-text-3" id="text-ied5qr60aqk0">
+<div class="BACKLINKS" id="org3bbcc0c">
+<p>
+This section was referenced in <a href="art_paintings_media.html#fiyams60aqk0">Shakespeare&rsquo;s Globe Theatre, Gustav Klimt</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-0zif2xf0dqk0" class="outline-3">
+<h3 id="0zif2xf0dqk0">Pellizza da Volpedo</h3>
+<div class="outline-text-3" id="text-0zif2xf0dqk0">
+<div class="BACKLINKS" id="org7121b20">
+<p>
+This section was referenced in <a href="art_paintings_media.html#5i7jlfl0eqk0">The mirror of life (And what one does, and the others do), Pellizza da Volpedo</a>, <a href="art_paintings_media.html#7wwkjfl0eqk0">Figure study for Spring Idyll, Pellizza da Volpedo</a>, <a href="art_paintings_media.html#bhu5k2z0fqk0">Loving Walk, Pellizza da Volpedo</a>, <a href="../stack.html#qvz6ot50hqk0">The life of Pellizza da Volpedo</a>, <a href="art_paintings_media.html#rch8nfl0eqk0">Spring Idyll, Pellizza da Volpedo</a>, and <a href="art_paintings_media.html#upg5uyf0dqk0">On the barn, Pellizza da Volpedo</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-n93cgz50hqk0" class="outline-3">
+<h3 id="n93cgz50hqk0"><span class="todo TODO">TODO</span> Giovanni Segantini</h3>
+<div class="outline-text-3" id="text-n93cgz50hqk0">
+<div class="BACKLINKS" id="orgda95ac7">
+<p>
+This section was referenced in <a href="../stack.html#qvz6ot50hqk0">The life of Pellizza da Volpedo</a> and <a href="art_paintings_media.html#xtwfop60hqk0">Love at the Fountain of Life, Giovanni Segantini</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-kojhh1x0iqk0" class="outline-3">
+<h3 id="kojhh1x0iqk0">Johan Christian Dahl</h3>
+<div class="outline-text-3" id="text-kojhh1x0iqk0">
+<div class="BACKLINKS" id="org5648c42">
+<p>
+This section was referenced in <a href="art_paintings_media.html#qd4eihx0iqk0">Winter at the Sognefjord, Johan Christian Dahl</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-xcm06ix0iqk0" class="outline-3">
+<h3 id="xcm06ix0iqk0">Charles-Francois Daubigny</h3>
+<div class="outline-text-3" id="text-xcm06ix0iqk0">
+<div class="BACKLINKS" id="orgd09fcfb">
+<p>
+This section was referenced in <a href="art_paintings_media.html#2ns7bt31jqk0">The Park at St. Cloud, Charles-Francois Daubigny</a> and <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-0t121id1kqk0" class="outline-3">
+<h3 id="0t121id1kqk0">Jacques-Louis David</h3>
+<div class="outline-text-3" id="text-0t121id1kqk0">
+<div class="BACKLINKS" id="org65edf0e">
+<p>
+This section was referenced in <a href="art_paintings_media.html#aor7kn10pqk0">The Death of Socrates, Jacques-Louis David</a>, <a href="art_paintings_media.html#m2c9psg0mqk0">The Illness of Antiochus, Jacques-Louis David</a>, and <a href="art_paintings_media.html#vay9gkd1kqk0">Belisarius Begging for Alms, Jacques-Louis David</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-5tp1r081vqk0" class="outline-3">
+<h3 id="5tp1r081vqk0">Nicolas Poussin</h3>
+<div class="outline-text-3" id="text-5tp1r081vqk0">
+</div>
+</div>
+<div id="outline-container-38phjra0ark0" class="outline-3">
+<h3 id="38phjra0ark0">Pierre-Henri de Valenciennes</h3>
+<div class="outline-text-3" id="text-38phjra0ark0">
+<div class="BACKLINKS" id="orgf3367f8">
+<p>
+This section was referenced in <a href="art_paintings_media.html#jt943nn0brk0">View of Rome, Pierre-Henri de Valenciennes</a>, <a href="art_paintings_media.html#tce3wwj0frk0">Classical Landscape with Figures Drinking by a Fountain, Pierre-Henri de Valenciennes</a>, <a href="art_paintings_media.html#v2mg82w0crk0">The Ancient City of Agrigento, Pierre-Henri de Valenciennes</a>, <a href="art_paintings_media.html#vd58bxc0erk0">“Cicero Discovering the Tomb of Archimedes”, Pierre-Henri de Valenciennes</a>, and <a href="art_paintings_media.html#yxd14va0ark0">Study of Clouds, Pierre-Henri de Valenciennes</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-u0ehk1q0nrk0" class="outline-3">
+<h3 id="u0ehk1q0nrk0">Edouard Debat-Ponsan</h3>
+<div class="outline-text-3" id="text-u0ehk1q0nrk0">
+<div class="BACKLINKS" id="org3cd588d">
+<p>
+This section was referenced in <a href="art_paintings_media.html#eoz24xp0nrk0">Massage at the Hamam, Edouard Debat-Ponsan</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-1ul96w40yrk0" class="outline-3">
+<h3 id="1ul96w40yrk0">Joseph DeCamp</h3>
+<div class="outline-text-3" id="text-1ul96w40yrk0">
+<div class="BACKLINKS" id="org28f432b">
+<p>
+This section was referenced in <a href="art_paintings_media.html#mvk9gc7014k0">Art</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-dcy99130zrk0" class="outline-3">
+<h3 id="dcy99130zrk0">Frank Dicksee</h3>
+<div class="outline-text-3" id="text-dcy99130zrk0">
+<div class="BACKLINKS" id="org4dbb39f">
+<p>
+This section was referenced in <a href="art_paintings_media.html#cfc7v4y00sk0">La Belle Dame sans Merci, Frank Dicksee</a>, <a href="art_paintings_media.html#m8m6bl311sk0">Yseult, Frank Dicksee</a>, <a href="../p/art.html#pcui9zv04sk0">Deciding my favorite artist</a>, and <a href="art_paintings_media.html#wu296830zrk0">Portrait of Elsa, Frank Dicksee</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-nooir8503sk0" class="outline-3">
+<h3 id="nooir8503sk0">Thomas Francis Dicksee</h3>
+<div class="outline-text-3" id="text-nooir8503sk0">
+<div class="BACKLINKS" id="orgc95ea21">
+<p>
+This section was referenced in <a href="art_paintings_media.html#azx3g9503sk0">Jessica, Thomas Francis Dicksee</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org8ddda2b" class="outline-3">
+<h3 id="org8ddda2b">Leonardo da Vinci</h3>
+</div>
+</div>
+<div id="outline-container-orgb8c84e6" class="outline-2">
+<h2 id="orgb8c84e6"><span class="todo TODO">TODO</span> Everyday, a beautiful painting.&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
+<div class="outline-text-2" id="text-orgb8c84e6">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-08-03 Sun 03:37]</span></span> I will probably stop adding notes like &ldquo;next is&rdquo;. My new browse can pin the tab for good, so tracking where I stopped is no longer a problem.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-24 Thu 19:28]</span></span> Next is Corot, 135</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-21 Mon 02:03]</span></span> <a href="https://www.wikiart.org/en/camille-corot/all-works#!%23filterName:all-paintings-chronologically,resultType:masonry">https://www.wikiart.org/en/camille-corot/all-works#!%23filterName:all-paintings-chronologically,resultType:masonry</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-18 Fri 17:46]</span></span> John Constable 3 / 108
+Wooded Landscape</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-16 Wed 17:48]</span></span> Skipping Thomas Cole.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-13 Sun 22:28]</span></span> 26, Thomas</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-07-05 Sat 08:29]</span></span> 25, Thomas <a href="https://www.wikiart.org/en/thomas-cole/all-works#!%23filterName:all-paintings-chronologically,resultType:masonry">https://www.wikiart.org/en/thomas-cole/all-works#!%23filterName:all-paintings-chronologically,resultType:masonry</a></li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-27 Fri 20:39]</span></span> Next is Léon Cogniet , 1794 - 1880 , 20 artworks</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-23 Mon 19:14]</span></span> Claricia is next</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-20 Fri 13:14]</span></span> Next is Rosalba Carriera ,</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-16 Mon 11:25]</span></span> Next is reviewing the Bs on the other website. There&rsquo;s also another new website
+that I think deserves checking the As.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-07 Sat 20:47]</span></span> William-Adolphe Bouguereau 218 / 430</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-06-07 Sat 14:55]</span></span> Next is Soul Carried to Heaven (1878)
+William-Adolphe Bouguereau 141 / 430</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-12 Mon 02:01]</span></span> Next is ALLIO, Domenico I</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-11 Sun 00:23]</span></span> ABONDIO, Antonio</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-10 Sat 04:04]</span></span> <a href="https://www.wga.hu/html_m/a/index.html">https://www.wga.hu/html_m/a/index.html</a> Juan de La start</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-09 Fri 04:57]</span></span> 23 Sandro Botticelli</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-07 Wed 03:14]</span></span> Alma 118</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-04 Sun 05:24]</span></span> 164, Alma</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-02 Fri 23:38]</span></span> At 567, Ivan.</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2025-05-02 Fri 00:17]</span></span> At 374, Ivan</li>
+</ul>
+<div class="notes"> <ul class="org-ul">
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-04 Thu 19:45]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-03 Wed 23:35]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-02 Tue 18:17]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-02 Tue 00:40]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-17 Mon 20:09]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-16 Sun 23:28]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-15 Sat 19:23]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-14 Fri 20:43]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-13 Thu 21:53]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-11-03 Mon 00:47]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-28 Tue 22:25]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-26 Sun 20:07]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-25 Sat 20:33]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-24 Fri 21:46]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-24 Fri 01:18]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-24 Fri 01:18]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-22 Wed 21:27]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-21 Tue 19:19]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-20 Mon 20:33]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-20 Mon 00:09]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-19 Sun 01:31]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-17 Fri 18:51]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-15 Wed 02:24]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-11 Sat 02:01]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-06 Mon 22:38]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-02 Thu 00:10]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-10-01 Wed 00:56]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-30 Tue 05:02]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-28 Sun 00:07]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-26 Fri 17:43]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-26 Fri 00:58]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-24 Wed 00:08]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-21 Sun 21:27]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-21 Sun 19:49]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-17 Wed 21:18]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-16 Tue 23:18]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-16 Tue 23:08]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-11 Thu 21:05]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-09-10 Wed 23:33]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-31 Sun 21:44]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-28 Thu 19:45]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-26 Tue 20:43]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-26 Tue 01:11]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-25 Mon 00:15]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-23 Sat 14:59]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-22 Fri 13:02]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-21 Thu 20:11]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-20 Wed 21:07]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-18 Mon 23:37]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-17 Sun 22:49]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-10 Sun 23:03]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-09 Sat 00:53]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-08 Fri 16:51]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-08 Fri 01:21]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-05 Tue 21:54]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-08-03 Sun 03:35]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-24 Thu 19:28]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-21 Mon 21:27]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-21 Mon 01:26]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-19 Sat 20:43]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-18 Fri 17:48]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-16 Wed 17:52]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-13 Sun 22:28]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-05 Sat 08:30]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-07-04 Fri 06:13]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-27 Fri 20:39]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-20 Fri 13:14]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-16 Mon 00:51]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-13 Fri 14:26]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-10 Tue 08:55]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-09 Mon 18:48]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-07 Sat 20:47]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-07 Sat 18:30]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-07 Sat 14:57]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-06-06 Fri 04:46]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-23 Fri 10:22]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-17 Sat 01:31]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-15 Thu 06:03]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-13 Tue 03:03]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-12 Mon 02:04]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-11 Sun 00:29]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-10 Sat 04:16]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-09 Fri 04:57]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-08 Thu 01:32]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-07 Wed 03:22]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-05 Mon 06:49]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-04 Sun 05:21]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-03 Sat 00:14]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-05-02 Fri 00:20]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-04-30 Wed 05:51]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-04-10 Thu 00:22]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-31 Mon 14:47]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-31 Mon 10:50]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-31 Mon 10:47]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-31 Mon 08:51]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-29 Sat 14:34]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-29 Sat 14:29]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-28 Fri 00:11]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-27 Thu 23:53]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-27 Thu 23:38]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-27 Thu 23:29]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-27 Thu 23:15]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-23 Sun 01:16]</span></span></li>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-03-22 Sat 23:37]</span></span></li>
+</ul>
+ </div>
+<div class="notes"> <p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-12 Fri 16:53]--[2025-12-13 Sat 14:22] </span> <span class="timestamp">(21:29)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-05 Fri 16:27]--[2025-12-05 Fri 19:29] </span> <span class="timestamp">(3:02)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-04 Thu 19:42]--[2025-12-04 Thu 19:45] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-03 Wed 23:30]--[2025-12-03 Wed 23:35] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-02 Tue 17:38]--[2025-12-02 Tue 18:17] </span> <span class="timestamp">(0:39)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-02 Tue 00:23]--[2025-12-02 Tue 00:40] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-17 Mon 20:00]--[2025-11-17 Mon 20:09] </span> <span class="timestamp">(0:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-16 Sun 23:12]--[2025-11-16 Sun 23:28] </span> <span class="timestamp">(0:16)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-15 Sat 14:44]--[2025-11-15 Sat 14:48] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-14 Fri 20:39]--[2025-11-14 Fri 20:43] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-13 Thu 21:29]--[2025-11-13 Thu 21:53] </span> <span class="timestamp">(0:24)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-03 Mon 00:37]--[2025-11-03 Mon 00:47] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-11-02 Sun 03:00]--[2025-11-02 Sun 03:17] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-28 Tue 21:10]--[2025-10-28 Tue 22:25] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-26 Sun 19:57]--[2025-10-26 Sun 20:07] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-25 Sat 19:12]--[2025-10-25 Sat 19:51] </span> <span class="timestamp">(0:39)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-24 Fri 21:35]--[2025-10-24 Fri 21:46] </span> <span class="timestamp">(0:11)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-24 Fri 00:38]--[2025-10-24 Fri 01:18] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-22 Wed 20:59]--[2025-10-22 Wed 21:27] </span> <span class="timestamp">(0:28)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-21 Tue 18:53]--[2025-10-21 Tue 19:19] </span> <span class="timestamp">(0:26)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-20 Mon 19:57]--[2025-10-20 Mon 20:33] </span> <span class="timestamp">(0:36)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-19 Sun 23:50]--[2025-10-20 Mon 00:09] </span> <span class="timestamp">(0:19)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-18 Sat 23:59]--[2025-10-19 Sun 01:31] </span> <span class="timestamp">(1:32)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-17 Fri 18:41]--[2025-10-17 Fri 18:51] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-15 Wed 01:44]--[2025-10-15 Wed 02:24] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-11 Sat 00:57]--[2025-10-11 Sat 02:01] </span> <span class="timestamp">(1:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-06 Mon 22:15]--[2025-10-06 Mon 22:38] </span> <span class="timestamp">(0:23)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-02 Thu 00:03]--[2025-10-02 Thu 00:10] </span> <span class="timestamp">(0:07)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-10-01 Wed 00:17]--[2025-10-01 Wed 00:56] </span> <span class="timestamp">(0:39)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-30 Tue 04:04]--[2025-09-30 Tue 05:02] </span> <span class="timestamp">(0:58)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-28 Sun 22:03]--[2025-09-29 Mon 15:59] </span> <span class="timestamp">(17:56)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-27 Sat 23:42]--[2025-09-28 Sun 00:07] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-26 Fri 14:37]--[2025-09-26 Fri 17:43] </span> <span class="timestamp">(3:06)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-26 Fri 00:43]--[2025-09-26 Fri 00:58] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-23 Tue 23:59]--[2025-09-24 Wed 00:08] </span> <span class="timestamp">(0:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-21 Sun 21:08]--[2025-09-21 Sun 21:27] </span> <span class="timestamp">(0:19)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-21 Sun 00:56]--[2025-09-21 Sun 19:49] </span> <span class="timestamp">(18:53)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-17 Wed 21:07]--[2025-09-17 Wed 21:18] </span> <span class="timestamp">(0:11)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-16 Tue 22:15]--[2025-09-16 Tue 22:18] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-15 Mon 22:29]--[2025-09-15 Mon 22:33] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-11 Thu 20:55]--[2025-09-11 Thu 21:05] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-10 Wed 23:24]--[2025-09-10 Wed 23:33] </span> <span class="timestamp">(0:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-09-09 Tue 23:36]--[2025-09-10 Wed 19:54] </span> <span class="timestamp">(20:18)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-31 Sun 21:30]--[2025-08-31 Sun 21:44] </span> <span class="timestamp">(0:14)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-28 Thu 19:42]--[2025-08-28 Thu 19:45] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-26 Tue 20:34]--[2025-08-26 Tue 20:43] </span> <span class="timestamp">(0:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-26 Tue 01:07]--[2025-08-26 Tue 01:11] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-25 Mon 00:13]--[2025-08-25 Mon 00:15] </span> <span class="timestamp">(0:02)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-23 Sat 14:55]--[2025-08-23 Sat 14:59] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-22 Fri 12:58]--[2025-08-22 Fri 13:02] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-21 Thu 20:08]--[2025-08-21 Thu 20:11] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-20 Wed 20:59]--[2025-08-20 Wed 21:07] </span> <span class="timestamp">(0:08)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-18 Mon 21:59]--[2025-08-18 Mon 23:37] </span> <span class="timestamp">(1:38)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-17 Sun 22:40]--[2025-08-17 Sun 22:46] </span> <span class="timestamp">(0:06)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-10 Sun 22:59]--[2025-08-10 Sun 23:03] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-09 Sat 00:33]--[2025-08-09 Sat 00:53] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-08 Fri 01:09]--[2025-08-08 Fri 01:21] </span> <span class="timestamp">(0:12)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-05 Tue 21:44]--[2025-08-05 Tue 21:54] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-03 Sun 03:21]--[2025-08-03 Sun 03:35] </span> <span class="timestamp">(0:14)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-08-02 Sat 06:34]--[2025-08-02 Sat 17:19] </span> <span class="timestamp">(10:45)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-24 Thu 18:52]--[2025-07-24 Thu 19:28] </span> <span class="timestamp">(0:36)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-21 Mon 21:21]--[2025-07-21 Mon 21:27] </span> <span class="timestamp">(0:06)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-21 Mon 01:18]--[2025-07-21 Mon 01:26] </span> <span class="timestamp">(0:08)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-19 Sat 20:05]--[2025-07-19 Sat 20:43] </span> <span class="timestamp">(0:38)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-18 Fri 17:32]--[2025-07-18 Fri 17:48] </span> <span class="timestamp">(0:16)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-16 Wed 17:35]--[2025-07-16 Wed 17:52] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-13 Sun 20:47]--[2025-07-13 Sun 22:28] </span> <span class="timestamp">(1:41)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-05 Sat 08:20]--[2025-07-05 Sat 08:30] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-04 Fri 05:55]--[2025-07-04 Fri 06:13] </span> <span class="timestamp">(0:18)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-07-04 Fri 05:09]--[2025-07-04 Fri 05:14] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-30 Mon 13:39]--[2025-06-30 Mon 13:43] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-27 Fri 20:23]--[2025-06-27 Fri 20:39] </span> <span class="timestamp">(0:16)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-20 Fri 12:24]--[2025-06-20 Fri 13:14] </span> <span class="timestamp">(0:50)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-18 Wed 00:06]--[2025-06-18 Wed 10:42] </span> <span class="timestamp">(10:36)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-16 Mon 00:23]--[2025-06-16 Mon 00:51] </span> <span class="timestamp">(0:28)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-13 Fri 13:53]--[2025-06-13 Fri 14:26] </span> <span class="timestamp">(0:33)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-10 Tue 07:46]--[2025-06-10 Tue 08:55] </span> <span class="timestamp">(1:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-09 Mon 18:20]--[2025-06-09 Mon 18:48] </span> <span class="timestamp">(0:28)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-07 Sat 20:30]--[2025-06-07 Sat 20:47] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-07 Sat 18:06]--[2025-06-07 Sat 18:30] </span> <span class="timestamp">(0:24)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-07 Sat 14:49]--[2025-06-07 Sat 14:57] </span> <span class="timestamp">(0:08)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-06 Fri 04:31]--[2025-06-06 Fri 04:46] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-05 Thu 22:36]--[2025-06-05 Thu 22:54] </span> <span class="timestamp">(0:18)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-06-01 Sun 18:33]--[2025-06-01 Sun 18:49] </span> <span class="timestamp">(0:16)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-23 Fri 09:57]--[2025-05-23 Fri 10:22] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-17 Sat 00:39]--[2025-05-17 Sat 01:31] </span> <span class="timestamp">(0:52)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-15 Thu 05:35]--[2025-05-15 Thu 06:03] </span> <span class="timestamp">(0:28)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-13 Tue 02:46]--[2025-05-13 Tue 03:03] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-12 Mon 01:40]--[2025-05-12 Mon 02:04] </span> <span class="timestamp">(0:24)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-11 Sun 00:07]--[2025-05-11 Sun 00:29] </span> <span class="timestamp">(0:22)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-10 Sat 03:34]--[2025-05-10 Sat 04:16] </span> <span class="timestamp">(0:42)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-09 Fri 04:06]--[2025-05-09 Fri 04:57] </span> <span class="timestamp">(0:51)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-07 Wed 03:10]--[2025-05-07 Wed 03:22] </span> <span class="timestamp">(0:12)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-06 Tue 23:43]--[2025-05-07 Wed 02:37] </span> <span class="timestamp">(2:54)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-06 Tue 22:14]--[2025-05-06 Tue 23:42] </span> <span class="timestamp">(1:28)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-05 Mon 06:15]--[2025-05-05 Mon 06:49] </span> <span class="timestamp">(0:34)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-04 Sun 05:17]--[2025-05-04 Sun 05:21] </span> <span class="timestamp">(0:04)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-03 Sat 07:38]--[2025-05-03 Sat 08:35] </span> <span class="timestamp">(0:57)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-02 Fri 23:20]--[2025-05-03 Sat 00:14] </span> <span class="timestamp">(0:54)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-02 Fri 00:08]--[2025-05-02 Fri 00:18] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-04-30 Wed 05:29]--[2025-04-30 Wed 05:51] </span> <span class="timestamp">(0:22)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-04-09 Wed 23:58]--[2025-04-10 Thu 00:22] </span> <span class="timestamp">(0:24)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-31 Mon 10:50]--[2025-03-31 Mon 14:47] </span> <span class="timestamp">(3:57)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-31 Mon 10:47]--[2025-03-31 Mon 10:50] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-31 Mon 10:44]--[2025-03-31 Mon 10:47] </span> <span class="timestamp">(0:03)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-31 Mon 08:29]--[2025-03-31 Mon 08:51] </span> <span class="timestamp">(0:22)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-29 Sat 14:29]--[2025-03-29 Sat 14:34] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-29 Sat 13:29]--[2025-03-29 Sat 14:29] </span> <span class="timestamp">(1:00)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-27 Thu 23:53]--[2025-03-28 Fri 00:11] </span> <span class="timestamp">(0:18)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-27 Thu 23:38]--[2025-03-27 Thu 23:53] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-27 Thu 23:29]--[2025-03-27 Thu 23:38] </span> <span class="timestamp">(0:09)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-27 Thu 23:15]--[2025-03-27 Thu 23:29] </span> <span class="timestamp">(0:14)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-27 Thu 22:36]--[2025-03-27 Thu 23:15] </span> <span class="timestamp">(0:39)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-26 Wed 18:04]--[2025-03-27 Thu 00:19] </span> <span class="timestamp">(6:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-24 Mon 02:58]--[2025-03-24 Mon 03:03] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-23 Sun 00:44]--[2025-03-23 Sun 01:16] </span> <span class="timestamp">(0:32)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-22 Sat 22:51]--[2025-03-22 Sat 23:37] </span> <span class="timestamp">(0:46)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-03-22 Sat 20:54]--[2025-03-22 Sat 22:14] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+ </div>
+</div>
+</div>
+<div id="outline-container-org5b3fec7" class="outline-2">
+<h2 id="org5b3fec7"><span class="todo TODO">TODO</span> Parable of the Good Samaritan next Robert Bateman&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_check">@check</span>&#xa0;<span class="_later">@later</span></span></h2>
+</div>
+<div id="outline-container-org022e338" class="outline-2">
+<h2 id="org022e338"><span class="todo TODO">TODO</span> Read&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_read">@read</span></span></h2>
+<div class="outline-text-2" id="text-org022e338">
+<div class="notes"> <p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-05-04 Sun 05:09]--[2025-05-04 Sun 05:17] </span> <span class="timestamp">(0:08)</span>
+</span>
+</p>
+ </div>
+<p>
+<a href="https://archive.org/details/7_20200325_20200325">https://archive.org/details/7_20200325_20200325</a>
+</p>
+
+<p>
+Sir Lawrence Alma-Tadema 9 / 217
+The Death of Hippolytus (1860)
+</p>
+
+<p>
+<a href="https://www.wikiart.org/en/Alphabet/a/text-list">https://www.wikiart.org/en/Alphabet/a/text-list</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgcb9b576" class="outline-2">
+<h2 id="orgcb9b576"><span class="todo TODO">TODO</span> <a href="https://en.wikipedia.org/wiki/History_painting">History painting - Wikipedia</a>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_idea">@idea</span></span></h2>
+<div class="outline-text-2" id="text-orgcb9b576">
+<div class="notes"> <p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2025-12-04 Thu 23:11]--[2025-12-04 Thu 23:13] </span> <span class="timestamp">(0:02)</span>
+</span>
+</p>
+ </div>
+</div>
+</div>
+<div id="outline-container-orgcc995dd" class="outline-2">
+<h2 id="orgcc995dd"><span class="todo TODO">TODO</span> <a href="https://en.wikipedia.org/wiki/Gustave_Courbet">https://en.wikipedia.org/wiki/Gustave_Courbet</a></h2>
+</div>
+<div id="outline-container-org159f6eb" class="outline-2">
+<h2 id="org159f6eb"><span class="todo TODO">TODO</span> <a href="https://en.wikipedia.org/wiki/Antonio_da_Correggio">https://en.wikipedia.org/wiki/Antonio_da_Correggio</a></h2>
+</div>
+<div id="outline-container-org7f8ffd8" class="outline-2">
+<h2 id="org7f8ffd8"><span class="todo TODO">TODO</span> <a href="https://www.wikiart.org/en/jan-cossiers">https://www.wikiart.org/en/jan-cossiers</a></h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: . Last build date: 2025-12-14 Sun 08:43.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>
