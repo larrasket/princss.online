@@ -36,22 +36,30 @@
 </div>
 <div class="content">
   <div class="left">
-    <div id="calendar"></div>
-    <div class="calendar-buttons">
-      <button id="prev" type="button" style="border-right: none; text-align: right; border-left: none;">←----- prev</button>
-      <button id="next" type="button" style="border-right: none; text-align: left;">next -----→</button>
-    </div>
-    <div class="button">
-      <div class="link-me">Link me:</div>
-      <img src="/media/images/buttons/princss_button.png">
-      <textarea style="resize: none; height: 31px; width: 88px; margin-left: -5px; border-radius: 4px; box-sizing: border-box;">&lt;a href="https://princss.online" target="_blank"&gt;&lt;img src="https://princss.online/media/images/buttons/princss_button.png"&gt;&lt;/a&gt;</textarea>
-      <div class="feel-free">Feel free to hotlink!</div>
-    </div>
-    <!-- Neighbors -->
-    <div class="neighbors">
-      <div class="neighbors-title">neighbors</div>
-      <div class="neighbors-buttons">
-        {{ partial "neighbors.html" . }}
+    <div class="mobile-widgets-row">
+      <div class="mobile-widget calendar-widget">
+        <div id="calendar"></div>
+        <div class="calendar-buttons">
+          <button id="prev" type="button" style="border-right: none; text-align: right; border-left: none;">←</button>
+          <button id="next" type="button" style="border-right: none; text-align: left;">→</button>
+        </div>
+      </div>
+      <div class="mobile-widget linkme-widget">
+        <div class="button">
+          <div class="link-me">Link me:</div>
+          <img src="/media/images/buttons/princss_button.png">
+          <textarea style="resize: none; height: 31px; width: 88px; margin-left: -5px; border-radius: 4px; box-sizing: border-box;">&lt;a href="https://princss.online" target="_blank"&gt;&lt;img src="https://princss.online/media/images/buttons/princss_button.png"&gt;&lt;/a&gt;</textarea>
+          <div class="feel-free">Feel free to hotlink!</div>
+        </div>
+      </div>
+      <div class="mobile-widget neighbors-widget">
+        <!-- Neighbors -->
+        <div class="neighbors">
+          <div class="neighbors-title">neighbors</div>
+          <div class="neighbors-buttons">
+            {{ partial "neighbors.html" . }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

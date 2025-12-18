@@ -184,7 +184,26 @@
         height: 16px;
     }
 
-    /* Calendar */
+    /* Mobile widgets - 2 column grid layout */
+    .mobile-widgets-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px 5px;
+    }
+
+    .mobile-widget {
+        background: var(--white);
+        border: 1px dotted var(--darkbrown);
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    /* Calendar takes full width */
+    .calendar-widget {
+        grid-column: 1 / -1;
+    }
+
     #calendar {
         display: flex;
         justify-content: center;
@@ -192,6 +211,7 @@
 
     #calendar table {
         max-width: 100%;
+        font-size: 11px;
     }
 
     .calendar-buttons {
@@ -201,13 +221,36 @@
 
     .calendar-buttons button {
         flex: 1;
-        min-width: 80px;
+        min-width: 40px;
+        font-size: 14px;
+        padding: 5px;
     }
 
-    /* Neighbors */
+    /* Link me widget */
+    .linkme-widget {
+        text-align: center;
+    }
+
+    .linkme-widget .button {
+        border: none;
+    }
+
+    .linkme-widget textarea {
+        display: none;
+    }
+
+    .linkme-widget .feel-free {
+        display: none;
+    }
+
+    /* Neighbors widget */
+    .neighbors-widget .neighbors {
+        border: none;
+    }
+
     .neighbors-buttons {
         height: auto !important;
-        max-height: 180px;
+        max-height: 120px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -215,7 +258,7 @@
     }
 
     .neighbors-buttons img {
-        width: 44px;
+        width: 40px;
         height: auto;
     }
 
