@@ -105,8 +105,8 @@
               <img src="/media/images/writing_emoji.png" /> Notes on poetry
             </div>
           </div>
-          <audio controls style="display: none">
-            <source src="/media/audio/obscuredbyclouds.mp3" type="audio/mp3" />
+          <audio controls style="display: none" id="main-audio">
+            <source src="" type="audio/mp3" />
           </audio>
           <div class="audio-player">
             <div class="timeline">
@@ -122,9 +122,7 @@
                 <div class="length"></div>
               </div>
               <div class="name">
-                <marquee scrollamount="2">
-                  Pink Floyd - Obscured by Clouds
-                </marquee>
+                <marquee scrollamount="2" id="song-title">Loading...</marquee>
               </div>
               <div class="volume-container">
                 <div class="volume-button">
@@ -176,8 +174,65 @@
   }
 </script>
 <script>
+  const songs = [
+    {
+      file: "Caress (feat. Bachar Khalife, Rami Khalife & Peter Herbert).mp3",
+      title: "Caress",
+      artist: "Bachar Khalife, Rami Khalife & Peter Herbert",
+    },
+    {
+      file: "Chopin Etude Op 25  No.11 Valentina Lisitsa.mp3",
+      title: "Etude Op. 25 No. 11",
+      artist: "Chopin (Valentina Lisitsa)",
+    },
+    {
+      file: "Dust Flesh and Bones.mp3",
+      title: "Dust Flesh and Bones",
+      artist: "Matt Elliot",
+    },
+    {
+      file: "Hamilu'l Hawa.mp3",
+      title: "Hamilu'l Hawa",
+      artist: "Ghada Ghanem",
+    },
+    {
+      file: "Hungarian Rhapsody No. 2 in C-Sharp Minor.mp3",
+      title: "Hungarian Rhapsody No. 2",
+      artist: "Franz Liszt",
+    },
+    {
+      file: "K. 183 Mozart Symphony No. 25 in G minor, I Allegro con brio.mp3",
+      title: "Symphony No. 25 - Allegro con brio",
+      artist: "Mozart",
+    },
+    {
+      file: "La Campanella - Adam Gyorgy (2007).mp3",
+      title: "La Campanella",
+      artist: "Liszt (Adam Gyorgy)",
+    },
+    { file: "Salento.mp3", title: "Salento", artist: "René Aubry" },
+    {
+      file: "Serenade for String Orchestra in E major, Op. 22 - Tempo di Valse.mp3",
+      title: "Serenade Op. 22 - Tempo di Valse",
+      artist: "Dvořák",
+    },
+    {
+      file: "Shostakovich： Jazz Suite No. 2： VI. Waltz II.mp3",
+      title: "Jazz Suite No. 2: Waltz II",
+      artist: "Shostakovich",
+    },
+  ];
+
+  const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+  // Update the song title display
+  document.getElementById("song-title").textContent =
+    randomSong.artist + " - " + randomSong.title;
+
   const audioPlayer = document.querySelector(".audio-player");
-  const audio = new Audio("/media/audio/obscuredbyclouds.mp3");
+  const audio = new Audio(
+    "/media/audio/" + encodeURIComponent(randomSong.file),
+  );
 
   audio.addEventListener(
     "loadeddata",
@@ -285,7 +340,7 @@
         container.innerHTML = `<span class="github-emoji">code:</span> ${ago}: <em>${msg.substring(
           0,
           40,
-        )}${msg.length > 40 ? "..." : ""}</em> → <a href="https://github.com/${
+        )}${msg.length > 40 ? "..." : ""}</em> @ <a href="https://github.com/${
           pushEvent.repo.name
         }" target="_blank">${repo}</a>`;
       } else {
