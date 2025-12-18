@@ -133,7 +133,8 @@ def generate_text_banner(
     dither: bool = True,
     target_text_width: int = None,
     target_text_height: int = 29,
-    gamma: float = 2.2
+    gamma: float = 2.2,
+    word_spacing: float = 0.6
 ) -> Image.Image:
     """
     Generate a text banner in princss.online style.
@@ -161,20 +162,54 @@ def generate_text_banner(
     # Calculate text area height (leave room for flourish if needed)
     text_area_height = height - 17 if with_flourish else height
     
-    # Render text at high resolution
+    # Render text at high resolution with custom word spacing
     temp = Image.new('L', (2400, 200), 255)
     draw = ImageDraw.Draw(temp)
     
-    # Get text dimensions
-    bbox = draw.textbbox((0, 0), text, font=font)
-    text_width = bbox[2] - bbox[0]
-    text_height = bbox[3] - bbox[1]
+    # Split into words and render each separately with controlled spacing
+    words = text.split(' ')
     
-    # Render text at origin
-    draw.text((0 - bbox[0], 0 - bbox[1]), text, fill=0, font=font)
+    # Get the width of a space character
+    space_bbox = draw.textbbox((0, 0), ' ', font=font)
+    natural_space_width = space_bbox[2] - space_bbox[0]
+    
+    # Calculate reduced space width
+    reduced_space = int(natural_space_width * word_spacing)
+    
+    # Render each word and calculate total width
+    word_images = []
+    total_width = 0
+    max_height = 0
+    
+    for word in words:
+        word_bbox = draw.textbbox((0, 0), word, font=font)
+        word_width = word_bbox[2] - word_bbox[0]
+        word_height = word_bbox[3] - word_bbox[1]
+        
+        # Create image for this word
+        word_img = Image.new('L', (word_width + 4, word_height + 4), 255)
+        word_draw = ImageDraw.Draw(word_img)
+        word_draw.text((0 - word_bbox[0], 0 - word_bbox[1]), word, fill=0, font=font)
+        
+        word_images.append(word_img)
+        total_width += word_width
+        max_height = max(max_height, word_height)
+    
+    # Add spacing between words
+    total_width += reduced_space * (len(words) - 1) if len(words) > 1 else 0
+    
+    # Create combined image
+    combined = Image.new('L', (total_width + 8, max_height + 8), 255)
+    x_offset = 0
+    for i, word_img in enumerate(word_images):
+        combined.paste(word_img, (x_offset, 0))
+        x_offset += word_img.width - 4 + (reduced_space if i < len(word_images) - 1 else 0)
+    
+    text_width = total_width
+    text_height = max_height
     
     # Crop to just the text
-    text_only = temp.crop((0, 0, text_width + 4, text_height + 4))
+    text_only = combined.crop((0, 0, text_width + 4, text_height + 4))
     
     # Calculate target width: adaptive if not specified
     if target_text_width is None:
@@ -347,6 +382,7 @@ def main():
     text_parser.add_argument('--height', type=int, default=52, help='Image height')
     text_parser.add_argument('--no-flourish', action='store_true', help='Omit flourish ornament')
     text_parser.add_argument('--no-dither', action='store_true', help='Skip dithering effect')
+    text_parser.add_argument('--word-spacing', type=float, default=0.6, help='Word spacing multiplier (0.6 = tighter, 1.0 = normal)')
     
     # Dither command
     dither_parser = subparsers.add_parser('dither', help='Apply 1-bit dithering')
@@ -385,7 +421,8 @@ def main():
             height=args.height,
             font_size=args.size,
             with_flourish=not args.no_flourish,
-            dither=not args.no_dither
+            dither=not args.no_dither,
+            word_spacing=args.word_spacing
         )
         img.save(args.output)
         print(f"Text banner saved to: {args.output}")
