@@ -1,31 +1,32 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/microblog.css">
-{{ end }}
-
-{{ define "main" }}
-<img src="/media/images/microblog_header.png">
+<link rel="stylesheet" href="/styles/microblog.css" />
+{{ end }} {{ define "main" }}
+<img src="/media/images/microblog_header.png" />
 <div class="header">
   <div class="left-header">
-    <a href="/">the castle</a> / <a href="/microblog/" style="font-weight: bold;">m-blog</a>
+    <a href="/">vita nouva</a> /
+    <a href="/microblog/" style="font-weight: bold">m-blog</a>
   </div>
   <div class="right-header">
-    inspired by <a href="https://sugarforbrains.neocities.org/words/microblog/woofs">sugarforbrains</a> microblog
+    inspired by
+    <a href="https://sugarforbrains.neocities.org/words/microblog/woofs"
+      >sugarforbrains</a
+    >
+    microblog
   </div>
 </div>
 <div class="content">
   {{ range .Pages.ByDate.Reverse }}
   <div class="post" id="{{ .Params.id }}">
     <div class="post-info">
-      <img src="/media/images/pfp.png" style="width: 60px; height: 60px;">
+      <img src="/media/images/pfp.png" style="width: 60px; height: 60px" />
       <div class="info">
-        <div class="name">princss</div>
+        <div class="name">larrasket</div>
         <div class="date">{{ .Params.displayDate }}</div>
         <div class="time">@{{ .Params.time }}</div>
       </div>
     </div>
-    <div class="post-content">
-      {{ .Content }}
-    </div>
+    <div class="post-content">{{ .Content }}</div>
   </div>
   {{ end }}
 </div>

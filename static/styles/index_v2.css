@@ -196,23 +196,35 @@ a.dropdown-link:hover {
     padding: 3px;
     text-align: center;
 }
-#statuscafe {
+#github-activity {
 
 }
-#statuscafe-username {
+#github-username {
     color: var(--white);
     background-color: var(--darkbrown);
     padding: 3px;
 }
-#statuscafe-username a {
+#github-username a {
     color: var(--white);
     font-weight: bold;
     text-decoration: 1px dotted underline;
 }
-#statuscafe-content {
+#github-content {
     background-color: var(--white);
     border-bottom: 1px dotted var(--darkbrown);
     padding: 5px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+#github-content a {
+    color: var(--darkbrown);
+}
+#github-content em {
+    font-style: normal;
+    color: #666;
+}
+.github-emoji {
+    font-size: 12px;
 }
 .about-statuses-title {
     padding: 3px;

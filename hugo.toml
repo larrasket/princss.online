@@ -1,6 +1,6 @@
-baseURL = 'https://princss.online/'
+baseURL = 'https://lr0.org'
 languageCode = 'en-us'
-title = 'The Castle'
+title = 'La Vita Nouva'
 theme = 'princss'
 
 [markup]
@@ -14,14 +14,6 @@ theme = 'princss'
     url = "/diary/"
     weight = 1
   [[menu.main]]
-    name = "habits"
-    url = "/habits/"
-    weight = 2
-  [[menu.main]]
-    name = "calendar"
-    url = "/calendar/"
-    weight = 3
-  [[menu.main]]
     name = "microblog"
     url = "/microblog/"
     weight = 4
@@ -30,22 +22,6 @@ theme = 'princss'
     url = "/films/"
     weight = 5
   [[menu.main]]
-    name = "television"
-    url = "/television/"
-    weight = 6
-  [[menu.main]]
     name = "music"
     url = "/music/"
     weight = 7
-  [[menu.main]]
-    name = "ball talk"
-    url = "/ball-talk/"
-    weight = 8
-  [[menu.main]]
-    name = "liquid log"
-    url = "/liquid-log/"
-    weight = 9
-  [[menu.main]]
-    name = "guestbook"
-    url = "/guestbook/"
-    weight = 10

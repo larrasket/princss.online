@@ -1,16 +1,17 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/index_v2.css">
-<link rel="stylesheet" href="/styles/calendar.css">
-<link rel="stylesheet" href="/styles/audio_player.css">
-{{ end }}
-
-{{ define "bodyAttrs" }} onload="startTime()"{{ end }}
-
-{{ define "main" }}
-<img src="/media/images/princss_header_2.png" class="header-image" style="margin: auto; display: block;">
+<link rel="stylesheet" href="/styles/index_v2.css" />
+<link rel="stylesheet" href="/styles/calendar.css" />
+<link rel="stylesheet" href="/styles/audio_player.css" />
+{{ end }} {{ define "bodyAttrs" }} onload="startTime()"{{ end }} {{ define
+"main" }}
+<img
+  src="/media/images/princss_header_2.png"
+  class="header-image"
+  style="margin: auto; display: block"
+/>
 <div class="header">
   <div class="left-header">
-    <span style="font-weight: bold;">the castle</span> ----------→ <a href="https://neocities.org/site/princss" style="text-decoration: none; color: var(--darkbrown);">♕</a>
+    <span style="font-weight: bold">vita nouva</span>
   </div>
   <div class="hamburger" onclick="toggleNav()">☰ menu</div>
   <div class="right-header" id="mainNav">
@@ -29,7 +30,7 @@
     <div class="nav-link">
       <a href="/pic-log/" class="link">pic log</a>
     </div>
-    <div class="nav-link" style="border-right: none;">
+    <div class="nav-link" style="border-right: none">
       <a href="/guestbook/" class="link">guestbook</a>
     </div>
   </div>
@@ -40,25 +41,28 @@
       <div class="mobile-widget calendar-widget">
         <div id="calendar"></div>
         <div class="calendar-buttons">
-          <button id="prev" type="button" style="border-right: none; text-align: right; border-left: none;">←</button>
-          <button id="next" type="button" style="border-right: none; text-align: left;">→</button>
+          <button
+            id="prev"
+            type="button"
+            style="border-right: none; text-align: right; border-left: none"
+          >
+            ←
+          </button>
+          <button
+            id="next"
+            type="button"
+            style="border-right: none; text-align: left"
+          >
+            →
+          </button>
         </div>
       </div>
-      <div class="mobile-widget linkme-widget">
-        <div class="button">
-          <div class="link-me">Link me:</div>
-          <img src="/media/images/buttons/princss_button.png">
-          <textarea style="resize: none; height: 31px; width: 88px; margin-left: -5px; border-radius: 4px; box-sizing: border-box;">&lt;a href="https://princss.online" target="_blank"&gt;&lt;img src="https://princss.online/media/images/buttons/princss_button.png"&gt;&lt;/a&gt;</textarea>
-          <div class="feel-free">Feel free to hotlink!</div>
-        </div>
-      </div>
-      <div class="mobile-widget neighbors-widget">
+
+      <div class="neighbors-widget">
         <!-- Neighbors -->
         <div class="neighbors">
           <div class="neighbors-title">neighbors</div>
-          <div class="neighbors-buttons">
-            {{ partial "neighbors.html" . }}
-          </div>
+          <div class="neighbors-buttons">{{ partial "neighbors.html" . }}</div>
         </div>
       </div>
     </div>
@@ -66,32 +70,40 @@
   <div class="right">
     <div class="main-content">
       <div class="main-content-left">
-        <img src="/media/images/welcome.png">
-        <div class="welcome">
-          {{ .Content }}
-        </div>
-        <img src="/media/images/royaldecree.png">
+        <img src="/media/images/welcome.png" />
+        <div class="welcome">{{ .Content }}</div>
+        <img src="/media/images/royaldecree.png" />
         <div class="updates">
           <iframe src="/updates/" name="updates_frame"></iframe>
         </div>
       </div>
       <div class="main-content-right">
         <div class="about">
-          <div class="name-header">Princess (Me)</div>
-          <img src="/media/images/about_pfp.png">
-          <div class="about-desc">he/they ⊹ 21 ⊹ htx ⊹ b-ball</div>
-          <div id="statuscafe">
-            <div id="statuscafe-username"><a href="https://status.cafe/users/princss" target="_blank">princss</a></div>
-            <div id="statuscafe-content">. . .</div>
+          <div class="name-header">lr0</div>
+          <img src="/media/images/about_pfp.png" />
+          <div class="about-desc">^</div>
+          <div id="github-activity">
+            <div id="github-username">
+              <a href="https://github.com/larrasket" target="_blank"
+                >gh: @larrasket</a
+              >
+            </div>
+            <div id="github-content">loading...</div>
           </div>
           <div class="about-statuses">
             <div class="about-statuses-title">what am i doing?</div>
-            <div class="about-status"><img src="/media/images/watching_emoji.png"> The Rehearsal</div>
-            <div class="about-status"><img src="/media/images/book_emoji.png"> ¡No Pasarán!</div>
-            <div class="about-status"><img src="/media/images/gaming_emoji.png"> Tiny Terraces</div>
+            <div class="about-status">
+              <img src="/media/images/watching_emoji.png" /> The Rehearsal
+            </div>
+            <div class="about-status">
+              <img src="/media/images/book_emoji.png" /> ¡No Pasarán!
+            </div>
+            <div class="about-status">
+              <img src="/media/images/gaming_emoji.png" /> Tiny Terraces
+            </div>
           </div>
-          <audio controls style="display: none;">
-            <source src="/media/audio/obscuredbyclouds.mp3" type="audio/mp3">
+          <audio controls style="display: none">
+            <source src="/media/audio/obscuredbyclouds.mp3" type="audio/mp3" />
           </audio>
           <div class="audio-player">
             <div class="timeline">
@@ -107,7 +119,9 @@
                 <div class="length"></div>
               </div>
               <div class="name">
-                <marquee scrollamount="2">Pink Floyd - Obscured by Clouds</marquee>
+                <marquee scrollamount="2">
+                  Pink Floyd - Obscured by Clouds
+                </marquee>
               </div>
               <div class="volume-container">
                 <div class="volume-button">
@@ -120,12 +134,12 @@
             </div>
           </div>
           <!-- Featured Image - dynamically get last pic-log entry -->
-          {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
-          {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
+          {{ $piclog := where .Site.RegularPages "Section" "pic-log" }} {{
+          $lastPic := index (sort $piclog ".Date" "desc") 0 }}
           <div class="name-header">featured img</div>
           <div class="featured-image">
             <a href="/pic-log/">
-              <img src="{{ $lastPic.Params.image }}">
+              <img src="{{ $lastPic.Params.image }}" />
             </a>
           </div>
         </div>
@@ -135,201 +149,284 @@
 </div>
 <div class="footer">
   <div class="footer-left"></div>
-  <div class="footer-middle" style="text-align: center;"></div>
-  <div class="footer-right" style="text-align: right;">c. princss 2023</div>
+  <div class="footer-middle" style="text-align: center"></div>
+  <div class="footer-right" style="text-align: right">c. lr0 2025</div>
 </div>
-{{ end }}
-
-{{ define "scripts" }}
+{{ end }} {{ define "scripts" }}
 <script>
-function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  const txtEl = document.getElementById('txt');
-  if (txtEl) txtEl.innerHTML = h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
-function checkTime(i) {
-  if (i < 10) { i = "0" + i };
-  return i;
-}
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    const txtEl = document.getElementById("txt");
+    if (txtEl) txtEl.innerHTML = h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
 </script>
 <script>
-const audioPlayer = document.querySelector(".audio-player");
-const audio = new Audio("/media/audio/obscuredbyclouds.mp3");
+  const audioPlayer = document.querySelector(".audio-player");
+  const audio = new Audio("/media/audio/obscuredbyclouds.mp3");
 
-audio.addEventListener("loadeddata", () => {
-  audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(audio.duration);
-  audio.volume = .75;
-}, false);
+  audio.addEventListener(
+    "loadeddata",
+    () => {
+      audioPlayer.querySelector(".time .length").textContent =
+        getTimeCodeFromNum(audio.duration);
+      audio.volume = 0.75;
+    },
+    false,
+  );
 
-const timeline = audioPlayer.querySelector(".timeline");
-timeline.addEventListener("click", e => {
-  const timelineWidth = window.getComputedStyle(timeline).width;
-  const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
-  audio.currentTime = timeToSeek;
-}, false);
+  const timeline = audioPlayer.querySelector(".timeline");
+  timeline.addEventListener(
+    "click",
+    (e) => {
+      const timelineWidth = window.getComputedStyle(timeline).width;
+      const timeToSeek = (e.offsetX / parseInt(timelineWidth)) * audio.duration;
+      audio.currentTime = timeToSeek;
+    },
+    false,
+  );
 
-const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
-volumeSlider.addEventListener('click', e => {
-  const sliderWidth = window.getComputedStyle(volumeSlider).width;
-  const newVolume = e.offsetX / parseInt(sliderWidth);
-  audio.volume = newVolume;
-  audioPlayer.querySelector(".controls .volume-percentage").style.width = newVolume * 100 + '%';
-}, false);
+  const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
+  volumeSlider.addEventListener(
+    "click",
+    (e) => {
+      const sliderWidth = window.getComputedStyle(volumeSlider).width;
+      const newVolume = e.offsetX / parseInt(sliderWidth);
+      audio.volume = newVolume;
+      audioPlayer.querySelector(".controls .volume-percentage").style.width =
+        newVolume * 100 + "%";
+    },
+    false,
+  );
 
-setInterval(() => {
-  const progressBar = audioPlayer.querySelector(".progress");
-  progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
-  audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(audio.currentTime);
-}, 500);
+  setInterval(() => {
+    const progressBar = audioPlayer.querySelector(".progress");
+    progressBar.style.width = (audio.currentTime / audio.duration) * 100 + "%";
+    audioPlayer.querySelector(".time .current").textContent =
+      getTimeCodeFromNum(audio.currentTime);
+  }, 500);
 
-const playBtn = audioPlayer.querySelector(".controls .toggle-play");
-playBtn.addEventListener("click", () => {
-  if (audio.paused) {
-    playBtn.classList.remove("play");
-    playBtn.classList.add("pause");
-    audio.play();
-  } else {
-    playBtn.classList.remove("pause");
-    playBtn.classList.add("play");
-    audio.pause();
-  }
-}, false);
-
-audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
-  const volumeEl = audioPlayer.querySelector(".volume-container .volume");
-  audio.muted = !audio.muted;
-  if (audio.muted) {
-    volumeEl.classList.remove("icono-volumeMedium");
-    volumeEl.classList.add("icono-volumeMute");
-  } else {
-    volumeEl.classList.add("icono-volumeMedium");
-    volumeEl.classList.remove("icono-volumeMute");
-  }
-});
-
-function getTimeCodeFromNum(num) {
-  let seconds = parseInt(num);
-  let minutes = parseInt(seconds / 60);
-  seconds -= minutes * 60;
-  const hours = parseInt(minutes / 60);
-  minutes -= hours * 60;
-  if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-  return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-}
-</script>
-<script src="https://status.cafe/current-status.js?name=princss" defer=""></script>
-<script>
-const weeks = ["S", "M", "T", "W", "T", "F", "S"];
-const holidays = [];
-const holidaysDate = holidays.map((holiday) => new Date(holiday));
-const config = { displayMonthNumber: 1 };
-
-const date = new Date();
-let year = date.getFullYear();
-let month = date.getMonth() + 1;
-
-function showCalendar(year, month) {
-  month = month;
-  if (month < 1) { year--; month = 2; }
-  for (let i = 0; i < config.displayMonthNumber; i++) {
-    const calendarHtml = createCalendar(year, month);
-    const sec = document.createElement("section");
-    sec.innerHTML = calendarHtml;
-    document.querySelector("#calendar").appendChild(sec);
-    month++;
-    if (month > 12) { year++; month = 1; }
-  }
-}
-
-function createCalendar(year, month) {
-  const startDate = new Date(year, month - 1, 1);
-  const endDate = new Date(year, month, 0);
-  const endDayCount = endDate.getDate();
-  const lastMonthEndDate = new Date(year, month - 1, 0);
-  const lastMonthEndDayCount = lastMonthEndDate.getDate();
-  const startDay = startDate.getDay();
-  let dayCount = 1;
-  let calendarHtml = "";
-
-  calendarHtml += "<h1>" + month + " / " + year + "</h1>";
-  calendarHtml += "<table>";
-
-  for (let i = 0; i < weeks.length; i++) {
-    calendarHtml += "<td>" + weeks[i] + "</td>";
-  }
-
-  for (let w = 0; w < 6; w++) {
-    calendarHtml += "<tr>";
-    for (let d = 0; d < 7; d++) {
-      if (w == 0 && d < startDay) {
-        let num = lastMonthEndDayCount - startDay + d + 1;
-        calendarHtml += '<td class="is-disabled">' + num + "</td>";
-      } else if (dayCount > endDayCount) {
-        let num = dayCount - endDayCount;
-        calendarHtml += '<td class="is-disabled">' + num + "</td>";
-        dayCount++;
+  const playBtn = audioPlayer.querySelector(".controls .toggle-play");
+  playBtn.addEventListener(
+    "click",
+    () => {
+      if (audio.paused) {
+        playBtn.classList.remove("play");
+        playBtn.classList.add("pause");
+        audio.play();
       } else {
-        let cssClass = "";
-        if (date.getMonth() == month - 1 && date.getDate() == dayCount) {
-          cssClass += "today";
-        }
-        if (isHoliday(year, month - 1, dayCount)) {
-          cssClass += " holiday";
-        }
-        calendarHtml += `<td class="${cssClass}">${dayCount}</td>`;
-        dayCount++;
+        playBtn.classList.remove("pause");
+        playBtn.classList.add("play");
+        audio.pause();
+      }
+    },
+    false,
+  );
+
+  audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
+    const volumeEl = audioPlayer.querySelector(".volume-container .volume");
+    audio.muted = !audio.muted;
+    if (audio.muted) {
+      volumeEl.classList.remove("icono-volumeMedium");
+      volumeEl.classList.add("icono-volumeMute");
+    } else {
+      volumeEl.classList.add("icono-volumeMedium");
+      volumeEl.classList.remove("icono-volumeMute");
+    }
+  });
+
+  function getTimeCodeFromNum(num) {
+    let seconds = parseInt(num);
+    let minutes = parseInt(seconds / 60);
+    seconds -= minutes * 60;
+    const hours = parseInt(minutes / 60);
+    minutes -= hours * 60;
+    if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+    return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+  }
+</script>
+<script>
+  (async function () {
+    const username = "larrasket";
+    const container = document.getElementById("github-content");
+    try {
+      const res = await fetch(
+        `https://api.github.com/users/${username}/events/public?per_page=5`,
+      );
+      const events = await res.json();
+      if (events.length === 0) {
+        container.textContent = "No recent activity";
+        return;
+      }
+      // Find the most recent push event
+      const pushEvent = events.find((e) => e.type === "PushEvent");
+      if (pushEvent) {
+        const repo = pushEvent.repo.name.split("/")[1];
+        const commit = pushEvent.payload.commits?.[0];
+        const msg = commit ? commit.message.split("\n")[0] : "pushed code";
+        const time = new Date(pushEvent.created_at);
+        const ago = getTimeAgo(time);
+        container.innerHTML = `<span class="github-emoji">code:</span> ${ago}: <em>${msg.substring(0, 40)}${msg.length > 40 ? "..." : ""}</em> → <a href="https://github.com/${pushEvent.repo.name}" target="_blank">${repo}</a>`;
+      } else {
+        const event = events[0];
+        const repo = event.repo.name.split("/")[1];
+        const time = new Date(event.created_at);
+        const ago = getTimeAgo(time);
+        container.innerHTML = `<span class="github-emoji">⭐</span> ${ago}: activity on <a href="https://github.com/${event.repo.name}" target="_blank">${repo}</a>`;
+      }
+    } catch (e) {
+      container.textContent = "Could not load activity";
+    }
+    function getTimeAgo(date) {
+      const seconds = Math.floor((new Date() - date) / 1000);
+      if (seconds < 60) return "just now";
+      const minutes = Math.floor(seconds / 60);
+      if (minutes < 60) return `${minutes}m ago`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 24) return `${hours}h ago`;
+      const days = Math.floor(hours / 24);
+      if (days < 30) return `${days}d ago`;
+      return `${Math.floor(days / 30)}mo ago`;
+    }
+  })();
+</script>
+<script>
+  const weeks = ["S", "M", "T", "W", "T", "F", "S"];
+  const holidays = [];
+  const holidaysDate = holidays.map((holiday) => new Date(holiday));
+  const config = { displayMonthNumber: 1 };
+
+  const date = new Date();
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+
+  function showCalendar(year, month) {
+    month = month;
+    if (month < 1) {
+      year--;
+      month = 2;
+    }
+    for (let i = 0; i < config.displayMonthNumber; i++) {
+      const calendarHtml = createCalendar(year, month);
+      const sec = document.createElement("section");
+      sec.innerHTML = calendarHtml;
+      document.querySelector("#calendar").appendChild(sec);
+      month++;
+      if (month > 12) {
+        year++;
+        month = 1;
       }
     }
-    calendarHtml += "</tr>";
   }
-  calendarHtml += "</table>";
-  return calendarHtml;
-}
 
-function isHoliday(year, month, day) {
-  return holidaysDate.some((holiday) => {
-    return (holiday.getFullYear() == year && holiday.getMonth() == month && holiday.getDate() == day);
-  });
-}
+  function createCalendar(year, month) {
+    const startDate = new Date(year, month - 1, 1);
+    const endDate = new Date(year, month, 0);
+    const endDayCount = endDate.getDate();
+    const lastMonthEndDate = new Date(year, month - 1, 0);
+    const lastMonthEndDayCount = lastMonthEndDate.getDate();
+    const startDay = startDate.getDay();
+    let dayCount = 1;
+    let calendarHtml = "";
 
-function moveCalendar(e) {
-  document.querySelector("#calendar").innerHTML = "";
-  if (e.target.id === "prev") {
-    month--;
-    if (month < 1) { year--; month = 12; }
+    calendarHtml += "<h1>" + month + " / " + year + "</h1>";
+    calendarHtml += "<table>";
+
+    for (let i = 0; i < weeks.length; i++) {
+      calendarHtml += "<td>" + weeks[i] + "</td>";
+    }
+
+    for (let w = 0; w < 6; w++) {
+      calendarHtml += "<tr>";
+      for (let d = 0; d < 7; d++) {
+        if (w == 0 && d < startDay) {
+          let num = lastMonthEndDayCount - startDay + d + 1;
+          calendarHtml += '<td class="is-disabled">' + num + "</td>";
+        } else if (dayCount > endDayCount) {
+          let num = dayCount - endDayCount;
+          calendarHtml += '<td class="is-disabled">' + num + "</td>";
+          dayCount++;
+        } else {
+          let cssClass = "";
+          if (date.getMonth() == month - 1 && date.getDate() == dayCount) {
+            cssClass += "today";
+          }
+          if (isHoliday(year, month - 1, dayCount)) {
+            cssClass += " holiday";
+          }
+          calendarHtml += `<td class="${cssClass}">${dayCount}</td>`;
+          dayCount++;
+        }
+      }
+      calendarHtml += "</tr>";
+    }
+    calendarHtml += "</table>";
+    return calendarHtml;
   }
-  if (e.target.id === "next") {
-    month++;
-    if (month > 12) { year++; month = 1; }
+
+  function isHoliday(year, month, day) {
+    return holidaysDate.some((holiday) => {
+      return (
+        holiday.getFullYear() == year &&
+        holiday.getMonth() == month &&
+        holiday.getDate() == day
+      );
+    });
   }
+
+  function moveCalendar(e) {
+    document.querySelector("#calendar").innerHTML = "";
+    if (e.target.id === "prev") {
+      month--;
+      if (month < 1) {
+        year--;
+        month = 12;
+      }
+    }
+    if (e.target.id === "next") {
+      month++;
+      if (month > 12) {
+        year++;
+        month = 1;
+      }
+    }
+    showCalendar(year, month);
+  }
+
+  document.querySelector("#prev").addEventListener("click", moveCalendar);
+  document.querySelector("#next").addEventListener("click", moveCalendar);
   showCalendar(year, month);
-}
 
-document.querySelector("#prev").addEventListener("click", moveCalendar);
-document.querySelector("#next").addEventListener("click", moveCalendar);
-showCalendar(year, month);
-
-// Hamburger menu toggle
-function toggleNav() {
-  const nav = document.getElementById('mainNav');
-  nav.classList.toggle('nav-open');
-}
-
-// Close nav menu on scroll (but keep hamburger visible)
-const hamburger = document.querySelector('.hamburger');
-const nav = document.getElementById('mainNav');
-
-window.addEventListener('scroll', function() {
-  if (window.innerWidth <= 480) {
-    // Just close the nav menu on scroll, keep hamburger visible
-    nav.classList.remove('nav-open');
+  // Hamburger menu toggle
+  function toggleNav() {
+    const nav = document.getElementById("mainNav");
+    nav.classList.toggle("nav-open");
   }
-}, false);
+
+  // Close nav menu on scroll (but keep hamburger visible)
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.getElementById("mainNav");
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (window.innerWidth <= 480) {
+        // Just close the nav menu on scroll, keep hamburger visible
+        nav.classList.remove("nav-open");
+      }
+    },
+    false,
+  );
 </script>
 {{ end }}

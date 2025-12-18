@@ -243,7 +243,11 @@
         display: none;
     }
 
-    /* Neighbors widget */
+    /* Neighbors widget - full width when linkme is removed */
+    .neighbors-widget {
+        grid-column: 1 / -1;
+    }
+
     .neighbors-widget .neighbors {
         border: none;
     }

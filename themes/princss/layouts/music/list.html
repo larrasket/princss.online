@@ -1,11 +1,8 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/music.css">
-{{ end }}
-
-{{ define "bodyAttrs" }} onload="startTime()"{{ end }}
-
-{{ define "main" }}
-<img src="/media/images/music_header.png">
+<link rel="stylesheet" href="/styles/music.css" />
+{{ end }} {{ define "bodyAttrs" }} onload="startTime()"{{ end }} {{ define
+"main" }}
+<img src="/media/images/music_header.png" />
 <div class="content">
   <div class="header">
     <div class="left-header">
@@ -13,9 +10,28 @@
     </div>
     <div class="right-header">
       <div class="navigation">
-        <a href="/music-pages/collection/" class="nav-link single" target="music-frame" onclick="clickSingleA(this)">collection</a>
-        <a href="/music-pages/discoveries/" class="nav-link single active" target="music-frame" onclick="clickSingleA(this)">discoveries</a>
-        <a href="/music-pages/favorite-albums/" class="nav-link single" target="music-frame" style="border-right: none;" onclick="clickSingleA(this)">favorite albums</a>
+        <a
+          href="/music-pages/collection/"
+          class="nav-link single"
+          target="music-frame"
+          onclick="clickSingleA(this)"
+          >collection</a
+        >
+        <a
+          href="/music-pages/discoveries/"
+          class="nav-link single active"
+          target="music-frame"
+          onclick="clickSingleA(this)"
+          >discoveries</a
+        >
+        <a
+          href="/music-pages/favorite-albums/"
+          class="nav-link single"
+          target="music-frame"
+          style="border-right: none"
+          onclick="clickSingleA(this)"
+          >favorite albums</a
+        >
       </div>
     </div>
   </div>
@@ -25,21 +41,37 @@
         <div class="music-section">
           <div class="title">listening to:</div>
           <div class="musicframe">
-            <img id="trackart" src="https://lastfm.freetls.fastly.net/i/u/174s/9903bae260baaa04c6177ebcac4b74bc.jpg">
+            <img
+              id="trackart"
+              src="https://lastfm.freetls.fastly.net/i/u/174s/9903bae260baaa04c6177ebcac4b74bc.jpg"
+            />
             <div class="trackInfo">
-              <a id="trackartist" style="pointer-events: none;" title="Artist : black midi">black midi</a>
-              <a id="tracktitle" href="https://www.last.fm/music/black+midi/_/Of+Schlagenheim" title="Of Schlagenheim by black midi" target="_blank">Of Schlagenheim</a>
+              <a
+                id="trackartist"
+                style="pointer-events: none"
+                title="Artist : black midi"
+                >black midi</a
+              >
+              <a
+                id="tracktitle"
+                href="https://www.last.fm/music/black+midi/_/Of+Schlagenheim"
+                title="Of Schlagenheim by black midi"
+                target="_blank"
+                >Of Schlagenheim</a
+              >
             </div>
           </div>
         </div>
         <div class="music-section">
           <div class="title">featured album</div>
           <div class="musicframe">
-            <img src="/media/images/music-images/songsofleonardcohen.png">
+            <img src="/media/images/music-images/songsofleonardcohen.png" />
             <div class="trackInfo">
               <div class="artist">Leonard Cohen</div>
               <div class="tracktitle">
-                <a href="https://www.youtube.com/watch?v=svitEEpI07E&list=PLiN-7mukU_RGWHfkLE_cV_CLwqyf7xIRg">
+                <a
+                  href="https://www.youtube.com/watch?v=svitEEpI07E&list=PLiN-7mukU_RGWHfkLE_cV_CLwqyf7xIRg"
+                >
                   Songs of Leonard Cohen
                 </a>
               </div>
@@ -49,7 +81,7 @@
         <div class="music-section">
           <div class="title">featured song</div>
           <div class="musicframe">
-            <img src="/media/images/music-images/loureed_transformer_2.png">
+            <img src="/media/images/music-images/loureed_transformer_2.png" />
             <div class="trackInfo">
               <div class="artist">Lou Reed</div>
               <div class="tracktitle">
@@ -62,36 +94,61 @@
         </div>
       </div>
       <div class="right">
-        <iframe name="music-frame" src="/music-pages/discoveries/" class="music-iframe" id="dynamicIframe"></iframe>
+        <iframe
+          name="music-frame"
+          src="/music-pages/discoveries/"
+          class="music-iframe"
+          id="dynamicIframe"
+        ></iframe>
       </div>
     </div>
   </div>
-  <div class="header" style="height: 24px; border-bottom: none; position: sticky; bottom: 0; box-sizing: border-box">
-    <div class="left-header" style="border-top: 1px dotted var(--darkbrown); border-bottom: none;"></div>
-    <div class="right-header" style="border-top: 1px dotted var(--darkbrown); box-sizing: border-box; padding-top: 5px; text-align: right;">
-      c. princss 2023
+  <div
+    class="header"
+    style="
+      height: 24px;
+      border-bottom: none;
+      position: sticky;
+      bottom: 0;
+      box-sizing: border-box;
+    "
+  >
+    <div
+      class="left-header"
+      style="border-top: 1px dotted var(--darkbrown); border-bottom: none"
+    ></div>
+    <div
+      class="right-header"
+      style="
+        border-top: 1px dotted var(--darkbrown);
+        box-sizing: border-box;
+        padding-top: 5px;
+        text-align: right;
+      "
+    >
+      c. lr0 2025
     </div>
   </div>
 </div>
-{{ end }}
-
-{{ define "scripts" }}
+{{ end }} {{ define "scripts" }}
 <script>
-function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  const txtEl = document.getElementById('txt');
-  if (txtEl) txtEl.innerHTML = h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
-function checkTime(i) {
-  if (i < 10) { i = "0" + i };
-  return i;
-}
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    const txtEl = document.getElementById("txt");
+    if (txtEl) txtEl.innerHTML = h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
 </script>
 <script src="/scripts/active.js"></script>
 {{ end }}

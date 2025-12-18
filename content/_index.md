@@ -1,8 +1,9 @@
 ---
-title: "The Castle"
+title: "La Vita Nouva"
 ---
-Hello, and welcome to my castle! This is a place where all of my thoughts and interests and projects live. This site may sometimes change often -- just because I'm an indecisive person by nature -- but for the most part, the content will stay the same.
 
-I don't often talk about **mature content**, but just as a precaution, you have been **warned**! This site *may* contain content that is not suitable for those who are squeamish or five years old.
+“I shall state that it was my conviction that I could not do better than continue in that in which I was engaged, viz., in devoting my whole life to the culture of my reason, and in making the greatest progress I was able in the knowledge of truth, on the principles of the method which I had prescribed to myself. This method, from the time I had begun to apply it, had been to me the source of satisfaction so intense as to lead me to, believe that more perfect or more innocent could not be enjoyed in this life; and as by its means I daily discovered truths that appeared to me of some importance, and of which other men were generally ignorant, the gratification thence arising so occupied my mind that I was wholly indifferent to every other object.” ~ René Descartes.
 
-I have been learning html and css for a couple years now, and so far this is the culmination of all those years of learning. I still don't know much, but that's the project of this whole thing: just learning how to do the things that I want to do -- such as write, code, make stuff, etc. Have fun exploring!
+
+
+Welcome to my personal website. Here's a link directly to my blog if that was your intended site: <[https://lr0.org/~saleh/](https://lr0.org/~saleh/)> 

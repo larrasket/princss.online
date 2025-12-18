@@ -1,16 +1,12 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/diary.css">
-{{ end }}
-
-{{ define "main" }}
-<img src="/media/images/diary_header.png">
+<link rel="stylesheet" href="/styles/diary.css" />
+{{ end }} {{ define "main" }}
+<img src="/media/images/diary_header.png" />
 <div class="header">
   <div class="left-header">
-    <a href="/">the castle</a> / <strong><a href="/diary/">diary</a></strong>
+    <a href="/">vita nouva</a> / <strong><a href="/diary/">diary</a></strong>
   </div>
-  <div class="right-header">
-    "and so, the pen withers away at the page"
-  </div>
+  <div class="right-header">"and so, the pen withers away at the page"</div>
 </div>
 <div class="content">
   <!-- Diary Nav -->
@@ -22,44 +18,66 @@
   <!-- Diary Entries -->
   <main>
     {{ range $index, $page := .Pages.ByDate.Reverse }}
-    <article id="{{ $page.Params.id }}"{{ if eq $index (sub (len $.Pages) 1) }} style="border-bottom: none;"{{ end }}>
+    <article
+      id="{{ $page.Params.id }}"
+      {{
+      if
+      eq
+      $index
+      (sub
+      (len
+      $.Pages)
+      1)
+      }}
+      style="border-bottom: none"
+      {{
+      end
+      }}
+    >
       <div class="page-content">
         <div class="date">{{ $page.Params.displayDate }}</div>
-        <div class="page-writing">
-          {{ $page.Content }}
-        </div>
+        <div class="page-writing">{{ $page.Content }}</div>
       </div>
     </article>
     {{ end }}
   </main>
 </div>
-<div class="header" style="border-bottom: 0px; border-top: 1px dotted var(--darkbrown); position: sticky; bottom: 0px;">
+<div
+  class="header"
+  style="
+    border-bottom: 0px;
+    border-top: 1px dotted var(--darkbrown);
+    position: sticky;
+    bottom: 0px;
+  "
+>
   <div class="left-header"></div>
-  <div class="right-header" style="padding-top: 5px;">c. princss 2023</div>
+  <div class="right-header" style="padding-top: 5px">c. lr0 2025</div>
 </div>
-{{ end }}
-
-{{ define "scripts" }}
+{{ end }} {{ define "scripts" }}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const anchors = document.querySelectorAll('nav a');
-  const articles = document.querySelectorAll('article'); 
-  const observerOptions = {
-    root: null, 
-    rootMargin: '124px', 
-    threshold: 0.2 
-  };
-  const handleIntersection = (entries, observer) => {
-    entries.forEach(entry => {
-      const anchor = document.querySelector(`a[href="#${entry.target.id}"]`);
-      if (entry.isIntersecting && anchor) {
-        anchors.forEach(a => a.classList.remove('active'));
-        anchor.classList.add('active');
-      }
-    });
-  };
-  const observer = new IntersectionObserver(handleIntersection, observerOptions);
-  articles.forEach(article => observer.observe(article));
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    const anchors = document.querySelectorAll("nav a");
+    const articles = document.querySelectorAll("article");
+    const observerOptions = {
+      root: null,
+      rootMargin: "124px",
+      threshold: 0.2,
+    };
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        const anchor = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting && anchor) {
+          anchors.forEach((a) => a.classList.remove("active"));
+          anchor.classList.add("active");
+        }
+      });
+    };
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions,
+    );
+    articles.forEach((article) => observer.observe(article));
+  });
 </script>
 {{ end }}

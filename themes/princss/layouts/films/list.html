@@ -1,20 +1,20 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="/styles/films.css">
-{{ end }}
-
-{{ define "main" }}
+<link rel="stylesheet" href="/styles/films.css" />
+{{ end }} {{ define "main" }}
 <div class="body-div">
-  <img src="/media/images/films_header.png">
-  <div class="header" style="position: sticky; top: 0px;">
+  <img src="/media/images/films_header.png" />
+  <div class="header" style="position: sticky; top: 0px">
     <div class="left-header">
-      <a href="/">the castle</a> / <a href="/films/" style="font-weight: bold;">films</a> / <a href="/films/lists/">lists</a>
+      <a href="/">vita nouva</a> /
+      <a href="/films/" style="font-weight: bold">films</a> /
+      <a href="/films/lists/">lists</a>
     </div>
     <div class="right-header">
-      "Cinema is a debased art form about which to hold strong opinions." -- <span style="font-weight: bold;">letterboxd:</span> <a href="https://letterboxd.com/princss/">princss</a>
+      "Cinema is a debased art form about which to hold strong opinions." --
+      <span style="font-weight: bold">letterboxd:</span>
+      <a href="https://letterboxd.com/princss/">princss</a>
     </div>
   </div>
-  <div class="content">
-    {{ .Content }}
-  </div>
+  <div class="content">{{ .Content }}</div>
 </div>
 {{ end }}

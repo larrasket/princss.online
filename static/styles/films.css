@@ -48,7 +48,7 @@ a:hover {
 .left {
     border-right: 1px dotted var(--darkbrown);
     text-align: center;
-    width: 200px
+    width: 200px;
 }
 .info {
     padding-top: 5px;
@@ -77,5 +77,4 @@ a:hover {
     box-sizing: border-box;
     width: 200px;
     max-height: 371px;
-    background-image: url(https://princss.online/media/images/film_frame.png);
 }
