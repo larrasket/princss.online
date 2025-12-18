@@ -17,9 +17,6 @@
     font-family: "MS UI Gothic", sans-serif;
     font-size: 14px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .hamburger:hover {
@@ -42,9 +39,6 @@
 
     .right-header.nav-open {
         display: flex !important;
-        position: sticky;
-        top: 40px;
-        z-index: 99;
         background: var(--white);
         border-bottom: 1px dotted var(--darkbrown);
     }
@@ -170,7 +164,7 @@
         text-align: center;
     }
 
-    .about img {
+    .about > img {
         max-width: 100px;
         margin: 0 auto;
     }
@@ -184,12 +178,13 @@
         height: 16px;
     }
 
-    /* Mobile widgets - 2 column grid layout */
+    /* Mobile widgets - single column full width */
     .mobile-widgets-row {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
+        display: flex !important;
+        flex-direction: column;
         gap: 10px;
         padding: 10px 5px;
+        width: 100%;
     }
 
     .mobile-widget {
@@ -210,8 +205,7 @@
     }
 
     #calendar table {
-        max-width: 100%;
-        font-size: 11px;
+        width: 100%;
     }
 
     .calendar-buttons {
@@ -254,15 +248,24 @@
 
     .neighbors-buttons {
         height: auto !important;
-        max-height: 120px;
+        min-height: unset !important;
+        max-height: none !important;
+        overflow: visible !important;
+        overflow-y: visible !important;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2px;
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .neighbors-buttons a {
+        display: inline-block;
     }
 
     .neighbors-buttons img {
-        width: 40px;
+        /* Keep original size - don't shrink buttons */
+        width: auto;
         height: auto;
     }
 
@@ -299,11 +302,16 @@
         margin: 0 auto;
     }
 
-    /* Featured image */
+    /* Featured image - full width on mobile */
     .featured-image {
-        width: 150px !important;
-        height: 150px !important;
-        margin: 0 auto;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: auto;
     }
 
     /* ===== PAGE-SPECIFIC STYLES ===== */
@@ -687,10 +695,6 @@
 
     .left-header {
         font-size: 11px;
-    }
-
-    .neighbors-buttons img {
-        width: 38px;
     }
 
     .pic {
