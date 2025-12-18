@@ -2,6 +2,7 @@ baseURL = 'https://lr0.org'
 languageCode = 'en-us'
 title = 'La Vita Nouva'
 theme = 'princss'
+buildFuture = true
 
 [markup]
   [markup.goldmark]
