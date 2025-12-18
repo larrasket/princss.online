@@ -122,8 +122,10 @@
           <!-- Featured Image - dynamically get last pic-log entry -->
           {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
           {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
+          {{/* Auto-derive alt image path: replace .png with -alt.png */}}
+          {{ $altImage := $lastPic.Params.altImage | default (replace $lastPic.Params.image ".png" "-alt.png") }}
           <div class="name-header">featured img</div>
-          <div class="featured-image" style="background-image: url({{ $lastPic.Params.altImage }});">
+          <div class="featured-image" style="background-image: url({{ $altImage }});">
             <a href="/pic-log/">
               <img src="{{ $lastPic.Params.image }}">
             </a>

@@ -363,6 +363,13 @@ def main():
     alt_parser.add_argument('--gamma', type=float, default=1.25, help='Gamma correction (higher = more dark pixels, default 1.25)')
     alt_parser.add_argument('--size', type=int, default=None, help='Resize to fit within size x size (preserves aspect ratio)')
     
+    # Generate-alts command - batch generate alt images for a directory
+    gen_alts_parser = subparsers.add_parser('generate-alts', help='Generate alt images for all images in a directory')
+    gen_alts_parser.add_argument('directory', help='Directory containing images')
+    gen_alts_parser.add_argument('--gamma', type=float, default=1.25, help='Gamma correction (default 1.25)')
+    gen_alts_parser.add_argument('--suffix', default='-alt', help='Suffix for alt images (default: -alt)')
+    gen_alts_parser.add_argument('--force', action='store_true', help='Regenerate even if alt already exists')
+    
     args = parser.parse_args()
     
     if args.command == 'text':
@@ -401,6 +408,46 @@ def main():
         )
         img.save(args.output)
         print(f"Alt image saved to: {args.output}")
+    
+    elif args.command == 'generate-alts':
+        import os
+        import glob
+        
+        directory = args.directory
+        suffix = args.suffix
+        gamma = args.gamma
+        force = args.force
+        
+        # Find all image files (excluding existing alt images)
+        patterns = ['*.png', '*.jpg', '*.jpeg', '*.PNG', '*.JPG', '*.JPEG']
+        images = []
+        for pattern in patterns:
+            images.extend(glob.glob(os.path.join(directory, pattern)))
+        
+        # Filter out existing alt images
+        images = [img for img in images if '-alt' not in img and '_alt' not in img]
+        
+        generated = 0
+        skipped = 0
+        
+        for img_path in sorted(images):
+            base, ext = os.path.splitext(img_path)
+            alt_path = f"{base}{suffix}.png"  # Always save as PNG for transparency
+            
+            if os.path.exists(alt_path) and not force:
+                print(f"  Skipping {os.path.basename(img_path)} (alt exists)")
+                skipped += 1
+                continue
+            
+            try:
+                alt_img = generate_alt_image(img_path, gamma=gamma)
+                alt_img.save(alt_path)
+                print(f"  Generated: {os.path.basename(alt_path)}")
+                generated += 1
+            except Exception as e:
+                print(f"  Error processing {os.path.basename(img_path)}: {e}")
+        
+        print(f"\nDone! Generated {generated} alt images, skipped {skipped}")
         
     else:
         parser.print_help()

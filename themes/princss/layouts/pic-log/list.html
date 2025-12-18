@@ -9,8 +9,10 @@
 </div>
 <div class="pic-log">
   {{ range .Pages.ByDate.Reverse }}
+  {{/* Auto-derive alt image path: replace .png with -alt.png */}}
+  {{ $altImage := .Params.altImage | default (replace .Params.image ".png" "-alt.png") }}
   <div class="pic">
-    <div class="picture" style="background-image: url({{ .Params.altImage }})">
+    <div class="picture" style="background-image: url({{ $altImage }})">
       <img src="{{ .Params.image }}">
     </div>
     <div class="pic-date">
