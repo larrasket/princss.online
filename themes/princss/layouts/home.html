@@ -119,11 +119,13 @@
               </div>
             </div>
           </div>
-          <!-- Featured Image -->
+          <!-- Featured Image - dynamically get last pic-log entry -->
+          {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
+          {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
           <div class="name-header">featured img</div>
-          <div class="featured-image" style="background-image: url(/media/images/featured-images/08_20_2025-alt.png);">
+          <div class="featured-image" style="background-image: url({{ $lastPic.Params.altImage }});">
             <a href="/pic-log/">
-              <img src="/media/images/featured-images/08_20_2025.png">
+              <img src="{{ $lastPic.Params.image }}">
             </a>
           </div>
         </div>
