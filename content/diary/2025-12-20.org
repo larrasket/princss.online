@@ -1,9 +1,10 @@
 :PROPERTIES:
-:ID:       qyuh7gs0ksk0
-:CUSTOM_ID: qyuh7gs0ksk0
+:ID:       ia8cdps0ksk0
+:CUSTOM_ID: ia8cdps0ksk0
 :END:
-#+title: I really hate Microsoft
+#+title: "Diary Entry - December 19, 2025"
 
-I don't think I ever got to express how much I hate [[id:7jpiga90whk0][Microsoft]]
+okokokok
 
+[[id:qyuh7gs0ksk0][I really hate Microsoft]]
 
