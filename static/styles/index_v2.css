@@ -30,7 +30,7 @@ body {
     -webkit-transition: 0.25s;
 }
 .left-header a:hover {
-    opacity: 70%;;
+    opacity: 70%;
     -webkit-transition: 0.25s;
 }
 .button {
@@ -47,7 +47,6 @@ body {
     border-bottom: 1px dotted var(--darkbrown);
 }
 .neighbors {
-
 }
 .neighbors-title {
     font-weight: bold;
@@ -70,7 +69,7 @@ body {
     text-decoration: none;
 }
 .neighbors-buttons img {
-    filter: brightness(75%) sepia(1) hue-rotate(-34deg) saturate(76.3%) brightness(154.3%);
+    filter: grayscale(100%) sepia(12%) brightness(108%);
     -webkit-transition: 0.25s;
 }
 .neighbors-buttons img:hover {
@@ -134,7 +133,7 @@ body {
     overflow: hidden;
     height: 0;
     transition: height 0.25s ease-out;
-    border: 1px dotted var(--darkbrown)
+    border: 1px dotted var(--darkbrown);
 }
 .dropdown-menu a.dropdown-link {
     box-sizing: border-box;
@@ -197,7 +196,6 @@ a.dropdown-link:hover {
     text-align: center;
 }
 #github-activity {
-
 }
 #github-username {
     color: var(--white);
@@ -258,7 +256,9 @@ a.dropdown-link:hover {
     display: flex;
     width: 800px;
 }
-.footer-left, .footer-middle, .footer-right {
+.footer-left,
+.footer-middle,
+.footer-right {
     padding: 3px;
 }
 .footer-left {

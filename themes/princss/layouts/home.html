@@ -61,7 +61,7 @@
       <div class="neighbors-widget">
         <!-- Neighbors -->
         <div class="neighbors">
-          <div class="neighbors-title">neighbors</div>
+          <div class="neighbors-title">buttons and propaganda</div>
           <div class="neighbors-buttons">{{ partial "neighbors.html" . }}</div>
         </div>
       </div>
@@ -186,7 +186,7 @@
         getTimeCodeFromNum(audio.duration);
       audio.volume = 0.75;
     },
-    false,
+    false
   );
 
   const timeline = audioPlayer.querySelector(".timeline");
@@ -197,7 +197,7 @@
       const timeToSeek = (e.offsetX / parseInt(timelineWidth)) * audio.duration;
       audio.currentTime = timeToSeek;
     },
-    false,
+    false
   );
 
   const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
@@ -210,7 +210,7 @@
       audioPlayer.querySelector(".controls .volume-percentage").style.width =
         newVolume * 100 + "%";
     },
-    false,
+    false
   );
 
   setInterval(() => {
@@ -234,7 +234,7 @@
         audio.pause();
       }
     },
-    false,
+    false
   );
 
   audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
@@ -256,7 +256,9 @@
     const hours = parseInt(minutes / 60);
     minutes -= hours * 60;
     if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-    return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+    return `${String(hours).padStart(2, 0)}:${minutes}:${String(
+      seconds % 60
+    ).padStart(2, 0)}`;
   }
 </script>
 <script>
@@ -265,7 +267,7 @@
     const container = document.getElementById("github-content");
     try {
       const res = await fetch(
-        `https://api.github.com/users/${username}/events/public?per_page=5`,
+        `https://api.github.com/users/${username}/events/public?per_page=5`
       );
       const events = await res.json();
       if (events.length === 0) {
@@ -280,7 +282,12 @@
         const msg = commit ? commit.message.split("\n")[0] : "pushed code";
         const time = new Date(pushEvent.created_at);
         const ago = getTimeAgo(time);
-        container.innerHTML = `<span class="github-emoji">code:</span> ${ago}: <em>${msg.substring(0, 40)}${msg.length > 40 ? "..." : ""}</em> → <a href="https://github.com/${pushEvent.repo.name}" target="_blank">${repo}</a>`;
+        container.innerHTML = `<span class="github-emoji">code:</span> ${ago}: <em>${msg.substring(
+          0,
+          40
+        )}${msg.length > 40 ? "..." : ""}</em> → <a href="https://github.com/${
+          pushEvent.repo.name
+        }" target="_blank">${repo}</a>`;
       } else {
         const event = events[0];
         const repo = event.repo.name.split("/")[1];
@@ -429,7 +436,7 @@
         nav.classList.remove("nav-open");
       }
     },
-    false,
+    false
   );
 </script>
 {{ end }}
