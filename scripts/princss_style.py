@@ -131,7 +131,7 @@ def generate_text_banner(
     font_size: int = 60,
     with_flourish: bool = True,
     dither: bool = True,
-    target_text_width: int = 252,
+    target_text_width: int = None,
     target_text_height: int = 29,
     gamma: float = 2.2
 ) -> Image.Image:
@@ -145,7 +145,7 @@ def generate_text_banner(
         font_size: Base font size (rendered at 4x then scaled down)
         with_flourish: Add decorative flourish ornament below text
         dither: Apply 1-bit dithering to text (like original)
-        target_text_width: Target width for text after scaling (252 = original)
+        target_text_width: Target width for text after scaling (None = adaptive based on text)
         target_text_height: Target height for text after scaling (29 = original)
         gamma: Gamma correction for dithering density (2.0 = match original ~29%)
         
@@ -176,8 +176,16 @@ def generate_text_banner(
     # Crop to just the text
     text_only = temp.crop((0, 0, text_width + 4, text_height + 4))
     
+    # Calculate target width: adaptive if not specified
+    if target_text_width is None:
+        # Scale to target height, maintaining aspect ratio
+        scale_factor = target_text_height / text_only.height
+        actual_target_width = int(text_only.width * scale_factor)
+    else:
+        actual_target_width = target_text_width
+    
     # Scale to target dimensions (creates anti-aliased grays for dithering)
-    text_scaled = text_only.resize((target_text_width, target_text_height), Image.LANCZOS)
+    text_scaled = text_only.resize((actual_target_width, target_text_height), Image.LANCZOS)
     
     # Apply gamma correction to darken midtones for more dithering dots
     pixels_pre = np.array(text_scaled, dtype=np.float64)
@@ -186,7 +194,7 @@ def generate_text_banner(
     
     # Create grayscale canvas and paste text centered
     text_img = Image.new('L', (width, text_area_height), 255)
-    x = (width - target_text_width) // 2
+    x = (width - actual_target_width) // 2
     y = 2  # Start near top like original
     text_img.paste(text_dark, (x, y))
     
@@ -235,11 +243,11 @@ def generate_header(
         font_size: Font size for text
         
     Returns:
-        Combined PIL Image (RGB with white background)
+        Combined PIL Image (RGBA with transparent background)
     """
-    # Load and dither the image
+    # Load and dither the image with transparent background
     source = Image.open(image_path)
-    dithered = princss_1bit_dither(source, transparent_bg=False)
+    dithered = princss_1bit_dither(source, transparent_bg=True)
     
     # Generate text banner at same width
     text_banner = generate_text_banner(
@@ -249,15 +257,13 @@ def generate_header(
         font_size=font_size
     )
     
-    # Combine vertically (white background)
+    # Combine vertically (transparent background)
     combined_height = dithered.height + text_height
-    combined = Image.new('RGB', (dithered.width, combined_height), COLORS['light'])
-    combined.paste(dithered, (0, 0))
+    combined = Image.new('RGBA', (dithered.width, combined_height), COLORS['transparent'])
+    combined.paste(dithered, (0, 0), dithered)
     
-    # Paste text banner (convert RGBA to RGB with white bg)
-    text_rgb = Image.new('RGB', text_banner.size, COLORS['light'])
-    text_rgb.paste(text_banner, mask=text_banner.split()[3])  # Use alpha as mask
-    combined.paste(text_rgb, (0, dithered.height))
+    # Paste text banner with transparency
+    combined.paste(text_banner, (0, dithered.height), text_banner)
     
     return combined
 
