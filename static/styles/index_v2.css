@@ -58,7 +58,6 @@ body {
 .neighbors-buttons {
     overflow: hidden;
     overflow-y: scroll;
-    height: 299px;
     min-height: 299px;
     padding-top: 2px;
 }

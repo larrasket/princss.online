@@ -26,21 +26,29 @@
 
 /* Mobile Navigation Hidden by Default - phones only */
 @media screen and (max-width: 480px) {
+    /* Disable sticky header on mobile to prevent overlap */
+    .header {
+        position: relative !important;
+    }
+
     .hamburger {
         display: block;
         width: 100%;
+        position: relative !important;
     }
 
     .right-header {
         display: none !important;
         flex-direction: column !important;
         width: 100% !important;
+        position: relative !important;
     }
 
     .right-header.nav-open {
         display: flex !important;
         background: var(--white);
         border-bottom: 1px dotted var(--darkbrown);
+        position: relative !important;
     }
 
     .right-header.nav-open .nav-link {
@@ -196,25 +204,32 @@
 
     /* Calendar takes full width */
     .calendar-widget {
-        grid-column: 1 / -1;
+        width: 100%;
     }
 
     #calendar {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     #calendar table {
-        width: 100%;
+        width: 100% !important;
+    }
+
+    #calendar td {
+        max-width: none !important;
     }
 
     .calendar-buttons {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .calendar-buttons button {
         flex: 1;
+        width: auto !important;
         min-width: 40px;
         font-size: 14px;
         padding: 5px;

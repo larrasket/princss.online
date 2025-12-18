@@ -1,10 +1,10 @@
 :root {
     --darkbrown: #190503;
-    --white: #f5e8e7;
+    --white: #f0f0f0;
 }
 html {
     background-color: var(--white);
-    font-family: 'MS UI Gothic';
+    font-family: "MS UI Gothic";
     font-size: 14px;
     color: var(--darkbrown);
     image-rendering: pixelated;
