@@ -311,23 +311,14 @@ function toggleNav() {
   nav.classList.toggle('nav-open');
 }
 
-// Hide hamburger menu on scroll down, show on scroll up
-let lastScrollTop = 0;
+// Close nav menu on scroll (but keep hamburger visible)
 const hamburger = document.querySelector('.hamburger');
 const nav = document.getElementById('mainNav');
 
 window.addEventListener('scroll', function() {
-  if (window.innerWidth <= 768) {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop && scrollTop > 50) {
-      // Scrolling down
-      hamburger.classList.add('hidden');
-      nav.classList.remove('nav-open');
-    } else {
-      // Scrolling up
-      hamburger.classList.remove('hidden');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  if (window.innerWidth <= 480) {
+    // Just close the nav menu on scroll, keep hamburger visible
+    nav.classList.remove('nav-open');
   }
 }, false);
 </script>

@@ -139,3 +139,10 @@ a:hover {
     border-left: 1px dotted var(--lightgold);
     width: 600px;
 }
+.music-iframe {
+    border: none;
+    width: 600px;
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}

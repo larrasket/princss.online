@@ -191,3 +191,94 @@ body {
     width: 100%;
     text-align: right;
 }
+
+/* Mobile responsive - for iframe content */
+@media screen and (max-width: 480px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .page-header {
+        width: 100% !important;
+    }
+
+    .content {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .collection {
+        justify-content: center;
+    }
+
+    .collection-album {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .collection-album img {
+        max-width: 80px !important;
+        height: auto !important;
+    }
+
+    .discovery {
+        flex-direction: row;
+    }
+
+    .discovery-left img {
+        max-width: 60px !important;
+        height: auto !important;
+    }
+
+    .my-equipment {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .favorite-album {
+        width: 100% !important;
+        flex-direction: row;
+    }
+
+    .favorite-image {
+        height: auto !important;
+        max-width: 60px;
+        flex-shrink: 0;
+    }
+
+    .favorite-image img {
+        max-width: 60px !important;
+        height: auto !important;
+    }
+
+    .favorite-right {
+        flex: 1 !important;
+        width: auto !important;
+        font-size: 11px;
+    }
+
+    .favorite-desc {
+        height: auto !important;
+    }
+
+    .favorite-name {
+        height: auto !important;
+    }
+
+    .favorite-rank {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .titles {
+        min-width: auto !important;
+        max-width: 100% !important;
+    }
+}

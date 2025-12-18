@@ -1,589 +1,678 @@
 /* Responsive CSS for princss.online */
 /* Mobile-first responsive design with hamburger menu */
+/* Only phones (480px and below) get mobile layout - tablets see desktop */
 
 :root {
-  --mobile-padding: 10px;
+    --mobile-padding: 10px;
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-  display: none;
-  cursor: pointer;
-  padding: 10px;
-  background: var(--darkbrown);
-  color: var(--white);
-  border: 1px dotted var(--white);
-  font-family: 'MS UI Gothic', sans-serif;
-  font-size: 14px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: transform 0.3s ease;
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background: var(--darkbrown);
+    color: var(--white);
+    border: 1px dotted var(--white);
+    font-family: "MS UI Gothic", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .hamburger:hover {
-  background: var(--white);
-  color: var(--darkbrown);
+    background: var(--white);
+    color: var(--darkbrown);
 }
 
-/* Hidden hamburger state when scrolling down */
-.hamburger.hidden {
-  transform: translateY(-100%);
-}
-
-/* Mobile Navigation Hidden by Default */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    width: 100%;
-  }
-
-  .right-header {
-    display: none !important;
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  .right-header.nav-open {
-    display: flex !important;
-    position: sticky;
-    top: 40px;
-    z-index: 99;
-    background: var(--darkbrown);
-  }
-
-  .right-header .nav-link {
-    width: 100% !important;
-    border-right: none !important;
-    border-bottom: 1px dotted var(--white);
-  }
-
-  .right-header .nav-link:last-child {
-    border-bottom: none;
-  }
-
-  /* Homepage mobile reordering - use flexbox order */
-  .content {
-    flex-direction: column !important;
-    width: 100% !important;
-    display: flex !important;
-  }
-
-  /* Move .left (calendar & neighbors) to end on mobile */
-  .content > .left {
-    order: 2 !important;
-    border-bottom: none !important;
-    border-top: 1px dotted var(--darkbrown);
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-
-  .content > .right {
-    order: 1 !important;
-  }
-
-  .dropdown-menu {
-    position: relative !important;
-    top: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Body and containers */
-  body {
-    padding: 5px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
-  /* Header images */
-  img[src*="header"], .header-image {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Main header */
-  .header {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  .left-header {
-    width: 100% !important;
-    border-right: none !important;
-    border-bottom: 1px dotted var(--darkbrown);
-    text-align: center;
-    padding: 8px 5px;
-  }
-
-  /* Content areas */
-  .content {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  .left, .right {
-    width: 100% !important;
-    border-right: none !important;
-  }
-
-  .left {
-    border-bottom: 1px dotted var(--darkbrown);
-    padding-bottom: 10px;
-  }
-
-  /* Homepage main content - creative 2-column layout on mobile */
-  .main-content {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-  }
-
-  .main-content-left {
-    width: 60% !important;
-    border-left: none !important;
-    border-right: 1px dotted var(--darkbrown) !important;
-    padding-right: 10px;
-  }
-
-  .main-content-right {
-    width: 40% !important;
-    border-left: none !important;
-    border-top: none !important;
-    padding-left: 10px;
-    padding-top: 0;
-  }
-
-  /* About section styling for mobile */
-  .about {
-    text-align: center;
-  }
-
-  .about img {
-    max-width: 100px;
-    margin: 0 auto;
-  }
-
-  .about-statuses {
-    font-size: 12px;
-  }
-
-  .about-status {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .about-status img {
-    width: 16px;
-    height: 16px;
-  }
-
-  /* Calendar */
-  #calendar {
-    display: flex;
-    justify-content: center;
-  }
-
-  #calendar table {
-    max-width: 100%;
-  }
-
-  .calendar-buttons {
-    display: flex;
-    justify-content: center;
-  }
-
-  .calendar-buttons button {
-    flex: 1;
-    min-width: 80px;
-  }
-
-  /* Neighbors */
-  .neighbors-buttons {
-    height: auto !important;
-    max-height: 180px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2px;
-  }
-
-  .neighbors-buttons img {
-    width: 44px;
-    height: auto;
-  }
-
-  /* Updates iframe */
-  .updates iframe {
-    width: 100% !important;
-    height: 150px !important;
-  }
-
-  /* Footer */
-  .footer {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  .footer-left, .footer-middle, .footer-right {
-    width: 100% !important;
-    border-left: none !important;
-    border-bottom: 1px dotted var(--darkbrown);
-    text-align: center;
-    padding: 5px;
-  }
-
-  .footer-right {
-    border-bottom: none !important;
-  }
-
-  /* Audio player */
-  .audio-player {
-    width: 100% !important;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  /* Featured image */
-  .featured-image {
-    width: 150px !important;
-    height: 150px !important;
-    margin: 0 auto;
-  }
-
-  /* ===== PAGE-SPECIFIC STYLES ===== */
-
-  /* Diary page */
-  .diary-content {
-    flex-direction: column !important;
-  }
-
-  nav {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 120px;
-    overflow-y: auto !important;
-    position: relative !important;
-  }
-
-  main {
-    width: 100% !important;
-    border-left: none !important;
-  }
-
-  article, .page-writing {
-    padding: 10px !important;
-  }
-
-  .page-writing img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Films page */
-  .body-div {
-    width: 100% !important;
-  }
-
-  .film-list {
-    flex-direction: column !important;
-  }
-
-  .film {
-    width: 100% !important;
-  }
-
-  /* Music page */
-  .music-container, .container {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  /* Music page navigation - make tabs visible and horizontal */
-  .navigation {
-    flex-wrap: wrap !important;
-    width: 100% !important;
-  }
-
-  .navigation a.nav-link {
-    flex: 1 !important;
-    min-width: 33% !important;
-    border-right: 1px dotted var(--darkbrown) !important;
-    font-size: 12px !important;
-    padding: 8px 4px !important;
-  }
-
-  .navigation a.nav-link:last-child {
-    border-right: none !important;
-  }
-
-  /* Music page main content layout for mobile */
-  .content .main-content .left {
-    order: 1 !important;
-    width: 100% !important;
-    border-right: none !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .content .main-content .left .music-section {
-    flex: 1 1 calc(50% - 10px) !important;
-    min-width: 140px;
-    border-bottom: none !important;
-  }
-
-  .content .main-content .left .music-section:first-child {
-    flex: 1 1 100%;
-  }
-
-  .content .main-content .left .music-section #trackart,
-  .content .main-content .left .music-section img {
-    width: 100% !important;
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .content .main-content .left .trackInfo {
-    width: 100% !important;
-    font-size: 12px;
-  }
-
-  .content .main-content .right {
-    order: 2 !important;
-    width: 100% !important;
-  }
-
-  .content .main-content .right iframe {
-    width: 100% !important;
-    height: 400px !important;
-  }
-
-  .music-nav {
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .music-nav a {
-    flex: 1;
-    min-width: 80px;
-    text-align: center;
-    padding: 8px 5px;
-  }
-
-  .music-iframe {
-    width: 100% !important;
-    height: 500px !important;
-  }
-
-  /* Music sub-pages */
-  .page-header {
-    text-align: center;
-  }
-
-  .collection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .collection-album {
-    width: 80px !important;
-    height: 80px !important;
-  }
-
-  .collection-album span {
-    font-size: 9px !important;
-  }
-
-  .my-equipment {
-    display: none;
-  }
-
-  .equipment-label {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    display: block;
-    margin: 5px 0;
-  }
-
-  .discovery {
-    flex-direction: column !important;
-  }
-
-  .discovery-left, .discovery-right {
-    width: 100% !important;
-  }
-
-  .discovery-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .discovery-left img {
-    width: 80px !important;
-    height: auto;
-  }
-
-  .favorite-album {
-    flex-direction: column !important;
-  }
-
-  .favorite-left, .favorite-right {
-    width: 100% !important;
-  }
-
-  .favorite-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .favorite-image img {
-    width: 80px !important;
-    height: auto;
-  }
-
-  /* Microblog - keep 2 column layout but adjust widths */
-  .posts {
-    width: 100% !important;
-  }
-
-  .post {
-    width: 100% !important;
-  }
-
-  .post-info {
-    width: 100px !important;
-    min-width: 100px !important;
-    border-right: 1px dotted var(--darkbrown);
-    padding: 5px;
-  }
-
-  .post-info img {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .post-info .info {
-    font-size: 10px;
-  }
-
-  .post-info .info .name {
-    font-size: 11px;
-  }
-
-  .post-info .info .date,
-  .post-info .info .time {
-    font-size: 9px;
-  }
-
-  .post-content {
-    width: calc(100% - 100px) !important;
-    padding: 5px !important;
-    font-size: 12px;
-  }
-
-  /* Guestbook */
-  .guestbook-content {
-    width: 100% !important;
-    padding: 10px !important;
-  }
-
-  /* Pic log */
-  .pic-log {
-    width: 100% !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .pic {
-    width: calc(50% - 10px) !important;
-    max-height: none !important;
-  }
-
-  .pic-desc {
-    opacity: 1 !important;
-    font-size: 11px;
-  }
-
-  /* Sitemap */
-  .sitemap {
-    width: 100% !important;
-    overflow-x: auto;
-  }
-
-  .sitemap-row {
-    width: 100% !important;
-    flex-wrap: wrap;
-  }
-
-  .sitemap-row a {
-    flex: 1;
-    min-width: 60px;
-    font-size: 10px;
-  }
-
-  /* Updates page */
-  .update {
-    width: 100% !important;
-  }
+/* Mobile Navigation Hidden by Default - phones only */
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: block;
+        width: 100%;
+    }
+
+    .right-header {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .right-header.nav-open {
+        display: flex !important;
+        position: sticky;
+        top: 40px;
+        z-index: 99;
+        background: var(--white);
+        border-bottom: 1px dotted var(--darkbrown);
+    }
+
+    .right-header.nav-open .nav-link {
+        background: var(--white) !important;
+        color: var(--darkbrown) !important;
+        border-bottom: 1px dotted var(--darkbrown) !important;
+    }
+
+    .right-header.nav-open .nav-link:hover {
+        background: var(--darkbrown) !important;
+        color: var(--white) !important;
+    }
+
+    .right-header .nav-link {
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px dotted var(--white);
+    }
+
+    .right-header .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Homepage mobile reordering - use flexbox order */
+    .content {
+        flex-direction: column !important;
+        width: 100% !important;
+        display: flex !important;
+    }
+
+    /* Move .left (calendar & neighbors) to end on mobile */
+    .content > .left {
+        order: 2 !important;
+        border-bottom: none !important;
+        border-top: 1px dotted var(--darkbrown);
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .content > .right {
+        order: 1 !important;
+    }
+
+    .dropdown-menu {
+        position: relative !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Body and containers */
+    body {
+        padding: 5px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* Header images */
+    img[src*="header"],
+    .header-image {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Main header */
+    .header {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .left-header {
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px dotted var(--darkbrown);
+        text-align: center;
+        padding: 8px 5px;
+    }
+
+    /* Content areas */
+    .content {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .left,
+    .right {
+        width: 100% !important;
+        border-right: none !important;
+    }
+
+    .left {
+        border-bottom: 1px dotted var(--darkbrown);
+        padding-bottom: 10px;
+    }
+
+    /* Homepage main content - single column on mobile */
+    .main-content {
+        flex-direction: column !important;
+    }
+
+    .main-content-left {
+        width: 100% !important;
+        border-left: none !important;
+        border-right: none !important;
+        padding-right: 0;
+        order: 1;
+    }
+
+    .main-content-right {
+        width: 100% !important;
+        border-left: none !important;
+        border-top: 1px dotted var(--darkbrown) !important;
+        padding-left: 0;
+        padding-top: 10px;
+        order: 2;
+    }
+
+    /* About section styling for mobile */
+    .about {
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    .about-statuses {
+        font-size: 12px;
+    }
+
+    .about-status img {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Calendar */
+    #calendar {
+        display: flex;
+        justify-content: center;
+    }
+
+    #calendar table {
+        max-width: 100%;
+    }
+
+    .calendar-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .calendar-buttons button {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    /* Neighbors */
+    .neighbors-buttons {
+        height: auto !important;
+        max-height: 180px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .neighbors-buttons img {
+        width: 44px;
+        height: auto;
+    }
+
+    /* Updates iframe */
+    .updates iframe {
+        width: 100% !important;
+        height: 150px !important;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100% !important;
+        border-left: none !important;
+        border-bottom: 1px dotted var(--darkbrown);
+        text-align: center;
+        padding: 5px;
+    }
+
+    .footer-right {
+        border-bottom: none !important;
+    }
+
+    /* Audio player */
+    .audio-player {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* Featured image */
+    .featured-image {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto;
+    }
+
+    /* ===== PAGE-SPECIFIC STYLES ===== */
+
+    /* Diary page */
+    .diary-content {
+        flex-direction: column !important;
+    }
+
+    nav {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 120px;
+        overflow-y: auto !important;
+        position: relative !important;
+    }
+
+    main {
+        width: 100% !important;
+        border-left: none !important;
+    }
+
+    article,
+    .page-writing {
+        padding: 10px !important;
+    }
+
+    .page-writing img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Films page - keep two columns, just smaller images */
+    .body-div {
+        width: 100% !important;
+    }
+
+    .film-list {
+        flex-direction: column !important;
+    }
+
+    .film {
+        width: 100% !important;
+        /* Keep as row (two columns) */
+    }
+
+    .film .left {
+        width: 100px !important;
+        flex-shrink: 0;
+    }
+
+    .film .left img,
+    .film .frame,
+    .film .frame img {
+        max-width: 100px !important;
+        max-height: 150px !important;
+        height: auto !important;
+    }
+
+    .film .right {
+        flex: 1 !important;
+        padding: 5px !important;
+        font-size: 12px;
+    }
+
+    .film .info {
+        width: 100% !important;
+    }
+
+    /* Films header image */
+    body img[src*="films"] {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Music page */
+    .music-container,
+    .container {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* Music page header - ensure navigation is visible */
+    body img[src*="music_header"] {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .content > .header {
+        flex-direction: column !important;
+    }
+
+    .content > .header .right-header {
+        display: block !important;
+        width: 100% !important;
+        border-left: none !important;
+    }
+
+    /* Music page navigation - make tabs visible and horizontal */
+    .navigation {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        background: var(--white);
+        border-bottom: 1px dotted var(--darkbrown);
+    }
+
+    .navigation a.nav-link {
+        flex: 1 !important;
+        min-width: auto !important;
+        border-right: 1px dotted var(--darkbrown) !important;
+        font-size: 11px !important;
+        padding: 8px 4px !important;
+        text-align: center;
+    }
+
+    .navigation a.nav-link:last-child {
+        border-right: none !important;
+    }
+
+    .navigation a.nav-link.active {
+        background: var(--darkbrown) !important;
+        color: var(--white) !important;
+    }
+
+    /* Music page main content layout for mobile */
+    .content .main-content {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .content .main-content .left {
+        order: 2 !important;
+        width: 100% !important;
+        border-right: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .content .main-content .left .music-section {
+        flex: 1 1 calc(50% - 10px) !important;
+        min-width: 140px;
+        border-bottom: none !important;
+    }
+
+    .content .main-content .left .music-section:first-child {
+        flex: 1 1 100%;
+    }
+
+    .content .main-content .left .music-section #trackart,
+    .content .main-content .left .music-section img {
+        width: 100% !important;
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .content .main-content .left .trackInfo {
+        width: 100% !important;
+        font-size: 12px;
+    }
+
+    .content .main-content .right {
+        order: 1 !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .content .main-content .right iframe,
+    .music-iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 400px !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .music-nav {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .music-nav a {
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+        padding: 8px 5px;
+    }
+
+    .music-iframe {
+        width: 100% !important;
+        height: 500px !important;
+    }
+
+    /* Music sub-pages */
+    .page-header {
+        text-align: center;
+    }
+
+    .collection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .collection-album {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .collection-album span {
+        font-size: 9px !important;
+    }
+
+    .my-equipment {
+        display: none;
+    }
+
+    .equipment-label {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .discovery {
+        flex-direction: column !important;
+    }
+
+    .discovery-left,
+    .discovery-right {
+        width: 100% !important;
+    }
+
+    .discovery-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .discovery-left img {
+        width: 80px !important;
+        height: auto;
+    }
+
+    .favorite-album {
+        flex-direction: column !important;
+    }
+
+    .favorite-left,
+    .favorite-right {
+        width: 100% !important;
+    }
+
+    .favorite-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .favorite-image img {
+        width: 80px !important;
+        height: auto;
+    }
+
+    /* Microblog - keep 2 column layout but adjust widths */
+    .posts {
+        width: 100% !important;
+    }
+
+    .post {
+        width: 100% !important;
+    }
+
+    .post-info {
+        width: 100px !important;
+        min-width: 100px !important;
+        border-right: 1px dotted var(--darkbrown);
+        padding: 5px;
+    }
+
+    .post-info img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .post-info .info {
+        font-size: 10px;
+    }
+
+    .post-info .info .name {
+        font-size: 11px;
+    }
+
+    .post-info .info .date,
+    .post-info .info .time {
+        font-size: 9px;
+    }
+
+    .post-content {
+        width: calc(100% - 100px) !important;
+        padding: 5px !important;
+        font-size: 12px;
+    }
+
+    /* Guestbook */
+    .guestbook-content {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* Pic log */
+    body {
+        width: 100% !important;
+        padding: 5px !important;
+        box-sizing: border-box !important;
+    }
+
+    .pic-log {
+        width: 100% !important;
+        display: block !important;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .pic {
+        width: 100% !important;
+        max-height: none !important;
+        margin: 10px 0 !important;
+    }
+
+    .pic .picture,
+    .pic .picture img {
+        width: 100% !important;
+        height: auto !important;
+        opacity: 1 !important;
+    }
+
+    .pic-desc {
+        opacity: 1 !important;
+        font-size: 12px;
+    }
+
+    /* Sitemap */
+    .sitemap {
+        width: 100% !important;
+        overflow-x: auto;
+    }
+
+    .sitemap-row {
+        width: 100% !important;
+        flex-wrap: wrap;
+    }
+
+    .sitemap-row a {
+        flex: 1;
+        min-width: 60px;
+        font-size: 10px;
+    }
+
+    /* Updates page */
+    .update {
+        width: 100% !important;
+    }
 }
 
 /* Extra small screens */
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
+    body {
+        font-size: 12px;
+    }
 
-  .left-header {
-    font-size: 11px;
-  }
+    .left-header {
+        font-size: 11px;
+    }
 
-  .neighbors-buttons img {
-    width: 38px;
-  }
+    .neighbors-buttons img {
+        width: 38px;
+    }
 
-  .pic {
-    width: 100% !important;
-  }
+    .pic {
+        width: 100% !important;
+    }
 
-  .collection-album {
-    width: 60px !important;
-    height: 60px !important;
-  }
+    .collection-album {
+        width: 60px !important;
+        height: 60px !important;
+    }
 
-  #calendar table {
-    font-size: 10px;
-  }
+    #calendar table {
+        font-size: 10px;
+    }
 
-  td {
-    padding: 2px !important;
-  }
+    td {
+        padding: 2px !important;
+    }
 }
 
 /* Ensure all images are responsive */
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Scrollable containers */
-.sitemap, .habit-tracker, .film-calendar {
-  -webkit-overflow-scrolling: touch;
+.sitemap,
+.habit-tracker,
+.film-calendar {
+    -webkit-overflow-scrolling: touch;
 }
