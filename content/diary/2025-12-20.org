@@ -4,7 +4,7 @@
 :END:
 #+title: "Diary Entry - December 19, 2025"
 
-okokokok
+here's a link it won't be exported properly 
 
 [[id:qyuh7gs0ksk0][I really hate Microsoft]]
 

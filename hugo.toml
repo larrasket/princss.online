@@ -4,6 +4,9 @@ title = 'La Vita Nouva'
 theme = 'princss'
 buildFuture = true
 
+[frontmatter]
+  date = [":filename", "date", ":default"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       syvh6nr0ksk0
-:END:
-#+title: Tryingorg
-#+DATE: <2025-12-20 Sat 01:18>
-
-yoo

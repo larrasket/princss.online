@@ -12,14 +12,14 @@
   <!-- Diary Nav -->
   <nav>
     {{ range .Pages.ByDate.Reverse }}
-    <a href="/diary/#{{ .Params.id }}">{{ .Date.Format "02/01/2006" }}</a>
+    <a href="/diary/#{{ .Date.Format "02012006" }}">{{ .Date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
   <!-- Diary Entries -->
   <main>
     {{ range $index, $page := .Pages.ByDate.Reverse }}
     <article
-      id="{{ $page.Params.id }}"
+      id="{{ $page.Date.Format "02012006" }}"
       {{
       if
       eq
