@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       album-titanic-rising
+:END:
+#+title: Titanic Rising
+#+date: 2023-01-03
+#+artist: Weyes Blood
+#+image: /media/images/music-images/weyesblood_titanicrising.png
+#+rank: 2
+#+favorite_track: Andromeda
+
+I finally watched 'Cinema Paradiso' a couple of weeks after listening to this album. The samples at the end blew my mind.
