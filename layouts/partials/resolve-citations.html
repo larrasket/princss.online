@@ -1,0 +1,52 @@
+{{- $content := . -}}
+{{- $bibFile := os.ReadFile "data/ref.bib" -}}
+{{- $bib := dict -}}
+{{- if $bibFile -}}
+  {{- $entries := findRE `@\w+\{([^,]+),` $bibFile -}}
+  {{- range $entry := $entries -}}
+    {{- $key := replaceRE `@\w+\{([^,]+),` `$1` $entry -}}
+    {{- $keyPattern := printf `@\w+\{%s,[^@]+` $key -}}
+    {{- $block := findRE $keyPattern $bibFile 1 -}}
+    {{- if $block -}}
+      {{- $blockContent := index $block 0 -}}
+      {{- $author := "" -}}
+      {{- $year := "" -}}
+      {{- $authorMatch := findRE `author\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
+      {{- if $authorMatch -}}
+        {{- $author = replaceRE `author\s*=\s*\{([^}]+)\}` `$1` (index $authorMatch 0) -}}
+      {{- end -}}
+      {{- $yearMatch := findRE `year\s*=\s*\{?(\d{4})\}?,?` $blockContent 1 -}}
+      {{- if $yearMatch -}}
+        {{- $year = replaceRE `year\s*=\s*\{?(\d{4})\}?,?` `$1` (index $yearMatch 0) -}}
+      {{- end -}}
+      {{- $bib = merge $bib (dict $key (dict "author" $author "year" $year)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $match := findRE `\[cite:@([a-zA-Z0-9_-]+)([^\]]*)\]` $content -}}
+  {{- $key := replaceRE `\[cite:@([a-zA-Z0-9_-]+).*` `$1` $match -}}
+  {{- $locator := replaceRE `\[cite:@[a-zA-Z0-9_-]+([^\]]*)\]` `$1` $match | strings.TrimSpace -}}
+  {{- $entry := index $bib $key -}}
+  {{- if $entry -}}
+    {{- $author := $entry.author -}}
+    {{- $authorLast := "" -}}
+    {{- if in $author " and " -}}
+      {{- $author = index (split $author " and ") 0 -}}
+    {{- end -}}
+    {{- if in $author "," -}}
+      {{- $authorLast = index (split $author ",") 0 -}}
+    {{- else -}}
+      {{- $parts := split $author " " -}}
+      {{- $authorLast = index $parts (sub (len $parts) 1) -}}
+    {{- end -}}
+    {{- $locatorFmt := "" -}}
+    {{- if $locator -}}
+      {{- $locatorFmt = printf ", %s" $locator -}}
+    {{- end -}}
+    {{- $citation := printf "(%s %s%s)" $authorLast $entry.year $locatorFmt -}}
+    {{- $content = replace $content $match $citation -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $content | safeHTML -}}
