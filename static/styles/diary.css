@@ -55,7 +55,8 @@ nav {
     width: 150px;
     overflow: hidden;
     overflow-y: scroll;
-    height: min-content;
+    height: calc(100vh - 50px);
+    max-height: 80vh;
 }
 nav::-webkit-scrollbar {
     width: 0px;

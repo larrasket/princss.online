@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/stack" ||
-            path === "/stack.html" ||
-            path.startsWith("/sh/")
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
           );
         }
 
@@ -556,9 +556,9 @@ margin-block-start: auto;
 Salih Muhammed.
 Contact: root@lr0.org
 </p>
-<div id="outline-container-org68b4c25" class="outline-2">
-<h2 id="org68b4c25">Prerequisites</h2>
-<div class="outline-text-2" id="text-org68b4c25">
+<div id="outline-container-orgab1bb09" class="outline-2">
+<h2 id="orgab1bb09">Prerequisites</h2>
+<div class="outline-text-2" id="text-orgab1bb09">
 <ul class="org-ul">
 <li>Go is not always a good first-programming-language choice.</li>
 
@@ -566,9 +566,9 @@ Contact: root@lr0.org
 </ul>
 </div>
 </div>
-<div id="outline-container-org1bd53a8" class="outline-2">
-<h2 id="org1bd53a8">Why Go Exists</h2>
-<div class="outline-text-2" id="text-org1bd53a8">
+<div id="outline-container-orgfe53fe0" class="outline-2">
+<h2 id="orgfe53fe0">Why Go Exists</h2>
+<div class="outline-text-2" id="text-orgfe53fe0">
 <ul class="org-ul">
 <li>Large codebases taking too long to compile (C++ builds taking hours)</li>
 
@@ -580,15 +580,15 @@ Contact: root@lr0.org
 </ul>
 </div>
 </div>
-<div id="outline-container-org386a787" class="outline-2">
-<h2 id="org386a787">Primary Design Goals</h2>
-<div class="outline-text-2" id="text-org386a787">
+<div id="outline-container-orgc18e3e5" class="outline-2">
+<h2 id="orgc18e3e5">Primary Design Goals</h2>
+<div class="outline-text-2" id="text-orgc18e3e5">
 <ul class="org-ul">
 <li>Fast compilation</li>
 </ul>
 
 
-<figure id="org89fb725">
+<figure id="org88ca0b2">
 <img src="../i/Primary_Design_Goals/2025-11-30_21-05-35_screenshot.png" alt="2025-11-30_21-05-35_screenshot.png">
 
 </figure>
@@ -610,9 +610,9 @@ More on that on: Go at Google: Language Design in the Service of Software Engine
 </p>
 </div>
 </div>
-<div id="outline-container-orgb4a018f" class="outline-2">
-<h2 id="orgb4a018f">Go&rsquo;s Core Design Philosophy</h2>
-<div class="outline-text-2" id="text-orgb4a018f">
+<div id="outline-container-org416a8f5" class="outline-2">
+<h2 id="org416a8f5">Go&rsquo;s Core Design Philosophy</h2>
+<div class="outline-text-2" id="text-org416a8f5">
 <div class="epigraph"><blockquote>
 <p>
 &ldquo;Simplicity is complicated, but the clarity is worth it&rdquo; - Rob Pike
@@ -625,25 +625,25 @@ More on that on: Go at Google: Language Design in the Service of Software Engine
 Clarity over cleverness
 </p>
 
-<pre class="code"><code><span style="color: #383a42;">evens</span> = <span style="color: #23d7d7; font-weight: bold;">list</span>(<span style="color: #23d7d7; font-weight: bold;">filter</span>(<span style="color: #ffad29; font-weight: bold;">lambda</span> x: x % 2 == 0, <span style="color: #23d7d7; font-weight: bold;">range</span>(20)))
+<pre class="code"><code><span style="color: #383a42;">evens</span> = <span style="font-weight: bold;">list</span>(<span style="font-weight: bold;">filter</span>(<span style="font-weight: bold;">lambda</span> x: x % 2 == 0, <span style="font-weight: bold;">range</span>(20)))
 </code></pre></li>
 </ul>
 
-<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">func</span> <span style="color: #00ede1; font-weight: bold;">EvenNumbers</span>(<span style="color: #383a42;">n</span> <span style="color: #34cae2; font-weight: bold;">int</span>) []<span style="color: #34cae2; font-weight: bold;">int</span> {
-    <span style="color: #383a42;">result</span> := []<span style="color: #34cae2; font-weight: bold;">int</span>{}
-    <span style="color: #ffad29; font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt; n; i++ {
-        <span style="color: #ffad29; font-weight: bold;">if</span> i%2 == 0 {
-            result = <span style="color: #23d7d7; font-weight: bold;">append</span>(result, i)
+<pre class="code"><code><span style="font-weight: bold;">func</span> <span style="font-weight: bold;">EvenNumbers</span>(<span style="color: #383a42;">n</span> <span style="font-weight: bold;">int</span>) []<span style="font-weight: bold;">int</span> {
+    <span style="color: #383a42;">result</span> := []<span style="font-weight: bold;">int</span>{}
+    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt; n; i++ {
+        <span style="font-weight: bold;">if</span> i%2 == 0 {
+            result = <span style="font-weight: bold;">append</span>(result, i)
         }
     }
-    <span style="color: #ffad29; font-weight: bold;">return</span> result
+    <span style="font-weight: bold;">return</span> result
 }
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org1c78d41" class="outline-2">
-<h2 id="org1c78d41">Cont. Go&rsquo;s Core Design Philosophy</h2>
-<div class="outline-text-2" id="text-org1c78d41">
+<div id="outline-container-orgfab63a6" class="outline-2">
+<h2 id="orgfab63a6">Cont. Go&rsquo;s Core Design Philosophy</h2>
+<div class="outline-text-2" id="text-orgfab63a6">
 <ul class="org-ul">
 <li>Composition over inheritance, always build complex things from simple parts</li>
 
@@ -655,17 +655,17 @@ Explicit over implicit and no hidden behavior or magic.
 <span style="color: #383a42;">f</span> = i + 1. 5  <span style="color: #556b2f;"># </span><span style="color: #556b2f;">Auto-converts int to float</span>
 </code></pre>
 
-<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">i</span> <span style="color: #34cae2; font-weight: bold;">int</span> = 42
-<span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">f</span> <span style="color: #34cae2; font-weight: bold;">float64</span> = <span style="color: #00ede1; font-weight: bold;">float64</span>(i)  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Must convert explicitly</span>
+<pre class="code"><code><span style="font-weight: bold;">var</span> <span style="color: #383a42;">i</span> <span style="font-weight: bold;">int</span> = 42
+<span style="font-weight: bold;">var</span> <span style="color: #383a42;">f</span> <span style="font-weight: bold;">float64</span> = <span style="font-weight: bold;">float64</span>(i)  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Must convert explicitly</span>
 </code></pre></li>
 
 <li>Consistency. Only one way to do things</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org04b1c7e" class="outline-2">
-<h2 id="org04b1c7e">Go is &ldquo;Simple&rdquo; But Not Small</h2>
-<div class="outline-text-2" id="text-org04b1c7e">
+<div id="outline-container-org6342217" class="outline-2">
+<h2 id="org6342217">Go is &ldquo;Simple&rdquo; But Not Small</h2>
+<div class="outline-text-2" id="text-org6342217">
 <p>
 &ldquo;Simple&rdquo; Means:
 </p>
@@ -693,9 +693,9 @@ Explicit over implicit and no hidden behavior or magic.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc0dea05" class="outline-2">
-<h2 id="orgc0dea05">Less is (Exponentially) More</h2>
-<div class="outline-text-2" id="text-orgc0dea05">
+<div id="outline-container-orgc51a2f9" class="outline-2">
+<h2 id="orgc51a2f9">Less is (Exponentially) More</h2>
+<div class="outline-text-2" id="text-orgc51a2f9">
 <p>
 Go deliberately leaves out features found in other languages to keep the core simple. This means occasionally more verbose code, but code that&rsquo;s easier to understand six months later.
 </p>
@@ -711,9 +711,9 @@ Go deliberately leaves out features found in other languages to keep the core si
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd664ec8" class="outline-2">
-<h2 id="orgd664ec8">Further Learning</h2>
-<div class="outline-text-2" id="text-orgd664ec8">
+<div id="outline-container-orgdf00b7c" class="outline-2">
+<h2 id="orgdf00b7c">Further Learning</h2>
+<div class="outline-text-2" id="text-orgdf00b7c">
 <ul class="org-ul">
 <li>Go Proverbs by Rob Pike</li>
 <li>&ldquo;Less is Exponentially More&rdquo; - Rob Pike&rsquo;s blog</li>
