@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       album-stratosphere
+:END:
+#+title: Stratosphere
+#+date: 2023-01-04
+#+artist: Duster
+#+image: /media/images/music-images/duster_stratosphere.png
+#+rank: 3
+#+favorite_track: Heading for the Door
+
+I found this album a couple of years before it reached mainstream popularity. Really nostalgic.
