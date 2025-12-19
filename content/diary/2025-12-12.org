@@ -39,4 +39,21 @@ That's why I hate Microsoft more than Apple or Google or any other tech giant. A
 
 * Propaganda
 
-Here's some anti-Microsoft propaganda:
+Here's some anti-Microsoft propaganda that I like
+
+
+
+1. https://news.ycombinator.com/item?id=38650254
+2. https://github.com/microsoft/terminal/issues/10362
+3. https://ziglang.org/news/migrating-from-github-to-codeberg/
+4. https://github.com/microsoft/vscode/issues/277450
+5. https://yoyo-code.com/why-is-github-ui-getting-so-much-slower/
+6. https://en.wikipedia.org/wiki/Criticism_of_Microsoft
+7. https://www.theregister.com/2025/11/08/microsoft_lacks_quality_control/
+8. https://x.com/WindowsLatest/status/1991952313217638540
+9. https://news.ycombinator.com/item?id=46011569
+10. https://winaero.com/windows-11-start-menu-revealed-as-resource-heavy-react-native-app-sparks-performance-concerns/
+11. https://www.neowin.net/news/microsoft-admits-major-windows-11-25h2-ui-features-broken-too-alongside-24h2-on-some-pcs/
+12. https://www.windowscentral.com/microsoft/windows-11/microsoft-confirms-windows-11-kb5071142-issues-file-explorer-white-flash-and-invisible-login-icons
+13. https://x.com/i/status/1997346600872505440
+14. https://learn.microsoft.com/en-us/answers/questions/4624977/why-does-microsoft-never-improve
