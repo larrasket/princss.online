@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       rfejvpt0lsk0
+:END:
+#+date: <2025-04-08 Tue 01:16>
+#+title My heart
+
+My heart is a =C-x C-b= menu.
