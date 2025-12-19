@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       microblog-2025-03-26-1
+:END:
+#+title: Microblog Post 3
+#+date: 2025-03-26T14:15:00
+#+time: 2:15 PM
+#+post_id: 3
+
+Working on some new features for the site. Learning a lot about Hugo templates.

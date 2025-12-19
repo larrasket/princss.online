@@ -6,11 +6,11 @@
 
 {{- if and $page.File (eq $page.File.Ext "org") -}}
   {{- $rawContent := $page.RawContent -}}
-  {{- $pattern := printf `(?m)^#\+%s:\s*(.+)$` $key -}}
+  {{- $pattern := printf `(?mi)^#\+%s:\s*(.+)$` $key -}}
   {{- $match := findRE $pattern $rawContent 1 -}}
   {{- if $match -}}
     {{- $line := index $match 0 -}}
-    {{- $value = replaceRE (printf `^#\+%s:\s*` $key) "" $line -}}
+    {{- $value = replaceRE (printf `(?i)^#\+%s:\s*` $key) "" $line -}}
   {{- end -}}
 {{- end -}}
 

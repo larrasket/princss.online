@@ -1,0 +1,5 @@
+{{- /* Strip the h1 title that go-org generates from #+title: */ -}}
+{{- /* Usage: {{ partial "strip-org-title.html" .Content }} */ -}}
+{{- $content := . -}}
+{{- $content = replaceRE `<h1[^>]*>.*?</h1>\s*` "" $content -}}
+{{- $content | safeHTML -}}

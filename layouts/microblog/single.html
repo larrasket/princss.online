@@ -10,17 +10,17 @@
   <div class="right-header">Warwick Castle, Jasper Francis Cropsey</div>
 </div>
 <div class="content">
-  <div class="post" id="{{ .Params.id }}">
+  <div class="post" id="{{ partial "org-param.html" (dict "page" . "key" "post_id") }}">
     <div class="post-info">
       <img src="/media/images/pfp.png" style="width: 60px; height: 60px" />
       <div class="info">
         <div class="name">larrasket</div>
         <div class="date">{{ .Date.Format "02/01/2006" }}</div>
-        <div class="time">@{{ .Params.time }}</div>
+        <div class="time">@{{ partial "org-param.html" (dict "page" . "key" "time") }}</div>
       </div>
     </div>
     <div class="post-content">
-      {{ partial "resolve-roam-links.html" .Content }}<a
+      {{ partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content) }}<a
         class="copy-permalink"
         data-url="{{ .Permalink }}"
         title="Copy permalink"
