@@ -3,6 +3,6 @@
 :CUSTOM_ID: beyd3x21tik0
 :END:
 #+date: <2025-03-27 Thu 23:36>
-#+title: Microblog Post 3
+#+title:  [[id:bc7b4p21tik0][Giuseppe Abbati]] Paintings
 
-Giuseppe Abbati paintings are very touching, I feel like I want to live inside them; specifically his [[id:aap3io21tik0][Country Road with Cypresses]], [[id:a88dqt21tik0][Marina in Castiglioncello]] and The Window. #[[id:mvk9gc7014k0][Art]].
+Giuseppe Abbati paintings are very touching, I feel like I want to live inside them; specifically his [[id:aap3io21tik0][Country Road with Cypresses]], [[id:a88dqt21tik0][Marina in Castiglioncello]] and The Window. #[[id:mvk9gc7014k0][Art]] #[[id:bc7b4p21tik0][Giuseppe Abbati]]
