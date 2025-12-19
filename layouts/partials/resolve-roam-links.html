@@ -1,12 +1,55 @@
-{{- $content := . -}} {{- /* Build a map of org-roam ID -> anchor link by
-parsing :ID: from raw content */ -}} {{- $idMap := dict -}} {{- range
-site.AllPages -}} {{- if and .File (eq .File.Ext "org") -}} {{- $rawContent :=
-.RawContent -}} {{- $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 -}} {{- if
-$idMatch -}} {{- $idLine := index $idMatch 0 -}} {{- $id := replaceRE `:ID:\s+`
-"" $idLine -}} {{- /* Create anchor link: /section/#DDMMYYYY */ -}} {{- $anchor
-:= printf "/%s/#%s" .Section (.Date.Format "02012006") -}} {{- $idMap = merge
-$idMap (dict $id $anchor) -}} {{- end -}} {{- end -}} {{- end -}} {{- /* Replace
-id: links with anchor links */ -}} {{- range $id, $anchor := $idMap -}} {{-
-$pattern := printf `href="id:%s"` $id -}} {{- $replacement := printf `href="%s"`
-$anchor -}} {{- $content = replace $content $pattern $replacement -}} {{- end
--}} {{- $content | safeHTML -}}
+{{- $content := . -}}
+
+{{- /* Load blog ID mapping from data file */ -}}
+{{- $blogIds := site.Data.blog_ids | default dict -}}
+
+{{- /* Build a map of org-roam ID -> anchor link for Hugo content */ -}}
+{{- $idMap := dict -}}
+{{- range site.AllPages -}}
+  {{- if and .File (eq .File.Ext "org") -}}
+    {{- $rawContent := .RawContent -}}
+    {{- $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 -}}
+    {{- if $idMatch -}}
+      {{- $idLine := index $idMatch 0 -}}
+      {{- $id := replaceRE `:ID:\s+` "" $idLine -}}
+      {{- /* Create anchor link: /section/#DDMMYYYY */ -}}
+      {{- $anchor := printf "/%s/#%s" .Section (.Date.Format "02012006") -}}
+      {{- $idMap = merge $idMap (dict $id $anchor) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Replace id: links - check Hugo pages first, then blog_ids, then strip */ -}}
+{{- $idLinkPattern := `<a href="id:([^"]+)"[^>]*>([^<]+)</a>` -}}
+{{- $matches := findRE $idLinkPattern $content -}}
+{{- range $matches -}}
+  {{- $idMatch := findRE `id:([^"]+)` . 1 -}}
+  {{- if $idMatch -}}
+    {{- $fullId := index $idMatch 0 -}}
+    {{- $id := replaceRE `id:` "" $fullId -}}
+    {{- $textMatch := findRE `>([^<]+)</a>` . 1 -}}
+    {{- $linkText := "" -}}
+    {{- if $textMatch -}}
+      {{- $linkText = replaceRE `>|</a>` "" (index $textMatch 0) -}}
+    {{- end -}}
+    {{- /* Check Hugo pages first */ -}}
+    {{- if index $idMap $id -}}
+      {{- $newHref := index $idMap $id -}}
+      {{- $oldPattern := printf `href="id:%s"` $id -}}
+      {{- $newPattern := printf `href="%s"` $newHref -}}
+      {{- $content = replace $content $oldPattern $newPattern -}}
+    {{- /* Then check blog_ids (nested static site) */ -}}
+    {{- else if index $blogIds $id -}}
+      {{- $blogUrl := index $blogIds $id -}}
+      {{- $oldPattern := printf `href="id:%s"` $id -}}
+      {{- $newPattern := printf `href="/~saleh%s"` $blogUrl -}}
+      {{- $content = replace $content $oldPattern $newPattern -}}
+    {{- /* Not found - strip to plain text */ -}}
+    {{- else -}}
+      {{- $oldLink := . -}}
+      {{- $content = replace $content $oldLink $linkText -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $content | safeHTML -}}

@@ -588,42 +588,42 @@ margin-block-start: auto;
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org03ea18c">Terminology</a></li>
+<li><a href="#orgdc13b7a">Terminology</a></li>
 <li><a href="#directed">Direction Relationships</a></li>
 <li><a href="#adjacency">Adjacency Matrix vs. Adjacency List</a></li>
-<li><a href="#org28e5517">Multigraph (Multi-edges graph)</a></li>
-<li><a href="#org7038cc5">Weighted Graph</a></li>
+<li><a href="#orgeebab01">Multigraph (Multi-edges graph)</a></li>
+<li><a href="#org414e518">Weighted Graph</a></li>
 <li><a href="#transpose">Transpose Graph</a></li>
 <li><a href="#sheet">Definition Sheet</a></li>
-<li><a href="#org6ca1492">Graph Traversal</a></li>
+<li><a href="#orge9f6b4b">Graph Traversal</a></li>
 <li><a href="#8d3gj8e10lk0">Detecting Cycles In Graphs</a></li>
 <li><a href="#biconnected">Biconnected Components</a></li>
-<li><a href="#orgf9e0b53">Union-Find (Disjoint Set)</a></li>
-<li><a href="#orgc17c42f">Reach The Mother Vertex</a></li>
-<li><a href="#org6bcd380"><span class="done KILL">KILL</span> Bellman-Ford&rsquo;s Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></a></li>
-<li><a href="#org1acc337">Balanced Trees</a></li>
-<li><a href="#org06b0faa">Binary Tree Traversal</a></li>
-<li><a href="#orga80e250">Counting</a></li>
-<li><a href="#orgc5ffe21">Height of a Binary Tree</a></li>
+<li><a href="#org975813c">Union-Find (Disjoint Set)</a></li>
+<li><a href="#orge29364d">Reach The Mother Vertex</a></li>
+<li><a href="#org1ce910f"><span class="done KILL">KILL</span> Bellman-Ford&rsquo;s Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></a></li>
+<li><a href="#org36925a0">Balanced Trees</a></li>
+<li><a href="#org39e33c9">Binary Tree Traversal</a></li>
+<li><a href="#org26317f6">Counting</a></li>
+<li><a href="#org9582fed">Height of a Binary Tree</a></li>
 </ul>
 </div>
 </nav>
-<div class="BACKLINKS" id="orgbeca4ea">
+<div class="BACKLINKS" id="org95af6ef">
 <p>
 This section was referenced in <a href="../stack.html#jvne8ie10lk0">Floyd&rsquo;s tortoise and hare</a>.
 </p>
 
 </div>
 
-<div class="propert" id="orgd9e34d1">
+<div class="propert" id="org08dd738">
 <p>
 Part of a series on <a href="../cs/g.html#13122uo02wj0">Exploring Computational Geometry</a>
 </p>
 
 </div>
-<div id="outline-container-org03ea18c" class="outline-2">
-<h2 id="org03ea18c">Terminology</h2>
-<div class="outline-text-2" id="text-org03ea18c">
+<div id="outline-container-orgdc13b7a" class="outline-2">
+<h2 id="orgdc13b7a">Terminology</h2>
+<div class="outline-text-2" id="text-orgdc13b7a">
 <p>
 A graph \(G = (V, E)\) consists of a set of vertices \(V\) and a set of edges \(E\), such that each edge
 in \(E\) is a connection between a pair of vertices in \(V\)  The number of vertices is
@@ -634,12 +634,12 @@ edges is called dense. A graph containing all possible edges is said to be compl
 
 
 
-<figure id="orgdbf1729">
+<figure id="orgc1d8057">
 <img src="../i/old/2022-01-03_18-06-48_screenshot.png" alt="2022-01-03_18-06-48_screenshot.png">
 
 </figure>
 
-<div class="PREVIEW" id="org8235367">
+<div class="PREVIEW" id="org901112f">
 <p>
 A graph with edges directed from one vertex to another is called a directed graph or
 digraph. A graph whose edges are not directed is called an undirected graph.
@@ -668,7 +668,7 @@ the path is simple, except for the first and last vertices being the same.
 
 
 
-<figure id="org36b1f90">
+<figure id="org3e52f52">
 <img src="../i/old/2022-01-03_18-10-42_screenshot.png" alt="2022-01-03_18-10-42_screenshot.png">
 
 </figure>
@@ -711,7 +711,7 @@ matrix are \(O (|V|^2)\).
 </p>
 
 
-<figure id="orgf0c049a">
+<figure id="orgd96191e">
 <img src="../i/old/2022-01-03_18-30-11_screenshot.png" alt="2022-01-03_18-30-11_screenshot.png">
 
 </figure>
@@ -746,7 +746,7 @@ like:
 </p>
 
 
-<figure id="org0bcdbb4">
+<figure id="orgcae22d0">
 <img src="../i/old/2022-01-03_19-11-01_screenshot.png" alt="2022-01-03_19-11-01_screenshot.png">
 
 </figure>
@@ -759,7 +759,7 @@ linked to the other one:
 </p>
 
 
-<figure id="org705481a">
+<figure id="org3c2a88f">
 <img src="../i/old/2022-01-03_19-16-44_screenshot.png" alt="2022-01-03_19-16-44_screenshot.png">
 
 </figure>
@@ -895,7 +895,7 @@ edge, it looks like this in memory:
 </p>
 
 
-<figure id="org37fceb3">
+<figure id="orgbaf94e1">
 <img src="../i/old/2022-01-03_20-25-56_screenshot.png" alt="2022-01-03_20-25-56_screenshot.png">
 
 </figure>
@@ -916,7 +916,7 @@ In the other hand, the adjacency matrix represent looks like this:
 </p>
 
 
-<figure id="org5612d6c">
+<figure id="org0ba6743">
 <img src="../i/old/2022-01-03_20-31-26_screenshot.png" alt="2022-01-03_20-31-26_screenshot.png">
 
 </figure>
@@ -981,9 +981,9 @@ Here&rsquo;s a comparison between each representation:
 </table>
 </div>
 </div>
-<div id="outline-container-org28e5517" class="outline-2">
-<h2 id="org28e5517">Multigraph (Multi-edges graph)</h2>
-<div class="outline-text-2" id="text-org28e5517">
+<div id="outline-container-orgeebab01" class="outline-2">
+<h2 id="orgeebab01">Multigraph (Multi-edges graph)</h2>
+<div class="outline-text-2" id="text-orgeebab01">
 <p>
 Multigraph is an obscure data structure, since it can be represented in some other ways
 using complex forms of regular undirected graph, however it is not hard to implement. In
@@ -992,7 +992,7 @@ than one roads therefore we have to have this roads recorded within an adjacency
 </p>
 
 
-<figure id="org2ed781d">
+<figure id="org8dd64cd">
 <img src="../i/old/2022-01-03_20-14-47_screenshot.png" alt="2022-01-03_20-14-47_screenshot.png">
 
 </figure>
@@ -1025,9 +1025,9 @@ list in the &ldquo;to&rdquo; node).
 </p>
 </div>
 </div>
-<div id="outline-container-org7038cc5" class="outline-2">
-<h2 id="org7038cc5">Weighted Graph</h2>
-<div class="outline-text-2" id="text-org7038cc5">
+<div id="outline-container-org414e518" class="outline-2">
+<h2 id="org414e518">Weighted Graph</h2>
+<div class="outline-text-2" id="text-org414e518">
 <p>
 We can consider all of the last implementations as an unweghted graph representations, we
 don&rsquo;t really care about the specifications of an edge between two nodes. However, in a lot
@@ -1094,7 +1094,7 @@ Consider the following figure:
 </p>
 
 
-<figure id="orgb5ef8ff">
+<figure id="org1dc5b30">
 <img src="../i/old/2022-01-06_14-45-44_screenshot.png" alt="2022-01-06_14-45-44_screenshot.png">
 
 </figure>
@@ -1278,9 +1278,9 @@ graphs, in the case of ambiguity you can backtrack the definitions from here.
 </table>
 </div>
 </div>
-<div id="outline-container-org6ca1492" class="outline-2">
-<h2 id="org6ca1492">Graph Traversal</h2>
-<div class="outline-text-2" id="text-org6ca1492">
+<div id="outline-container-orge9f6b4b" class="outline-2">
+<h2 id="orge9f6b4b">Graph Traversal</h2>
+<div class="outline-text-2" id="text-orge9f6b4b">
 <p>
 Given any starting vertex, we can find all the reachable vertices from the start point,
 there are many algorithms that can do this, the simplest of which is depth-frist search.
@@ -1289,7 +1289,7 @@ there are many algorithms that can do this, the simplest of which is depth-frist
 <div id="outline-container-rz5728e10lk0" class="outline-3">
 <h3 id="rz5728e10lk0">Depth First Search (DFS)</h3>
 <div class="outline-text-3" id="text-rz5728e10lk0">
-<div class="BACKLINKS" id="orge0694a7">
+<div class="BACKLINKS" id="org1b9e78f">
 <p>
 This section was referenced in <a href="#8d3gj8e10lk0">Detecting Cycles In Graphs</a>.
 </p>
@@ -1520,8 +1520,8 @@ Implementations in C(++):
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org00347e1" class="outline-4">
-<h4 id="org00347e1"><span class="done KILL">KILL</span> Tarjan&rsquo;s Algorithm&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h4>
+<div id="outline-container-org0e5271c" class="outline-4">
+<h4 id="org0e5271c"><span class="done KILL">KILL</span> Tarjan&rsquo;s Algorithm&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h4>
 </div>
 </div>
 </div>
@@ -1532,9 +1532,9 @@ Implementations in C(++):
 <i>Hint: Review cycle definition in the <a href="#sheet">definition sheet</a> above</i>
 </p>
 </div>
-<div id="outline-container-orgc067e4f" class="outline-3">
-<h3 id="orgc067e4f">Using <a href="#rz5728e10lk0">Depth First Search (DFS)</a></h3>
-<div class="outline-text-3" id="text-orgc067e4f">
+<div id="outline-container-orga452c2c" class="outline-3">
+<h3 id="orga452c2c">Using <a href="#rz5728e10lk0">Depth First Search (DFS)</a></h3>
+<div class="outline-text-3" id="text-orga452c2c">
 <p>
 We can detect cycles in directed graphs using DFS. This is based on the fact that there is a
 cycle in a graph only if there is a back edge present in the graph. A back edge is an edge
@@ -1640,7 +1640,7 @@ points, vertices 1,3,5, and 7.
 </p>
 
 
-<figure id="org3b07809">
+<figure id="org1358115">
 <img src="../i/old/2022-04-08_07-58-38_screenshot.png" alt="2022-04-08_07-58-38_screenshot.png">
 
 </figure>
@@ -1674,7 +1674,7 @@ the graph of the last graph produces the spanning tree of the following figure:
 </p>
 
 
-<figure id="org7908372">
+<figure id="org9cb51b7">
 <img src="../i/old/2022-04-08_08-06-21_screenshot.png" alt="2022-04-08_08-06-21_screenshot.png">
 
 </figure>
@@ -1684,7 +1684,7 @@ If redrawn the tree in the following figure:
 </p>
 
 
-<figure id="org4da7bae">
+<figure id="org97a41d1">
 <img src="../i/old/2022-04-08_08-07-57_screenshot.png" alt="2022-04-08_08-07-57_screenshot.png">
 
 </figure>
@@ -1708,7 +1708,7 @@ using a path of descendants followed by at most one back edge:
 </p>
 
 
-<figure id="orgb555d6f">
+<figure id="orgd2dd1f3">
 <img src="../i/old/2022-04-08_08-23-12_screenshot.png" alt="2022-04-08_08-23-12_screenshot.png">
 
 </figure>
@@ -1721,7 +1721,7 @@ example:
 </p>
 
 
-<figure id="org4ae0a4f">
+<figure id="orgff2c7d1">
 <img src="../i/old/2022-04-08_08-28-50_screenshot.png" alt="2022-04-08_08-28-50_screenshot.png">
 
 </figure>
@@ -1882,9 +1882,9 @@ vertex 3, is an articulation point because it has more than one child.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgf9e0b53" class="outline-2">
-<h2 id="orgf9e0b53">Union-Find (Disjoint Set)</h2>
-<div class="outline-text-2" id="text-orgf9e0b53">
+<div id="outline-container-org975813c" class="outline-2">
+<h2 id="org975813c">Union-Find (Disjoint Set)</h2>
+<div class="outline-text-2" id="text-org975813c">
 <p>
 A union-find algorithm is an algorithm that performs two useful operations on such a data
 structure:
@@ -1914,9 +1914,9 @@ then they form a cycle. Otherwise, perform union to merge the subsets together.
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-orgc17c42f" class="outline-2">
-<h2 id="orgc17c42f">Reach The Mother Vertex</h2>
-<div class="outline-text-2" id="text-orgc17c42f">
+<div id="outline-container-orge29364d" class="outline-2">
+<h2 id="orge29364d">Reach The Mother Vertex</h2>
+<div class="outline-text-2" id="text-orge29364d">
 <p>
 <i>Hint: Review the Mother Vertex in the <a href="#sheet">definition sheet</a> above</i>
 The mother vertex in the following graph is <code>[1, 3, 4]</code>:
@@ -1992,9 +1992,9 @@ them.
 </p>
 </div>
 </div>
-<div id="outline-container-org6bcd380" class="outline-2">
-<h2 id="org6bcd380"><span class="done KILL">KILL</span> Bellman-Ford&rsquo;s Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
-<div class="outline-text-2" id="text-org6bcd380">
+<div id="outline-container-org1ce910f" class="outline-2">
+<h2 id="org1ce910f"><span class="done KILL">KILL</span> Bellman-Ford&rsquo;s Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-org1ce910f">
 <p>
 The Bellman-Ford algorithm is a way to find single source shortest paths in a graph ith
 negative edge weights (but no negative cycles). The second for loop in this algorithm also
@@ -2015,9 +2015,9 @@ Overall, the algorithm takes \(O(m \cdot n)\) time
 </ul>
 </div>
 </div>
-<div id="outline-container-org1acc337" class="outline-2">
-<h2 id="org1acc337">Balanced Trees</h2>
-<div class="outline-text-2" id="text-org1acc337">
+<div id="outline-container-org36925a0" class="outline-2">
+<h2 id="org36925a0">Balanced Trees</h2>
+<div class="outline-text-2" id="text-org36925a0">
 <p>
 We call a tree binary if each node in it has at most two children. A node’s left child with
 descendants forms the node’s left sub-tree. The definition of the right sub-tree is similar.
@@ -2034,7 +2034,7 @@ tree:
 </p>
 
 
-<figure id="orgcf65882">
+<figure id="org379de2f">
 <img src="../i/old/2022-07-29_09-50-33_screenshot.png" alt="2022-07-29_09-50-33_screenshot.png">
 
 </figure>
@@ -2062,7 +2062,7 @@ the nodes in the \(\boldsymbol{x}\)‘s right sub-tree are \(\boldsymbol{\geq x}
 
 
 
-<figure id="org1f3b4e8">
+<figure id="org3378084">
 <img src="../i/old/2022-07-29_09-52-24_screenshot.png" alt="2022-07-29_09-52-24_screenshot.png">
 
 </figure>
@@ -2077,7 +2077,7 @@ the right, which speeds up the search. This is how we find 9 in the above search
 
 
 
-<figure id="org3cf9471">
+<figure id="orgabb2c64">
 <img src="../i/old/2022-07-29_09-53-07_screenshot.png" alt="2022-07-29_09-53-07_screenshot.png">
 
 </figure>
@@ -2113,9 +2113,9 @@ There are several types of such trees. They require all their nodes to be balanc
 notion of balance differs from type to type.
 </p>
 </div>
-<div id="outline-container-orgc58d811" class="outline-3">
-<h3 id="orgc58d811">AVL Trees</h3>
-<div class="outline-text-3" id="text-orgc58d811">
+<div id="outline-container-org78d0a69" class="outline-3">
+<h3 id="org78d0a69">AVL Trees</h3>
+<div class="outline-text-3" id="text-org78d0a69">
 <p>
 In an AVL tree, we call a node balanced if the heights of its left and right sub-trees
 differ at most by 1. So, a search tree with root x is an AVL tree if all its nodes are
@@ -2129,7 +2129,7 @@ AVL(x) \iff \left|height(x.left) - height(x.right)\right| \leq 1           \text
 
 
 
-<figure id="orgaac5ccf">
+<figure id="orgc1029ee">
 <img src="../i/old/2022-07-29_09-57-36_screenshot.png" alt="2022-07-29_09-57-36_screenshot.png">
 
 </figure>
@@ -2160,7 +2160,7 @@ unbalanced node, call it S, there are 4 cases:
 </p>
 
 
-<figure id="org4fbcf87">
+<figure id="org20e1f95">
 <img src="../i/old/2022-07-29_10-35-29_screenshot.png" alt="2022-07-29_10-35-29_screenshot.png">
 
 </figure>
@@ -2182,7 +2182,7 @@ operations known as <b>rotations</b>.
 
 
 
-<figure id="org58f8ef3">
+<figure id="orgcd5bff4">
 <img src="../i/old/2022-07-29_10-49-03_screenshot.png" alt="2022-07-29_10-49-03_screenshot.png">
 
 <figcaption><span class="figure-number">Figure 1: </span>A single rotation in an AVL tree. This operation occurs when the excess node (in subtree A) is in the left child of the left child of the unbalanced node labeled S. By rearranging the nodes as shown, we preserve the BST property, as well as re-balance the tree to preserve the AVL tree balance property. The case where the excess node is in the right child of the right child of the unbalanced node is handled in the same way.</figcaption>
@@ -2190,7 +2190,7 @@ operations known as <b>rotations</b>.
 
 
 
-<figure id="org45cb785">
+<figure id="org942b53e">
 <img src="../i/old/2022-07-29_10-50-12_screenshot.png" alt="2022-07-29_10-50-12_screenshot.png">
 
 <figcaption><span class="figure-number">Figure 2: </span>A double rotation in an AVL tree. This operation occurs when the excess node (in subtree B) is in the right child of the left child of the unbalanced node labeled S. By rearranging the nodes as shown, we preserve the BST property, as well as re-balance the tree to preserve the AVL tree balance property. The case where the excess node is in the left child of the right child of S is handled in the same way</figcaption>
@@ -2251,9 +2251,9 @@ be fixed using a double rotation, as shown in last figure.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org28c2b29" class="outline-3">
-<h3 id="org28c2b29">Day–Stout–Warren algorithm</h3>
-<div class="outline-text-3" id="text-org28c2b29">
+<div id="outline-container-org6da4b3c" class="outline-3">
+<h3 id="org6da4b3c">Day–Stout–Warren algorithm</h3>
+<div class="outline-text-3" id="text-org6da4b3c">
 <p>
 The Day–Stout–Warren (DSW) algorithm is a method for efficiently balancing binary search
 trees – that is, decreasing their height to O(log n) nodes, where n is the total number of
@@ -2334,13 +2334,13 @@ routine compress(root, count)
 </div>
 </div>
 </div>
-<div id="outline-container-org06b0faa" class="outline-2">
-<h2 id="org06b0faa">Binary Tree Traversal</h2>
-<div class="outline-text-2" id="text-org06b0faa">
+<div id="outline-container-org39e33c9" class="outline-2">
+<h2 id="org39e33c9">Binary Tree Traversal</h2>
+<div class="outline-text-2" id="text-org39e33c9">
 </div>
-<div id="outline-container-orga077e64" class="outline-3">
-<h3 id="orga077e64">DFS</h3>
-<div class="outline-text-3" id="text-orga077e64">
+<div id="outline-container-org1df157c" class="outline-3">
+<h3 id="org1df157c">DFS</h3>
+<div class="outline-text-3" id="text-org1df157c">
 <p>
 Often we wish to process a binary tree by “visiting” each of its nodes, each time
 performing a specific action such as printing the contents of the node. Any process
@@ -2433,9 +2433,9 @@ access to the BinNode class.
 </p>
 </div>
 </div>
-<div id="outline-container-org638b858" class="outline-3">
-<h3 id="org638b858">BFS</h3>
-<div class="outline-text-3" id="text-org638b858">
+<div id="outline-container-org6312bc0" class="outline-3">
+<h3 id="org6312bc0">BFS</h3>
+<div class="outline-text-3" id="text-org6312bc0">
 <pre class="code"><code><span style="color: #ffad29; font-weight: bold;">while</span> (q.empty() == <span style="color: #383a42;">false</span>) {
    <span style="color: #34cae2; font-weight: bold;">Node</span> *<span style="color: #383a42;">node</span> = q.front();
    cout &lt;&lt; node-&gt;data &lt;&lt; <span style="color: #8a3b3c;">" "</span>; <span style="color: #556b2f;">//</span><span style="color: #556b2f;">whatever operation
@@ -2449,9 +2449,9 @@ access to the BinNode class.
 </div>
 </div>
 </div>
-<div id="outline-container-orga80e250" class="outline-2">
-<h2 id="orga80e250">Counting</h2>
-<div class="outline-text-2" id="text-orga80e250">
+<div id="outline-container-org26317f6" class="outline-2">
+<h2 id="org26317f6">Counting</h2>
+<div class="outline-text-2" id="text-org26317f6">
 <p>
 If we wish to count the number of nodes in a binary tree. The
 key insight is that the total count for any (non-empty) subtree is one for the
@@ -2468,9 +2468,9 @@ compute this for us. Thus, we can implement count as follows.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgc5ffe21" class="outline-2">
-<h2 id="orgc5ffe21">Height of a Binary Tree</h2>
-<div class="outline-text-2" id="text-orgc5ffe21">
+<div id="outline-container-org9582fed" class="outline-2">
+<h2 id="org9582fed">Height of a Binary Tree</h2>
+<div class="outline-text-2" id="text-org9582fed">
 <p>
 The height of a node in a binary tree is the largest number of edges in a path from a leaf
 node to a target node. If the target node doesn’t have any other nodes connected to it, the

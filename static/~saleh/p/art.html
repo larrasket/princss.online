@@ -593,7 +593,7 @@ margin-block-start: auto;
   /*]]>*/
 </style>
 
-<div class="tag" id="orgf38120e">
+<div class="tag" id="org733f607">
 <p>
 This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a> and <a href="../h/art_paintings_media.html#mvk9gc7014k0">Art</a>
 </p>
@@ -636,14 +636,14 @@ where \(L\) represents the number of loved artworks and \(T\) represents the tot
 It simply tries to care more about the <i>density</i> of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you&rsquo;ve encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
 I will call this algorithm 1. Let&rsquo;s see how we can implement it.
 </p>
-<div id="outline-container-org8f551b0" class="outline-2">
-<h2 id="org8f551b0">Implementing naive occurrence counting (algorithm 1)</h2>
-<div class="outline-text-2" id="text-org8f551b0">
+<div id="outline-container-orge04fbff" class="outline-2">
+<h2 id="orge04fbff">Implementing naive occurrence counting (algorithm 1)</h2>
+<div class="outline-text-2" id="text-orge04fbff">
 <p>
 We will need first to start with data collection. The book didn&rsquo;t include a number for how many each artist has of works, and I didn&rsquo;t like all of them so I can&rsquo;t depend on my PKMS, nor did I count them. Lucky enough, <a href="https://www.wikiart.org">wikiart.org</a> provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
 </p>
 
-<pre class="example" id="org36ff778">
+<pre class="example" id="orgc451a73">
 Ivan Aivazovsky :nworks:   700
 Benjamin West :nworks:   156
 Emile Claus :nworks:   26
@@ -726,7 +726,7 @@ Here&rsquo;s the simple score result:
 </p>
 
 
-<div class="postscript" id="orga8552dc">
+<div class="postscript" id="orgfbe949b">
 <p>
 Note I&rsquo;m running this here as of the date of writing it <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:02]</span></span>, as I mentioned above, I only browsed the artists of the D letter. I will add here &ldquo;Last run&rdquo; property, so reader can relate to the last update date
 </p>
@@ -737,7 +737,7 @@ Last run <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun
 
 </div>
 
-<pre class="example" id="org6a9f770">
+<pre class="example" id="orgb2ea849">
 Artist                            Total  Simple Eval. 
 
 Thomas Cole                         130       0.5943      
@@ -806,9 +806,9 @@ However, the issue with depending on occurrence is that, it&rsquo;s very likely 
 </p>
 </div>
 </div>
-<div id="outline-container-orge83aa08" class="outline-2">
-<h2 id="orge83aa08">Entropy approach (algorithm 2)</h2>
-<div class="outline-text-2" id="text-orge83aa08">
+<div id="outline-container-orgf7d4ae5" class="outline-2">
+<h2 id="orgf7d4ae5">Entropy approach (algorithm 2)</h2>
+<div class="outline-text-2" id="text-orgf7d4ae5">
 <p>
 The problem with that approach is that, it does not calculate my preference entropy which causes favoritism. For example, I love Caspir&rsquo;s works, I know his melody and life, I would probably relate to any of his works and catch the reference quickly, it&rsquo;s unlikely for me to do the same for someone like John Constable, who I barely know his life. We can count for this like follows:
 </p>
@@ -915,7 +915,7 @@ Now let&rsquo;s bring both together, but sort by algorithm 2:
 This gives us:
 </p>
 
-<pre class="example" id="org13b4d89">
+<pre class="example" id="org1231930">
 Artist                          Total      Entropy    Simple
 -------------------------------------------------------------------
 Alexey Bogolyubov                  46       0.2105    0.5213
@@ -994,9 +994,9 @@ I will add an agenda TODO here to remember to update the evaluation every couple
 </p>
 </div>
 </div>
-<div id="outline-container-orgf0e01dd" class="outline-2">
-<h2 id="orgf0e01dd"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
-<div class="outline-text-2" id="text-orgf0e01dd">
+<div id="outline-container-orgbac39a6" class="outline-2">
+<h2 id="orgbac39a6"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
+<div class="outline-text-2" id="text-orgbac39a6">
 <div class="notes"> <ul class="org-ul">
 <li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:35]</span></span></li>
 </ul>
