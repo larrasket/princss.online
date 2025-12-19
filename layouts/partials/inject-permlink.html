@@ -1,7 +1,7 @@
 {{- /* Inject permlink at the end of the last paragraph */ -}}
 {{- $content := index . 0 -}}
 {{- $permalink := index . 1 -}}
-{{- $permlinkHtml := printf `<a class="copy-permalink" data-url="%s" title="Copy permalink">[permlink].</a>` $permalink -}}
+{{- $permlinkHtml := printf `<a class="copy-permalink" data-url="%s" title="Copy permalink">[permlink]</a>` $permalink -}}
 {{- /* Replace the last </p> with permlink + </p> */ -}}
 {{- $content = replaceRE `</p>\s*$` (printf ` %s</p>` $permlinkHtml) $content -}}
 {{- $content | safeHTML -}}

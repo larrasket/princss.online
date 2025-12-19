@@ -3,6 +3,7 @@
 :CUSTOM_ID: qyuh7gs0ksk0
 :END:
 #+title: I really hate Microsoft
+#+DATE: <2025-11-25 Tue 12:00>
 
 
 I don't think I ever got to talk about much I hate [[id:7jpiga90whk0][Microsoft]]. I will use this post to express how much I hate Microsoft.
