@@ -16,17 +16,12 @@
       <img src="/media/images/pfp.png" style="width: 60px; height: 60px" />
       <div class="info">
         <div class="name">larrasket</div>
-        <div class="date">{{ .Date.Format "02/01/2006" }}</div>
+        <div class="date">{{ .Date.Format "02/01/06" }}</div>
         <div class="time">@{{ partial "org-param.html" (dict "page" . "key" "time") }}</div>
       </div>
     </div>
     <div class="post-content">
-      {{ partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content) }}<a
-        class="copy-permalink"
-        data-url="{{ .Permalink }}"
-        title="Copy permalink"
-        >[permlink]</a
-      >
+      {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content)) .Permalink) }}
     </div>
   </div>
   {{ end }}

@@ -20,12 +20,7 @@
       </div>
     </div>
     <div class="post-content">
-      {{ partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content) }}<a
-        class="copy-permalink"
-        data-url="{{ .Permalink }}"
-        title="Copy permalink"
-        >[permlink]</a
-      >
+      {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content)) .Permalink) }}
     </div>
   </div>
 </div>
