@@ -7,4 +7,13 @@
 
 I don't think I ever got to talk about much I hate [[id:7jpiga90whk0][Microsoft]]. I will use this post to express how much I hate Microsoft.
 
-I'm pro-FOSS and pro-Freedom, however, people who know me know that I do hate Apple and other big tech just not as much as I hate Microsoft. I believe that Microsoft is responsible for making one of the most terrible operating systems ever (along with other many low quality products) which was (is?) responsible for making the computing experience really terrible 
+I'm pro-FOSS and pro-Freedom, however, people who know me know that I do hate Apple and other big tech, but just not as much as I hate Microsoft. I believe that Microsoft is responsible for making one of the most terrible operating systems ever (along with other many low quality products) which was (is?) responsible for making the computing experience really terrible for people who are not much into computing. This resulted in making every task that might require using a computer a burden to these people.
+
+
+I'm not talking about power users or developers who can work around Windows' quirks. I'm talking about your aunt who needs to send an email, the small business owner trying to manage inventory, the teacher preparing a presentation. Microsoft took what should have been straightforward tasks and wrapped them in layers of mysterious failures, cryptic error messages, and mandatory restarts.
+
+
+
+The real issue isn't that software has bugs, every system does. The real issue is that Microsoft built an operating system that treated its users with contempt. Windows 95 through Windows 11 trained an entire generation to believe that computers are fundamentally unreliable, that losing work is just part of the deal, that random crashes are inevitable.
+
+They normalized dysfunction. People don't say "my Mac kernel panicked" or "my Linux box went down." They say "Windows crashed again" with the resigned tone of someone describing weather. Microsoft convinced the world that computing is inherently fragile and frustrating.
