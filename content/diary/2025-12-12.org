@@ -32,3 +32,11 @@ Servers running Linux or BSD regularly go years between reboots. macOS machines 
 
 
 The cost of Microsoft's approach isn't measured in blue screens it's measured in human potential wasted. Every hour someone spent fighting with Windows instead of doing actual work. Every person who gave up on learning to use computers because Microsoft made it unnecessarily hard. Every creative project abandoned because dealing with Windows was too frustrating.
+
+Microsoft had the resources and market position to build something genuinely excellent. Instead, they built something barely adequate and spent decades defending it. They trained the world that computing is supposed to be painful.
+
+That's why I hate Microsoft more than Apple or Google or any other tech giant. Apple locks you into their ecosystem, sure. Google vacuums up your data. But Microsoft convinced generations of people that computers are fundamentally hostile tools that barely work. They normalized dysfunction at a scale that damaged the entire industry's relationship with its users.
+
+** Propaganda
+
+Here's some anti-microsoft propaganda
