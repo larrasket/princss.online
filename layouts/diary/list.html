@@ -1,0 +1,99 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/diary.css" />
+{{ end }} {{ define "main" }}
+<img src="/media/images/diary_header.png" />
+<div class="header">
+  <div class="left-header">
+    <a href="/">vita nouva</a> / <strong><a href="/diary/">diary</a></strong>
+  </div>
+  <div class="right-header">"The Rose Garden by Carl Aagaard"</div>
+</div>
+<div class="content">
+  <!-- Diary Nav -->
+  <nav>
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="/diary/#{{ .Date.Format "02012006" }}">{{ .Date.Format "02/01/2006" }}</a>
+    {{ end }}
+  </nav>
+  <!-- Diary Entries -->
+  <main>
+    {{ range $index, $page := .Pages.ByDate.Reverse }}
+    <article
+      id="{{ $page.Date.Format "02012006" }}"
+      {{
+      if
+      eq
+      $index
+      (sub
+      (len
+      $.Pages)
+      1)
+      }}
+      style="border-bottom: none"
+      {{
+      end
+      }}
+    >
+      <div class="page-content">
+        <div class="date">{{ $page.Date.Format "02/01/2006" }}</div>
+        <div class="page-writing">{{ partial "resolve-roam-links.html" $page.Content }}<a class="copy-permalink" data-url="{{ $page.Permalink }}" title="Copy permalink">[permlink]</a></div>
+      </div>
+    </article>
+    {{ end }}
+  </main>
+</div>
+<div
+  class="header"
+  style="
+    border-bottom: 0px;
+    border-top: 1px dotted var(--darkbrown);
+    position: sticky;
+    bottom: 0px;
+  "
+>
+  <div class="left-header"></div>
+  <div class="right-header" style="padding-top: 5px">c. lr0 2025</div>
+</div>
+{{ end }} {{ define "scripts" }}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const anchors = document.querySelectorAll("nav a:not(.copy-permalink)");
+    const articles = document.querySelectorAll("article");
+    const observerOptions = {
+      root: null,
+      rootMargin: "124px",
+      threshold: 0.2,
+    };
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        const anchor = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting && anchor) {
+          anchors.forEach((a) => a.classList.remove("active"));
+          anchor.classList.add("active");
+        }
+      });
+    };
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions,
+    );
+    articles.forEach((article) => observer.observe(article));
+
+    // Copy permalink functionality
+    document.querySelectorAll('.copy-permalink').forEach(el => {
+      el.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const url = el.dataset.url;
+        try {
+          await navigator.clipboard.writeText(url);
+          const original = el.textContent;
+          el.textContent = '[copied]';
+          setTimeout(() => el.textContent = original, 1500);
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      });
+    });
+  });
+</script>
+{{ end }}

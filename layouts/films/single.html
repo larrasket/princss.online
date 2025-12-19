@@ -1,0 +1,35 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/films.css" />
+{{ end }} {{ define "main" }}
+<div class="body-div">
+  <img src="/media/images/films_header.png" />
+  <div class="header" style="position: sticky; top: 0px">
+    <div class="left-header">
+      <a href="/">vita nouva</a> /
+      <a href="/films/" style="font-weight: bold">films</a> /
+      <a href="/films/lists/">lists</a>
+    </div>
+    <div class="right-header">
+      Shakespeare's Globe Theater (1886-88) "Fresco" [Burgtheater, Vienna,
+      Austria]
+    </div>
+  </div>
+  <div class="content">
+    <div class="film">
+      <div class="left">
+        <div class="frame">
+          <img src="{{ partial "org-param.html" (dict "page" . "key" "image") }}" style="z-index: 1;">
+        </div>
+        <div class="info">
+          <div class="title">{{ partial "org-param.html" (dict "page" . "key" "title") }}</div>
+          <div class="genre">{{ partial "org-param.html" (dict "page" . "key" "genre") }}</div>
+          <div class="director">dir. {{ partial "org-param.html" (dict "page" . "key" "director") }}</div>
+        </div>
+      </div>
+      <div class="right">
+        {{ partial "resolve-roam-links.html" .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

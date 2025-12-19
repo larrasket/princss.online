@@ -1,0 +1,7 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/updates.css" />
+{{ end }} {{ define "main" }}
+<div class="update">
+  <strong>{{ .Date.Format "02/01/2006" }}</strong> - {{ partial "resolve-roam-links.html" .Content }}
+</div>
+{{ end }}

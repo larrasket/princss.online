@@ -1,0 +1,58 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/diary.css" />
+{{ end }} {{ define "main" }}
+<img src="/media/images/diary_header.png" />
+<div class="header">
+  <div class="left-header">
+    <a href="/">vita nouva</a> / <strong><a href="/diary/">diary</a></strong>
+  </div>
+  <div class="right-header">"The Rose Garden by Carl Aagaard"</div>
+</div>
+<div class="content">
+  <!-- Diary Nav -->
+  <nav>
+    {{ range .Parent.Pages.ByDate.Reverse }}
+    <a href="/diary/#{{ .Date.Format "02012006" }}"{{ if eq $.File.Path .File.Path }} class="active"{{ end }}>{{ .Date.Format "02/01/2006" }}</a>
+    {{ end }}
+  </nav>
+  <!-- Single Entry -->
+  <main>
+    <article id="{{ .Date.Format "02012006" }}">
+      <div class="page-content">
+        <div class="date">{{ .Date.Format "02/01/2006" }}</div>
+        <div class="page-writing">{{ partial "resolve-roam-links.html" .Content }}<a class="copy-permalink" data-url="{{ .Permalink }}" title="Copy permalink">[permlink]</a></div>
+      </div>
+    </article>
+  </main>
+</div>
+<div
+  class="header"
+  style="
+    border-bottom: 0px;
+    border-top: 1px dotted var(--darkbrown);
+    position: sticky;
+    bottom: 0px;
+  "
+>
+  <div class="left-header"></div>
+  <div class="right-header" style="padding-top: 5px">c. lr0 2025</div>
+</div>
+{{ end }} {{ define "scripts" }}
+<script>
+  // Copy permalink functionality
+  document.querySelectorAll('.copy-permalink').forEach(el => {
+    el.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const url = el.dataset.url;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = el.textContent;
+        el.textContent = '[copied]';
+        setTimeout(() => el.textContent = original, 1500);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/updates.css" />
+{{ end }} {{ define "main" }} {{ range $index, $page := .Pages.ByDate.Reverse }}
+<div
+  class="update"
+  {{
+  if
+  eq
+  $index
+  (sub
+  (len
+  $.Pages)
+  1)
+  }}
+  style="border-bottom: none"
+  {{
+  end
+  }}
+>
+  <strong>{{ $page.Date.Format "02/01/2006" }}</strong> - {{ partial
+  "resolve-roam-links.html" $page.Content }}
+</div>
+{{ end }} {{ end }}

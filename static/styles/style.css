@@ -27,3 +27,13 @@ html {
 p {
     text-align: justify;
 }
+.copy-permalink {
+    display: block;
+    text-align: right;
+    font-size: 0.85em;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.copy-permalink:hover {
+    opacity: 1;
+}

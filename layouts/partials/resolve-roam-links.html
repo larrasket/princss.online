@@ -1,0 +1,12 @@
+{{- $content := . -}} {{- /* Build a map of org-roam ID -> anchor link by
+parsing :ID: from raw content */ -}} {{- $idMap := dict -}} {{- range
+site.AllPages -}} {{- if and .File (eq .File.Ext "org") -}} {{- $rawContent :=
+.RawContent -}} {{- $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 -}} {{- if
+$idMatch -}} {{- $idLine := index $idMatch 0 -}} {{- $id := replaceRE `:ID:\s+`
+"" $idLine -}} {{- /* Create anchor link: /section/#DDMMYYYY */ -}} {{- $anchor
+:= printf "/%s/#%s" .Section (.Date.Format "02012006") -}} {{- $idMap = merge
+$idMap (dict $id $anchor) -}} {{- end -}} {{- end -}} {{- end -}} {{- /* Replace
+id: links with anchor links */ -}} {{- range $id, $anchor := $idMap -}} {{-
+$pattern := printf `href="id:%s"` $id -}} {{- $replacement := printf `href="%s"`
+$anchor -}} {{- $content = replace $content $pattern $replacement -}} {{- end
+-}} {{- $content | safeHTML -}}

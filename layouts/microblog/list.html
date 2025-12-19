@@ -1,0 +1,51 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/microblog.css" />
+{{ end }} {{ define "main" }}
+<img src="/media/images/microblog_header.png" />
+<div class="header">
+  <div class="left-header">
+    <a href="/">vita nouva</a> /
+    <a href="/microblog/" style="font-weight: bold">m-blog</a>
+  </div>
+  <div class="right-header">Warwick Castle, Jasper Francis Cropsey</div>
+</div>
+<div class="content">
+  {{ range .Pages.ByDate.Reverse }}
+  <div class="post" id="{{ .Params.id }}">
+    <div class="post-info">
+      <img src="/media/images/pfp.png" style="width: 60px; height: 60px" />
+      <div class="info">
+        <div class="name">larrasket</div>
+        <div class="date">{{ .Date.Format "02/01/2006" }}</div>
+        <div class="time">@{{ .Params.time }}</div>
+      </div>
+    </div>
+    <div class="post-content">
+      {{ partial "resolve-roam-links.html" .Content }}<a
+        class="copy-permalink"
+        data-url="{{ .Permalink }}"
+        title="Copy permalink"
+        >[permlink]</a
+      >
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }} {{ define "scripts" }}
+<script>
+  document.querySelectorAll(".copy-permalink").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const url = el.dataset.url;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = el.textContent;
+        el.textContent = "[copied]";
+        setTimeout(() => (el.textContent = original), 1500);
+      } catch (err) {
+        console.error("Failed to copy:", err);
+      }
+    });
+  });
+</script>
+{{ end }}
