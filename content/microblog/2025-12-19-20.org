@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       s6728qd0yrk0
+:CUSTOM_ID: s6728qd0yrk0
+:END:
+#+date: <2025-12-01 Mon 23:59>
+#+title: Jargon File
+
+
+TIL about the Jargon File http://www.catb.org/jargon/html/ #[[id:4u5664n02wj0][Programming]]

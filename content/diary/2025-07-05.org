@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       748hmep0gmk0
+:CUSTOM_ID: 748hmep0gmk0
+:END:
+#+date: <2025-07-05 Sat 04:32>
+#+title: [[https://eev.ee/blog/2025/07/03/the-rise-of-whatever/][The rise of Whatever]]
+
+[[https://eev.ee/blog/2025/07/03/the-rise-of-whatever/][The rise of Whatever]]: I'm not sure if the author is aware of that, but this nice article up there is a really good critique of capitalism and how it ruined almost every small shred of goodness on the internet. #[[id:ex4aa6b0axj0][Capitalism]] #[[id:ad3itys0frk0][Selected Good]]

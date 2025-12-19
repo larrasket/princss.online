@@ -10,23 +10,31 @@
 </div>
 <div class="content">
   <!-- Diary Nav -->
+  {{ $sortedPages := slice }}
+  {{ range .Pages }}
+    {{ $date := partial "org-date.html" . }}
+    {{ $sortedPages = $sortedPages | append (dict "page" . "date" $date) }}
+  {{ end }}
+  {{ $sortedPages = sort $sortedPages "date" "desc" }}
   <nav>
-    {{ range .Pages.ByDate.Reverse }}
-    <a href="/diary/#{{ .Date.Format "02012006" }}">{{ .Date.Format "02/01/2006" }}</a>
+    {{ range $sortedPages }}
+    <a href="/diary/#{{ .date.Format "02012006" }}">{{ .date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
   <!-- Diary Entries -->
   <main>
-    {{ range $index, $page := .Pages.ByDate.Reverse }}
+    {{ range $index, $item := $sortedPages }}
+    {{ $page := $item.page }}
+    {{ $date := $item.date }}
     <article
-      id="{{ $page.Date.Format "02012006" }}"
+      id="{{ $date.Format "02012006" }}"
       {{
       if
       eq
       $index
       (sub
       (len
-      $.Pages)
+      $sortedPages)
       1)
       }}
       style="border-bottom: none"
@@ -35,7 +43,7 @@
       }}
     >
       <div class="page-content">
-        <div class="date">{{ $page.Date.Format "02/01/2006" }}</div>
+        <div class="date">{{ $date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ partial "resolve-roam-links.html" (partial "strip-org-title.html" $page.Content) }}<a class="copy-permalink" data-url="{{ $page.Permalink }}" title="Copy permalink">[permlink]</a></div>
       </div>
     </article>

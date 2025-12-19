@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       hrz5vtl02mk0
+:CUSTOM_ID: hrz5vtl02mk0
+:END:
+#+date: <2025-06-24 Tue 12:22>
+#+title: Emojis in code comments
+
+
+Whoever writes emojis inside code comments, has to be a very dumb LLM, or the
+happiest girl ever.

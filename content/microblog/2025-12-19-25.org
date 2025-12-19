@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       uymjit20jrk0
+:CUSTOM_ID: uymjit20jrk0
+:END:
+#+date: <2025-11-20 Thu 14:48>
+#+title: Safari was based on KDE
+
+
+TIL I learned that the Safari browser's WebKit, was forked from KHTML, which was intended for KDE Linux desktops. [[https://en.wikipedia.org/wiki/KHTML][KHTML]] #[[id:4u5664n02wj0][Programming]]

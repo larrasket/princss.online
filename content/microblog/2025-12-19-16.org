@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ci6k4440dnk0
+:CUSTOM_ID: ci6k4440dnk0
+:END:
+#+date: <2025-07-29 Tue 21:36>
+#+title: Introduction the theory of value
+
+[[id:mmyjm240dnk0][This]] is an LLM written introduction into the theory of value. It's easy to
+understand and I thought it might be useful for people who want to quickly
+understand how value works. "Workers don't own what they produce.  The products
+of their labor become commodities owned by capitalists and sold back to workers
+in the market." for me, this part is the most painful, when I work under a
+capitalist system.

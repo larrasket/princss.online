@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       1g2kfzz06nk0
+:CUSTOM_ID: 1g2kfzz06nk0
+:END:
+#+date: <2024-08-03 Sat 03:14>
+#+title: SEP Friendship
+
+I really like Stanford Encyclopedia of [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]]'s PDFs ([[https://plato.stanford.edu/support/friends.html][preview here]]), however, they do not allow you to download it without a subscription. It's actually good enough for a subscription if you compare it to the HTML. For someone like me, my HTML appetite can not hold more than few long articles, SEP average entry is about 50 pages or so, that's not a long article even. Here's how I get their entries as nice PDFs without subscription, simply save the article part of the HTML page into a file, and using [[https://pandoc.org/][pandoc]] run: ~vpandoc concept_of_religion.html --pdf-engine=xelatex -o concept_of_religion.pdf --variable=documentclass:book -V geometry:b5paper -V margin=3cm -V mainfont="Times New Roman"~ #[[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]]

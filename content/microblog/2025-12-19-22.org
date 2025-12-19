@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       rh9fqrp0rrk0
+:CUSTOM_ID: rh9fqrp0rrk0
+:END:
+#+date: <2025-11-26 Wed 23:59>
+#+title: #14369 · ocaml/ocaml
+
+
+ [[https://github.com/ocaml/ocaml/pull/14369][#14369 · ocaml/ocaml]] prolly one of the top 5 funniest PR reviews. #[[id:4u5664n02wj0][Programming]]

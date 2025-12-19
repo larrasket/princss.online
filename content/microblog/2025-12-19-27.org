@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       djflu081zqk0
+:CUSTOM_ID: djflu081zqk0
+:END:
+#+date: <2025-11-05 Wed 23:59>
+#+title: Matt Holiday
+
+
+Sometimes I develop feelings for books, scientific materials and tutorials. I wrote about this in [[id:jene6a516ak0][Nostalgic Bibliography]]. One of the science books I had this experience with was Shaffer, C. Algorithm Analysis book. I wanted a lot to email Dr. Shaffer about how much I enjoyed his book, but I never found the best words, so I never did. Today I've noticed that I had the same feeling for Matt Holiday's <https://www.youtube.com/@mattkdvb5154> Go tutorial. I have a theory that he made this tutorial because he wanted to gain from time at home during the pandemic. Such a well spoken person and a great teacher. #[[id:lvkhzyo02wj0][Go]] and #[[id:4u5664n02wj0][Programming]]

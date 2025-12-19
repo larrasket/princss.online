@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       xh4gzud0uqk0
+:CUSTOM_ID: xh4gzud0uqk0
+:END:
+#+date: <2025-12-19 Fri 21:40>
+#+title: Designing inefficiency
+
+I told some people before about my conspiracy theory of [[id:xrh2q3k0ozj0][Google]] making Chromium development experience completely difficult, requires many adhocs setups, extremely slow and difficult to fork it to customize the interface/behavior, as a purpose of them trying to limit the possible Chrome clones. I'm now considering that AWS ([[id:6j5kvs6110k0][Amazon]]) is making services like CloudWatch so terrible to search and trace, so you have to use something much more expensive like Live Tail. I'm aware that such a behavior is common in product design, some apps will be more feature-rich on the mobile app rather than on the web interface (usually because the app is more profitable, data-collection-wise), but it's an interesting instance to see such a usage with cloud providers. #[[id:4u5664n02wj0][Programming]]

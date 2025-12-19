@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       eofbv430lrk0
+:CUSTOM_ID: eofbv430lrk0
+:END:
+#+date: <2025-11-21 Fri 23:59>
+#+title: Old journals
+
+Unsure when I will be able to read my old journal, bravely. I had this in my daily TODOs: "Run ~salih/org-search-entries-with-today-date~ and ~salih/open-journal-file-for-today~". these were elisp functions that were showing me my log and journal for the same day of the current month, but for past years. Sounded like a fun idea at first, but it started to get extremely gloomy after couple of days, then weeks. Then I completely stopped doing it because it really harmed my mood. I rescheduled the activity to the far future, hopping that better me will be able to handle his feeling appropriately. He will probably come through this note in November's 21st, I hope he will be glad.

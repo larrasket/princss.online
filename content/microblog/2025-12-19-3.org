@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4telzyt0lsk0
+:END:
+#+date: <2025-05-04 Sun 06:16>
+#+title: Microblog Post 3
+
+TIL there's a great website of [[id:sqw4olv04xj0][Leonard Cohen]] legacy: https://leonardcohenfiles.com/. #[[id:lfoaq730yck0][Music]]

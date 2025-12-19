@@ -1,0 +1,13 @@
+{{- /* Extract date from org #+date: property */ -}} {{- /* Usage: {{ partial
+"org-date.html" . }} returns date object */ -}} {{- $page := . -}} {{- $date :=
+$page.Date -}} {{- if and $page.File (eq $page.File.Ext "org") -}} {{-
+$rawContent := $page.RawContent -}} {{- /* Match #+date:
+<YYYY-MM-DD ...>
+  */ -}} {{- $pattern := `(?mi)^#\+date:\s*<(\d{4}-\d{2}-\d{2})` -}} {{- $match
+  := findRE $pattern $rawContent 1 -}} {{- if $match -}} {{- $line := index
+  $match 0 -}} {{- /* Extract just the date part YYYY-MM-DD */ -}} {{-
+  $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}} {{- if $dateMatch -}}
+  {{- $dateStr := index $dateMatch 0 -}} {{- /* Parse the date string to time */
+  -}} {{- $date = time $dateStr -}} {{- end -}} {{- end -}} {{- end -}} {{-
+  return $date -}}
+</YYYY-MM-DD>

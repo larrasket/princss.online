@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5gq73gx0lsk0
+:END:
+#+date: <2025-11-14 Fri 23:59>
+#+title: nwalsh gallery website is very inspiring
+
+Just wanted to say that I love https://photos.nwalsh.com/. I contacted Norm a year ago: "Hi Norm, I really enjoy browsing through your gallery https://photos.nwalsh.com/images/ndw I would like to build something similar, is the software that serves the website available for others to use? Thanks in advance." he responded: " I’ve reimplemented that a couple of times. I don’t think I ever published the current incarnation. It’s Node.js on the front and Postgresql on the back, so pretty standard stuff. I’ll put “package it up in a public repo” on my todo list, but it’s a long, long list. :-) Be seeing you, norm". I responded: "Thanks. If possible, please let me know if you release it someday. That might be a fit for an additional line in your todo :).". He responded: "I’ll try to remember. To be honest, if I was starting over today, I’d be looking hard at setting up a Pixelfed instance. That might be worth exploring. Something for your todo list, perhaps :-) Be seeing you, norm". This was at Fri, 23 Aug 2024 13:50:01 +0100. I found his response fun. I added it indeed to my long TODO, and I consider pinging him in couple of months.

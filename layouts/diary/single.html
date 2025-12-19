@@ -10,16 +10,23 @@
 </div>
 <div class="content">
   <!-- Diary Nav -->
+  {{ $sortedPages := slice }}
+  {{ range .Parent.Pages }}
+    {{ $date := partial "org-date.html" . }}
+    {{ $sortedPages = $sortedPages | append (dict "page" . "date" $date) }}
+  {{ end }}
+  {{ $sortedPages = sort $sortedPages "date" "desc" }}
   <nav>
-    {{ range .Parent.Pages.ByDate.Reverse }}
-    <a href="/diary/#{{ .Date.Format "02012006" }}"{{ if eq $.File.Path .File.Path }} class="active"{{ end }}>{{ .Date.Format "02/01/2006" }}</a>
+    {{ range $sortedPages }}
+    <a href="/diary/#{{ .date.Format "02012006" }}"{{ if eq $.File.Path .page.File.Path }} class="active"{{ end }}>{{ .date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
   <!-- Single Entry -->
   <main>
-    <article id="{{ .Date.Format "02012006" }}">
+    {{ $date := partial "org-date.html" . }}
+    <article id="{{ $date.Format "02012006" }}">
       <div class="page-content">
-        <div class="date">{{ .Date.Format "02/01/2006" }}</div>
+        <div class="date">{{ $date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content) }}<a class="copy-permalink" data-url="{{ .Permalink }}" title="Copy permalink">[permlink]</a></div>
       </div>
     </article>

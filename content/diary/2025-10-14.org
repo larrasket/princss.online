@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       s21gdg016qk0
+:CUSTOM_ID: s21gdg016qk0
+:END:
+#+date: <2025-10-14 Tue 23:54>
+#+title: Power imbalance (and the Jefferson-Hemings example)
+
+  
+There's that common idea in [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] philosophy about how you can't really do good if you never get the authority, power and ability to do harm. "Of all evil I deem you capable: Therefore I want good from you. Verily, I have often laughed at the weaklings who thought themselves good because they had no claws". I'm reading currently about [[id:k6j4v110g4k0][philosophy of consent]], and the idea that power imbalance nullify consent, and I find many reasons to see Nietzsche's view of power here connected, yet no one is mentioning it in literature I found.
+
+- [2025-11-19 Wed 00:57] \\
+  Jefferson-Hemings is a good example for this tension. Jefferson owned Sally Hemings i.e. literal "claws" in the form of legal authority to sell, punish, or kill her. His capacity for relative kindness (freeing their children, maintaining a relationship rather than disposal) was inseparable from his absolute power over her. But that same power makes consent impossible unde. The power enabling any "choice" simultaneously negates it.
