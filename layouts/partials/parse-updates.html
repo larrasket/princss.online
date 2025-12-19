@@ -1,0 +1,31 @@
+{{- /* Parse org headings as updates */ -}}
+{{- /* Each * YYYY-MM-DD heading becomes an update entry */ -}}
+{{- $rawContent := .RawContent -}}
+{{- $entries := slice -}}
+
+{{- /* Split by level-1 headings */ -}}
+{{- $parts := split $rawContent "\n* " -}}
+{{- range $i, $part := $parts -}}
+  {{- if gt $i 0 -}}
+    {{- /* First line is the date, rest is content */ -}}
+    {{- $lines := split $part "\n" -}}
+    {{- if gt (len $lines) 0 -}}
+      {{- $date := index $lines 0 -}}
+      {{- $content := "" -}}
+      {{- range $j, $line := $lines -}}
+        {{- if gt $j 0 -}}
+          {{- if ne $line "" -}}
+            {{- $content = printf "%s%s " $content $line -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $entries = $entries | append (dict "date" $date "content" (strings.TrimSpace $content)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $i, $entry := $entries -}}
+<div class="update"{{ if eq $i (sub (len $entries) 1) }} style="border-bottom: none"{{ end }}>
+  <strong>{{ $entry.date }}</strong> - {{ $entry.content | markdownify }}
+</div>
+{{- end -}}
