@@ -27,9 +27,9 @@ html {
 p {
     text-align: justify;
 }
+
 .copy-permalink {
-    display: block;
-    text-align: right;
+    float: right;
     font-size: 0.85em;
     opacity: 0.5;
     cursor: pointer;

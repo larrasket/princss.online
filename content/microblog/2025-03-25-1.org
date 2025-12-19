@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       microblog-2025-03-25-1
-:END:
-#+title: Microblog Post 2
-#+date: 2025-03-25T10:30:00
-#+time: 10:30 AM
-#+post_id: 2
-
-Made some coffee this morning. The new beans from the local roaster are really good.
