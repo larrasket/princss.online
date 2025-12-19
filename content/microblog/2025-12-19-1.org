@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       5f7305c0fzj0
+:END:
+#+date: <2022-12-14 Wed 19:34>
+#+title: Microblog Post 1
+
+[[https://www.youtube.com/watch?v=XWgNLMvwkCo][The Royal Tenenbaums]] is best real-life-recognition artwork I've ever seen. A prefect
+manifestation of a dystopian modern family life.
