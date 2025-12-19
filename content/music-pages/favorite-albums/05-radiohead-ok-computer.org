@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       album-ok-computer
+:END:
+#+title: OK Computer
+#+date: 2023-01-05
+#+artist: Radiohead
+#+image: /media/images/music-images/radiohead_okcomputer.png
+#+rank: 4
+#+favorite_track: Exit Music (For a Film)*
+
+Some days I like this more than In Rainbows. One of the greatest albums ever made.
