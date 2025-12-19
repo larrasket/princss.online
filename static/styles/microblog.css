@@ -117,3 +117,44 @@ a:hover {
     background-color: var(--white);
     -webkit-transition: 0.25s;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .left-header {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .right-header {
+        width: auto;
+        flex: 1;
+        font-size: 0.8em;
+    }
+
+    .post-info {
+        width: auto;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .info {
+        padding: 2px;
+        font-size: 0.75em;
+    }
+
+    .post-content {
+        width: auto;
+        flex: 1;
+        padding: 3px;
+        font-size: 0.9em;
+    }
+}

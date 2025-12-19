@@ -26,29 +26,21 @@
 
 /* Mobile Navigation Hidden by Default - phones only */
 @media screen and (max-width: 480px) {
-    /* Disable sticky header on mobile to prevent overlap */
-    .header {
-        position: relative !important;
-    }
-
     .hamburger {
         display: block;
         width: 100%;
-        position: relative !important;
     }
 
     .right-header {
         display: none !important;
         flex-direction: column !important;
         width: 100% !important;
-        position: relative !important;
     }
 
     .right-header.nav-open {
         display: flex !important;
         background: var(--white);
         border-bottom: 1px dotted var(--darkbrown);
-        position: relative !important;
     }
 
     .right-header.nav-open .nav-link {
@@ -204,32 +196,25 @@
 
     /* Calendar takes full width */
     .calendar-widget {
-        width: 100%;
+        grid-column: 1 / -1;
     }
 
     #calendar {
         display: flex;
         justify-content: center;
-        width: 100%;
     }
 
     #calendar table {
-        width: 100% !important;
-    }
-
-    #calendar td {
-        max-width: none !important;
+        width: 100%;
     }
 
     .calendar-buttons {
         display: flex;
         justify-content: center;
-        width: 100%;
     }
 
     .calendar-buttons button {
         flex: 1;
-        width: auto !important;
         min-width: 40px;
         font-size: 14px;
         padding: 5px;
@@ -611,16 +596,16 @@
     }
 
     .post-info {
-        width: 100px !important;
-        min-width: 100px !important;
+        /* width: 100px !important; */
+        /* min-width: 100px !important; */
         border-right: 1px dotted var(--darkbrown);
-        padding: 5px;
+        /* padding: 5px; */
     }
 
-    .post-info img {
-        width: 40px !important;
-        height: 40px !important;
-    }
+    /* .post-info img { */
+    /*     width: 40px !important; */
+    /*     height: 40px !important; */
+    /* } */
 
     .post-info .info {
         font-size: 10px;
@@ -632,7 +617,7 @@
 
     .post-info .info .date,
     .post-info .info .time {
-        font-size: 9px;
+        font-size: smaller;
     }
 
     .post-content {
