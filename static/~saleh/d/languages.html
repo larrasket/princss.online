@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,45 +523,43 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">Thoughts on langauges</h1>
-</header><div class="BACKLINKS" id="orgd361aa9">
+</header><div class="BACKLINKS" id="org9f48a03">
 <p>
 This section was referenced in <a href="../sh/2023.html#bkuf5ac0fzj0">Reconsidering SBCL</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, and <a href="../sh/2024.html#vbl22tf0z3k0">Another killer feature for Go</a>.
 </p>
 
 </div>
 
-<div class="tag" id="orga16c1b3">
+<div class="tag" id="org5c67311">
 <p>
 This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
 </p>
@@ -710,8 +708,8 @@ use the REPL while programming.</li>
 </ul>
 <div id="outline-container-x0z0fu11qxj0" class="outline-2">
 <h2 id="x0z0fu11qxj0">Exception handling</h2>
-<div class="outline-text-2" id="text-orgc2f33fb">
-<div class="BACKLINKS" id="org635417c">
+<div class="outline-text-2" id="text-org34882fc">
+<div class="BACKLINKS" id="orgd950118">
 <p>
 This section was referenced in <a href="#g5tg5e01qxj0">Programmers can make languages horrible</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, <a href="../stack.html#qow1lzo0aqk0">Some other notes on exception handling</a>, and <a href="../sh/2024.html#vbl22tf0z3k0">Another killer feature for Go</a>.
 </p>
@@ -775,7 +773,7 @@ In exception handling, you can just use a single outer catch to all these
 scenarios:
 </p>
 
-<pre class="example" id="orgc853675">
+<pre class="example" id="orgc223120">
 // in your main function:
 try
 {
@@ -821,8 +819,8 @@ languages like Go and Rust.
 </div>
 <div id="outline-container-uau7ou11qxj0" class="outline-2">
 <h2 id="uau7ou11qxj0">Centralized Package Repository</h2>
-<div class="outline-text-2" id="text-orgcedb59d">
-<div class="BACKLINKS" id="orgea982db">
+<div class="outline-text-2" id="text-org01811d4">
+<div class="BACKLINKS" id="org54b0f96">
 <p>
 This section was referenced in <a href="#g5tg5e01qxj0">Programmers can make languages horrible</a>, <a href="../sh/2024.html#gvdlay40j3k0">A thought about Clojure</a>, and <a href="languages.html#jb9efrq00xj0">Thoughts on langauges</a>.
 </p>
@@ -872,8 +870,8 @@ no one to supervise whether X is right or wrong in programming environments.
 </div>
 <div id="outline-container-g5tg5e01qxj0" class="outline-2">
 <h2 id="g5tg5e01qxj0">Programmers can make languages horrible</h2>
-<div class="outline-text-2" id="text-orga983de6">
-<div class="BACKLINKS" id="org117814c">
+<div class="outline-text-2" id="text-orgf0c2f93">
+<div class="BACKLINKS" id="orge08a812">
 <p>
 This section was referenced in <a href="languages.html#jb9efrq00xj0">Thoughts on langauges</a>.
 </p>
@@ -891,7 +889,7 @@ applies to things like macros and inheritance.
 Common Lisp is the most language that I think the following applies to it.
 Actually I want you to have a look at <a href="https://news.ycombinator.com/item?id=37209654">this</a> post from Hacker News:
 </p>
-<pre class="example" id="orgf5542ed">
+<pre class="example" id="orgb9df71a">
 I thought Lisp was suppose to be simple in that: it's all just lists.
 
 I thought everything would just be s-expressions, and be consistent, so it would be

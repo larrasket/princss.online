@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,40 +523,38 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">What is a distributed system</h1>
-</header><div id="outline-container-orgd2d688a" class="outline-2">
-<h2 id="orgd2d688a"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
-<div class="outline-text-2" id="text-orgd2d688a">
+</header><div id="outline-container-org8f23c7f" class="outline-2">
+<h2 id="org8f23c7f"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-org8f23c7f">
 <p>
 I&rsquo;ve been reading recently Distributed Systems by Steen, M. v., &amp;
 Tanenbaum, A. S..<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</span> And it provides a very nice
@@ -569,7 +567,7 @@ service-based architecture and the like.
 </p>
 
 
-<figure id="org85b9a78">
+<figure id="org7a6ed07">
 <img src="../i/2025-04-01_14-04-55_screenshot.png" alt="2025-04-01_14-04-55_screenshot.png">
 
 </figure>
@@ -633,9 +631,9 @@ achieve specific quality attributes.
 </p>
 </div>
 </div>
-<div id="outline-container-org5d92285" class="outline-2">
-<h2 id="org5d92285">When Distribution Cannot Be Avoided</h2>
-<div class="outline-text-2" id="text-org5d92285">
+<div id="outline-container-org0c21425" class="outline-2">
+<h2 id="org0c21425">When Distribution Cannot Be Avoided</h2>
+<div class="outline-text-2" id="text-org0c21425">
 <p>
 Decentralized systems emerge when resources and processes must be
 distributed across multiple computers due to constraints that make
@@ -643,9 +641,9 @@ centralization impossible or infeasible. These constraints typically
 fall into several categories:
 </p>
 </div>
-<div id="outline-container-org8318999" class="outline-3">
-<h3 id="org8318999">Administrative and Organizational Boundaries</h3>
-<div class="outline-text-3" id="text-org8318999">
+<div id="outline-container-org0042533" class="outline-3">
+<h3 id="org0042533">Administrative and Organizational Boundaries</h3>
+<div class="outline-text-3" id="text-org0042533">
 <p>
 Many systems must operate across organizational boundaries where each
 participant maintains independent control over their resources. Medical
@@ -675,9 +673,9 @@ decentralization is necessary, not optional.
 </p>
 </div>
 </div>
-<div id="outline-container-org96d85e8" class="outline-3">
-<h3 id="org96d85e8">Trust Limitations</h3>
-<div class="outline-text-3" id="text-org96d85e8">
+<div id="outline-container-orgb85ba68" class="outline-3">
+<h3 id="orgb85ba68">Trust Limitations</h3>
+<div class="outline-text-3" id="text-orgb85ba68">
 <p>
 Some systems operate in environments where no single entity can or
 should be trusted with complete control. Financial systems often
@@ -704,9 +702,9 @@ the core innovation that enables the system&rsquo;s trustless operation.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd928548" class="outline-3">
-<h3 id="orgd928548">Geographic and Physical Constraints</h3>
-<div class="outline-text-3" id="text-orgd928548">
+<div id="outline-container-org9df86e7" class="outline-3">
+<h3 id="org9df86e7">Geographic and Physical Constraints</h3>
+<div class="outline-text-3" id="text-org9df86e7">
 <p>
 Some systems are decentralized because their physical components must
 exist in specific geographic locations. Weather monitoring networks
@@ -733,9 +731,9 @@ the system too slow to respond to rapidly changing conditions.
 </p>
 </div>
 </div>
-<div id="outline-container-org65a66bd" class="outline-3">
-<h3 id="org65a66bd">Regulatory Requirements</h3>
-<div class="outline-text-3" id="text-org65a66bd">
+<div id="outline-container-org673db50" class="outline-3">
+<h3 id="org673db50">Regulatory Requirements</h3>
+<div class="outline-text-3" id="text-org673db50">
 <p>
 Increasingly, regulatory frameworks require certain types of data to
 remain within specific geographic or jurisdictional boundaries. The
@@ -754,9 +752,9 @@ impossible.
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb8c147" class="outline-2">
-<h2 id="orgbb8c147">When Distribution Is a Choice</h2>
-<div class="outline-text-2" id="text-orgbb8c147">
+<div id="outline-container-orgd7bb1a1" class="outline-2">
+<h2 id="orgd7bb1a1">When Distribution Is a Choice</h2>
+<div class="outline-text-2" id="text-orgd7bb1a1">
 <p>
 Distributed systems, by contrast, involve spreading processes and
 resources across multiple computers to achieve goals like scalability,
@@ -765,9 +763,9 @@ distribution is fundamentally necessary. In these systems,
 centralization would be theoretically possible, if not always practical.
 </p>
 </div>
-<div id="outline-container-orgda382ad" class="outline-3">
-<h3 id="orgda382ad">Web Search Engines</h3>
-<div class="outline-text-3" id="text-orgda382ad">
+<div id="outline-container-org9a68d10" class="outline-3">
+<h3 id="org9a68d10">Web Search Engines</h3>
+<div class="outline-text-3" id="text-org9a68d10">
 <p>
 Google&rsquo;s search engine handles billions of queries daily across a
 massive distributed infrastructure. When users enter a search query,
@@ -793,9 +791,9 @@ approach provided cost advantages and simplified scaling as demand grew.
 </p>
 </div>
 </div>
-<div id="outline-container-org34984c9" class="outline-3">
-<h3 id="org34984c9">Content Delivery Networks</h3>
-<div class="outline-text-3" id="text-org34984c9">
+<div id="outline-container-orgf421f1f" class="outline-3">
+<h3 id="orgf421f1f">Content Delivery Networks</h3>
+<div class="outline-text-3" id="text-orgf421f1f">
 <p>
 Akamai operates over 340,000 servers in more than 135 countries. When
 users visit websites served through Akamai&rsquo;s CDN, they&rsquo;re transparently
@@ -821,9 +819,9 @@ distribution to achieve their performance requirements.
 </div>
 </div>
 </div>
-<div id="outline-container-org81aa1b3" class="outline-2">
-<h2 id="org81aa1b3">Centralized Solutions Work</h2>
-<div class="outline-text-2" id="text-org81aa1b3">
+<div id="outline-container-orgfd2bc60" class="outline-2">
+<h2 id="orgfd2bc60">Centralized Solutions Work</h2>
+<div class="outline-text-2" id="text-orgfd2bc60">
 <p>
 A persistent misconception in system design holds that centralized
 solutions are inherently flawed—unable to scale, vulnerable to
@@ -859,9 +857,9 @@ enable this illusion.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcaf0c2c" class="outline-2">
-<h2 id="orgcaf0c2c">Necessity versus Sufficiency</h2>
-<div class="outline-text-2" id="text-orgcaf0c2c">
+<div id="outline-container-org4e4afe4" class="outline-2">
+<h2 id="org4e4afe4">Necessity versus Sufficiency</h2>
+<div class="outline-text-2" id="text-org4e4afe4">
 <p>
 The key distinction between decentralized and distributed systems stems
 from whether the distribution is necessary or merely sufficient:
@@ -885,9 +883,9 @@ This distinction has profound implications for system design,
 implementation, and operation:
 </p>
 </div>
-<div id="outline-container-orgd81057e" class="outline-3">
-<h3 id="orgd81057e">Complexity Management</h3>
-<div class="outline-text-3" id="text-orgd81057e">
+<div id="outline-container-orgc55969d" class="outline-3">
+<h3 id="orgc55969d">Complexity Management</h3>
+<div class="outline-text-3" id="text-orgc55969d">
 <p>
 Decentralized systems must manage the inherent complexity of
 distribution without the option of simplifying through centralization.
@@ -913,9 +911,9 @@ management.
 </p>
 </div>
 </div>
-<div id="outline-container-org8c38d12" class="outline-3">
-<h3 id="org8c38d12">Performance Expectations and Tradeoffs</h3>
-<div class="outline-text-3" id="text-org8c38d12">
+<div id="outline-container-orgf6e3cb7" class="outline-3">
+<h3 id="orgf6e3cb7">Performance Expectations and Tradeoffs</h3>
+<div class="outline-text-3" id="text-orgf6e3cb7">
 <p>
 Decentralized systems typically incur performance penalties for their
 necessary distribution. Bitcoin processes only a few transactions per
@@ -932,9 +930,9 @@ liability.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc1ce16" class="outline-3">
-<h3 id="orgbc1ce16">Evolution and Governance</h3>
-<div class="outline-text-3" id="text-orgbc1ce16">
+<div id="outline-container-orgd05a5ef" class="outline-3">
+<h3 id="orgd05a5ef">Evolution and Governance</h3>
+<div class="outline-text-3" id="text-orgd05a5ef">
 <p>
 Decentralized systems face unique challenges in evolution. Changes to
 the Bitcoin protocol, for example, require broad consensus among a
@@ -952,9 +950,9 @@ more agile responses to changing requirements.
 </div>
 </div>
 </div>
-<div id="outline-container-org93db65a" class="outline-2">
-<h2 id="org93db65a">Minimal Distribution</h2>
-<div class="outline-text-2" id="text-org93db65a">
+<div id="outline-container-org5728eb1" class="outline-2">
+<h2 id="org5728eb1">Minimal Distribution</h2>
+<div class="outline-text-2" id="text-org5728eb1">
 <p>
 The distinction between distributed and decentralized systems—based on whether
 distribution is sufficient or necessary—provides a powerful framework for

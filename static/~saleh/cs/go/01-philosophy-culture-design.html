@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,31 +523,29 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
@@ -556,11 +554,11 @@
 <h1 class="title">Philosophy, culture and design</h1>
 </header><p>
 Salih Muhammed.
-Contact: l@larr.net
+Contact: root@lr0.org
 </p>
-<div id="outline-container-orgd099d9a" class="outline-2">
-<h2 id="orgd099d9a">Prerequisites</h2>
-<div class="outline-text-2" id="text-orgd099d9a">
+<div id="outline-container-org92a5aa2" class="outline-2">
+<h2 id="org92a5aa2">Prerequisites</h2>
+<div class="outline-text-2" id="text-org92a5aa2">
 <ul class="org-ul">
 <li>Go is not always a good first-programming-language choice.</li>
 
@@ -568,9 +566,9 @@ Contact: l@larr.net
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdb40efa" class="outline-2">
-<h2 id="orgdb40efa">Why Go Exists</h2>
-<div class="outline-text-2" id="text-orgdb40efa">
+<div id="outline-container-org08c1000" class="outline-2">
+<h2 id="org08c1000">Why Go Exists</h2>
+<div class="outline-text-2" id="text-org08c1000">
 <ul class="org-ul">
 <li>Large codebases taking too long to compile (C++ builds taking hours)</li>
 
@@ -582,15 +580,15 @@ Contact: l@larr.net
 </ul>
 </div>
 </div>
-<div id="outline-container-org1d0354d" class="outline-2">
-<h2 id="org1d0354d">Primary Design Goals</h2>
-<div class="outline-text-2" id="text-org1d0354d">
+<div id="outline-container-org8583c40" class="outline-2">
+<h2 id="org8583c40">Primary Design Goals</h2>
+<div class="outline-text-2" id="text-org8583c40">
 <ul class="org-ul">
 <li>Fast compilation</li>
 </ul>
 
 
-<figure id="orge25291b">
+<figure id="org0504de5">
 <img src="../i/Primary_Design_Goals/2025-11-30_21-05-35_screenshot.png" alt="2025-11-30_21-05-35_screenshot.png">
 
 </figure>
@@ -612,9 +610,9 @@ More on that on: Go at Google: Language Design in the Service of Software Engine
 </p>
 </div>
 </div>
-<div id="outline-container-orge54232b" class="outline-2">
-<h2 id="orge54232b">Go&rsquo;s Core Design Philosophy</h2>
-<div class="outline-text-2" id="text-orge54232b">
+<div id="outline-container-org7e6bd6f" class="outline-2">
+<h2 id="org7e6bd6f">Go&rsquo;s Core Design Philosophy</h2>
+<div class="outline-text-2" id="text-org7e6bd6f">
 <div class="epigraph"><blockquote>
 <p>
 &ldquo;Simplicity is complicated, but the clarity is worth it&rdquo; - Rob Pike
@@ -627,25 +625,25 @@ More on that on: Go at Google: Language Design in the Service of Software Engine
 Clarity over cleverness
 </p>
 
-<pre class="code"><code><span style="color: #383a42;">evens</span> = <span style="font-weight: bold;">list</span>(<span style="font-weight: bold;">filter</span>(<span style="font-weight: bold;">lambda</span> x: x % 2 == 0, <span style="font-weight: bold;">range</span>(20)))
+<pre class="code"><code><span style="color: #383a42;">evens</span> = <span style="color: #23d7d7; font-weight: bold;">list</span>(<span style="color: #23d7d7; font-weight: bold;">filter</span>(<span style="color: #ffad29; font-weight: bold;">lambda</span> x: x % 2 == 0, <span style="color: #23d7d7; font-weight: bold;">range</span>(20)))
 </code></pre></li>
 </ul>
 
-<pre class="code"><code><span style="font-weight: bold;">func</span> <span style="font-weight: bold;">EvenNumbers</span>(<span style="color: #383a42;">n</span> <span style="font-weight: bold;">int</span>) []<span style="font-weight: bold;">int</span> {
-    <span style="color: #383a42;">result</span> := []<span style="font-weight: bold;">int</span>{}
-    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt; n; i++ {
-        <span style="font-weight: bold;">if</span> i%2 == 0 {
-            result = <span style="font-weight: bold;">append</span>(result, i)
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">func</span> <span style="color: #00ede1; font-weight: bold;">EvenNumbers</span>(<span style="color: #383a42;">n</span> <span style="color: #34cae2; font-weight: bold;">int</span>) []<span style="color: #34cae2; font-weight: bold;">int</span> {
+    <span style="color: #383a42;">result</span> := []<span style="color: #34cae2; font-weight: bold;">int</span>{}
+    <span style="color: #ffad29; font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 0; i &lt; n; i++ {
+        <span style="color: #ffad29; font-weight: bold;">if</span> i%2 == 0 {
+            result = <span style="color: #23d7d7; font-weight: bold;">append</span>(result, i)
         }
     }
-    <span style="font-weight: bold;">return</span> result
+    <span style="color: #ffad29; font-weight: bold;">return</span> result
 }
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orge04eb10" class="outline-2">
-<h2 id="orge04eb10">Cont. Go&rsquo;s Core Design Philosophy</h2>
-<div class="outline-text-2" id="text-orge04eb10">
+<div id="outline-container-org4f00e28" class="outline-2">
+<h2 id="org4f00e28">Cont. Go&rsquo;s Core Design Philosophy</h2>
+<div class="outline-text-2" id="text-org4f00e28">
 <ul class="org-ul">
 <li>Composition over inheritance, always build complex things from simple parts</li>
 
@@ -657,17 +655,17 @@ Explicit over implicit and no hidden behavior or magic.
 <span style="color: #383a42;">f</span> = i + 1. 5  <span style="color: #556b2f;"># </span><span style="color: #556b2f;">Auto-converts int to float</span>
 </code></pre>
 
-<pre class="code"><code><span style="font-weight: bold;">var</span> <span style="color: #383a42;">i</span> <span style="font-weight: bold;">int</span> = 42
-<span style="font-weight: bold;">var</span> <span style="color: #383a42;">f</span> <span style="font-weight: bold;">float64</span> = <span style="font-weight: bold;">float64</span>(i)  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Must convert explicitly</span>
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">i</span> <span style="color: #34cae2; font-weight: bold;">int</span> = 42
+<span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">f</span> <span style="color: #34cae2; font-weight: bold;">float64</span> = <span style="color: #00ede1; font-weight: bold;">float64</span>(i)  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">Must convert explicitly</span>
 </code></pre></li>
 
 <li>Consistency. Only one way to do things</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdc0136d" class="outline-2">
-<h2 id="orgdc0136d">Go is &ldquo;Simple&rdquo; But Not Small</h2>
-<div class="outline-text-2" id="text-orgdc0136d">
+<div id="outline-container-orgf2b282c" class="outline-2">
+<h2 id="orgf2b282c">Go is &ldquo;Simple&rdquo; But Not Small</h2>
+<div class="outline-text-2" id="text-orgf2b282c">
 <p>
 &ldquo;Simple&rdquo; Means:
 </p>
@@ -695,9 +693,9 @@ Explicit over implicit and no hidden behavior or magic.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgead04ca" class="outline-2">
-<h2 id="orgead04ca">Less is (Exponentially) More</h2>
-<div class="outline-text-2" id="text-orgead04ca">
+<div id="outline-container-org0dd2b35" class="outline-2">
+<h2 id="org0dd2b35">Less is (Exponentially) More</h2>
+<div class="outline-text-2" id="text-org0dd2b35">
 <p>
 Go deliberately leaves out features found in other languages to keep the core simple. This means occasionally more verbose code, but code that&rsquo;s easier to understand six months later.
 </p>
@@ -713,9 +711,9 @@ Go deliberately leaves out features found in other languages to keep the core si
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc14f982" class="outline-2">
-<h2 id="orgc14f982">Further Learning</h2>
-<div class="outline-text-2" id="text-orgc14f982">
+<div id="outline-container-org53197aa" class="outline-2">
+<h2 id="org53197aa">Further Learning</h2>
+<div class="outline-text-2" id="text-org53197aa">
 <ul class="org-ul">
 <li>Go Proverbs by Rob Pike</li>
 <li>&ldquo;Less is Exponentially More&rdquo; - Rob Pike&rsquo;s blog</li>
@@ -828,7 +826,7 @@ Go deliberately leaves out features found in other languages to keep the core si
 
 
 
-<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-11-30 Sun 16:58. Last build date: 2025-11-30 Sun 23:56.</p>
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-11-30 Sun 16:58. Last build date: 2025-12-18 Thu 23:58.</p>
 
 
 

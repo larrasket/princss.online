@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,40 +523,38 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">Implementing Salesforce SSO with Cognito Using SF SessionID</h1>
-</header><div id="outline-container-org0bed1c8" class="outline-2">
-<h2 id="org0bed1c8"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
-<div class="outline-text-2" id="text-org0bed1c8">
+</header><div id="outline-container-orgaa534f8" class="outline-2">
+<h2 id="orgaa534f8"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-orgaa534f8">
 <p>
 I&rsquo;ve been reading recently Distributed Systems by Steen, M. v., &amp;
 Tanenbaum, A. S..<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</span> And it provides a very nice
@@ -569,7 +567,7 @@ service-based architecture and the like.
 </p>
 
 
-<figure id="org9b75ff4">
+<figure id="org2293eb5">
 <img src="../i/2025-04-01_14-04-55_screenshot.png" alt="2025-04-01_14-04-55_screenshot.png">
 
 </figure>
@@ -645,15 +643,15 @@ Final flow chart (<a href="../i/sf-cognito.png">click here for full-width image<
 </p>
 
 
-<figure id="orgb91de5e">
+<figure id="org8366c80">
 <img src="../i/sf-cognito.png" alt="sf-cognito.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org408474b" class="outline-2">
-<h2 id="org408474b">The Authentication Challenge</h2>
-<div class="outline-text-2" id="text-org408474b">
+<div id="outline-container-orge0702c9" class="outline-2">
+<h2 id="orge0702c9">The Authentication Challenge</h2>
+<div class="outline-text-2" id="text-orge0702c9">
 <p>
 Standard OAuth flows typically require implementing specific protocols and
 maintaining redirect URIs. However, many enterprise scenarios benefit from a
@@ -671,9 +669,9 @@ crucial for maintaining consistent user profiles across platforms.
 </p>
 </div>
 </div>
-<div id="outline-container-org7ffaa6f" class="outline-2">
-<h2 id="org7ffaa6f">Architecture Overview</h2>
-<div class="outline-text-2" id="text-org7ffaa6f">
+<div id="outline-container-org49d280d" class="outline-2">
+<h2 id="org49d280d">Architecture Overview</h2>
+<div class="outline-text-2" id="text-org49d280d">
 <p>
 The solution employs AWS Cognito&rsquo;s custom authentication flow capabilities,
 leveraging Lambda triggers to process Salesforce tokens. Four key Lambda
@@ -693,13 +691,13 @@ experience while ensuring proper validation of user identities.
 </p>
 </div>
 </div>
-<div id="outline-container-org0bea400" class="outline-2">
-<h2 id="org0bea400">Implementation Details</h2>
-<div class="outline-text-2" id="text-org0bea400">
+<div id="outline-container-org6cb96f4" class="outline-2">
+<h2 id="org6cb96f4">Implementation Details</h2>
+<div class="outline-text-2" id="text-org6cb96f4">
 </div>
-<div id="outline-container-org2f56dd0" class="outline-3">
-<h3 id="org2f56dd0">Setting Up the Cognito User Pool</h3>
-<div class="outline-text-3" id="text-org2f56dd0">
+<div id="outline-container-orgf23e8e8" class="outline-3">
+<h3 id="orgf23e8e8">Setting Up the Cognito User Pool</h3>
+<div class="outline-text-3" id="text-orgf23e8e8">
 <p>
 First, we need a Cognito user pool configured to use custom authentication
 challenges. This requires disabling the standard authentication flows and
@@ -722,7 +720,7 @@ For Terraform users, the configuration resembles:
 <pre class="code"><code>resource <span style="color: #8a3b3c;">"aws_cognito_user_pool"</span> <span style="color: #8a3b3c;">"myUsers_pool"</span> {
   <span style="color: #383a42;">name</span> = <span style="color: #8a3b3c;">"your_pool_name"</span>
 
-  <span style="font-weight: bold;">lambda_config</span> {
+  <span style="color: #34cae2; font-weight: bold;">lambda_config</span> {
     <span style="color: #383a42;">define_auth_challenge</span> = module.define-myUsers-auth-challenge-lambda.lambda_function_arn
     <span style="color: #383a42;">create_auth_challenge</span> = module.create-myUsers-auth-challenge-lambda.lambda_function_arn
     <span style="color: #383a42;">verify_auth_challenge</span> = module.verify-myUsers-auth-challenge-lambda.lambda_function_arn
@@ -733,19 +731,19 @@ For Terraform users, the configuration resembles:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org9ac5918" class="outline-3">
-<h3 id="org9ac5918">The Token Validator Service</h3>
-<div class="outline-text-3" id="text-org9ac5918">
+<div id="outline-container-orge267675" class="outline-3">
+<h3 id="orge267675">The Token Validator Service</h3>
+<div class="outline-text-3" id="text-orge267675">
 <p>
 The token validator is a separate Lambda exposed as an API that serves as the
 entry point for authentication. It validates Salesforce tokens and ensures users
 exist in Cognito before starting the auth flow:
 </p>
 
-<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>) {
-  <span style="font-weight: bold;">try</span> {
-    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">url</span> = <span style="color: #8a3b3c;">`${SALESFORCE_URL}/services/data/v56.0/chatter/users/me`</span>;
-    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">response</span> = <span style="font-weight: bold;">await</span> fetch(url, {
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">async</span> <span style="color: #ffad29; font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>) {
+  <span style="color: #ffad29; font-weight: bold;">try</span> {
+    <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">url</span> = <span style="color: #8a3b3c;">`${SALESFORCE_URL}/services/data/v56.0/chatter/users/me`</span>;
+    <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">response</span> = <span style="color: #ffad29; font-weight: bold;">await</span> fetch(url, {
       method: <span style="color: #8a3b3c;">"GET"</span>,
       headers: {
         Authorization: <span style="color: #8a3b3c;">`Bearer ${sessionId}`</span>,
@@ -753,15 +751,15 @@ exist in Cognito before starting the auth flow:
       },
     });
 
-    <span style="font-weight: bold;">if</span> (response.status !== 200) {
-      <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Invalid token, status: ${response.status}`</span> };
+    <span style="color: #ffad29; font-weight: bold;">if</span> (response.status !== 200) {
+      <span style="color: #ffad29; font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Invalid token, status: ${response.status}`</span> };
     }
 
-    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">responseData</span> = <span style="font-weight: bold;">await</span> response.json();
-    <span style="font-weight: bold;">return</span> responseData.email ? { isValid: <span style="color: #383a42;">true</span>, email: responseData.email } :
+    <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">responseData</span> = <span style="color: #ffad29; font-weight: bold;">await</span> response.json();
+    <span style="color: #ffad29; font-weight: bold;">return</span> responseData.email ? { isValid: <span style="color: #383a42;">true</span>, email: responseData.email } :
                                { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">"Email not found"</span> };
-  } <span style="font-weight: bold;">catch</span> (error) {
-    <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Validation error: ${error.message}`</span> };
+  } <span style="color: #ffad29; font-weight: bold;">catch</span> (error) {
+    <span style="color: #ffad29; font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">`Validation error: ${error.message}`</span> };
   }
 }
 </code></pre>
@@ -772,51 +770,51 @@ retrieve the user&rsquo;s email, which serves as the basis for identity mapping.
 </p>
 </div>
 </div>
-<div id="outline-container-org2a99308" class="outline-3">
-<h3 id="org2a99308">The Cognito Lambda Triggers</h3>
-<div class="outline-text-3" id="text-org2a99308">
+<div id="outline-container-org6cd0891" class="outline-3">
+<h3 id="org6cd0891">The Cognito Lambda Triggers</h3>
+<div class="outline-text-3" id="text-org6cd0891">
 </div>
-<div id="outline-container-org6d310f9" class="outline-4">
-<h4 id="org6d310f9">Define Auth Challenge</h4>
-<div class="outline-text-4" id="text-org6d310f9">
+<div id="outline-container-org1d9f488" class="outline-4">
+<h4 id="org1d9f488">Define Auth Challenge</h4>
+<div class="outline-text-4" id="text-org1d9f488">
 <p>
 The define-auth-challenge Lambda controls the authentication flow by determining
 which challenges to present and when to issue tokens:
 </p>
 
-<pre class="code"><code><span style="font-weight: bold;">export</span> <span style="font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="font-weight: bold;">async</span> (event) =&gt; {
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">export</span> <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="color: #ffad29; font-weight: bold;">async</span> (event) =&gt; {
   <span style="color: #556b2f;">// </span><span style="color: #556b2f;">first challenge in session
-</span>  <span style="font-weight: bold;">if</span> (!event.request.session || event.request.session.length === 0) {
+</span>  <span style="color: #ffad29; font-weight: bold;">if</span> (!event.request.session || event.request.session.length === 0) {
     event.response.challengeName = <span style="color: #8a3b3c;">"CUSTOM_CHALLENGE"</span>;
     event.response.failAuthentication = <span style="color: #383a42;">false</span>;
     event.response.issueTokens = <span style="color: #383a42;">false</span>;
-  } <span style="font-weight: bold;">else</span> {
+  } <span style="color: #ffad29; font-weight: bold;">else</span> {
     <span style="color: #556b2f;">// </span><span style="color: #556b2f;">subsequent challenges
-</span>    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">lastChallenge</span> = event.request.session[event.request.session.length - 1];
+</span>    <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">lastChallenge</span> = event.request.session[event.request.session.length - 1];
 
-    <span style="font-weight: bold;">if</span> (lastChallenge.challengeResult === <span style="color: #383a42;">true</span>) {
+    <span style="color: #ffad29; font-weight: bold;">if</span> (lastChallenge.challengeResult === <span style="color: #383a42;">true</span>) {
       <span style="color: #556b2f;">// </span><span style="color: #556b2f;">passed - issue tokens
 </span>      event.response.issueTokens = <span style="color: #383a42;">true</span>;
       event.response.failAuthentication = <span style="color: #383a42;">false</span>;
-    } <span style="font-weight: bold;">else</span> {
+    } <span style="color: #ffad29; font-weight: bold;">else</span> {
       <span style="color: #556b2f;">// </span><span style="color: #556b2f;">failed - try again or fail auth
 </span>      event.response.challengeName = <span style="color: #8a3b3c;">"CUSTOM_CHALLENGE"</span>;
       event.response.failAuthentication = <span style="color: #383a42;">false</span>;
     }
   }
-  <span style="font-weight: bold;">return</span> event;
+  <span style="color: #ffad29; font-weight: bold;">return</span> event;
 };
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgfa0e222" class="outline-4">
-<h4 id="orgfa0e222">Create Auth Challenge</h4>
-<div class="outline-text-4" id="text-orgfa0e222">
+<div id="outline-container-orge11c0b9" class="outline-4">
+<h4 id="orge11c0b9">Create Auth Challenge</h4>
+<div class="outline-text-4" id="text-orge11c0b9">
 <p>
 This Lambda creates the challenge requesting the Salesforce token:
 </p>
 
-<pre class="code"><code><span style="font-weight: bold;">export</span> <span style="font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="font-weight: bold;">async</span> (event) =&gt; {
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">export</span> <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">handler</span> = <span style="color: #ffad29; font-weight: bold;">async</span> (event) =&gt; {
   event.response = {
     publicChallengeParameters: {
       challenge: <span style="color: #8a3b3c;">"Please provide your Salesforce session token"</span>
@@ -826,22 +824,22 @@ This Lambda creates the challenge requesting the Salesforce token:
     },
     challengeMetadata: <span style="color: #8a3b3c;">"SALESFORCE_TOKEN"</span>
   };
-  <span style="font-weight: bold;">return</span> event;
+  <span style="color: #ffad29; font-weight: bold;">return</span> event;
 };
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org529d6c3" class="outline-4">
-<h4 id="org529d6c3">Verify Auth Challenge</h4>
-<div class="outline-text-4" id="text-org529d6c3">
+<div id="outline-container-org30b31f4" class="outline-4">
+<h4 id="org30b31f4">Verify Auth Challenge</h4>
+<div class="outline-text-4" id="text-org30b31f4">
 <p>
 The verify-auth-challenge Lambda performs the critical task of validating the token against Salesforce:
 </p>
 
-<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>, <span style="color: #383a42;">instanceUrl</span>, <span style="color: #383a42;">expectedEmail</span>) {
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">async</span> <span style="color: #ffad29; font-weight: bold;">function</span> validateSalesforceToken(<span style="color: #383a42;">sessionId</span>, <span style="color: #383a42;">instanceUrl</span>, <span style="color: #383a42;">expectedEmail</span>) {
   <span style="color: #556b2f;">// </span><span style="color: #556b2f;">request to Salesforce API
-</span>  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">options</span> = {
-    hostname: <span style="font-weight: bold;">new</span> <span style="font-weight: bold;">URL</span>(instanceUrl).hostname,
+</span>  <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">options</span> = {
+    hostname: <span style="color: #ffad29; font-weight: bold;">new</span> <span style="color: #34cae2; font-weight: bold;">URL</span>(instanceUrl).hostname,
     path: <span style="color: #8a3b3c;">"/services/data/v56.0/chatter/users/me"</span>,
     method: <span style="color: #8a3b3c;">"GET"</span>,
     headers: {
@@ -853,12 +851,12 @@ The verify-auth-challenge Lambda performs the critical task of validating the to
   <span style="color: #556b2f;">// </span><span style="color: #556b2f;">token and check email match
 </span>  <span style="color: #556b2f;">// </span><span style="color: #556b2f;">...
 </span>
-  <span style="font-weight: bold;">if</span> (expectedEmail &amp;&amp; responseData.email) {
-    <span style="font-weight: bold;">const</span> <span style="color: #383a42;">emailMatches</span> = responseData.email.toLowerCase() === expectedEmail.toLowerCase();
-    <span style="font-weight: bold;">if</span> (!emailMatches) {
-      <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">"Email mismatch"</span> };
+  <span style="color: #ffad29; font-weight: bold;">if</span> (expectedEmail &amp;&amp; responseData.email) {
+    <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">emailMatches</span> = responseData.email.toLowerCase() === expectedEmail.toLowerCase();
+    <span style="color: #ffad29; font-weight: bold;">if</span> (!emailMatches) {
+      <span style="color: #ffad29; font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">false</span>, reason: <span style="color: #8a3b3c;">"Email mismatch"</span> };
     }
-    <span style="font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">true</span> };
+    <span style="color: #ffad29; font-weight: bold;">return</span> { isValid: <span style="color: #383a42;">true</span> };
   }
 }
 </code></pre>
@@ -866,9 +864,9 @@ The verify-auth-challenge Lambda performs the critical task of validating the to
 </div>
 </div>
 </div>
-<div id="outline-container-orgfb2db33" class="outline-2">
-<h2 id="orgfb2db33">The Username Dilemma</h2>
-<div class="outline-text-2" id="text-orgfb2db33">
+<div id="outline-container-org25ef7bb" class="outline-2">
+<h2 id="org25ef7bb">The Username Dilemma</h2>
+<div class="outline-text-2" id="text-org25ef7bb">
 <p>
 A critical consideration in this implementation revolves around Cognito
 usernames. While it might seem intuitive to use email addresses as usernames in
@@ -892,12 +890,12 @@ To address this challenge, our token validator service uses a deterministic
 approach to generate usernames based on email addresses:
 </p>
 
-<pre class="code"><code><span style="font-weight: bold;">async</span> <span style="font-weight: bold;">function</span> createCognitoUser(<span style="color: #383a42;">email</span>) {
-  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">usernameBase</span> = email.replace(<span style="color: #8a3b3c;">/@/</span>g, <span style="color: #8a3b3c;">"-at-"</span>).replace(<span style="color: #8a3b3c;">/\./</span>g, <span style="color: #8a3b3c;">"-"</span>);
-  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">randomSuffix</span> = randomBytes(4).toString(<span style="color: #8a3b3c;">"hex"</span>);
-  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">username</span> = <span style="color: #8a3b3c;">`${usernameBase}-${randomSuffix}`</span>;
+<pre class="code"><code><span style="color: #ffad29; font-weight: bold;">async</span> <span style="color: #ffad29; font-weight: bold;">function</span> createCognitoUser(<span style="color: #383a42;">email</span>) {
+  <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">usernameBase</span> = email.replace(<span style="color: #8a3b3c;">/@/</span>g, <span style="color: #8a3b3c;">"-at-"</span>).replace(<span style="color: #8a3b3c;">/\./</span>g, <span style="color: #8a3b3c;">"-"</span>);
+  <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">randomSuffix</span> = randomBytes(4).toString(<span style="color: #8a3b3c;">"hex"</span>);
+  <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">username</span> = <span style="color: #8a3b3c;">`${usernameBase}-${randomSuffix}`</span>;
 
-  <span style="font-weight: bold;">const</span> <span style="color: #383a42;">createCommand</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold;">AdminCreateUserCommand</span>({
+  <span style="color: #ffad29; font-weight: bold;">const</span> <span style="color: #383a42;">createCommand</span> = <span style="color: #ffad29; font-weight: bold;">new</span> <span style="color: #34cae2; font-weight: bold;">AdminCreateUserCommand</span>({
     UserPoolId: ADMIN_COGNITO_USER_POOL_ID,
     Username: username,
     UserAttributes: [
@@ -919,9 +917,9 @@ integrity of identity mapping across authentication systems.
 </p>
 </div>
 </div>
-<div id="outline-container-orgffc5022" class="outline-2">
-<h2 id="orgffc5022">Infrastructure as Code</h2>
-<div class="outline-text-2" id="text-orgffc5022">
+<div id="outline-container-org26118f8" class="outline-2">
+<h2 id="org26118f8">Infrastructure as Code</h2>
+<div class="outline-text-2" id="text-org26118f8">
 <p>
 For employing Infrastructure as Code practices, defining these Lambda functions
 and their permissions through Terraform provides consistency and
@@ -961,9 +959,9 @@ operations and that Cognito can invoke the Lambda triggers.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb1c3b1c" class="outline-2">
-<h2 id="orgb1c3b1c">Security Considerations</h2>
-<div class="outline-text-2" id="text-orgb1c3b1c">
+<div id="outline-container-orgd936c68" class="outline-2">
+<h2 id="orgd936c68">Security Considerations</h2>
+<div class="outline-text-2" id="text-orgd936c68">
 <p>
 This authentication flow involves handling sensitive Salesforce session tokens,
 requiring careful attention to security practices:
@@ -985,9 +983,9 @@ for long-lived sessions.
 </p>
 </div>
 </div>
-<div id="outline-container-org6bb3775" class="outline-2">
-<h2 id="org6bb3775">Conclusion</h2>
-<div class="outline-text-2" id="text-org6bb3775">
+<div id="outline-container-org9f27b5d" class="outline-2">
+<h2 id="org9f27b5d">Conclusion</h2>
+<div class="outline-text-2" id="text-org9f27b5d">
 <p>
 The integration of Salesforce authentication with AWS Cognito through custom
 challenges provides a powerful mechanism for extending Salesforce&rsquo;s identity

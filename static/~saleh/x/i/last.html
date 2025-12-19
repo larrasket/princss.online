@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,31 +523,29 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
@@ -599,35 +597,35 @@ The next step would be how to analysis the scrapped data, which is usually very
 big. Here&rsquo;s my simple algorithm (take records as the list of all user actions):
 </p>
 
-<pre class="code"><code>    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">uptime</span> <span style="font-weight: bold;">time.Duration</span>
-    <span style="font-weight: bold;">var</span> <span style="color: #383a42;">res</span> []<span style="font-weight: bold;">Record</span>
-    <span style="font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 1; i &lt; <span style="font-weight: bold;">len</span>(records); i++ {
-        <span style="color: #383a42;">between</span> := records[i].End.<span style="font-weight: bold;">Sub</span>(records[i-1].End)
-        <span style="font-weight: bold;">if</span> between &gt;= cfg.SleepDuration {
+<pre class="code"><code>    <span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">uptime</span> <span style="color: #34cae2; font-weight: bold;">time.Duration</span>
+    <span style="color: #ffad29; font-weight: bold;">var</span> <span style="color: #383a42;">res</span> []<span style="color: #34cae2; font-weight: bold;">Record</span>
+    <span style="color: #ffad29; font-weight: bold;">for</span> <span style="color: #383a42;">i</span> := 1; i &lt; <span style="color: #23d7d7; font-weight: bold;">len</span>(records); i++ {
+        <span style="color: #383a42;">between</span> := records[i].End.<span style="color: #00ede1; font-weight: bold;">Sub</span>(records[i-1].End)
+        <span style="color: #ffad29; font-weight: bold;">if</span> between &gt;= cfg.SleepDuration {
 
-            <span style="font-weight: bold;">if</span> between &gt;= cfg.MaxSleepTime {
-                <span style="color: #383a42;">r</span> := rand.<span style="font-weight: bold;">Intn</span>(100)
+            <span style="color: #ffad29; font-weight: bold;">if</span> between &gt;= cfg.MaxSleepTime {
+                <span style="color: #383a42;">r</span> := rand.<span style="color: #00ede1; font-weight: bold;">Intn</span>(100)
 
-                res = <span style="font-weight: bold;">append</span>(res, <span style="font-weight: bold;">Record</span>{<span style="color: #383a42;">Type</span>: RecordTypeSleep, <span style="color: #383a42;">ActionRecord</span>: <span style="font-weight: bold;">ActionRecord</span>{
+                res = <span style="color: #23d7d7; font-weight: bold;">append</span>(res, <span style="color: #34cae2; font-weight: bold;">Record</span>{<span style="color: #383a42;">Type</span>: RecordTypeSleep, <span style="color: #383a42;">ActionRecord</span>: <span style="color: #34cae2; font-weight: bold;">ActionRecord</span>{
                     <span style="color: #383a42;">Start</span>: records[i-1].End,
-                    <span style="color: #383a42;">End</span>:   records[i-1].End.<span style="font-weight: bold;">Add</span>(8 * time.Hour).<span style="font-weight: bold;">Add</span>(time.<span style="font-weight: bold;">Duration</span>(r) * time.Minute),
-                    <span style="color: #383a42;">Total</span>: records[i-1].End.<span style="font-weight: bold;">Add</span>(8 * time.Hour).<span style="font-weight: bold;">Add</span>(time.<span style="font-weight: bold;">Duration</span>(r) * time.Minute).<span style="font-weight: bold;">Sub</span>(records[i-1].End),
+                    <span style="color: #383a42;">End</span>:   records[i-1].End.<span style="color: #00ede1; font-weight: bold;">Add</span>(8 * time.Hour).<span style="color: #00ede1; font-weight: bold;">Add</span>(time.<span style="color: #00ede1; font-weight: bold;">Duration</span>(r) * time.Minute),
+                    <span style="color: #383a42;">Total</span>: records[i-1].End.<span style="color: #00ede1; font-weight: bold;">Add</span>(8 * time.Hour).<span style="color: #00ede1; font-weight: bold;">Add</span>(time.<span style="color: #00ede1; font-weight: bold;">Duration</span>(r) * time.Minute).<span style="color: #00ede1; font-weight: bold;">Sub</span>(records[i-1].End),
                 }})
 
-                res = <span style="font-weight: bold;">append</span>(res, <span style="font-weight: bold;">Record</span>{<span style="color: #383a42;">Type</span>: RecordTypeUnkown, <span style="color: #383a42;">ActionRecord</span>: <span style="font-weight: bold;">ActionRecord</span>{
-                    <span style="color: #383a42;">Start</span>: records[i-1].End.<span style="font-weight: bold;">Add</span>(8 * time.Hour).<span style="font-weight: bold;">Add</span>(time.<span style="font-weight: bold;">Duration</span>(r) * time.Minute),
+                res = <span style="color: #23d7d7; font-weight: bold;">append</span>(res, <span style="color: #34cae2; font-weight: bold;">Record</span>{<span style="color: #383a42;">Type</span>: RecordTypeUnkown, <span style="color: #383a42;">ActionRecord</span>: <span style="color: #34cae2; font-weight: bold;">ActionRecord</span>{
+                    <span style="color: #383a42;">Start</span>: records[i-1].End.<span style="color: #00ede1; font-weight: bold;">Add</span>(8 * time.Hour).<span style="color: #00ede1; font-weight: bold;">Add</span>(time.<span style="color: #00ede1; font-weight: bold;">Duration</span>(r) * time.Minute),
                     <span style="color: #383a42;">End</span>:   records[i].Start,
-                    <span style="color: #383a42;">Total</span>: records[i].Start.<span style="font-weight: bold;">Sub</span>(records[i-1].End.<span style="font-weight: bold;">Add</span>(8 * time.Hour).<span style="font-weight: bold;">Add</span>(time.<span style="font-weight: bold;">Duration</span>(r) * time.Minute)),
+                    <span style="color: #383a42;">Total</span>: records[i].Start.<span style="color: #00ede1; font-weight: bold;">Sub</span>(records[i-1].End.<span style="color: #00ede1; font-weight: bold;">Add</span>(8 * time.Hour).<span style="color: #00ede1; font-weight: bold;">Add</span>(time.<span style="color: #00ede1; font-weight: bold;">Duration</span>(r) * time.Minute)),
                 }})
 
-            } <span style="font-weight: bold;">else</span> {
+            } <span style="color: #ffad29; font-weight: bold;">else</span> {
 
-                res = <span style="font-weight: bold;">append</span>(res, *<span style="font-weight: bold;">NewRecord</span>(records[i-1], records[i], RecordTypeSleep))
+                res = <span style="color: #23d7d7; font-weight: bold;">append</span>(res, *<span style="color: #00ede1; font-weight: bold;">NewRecord</span>(records[i-1], records[i], RecordTypeSleep))
             }
 
             uptime = 0
-        } <span style="font-weight: bold;">else</span> {
-            res = <span style="font-weight: bold;">append</span>(res, *<span style="font-weight: bold;">NewRecord</span>(records[i-1], records[i], RecordTypeAwake))
+        } <span style="color: #ffad29; font-weight: bold;">else</span> {
+            res = <span style="color: #23d7d7; font-weight: bold;">append</span>(res, *<span style="color: #00ede1; font-weight: bold;">NewRecord</span>(records[i-1], records[i], RecordTypeAwake))
             uptime += between
         }
     }

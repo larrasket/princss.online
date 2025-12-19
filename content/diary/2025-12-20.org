@@ -4,7 +4,12 @@
 :END:
 #+title: "Diary Entry - December 19, 2025"
 
-here's a link it won't be exported properly 
+Hello! Long time no write.
 
-[[id:qyuh7gs0ksk0][I really hate Microsoft]]
+I might look actively writing at my [[/~saleh][blog]], but to be frank, this blog is auto-generated from a Zettelkasten org-mode system. I remember having an incident that a friend of mine reported finding something embarrassing at my website, I immediately deleted it, when he asked why I put it there at the first place I got to explain how I don't actually maintain any web pages in their own, all of them gets generated automatically from a set of rules. In that case; my rules were not strict enough to skip some media[^1]. 
 
+After my last post about naming conventions, I got an email from someone that I know well in the Emacs community (from his contributions not personally) and he suggested if I take over lr0.org, that he happens to own, since I already use that handle everywhere.
+
+I said that I will be happy to. I didn't know what to do with the domain but I thought I could find something useful for it more than just migrating my blog. I was showing Menna some ideas in neocities recently and I told myself why not let it be the finally web garden that I was always missing. And here we are.. I will try to move personal blogs that has nothing to do inside the zettelkasten to be here instead.
+
+[^1]: Funny enough one of the principles of maintaining a Zettelkasten is to make it "private". This shouldn't happen at the first place

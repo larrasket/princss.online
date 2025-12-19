@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -555,31 +555,29 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
@@ -595,7 +593,7 @@
   /*]]>*/
 </style>
 
-<div class="tag" id="org29871ee">
+<div class="tag" id="orgf38120e">
 <p>
 This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a> and <a href="../h/art_paintings_media.html#mvk9gc7014k0">Art</a>
 </p>
@@ -638,14 +636,14 @@ where \(L\) represents the number of loved artworks and \(T\) represents the tot
 It simply tries to care more about the <i>density</i> of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you&rsquo;ve encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
 I will call this algorithm 1. Let&rsquo;s see how we can implement it.
 </p>
-<div id="outline-container-org991e5b7" class="outline-2">
-<h2 id="org991e5b7">Implementing naive occurrence counting (algorithm 1)</h2>
-<div class="outline-text-2" id="text-org991e5b7">
+<div id="outline-container-org8f551b0" class="outline-2">
+<h2 id="org8f551b0">Implementing naive occurrence counting (algorithm 1)</h2>
+<div class="outline-text-2" id="text-org8f551b0">
 <p>
 We will need first to start with data collection. The book didn&rsquo;t include a number for how many each artist has of works, and I didn&rsquo;t like all of them so I can&rsquo;t depend on my PKMS, nor did I count them. Lucky enough, <a href="https://www.wikiart.org">wikiart.org</a> provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
 </p>
 
-<pre class="example" id="orgba2b546">
+<pre class="example" id="org36ff778">
 Ivan Aivazovsky :nworks:   700
 Benjamin West :nworks:   156
 Emile Claus :nworks:   26
@@ -657,26 +655,26 @@ Carl Aagaard :nworks:   220
 <code>nworks</code> here stands for number of works. I also needed to populate this into my PKMS, which is just Org mode file, I loaded the above result into an EMACS buffer, and evaluated the following:
 </p>
 
-<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/org-set-nworks-from-buffer</span> (data-buffer org-buffer)
-  (<span style="font-weight: bold;">interactive</span>
+<pre class="code"><code>(<span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">salih/org-set-nworks-from-buffer</span> (data-buffer org-buffer)
+  (<span style="color: #ffad29; font-weight: bold;">interactive</span>
    (<span style="color: #383a42;">list</span> (<span style="color: #383a42;">read-buffer</span> <span style="color: #8a3b3c;">"Data buffer: "</span> (<span style="color: #383a42;">current-buffer</span>))
          (<span style="color: #383a42;">read-buffer</span> <span style="color: #8a3b3c;">"Org buffer: "</span>)))
-  (<span style="font-weight: bold;">let</span> (alist)
-    (<span style="font-weight: bold;">with-current-buffer</span> data-buffer
+  (<span style="color: #ffad29; font-weight: bold;">let</span> (alist)
+    (<span style="color: #ffad29; font-weight: bold;">with-current-buffer</span> data-buffer
       (<span style="color: #383a42;">goto-char</span> (<span style="color: #383a42;">point-min</span>))
-      (<span style="font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span>
+      (<span style="color: #ffad29; font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span>
               <span style="color: #8a3b3c;">"^</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">(</span><span style="color: #8a3b3c;">[</span><span style="color: #383a42; font-weight: bold;">^</span><span style="color: #8a3b3c;">:]+?</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">)</span><span style="color: #8a3b3c;">[[:space:]]*:nworks:[[:space:]]*</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">(</span><span style="color: #8a3b3c;">[0-9]+</span><span style="color: #383a42; font-weight: bold;">\\</span><span style="color: #383a42; font-weight: bold;">)</span><span style="color: #8a3b3c;">"</span> nil t)
-        (<span style="font-weight: bold;">let</span> ((name   (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">match-string</span> 1)))
+        (<span style="color: #ffad29; font-weight: bold;">let</span> ((name   (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">match-string</span> 1)))
               (count  (<span style="color: #383a42;">match-string</span> 2)))
           (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"Parsed: %s -&gt; %s"</span> name count)
-          (<span style="font-weight: bold;">push</span> (<span style="color: #383a42;">cons</span> name count) alist))))
-    (<span style="font-weight: bold;">with-current-buffer</span> org-buffer
+          (<span style="color: #ffad29; font-weight: bold;">push</span> (<span style="color: #383a42;">cons</span> name count) alist))))
+    (<span style="color: #ffad29; font-weight: bold;">with-current-buffer</span> org-buffer
       (<span style="color: #383a42;">org-map-entries</span>
-       (<span style="font-weight: bold;">lambda</span> ()
-         (<span style="font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">nth</span> 4 (<span style="color: #383a42;">org-heading-components</span>))))
+       (<span style="color: #ffad29; font-weight: bold;">lambda</span> ()
+         (<span style="color: #ffad29; font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">string-trim</span> (<span style="color: #383a42;">nth</span> 4 (<span style="color: #383a42;">org-heading-components</span>))))
                 (entry   (<span style="color: #383a42;">assoc-string</span> heading alist t)))
-           (<span style="font-weight: bold;">if</span> entry
-               (<span style="font-weight: bold;">progn</span>
+           (<span style="color: #ffad29; font-weight: bold;">if</span> entry
+               (<span style="color: #ffad29; font-weight: bold;">progn</span>
                  (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"Setting %s NWORKS=%s"</span> heading (<span style="color: #383a42;">cdr</span> entry))
                  (<span style="color: #383a42;">org-set-property</span> <span style="color: #8a3b3c;">"NWORKS"</span> (<span style="color: #383a42;">cdr</span> entry)))
              (<span style="color: #383a42;">message</span> <span style="color: #8a3b3c;">"No data for: %s"</span> heading))))
@@ -687,27 +685,27 @@ Carl Aagaard :nworks:   220
 This means that each artist entity in the file will look like the following:
 </p>
 <pre class="code"><code><span style="color: #383a42; font-weight: bold;">Nicolai Abildgaard
-</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">i0jf8l21fkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">i0jf8l21fkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">30</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">i0jf8l21fkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">i0jf8l21fkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">30</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="color: #ffad29; font-weight: bold;">
 </span><span style="color: #383a42; font-weight: bold;">Jacques-Laurent Agasse
-</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">dcjcb680hkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">dcjcb680hkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">45</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">dcjcb680hkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">dcjcb680hkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">45</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="color: #ffad29; font-weight: bold;">
 </span><span style="color: #383a42; font-weight: bold;">Mariotto Albertinelli
-</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">2um0gc80hkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">2um0gc80hkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">19</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:END:</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">2um0gc80hkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">2um0gc80hkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">19</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:END:</span><span style="color: #ffad29; font-weight: bold;">
 </span><span style="color: #383a42; font-weight: bold;">Domenico Ghirlandaio
-</span><span style="color: #383a42;">:PROPERTIES:</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">1dq2tj80hkk0</span><span style="font-weight: bold;">
-</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">1dq2tj80hkk0</span><span style="font-weight: bold;">
+</span><span style="color: #383a42;">:PROPERTIES:</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:ID:</span>       <span style="color: #485a27;">1dq2tj80hkk0</span><span style="color: #ffad29; font-weight: bold;">
+</span><span style="color: #383a42;">:CUSTOM_ID:</span> <span style="color: #485a27;">1dq2tj80hkk0</span><span style="color: #ffad29; font-weight: bold;">
 </span><span style="color: #383a42;">:NWORKS:</span>   <span style="color: #485a27;">108</span>
 </code></pre>
 
@@ -717,7 +715,7 @@ Now we can implement \(\frac{L}{T} \times \log(L + 1)\\) easily in Elisp;
 
 <pre class="code"><code>(simple-score (loved total)
               <span style="color: #8a3b3c;">"Simple approach: (L/T) * log(L+1)"</span>
-              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
+              (<span style="color: #ffad29; font-weight: bold;">if</span> (<span style="color: #ffad29; font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
                   (<span style="color: #383a42;">*</span> (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total)
                      (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> loved)))
                 0.0))
@@ -728,7 +726,7 @@ Here&rsquo;s the simple score result:
 </p>
 
 
-<div class="postscript" id="org449c71e">
+<div class="postscript" id="orga8552dc">
 <p>
 Note I&rsquo;m running this here as of the date of writing it <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:02]</span></span>, as I mentioned above, I only browsed the artists of the D letter. I will add here &ldquo;Last run&rdquo; property, so reader can relate to the last update date
 </p>
@@ -739,7 +737,7 @@ Last run <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun
 
 </div>
 
-<pre class="example" id="orgaa7752f">
+<pre class="example" id="org6a9f770">
 Artist                            Total  Simple Eval. 
 
 Thomas Cole                         130       0.5943      
@@ -808,9 +806,9 @@ However, the issue with depending on occurrence is that, it&rsquo;s very likely 
 </p>
 </div>
 </div>
-<div id="outline-container-orge20f0f4" class="outline-2">
-<h2 id="orge20f0f4">Entropy approach (algorithm 2)</h2>
-<div class="outline-text-2" id="text-orge20f0f4">
+<div id="outline-container-orge83aa08" class="outline-2">
+<h2 id="orge83aa08">Entropy approach (algorithm 2)</h2>
+<div class="outline-text-2" id="text-orge83aa08">
 <p>
 The problem with that approach is that, it does not calculate my preference entropy which causes favoritism. For example, I love Caspir&rsquo;s works, I know his melody and life, I would probably relate to any of his works and catch the reference quickly, it&rsquo;s unlikely for me to do the same for someone like John Constable, who I barely know his life. We can count for this like follows:
 </p>
@@ -854,62 +852,62 @@ The full equation integrates three components: base affinity (\(L/T\)), confiden
 Now let&rsquo;s bring both together, but sort by algorithm 2:
 </p>
 
-<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/calculate-artist-favor-scores</span> (org-file)
-  (<span style="font-weight: bold;">cl-flet</span> ((simple-score (loved total)
+<pre class="code"><code>(<span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">salih/calculate-artist-favor-scores</span> (org-file)
+  (<span style="color: #ffad29; font-weight: bold;">cl-flet</span> ((simple-score (loved total)
               <span style="color: #8a3b3c;">"Simple approach: (L/T) * log(L+1)"</span>
-              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
+              (<span style="color: #ffad29; font-weight: bold;">if</span> (<span style="color: #ffad29; font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> total 0) (<span style="color: #383a42;">&gt;</span> loved 0))
                   (<span style="color: #383a42;">*</span> (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total)
                      (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> loved)))
                 0.0))
             (entropy-score (loved total)
               <span style="color: #8a3b3c;">"approach with entropy"</span>
-              (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">or</span> (<span style="color: #383a42;">&lt;=</span> total 0) (<span style="color: #383a42;">&lt;</span> loved 0))
+              (<span style="color: #ffad29; font-weight: bold;">if</span> (<span style="color: #ffad29; font-weight: bold;">or</span> (<span style="color: #383a42;">&lt;=</span> total 0) (<span style="color: #383a42;">&lt;</span> loved 0))
                   0.0
-                (<span style="font-weight: bold;">let*</span> ((ratio (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total))
+                (<span style="color: #ffad29; font-weight: bold;">let*</span> ((ratio (<span style="color: #383a42;">/</span> (<span style="color: #383a42;">float</span> loved) total))
                        (confidence (<span style="color: #383a42;">-</span> 1 (<span style="color: #383a42;">/</span> 1 (<span style="color: #383a42;">sqrt</span> total))))
                        (p1 ratio)
                        (p2 (<span style="color: #383a42;">-</span> 1 ratio))
-                       (entropy (<span style="font-weight: bold;">if</span> (<span style="font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> p1 0) (<span style="color: #383a42;">&gt;</span> p2 0))
+                       (entropy (<span style="color: #ffad29; font-weight: bold;">if</span> (<span style="color: #ffad29; font-weight: bold;">and</span> (<span style="color: #383a42;">&gt;</span> p1 0) (<span style="color: #383a42;">&gt;</span> p2 0))
                                     (<span style="color: #383a42;">-</span> (<span style="color: #383a42;">+</span> (<span style="color: #383a42;">*</span> p1 (<span style="color: #383a42;">log</span> p1))
                                           (<span style="color: #383a42;">*</span> p2 (<span style="color: #383a42;">log</span> p2))))
                                   0.0))
-                       (entropy-bonus (<span style="font-weight: bold;">if</span> (<span style="color: #383a42;">&gt;</span> total 1)
+                       (entropy-bonus (<span style="color: #ffad29; font-weight: bold;">if</span> (<span style="color: #383a42;">&gt;</span> total 1)
                                           (<span style="color: #383a42;">/</span> entropy (<span style="color: #383a42;">log</span> (<span style="color: #383a42;">1+</span> total)))
                                         0.0)))
                   (<span style="color: #383a42;">*</span> ratio
                      confidence
                      (<span style="color: #383a42;">1+</span> entropy-bonus))))))
     
-    (<span style="font-weight: bold;">with-temp-buffer</span>
+    (<span style="color: #ffad29; font-weight: bold;">with-temp-buffer</span>
       (<span style="color: #383a42;">insert-file-contents</span> org-file)
       (<span style="color: #383a42;">org-mode</span>)
       (<span style="color: #383a42;">goto-char</span> (<span style="color: #383a42;">point-min</span>))
       
-      (<span style="font-weight: bold;">let</span> ((results <span style="color: #383a42;">'</span>()))
-        (<span style="font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span> <span style="color: #8a3b3c;">"^\\*\\* "</span> nil t)
-          (<span style="font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">org-get-heading</span> t t t t))
+      (<span style="color: #ffad29; font-weight: bold;">let</span> ((results <span style="color: #383a42;">'</span>()))
+        (<span style="color: #ffad29; font-weight: bold;">while</span> (<span style="color: #383a42;">re-search-forward</span> <span style="color: #8a3b3c;">"^\\*\\* "</span> nil t)
+          (<span style="color: #ffad29; font-weight: bold;">let*</span> ((heading (<span style="color: #383a42;">org-get-heading</span> t t t t))
                  (id (<span style="color: #383a42;">org-entry-get</span> (<span style="color: #383a42;">point</span>) <span style="color: #8a3b3c;">"ID"</span>))
                  (nworks (<span style="color: #383a42;">org-entry-get</span> (<span style="color: #383a42;">point</span>) <span style="color: #8a3b3c;">"NWORKS"</span>)))
             
-            (<span style="font-weight: bold;">when</span> (<span style="font-weight: bold;">and</span> id nworks)
-              (<span style="font-weight: bold;">let*</span> ((total (<span style="color: #383a42;">string-to-number</span> nworks))
+            (<span style="color: #ffad29; font-weight: bold;">when</span> (<span style="color: #ffad29; font-weight: bold;">and</span> id nworks)
+              (<span style="color: #ffad29; font-weight: bold;">let*</span> ((total (<span style="color: #383a42;">string-to-number</span> nworks))
                      (node (<span style="color: #383a42;">org-roam-node-from-id</span> id))
-                     (backlinks (<span style="font-weight: bold;">when</span> node (<span style="color: #383a42;">org-roam-backlinks-get</span> node)))
+                     (backlinks (<span style="color: #ffad29; font-weight: bold;">when</span> node (<span style="color: #383a42;">org-roam-backlinks-get</span> node)))
                      (loved (<span style="color: #383a42;">length</span> backlinks))
                      (simple (simple-score loved total))
                      (entropy (entropy-score loved total)))
                 
-                (<span style="font-weight: bold;">push</span> (<span style="color: #383a42;">list</span> <span style="font-weight: bold;">:name</span> heading
-                            <span style="font-weight: bold;">:id</span> id
+                (<span style="color: #ffad29; font-weight: bold;">push</span> (<span style="color: #383a42;">list</span> <span style="color: #23d7d7; font-weight: bold;">:name</span> heading
+                            <span style="color: #23d7d7; font-weight: bold;">:id</span> id
                             <span style="color: #556b2f;">;; </span><span style="color: #556b2f;">:loved loved
 </span>                            <span style="color: #556b2f;">;; </span><span style="color: #556b2f;">:total total
-</span>                            <span style="font-weight: bold;">:simple-score</span> simple
-                            <span style="font-weight: bold;">:entropy-score</span> entropy)
+</span>                            <span style="color: #23d7d7; font-weight: bold;">:simple-score</span> simple
+                            <span style="color: #23d7d7; font-weight: bold;">:entropy-score</span> entropy)
                       results)))))
         
-        (<span style="color: #383a42;">sort</span> results (<span style="font-weight: bold;">lambda</span> (a b)
-                        (<span style="color: #383a42;">&gt;</span> (<span style="color: #383a42;">plist-get</span> a <span style="font-weight: bold;">:entropy-score</span>)
-                           (<span style="color: #383a42;">plist-get</span> b <span style="font-weight: bold;">:entropy-score</span>))))))))
+        (<span style="color: #383a42;">sort</span> results (<span style="color: #ffad29; font-weight: bold;">lambda</span> (a b)
+                        (<span style="color: #383a42;">&gt;</span> (<span style="color: #383a42;">plist-get</span> a <span style="color: #23d7d7; font-weight: bold;">:entropy-score</span>)
+                           (<span style="color: #383a42;">plist-get</span> b <span style="color: #23d7d7; font-weight: bold;">:entropy-score</span>))))))))
 </code></pre>
 
 
@@ -917,7 +915,7 @@ Now let&rsquo;s bring both together, but sort by algorithm 2:
 This gives us:
 </p>
 
-<pre class="example" id="org5a2536f">
+<pre class="example" id="org13b4d89">
 Artist                          Total      Entropy    Simple
 -------------------------------------------------------------------
 Alexey Bogolyubov                  46       0.2105    0.5213
@@ -996,9 +994,9 @@ I will add an agenda TODO here to remember to update the evaluation every couple
 </p>
 </div>
 </div>
-<div id="outline-container-org9d7d103" class="outline-2">
-<h2 id="org9d7d103"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
-<div class="outline-text-2" id="text-org9d7d103">
+<div id="outline-container-orgf0e01dd" class="outline-2">
+<h2 id="orgf0e01dd"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
+<div class="outline-text-2" id="text-orgf0e01dd">
 <div class="notes"> <ul class="org-ul">
 <li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:35]</span></span></li>
 </ul>

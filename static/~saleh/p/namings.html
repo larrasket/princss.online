@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,52 +523,50 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">Programmers and software developers lost the plot on naming their tools</h1>
-</header><div class="BACKLINKS" id="orgb1eddc7">
+</header><div class="BACKLINKS" id="orgb80db41">
 <p>
 This section was referenced in <a href="renamings.html#1ix262b1fsk0">Re: Programmers and software developers lost the plot on naming their tools</a>.
 </p>
 
 </div>
 
-<div class="tag" id="orgb2c805d">
+<div class="tag" id="org727d66b">
 <p>
 This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
 </p>
 
 </div>
 
-<div class="PREVIEW" id="orgda64d41">
+<div class="PREVIEW" id="org3b3d1ac">
 <p>
 This post was discussed in <a href="https://news.ycombinator.com/item?id=46234806">HackerNews</a>, <a href="https://lobste.rs/s/qhairc/programmers_software_developers_lost">Lobsters</a>, and <a href="https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/">r/coding</a>. You can check also my <a href="renamings.html#1ix262b1fsk0">response to some comments</a>.
 </p>
@@ -590,9 +588,9 @@ I remembered Stallman&rsquo;s comment lately when I had some difficulties follow
 <p>
 Same thing applies to other fields like chemical engineering, where people there maintain even stricter discipline. IUPAC nomenclature ensures that 2,2,4-trimethylpentane describes exactly one molecule. No chemist wakes up and decides to call it &ldquo;Steve&rdquo; because Steve is a funny name and they think it&rsquo;ll make their paper more approachable.
 </p>
-<div id="outline-container-org996282b" class="outline-2">
-<h2 id="org996282b">It was not always like that (I believe)</h2>
-<div class="outline-text-2" id="text-org996282b">
+<div id="outline-container-orgf134d04" class="outline-2">
+<h2 id="orgf134d04">It was not always like that (I believe)</h2>
+<div class="outline-text-2" id="text-orgf134d04">
 <p>
 I read a lot into software history, and I can&rsquo;t really say that there was an era of fantastic naming (even very experienced engineers made <a href="https://en.wikipedia.org/wiki/Inferno_(operating_system)">some</a> <a href="https://en.wikipedia.org/wiki/Go_(programming_language)">very</a> <a href="https://en.wikipedia.org/wiki/Limbo_(programming_language)">silly</a> <a href="https://en.wikipedia.org/wiki/Sam_(text_editor)">naming</a>) but at least some current was trying to make some sense in the 80s; grep (global regular expression print), awk (Aho, Weinberger, Kernighan; the creators&rsquo; initials), sed (stream editor), cat (concatenate), diff (difference). Even when abbreviated, these names were either functional descriptions or systematic derivations. Nobody named the copy command &ldquo;Sparkle&rdquo; or the move command &ldquo;Whisper.&rdquo;
 </p>
@@ -606,9 +604,9 @@ But we didn&rsquo;t stop there. We kept going. Now we&rsquo;re drowning in a zoo
 </p>
 </div>
 </div>
-<div id="outline-container-org2ffb27c" class="outline-2">
-<h2 id="org2ffb27c">The cognitive tax</h2>
-<div class="outline-text-2" id="text-org2ffb27c">
+<div id="outline-container-org40cc99c" class="outline-2">
+<h2 id="org40cc99c">The cognitive tax</h2>
+<div class="outline-text-2" id="text-org40cc99c">
 <p>
 Every obscure name is a transaction cost levied on every developer who encounters it. When you see &ldquo;libsodium,&rdquo; you must context-switch from problem-solving mode to detective mode: &ldquo;What does this do? Let me check the README. Ah, it&rsquo;s a crypto library. Why is it called sodium? Because chemistry? Because NaCl? Clever, I suppose.&rdquo; Now, multiply this by dozens of dependencies in a modern project. Each one demands tribute: a few seconds of mental processing to decode the semantic cipher. Those seconds accumulate into minutes and effort, then career-spanning mountains of wasted cognitive effort.
 </p>
@@ -623,9 +621,9 @@ Now pause and actually process that sentence. there&rsquo;s a snake, another sna
 </p>
 </div>
 </div>
-<div id="outline-container-org8f15106" class="outline-2">
-<h2 id="org8f15106">Some excuses I&rsquo;ve heard of</h2>
-<div class="outline-text-2" id="text-org8f15106">
+<div id="outline-container-orgfad7910" class="outline-2">
+<h2 id="orgfad7910">Some excuses I&rsquo;ve heard of</h2>
+<div class="outline-text-2" id="text-orgfad7910">
 <p>
 I was told some of the following when I shared my concerns about naming <a href="../sh/2023.html#bek89831uxj0">before</a>, here&rsquo;s my thoughts of some:
 </p>
@@ -667,9 +665,9 @@ We could have used namespaces, prefixes, or compound terms like every other engi
 </ul>
 </div>
 </div>
-<div id="outline-container-org15a1c20" class="outline-2">
-<h2 id="org15a1c20">The path forward</h2>
-<div class="outline-text-2" id="text-org15a1c20">
+<div id="outline-container-orgf681c95" class="outline-2">
+<h2 id="orgf681c95">The path forward</h2>
+<div class="outline-text-2" id="text-orgf681c95">
 <p>
 Whatever happened wasn&rsquo;t malicious—it was cultural. As programming shifted from corporate mainframe work to the community builders.<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
 Which was a good thing. 

@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,45 +523,43 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">Conventional Commits considered harmful</h1>
-</header><div class="tag" id="org6148cae">
+</header><div class="tag" id="org313feea">
 <p>
 This section was labeled under, or is related to <a href="../t/programming.html#4u5664n02wj0">Programming</a>
 </p>
 
 </div>
 
-<div class="PREVIEW" id="org30bfb06">
+<div class="PREVIEW" id="org94913f7">
 <p>
 This post was discussed in <a href="https://lobste.rs/s/szoe3m/conventional_commits_considered">Lobsters</a>
 </p>
@@ -616,7 +614,7 @@ As you can see my commit is actually complying to the conventional commits style
 </p>
 
 
-<pre class="example" id="org80496a4">
+<pre class="example" id="org35b97fc">
   1 git … commit --all --
 hint: Waiting for your editor to close the file...
 Waiting for Emacs...
@@ -648,7 +646,7 @@ In fact, almost all of the information that would be added in a &ldquo;conventio
 What about CI/CD triggers from your commits? While this is really useful, it could be totally replaced by much easier checks, in a project I worked in we used to trigger them with GitHub comments in the PR, another quicker way would be to watch certain packages in the CI/CD. For example consider this commit:
 </p>
 
-<pre class="example" id="org985cd6f">
+<pre class="example" id="org2656d02">
 fix(keyboard): something was not working
 </pre>
 
@@ -663,9 +661,9 @@ Overall this style is just like the many other <a href="https://xkcd.com/927/">s
 <p>
 If you still prefer it you can squeeze a PR commits into a single one that follows your preferred style, but please do not ask contributors to learn unuseful and unportable knowledge.
 </p>
-<div id="outline-container-orgd1062e7" class="outline-2">
-<h2 id="orgd1062e7">Related reads:</h2>
-<div class="outline-text-2" id="text-orgd1062e7">
+<div id="outline-container-org21a8bef" class="outline-2">
+<h2 id="org21a8bef">Related reads:</h2>
+<div class="outline-text-2" id="text-org21a8bef">
 <ul class="org-ul">
 <li><a href="https://beyermatthias.de/i-hate-conventional-commits">I hate Conventional Commits — musicmatzes blog</a></li>
 <li><a href="https://srazkvt.codeberg.page/posts/2025-07-06-conventional-commits-makes-me-sad.html">Conventional Commits makes me sad</a> (<a href="https://lobste.rs/s/phfy8a/conventional_commits_makes_me_sad">comments</a>)</li>

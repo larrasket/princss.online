@@ -8,7 +8,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,9 +18,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -289,9 +289,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -554,31 +554,29 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
@@ -588,9 +586,9 @@
 </header><p>
 Notes from (<a href="#citeproc_bib_item_1">James et al., 2023</a>). For more context: <a href="../../d/islg.html#edrhrl61kyj0">An Introduction to Statistical Learning with Applications in Go (and Julia)</a>
 </p>
-<div id="outline-container-orgd0f8521" class="outline-2">
-<h2 id="orgd0f8521">Some Terms</h2>
-<div class="outline-text-2" id="text-orgd0f8521">
+<div id="outline-container-orgf7885d4" class="outline-2">
+<h2 id="orgf7885d4">Some Terms</h2>
+<div class="outline-text-2" id="text-orgf7885d4">
 <p>
 <i>But what even is X?</i>
 </p>
@@ -636,9 +634,9 @@ Notes from (<a href="#citeproc_bib_item_1">James et al., 2023</a>). For more con
 </table>
 </div>
 </div>
-<div id="outline-container-orgcf152ea" class="outline-2">
-<h2 id="orgcf152ea">Prediction and Inference</h2>
-<div class="outline-text-2" id="text-orgcf152ea">
+<div id="outline-container-org89de19c" class="outline-2">
+<h2 id="org89de19c">Prediction and Inference</h2>
+<div class="outline-text-2" id="text-org89de19c">
 <p>
 With \(\hat{Y} = \hat{f}(x)\) we would be interested in <i>predicting</i> the value of
 \(\hat{Y}\) (an example of this would be predicting a disease (\(\hat{y}\)) from a
@@ -681,9 +679,9 @@ expense of a less interpretable model for which inference is more challenging.
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-orgdb2fd78" class="outline-2">
-<h2 id="orgdb2fd78">Supervised Versus Unsupervised Learning</h2>
-<div class="outline-text-2" id="text-orgdb2fd78">
+<div id="outline-container-orgf1fb2aa" class="outline-2">
+<h2 id="orgf1fb2aa">Supervised Versus Unsupervised Learning</h2>
+<div class="outline-text-2" id="text-orgf1fb2aa">
 <p>
 In supervised learning for each observation of the predictor measurement(s)
 \(x_i, i = 1, \dots , n\) there is an associated response measurement \(y_i\), we
@@ -694,9 +692,9 @@ associated response \(y_i\).
 </p>
 </div>
 </div>
-<div id="outline-container-org9ace6ba" class="outline-2">
-<h2 id="org9ace6ba">Regression Versus Classification Problems</h2>
-<div class="outline-text-2" id="text-org9ace6ba">
+<div id="outline-container-org0cb7bd4" class="outline-2">
+<h2 id="org0cb7bd4">Regression Versus Classification Problems</h2>
+<div class="outline-text-2" id="text-org0cb7bd4">
 <p>
 We tend to refer to problems with a quantitative response as regression
 problems, while those involving a qualitative response are often referred to as
@@ -709,9 +707,9 @@ To learn more how a regression function is found, watch: <a href="https://youtu.
 </p>
 </div>
 </div>
-<div id="outline-container-orge75daa4" class="outline-2">
-<h2 id="orge75daa4">Measuring the Quality of Fit</h2>
-<div class="outline-text-2" id="text-orge75daa4">
+<div id="outline-container-orgfdfdef8" class="outline-2">
+<h2 id="orgfdfdef8">Measuring the Quality of Fit</h2>
+<div class="outline-text-2" id="text-orgfdfdef8">
 <p>
 After reaching to a fit we typically wish to see how performant is it, one othe
 commonly used methods is calculating the MSE (watch: <a href="https://youtu.be/Mhw_-xHVmaE">Mean Squared Error (MSE)</a>)
@@ -757,9 +755,9 @@ often much larger.
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-org68b2d6f" class="outline-2">
-<h2 id="org68b2d6f">Overfitting Data</h2>
-<div class="outline-text-2" id="text-org68b2d6f">
+<div id="outline-container-org0f9b2aa" class="outline-2">
+<h2 id="org0f9b2aa">Overfitting Data</h2>
+<div class="outline-text-2" id="text-org0f9b2aa">
 <div class="epigraph"><blockquote>
 <p>
 When a given method yields a small training MSE but a large test MSE, we are
@@ -772,9 +770,9 @@ true properties of the unknown function \(f\).
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-org527c24c" class="outline-2">
-<h2 id="org527c24c">A general rule to bias and variance</h2>
-<div class="outline-text-2" id="text-org527c24c">
+<div id="outline-container-orge181491" class="outline-2">
+<h2 id="orge181491">A general rule to bias and variance</h2>
+<div class="outline-text-2" id="text-orge181491">
 <div class="epigraph"><blockquote>
 <p>
 As a general rule, as we use more flexible methods, the variance will
@@ -784,9 +782,9 @@ increase and the bias will decrease.
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-orgee170b1" class="outline-2">
-<h2 id="orgee170b1">K growth effect on the KKN</h2>
-<div class="outline-text-2" id="text-orgee170b1">
+<div id="outline-container-org4731991" class="outline-2">
+<h2 id="org4731991">K growth effect on the KKN</h2>
+<div class="outline-text-2" id="text-org4731991">
 <div class="epigraph"><blockquote>
 <p>
 The choice of K has a drastic effect on the KNN classifier obtained.  As K
@@ -797,9 +795,9 @@ close to linear. This corresponds to a low-variance but high-bias classifier.
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-orgca541fa" class="outline-2">
-<h2 id="orgca541fa">References</h2>
-<div class="outline-text-2" id="text-orgca541fa">
+<div id="outline-container-org63b0970" class="outline-2">
+<h2 id="org63b0970">References</h2>
+<div class="outline-text-2" id="text-org63b0970">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>James, G., Witten, D., Hastie, T., Tibshirani, R., Taylor, J., 2023. <a href="https://libgen.li/file.php?md5=2da57b70be7a957abb9f7364ccbced40">An introduction to statistical learning: with applications in python (springer texts in statistics)</a>, 1st ed. 2023. ed. Springer.</div>
 </div>

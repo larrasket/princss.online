@@ -9,7 +9,6 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/~saleh/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +19,10 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/toc.css?v=20250131" />
-    <link rel="stylesheet" href="/style/tufte.css?v=20250131" />
-    <link rel="stylesheet" href="/style/main.css?v=20250231" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const p = document.querySelector("#content > p:first-of-type");
@@ -290,9 +290,9 @@
 
           // Check if path matches our target patterns
           return (
-            path === "/~saleh/stack" ||
-            path === "/~saleh/stack.html" ||
-            path.startsWith("/~saleh/sh/")
+            path === "/stack" ||
+            path === "/stack.html" ||
+            path.startsWith("/sh/")
           );
         }
 
@@ -523,31 +523,29 @@
 <body>
 <div id="preamble" class="status">
 <div id="preamble" class="status">
-  <div
-    class="header"
-    style="
+  <div class="header" style="
     display: block !important;!i;!;
-"
-  >
-    <a href="/">
-      <h1 class="title" style="margin-block-start: auto; color: black">
-        Hereby, all birds fly
-      </h1>
-    </a>
-    <nav class="site-nav">
-      <a href="/~saleh/p/">all posts</a>
-      <span>•</span>
-      <a href="/~saleh/stack.html">short posts</a>
-      <span>•</span>
-      <a href="/~saleh/fullbooks.html">books</a>
-      <span>•</span>
-      <a href="/~saleh/a.html">anthology</a>
-      <span>•</span>
-      <a href="/~saleh/pgp.html">PGP key</a>
-      <span>•</span>
-      <a href="https://www.admonymous.co/larrasket">leave a message</a>
-    </nav>
-    <hr class="header-divider" style="margin-block-end: -1em" />
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
   </div>
 </div>
 </div>
@@ -566,23 +564,23 @@ keep as a nice excerpt with &ldquo;@anthology&rdquo; tag. Today I thought why no
 those notes together? And here we go:
 </p>
 
-<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/print-text-nodes-anth</span> ()
-  (<span style="font-weight: bold;">let*</span> ((nodes (<span style="color: #383a42;">sort</span> (<span style="font-weight: bold;">salih/get-back-nodes</span> <span style="color: #8a3b3c;">"3xedczc0i2k0"</span>)
+<pre class="code"><code>(<span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">salih/print-text-nodes-anth</span> ()
+  (<span style="color: #ffad29; font-weight: bold;">let*</span> ((nodes (<span style="color: #383a42;">sort</span> (<span style="color: #00ede1; font-weight: bold;">salih/get-back-nodes</span> <span style="color: #8a3b3c;">"3xedczc0i2k0"</span>)
                       <span style="color: #383a42;">#'</span><span style="color: #383a42;">salih/compare-org-id</span>))
          (strings <span style="color: #383a42;">'</span>()))
-    (<span style="font-weight: bold;">while</span> nodes (<span style="font-weight: bold;">push</span> (<span style="font-weight: bold;">salih/mkinclude</span> (<span style="color: #383a42;">car</span> nodes) t)
+    (<span style="color: #ffad29; font-weight: bold;">while</span> nodes (<span style="color: #ffad29; font-weight: bold;">push</span> (<span style="color: #00ede1; font-weight: bold;">salih/mkinclude</span> (<span style="color: #383a42;">car</span> nodes) t)
                        strings)
-           (<span style="font-weight: bold;">setq</span> nodes (<span style="color: #383a42;">cdr</span> nodes)))
+           (<span style="color: #ffad29; font-weight: bold;">setq</span> nodes (<span style="color: #383a42;">cdr</span> nodes)))
     (<span style="color: #383a42;">mapconcat</span> <span style="color: #383a42;">'</span><span style="color: #383a42;">identity</span> strings <span style="color: #8a3b3c;">""</span>)))
 </code></pre>
 
-<pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">salih/mkinclude</span> (node remove-title <span style="font-weight: bold;">&amp;optional</span> astr)
-  (<span style="font-weight: bold;">unless</span> astr
-    (<span style="font-weight: bold;">setq</span> astr <span style="color: #8a3b3c;">"**"</span>))
-  (<span style="font-weight: bold;">let*</span> ((id (<span style="color: #383a42;">org-roam-node-id</span> node))
+<pre class="code"><code>(<span style="color: #ffad29; font-weight: bold;">defun</span> <span style="color: #00ede1; font-weight: bold;">salih/mkinclude</span> (node remove-title <span style="color: #34cae2; font-weight: bold;">&amp;optional</span> astr)
+  (<span style="color: #ffad29; font-weight: bold;">unless</span> astr
+    (<span style="color: #ffad29; font-weight: bold;">setq</span> astr <span style="color: #8a3b3c;">"**"</span>))
+  (<span style="color: #ffad29; font-weight: bold;">let*</span> ((id (<span style="color: #383a42;">org-roam-node-id</span> node))
          (entry (<span style="color: #383a42;">org-roam-node-file</span> (<span style="color: #383a42;">org-roam-node-from-id</span> id)))
          (cite (<span style="color: #383a42;">file-name-sans-extension</span> (<span style="color: #383a42;">file-name-nondirectory</span> entry))))
-    (<span style="font-weight: bold;">if</span> remove-title
+    (<span style="color: #ffad29; font-weight: bold;">if</span> remove-title
         (<span style="color: #383a42;">format</span> <span style="color: #8a3b3c;">"#+INCLUDE: \"%s::#%s\" :only-contents t\n\n\n \n/Derived from/ [cite:@%s], p. %d. Appeared: %s\n-----\n"</span>
                 entry
                 id
