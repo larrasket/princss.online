@@ -3,7 +3,7 @@
 :END:
 #+title: Nosferatu (2024)
 #+date: 2024-12-25
-#+image: /media/images/films-images/nosferatu-2024.png
+#+image: /media/images/films-images/parasite.jpg
 #+genre: Fantasy, Horror
 #+director: Robert Eggers
 
