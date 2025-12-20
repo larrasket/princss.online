@@ -78,6 +78,18 @@
           <div class="neighbors-buttons">{{ partial "neighbors.html" . }}</div>
         </div>
       </div>
+
+      <!-- Mobile-only featured image (shown side-by-side with neighbors) -->
+      {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
+      {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
+      <div class="mobile-widget mobile-featured-widget">
+        <div class="name-header">featured img</div>
+        <div class="featured-image">
+          <a href="/pic-log/">
+            <img src="{{ $lastPic.Params.image }}" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="right">
