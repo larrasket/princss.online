@@ -59,7 +59,7 @@
     }
 
     /* Move .left (calendar & neighbors) to end on mobile */
-    .content>.left {
+    .content > .left {
         order: 2 !important;
         border-bottom: none !important;
         border-top: 1px dotted var(--darkbrown);
@@ -67,7 +67,7 @@
         margin-top: 10px;
     }
 
-    .content>.right {
+    .content > .right {
         order: 1 !important;
     }
 
@@ -156,7 +156,7 @@
     }
 
     /* Profile image styling */
-    .about>img {
+    .about > img {
         width: 100%;
         height: auto;
         margin: 0 auto;
@@ -259,12 +259,24 @@
     .mobile-widget {
         background: var(--white);
         border: 1px dotted var(--darkbrown);
-        padding: 8px;
     }
 
-    /* Hide calendar on mobile */
+    /* Calendar widget - visible on mobile, next to featured image */
     .calendar-widget {
-        display: none !important;
+        display: block !important;
+    }
+
+    .calendar-widget #calendar h1 {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .calendar-widget #calendar table {
+        font-size: 10px;
+    }
+
+    .calendar-widget #calendar td {
+        padding: 2px !important;
     }
 
     /* Show mobile featured image widget */
@@ -491,11 +503,11 @@
         height: auto !important;
     }
 
-    .content>.header {
+    .content > .header {
         flex-direction: column !important;
     }
 
-    .content>.header .right-header {
+    .content > .header .right-header {
         display: block !important;
         width: 100% !important;
         border-left: none !important;

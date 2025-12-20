@@ -51,6 +51,19 @@
 <div class="content">
   <div class="left">
     <div class="mobile-widgets-row">
+      <!-- Row 1: Featured image + Calendar (side by side on mobile) -->
+      <!-- Mobile-only featured image -->
+      {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
+      {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
+      <div class="mobile-widget mobile-featured-widget">
+        <div class="name-header">featured img</div>
+        <div class="featured-image">
+          <a href="/pic-log/">
+            <img src="{{ $lastPic.Params.image }}" />
+          </a>
+        </div>
+      </div>
+
       <div class="mobile-widget calendar-widget">
         <div id="calendar"></div>
         <div class="calendar-buttons">
@@ -71,23 +84,12 @@
         </div>
       </div>
 
+      <!-- Row 2: Buttons (full width on mobile) -->
       <div class="neighbors-widget">
         <!-- Neighbors -->
         <div class="neighbors">
           <div class="neighbors-title">buttons and propaganda</div>
           <div class="neighbors-buttons">{{ partial "neighbors.html" . }}</div>
-        </div>
-      </div>
-
-      <!-- Mobile-only featured image (shown side-by-side with neighbors) -->
-      {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
-      {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
-      <div class="mobile-widget mobile-featured-widget">
-        <div class="name-header">featured img</div>
-        <div class="featured-image">
-          <a href="/pic-log/">
-            <img src="{{ $lastPic.Params.image }}" />
-          </a>
         </div>
       </div>
     </div>
