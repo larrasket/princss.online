@@ -4,7 +4,9 @@
 #+title: Romantic Harp
 #+date: 2024-12-20
 #+artist: Carmen Dragon
-#+image: /media/images/music-images/carmen_dragon_romantic_harp.jpg
+#+image: /media/images/music-images/carmen_dragon_romantic_harp.png
 #+rank: 1
 #+favorite_track: Clair de Lune
+
+There's something about the harp that feels like water. Not rushing water, but the kind that catches light and moves without hurrying anywhere. This record is that. It doesn't demand anything from you, it just invites you to slow down. I find myself putting this on when everything else feels too loud and I need to remember that silence doesn't have to be empty.
 
