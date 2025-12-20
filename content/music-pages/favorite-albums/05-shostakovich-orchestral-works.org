@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       album-shostakovich-orchestral-works
 :END:
-#+title: Orchestral Works
+#+title: Orchestral
 #+date: 2024-12-20
 #+artist: Shostakovich
 #+image: /media/images/music-images/shostakovich_orchestral_works.png
