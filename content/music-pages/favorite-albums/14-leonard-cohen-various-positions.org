@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       album-leonard-cohen-various-positions
 :END:
-#+title: Various Positions
+#+title: Positions
 #+date: 2024-12-20
 #+artist: Leonard Cohen
 #+image: /media/images/music-images/leonard_cohen_various_positions.png

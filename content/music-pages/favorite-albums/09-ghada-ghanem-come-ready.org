@@ -3,7 +3,7 @@
 :END:
 #+title: Come Ready
 #+date: 2024-12-20
-#+artist: Ghada Ghanem
+#+artist: Ghanem
 #+image: /media/images/music-images/ghada_ghanem_come_ready.png
 #+rank: 9
 #+favorite_track: Come Ready 

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       album-elliott-smith-introduction
 :END:
-#+title: An Introduction
+#+title: Introduction
 #+date: 2024-12-20
 #+artist: Elliott Smith
 #+image: /media/images/music-images/elliott_smith_introduction.png

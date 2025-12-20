@@ -3,7 +3,7 @@
 :END:
 #+title: Assumptions
 #+date: 2024-12-20
-#+artist: Soheil Peyghambari
+#+artist: Peyghambari
 #+image: /media/images/music-images/soheil_peyghambari_assumptions.png
 #+rank: 22
 #+favorite_track: Assumptions
