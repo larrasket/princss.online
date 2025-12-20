@@ -552,7 +552,7 @@ margin-block-start: auto;
 <div id="content" class="content">
 <header>
 <h1 class="title">Cursed Journey of Getting a Monitor to Work</h1>
-</header><div class="PREVIEW" id="org20ff0b1">
+</header><div class="PREVIEW" id="org99e0d73">
 <p>
 Isn&rsquo;t it a shame that this place of the internet is supposed to be a blog yet doesn&rsquo;t contain
 blogs but obscure philosophies?
@@ -582,9 +582,9 @@ existed), I was left was the following thoughts;
 <li>USB-C Adapter</li>
 <li>USB-A Adapter</li>
 </ul>
-<div id="outline-container-orgf5403e4" class="outline-2">
-<h2 id="orgf5403e4">First Try; HDMI Splitter</h2>
-<div class="outline-text-2" id="text-orgf5403e4">
+<div id="outline-container-org1cce97b" class="outline-2">
+<h2 id="org1cce97b">First Try; HDMI Splitter</h2>
+<div class="outline-text-2" id="text-org1cce97b">
 <p>
 Worked fine but there is one main issue, it doesn&rsquo;t plug a second monitor to your machine
 the but it plugs a new monitor to the monitor plugged in your machine. I.e. it will send the
@@ -592,15 +592,15 @@ signal for both of them, just like an old fashion DSL splitter.
 </p>
 
 
-<figure id="org53dd8ec">
+<figure id="orga63e4f0">
 <img src="../i/old/2023-01-23_06-47-11_screenshot.png" alt="2023-01-23_06-47-11_screenshot.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org76cedc2" class="outline-2">
-<h2 id="org76cedc2">Second Try; USB-C</h2>
-<div class="outline-text-2" id="text-org76cedc2">
+<div id="outline-container-org620d727" class="outline-2">
+<h2 id="org620d727">Second Try; USB-C</h2>
+<div class="outline-text-2" id="text-org620d727">
 <p>
 Like my head voice suggested the first thing that came out to my mind is using Type-C USB
 converter, it&rsquo;s pretty fast and Apple already did that before with Mac books, and the
@@ -620,9 +620,9 @@ devices
 </blockquote></div>
 </div>
 </div>
-<div id="outline-container-orgfa18170" class="outline-2">
-<h2 id="orgfa18170">Third Try; USB-A</h2>
-<div class="outline-text-2" id="text-orgfa18170">
+<div id="outline-container-org151429b" class="outline-2">
+<h2 id="org151429b">Third Try; USB-A</h2>
+<div class="outline-text-2" id="text-org151429b">
 <p>
 After while I learned that using DisplayLink is possible, yet I couldn&rsquo;t find a way to
 purchase a one without paying +$100 for customs. So I had to use a USB-A converter that uses
@@ -637,7 +637,7 @@ After I plugged it into my machine, reading <code>dmesg</code> I noticed that it
 device. So I had to force it to <code>unbind</code> this, using this <code>udevadm</code> role:
 </p>
 
-<pre class="example" id="org991d7a3">
+<pre class="example" id="org81f65a1">
 # For HDMI-to-USB adaptor:
 SUBSYSTEM=="usb", DRIVER=="snd-usb-audio", ATTRS{idProduct}=="2109", ATTRS{idVendor}=="534d", \
     RUN+="/bin/sh -c 'echo -n $kernel &gt; /sys/bus/usb/drivers/snd-usb-audio/unbind'"
@@ -654,17 +654,17 @@ So, getting this to work was in vain.
 </p>
 </div>
 </div>
-<div id="outline-container-org103343f" class="outline-2">
-<h2 id="org103343f">Fourth Try; USB-A (Right Piece)</h2>
-<div class="outline-text-2" id="text-org103343f">
+<div id="outline-container-org229ff9f" class="outline-2">
+<h2 id="org229ff9f">Fourth Try; USB-A (Right Piece)</h2>
+<div class="outline-text-2" id="text-org229ff9f">
 <p>
 I found an abscure company called Fresco Logic that develops this kind of solution with
 claimed Linux/Android driver support, and that&rsquo;s the other story.
 </p>
 </div>
-<div id="outline-container-org3765c49" class="outline-3">
-<h3 id="org3765c49">Linux Driver</h3>
-<div class="outline-text-3" id="text-org3765c49">
+<div id="outline-container-org50cebc6" class="outline-3">
+<h3 id="org50cebc6">Linux Driver</h3>
+<div class="outline-text-3" id="text-org50cebc6">
 <p>
 It sounds like the so-called driver that fresco logic developed was disconnected since 2021,
 I use the latest 6.1.7 kernel which means this will never compile, note that you have to
@@ -681,7 +681,7 @@ have you to look at the code first my dear;
 </p>
 
 
-<figure id="orgfa1ca53">
+<figure id="org1a54a07">
 <img src="../i/old/2023-01-23_07-06-11_screenshot.png" alt="2023-01-23_07-06-11_screenshot.png">
 
 </figure>
@@ -698,7 +698,7 @@ situations that it &rsquo;just works&rsquo;. So I installed Windows to give it a
 </p>
 
 
-<figure id="org5929173">
+<figure id="orgb57fef2">
 <img src="../i/old/2023-01-23_07-10-32_screenshot.png" alt="2023-01-23_07-10-32_screenshot.png">
 
 </figure>
@@ -710,9 +710,9 @@ buggy but at least it does the job.
 </div>
 </div>
 </div>
-<div id="outline-container-orge4ca066" class="outline-2">
-<h2 id="orge4ca066">Final Results</h2>
-<div class="outline-text-2" id="text-orge4ca066">
+<div id="outline-container-org2f1ae3a" class="outline-2">
+<h2 id="org2f1ae3a">Final Results</h2>
+<div class="outline-text-2" id="text-org2f1ae3a">
 <p>
 The DRM I coded was very insecure unfortunately and I couldn&rsquo;t risk depending on it, when I
 was completely desperate an idea came to my mind reminding me that I had an old unused
@@ -722,7 +722,7 @@ filesystem access lol). Unexpectedly it worked:
 </p>
 
 
-<figure id="org8b4b4e3">
+<figure id="org6e0ec59">
 <img src="../i/old/2023-01-23_07-33-42_screenshot.png" alt="2023-01-23_07-33-42_screenshot.png">
 
 </figure>
