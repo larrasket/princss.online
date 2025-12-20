@@ -1,10 +1,12 @@
 :PROPERTIES:
 :ID:       album-death-in-june-symbols-shatter
 :END:
-#+title: But, What Ends When the Symbols Shatter?
+#+title: Symbols Shatter?
 #+date: 2024-12-20
-#+artist: Death in June
-#+image: /media/images/music-images/death_in_june_symbols_shatter.jpg
+#+artist: DIJ
+#+image: /media/images/music-images/death_in_june_symbols_shatter.png
 #+rank: 3
 #+favorite_track: Death of the West
+
+Apocalyptic folk that sounds like autumn leaves catching fire. It's unsettling in the way that staring at ruins can be unsettling. You're not sure if you're mourning something or watching something be born. The ambiguity is the point, I think.
 
