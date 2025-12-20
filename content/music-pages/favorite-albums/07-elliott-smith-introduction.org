@@ -1,10 +1,12 @@
 :PROPERTIES:
 :ID:       album-elliott-smith-introduction
 :END:
-#+title: An Introduction to Elliott Smith
+#+title: An Introduction
 #+date: 2024-12-20
 #+artist: Elliott Smith
-#+image: /media/images/music-images/elliott_smith_introduction.jpg
+#+image: /media/images/music-images/elliott_smith_introduction.png
 #+rank: 7
 #+favorite_track: Miss Misery
+
+A door into Elliott's world, curated to show you the breadth of what he could do. Miss Misery alone is worth everything. The way he sings "I'll fake it through the day" hits different depending on what kind of day you're having.
 
