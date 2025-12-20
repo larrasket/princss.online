@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-leonard-cohen-songs-love-hate
+:END:
+#+title: Songs of Love and Hate
+#+date: 2023-06-20
+#+artist: Leonard Cohen
+#+image: /media/images/music-images/leonard_cohen_songs_of_love_and_hate.png
+
+My ever favorite Cohen album. I discovered him through 'Sing Another Song, Boys' while studying biochemistry in high school. I didn't like it initially but I couldn't stop listening. To this day, chemical formulas intrude into my head whenever I play it. The song is a strange companion, but a faithful one. 'Avalanche' opens the record like a warning.

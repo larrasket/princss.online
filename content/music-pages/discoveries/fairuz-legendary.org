@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-fairuz-legendary
+:END:
+#+title: Legendary Fairuz
+#+date: 2024-03-01
+#+artist: Fairuz
+#+image: /media/images/music-images/fairuz_legendary.png
+
+Fairuz is the voice of Lebanon, but really she belongs to everyone who has ever felt longing. Her music carries the weight of history, of displacement, of home as an idea more than a place. I grew up hearing her voice in the background of everything. Now I listen deliberately, and I understand why.

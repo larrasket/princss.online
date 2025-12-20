@@ -4,7 +4,9 @@
 #+title: Discriminate
 #+date: 2024-12-20
 #+artist: Death in June
-#+image: /media/images/music-images/death_in_june_discriminate.jpg
+#+image: /media/images/music-images/death_in_june_discriminate.png
 #+rank: 4
 #+favorite_track: Fall Apart
+
+A compilation that works like a single piece somehow. Songs that feel like they're coming from very far away, like radio transmissions from a world that ended quietly when nobody was watching.
 

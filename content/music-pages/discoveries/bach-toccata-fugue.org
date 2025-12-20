@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-bach-toccata-fugue
+:END:
+#+title: Toccata and Fugue in D minor
+#+date: 2023-04-10
+#+artist: Johann Sebastian Bach
+#+image: /media/images/music-images/bach_toccata_fugue.png
+
+The most recognizable piece of organ music ever written, and yet it never loses its power. Those opening notes still make me stop whatever I'm doing. Bach understood architecture in sound. This piece builds and releases tension like a Gothic cathedral made audible. I also keep returning to the Air on the G String and Brandenburg Concerto No. 3.

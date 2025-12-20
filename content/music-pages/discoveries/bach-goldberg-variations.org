@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-bach-goldberg-variations
+:END:
+#+title: Goldberg Variations
+#+date: 2023-05-22
+#+artist: Johann Sebastian Bach
+#+image: /media/images/music-images/bach_goldberg_variations.png
+
+Glenn Gould's interpretation is the one I grew up with. There's a precision here that somehow doesn't feel cold. Each variation is its own world. I listen to this when I need to think clearly, when the noise of everything else is too much. Bach provides structure when chaos feels overwhelming.

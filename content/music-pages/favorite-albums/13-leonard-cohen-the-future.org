@@ -4,7 +4,9 @@
 #+title: The Future
 #+date: 2024-12-20
 #+artist: Leonard Cohen
-#+image: /media/images/music-images/leonard_cohen_the_future.jpg
+#+image: /media/images/music-images/leonard_cohen_the_future.png
 #+rank: 13
 #+favorite_track: Anthem
+
+Dark and prophetic in a way that only becomes more accurate with time. But then there's Anthem, with that line about cracks and light. Leonard understood that hope isn't the absence of despair, it exists inside it. You can accept the world is broken and still find reasons to stay.
 

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-beethoven-moonlight-sonata
+:END:
+#+title: Moonlight Sonata
+#+date: 2023-07-15
+#+artist: Ludwig van Beethoven
+#+image: /media/images/music-images/beethoven_moonlight_sonata.png
+
+The first movement is what everyone knows, that slow, contemplative opening. But the whole piece is a journey. Beethoven wrote this while going deaf, knowing he was losing the thing that mattered most. You can hear that in the music, a kind of beautiful resignation mixed with rage in the final movement. Also essential: Für Elise and Symphony No. 9.

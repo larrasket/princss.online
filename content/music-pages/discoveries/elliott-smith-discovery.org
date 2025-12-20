@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       discovery-elliott-smith-discovery
+:END:
+#+title: Elliott Smith
+#+date: 2023-11-08
+#+artist: Elliott Smith
+#+image: /media/images/music-images/elliott_smith_either_or.png
+
+Elliott's music feels like confessions whispered to no one in particular. He had this way of making devastation sound gentle. Between the Bars is maybe the most intimate song about self-destruction ever written. I found him through Either/Or and XO, and his work has become essential listening for those days when you need someone to understand without explaining.

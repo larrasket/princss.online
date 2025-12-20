@@ -4,7 +4,9 @@
 #+title: Assumptions
 #+date: 2024-12-20
 #+artist: Soheil Peyghambari
-#+image: /media/images/music-images/soheil_peyghambari_assumptions.jpg
+#+image: /media/images/music-images/soheil_peyghambari_assumptions.png
 #+rank: 22
 #+favorite_track: Assumptions
+
+Iranian classical guitar that feels like thinking out loud. Each piece is a question asked without expecting an answer. The kind of music that makes you comfortable with not knowing.
 

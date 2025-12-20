@@ -4,7 +4,9 @@
 #+title: Diwan 2
 #+date: 2024-12-20
 #+artist: Rachid Taha
-#+image: /media/images/music-images/rachid_taha_diwan_2.jpg
+#+image: /media/images/music-images/rachid_taha_diwan_2.png
 #+rank: 20
 #+favorite_track: Ya Rayah
+
+Ya Rayah is one of those songs that transcends its origins. Originally Algerian, now everywhere. It's about leaving, about exile, about the wanderer who never quite arrives anywhere. Rachid's version has this weariness mixed with defiance.
 

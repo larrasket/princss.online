@@ -4,7 +4,9 @@
 #+title: The Beauty of the Violin
 #+date: 2024-12-20
 #+artist: Lu Siqing
-#+image: /media/images/music-images/lu_siqing_beauty_violin.jpg
+#+image: /media/images/music-images/lu_siqing_beauty_violin.png
 #+rank: 15
 #+favorite_track: Butterfly Lovers
+
+The Butterfly Lovers concerto is like Romeo and Juliet but Chinese, and somehow even sadder. Lu Siqing plays it with this restraint that makes the emotional peaks hit harder. It's about two people who can only be together if they stop being people.
 

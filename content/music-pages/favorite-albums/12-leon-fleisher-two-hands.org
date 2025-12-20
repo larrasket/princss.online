@@ -4,7 +4,9 @@
 #+title: Two Hands
 #+date: 2024-12-20
 #+artist: Leon Fleisher
-#+image: /media/images/music-images/leon_fleisher_two_hands.jpg
+#+image: /media/images/music-images/leon_fleisher_two_hands.png
 #+rank: 12
 #+favorite_track: Prelude in G Minor
+
+Leon lost the use of his right hand for decades and learned to play left-hand repertoire. Then, miraculously, he got it back. This album is called Two Hands because he could finally use both again. There's a quiet gratitude in every note. You can hear what it means to have something returned to you.
 

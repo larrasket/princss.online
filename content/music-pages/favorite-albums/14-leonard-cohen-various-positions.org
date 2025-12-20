@@ -4,7 +4,9 @@
 #+title: Various Positions
 #+date: 2024-12-20
 #+artist: Leonard Cohen
-#+image: /media/images/music-images/leonard_cohen_various_positions.jpg
+#+image: /media/images/music-images/leonard_cohen_various_positions.png
 #+rank: 14
 #+favorite_track: Hallelujah
+
+The original Hallelujah, before it became a wedding song and a funeral song and everything in between. In this version you can hear what Leonard actually meant, a broken hallelujah, sacred and profane at once. His label rejected this album. They were wrong.
 

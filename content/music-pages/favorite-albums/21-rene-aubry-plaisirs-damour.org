@@ -4,7 +4,9 @@
 #+title: Plaisirs d'Amour
 #+date: 2024-12-20
 #+artist: René Aubry
-#+image: /media/images/music-images/rene_aubry_plaisirs_damour.jpg
+#+image: /media/images/music-images/rene_aubry_plaisirs_damour.png
 #+rank: 21
 #+favorite_track: Après la Pluie
+
+French minimalism that sounds like looking out a window after rain. Everything is washed clean for a moment. Après la Pluie means "after the rain" and that's exactly what it is, that particular silence when the storm has passed and something new is possible.
 

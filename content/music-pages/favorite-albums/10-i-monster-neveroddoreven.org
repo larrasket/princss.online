@@ -4,7 +4,9 @@
 #+title: Neveroddoreven
 #+date: 2024-12-20
 #+artist: I Monster
-#+image: /media/images/music-images/i_monster_neveroddoreven.jpg
+#+image: /media/images/music-images/i_monster_neveroddoreven.png
 #+rank: 10
 #+favorite_track: Daydream in Blue
+
+The title is a palindrome and the music feels that way too, looping back on itself. Daydream in Blue samples an old piece and turns it into something that feels both nostalgic and futuristic. Like remembering a dream you haven't had yet.
 

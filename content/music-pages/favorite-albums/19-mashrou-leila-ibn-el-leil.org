@@ -4,7 +4,9 @@
 #+title: Ibn El Leil
 #+date: 2024-12-20
 #+artist: Mashrou' Leila
-#+image: /media/images/music-images/mashrou_leila_ibn_el_leil.jpg
+#+image: /media/images/music-images/mashrou_leila_ibn_el_leil.png
 #+rank: 19
 #+favorite_track: Roman
+
+More polished than their earlier work but somehow more urgent too. Roman is about the small rebellions, the private victories that never make the news. Being yourself when the world tells you to be anyone else.
 

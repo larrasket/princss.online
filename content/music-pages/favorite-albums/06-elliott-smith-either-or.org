@@ -4,7 +4,9 @@
 #+title: Either/Or
 #+date: 2024-12-20
 #+artist: Elliott Smith
-#+image: /media/images/music-images/elliott_smith_either_or.jpg
+#+image: /media/images/music-images/elliott_smith_either_or.png
 #+rank: 6
 #+favorite_track: Between the Bars
+
+Songs that feel like confessions whispered to no one in particular. Elliott had this way of making devastation sound gentle. Between the Bars is maybe the most intimate song about self-destruction ever written. It's not asking to be saved, just understood.
 

@@ -4,7 +4,9 @@
 #+title: Caress
 #+date: 2024-12-20
 #+artist: Marcel Khalife
-#+image: /media/images/music-images/marcel_khalife_caress.jpg
+#+image: /media/images/music-images/marcel_khalife_caress.png
 #+rank: 16
 #+favorite_track: Jawaz Al Safar
+
+Marcel sets Palestinian poetry to music with an oud and an orchestra. There's longing here, for land, for home, for something that exists more in memory than in maps now. Music as an act of remembering.
 

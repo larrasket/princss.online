@@ -4,7 +4,9 @@
 #+title: The Beirut School
 #+date: 2024-12-20
 #+artist: Mashrou' Leila
-#+image: /media/images/music-images/mashrou_leila_beirut_school.jpg
+#+image: /media/images/music-images/mashrou_leila_beirut_school.png
 #+rank: 18
 #+favorite_track: Raksit Leila
+
+Before they were banned in half the Arab world. Rock mixed with Arabic scales, lyrics that refused to hide. This was the sound of Beirut finding its voice again, and being punished for it. Essential.
 

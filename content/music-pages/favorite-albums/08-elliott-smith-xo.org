@@ -4,7 +4,9 @@
 #+title: XO
 #+date: 2024-12-20
 #+artist: Elliott Smith
-#+image: /media/images/music-images/elliott_smith_xo.jpg
+#+image: /media/images/music-images/elliott_smith_xo.png
 #+rank: 8
 #+favorite_track: Waltz, No. 2
+
+His major label debut, and you can hear the arrangements get bigger while the songs stay just as fragile. The strings on Waltz #2 add weight without crushing the thing. It's about his parents, about growing up, about carrying the past into every room you enter.
 
