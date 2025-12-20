@@ -1,0 +1,120 @@
+// Last.fm integration for dynamic listening status
+// Uses Last.fm API to fetch current/recent tracks for user 'larrasket'
+
+const LASTFM_API_KEY = 'b25b959554ed76058ac220b7b2e0a026'; // Public API key for demo
+const LASTFM_USER = 'larrasket';
+const LASTFM_API_URL = 'https://ws.audioscrobbler.com/2.0/';
+
+// CORS proxy options (fallback if first one fails)
+const CORS_PROXIES = [
+    'https://api.allorigins.win/get?url=',
+    'https://corsproxy.io/?'
+];
+
+async function fetchCurrentTrack() {
+    const apiUrl = `${LASTFM_API_URL}?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
+    
+    // Try each CORS proxy until one works
+    for (const proxy of CORS_PROXIES) {
+        try {
+            const proxiedUrl = proxy === 'https://api.allorigins.win/get?url=' 
+                ? `${proxy}${encodeURIComponent(apiUrl)}`
+                : `${proxy}${apiUrl}`;
+            
+            const response = await fetch(proxiedUrl);
+            if (!response.ok) continue;
+            
+            const data = await response.json();
+            
+            // Handle different proxy response formats
+            const lastfmData = proxy === 'https://api.allorigins.win/get?url=' 
+                ? JSON.parse(data.contents)
+                : data;
+            
+            if (lastfmData.recenttracks && lastfmData.recenttracks.track) {
+                const track = Array.isArray(lastfmData.recenttracks.track) 
+                    ? lastfmData.recenttracks.track[0] 
+                    : lastfmData.recenttracks.track;
+                    
+                return {
+                    artist: track.artist['#text'] || track.artist,
+                    title: track.name,
+                    album: track.album['#text'] || track.album,
+                    image: track.image ? (track.image[2] && track.image[2]['#text'] ? track.image[2]['#text'] : track.image[1]['#text']) : '',
+                    url: track.url,
+                    nowPlaying: track['@attr'] && track['@attr'].nowplaying === 'true'
+                };
+            }
+        } catch (error) {
+            console.warn(`CORS proxy ${proxy} failed:`, error);
+            continue;
+        }
+    }
+    
+    console.warn('All CORS proxies failed for Last.fm API');
+    return null;
+}
+
+function updateMusicWidget(trackData) {
+    const trackArt = document.getElementById('trackart');
+    const trackArtist = document.getElementById('trackartist');
+    const trackTitle = document.getElementById('tracktitle');
+    const loadingIndicator = document.querySelector('.loading-indicator');
+    
+    if (!trackArt || !trackArtist || !trackTitle) {
+        console.warn('Music widget elements not found');
+        return;
+    }
+    
+    // Hide loading indicator
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+    }
+    
+    if (trackData) {
+        // Update album art
+        if (trackData.image) {
+            trackArt.src = trackData.image;
+            trackArt.alt = `${trackData.album} by ${trackData.artist}`;
+        }
+        
+        // Update artist
+        trackArtist.textContent = trackData.artist;
+        trackArtist.title = `Artist: ${trackData.artist}`;
+        
+        // Update track title
+        trackTitle.textContent = trackData.title;
+        trackTitle.href = trackData.url;
+        trackTitle.title = `${trackData.title} by ${trackData.artist}`;
+        
+        // Add "now playing" indicator if currently playing
+        const titleElement = document.querySelector('.music-section .title');
+        if (titleElement) {
+            titleElement.textContent = trackData.nowPlaying ? 'now playing:' : 'recently played:';
+        }
+    }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', async function() {
+    // Only run on music page
+    if (!document.querySelector('.music-section')) return;
+    
+    const loadingIndicator = document.querySelector('.loading-indicator');
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+    }
+    
+    const trackData = await fetchCurrentTrack();
+    updateMusicWidget(trackData);
+});
+
+// Optionally update every few minutes
+setInterval(async function() {
+    if (document.querySelector('.music-section')) {
+        const trackData = await fetchCurrentTrack();
+        if (trackData) {
+            updateMusicWidget(trackData);
+        }
+    }
+}, 300000); // Update every 5 minutes
