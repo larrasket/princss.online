@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       k5ej2u37ryv6
+:CUSTOM_ID: k5ej2u37ryv6
+:END:
+#+title: Amadeus (1984)
+#+date: 2024-12-25
+#+image: /media/images/films-images/amadeus.jpg
+#+genre: Drama, Music, Biography
+#+director: Miloš Forman
+
+There's something almost comforting about how the film portrays mediocrity as its own special kind of hell. Not everyone gets to be Mozart. Most of us are Salieri, working hard and still falling short. But the film doesn't judge him for his jealousy. It just shows you what it costs to want something that badly and know you'll never have it.
