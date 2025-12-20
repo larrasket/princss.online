@@ -1,8 +1,6 @@
 {{ define "styles" }}
 <link rel="stylesheet" href="/styles/exhibition.css" />
-{{ end }}
-
-{{ define "main" }}
+{{ end }} {{ define "main" }}
 <img
   src="/media/images/exhibition_header.png"
   style="text-align: center; display: block; margin: auto; margin-bottom: -9px"
@@ -11,18 +9,12 @@
   <a href="/">{ ♖ }</a>
 </div>
 
-{{/* Scan the exhibition directory for images */}}
-{{ $images := slice }}
-{{ $dir := "static/media/images/exhibition" }}
-{{ range (readDir $dir) }}
-  {{ if not .IsDir }}
-    {{ $ext := path.Ext .Name | lower }}
-    {{ if or (eq $ext ".jpg") (eq $ext ".jpeg") (eq $ext ".png") (eq $ext ".gif") (eq $ext ".webp") }}
-      {{ $images = $images | append .Name }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-{{ $totalImages := len $images }}
+{{/* Scan the exhibition directory for images */}} {{ $images := slice }} {{
+$dir := "static/media/images/exhibition" }} {{ range (readDir $dir) }} {{ if not
+.IsDir }} {{ $ext := path.Ext .Name | lower }} {{ if or (eq $ext ".jpg") (eq
+$ext ".jpeg") (eq $ext ".png") (eq $ext ".gif") (eq $ext ".webp") }} {{ $images
+= $images | append .Name }} {{ end }} {{ end }} {{ end }} {{ $totalImages := len
+$images }}
 
 <div class="exhibition-container">
   <div class="exhibition-nav">
@@ -37,8 +29,8 @@
     {{ range $index, $name := $images }}
     <div class="gallery-item" data-index="{{ $index }}">
       <div class="gallery-thumb">
-        <img 
-          data-src="/media/images/exhibition/{{ $name }}" 
+        <img
+          data-src="/media/images/exhibition/{{ $name }}"
           alt="{{ $name }}"
           loading="lazy"
           onclick="openLightbox({{ $index }})"
@@ -61,18 +53,29 @@
 <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-content">
     <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
-    <button class="lightbox-prev" onclick="event.stopPropagation(); prevImage()">←</button>
+    <button
+      class="lightbox-prev"
+      onclick="event.stopPropagation(); prevImage()"
+    >
+      ←
+    </button>
     <img id="lightbox-img" src="" alt="" />
-    <button class="lightbox-next" onclick="event.stopPropagation(); nextImage()">→</button>
+    <button
+      class="lightbox-next"
+      onclick="event.stopPropagation(); nextImage()"
+    >
+      →
+    </button>
     <div class="lightbox-counter">
-      <span id="lightbox-current">1</span> / <span id="lightbox-total">{{ $totalImages }}</span>
+      <span id="lightbox-current">1</span> /
+      <span id="lightbox-total">{{ $totalImages }}</span>
     </div>
   </div>
 </div>
 
 <script>
   // Gallery configuration
-  const IMAGES_PER_PAGE = 24;
+  const IMAGES_PER_PAGE = 96;
   const allItems = document.querySelectorAll(".gallery-item");
   const totalImages = allItems.length;
   const totalPages = Math.ceil(totalImages / IMAGES_PER_PAGE);
@@ -86,11 +89,19 @@
     document.getElementById("currentPage2").textContent = currentPage;
     document.getElementById("totalPages2").textContent = totalPages;
 
-    const prevBtns = [document.getElementById("prevBtn"), document.getElementById("prevBtn2")];
-    const nextBtns = [document.getElementById("nextBtn"), document.getElementById("nextBtn2")];
+    const prevBtns = [
+      document.getElementById("prevBtn"),
+      document.getElementById("prevBtn2"),
+    ];
+    const nextBtns = [
+      document.getElementById("nextBtn"),
+      document.getElementById("nextBtn2"),
+    ];
 
     prevBtns.forEach((btn) => (btn.disabled = currentPage === 1));
-    nextBtns.forEach((btn) => (btn.disabled = currentPage === totalPages || totalPages === 0));
+    nextBtns.forEach(
+      (btn) => (btn.disabled = currentPage === totalPages || totalPages === 0),
+    );
   }
 
   // Show items for current page
@@ -121,10 +132,18 @@
     }
   }
 
-  document.getElementById("prevBtn").addEventListener("click", () => goToPage(currentPage - 1));
-  document.getElementById("nextBtn").addEventListener("click", () => goToPage(currentPage + 1));
-  document.getElementById("prevBtn2").addEventListener("click", () => goToPage(currentPage - 1));
-  document.getElementById("nextBtn2").addEventListener("click", () => goToPage(currentPage + 1));
+  document
+    .getElementById("prevBtn")
+    .addEventListener("click", () => goToPage(currentPage - 1));
+  document
+    .getElementById("nextBtn")
+    .addEventListener("click", () => goToPage(currentPage + 1));
+  document
+    .getElementById("prevBtn2")
+    .addEventListener("click", () => goToPage(currentPage - 1));
+  document
+    .getElementById("nextBtn2")
+    .addEventListener("click", () => goToPage(currentPage + 1));
 
   // Lightbox functions
   function openLightbox(index) {
@@ -140,7 +159,10 @@
   }
 
   function closeLightbox(event) {
-    if (event.target.classList.contains("lightbox") || event.target.classList.contains("lightbox-close")) {
+    if (
+      event.target.classList.contains("lightbox") ||
+      event.target.classList.contains("lightbox-close")
+    ) {
       document.getElementById("lightbox").classList.remove("active");
       document.body.style.overflow = "";
     }
