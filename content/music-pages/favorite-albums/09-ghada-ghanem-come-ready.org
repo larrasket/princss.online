@@ -1,10 +1,12 @@
 :PROPERTIES:
 :ID:       album-ghada-ghanem-come-ready
 :END:
-#+title: Come Ready and See Me
+#+title: Come Ready, See Me
 #+date: 2024-12-20
 #+artist: Ghada Ghanem
-#+image: /media/images/music-images/ghada_ghanem_come_ready.jpg
+#+image: /media/images/music-images/ghada_ghanem_come_ready.png
 #+rank: 9
 #+favorite_track: Come Ready and See Me
+
+Lebanese soprano meeting classical repertoire. There's something about hearing these pieces through her voice that makes them feel new. The title track is an invitation that sounds like a promise.
 
