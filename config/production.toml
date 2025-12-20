@@ -1,0 +1,31 @@
+baseURL = 'https://lr0.org'
+languageCode = 'en-us'
+title = 'La Vita Nouva'
+theme = 'princss'
+buildFuture = true
+
+[frontmatter]
+  date = [":filename", "date", ":default"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "diary"
+    url = "/diary/"
+    weight = 1
+  [[menu.main]]
+    name = "microblog"
+    url = "/microblog/"
+    weight = 4
+  [[menu.main]]
+    name = "films"
+    url = "/films/"
+    weight = 5
+  [[menu.main]]
+    name = "music"
+    url = "/music/"
+    weight = 7
