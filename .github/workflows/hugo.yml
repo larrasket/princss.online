@@ -57,7 +57,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://lr0.org/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
