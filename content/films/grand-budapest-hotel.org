@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       o9in6y71vcz0
+:CUSTOM_ID: o9in6y71vcz0
+:END:
+#+title: The Grand Budapest Hotel (2014)
+#+date: 2024-12-25
+#+image: /media/images/films-images/grand-budapest-hotel.jpg
+#+genre: Comedy, Drama, Adventure
+#+director: Wes Anderson
+
+he film is wrapped in so many layers of narration that you're always aware you're hearing a story about a story about a story. It's Anderson saying this is all nostalgia for something that probably never existed, but the longing for it is real.

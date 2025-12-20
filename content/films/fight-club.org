@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       j4di1t26qxu5
+:CUSTOM_ID: j4di1t26qxu5
+:END:
+#+title: Fight Club (1999)
+#+date: 2024-12-25
+#+image: /media/images/films-images/fight-club.jpg
+#+genre: Drama, Thriller
+#+director: David Fincher
+
+(Sorry I had to talk about it, I know, I know) The first rule of Fight Club is that you eventually realize the movie isn't really about fighting. It's about that feeling when you're surrounded by stuff you bought to fill some void and none of it works. Tyler Durden shows up as this answer to everything, this guy who just doesn't care about any of the things you're supposed to care about. And for a while that feels like freedom. But then it goes too far, because that's what happens when you let destruction become your only value. You have to fight.
