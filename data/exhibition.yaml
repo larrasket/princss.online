@@ -1,0 +1,21 @@
+# Internet Exhibition - Beautiful images from the web
+# Add images with: src, alt (optional), source (optional credit/link)
+
+images:
+  - src: "/media/images/exhibition/placeholder-1.jpg"
+    alt: "Placeholder 1"
+    
+  - src: "/media/images/exhibition/placeholder-2.jpg"
+    alt: "Placeholder 2"
+    
+  - src: "/media/images/exhibition/placeholder-3.jpg"
+    alt: "Placeholder 3"
+    
+  - src: "/media/images/exhibition/placeholder-4.jpg"
+    alt: "Placeholder 4"
+    
+  - src: "/media/images/exhibition/placeholder-5.jpg"
+    alt: "Placeholder 5"
+    
+  - src: "/media/images/exhibition/placeholder-6.jpg"
+    alt: "Placeholder 6"

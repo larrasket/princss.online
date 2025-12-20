@@ -1,0 +1,160 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/exhibition.css">
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/exhibition_header.png" style="text-align: center; display: block; margin: auto; margin-bottom: -9px;">
+<div class="back-home">
+  <a href="/">{ ♖ }</a>
+</div>
+
+<div class="exhibition-container">
+  <div class="exhibition-nav">
+    <button id="prevBtn" class="nav-btn" disabled>←</button>
+    <span class="page-info"><span id="currentPage">1</span> / <span id="totalPages">1</span></span>
+    <button id="nextBtn" class="nav-btn">→</button>
+  </div>
+  
+  <div class="gallery" id="gallery">
+    {{ range $index, $image := .Site.Data.exhibition.images }}
+    <div class="gallery-item" data-index="{{ $index }}">
+      <div class="gallery-thumb">
+        <img 
+          data-src="{{ $image.src }}" 
+          alt="{{ $image.alt | default "Internet Exhibition" }}"
+          loading="lazy"
+          onclick="openLightbox({{ $index }})"
+        >
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  
+  <div class="exhibition-nav bottom-nav">
+    <button id="prevBtn2" class="nav-btn" disabled>←</button>
+    <span class="page-info"><span id="currentPage2">1</span> / <span id="totalPages2">1</span></span>
+    <button id="nextBtn2" class="nav-btn">→</button>
+  </div>
+</div>
+
+<!-- Lightbox for full-size viewing -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+    <button class="lightbox-prev" onclick="event.stopPropagation(); prevImage()">←</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-next" onclick="event.stopPropagation(); nextImage()">→</button>
+    <div class="lightbox-counter">
+      <span id="lightbox-current">1</span> / <span id="lightbox-total">{{ len .Site.Data.exhibition.images }}</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Gallery configuration
+  const IMAGES_PER_PAGE = 24;
+  const allItems = document.querySelectorAll('.gallery-item');
+  const totalImages = allItems.length;
+  const totalPages = Math.ceil(totalImages / IMAGES_PER_PAGE);
+  let currentPage = 1;
+  let currentLightboxIndex = 0;
+  
+  // Update page displays
+  function updatePageInfo() {
+    document.getElementById('currentPage').textContent = currentPage;
+    document.getElementById('totalPages').textContent = totalPages;
+    document.getElementById('currentPage2').textContent = currentPage;
+    document.getElementById('totalPages2').textContent = totalPages;
+    
+    // Update button states
+    const prevBtns = [document.getElementById('prevBtn'), document.getElementById('prevBtn2')];
+    const nextBtns = [document.getElementById('nextBtn'), document.getElementById('nextBtn2')];
+    
+    prevBtns.forEach(btn => btn.disabled = currentPage === 1);
+    nextBtns.forEach(btn => btn.disabled = currentPage === totalPages || totalPages === 0);
+  }
+  
+  // Show items for current page
+  function showPage(page) {
+    const start = (page - 1) * IMAGES_PER_PAGE;
+    const end = start + IMAGES_PER_PAGE;
+    
+    allItems.forEach((item, index) => {
+      if (index >= start && index < end) {
+        item.style.display = 'block';
+        // Lazy load images when they become visible
+        const img = item.querySelector('img');
+        if (img && img.dataset.src && !img.src) {
+          img.src = img.dataset.src;
+        }
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    
+    updatePageInfo();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  // Navigation
+  function goToPage(page) {
+    if (page >= 1 && page <= totalPages) {
+      currentPage = page;
+      showPage(currentPage);
+    }
+  }
+  
+  document.getElementById('prevBtn').addEventListener('click', () => goToPage(currentPage - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => goToPage(currentPage + 1));
+  document.getElementById('prevBtn2').addEventListener('click', () => goToPage(currentPage - 1));
+  document.getElementById('nextBtn2').addEventListener('click', () => goToPage(currentPage + 1));
+  
+  // Lightbox functions
+  function openLightbox(index) {
+    currentLightboxIndex = index;
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const items = document.querySelectorAll('.gallery-item img');
+    
+    img.src = items[index].dataset.src || items[index].src;
+    document.getElementById('lightbox-current').textContent = index + 1;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeLightbox(event) {
+    if (event.target.classList.contains('lightbox') || event.target.classList.contains('lightbox-close')) {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+  
+  function prevImage() {
+    if (currentLightboxIndex > 0) {
+      openLightbox(currentLightboxIndex - 1);
+    }
+  }
+  
+  function nextImage() {
+    if (currentLightboxIndex < totalImages - 1) {
+      openLightbox(currentLightboxIndex + 1);
+    }
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox.classList.contains('active')) {
+      if (e.key === 'Escape') closeLightbox({ target: lightbox });
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    } else {
+      if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
+      if (e.key === 'ArrowRight') goToPage(currentPage + 1);
+    }
+  });
+  
+  // Initialize
+  showPage(1);
+</script>
+{{ end }}

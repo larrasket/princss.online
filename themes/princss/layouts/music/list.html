@@ -60,40 +60,42 @@
                 target="_blank"
                 >Of Schlagenheim</a
               >
-              <div class="loading-indicator" style="display: none; font-size: 0.8em; color: #666;">Loading current track...</div>
+              <div
+                class="loading-indicator"
+                style="display: none; font-size: 0.8em; color: #666"
+              >
+                Loading current track...
+              </div>
             </div>
           </div>
         </div>
+        {{ with .Site.Data.music.featured.featured_album }}
         <div class="music-section">
           <div class="title">featured album</div>
           <div class="musicframe">
-            <img src="/media/images/music-images/songsofleonardcohen.png" />
+            <img src="{{ .image }}" />
             <div class="trackInfo">
-              <div class="artist">Leonard Cohen</div>
+              <div class="artist">{{ .artist }}</div>
               <div class="tracktitle">
-                <a
-                  href="https://www.youtube.com/watch?v=svitEEpI07E&list=PLiN-7mukU_RGWHfkLE_cV_CLwqyf7xIRg"
-                >
-                  Songs of Leonard Cohen
-                </a>
+                <a href="{{ .url }}"> {{ .title }} </a>
               </div>
             </div>
           </div>
         </div>
+        {{ end }} {{ with .Site.Data.music.featured.featured_song }}
         <div class="music-section">
           <div class="title">featured song</div>
           <div class="musicframe">
-            <img src="/media/images/music-images/loureed_transformer_2.png" />
+            <img src="{{ .image }}" />
             <div class="trackInfo">
-              <div class="artist">Lou Reed</div>
+              <div class="artist">{{ .artist }}</div>
               <div class="tracktitle">
-                <a href="https://www.youtube.com/watch?v=kJoHspUta-E">
-                  Satellite of Love
-                </a>
+                <a href="{{ .url }}"> {{ .title }} </a>
               </div>
             </div>
           </div>
         </div>
+        {{ end }}
       </div>
       <div class="right">
         <iframe

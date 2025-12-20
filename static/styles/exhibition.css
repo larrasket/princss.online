@@ -1,0 +1,239 @@
+body {
+    padding-top: 25px;
+    display: block;
+    margin: auto;
+    width: 549px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.back-home {
+    margin: auto;
+    text-align: center;
+}
+
+.back-home a {
+    color: var(--darkbrown);
+    text-decoration: none;
+    -webkit-transition: 0.25s;
+}
+
+.back-home a:hover {
+    letter-spacing: 2px;
+    -webkit-transition: 0.25s;
+}
+
+.exhibition-container {
+    padding-top: 20px;
+    width: 549px;
+}
+
+.exhibition-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--darkbrown);
+    margin-bottom: 10px;
+}
+
+.exhibition-nav.bottom-nav {
+    border-bottom: none;
+    border-top: 1px dotted var(--darkbrown);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.nav-btn {
+    background: var(--white);
+    border: 1px dotted var(--darkbrown);
+    color: var(--darkbrown);
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: var(--darkbrown);
+    color: var(--white);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 12px;
+    color: var(--darkbrown);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.gallery-item {
+    margin: 3px;
+    width: 177px;
+    height: 177px;
+    overflow: hidden;
+    border: 1px dotted var(--darkbrown);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.gallery-item:hover {
+    border-color: var(--darkbrown);
+    box-shadow: 0 0 0 1px var(--darkbrown);
+}
+
+.gallery-thumb {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s;
+}
+
+.gallery-item:hover .gallery-thumb img {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 5, 3, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 3px solid var(--white);
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: 0.25s;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--white);
+    color: var(--darkbrown);
+}
+
+.lightbox-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 14px;
+    background: rgba(25, 5, 3, 0.8);
+    padding: 8px 16px;
+    border: 1px dotted var(--white);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .exhibition-container {
+        width: 100%;
+    }
+    
+    .gallery-item {
+        width: calc(33.333% - 6px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+    
+    .gallery-thumb {
+        height: 100%;
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+}
