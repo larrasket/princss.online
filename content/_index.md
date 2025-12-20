@@ -2,8 +2,24 @@
 title: "La Vita Nouva"
 ---
 
-“I shall state that it was my conviction that I could not do better than continue in that in which I was engaged, viz., in devoting my whole life to the culture of my reason, and in making the greatest progress I was able in the knowledge of truth, on the principles of the method which I had prescribed to myself. This method, from the time I had begun to apply it, had been to me the source of satisfaction so intense as to lead me to, believe that more perfect or more innocent could not be enjoyed in this life; and as by its means I daily discovered truths that appeared to me of some importance, and of which other men were generally ignorant, the gratification thence arising so occupied my mind that I was wholly indifferent to every other object.” ~ René Descartes.
-
-
 
 Welcome to my personal website. Here's a link directly to my blog if that was your intended site: <[https://lr0.org/~saleh/](https://lr0.org/~saleh/)> 
+
+>Around the time that he reached the unnerving milestone of turning
+>thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing
+>the reasons he should be given a job. He had been moderately successful
+>as a painter in Florence, but he had trouble first his commissions
+>and was searching for new horizons. In the first ten paragraphs, he
+>touted his engineering skills, including his ability to design bridges,
+>waterways, cannons, armored vehicles, and public buildings. Only in the
+>eleventh paragraph, at the end, did he add that he was also an artist.
+>“Likewise in painting I can do everything possible,” he wrote.
+
+
+I exist in other places on the web. ~~I\'m on Stack Exchange network. Especially: [Skeptics SE](https://skeptics.stackexchange.com/users/69248/) and [Islam SE](https://islam.stackexchange.com/users/56455/).~~ I also exist on [HN](https://news.ycombinator.com/user?id=lr0) and [Lobsters](https://lobste.rs/~lr0/stories). 
+
+
+You can have look at my [anthology](/~saleh/a.html), I usually try to make it reflect my principles as much as possible, or at least my taste in literature. 
+
+
+
