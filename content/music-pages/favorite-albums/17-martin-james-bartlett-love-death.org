@@ -3,8 +3,10 @@
 :END:
 #+title: Love and Death
 #+date: 2024-12-20
-#+artist: Martin James Bartlett
-#+image: /media/images/music-images/martin_james_bartlett_love_death.jpg
+#+artist: Bartlett
+#+image: /media/images/music-images/martin_james_bartlett_love_death.png
 #+rank: 17
 #+favorite_track: Liebestraum No. 3
+
+Young pianist playing Liszt like he understands that love and death aren't separate themes, they're the same story from different chapters. Liebestraum means "dream of love" and that's what it sounds like, a dream you don't want to wake from.
 
