@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-julia-boutros-la-bahlamak
+:END:
+#+title: La Bahlamak
+#+date: 2024-12-20
+#+artist: Julia Boutros
+#+image: /media/images/music-images/julia_boutros_la_bahlamak.jpg
+#+rank: 11
+#+favorite_track: La Bahlamak
+

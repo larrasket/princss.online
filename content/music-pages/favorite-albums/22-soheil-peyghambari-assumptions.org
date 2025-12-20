@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-soheil-peyghambari-assumptions
+:END:
+#+title: Assumptions
+#+date: 2024-12-20
+#+artist: Soheil Peyghambari
+#+image: /media/images/music-images/soheil_peyghambari_assumptions.jpg
+#+rank: 22
+#+favorite_track: Assumptions
+

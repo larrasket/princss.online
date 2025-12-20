@@ -1,48 +1,158 @@
 title: favorite albums
-description: "My all-time favorites. The ones I were obsessed with in high school will rank higher just because I've listened to them so much, so sorry if it lines up a little too much with RYM all-time charts."
+description: "A collection of my favorite classical, world music, and singer-songwriter albums."
 note: "(⊹) is my favorite track off the record."
 
 albums:
   - rank: 1
-    artist: "Radiohead"
-    title: "In Rainbows"
-    image: "/media/images/music-images/radiohead_inrainbows.png"
-    favoriteTrack: "Nude"
-    description: |
-      My all-time favorite album. Would listen to this on repeat the entire day from sophomore year to senior year. My friend 'L' and I would share a pair of earbuds every first period in English freshman year (after he asked me what music I listened to and I told him I had only listened to Christian pop) and this was the one I fell in love with.
-
-      This is the most beautiful Thom Yorke's vocals have ever sounded on. Takes you to another place.
+    artist: "Carmen Dragon"
+    title: "Romantic Harp"
+    image: "/media/images/music-images/carmen_dragon_romantic_harp.jpg"
+    favoriteTrack: "Clair de Lune"
+    description: ""
 
   - rank: 2
-    artist: "Frank Ocean"
-    title: "Blonde"
-    image: "/media/images/music-images/frankocean_blond.png"
-    favoriteTrack: "Close to You"
-    description: |
-      Was my favorite album for a while before I started junior year. Probably my most cried to record. The one moment I remember I cried the most was after someone had died at my school from a firearm that went off, and during English class we were given the whole period to chill -- I played 'Godspeed' and immediately broke down. It's all the most beautiful things and Frank is such an artist.
+    artist: "David Garrett & Alexander Markovich"
+    title: "14"
+    image: "/media/images/music-images/david_garrett_14.jpg"
+    favoriteTrack: "Liebesleid"
+    description: ""
 
   - rank: 3
-    artist: "Weyes Blood"
-    title: "Titanic Rising"
-    image: "/media/images/music-images/weyesblood_titanicrising.png"
-    favoriteTrack: "Andromeda"
-    description: |
-      Wonderful, ethereal record. The mixing on this is so incredible; it's so spacey and 'Andromeda' might be one of the greatest ballad of all time. Would listen to this album all the time before bed. Felt like I would float.
-
-      Listened to this the most in my history class. Would finish my classwork early and get phone privileges and listen to this the close the period.
+    artist: "Death in June"
+    title: "But, What Ends When the Symbols Shatter?"
+    image: "/media/images/music-images/death_in_june_symbols_shatter.jpg"
+    favoriteTrack: "Death of the West"
+    description: ""
 
   - rank: 4
-    artist: "Duster"
-    title: "Stratosphere"
-    image: "/media/images/music-images/duster_stratosphere.png"
-    favoriteTrack: "Constellation"
-    description: |
-      It's sort of corny to like Duster now because of how popular it's become with annoying teenagers -- but man, I would be lying if I said that this wasn't one of my mos listened-to albums after I broke up with my ex-girlfriend. It was well-loved within a certain circle of RYM users, and for good reason: to me, it encapsulates a small, specific emotion that lingers (not sure what to call it), especially when you're thinking about a life that's passed you. Had a great concert experience with them in 2024.
+    artist: "Death in June"
+    title: "Discriminate"
+    image: "/media/images/music-images/death_in_june_discriminate.jpg"
+    favoriteTrack: "Fall Apart"
+    description: ""
 
   - rank: 5
-    artist: "Radiohead"
-    title: "OK Computer"
-    image: "/media/images/music-images/radiohead_okcomputer.png"
-    favoriteTrack: "Paranoid Android"
-    description: |
-      Another Radiohead album. This one introduced me to the band and is still one of my favorites. The production on this album was revolutionary for its time and it still holds up today.
+    artist: "Dmitri Shostakovich"
+    title: "Orchestral Works"
+    image: "/media/images/music-images/shostakovich_orchestral_works.jpg"
+    favoriteTrack: "Waltz No. 2"
+    description: ""
+
+  - rank: 6
+    artist: "Elliott Smith"
+    title: "Either/Or"
+    image: "/media/images/music-images/elliott_smith_either_or.jpg"
+    favoriteTrack: "Between the Bars"
+    description: ""
+
+  - rank: 7
+    artist: "Elliott Smith"
+    title: "An Introduction to Elliott Smith"
+    image: "/media/images/music-images/elliott_smith_introduction.jpg"
+    favoriteTrack: "Miss Misery"
+    description: ""
+
+  - rank: 8
+    artist: "Elliott Smith"
+    title: "XO"
+    image: "/media/images/music-images/elliott_smith_xo.jpg"
+    favoriteTrack: "Waltz, No. 2"
+    description: ""
+
+  - rank: 9
+    artist: "Ghada Ghanem"
+    title: "Come Ready and See Me"
+    image: "/media/images/music-images/ghada_ghanem_come_ready.jpg"
+    favoriteTrack: "Come Ready and See Me"
+    description: ""
+
+  - rank: 10
+    artist: "I Monster"
+    title: "Neveroddoreven"
+    image: "/media/images/music-images/i_monster_neveroddoreven.jpg"
+    favoriteTrack: "Daydream in Blue"
+    description: ""
+
+  - rank: 11
+    artist: "Julia Boutros"
+    title: "La Bahlamak"
+    image: "/media/images/music-images/julia_boutros_la_bahlamak.jpg"
+    favoriteTrack: "La Bahlamak"
+    description: ""
+
+  - rank: 12
+    artist: "Leon Fleisher"
+    title: "Two Hands"
+    image: "/media/images/music-images/leon_fleisher_two_hands.jpg"
+    favoriteTrack: "Prelude in G Minor"
+    description: ""
+
+  - rank: 13
+    artist: "Leonard Cohen"
+    title: "The Future"
+    image: "/media/images/music-images/leonard_cohen_the_future.jpg"
+    favoriteTrack: "Anthem"
+    description: ""
+
+  - rank: 14
+    artist: "Leonard Cohen"
+    title: "Various Positions"
+    image: "/media/images/music-images/leonard_cohen_various_positions.jpg"
+    favoriteTrack: "Hallelujah"
+    description: ""
+
+  - rank: 15
+    artist: "Lu Siqing"
+    title: "The Beauty of the Violin"
+    image: "/media/images/music-images/lu_siqing_beauty_violin.jpg"
+    favoriteTrack: "Butterfly Lovers"
+    description: ""
+
+  - rank: 16
+    artist: "Marcel Khalife"
+    title: "Caress"
+    image: "/media/images/music-images/marcel_khalife_caress.jpg"
+    favoriteTrack: "Jawaz Al Safar"
+    description: ""
+
+  - rank: 17
+    artist: "Martin James Bartlett"
+    title: "Love and Death"
+    image: "/media/images/music-images/martin_james_bartlett_love_death.jpg"
+    favoriteTrack: "Liebestraum No. 3"
+    description: ""
+
+  - rank: 18
+    artist: "Mashrou' Leila"
+    title: "The Beirut School"
+    image: "/media/images/music-images/mashrou_leila_beirut_school.jpg"
+    favoriteTrack: "Raksit Leila"
+    description: ""
+
+  - rank: 19
+    artist: "Mashrou' Leila"
+    title: "Ibn El Leil"
+    image: "/media/images/music-images/mashrou_leila_ibn_el_leil.jpg"
+    favoriteTrack: "Roman"
+    description: ""
+
+  - rank: 20
+    artist: "Rachid Taha"
+    title: "Diwan 2"
+    image: "/media/images/music-images/rachid_taha_diwan_2.jpg"
+    favoriteTrack: "Ya Rayah"
+    description: ""
+
+  - rank: 21
+    artist: "René Aubry"
+    title: "Plaisirs d'Amour"
+    image: "/media/images/music-images/rene_aubry_plaisirs_damour.jpg"
+    favoriteTrack: "Après la Pluie"
+    description: ""
+
+  - rank: 22
+    artist: "Soheil Peyghambari"
+    title: "Assumptions"
+    image: "/media/images/music-images/soheil_peyghambari_assumptions.jpg"
+    favoriteTrack: "Assumptions"
+    description: ""

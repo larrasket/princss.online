@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-leonard-cohen-various-positions
+:END:
+#+title: Various Positions
+#+date: 2024-12-20
+#+artist: Leonard Cohen
+#+image: /media/images/music-images/leonard_cohen_various_positions.jpg
+#+rank: 14
+#+favorite_track: Hallelujah
+

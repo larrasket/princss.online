@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-elliott-smith-introduction
+:END:
+#+title: An Introduction to Elliott Smith
+#+date: 2024-12-20
+#+artist: Elliott Smith
+#+image: /media/images/music-images/elliott_smith_introduction.jpg
+#+rank: 7
+#+favorite_track: Miss Misery
+

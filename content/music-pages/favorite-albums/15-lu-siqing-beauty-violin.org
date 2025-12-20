@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-lu-siqing-beauty-violin
+:END:
+#+title: The Beauty of the Violin
+#+date: 2024-12-20
+#+artist: Lu Siqing
+#+image: /media/images/music-images/lu_siqing_beauty_violin.jpg
+#+rank: 15
+#+favorite_track: Butterfly Lovers
+

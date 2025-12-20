@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-leonard-cohen-the-future
+:END:
+#+title: The Future
+#+date: 2024-12-20
+#+artist: Leonard Cohen
+#+image: /media/images/music-images/leonard_cohen_the_future.jpg
+#+rank: 13
+#+favorite_track: Anthem
+

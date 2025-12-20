@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-death-in-june-discriminate
+:END:
+#+title: Discriminate
+#+date: 2024-12-20
+#+artist: Death in June
+#+image: /media/images/music-images/death_in_june_discriminate.jpg
+#+rank: 4
+#+favorite_track: Fall Apart
+

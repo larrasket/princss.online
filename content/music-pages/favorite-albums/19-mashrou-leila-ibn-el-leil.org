@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-mashrou-leila-ibn-el-leil
+:END:
+#+title: Ibn El Leil
+#+date: 2024-12-20
+#+artist: Mashrou' Leila
+#+image: /media/images/music-images/mashrou_leila_ibn_el_leil.jpg
+#+rank: 19
+#+favorite_track: Roman
+

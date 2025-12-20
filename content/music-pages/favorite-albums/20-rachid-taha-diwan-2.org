@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-rachid-taha-diwan-2
+:END:
+#+title: Diwan 2
+#+date: 2024-12-20
+#+artist: Rachid Taha
+#+image: /media/images/music-images/rachid_taha_diwan_2.jpg
+#+rank: 20
+#+favorite_track: Ya Rayah
+

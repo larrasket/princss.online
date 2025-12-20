@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-rene-aubry-plaisirs-damour
+:END:
+#+title: Plaisirs d'Amour
+#+date: 2024-12-20
+#+artist: René Aubry
+#+image: /media/images/music-images/rene_aubry_plaisirs_damour.jpg
+#+rank: 21
+#+favorite_track: Après la Pluie
+

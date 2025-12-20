@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-elliott-smith-either-or
+:END:
+#+title: Either/Or
+#+date: 2024-12-20
+#+artist: Elliott Smith
+#+image: /media/images/music-images/elliott_smith_either_or.jpg
+#+rank: 6
+#+favorite_track: Between the Bars
+

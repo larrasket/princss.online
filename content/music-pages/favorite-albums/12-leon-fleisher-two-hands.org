@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-leon-fleisher-two-hands
+:END:
+#+title: Two Hands
+#+date: 2024-12-20
+#+artist: Leon Fleisher
+#+image: /media/images/music-images/leon_fleisher_two_hands.jpg
+#+rank: 12
+#+favorite_track: Prelude in G Minor
+

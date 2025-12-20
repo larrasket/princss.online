@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-carmen-dragon-romantic-harp
+:END:
+#+title: Romantic Harp
+#+date: 2024-12-20
+#+artist: Carmen Dragon
+#+image: /media/images/music-images/carmen_dragon_romantic_harp.jpg
+#+rank: 1
+#+favorite_track: Clair de Lune
+

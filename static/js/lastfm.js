@@ -1,11 +1,7 @@
 // Last.fm integration for dynamic listening status
 // Uses Last.fm API to fetch current/recent tracks for user 'larrasket'
 
-// NOTE: This API key is a commonly shared demo key. For production use,
-// get your own free API key at: https://www.last.fm/api/account/create
-// Client-side API keys are inherently public - Last.fm allows this for
-// read-only operations like fetching recent tracks.
-const LASTFM_API_KEY = "608bf340d26a3d4c7f30deed229440be";
+const LASTFM_API_KEY = "efa2958594802122ccd0190743a51cdd";
 const LASTFM_USER = "larrasket";
 const LASTFM_API_URL = "https://ws.audioscrobbler.com/2.0/";
 

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-mashrou-leila-beirut-school
+:END:
+#+title: The Beirut School
+#+date: 2024-12-20
+#+artist: Mashrou' Leila
+#+image: /media/images/music-images/mashrou_leila_beirut_school.jpg
+#+rank: 18
+#+favorite_track: Raksit Leila
+

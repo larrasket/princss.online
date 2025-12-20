@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-shostakovich-orchestral-works
+:END:
+#+title: Orchestral Works
+#+date: 2024-12-20
+#+artist: Dmitri Shostakovich
+#+image: /media/images/music-images/shostakovich_orchestral_works.jpg
+#+rank: 5
+#+favorite_track: Waltz No. 2
+

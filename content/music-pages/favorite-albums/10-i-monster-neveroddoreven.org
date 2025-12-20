@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-i-monster-neveroddoreven
+:END:
+#+title: Neveroddoreven
+#+date: 2024-12-20
+#+artist: I Monster
+#+image: /media/images/music-images/i_monster_neveroddoreven.jpg
+#+rank: 10
+#+favorite_track: Daydream in Blue
+

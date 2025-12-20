@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       album-david-garrett-14
+:END:
+#+title: 14
+#+date: 2024-12-20
+#+artist: Garrett & Markovich
+#+image: /media/images/music-images/david_garrett_14.png
+#+rank: 2
+#+favorite_track: Liebesleid
+
+Violin and piano, dancing around each other like old friends who know every step. Liebesleid means "love's sorrow" and that's exactly what it sounds like. Not the dramatic kind, but the ache of holding something beautiful that you know won't last. There's a tenderness here that catches me off guard.
+

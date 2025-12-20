@@ -1,13 +1,13 @@
 # Featured music items for the music page sidebar
 
 featured_album:
-  artist: "Leonard Cohen"
-  title: "Songs of Leonard Cohen"
-  image: "/media/images/music-images/songsofleonardcohen.png"
-  url: "https://www.youtube.com/watch?v=svitEEpI07E&list=PLiN-7mukU_RGWHfkLE_cV_CLwqyf7xIRg"
+  artist: "Matt Elliot"
+  title: "Drinking Songs Live 20 years on"
+  image: "/media/images/music-images/matt.jpg"
+  url: "https://www.youtube.com/playlist?list=OLAK5uy_knUtn9FSD0qM8HK9u5sAAL7_WkDjn_GQU"
 
 featured_song:
-  artist: "Lou Reed"
-  title: "Satellite of Love"
-  image: "/media/images/music-images/loureed_transformer_2.png"
-  url: "https://www.youtube.com/watch?v=kJoHspUta-E"
+  artist: "Death in June"
+  title: "Little Black Angel"
+  image: "/media/images/music-images/dij.jpg"
+  url: "https://www.youtube.com/watch?v=XkFyAUyQ89s"

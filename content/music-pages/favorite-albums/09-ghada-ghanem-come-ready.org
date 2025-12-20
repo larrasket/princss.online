@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-ghada-ghanem-come-ready
+:END:
+#+title: Come Ready and See Me
+#+date: 2024-12-20
+#+artist: Ghada Ghanem
+#+image: /media/images/music-images/ghada_ghanem_come_ready.jpg
+#+rank: 9
+#+favorite_track: Come Ready and See Me
+

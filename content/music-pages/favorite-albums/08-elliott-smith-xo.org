@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-elliott-smith-xo
+:END:
+#+title: XO
+#+date: 2024-12-20
+#+artist: Elliott Smith
+#+image: /media/images/music-images/elliott_smith_xo.jpg
+#+rank: 8
+#+favorite_track: Waltz, No. 2
+

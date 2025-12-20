@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-death-in-june-symbols-shatter
+:END:
+#+title: But, What Ends When the Symbols Shatter?
+#+date: 2024-12-20
+#+artist: Death in June
+#+image: /media/images/music-images/death_in_june_symbols_shatter.jpg
+#+rank: 3
+#+favorite_track: Death of the West
+

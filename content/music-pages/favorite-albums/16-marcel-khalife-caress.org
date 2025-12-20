@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-marcel-khalife-caress
+:END:
+#+title: Caress
+#+date: 2024-12-20
+#+artist: Marcel Khalife
+#+image: /media/images/music-images/marcel_khalife_caress.jpg
+#+rank: 16
+#+favorite_track: Jawaz Al Safar
+

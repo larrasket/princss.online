@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       album-martin-james-bartlett-love-death
+:END:
+#+title: Love and Death
+#+date: 2024-12-20
+#+artist: Martin James Bartlett
+#+image: /media/images/music-images/martin_james_bartlett_love_death.jpg
+#+rank: 17
+#+favorite_track: Liebestraum No. 3
+
