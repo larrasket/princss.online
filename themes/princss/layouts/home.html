@@ -244,7 +244,7 @@
 
   const audioPlayer = document.querySelector(".audio-player");
   const audio = new Audio(
-    "/media/audio/" + encodeURIComponent(randomSong.file),
+    "/media/audio/" + encodeURIComponent(randomSong.file)
   );
 
   audio.addEventListener(
@@ -254,7 +254,7 @@
         getTimeCodeFromNum(audio.duration);
       audio.volume = 1;
     },
-    false,
+    false
   );
 
   const timeline = audioPlayer.querySelector(".timeline");
@@ -265,7 +265,7 @@
       const timeToSeek = (e.offsetX / parseInt(timelineWidth)) * audio.duration;
       audio.currentTime = timeToSeek;
     },
-    false,
+    false
   );
 
   const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
@@ -278,7 +278,7 @@
       audioPlayer.querySelector(".controls .volume-percentage").style.width =
         newVolume * 100 + "%";
     },
-    false,
+    false
   );
 
   setInterval(() => {
@@ -302,7 +302,7 @@
         audio.pause();
       }
     },
-    false,
+    false
   );
 
   audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
@@ -325,7 +325,7 @@
     minutes -= hours * 60;
     if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
     return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-      seconds % 60,
+      seconds % 60
     ).padStart(2, 0)}`;
   }
 </script>
@@ -505,7 +505,7 @@
         nav.classList.remove("nav-open");
       }
     },
-    false,
+    false
   );
 </script>
 {{ end }}
