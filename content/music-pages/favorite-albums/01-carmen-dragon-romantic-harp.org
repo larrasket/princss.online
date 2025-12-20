@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       album-carmen-dragon-romantic-harp
 :END:
-#+title: Romantic Harp
+#+title: Harp
 #+date: 2024-12-20
 #+artist: Carmen Dragon
 #+image: /media/images/music-images/carmen_dragon_romantic_harp.png
