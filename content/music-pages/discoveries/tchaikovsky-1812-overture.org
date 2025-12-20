@@ -3,7 +3,7 @@
 :END:
 #+title: 1812 Overture
 #+date: 2024-04-20
-#+artist: Pyotr Ilyich Tchaikovsky
+#+artist: Pyotr 
 #+image: /media/images/music-images/tchaikovsky_1812_overture.png
 
 I first learned about this from V for Vendetta (2005), one of my ever favorite films, but didn't pay attention then. I only truly discovered it during the 2022 Russian invasion of Ukraine. The irony wasn't lost on me. It affects me deeply and gives me vibes from Shadows of Forgotten Ancestors. I only play it on special occasions due to its effect on me.
