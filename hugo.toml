@@ -29,3 +29,4 @@ buildFuture = true
     name = "music"
     url = "/music/"
     weight = 7
+
