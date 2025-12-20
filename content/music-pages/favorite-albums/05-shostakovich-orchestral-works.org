@@ -3,8 +3,10 @@
 :END:
 #+title: Orchestral Works
 #+date: 2024-12-20
-#+artist: Dmitri Shostakovich
-#+image: /media/images/music-images/shostakovich_orchestral_works.jpg
+#+artist: Shostakovich
+#+image: /media/images/music-images/shostakovich_orchestral_works.png
 #+rank: 5
 #+favorite_track: Waltz No. 2
+
+The famous waltz everyone knows, but in context it hits different. There's a melancholy underneath the elegance, like dancing in a ballroom while the building is slowly sinking. Shostakovich understood that beauty and decay aren't opposites.
 
