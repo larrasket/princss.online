@@ -6,62 +6,44 @@
     --mobile-padding: 10px;
 }
 
-/* Hamburger Menu Styles */
+/* Hamburger Menu - hidden on mobile, navigation always visible */
 .hamburger {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-    background: var(--darkbrown);
-    color: var(--white);
-    border: 1px dotted var(--white);
-    font-family: "MS UI Gothic", sans-serif;
-    font-size: 14px;
-    text-align: center;
+    display: none !important;
 }
 
-.hamburger:hover {
-    background: var(--white);
-    color: var(--darkbrown);
-}
-
-/* Mobile Navigation Hidden by Default - phones only */
+/* Mobile Navigation - always visible, compact horizontal layout */
 @media screen and (max-width: 480px) {
-    .hamburger {
-        display: block;
-        width: 100%;
-    }
-
     .right-header {
-        display: none !important;
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-
-    .right-header.nav-open {
         display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
         background: var(--white);
         border-bottom: 1px dotted var(--darkbrown);
     }
 
-    .right-header.nav-open .nav-link {
-        background: var(--white) !important;
-        color: var(--darkbrown) !important;
-        border-bottom: 1px dotted var(--darkbrown) !important;
-    }
-
-    .right-header.nav-open .nav-link:hover {
-        background: var(--darkbrown) !important;
-        color: var(--white) !important;
-    }
-
     .right-header .nav-link {
-        width: 100% !important;
-        border-right: none !important;
-        border-bottom: 1px dotted var(--white);
+        flex: 1 1 auto !important;
+        min-width: 60px !important;
+        /* border-right: 1px dotted var(--darkbrown) !important; */
+        border-bottom: 1px dotted var(--darkbrown) !important;
+        /* border-left: 1px dotted var(--darkbrown) !important; */
+        text-align: center;
+        background: var(--white);
+        border-right: none;
     }
 
-    .right-header .nav-link:last-child {
-        border-bottom: none;
+    .right-header .nav-link a {
+        padding: 6px 4px !important;
+        font-size: 11px !important;
+        display: block;
+    }
+
+    .right-header .nav-link:hover {
+        background: var(--darkbrown) !important;
+    }
+
+    .right-header .nav-link:hover a {
+        color: var(--white) !important;
     }
 
     /* Homepage mobile reordering - use flexbox order */
@@ -106,10 +88,11 @@
         height: auto !important;
     }
 
-    /* Main header */
+    /* Main header - not sticky on mobile */
     .header {
         flex-direction: column !important;
         width: 100% !important;
+        position: relative !important;
     }
 
     .left-header {
@@ -159,31 +142,112 @@
         order: 2;
     }
 
-    /* About section styling for mobile */
+    /* About section - compact single column for mobile */
     .about {
-        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 10px;
+        gap: 8px;
     }
 
+    /* Profile image styling */
     .about > img {
-        max-width: 100px;
+        width: 100%;
+        height: auto;
         margin: 0 auto;
+        display: block;
     }
 
-    .about-statuses {
+    .about .name-header {
+        text-align: center;
+        padding: 5px 0;
         font-size: 12px;
     }
 
-    .about-status img {
-        width: 16px;
-        height: 16px;
+    .about-desc {
+        font-size: 11px;
+        text-align: center;
+        padding: 5px;
+        border-bottom: none !important;
     }
 
-    /* Mobile widgets - single column full width */
+    #github-activity {
+        font-size: 10px;
+    }
+
+    #github-username {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    #github-content {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    /* About statuses styling */
+    .about-statuses {
+        font-size: 11px;
+        border: 1px dotted var(--darkbrown);
+        padding: 5px;
+    }
+
+    .about-statuses-title {
+        font-size: 11px;
+        padding: 3px;
+        border-bottom: 1px dotted var(--darkbrown);
+        margin-bottom: 5px;
+    }
+
+    .about-status {
+        padding: 3px 0;
+        font-size: 11px;
+    }
+
+    .about-status img {
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+
+    /* Audio player - compact for mobile */
+    .audio-player {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .audio-player .controls {
+        padding: 3px;
+    }
+
+    .audio-player .name {
+        font-size: 9px;
+    }
+
+    /* Featured image - centered, full width */
+    .featured-image {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 150px;
+        overflow: hidden;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
+    }
+
+    /* Mobile widgets - two-column grid layout */
     .mobile-widgets-row {
-        display: flex !important;
-        flex-direction: column;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        padding: 10px 5px;
+        padding: 10px;
         width: 100%;
     }
 
@@ -191,12 +255,11 @@
         background: var(--white);
         border: 1px dotted var(--darkbrown);
         padding: 8px;
-        border-radius: 4px;
     }
 
-    /* Calendar takes full width */
+    /* Hide calendar on mobile */
     .calendar-widget {
-        grid-column: 1 / -1;
+        display: none !important;
     }
 
     #calendar {
