@@ -1,18 +1,27 @@
 {{- /* Extract time (HH:MM) from org date format like <2025-12-19 Fri 13:35> and
 convert to 12-hour AM/PM */ -}} {{- /* Usage: {{ partial "org-date-time.html" .
-}} */ -}} {{- $page := . -}} {{- $time := "" -}} {{- if and $page.File (eq
-$page.File.Ext "org") -}} {{- $rawContent := $page.RawContent -}} {{- /* Match
-#+date:
-<YYYY-MM-DD Day HH:MM>
-  */ -}} {{- $pattern := `(?mi)^#\+date:\s*<[^>]*\s+(\d{1,2}):(\d{2})>` -}} {{-
-  $match := findRE $pattern $rawContent 1 -}} {{- if $match -}} {{- $line :=
-  index $match 0 -}} {{- /* Extract hours and minutes */ -}} {{- $hourMatch :=
-  findRE `\s(\d{1,2}):(\d{2})` $line 1 -}} {{- if $hourMatch -}} {{- $timeStr :=
-  index $hourMatch 0 -}} {{- $parts := split (strings.TrimSpace $timeStr) ":"
-  -}} {{- $hour := int (index $parts 0) -}} {{- $minute := index $parts 1 -}}
-  {{- $ampm := "AM" -}} {{- $displayHour := $hour -}} {{- if ge $hour 12 -}} {{-
-  $ampm = "PM" -}} {{- if gt $hour 12 -}} {{- $displayHour = sub $hour 12 -}}
-  {{- end -}} {{- else if eq $hour 0 -}} {{- $displayHour = 12 -}} {{- end -}}
-  {{- $time = printf "%d:%s %s" $displayHour $minute $ampm -}} {{- end -}} {{-
-  end -}} {{- end -}} {{- $time -}}
-</YYYY-MM-DD>
+}} */ -}} {{- $page := . -}} {{- $time := "" -}} {{- $found := false -}} {{- /*
+For org files, always check RawContent first for #+date: after #+title: */ -}}
+{{- if and $page.File (eq $page.File.Ext "org") -}} {{- $rawContent :=
+$page.RawContent -}} {{- $pattern :=
+`(?mi)^#\+date:\s*<[^>]*\s+(\d{1,2}):(\d{2})>` -}} {{- $match := findRE $pattern
+$rawContent 1 -}} {{- if $match -}} {{- $line := index $match 0 -}} {{-
+$hourMatch := findRE `\s(\d{1,2}):(\d{2})` $line 1 -}} {{- if $hourMatch -}} {{-
+$timeStr := index $hourMatch 0 -}} {{- $parts := split (strings.TrimSpace
+$timeStr) ":" -}} {{- $hour := int (index $parts 0) -}} {{- $minute := index
+$parts 1 -}} {{- $ampm := "AM" -}} {{- $displayHour := $hour -}} {{- if ge $hour
+12 -}} {{- $ampm = "PM" -}} {{- if gt $hour 12 -}} {{- $displayHour = sub $hour
+12 -}} {{- end -}} {{- else if eq $hour 0 -}} {{- $displayHour = 12 -}} {{- end
+-}} {{- $time = printf "%d:%s %s" $displayHour $minute $ampm -}} {{- $found =
+true -}} {{- end -}} {{- end -}} {{- end -}} {{- /* If not found in RawContent,
+check .Params.date (for #+date: before #+title:) */ -}} {{- if not $found -}}
+{{- with $page.Params.date -}} {{- $dateStr := . | string -}} {{- if findRE
+`<[^>]*\s+\d{1,2}:\d{2}>` $dateStr -}} {{- $hourMatch := findRE
+`\s(\d{1,2}):(\d{2})` $dateStr 1 -}} {{- if $hourMatch -}} {{- $timeStr := index
+$hourMatch 0 -}} {{- $parts := split (strings.TrimSpace $timeStr) ":" -}} {{-
+$hour := int (index $parts 0) -}} {{- $minute := index $parts 1 -}} {{- $ampm :=
+"AM" -}} {{- $displayHour := $hour -}} {{- if ge $hour 12 -}} {{- $ampm = "PM"
+-}} {{- if gt $hour 12 -}} {{- $displayHour = sub $hour 12 -}} {{- end -}} {{-
+else if eq $hour 0 -}} {{- $displayHour = 12 -}} {{- end -}} {{- $time = printf
+"%d:%s %s" $displayHour $minute $ampm -}} {{- end -}} {{- end -}} {{- end -}}
+{{- end -}} {{- $time -}}

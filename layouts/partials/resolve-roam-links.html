@@ -42,7 +42,7 @@
     {{- else if index $blogIds $id -}}
       {{- $blogUrl := index $blogIds $id -}}
       {{- $oldPattern := printf `href="id:%s"` $id -}}
-      {{- $newPattern := printf `href="/~saleh%s"` $blogUrl -}}
+      {{- $newPattern := printf `href="/~saleh%s#%s"` $blogUrl $id -}}
       {{- $content = replace $content $oldPattern $newPattern -}}
     {{- /* Not found - strip to plain text */ -}}
     {{- else -}}
