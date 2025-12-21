@@ -32,7 +32,7 @@
     </div>
 
     <div class="nav-link">
-      <a href="/exhibition/" class="link">exhibition</a>
+      <a href="/exhibition/" class="link">exhib.</a>
     </div>
 
     <div class="nav-link">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="nav-link">
-      <a href="/~saleh/a.html" class="link">anthology</a>
+      <a href="/~saleh/a.html" class="link">anth.</a>
     </div>
 
     <div class="nav-link" style="border-right: none">
@@ -53,8 +53,8 @@
     <div class="mobile-widgets-row">
       <!-- Row 1: Featured image + Calendar (side by side on mobile) -->
       <!-- Mobile-only featured image -->
-      {{ $piclog := where .Site.RegularPages "Section" "pic-log" }}
-      {{ $lastPic := index (sort $piclog ".Date" "desc") 0 }}
+      {{ $piclog := where .Site.RegularPages "Section" "pic-log" }} {{ $lastPic
+      := index (sort $piclog ".Date" "desc") 0 }}
       <div class="mobile-widget mobile-featured-widget">
         <div class="name-header">featured img</div>
         <div class="featured-image">
@@ -258,7 +258,7 @@
 
   const audioPlayer = document.querySelector(".audio-player");
   const audio = new Audio(
-    "/media/audio/" + encodeURIComponent(randomSong.file)
+    "/media/audio/" + encodeURIComponent(randomSong.file),
   );
 
   audio.addEventListener(
@@ -268,7 +268,7 @@
         getTimeCodeFromNum(audio.duration);
       audio.volume = 1;
     },
-    false
+    false,
   );
 
   const timeline = audioPlayer.querySelector(".timeline");
@@ -279,7 +279,7 @@
       const timeToSeek = (e.offsetX / parseInt(timelineWidth)) * audio.duration;
       audio.currentTime = timeToSeek;
     },
-    false
+    false,
   );
 
   const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
@@ -292,7 +292,7 @@
       audioPlayer.querySelector(".controls .volume-percentage").style.width =
         newVolume * 100 + "%";
     },
-    false
+    false,
   );
 
   setInterval(() => {
@@ -316,7 +316,7 @@
         audio.pause();
       }
     },
-    false
+    false,
   );
 
   audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
@@ -339,7 +339,7 @@
     minutes -= hours * 60;
     if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
     return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-      seconds % 60
+      seconds % 60,
     ).padStart(2, 0)}`;
   }
 </script>
@@ -518,7 +518,7 @@
         nav.classList.remove("nav-open");
       }
     },
-    false
+    false,
   );
 </script>
 {{ end }}

@@ -4,11 +4,21 @@
 }
 html {
     background-color: var(--white);
-    font-family: "MS UI Gothic";
+    font-family: "Times", "Amiri", "Arial", serif !important;
     font-size: 14px;
     color: var(--darkbrown);
     image-rendering: pixelated;
 }
+
+p {
+    text-align: justify;
+    font-family: "Times", "Amiri", "Arial", serif !important;
+}
+
+body {
+    font-family: "Times", "Amiri", "Arial", serif !important;
+}
+
 ::selection {
     background-color: var(--darkbrown);
     color: var(--white);
@@ -24,9 +34,6 @@ html {
     background-color: var(--darkbrown);
     -webkit-transition: 0.25s;
 }
-p {
-    text-align: justify;
-}
 
 .copy-permalink {
     float: right;
@@ -36,4 +43,9 @@ p {
 }
 .copy-permalink:hover {
     opacity: 1;
+}
+
+a {
+    color: var(--darkbrown);
+    -webkit-transition: 0.25s;
 }
