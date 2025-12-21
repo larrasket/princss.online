@@ -6,7 +6,7 @@
 #+artist: DIJ
 #+image: /media/images/music-images/death_in_june_symbols_shatter.png
 #+rank: 3
-#+favorite_track: Death of the West
+#+favorite_track: Little Black Angel
 
 Apocalyptic folk that sounds like autumn leaves catching fire. It's unsettling in the way that staring at ruins can be unsettling. You're not sure if you're mourning something or watching something be born. The ambiguity is the point, I think.
 
