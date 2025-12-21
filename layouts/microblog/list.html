@@ -10,18 +10,26 @@
   <div class="right-header">Warwick Castle, Jasper Francis Cropsey</div>
 </div>
 <div class="content">
-  {{ range .Pages.ByDate.Reverse }}
-  <div class="post" id="{{ partial "org-param.html" (dict "page" . "key" "post_id") }}">
+  {{/* Build a slice with parsed org dates for proper sorting */}}
+  {{ $posts := slice }}
+  {{ range .Pages }}
+    {{ $orgDate := partial "org-date.html" . }}
+    {{ $posts = $posts | append (dict "page" . "orgDate" $orgDate) }}
+  {{ end }}
+  {{/* Sort by orgDate descending (newest first) */}}
+  {{ range sort $posts "orgDate" "desc" }}
+  {{ $page := .page }}
+  <div class="post" id="{{ partial "org-param.html" (dict "page" $page "key" "post_id") }}">
     <div class="post-info">
       <img src="/media/images/pfp.png" style="width: 60px; height: 61px" />
       <div class="info">
         <div class="name">larrasket</div>
-        <div class="date">{{ .Date.Format "02/01/06" }}</div>
-        <div class="time">@{{ partial "org-date-time.html" . }}</div>
+        <div class="date">{{ .orgDate.Format "02/01/06" }}</div>
+        <div class="time">@{{ partial "org-date-time.html" $page }}</div>
       </div>
     </div>
     <div class="post-content">
-      {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content)) .Permalink) }}
+      {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" $page.Content)) $page.Permalink) }}
     </div>
   </div>
   {{ end }}
