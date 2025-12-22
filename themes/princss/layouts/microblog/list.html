@@ -26,7 +26,15 @@
         <div class="time">@{{ .Params.time }}</div>
       </div>
     </div>
-    <div class="post-content">{{ .Content }}</div>
+    <div class="post-content">
+      {{ .Content }}
+      {{- /* Extract ID and show backlinks */ -}}
+      {{- $idMatch := findRE `:ID:\s+(\S+)` .RawContent 1 -}}
+      {{- if $idMatch -}}
+        {{- $id := replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+        {{ partial "backlinks.html" (dict "id" $id) }}
+      {{- end -}}
+    </div>
   </div>
   {{ end }}
 </div>

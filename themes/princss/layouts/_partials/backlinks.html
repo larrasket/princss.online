@@ -1,0 +1,16 @@
+{{- /* Backlinks partial - displays references to _current_ content */}}
+{{- /* Usage: {{ partial "backlinks.html" (dict "id" $id) }} */}}
+
+{{- $id := .id -}}
+{{- if $id -}}
+  {{- $backlinks := index site.Data.backlinks $id -}}
+  {{- if $backlinks -}}
+<div class="backlinks">
+  <span class="backlinks-title">Referenced in: </span>
+  {{- $total := len $backlinks -}}
+  {{- range $i, $link := $backlinks -}}
+    <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if lt (add $i 1) $total }}, {{ end -}}
+  {{- end -}}
+</div>
+  {{- end -}}
+{{- end -}}

@@ -37,6 +37,12 @@
       <div class="page-content">
         <div class="date">{{ $page.Date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ $page.Content }}</div>
+        {{- /* Extract ID and show backlinks */ -}}
+        {{- $idMatch := findRE `:ID:\s+(\S+)` $page.RawContent 1 -}}
+        {{- if $idMatch -}}
+          {{- $id := replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+          {{ partial "backlinks.html" (dict "id" $id) }}
+        {{- end -}}
       </div>
     </article>
     {{ end }}

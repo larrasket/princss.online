@@ -2,6 +2,7 @@
     --darkbrown: #190503;
     --white: #f0f0f0;
 }
+
 html {
     background-color: var(--white);
     font-family: "Times", "Amiri", "Arial", serif !important;
@@ -23,13 +24,16 @@ body {
     background-color: var(--darkbrown);
     color: var(--white);
 }
+
 ::-webkit-scrollbar {
     width: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
     border: 1px dotted var(--darkbrown);
     -webkit-transition: 0.25s;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--darkbrown);
     -webkit-transition: 0.25s;
@@ -41,6 +45,7 @@ body {
     opacity: 0.5;
     cursor: pointer;
 }
+
 .copy-permalink:hover {
     opacity: 1;
 }
@@ -52,4 +57,24 @@ a {
 
 .preview-block {
     color: gray;
+}
+
+/* Backlinks styling */
+.backlinks {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+.backlinks .backlinks-title {
+    font-weight: bold;
+}
+
+.backlinks a {
+    color: var(--darkbrown);
+}
+
+.backlinks a:hover {
+    text-decoration: underline;
 }
