@@ -9,46 +9,67 @@
   <div class="right-header">"The Rose Garden by Carl Aagaard"</div>
 </div>
 <div class="content">
-  <!-- Diary Nav -->
+  {{/* Build sorted pages with org dates */}}
   {{ $sortedPages := slice }}
   {{ range .Pages }}
     {{ $date := partial "org-date.html" . }}
     {{ $sortedPages = $sortedPages | append (dict "page" . "date" $date) }}
   {{ end }}
   {{ $sortedPages = sort $sortedPages "date" "desc" }}
-  <nav>
+  
+  {{/* Get page size from config, default to 20, 0 = no pagination */}}
+  {{ $pageSize := site.Params.diaryPageSize | default 20 }}
+  
+  {{/* Apply pagination if page size > 0 */}}
+  {{ $paginatedPages := $sortedPages }}
+  {{ $paginator := false }}
+  {{ if gt $pageSize 0 }}
+    {{/* Hugo's paginator works with pages, so we extract page objects */}}
+    {{ $pageObjects := slice }}
     {{ range $sortedPages }}
+      {{ $pageObjects = $pageObjects | append .page }}
+    {{ end }}
+    {{ $paginator = .Paginate $pageObjects $pageSize }}
+    {{/* Rebuild sorted slice for paginated pages only */}}
+    {{ $paginatedPages = slice }}
+    {{ range $paginator.Pages }}
+      {{ $date := partial "org-date.html" . }}
+      {{ $paginatedPages = $paginatedPages | append (dict "page" . "date" $date) }}
+    {{ end }}
+    {{ $paginatedPages = sort $paginatedPages "date" "desc" }}
+  {{ end }}
+
+  <!-- Diary Nav - only show dates for current page -->
+  <nav>
+    {{ range $paginatedPages }}
     <a href="/diary/#{{ .date.Format "02012006" }}">{{ .date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
+  
   <!-- Diary Entries -->
   <main>
-    {{ range $index, $item := $sortedPages }}
+    {{ range $index, $item := $paginatedPages }}
     {{ $page := $item.page }}
     {{ $date := $item.date }}
     <article
       id="{{ $date.Format "02012006" }}"
-      {{
-      if
-      eq
-      $index
-      (sub
-      (len
-      $sortedPages)
-      1)
-      }}
+      {{ if eq $index (sub (len $paginatedPages) 1) }}
       style="border-bottom: none"
-      {{
-      end
-      }}
+      {{ end }}
     >
       <div class="page-content">
         <div class="date">{{ $date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ partial "resolve-citations.html" (partial "resolve-roam-links.html" (partial "strip-org-title.html" $page.Content)) }}<a class="copy-permalink" data-url="{{ $page.Permalink }}" title="Copy permalink">[permlink]</a></div>
+        {{ partial "extract-backlinks.html" $page }}
       </div>
     </article>
     {{ end }}
   </main>
+  
+  {{/* Pagination navigation */}}
+  {{ if $paginator }}
+    {{ partial "pagination.html" $paginator }}
+  {{ end }}
 </div>
 <div
   class="header"

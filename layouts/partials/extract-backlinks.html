@@ -1,0 +1,7 @@
+{{- /* Extract ID from page and render backlinks if found */}}
+{{- /* Usage: {{ partial "extract-backlinks.html" $page }} */}}
+{{- $idMatch := findRE `:ID:\s+(\S+)` .RawContent 1 -}}
+{{- if $idMatch -}}
+  {{- $id := replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+  {{ partial "backlinks.html" (dict "id" $id) }}
+{{- end -}}

@@ -16,8 +16,30 @@
     {{ $orgDate := partial "org-date.html" . }}
     {{ $posts = $posts | append (dict "page" . "orgDate" $orgDate) }}
   {{ end }}
-  {{/* Sort by orgDate descending (newest first) */}}
-  {{ range sort $posts "orgDate" "desc" }}
+  {{ $sortedPosts := sort $posts "orgDate" "desc" }}
+  
+  {{/* Get page size from config, default to 30, 0 = no pagination */}}
+  {{ $pageSize := site.Params.microblogPageSize | default 30 }}
+  
+  {{/* Apply pagination if page size > 0 */}}
+  {{ $paginatedPosts := $sortedPosts }}
+  {{ $paginator := false }}
+  {{ if gt $pageSize 0 }}
+    {{ $pageObjects := slice }}
+    {{ range $sortedPosts }}
+      {{ $pageObjects = $pageObjects | append .page }}
+    {{ end }}
+    {{ $paginator = .Paginate $pageObjects $pageSize }}
+    {{ $paginatedPosts = slice }}
+    {{ range $paginator.Pages }}
+      {{ $orgDate := partial "org-date.html" . }}
+      {{ $paginatedPosts = $paginatedPosts | append (dict "page" . "orgDate" $orgDate) }}
+    {{ end }}
+    {{ $paginatedPosts = sort $paginatedPosts "orgDate" "desc" }}
+  {{ end }}
+  
+  {{/* Display posts */}}
+  {{ range $paginatedPosts }}
   {{ $page := .page }}
   <div class="post" id="{{ partial "org-param.html" (dict "page" $page "key" "post_id") }}">
     <div class="post-info">
@@ -30,8 +52,14 @@
     </div>
     <div class="post-content">
       {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" $page.Content)) $page.Permalink) }}
+      {{ partial "extract-backlinks.html" $page }}
     </div>
   </div>
+  {{ end }}
+  
+  {{/* Pagination navigation */}}
+  {{ if $paginator }}
+    {{ partial "pagination.html" $paginator }}
   {{ end }}
 </div>
 {{ end }} {{ define "scripts" }}

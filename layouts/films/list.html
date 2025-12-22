@@ -15,7 +15,18 @@
     </div>
   </div>
   <div class="content">
-    {{ range .Pages.ByDate.Reverse }}
+    {{/* Get page size from config, default to 10, 0 = no pagination */}}
+    {{ $pageSize := site.Params.filmsPageSize | default 10 }}
+    
+    {{/* Apply pagination if page size > 0 */}}
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ $paginator := false }}
+    {{ if gt $pageSize 0 }}
+      {{ $paginator = .Paginate $pages $pageSize }}
+      {{ $pages = $paginator.Pages }}
+    {{ end }}
+    
+    {{ range $pages }}
     <div class="film">
       <div class="left">
         <div class="frame">
@@ -41,8 +52,14 @@
           title="Copy permalink"
           >[permlink]</a
         >
+        {{ partial "extract-backlinks.html" . }}
       </div>
     </div>
+    {{ end }}
+    
+    {{/* Pagination navigation */}}
+    {{ if $paginator }}
+      {{ partial "pagination.html" $paginator }}
     {{ end }}
   </div>
 </div>

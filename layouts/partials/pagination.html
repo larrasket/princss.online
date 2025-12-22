@@ -1,0 +1,33 @@
+{{- /* Pagination partial - displays page navigation */}}
+{{- /* Usage: {{ partial "pagination.html" . }} where . is .Paginator */}}
+{{- $paginator := . -}}
+{{- if gt $paginator.TotalPages 1 -}}
+<nav class="pagination">
+  <div class="pagination-info">
+    Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+  </div>
+  <div class="pagination-links">
+    {{- if $paginator.HasPrev -}}
+    <a href="{{ $paginator.Prev.URL }}" class="pagination-prev">← Prev</a>
+    {{- else -}}
+    <span class="pagination-prev disabled">← Prev</span>
+    {{- end -}}
+    
+    {{- /* Show page numbers */ -}}
+    {{- $currentPage := $paginator.PageNumber -}}
+    {{- range $paginator.Pagers -}}
+      {{- if eq .PageNumber $currentPage -}}
+      <span class="pagination-page current">{{ .PageNumber }}</span>
+      {{- else -}}
+      <a href="{{ .URL }}" class="pagination-page">{{ .PageNumber }}</a>
+      {{- end -}}
+    {{- end -}}
+    
+    {{- if $paginator.HasNext -}}
+    <a href="{{ $paginator.Next.URL }}" class="pagination-next">Next →</a>
+    {{- else -}}
+    <span class="pagination-next disabled">Next →</span>
+    {{- end -}}
+  </div>
+</nav>
+{{- end -}}

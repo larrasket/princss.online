@@ -39,8 +39,10 @@
         <div class="page-writing">{{ $page.Content }}</div>
         {{- /* Extract ID and show backlinks */ -}}
         {{- $idMatch := findRE `:ID:\s+(\S+)` $page.RawContent 1 -}}
+        <!-- DEBUG idMatch={{ $idMatch }} -->
         {{- if $idMatch -}}
           {{- $id := replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+          <!-- DEBUG extracted id={{ $id }} -->
           {{ partial "backlinks.html" (dict "id" $id) }}
         {{- end -}}
       </div>

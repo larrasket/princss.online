@@ -78,3 +78,48 @@ a {
 .backlinks a:hover {
     text-decoration: underline;
 }
+
+/* Pagination styling */
+.pagination {
+    margin: 2em 0;
+    padding: 1em 0;
+    border-top: 1px dotted var(--darkbrown);
+    text-align: center;
+}
+
+.pagination-info {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.pagination-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.pagination-prev,
+.pagination-next,
+.pagination-page {
+    padding: 0.25em 0.5em;
+    color: var(--darkbrown);
+    text-decoration: none;
+}
+
+.pagination-prev.disabled,
+.pagination-next.disabled {
+    color: #ccc;
+}
+
+.pagination-page.current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.pagination-page:hover,
+.pagination-prev:hover:not(.disabled),
+.pagination-next:hover:not(.disabled) {
+    text-decoration: underline;
+}

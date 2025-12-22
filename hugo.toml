@@ -29,3 +29,9 @@ buildFuture = true
     name = "music"
     url = "/music/"
     weight = 7
+
+[params]
+  # Pagination - entries per page (set to 0 to disable)
+  diaryPageSize = 20
+  microblogPageSize = 30
+  filmsPageSize = 10
