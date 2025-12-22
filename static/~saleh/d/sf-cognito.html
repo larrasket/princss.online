@@ -552,9 +552,9 @@ margin-block-start: auto;
 <div id="content" class="content">
 <header>
 <h1 class="title">Implementing Salesforce SSO with Cognito Using SF SessionID</h1>
-</header><div id="outline-container-orga9ae632" class="outline-2">
-<h2 id="orga9ae632"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
-<div class="outline-text-2" id="text-orga9ae632">
+</header><div id="outline-container-orgb7ff375" class="outline-2">
+<h2 id="orgb7ff375"><span class="todo TODO">TODO</span> Rewrite this&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-orgb7ff375">
 <p>
 I&rsquo;ve been reading recently Distributed Systems by Steen, M. v., &amp;
 Tanenbaum, A. S..<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">Maarten van Steen and Andrew S. Tanenbaum, <i>Distributed Systems: Principles and Paradigms</i>, 4.01 (Maarten van Steen, 2023), <a href="https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed">https://libgen.li/file.php?md5=d46eeafcf46684d5421d07300af499ed</a>.</span> And it provides a very nice
@@ -567,7 +567,7 @@ service-based architecture and the like.
 </p>
 
 
-<figure id="orgf7fd406">
+<figure id="orgd4bdc17">
 <img src="../i/2025-04-01_14-04-55_screenshot.png" alt="2025-04-01_14-04-55_screenshot.png">
 
 </figure>
@@ -643,15 +643,15 @@ Final flow chart (<a href="../i/sf-cognito.png">click here for full-width image<
 </p>
 
 
-<figure id="orgfdf0479">
+<figure id="org5f9b8ad">
 <img src="../i/sf-cognito.png" alt="sf-cognito.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org0e48c05" class="outline-2">
-<h2 id="org0e48c05">The Authentication Challenge</h2>
-<div class="outline-text-2" id="text-org0e48c05">
+<div id="outline-container-org1d541c2" class="outline-2">
+<h2 id="org1d541c2">The Authentication Challenge</h2>
+<div class="outline-text-2" id="text-org1d541c2">
 <p>
 Standard OAuth flows typically require implementing specific protocols and
 maintaining redirect URIs. However, many enterprise scenarios benefit from a
@@ -669,9 +669,9 @@ crucial for maintaining consistent user profiles across platforms.
 </p>
 </div>
 </div>
-<div id="outline-container-org52cd04b" class="outline-2">
-<h2 id="org52cd04b">Architecture Overview</h2>
-<div class="outline-text-2" id="text-org52cd04b">
+<div id="outline-container-org3f77706" class="outline-2">
+<h2 id="org3f77706">Architecture Overview</h2>
+<div class="outline-text-2" id="text-org3f77706">
 <p>
 The solution employs AWS Cognito&rsquo;s custom authentication flow capabilities,
 leveraging Lambda triggers to process Salesforce tokens. Four key Lambda
@@ -691,13 +691,13 @@ experience while ensuring proper validation of user identities.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc48b53d" class="outline-2">
-<h2 id="orgc48b53d">Implementation Details</h2>
-<div class="outline-text-2" id="text-orgc48b53d">
+<div id="outline-container-org8e7cb81" class="outline-2">
+<h2 id="org8e7cb81">Implementation Details</h2>
+<div class="outline-text-2" id="text-org8e7cb81">
 </div>
-<div id="outline-container-org5636bf9" class="outline-3">
-<h3 id="org5636bf9">Setting Up the Cognito User Pool</h3>
-<div class="outline-text-3" id="text-org5636bf9">
+<div id="outline-container-org288e833" class="outline-3">
+<h3 id="org288e833">Setting Up the Cognito User Pool</h3>
+<div class="outline-text-3" id="text-org288e833">
 <p>
 First, we need a Cognito user pool configured to use custom authentication
 challenges. This requires disabling the standard authentication flows and
@@ -731,9 +731,9 @@ For Terraform users, the configuration resembles:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgc14c1a1" class="outline-3">
-<h3 id="orgc14c1a1">The Token Validator Service</h3>
-<div class="outline-text-3" id="text-orgc14c1a1">
+<div id="outline-container-orgc8a4434" class="outline-3">
+<h3 id="orgc8a4434">The Token Validator Service</h3>
+<div class="outline-text-3" id="text-orgc8a4434">
 <p>
 The token validator is a separate Lambda exposed as an API that serves as the
 entry point for authentication. It validates Salesforce tokens and ensures users
@@ -770,13 +770,13 @@ retrieve the user&rsquo;s email, which serves as the basis for identity mapping.
 </p>
 </div>
 </div>
-<div id="outline-container-org12e5651" class="outline-3">
-<h3 id="org12e5651">The Cognito Lambda Triggers</h3>
-<div class="outline-text-3" id="text-org12e5651">
+<div id="outline-container-org886c40e" class="outline-3">
+<h3 id="org886c40e">The Cognito Lambda Triggers</h3>
+<div class="outline-text-3" id="text-org886c40e">
 </div>
-<div id="outline-container-org1de0084" class="outline-4">
-<h4 id="org1de0084">Define Auth Challenge</h4>
-<div class="outline-text-4" id="text-org1de0084">
+<div id="outline-container-org45723ee" class="outline-4">
+<h4 id="org45723ee">Define Auth Challenge</h4>
+<div class="outline-text-4" id="text-org45723ee">
 <p>
 The define-auth-challenge Lambda controls the authentication flow by determining
 which challenges to present and when to issue tokens:
@@ -807,9 +807,9 @@ which challenges to present and when to issue tokens:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgbcdca55" class="outline-4">
-<h4 id="orgbcdca55">Create Auth Challenge</h4>
-<div class="outline-text-4" id="text-orgbcdca55">
+<div id="outline-container-org5a552ea" class="outline-4">
+<h4 id="org5a552ea">Create Auth Challenge</h4>
+<div class="outline-text-4" id="text-org5a552ea">
 <p>
 This Lambda creates the challenge requesting the Salesforce token:
 </p>
@@ -829,9 +829,9 @@ This Lambda creates the challenge requesting the Salesforce token:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org0de6e3e" class="outline-4">
-<h4 id="org0de6e3e">Verify Auth Challenge</h4>
-<div class="outline-text-4" id="text-org0de6e3e">
+<div id="outline-container-orgbb887a0" class="outline-4">
+<h4 id="orgbb887a0">Verify Auth Challenge</h4>
+<div class="outline-text-4" id="text-orgbb887a0">
 <p>
 The verify-auth-challenge Lambda performs the critical task of validating the token against Salesforce:
 </p>
@@ -864,9 +864,9 @@ The verify-auth-challenge Lambda performs the critical task of validating the to
 </div>
 </div>
 </div>
-<div id="outline-container-orgf3c9268" class="outline-2">
-<h2 id="orgf3c9268">The Username Dilemma</h2>
-<div class="outline-text-2" id="text-orgf3c9268">
+<div id="outline-container-org9594b6d" class="outline-2">
+<h2 id="org9594b6d">The Username Dilemma</h2>
+<div class="outline-text-2" id="text-org9594b6d">
 <p>
 A critical consideration in this implementation revolves around Cognito
 usernames. While it might seem intuitive to use email addresses as usernames in
@@ -917,9 +917,9 @@ integrity of identity mapping across authentication systems.
 </p>
 </div>
 </div>
-<div id="outline-container-org146162d" class="outline-2">
-<h2 id="org146162d">Infrastructure as Code</h2>
-<div class="outline-text-2" id="text-org146162d">
+<div id="outline-container-org77fcc42" class="outline-2">
+<h2 id="org77fcc42">Infrastructure as Code</h2>
+<div class="outline-text-2" id="text-org77fcc42">
 <p>
 For employing Infrastructure as Code practices, defining these Lambda functions
 and their permissions through Terraform provides consistency and
@@ -959,9 +959,9 @@ operations and that Cognito can invoke the Lambda triggers.
 </p>
 </div>
 </div>
-<div id="outline-container-org8a4e774" class="outline-2">
-<h2 id="org8a4e774">Security Considerations</h2>
-<div class="outline-text-2" id="text-org8a4e774">
+<div id="outline-container-org27f2b62" class="outline-2">
+<h2 id="org27f2b62">Security Considerations</h2>
+<div class="outline-text-2" id="text-org27f2b62">
 <p>
 This authentication flow involves handling sensitive Salesforce session tokens,
 requiring careful attention to security practices:
@@ -983,9 +983,9 @@ for long-lived sessions.
 </p>
 </div>
 </div>
-<div id="outline-container-org298c78e" class="outline-2">
-<h2 id="org298c78e">Conclusion</h2>
-<div class="outline-text-2" id="text-org298c78e">
+<div id="outline-container-org51dc9de" class="outline-2">
+<h2 id="org51dc9de">Conclusion</h2>
+<div class="outline-text-2" id="text-org51dc9de">
 <p>
 The integration of Salesforce authentication with AWS Cognito through custom
 challenges provides a powerful mechanism for extending Salesforce&rsquo;s identity
