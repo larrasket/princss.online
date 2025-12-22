@@ -5,61 +5,74 @@ const LASTFM_API_KEY = "efa2958594802122ccd0190743a51cdd";
 const LASTFM_USER = "larrasket";
 const LASTFM_API_URL = "https://ws.audioscrobbler.com/2.0/";
 
-// CORS proxy options (fallback if first one fails)
-const CORS_PROXIES = [
-    "https://api.allorigins.win/get?url=",
-    "https://corsproxy.io/?",
-];
-
 async function fetchCurrentTrack() {
     const apiUrl = `${LASTFM_API_URL}?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
 
-    // Try each CORS proxy until one works
-    for (const proxy of CORS_PROXIES) {
+    // Try direct API call first (Last.fm may support CORS)
+    try {
+        const response = await fetch(apiUrl);
+        if (response.ok) {
+            const data = await response.json();
+            const track = parseTrackData(data);
+            if (track) return track;
+        }
+    } catch (error) {
+        console.warn("Direct Last.fm API call failed:", error);
+    }
+
+    // Fallback: try CORS proxies
+    const corsProxies = [
+        { url: "https://api.allorigins.win/get?url=", needsEncode: true, unwrap: true },
+        { url: "https://corsproxy.io/?", needsEncode: false, unwrap: false },
+    ];
+
+    for (const proxy of corsProxies) {
         try {
-            const proxiedUrl =
-                proxy === "https://api.allorigins.win/get?url="
-                    ? `${proxy}${encodeURIComponent(apiUrl)}`
-                    : `${proxy}${apiUrl}`;
+            const proxiedUrl = proxy.needsEncode
+                ? `${proxy.url}${encodeURIComponent(apiUrl)}`
+                : `${proxy.url}${apiUrl}`;
 
             const response = await fetch(proxiedUrl);
             if (!response.ok) continue;
 
-            const data = await response.json();
-
-            // Handle different proxy response formats
-            const lastfmData =
-                proxy === "https://api.allorigins.win/get?url="
-                    ? JSON.parse(data.contents)
-                    : data;
-
-            if (lastfmData.recenttracks && lastfmData.recenttracks.track) {
-                const track = Array.isArray(lastfmData.recenttracks.track)
-                    ? lastfmData.recenttracks.track[0]
-                    : lastfmData.recenttracks.track;
-
-                return {
-                    artist: track.artist["#text"] || track.artist,
-                    title: track.name,
-                    album: track.album["#text"] || track.album,
-                    image: track.image
-                        ? track.image[2] && track.image[2]["#text"]
-                            ? track.image[2]["#text"]
-                            : track.image[1]["#text"]
-                        : "",
-                    url: track.url,
-                    nowPlaying:
-                        track["@attr"] && track["@attr"].nowplaying === "true",
-                };
+            let data = await response.json();
+            if (proxy.unwrap && data.contents) {
+                data = JSON.parse(data.contents);
             }
+
+            const track = parseTrackData(data);
+            if (track) return track;
         } catch (error) {
-            console.warn(`CORS proxy ${proxy} failed:`, error);
+            console.warn(`CORS proxy ${proxy.url} failed:`, error);
             continue;
         }
     }
 
-    console.warn("All CORS proxies failed for Last.fm API");
+    console.warn("All Last.fm API methods failed");
     return null;
+}
+
+function parseTrackData(data) {
+    if (!data.recenttracks || !data.recenttracks.track) return null;
+    
+    const track = Array.isArray(data.recenttracks.track)
+        ? data.recenttracks.track[0]
+        : data.recenttracks.track;
+
+    if (!track) return null;
+
+    return {
+        artist: track.artist["#text"] || track.artist,
+        title: track.name,
+        album: track.album["#text"] || track.album,
+        image: track.image
+            ? track.image[2] && track.image[2]["#text"]
+                ? track.image[2]["#text"]
+                : track.image[1]["#text"]
+            : "",
+        url: track.url,
+        nowPlaying: track["@attr"] && track["@attr"].nowplaying === "true",
+    };
 }
 
 function updateMusicWidget(trackData) {
