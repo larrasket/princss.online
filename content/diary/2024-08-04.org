@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID: jene6a516ak0
+:END:
+#+title: Nostalgic Bibliography
+#+DATE: <2024-08-04 Sun 03:32>
+#+BEGIN_tag
+{{{t}}} 
+#+END_tag
+I'm reorganizing my [[id:omy9ejo02wj0][bibliography]], found out that there are many titles that I felt
+nostalgic towards. Many titles are related to people I used to discuss with or phases in
+my life. Some of them are:
+
+- In Praise of Idleness and Other Essays (Russell, B.) :: one of the very first books I've
+  ever read.
+- The Hero With a Thousand Faces (Campbell, J.) :: I really miss that era of exploring
+  Campbell and psychoanalysis... used to be in a very fun communities.
+- The Human Web (McNeill et al.) :: It was a very hard job for me to get a paper version
+  of this book, I remember reading it in public transportation, in winter.
+- Being Mortal (Gawande, A.) :: Same as previous one, I read it in the same era.
+- The Naked Ape (Morris, D.) :: I've some of the dearest memories with this book. I
+  remember recommending it to somebody, they were too shy to discuss the sex chapter and I
+  found that funny, we never talked or met again.
+- Your Inner Fish (Shubin, N.) :: one of the first books ever that I read about evolution,
+  recommended to me by my neighbor after he saw the documentary.
+- Totem and taboo (Freud, S.) :: My first book to read by Freud, first book to get me very
+  invested into the psychoanalysis theory as well. I even made infographics for this
+  book. It also introduced me to many other European orientalists.
+- Group Psychology (Freud, S.) :: Second book to read for Freud, was recommended to me by
+  the same friend who recommended "Your Inner Fish".
+- Differential Equations for Dummies (Holzner, S.) :: very bad memories with this one.
+- Algorithms (Sedgewick, R.) :: This was my alternative for the common algorithms
+  reference, I don't even remember the name of that reference anymore.
+- Data Structures and Algorithm Analysis (Shaffer, C.) :: My first algorithms book, one of
+  the books that I completed 100% of it. I truly loved it, I had a TODO note to thank the
+  author, but I never did.
+
+So many other memories with the rest of the list! خُلِقتُ أَلوفاً لَو رَحَلتُ إِلى الصِبا لَفارَقتُ شَيبي موجَعَ القَلبِ باكِيا.
+
+- [2025-05-23 Fri 17:26] Sometimes I wonder whether that feeling is healthy.
+
+#[[id:ydb1kfn02wj0][Modus Vivendi]]
+  
+  
