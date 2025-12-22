@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       6vb8q2q02wj0
+:END:
+#+title: "Ohne Heimat" (Without a Homeland)
+#+DATE: <2022-11-10 Thu 19:46>
+
+
+
+#+BEGIN_PREVIEW
+"Yesterday, during thoughts about my homeland, I wrote a little poem in which I mused how it
+might be for one who didn't have a homeland"
+#+END_PREVIEW
+
+The [[id:7987ac4b-7dce-448a-8f1c-df97bef14e79][poem]] is symptomatic of the
+lyrical escape with which [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] sought to transcend his dreary school routine. Entitled
+"Ohne Heimat", it depicts a passionate self-emancipation from all restrictive boundaries:
+
+
+#+begin_verse
+Wild horses take
+Me without fear and hesitation
+Through the wide world.
+And whoever sees me knows me,
+And whoever knows me calls me
+The homeless man.
+Heidideldi!
+Never forget me!
+My happiness, you bright star!
+
+
+No one may dare
+To ask me
+Where my homeland is.
+I am really not bound
+To space and fleeting hours
+I am just as free as the Aar!
+Heidideldi!
+Never forsake me!
+My happiness, you lovely May!
+That I eventually must perish,
+
+
+Must kiss bitter death-
+That I scarcely believe.
+Must I sink into the grave
+And never again drink
+The fragrant froth of life?
+Heidideldi!
+N ever forsake me
+My happiness, you colorful dream!
+#+end_verse
+
+
+#[[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
