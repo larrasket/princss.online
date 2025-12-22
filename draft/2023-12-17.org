@@ -5,9 +5,7 @@
 #+DATE: <2023-12-17 Sun 23:20>
 #+cite_export: csl ieee.csl
 
-#+BEGIN_propert
-{{{s}}} [[id:4swh72s0s1k0][Postmodern Abyss: Black Mirror]]
-#+END_propert
+
 #+begin_postscript
 This post is highly based on [cite:@collins-2019-nation-anthem]
 #+end_postscript
@@ -28,7 +26,7 @@ different reasons: the action adventure, the ambiguous romantic relationship, th
 anarchism vibes, the anti-anarchism vibes (catholic monarchist V), etc.
 
 While many people like about Black Mirror its anthologist and thriller style, what
-attracts me really is the philosophical reflections.
+attracts me really is the philosophical reflections. #[[id:4swh72s0s1k0][Postmodern Abyss: Black Mirror]]
 -----
 
 * Is it ever okay to {something bad most of the times}?

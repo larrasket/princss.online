@@ -13,16 +13,7 @@ On stupidity, chess, and rejection. #[[id:ydb1kfn02wj0][Modus Vivendi]]
 :ID:       duh1gvb0fzj0
 :END:
 
-I've been recently reading a paper on mate rejection, a stringent one[fn:1]. /Rejection/
-hurts much. Two primitive reasons for feeling bad about being rejects are both
-correlated to a tribal human nature of being an anomaly, useless overload inside
-a community (which is relatively applicable to position-related rejections). In a
-more tribal context this should give us a sense of danger that we are in a
-precarious situation and we have to resolve it immediately (that is probably our
-'feeling bad' of rejection). An ubiquitous example (an examined one) is the
-famous cyberball study by K. D. Williams[fn:2] . Understanding this shall help you
-to understand that it is a little bit passable pain; it's a reflex action of our
-human nature.
+Been reading this [[https://doi.org/10.1177/1474704916678626][paper]] about it. /Rejection/ hurts much. Two primitive reasons for feeling bad about being rejects are both correlated to a tribal human nature of being an anomaly, useless overload inside a community (which is relatively applicable to position-related rejections). In a more tribal context this should give us a sense of danger that we are in a precarious situation and we have to resolve it immediately (that is probably our 'feeling bad' of rejection). A ubiquitous example is the famous cyberball [[https://doi.org/10.3758/BF03192765][study]] by K. D. Williams[fn:2] . Understanding this shall help you to understand that it is a little bit passable pain; it's a reflex action of our human nature.
 
 However, and I wish I've learned this earlier, getting rejected in many cases
 implies an inconsistent self-estimation status if, and only if, it was a
@@ -50,7 +41,7 @@ by-nature-stupid, low-IQ, individuals. they are out there, they live with us, in
 some places they present the preponderance of the average IQ.
 
 Here is my successful contrivance that worked successfully with many stupid
-people (note that it's necessary to have such a skill to handle those creatures,
+people (note that it's necessary to have such a skill to handle these,
 you will have to deal with them in your life after all) I think that the most
 effective way to teach them how to think, is by teaching them thinking before
 they actually try to think. And this worked very fine with me, I'm not referring
@@ -90,13 +81,3 @@ checkmate that is hiding?", so basically [[https://www.youtube.com/watch?v=ZKuIH
 * Footnotes
 
 [fn:3] https://www.chessgames.com/perl/chessgame?gid=2457693
-[fn:2] Williams, K.D., Jarvis, B. Cyberball: A program for use in research on
-interpersonal ostracism and acceptance. Behavior Research Methods 38, 174–180
-(2006). https://doi.org/10.3758/BF03192765
-
-
-[fn:1] Kelly, A. J., Dubbs, S. L., & Barlow, F. K. (2016). An Evolutionary Perspective on
-Mate Rejection. Evolutionary psychology : an international journal of evolutionary
-approaches to psychology and behavior, 14(4), 1474704916678626.
-https://doi.org/10.1177/1474704916678626
-

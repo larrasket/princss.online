@@ -5,8 +5,5 @@
 #+date: <2025-06-07 Sat 20:40>
 #+title:  [[id:qn03i1a1e3k0][Kierkegaard]] on the Joy of Natural Science
 
-#+BEGIN_tag
-{{{t}}} [[id:qn03i1a1e3k0][Kierkegaard]] and [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
 I found in the journals of Kierkegaard today an entry very similar to what I include in my homepage by [[id:d786d238-caf1-4d36-ae56-e5e063f1b00a][René Descartes]] about the method of life: {{{hl("Probably few fields of study bestow on man the serene and happy frame of mind that the natural sciences give him. Out into nature he goes, everything is familiar, it is as though he had talked with the plants and the animals beforehand. He sees not only the uses man can put them to (for that is quite secondary) but their significance in the whole universe. He stands like Adam of old – all the animals come to him and he gives them names.")}}} My old post about math might be also related: [[id:8ay4irp02wj0][A Prelude Over Mathematics]]. #[[id:qn03i1a1e3k0][Kierkegaard]] #[[id:ydb1kfn02wj0][Modus Vivendi]]
-
+ 

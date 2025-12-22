@@ -5,9 +5,6 @@
 #+DATE: <2025-06-20 Fri 22:30>
 #+title: A Raw Definition of Capitalism
 
-#+BEGIN_tag
-{{{t}}} [[id:46whu3b0axj0][Economics]] and [[id:ex4aa6b0axj0][Capitalism]]
-#+END_tag
 
 I have been reading[cite:@e.-2011-histor-econom-thoug] recently, which contains a very nice, raw, critical, philosophical definition of capitalism; it correlates the existence of capitalism to consumerism, which I have not seen a lot in multiple trails to define capitalism (my old post [[id:4fb240m099k0][The Age of Commodity]] might be related here). The definition from chapter no. 1:
 
@@ -46,4 +43,4 @@ Consumerism among capitalists has also been important for the successful functio
 
 When such demand has not been forthcoming, capitalism has experienced depressions in which commodities cannot be sold, workers are laid off, profits decline, and a general economic crisis ensues. Throughout its history, capitalism has suffered from recurring crises of this kind. A major concern of most of the economic thinkers discussed in this book has been to understand the nature and causes of these crises and to ascertain whether remedies can be found to eliminate or at least to alleviate the crises.
 
-[[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]] also has a nice video on the nature of consumerism: [[https://youtu.be/Mg50wCe-Z7U]]
+[[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]] also has a nice video on the nature of consumerism: [[https://youtu.be/Mg50wCe-Z7U]] #[[id:46whu3b0axj0][Economics]] #[[id:ex4aa6b0axj0][Capitalism]]

@@ -1,32 +1,15 @@
 :PROPERTIES:
 :ID:       7eskndp02wj0
 :END:
-#+title: Nietzsche on Eulogy
+#+title: Nietzsche on Praise
 #+DATE: <2022-12-24 Sat 12:41>
 
 
-#+BEGIN_propert
-{{{s}}} [[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
-#+END_propert
 
-
-I have mentioned before my perspectives on the social media dilemma here +(I
-don't recommend reading it if you did not, I wrote it fanatically 3 years ago)+
-(jun 2023 note: i deleted this post.), my clue was correlated to the [[https://www.urbandictionary.com/define.php?term=Upcummie][upcummie]]
-pleasure that comes from someone's else applause on us, which translates to
-something like upvotes or likes on the internet, and how we're being conditioned
-to it just like a dumb Pavlov's Dog.
-
-I still find this a valid argument, however, it stands on a prolonged fundament, thus we
-actually love the upcommies, praise, and tributes. Personally, I don't, and I don't recall if
-this was a sequence of self-refinement and I've become afraid of being invisibly influenced
-or just because it makes me feel awkward and don't know how to appropriately respond.
-
-#+BEGIN_PREVIEW
+I have mentioned before my perspectives on the social media dilemma here +(I don't recommend reading it if you did not, I wrote it fanatically 3 years ago)+
 I've been reading [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] recently as you probably guessed, and he did have a staid yet
 poetic dissertation on the very topic. I've collected anthologies of his from different
 books and I'd like to share them here (My naive translation included).
-#+END_PREVIEW
 
 
 
@@ -100,4 +83,4 @@ were revengeful.
 
 I think one of the most reasons he was consistent (and it is hard to consistent for an
 intensive writer, they usually have many contradictions) for, is that he knew no one would
-read him then.
+read him then. #[[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]

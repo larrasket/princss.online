@@ -49,3 +49,7 @@ a {
     color: var(--darkbrown);
     -webkit-transition: 0.25s;
 }
+
+.preview-block {
+    color: gray;
+}

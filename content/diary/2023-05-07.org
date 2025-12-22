@@ -11,9 +11,6 @@ On the culture of comfort.
 #+END_PREVIEW
 
 
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
 
 I remember years ago when I was watching Black Mirror, an interesting show about
 the dystopian dark future of technology, I recommended it to some people I knew, I
@@ -28,7 +25,7 @@ about "why?" or even to refer to them that this means that there is something
 wrong: having a TV show or an idea to make you feel 'uncomfortable' means nothing
 but having a great fragility in your mind, and it is in a very weak state.
 
-This actually made me to think more about how most of new generations treat
+This actually made me to think more about how most of people nowadays treat
 comfort, they sanctify it. Which is a big issue in my opinion, simply comfort
 does not lead to anything but a stable (in the sense of a bad incessantness)
 state of existence. I personally consider the absolute seeking of comfort to be
@@ -60,7 +57,7 @@ in the cave, that was so dreaded, has become the center.” ― [[id:aec479af-d4
 Power of Myth.
 #+end_quote
 
-Where you fear, there is your mission.
+Where you fear, there is your mission. #[[id:ydb1kfn02wj0][Modus Vivendi]]
 
 
 * Footnotes

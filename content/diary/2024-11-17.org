@@ -9,23 +9,6 @@
 #+DATE: <2024-11-17 Sun 09:21>
 
 
-#+BEGIN_propert
-{{{s}}} [[id:7sq9bk71x2k0][Abbass Braham, fragments]]
-#+END_propert
-
-#+begin_export HTML
-<head>
-<style>
-
-p {
-    unicode-bidi: plaintext;
-    line-height: unset !important;
-}
-
-</style>
-</head>
-#+end_export
-
 [[https://x.com/abbassbraham/status/1414250711341309952][إنّ]] تفاهة الخصم مُحبِطة، لأنّ الواحِد يحلُم بمبارزة شريفة وصراع التيتان. ولكن نيتشة دعا للنظر
 للجانِب الممتلئ. قال: "أحياناً لا يبقى المرأ وفياً لقضية إلاّ لكونِ خصومِه لا ينفكّون عن
 التفاهة".
@@ -86,4 +69,4 @@ p {
 التوظيف. فهو نوعٌ من نيل المطالِب بالتمّني.
 
 [[https://x.com/abbassbraham/status/1293240525739499523][فاحذَر]] أنْ تكون عداواتك نخوية، لا ذهنية؛ وحملاتك هشتاقية، لا استراتيجية؛ وأفكارُك ائتمارية، لا
-تدليليّة. فذلك أوّل الهوان.
+تدليليّة. فذلك أوّل الهوان. #[[id:7sq9bk71x2k0][Abbass Braham, fragments]]

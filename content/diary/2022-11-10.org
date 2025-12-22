@@ -5,17 +5,6 @@
 #+DATE: <2022-11-10 Thu 19:46>
 
 
-
-#+BEGIN_PREVIEW
-"Yesterday, during thoughts about my homeland, I wrote a little poem in which I mused how it
-might be for one who didn't have a homeland"
-#+END_PREVIEW
-
-The [[id:7987ac4b-7dce-448a-8f1c-df97bef14e79][poem]] is symptomatic of the
-lyrical escape with which [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] sought to transcend his dreary school routine. Entitled
-"Ohne Heimat", it depicts a passionate self-emancipation from all restrictive boundaries:
-
-
 #+begin_verse
 Wild horses take
 Me without fear and hesitation

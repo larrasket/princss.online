@@ -4,9 +4,6 @@
 :END:
 #+title: Something Worth Living For
 #+DATE: <2025-02-25 Tue 00:21>
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
 Henry David Thoreau, Journal, March 31, 1852 (emphasis mine):
 
 #+begin_quote
@@ -43,4 +40,4 @@ one with nature. I reproach myself because I have regarded with indifference
 the passage of the birds; I have thought them no better than I.
 #+end_quote
 
-URL: https://thematamixta.blogspot.com/2025/01/something-worth-living.html
+URL: https://thematamixta.blogspot.com/2025/01/something-worth-living.html #[[id:ydb1kfn02wj0][Modus Vivendi]]

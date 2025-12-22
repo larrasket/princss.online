@@ -553,19 +553,19 @@ margin-block-start: auto;
 <div id="content" class="content">
 <header>
 <h1 class="title">[draft][don&rsquo;t take it seriously] Go Incomplete Guide</h1>
-</header><div class="propert" id="orgc735a31">
+</header><div class="propert" id="orgea11f73">
 <p>
 Part of a series on <a href="/~saleh/cs/go.html">The Go Programming Language</a>
 </p>
 
 </div>
-<div id="outline-container-org2658d00" class="outline-2">
-<h2 id="org2658d00">Misc</h2>
-<div class="outline-text-2" id="text-org2658d00">
+<div id="outline-container-orgbdb1b33" class="outline-2">
+<h2 id="orgbdb1b33">Misc</h2>
+<div class="outline-text-2" id="text-orgbdb1b33">
 </div>
-<div id="outline-container-orgfbbdd6d" class="outline-3">
-<h3 id="orgfbbdd6d">Notes</h3>
-<div class="outline-text-3" id="text-orgfbbdd6d">
+<div id="outline-container-orge94c8f8" class="outline-3">
+<h3 id="orge94c8f8">Notes</h3>
+<div class="outline-text-3" id="text-orge94c8f8">
 <ul class="org-ul">
 <li>Reading from a nil channel would result in blocking forever.</li>
 <li>Writing to a nil map will cause a panic.</li>
@@ -573,7 +573,7 @@ Part of a series on <a href="/~saleh/cs/go.html">The Go Programming Language</a>
 <li><p>
 First is a type alias. Second is a new type.
 </p>
-<pre class="example" id="orge2ce485">
+<pre class="example" id="org18a4678">
 type MyInt int
 type YourInt = int
 </pre></li>
@@ -597,7 +597,7 @@ This prints 3 3 3. Because i is captured by reference not by value.
 <code>defer</code> might not be always useful inside a loop:
 </p>
 
-<figure id="org722e9c9">
+<figure id="orgcadc503">
 <img src="../../media/Misc/2025-11-06_21-28-58_screenshot.png" alt="2025-11-06_21-28-58_screenshot.png">
 
 </figure></li>
@@ -627,7 +627,7 @@ However; proposal #60078 changed loop variables to be per-iteration instead of p
 Do not forget the decision tree for using primitives vs. channels.
 </p>
 
-<figure id="orgf733bfc">
+<figure id="orgf45b546">
 <img src="../../media/Misc/2025-11-07_20-38-51_screenshot.png" alt="2025-11-07_20-38-51_screenshot.png">
 
 </figure></li>
@@ -698,9 +698,9 @@ cond. Observe the example:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgee6cde7" class="outline-3">
-<h3 id="orgee6cde7"><code>omitempty</code></h3>
-<div class="outline-text-3" id="text-orgee6cde7">
+<div id="outline-container-orga349c0e" class="outline-3">
+<h3 id="orga349c0e"><code>omitempty</code></h3>
+<div class="outline-text-3" id="text-orga349c0e">
 <p>
 If you’ve worked with Go for sometime, you have probably encountered the <code>omitempty</code> tag,
 when trying to encode a struct to JSON.
@@ -835,9 +835,9 @@ value in Go. To solve this, use a struct pointer instead :
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org856882e" class="outline-3">
-<h3 id="org856882e">Custom Sort</h3>
-<div class="outline-text-3" id="text-org856882e">
+<div id="outline-container-org1bfc2db" class="outline-3">
+<h3 id="org1bfc2db">Custom Sort</h3>
+<div class="outline-text-3" id="text-org1bfc2db">
 <p>
 To sort a slice in reverse order, you can use the <code>Reverse()</code> function along with <code>StringSlice</code>,
 <code>IntSlice</code>, and <code>Float64Slice</code> types. These types implement the Interface for comparision and
@@ -920,8 +920,8 @@ package. These are higher order functions that accept a less function as an argu
 </div>
 <div id="outline-container-lhoctcz0twj0" class="outline-3">
 <h3 id="lhoctcz0twj0">Integer Values</h3>
-<div class="outline-text-3" id="text-orgb80cdd3">
-<pre class="example" id="org28e94fa">
+<div class="outline-text-3" id="text-orgafd9ee8">
+<pre class="example" id="orgc51fcae">
 uint8  : 0 to 255
 uint16 : 0 to 65535
 uint32 : 0 to 4294967295
@@ -935,7 +935,7 @@ int64  : -9223372036854775808 to 9223372036854775807
 </div>
 <div id="outline-container-vdali1i0z3k0" class="outline-3">
 <h3 id="vdali1i0z3k0">Check if file exists</h3>
-<div class="outline-text-3" id="text-org4efac0b">
+<div class="outline-text-3" id="text-org1a71834">
 <pre class="code"><code><span style="font-weight: bold;">if</span> <span style="color: #383a42;">_</span>, <span style="color: #383a42;">err</span> := os.<span style="font-weight: bold;">Stat</span>(<span style="color: #8a3b3c;">"/path/to/whatever"</span>); errors.<span style="font-weight: bold;">Is</span>(err, os.ErrNotExist) {
   <span style="color: #556b2f;">// </span><span style="color: #556b2f;">path/to/whatever does not exist
 </span>}
@@ -944,7 +944,7 @@ int64  : -9223372036854775808 to 9223372036854775807
 </div>
 <div id="outline-container-pxc3h8o0z3k0" class="outline-3">
 <h3 id="pxc3h8o0z3k0">Example for flag</h3>
-<div class="outline-text-3" id="text-org19dda9b">
+<div class="outline-text-3" id="text-org6ce6794">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -975,8 +975,8 @@ int64  : -9223372036854775808 to 9223372036854775807
 </div>
 <div id="outline-container-gnb2dda146k0" class="outline-3">
 <h3 id="gnb2dda146k0">Properly print errors</h3>
-<div class="outline-text-3" id="text-orgf6bead2">
-<pre class="example" id="orgeca5c67">
+<div class="outline-text-3" id="text-org4afcd96">
+<pre class="example" id="org5c2e844">
 TL;DR; Neither. Use %w in 99.99% of cases. In the other 0.001% of cases, %v and
 %s probably "should" behave the same, except when the error value is nil, but
 there are no guarantees. The friendlier output of %v for nil errors may be
@@ -1014,17 +1014,17 @@ From <a href="https://stackoverflow.com/a/61287626">https://stackoverflow.com/a/
 </div>
 </div>
 </div>
-<div id="outline-container-org8494499" class="outline-2">
-<h2 id="org8494499">Old</h2>
-<div class="outline-text-2" id="text-org8494499">
+<div id="outline-container-orgd3a0195" class="outline-2">
+<h2 id="orgd3a0195">Old</h2>
+<div class="outline-text-2" id="text-orgd3a0195">
 <p>
 These are notes I wrote when I was still learning Go.
 </p>
 </div>
-<div id="outline-container-orgd99fb97" class="outline-3">
-<h3 id="orgd99fb97">Introduction</h3>
-<div class="outline-text-3" id="text-orgd99fb97">
-<div class="PREVIEW" id="orgd472117">
+<div id="outline-container-orge72503d" class="outline-3">
+<h3 id="orge72503d">Introduction</h3>
+<div class="outline-text-3" id="text-orge72503d">
+<div class="PREVIEW" id="orgada044d">
 <p>
 Go programming language notes. Based on Adam Freeman&rsquo;s Pro Go, some <a href="https://go.dev/blog/">https://go.dev/blog/</a>
 articles, and other online resources.
@@ -1033,9 +1033,9 @@ articles, and other online resources.
 </div>
 </div>
 </div>
-<div id="outline-container-orgd46e77c" class="outline-3">
-<h3 id="orgd46e77c">[basics] get-go</h3>
-<div class="outline-text-3" id="text-orgd46e77c">
+<div id="outline-container-org3005b21" class="outline-3">
+<h3 id="org3005b21">[basics] get-go</h3>
+<div class="outline-text-3" id="text-org3005b21">
 <p>
 Open a command prompt, navigate to a convenient location, and create a folder named
 partyinvites.  Navigate to the partyinvites folder and run the command shown in Listing 1-2
@@ -1100,9 +1100,9 @@ tasks in one step. The application produces the following output:
 <pre class="code"><code>TODO: add some features
 </code></pre>
 </div>
-<div id="outline-container-orgb4459c0" class="outline-4">
-<h4 id="orgb4459c0">Define a Data Type</h4>
-<div class="outline-text-4" id="text-orgb4459c0">
+<div id="outline-container-orgab10ff9" class="outline-4">
+<h4 id="orgab10ff9">Define a Data Type</h4>
+<div class="outline-text-4" id="text-orgab10ff9">
 <p>
 The next step is to create a custom data type that will represent the RSVP responses, as
 shown:
@@ -1191,9 +1191,9 @@ it.
 </p>
 </div>
 </div>
-<div id="outline-container-org15e015b" class="outline-4">
-<h4 id="org15e015b">Using Go Tools</h4>
-<div class="outline-text-4" id="text-org15e015b">
+<div id="outline-container-org0efa82a" class="outline-4">
+<h4 id="org0efa82a">Using Go Tools</h4>
+<div class="outline-text-4" id="text-org0efa82a">
 <p>
 The go command provides access to all the features needed to compile and execute Go code and
 is used throughout this book. The argument used with the go command specifies the operation
@@ -1270,9 +1270,9 @@ most useful ones
 </tbody>
 </table>
 </div>
-<div id="outline-container-org1e7b4e2" class="outline-5">
-<h5 id="org1e7b4e2">Creating a Go Project</h5>
-<div class="outline-text-5" id="text-org1e7b4e2">
+<div id="outline-container-orga789cde" class="outline-5">
+<h5 id="orga789cde">Creating a Go Project</h5>
+<div class="outline-text-5" id="text-orga789cde">
 <p>
 Go projects don’t have an elaborate structure and are quick to set up. Open a new command
 prompt and create a folder named tools in a convenient location. Add a file named main.go to
@@ -1308,9 +1308,9 @@ execution begins in a command-line application
 </p>
 </div>
 </div>
-<div id="outline-container-org9de1924" class="outline-5">
-<h5 id="org9de1924">Semicolons and Errors in Go Code</h5>
-<div class="outline-text-5" id="text-org9de1924">
+<div id="outline-container-orgabfe7d6" class="outline-5">
+<h5 id="orgabfe7d6">Semicolons and Errors in Go Code</h5>
+<div class="outline-text-5" id="text-orgabfe7d6">
 <p>
 You may have noticed that I didn&rsquo;t append a semicolon in the previous code.
 Go has an unusual approach to semicolons: they are required to terminate code statements, but they
@@ -1362,9 +1362,9 @@ remove semicolons and adjust other formatting issues.
 </p>
 </div>
 </div>
-<div id="outline-container-org1d838da" class="outline-5">
-<h5 id="org1d838da">Defining a Module</h5>
-<div class="outline-text-5" id="text-org1d838da">
+<div id="outline-container-orgfd77b80" class="outline-5">
+<h5 id="orgfd77b80">Defining a Module</h5>
+<div class="outline-text-5" id="text-orgfd77b80">
 <p>
 The previous section demonstrated that you can get `tarted just by creating a code file, but
 a more common approach is to create a Go module, which is the conventional first step when
@@ -1382,9 +1382,9 @@ the project can be built and executed using a period, indicating the project in 
 </p>
 </div>
 </div>
-<div id="outline-container-org1b1cff8" class="outline-5">
-<h5 id="org1b1cff8">Linting Go Code</h5>
-<div class="outline-text-5" id="text-org1b1cff8">
+<div id="outline-container-org3fd78b5" class="outline-5">
+<h5 id="org3fd78b5">Linting Go Code</h5>
+<div class="outline-text-5" id="text-org3fd78b5">
 <p>
 A linter is a tool that checks code files using a set of rules that describe problems that
 cause confusion, produce unexpected results, or reduce the readability of the code. The most
@@ -1405,9 +1405,9 @@ the command shown:
 <pre class="code"><code>go install github.com/mgechev/revive@latest
 </code></pre>
 </div>
-<div id="outline-container-org07ba1c1" class="outline-6">
-<h6 id="org07ba1c1">On Linting</h6>
-<div class="outline-text-6" id="text-org07ba1c1">
+<div id="outline-container-org279db13" class="outline-6">
+<h6 id="org279db13">On Linting</h6>
+<div class="outline-text-6" id="text-org279db13">
 <p>
 Linters can be a powerful tool for good, especially in a development team with mixed levels of skill and
 experience. Linters can detect common problems and subtle errors that lead to unexpected behavior
@@ -1437,9 +1437,9 @@ productivity is not achieved by slavishly enforcing arbitrary rules, however wel
 </p>
 </div>
 </div>
-<div id="outline-container-org15f4f75" class="outline-6">
-<h6 id="org15f4f75">Using the Linter</h6>
-<div class="outline-text-6" id="text-org15f4f75">
+<div id="outline-container-org8ccff9a" class="outline-6">
+<h6 id="org8ccff9a">Using the Linter</h6>
+<div class="outline-text-6" id="text-org8ccff9a">
 <p>
 The main.go file is so simple that it doesn’t have any problems for the linter to highlight.
 Add the following statements, which are legal Go code that does not comply with
@@ -1501,9 +1501,9 @@ comments exist for the PrintHello and PrintNumber functions.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org231a088" class="outline-6">
-<h6 id="org231a088">Disabling Linter Rules</h6>
-<div class="outline-text-6" id="text-org231a088">
+<div id="outline-container-org99408a8" class="outline-6">
+<h6 id="org99408a8">Disabling Linter Rules</h6>
+<div class="outline-text-6" id="text-org99408a8">
 <p>
 The revive package can be configured using comments in code files, disabling one or more
 rules for sections of code. I have used comments to disable the rule that causes the warning
@@ -1581,9 +1581,9 @@ character before the entry that enables the exported rule.
 </div>
 </div>
 </div>
-<div id="outline-container-org8ae6211" class="outline-5">
-<h5 id="org8ae6211">Fixing Common Problems in Go</h5>
-<div class="outline-text-5" id="text-org8ae6211">
+<div id="outline-container-orgfaf121c" class="outline-5">
+<h5 id="orgfaf121c">Fixing Common Problems in Go</h5>
+<div class="outline-text-5" id="text-orgfaf121c">
 <p>
 The go vet command identifies statements likely to be mistakes. Unlike a linter, which will
 often focus on style issues, the go vet command finds code that compiles but that probably
@@ -1661,9 +1661,9 @@ which analyzer is responsible for a warning, run the command:
 </div>
 </div>
 </div>
-<div id="outline-container-org6e3b14c" class="outline-4">
-<h4 id="org6e3b14c">Types, Values, Pointers</h4>
-<div class="outline-text-4" id="text-org6e3b14c">
+<div id="outline-container-org204c77b" class="outline-4">
+<h4 id="org204c77b">Types, Values, Pointers</h4>
+<div class="outline-text-4" id="text-org204c77b">
 <p>
 The folloing table puts the basic Go features in context.
 </p>
@@ -1744,9 +1744,9 @@ The code in the main.go file will be compiled and executed, producing the follow
 The output from the code will always be the same value.
 </p>
 </div>
-<div id="outline-container-org30f1d7b" class="outline-5">
-<h5 id="org30f1d7b">Basic Data Types</h5>
-<div class="outline-text-5" id="text-org30f1d7b">
+<div id="outline-container-org278515f" class="outline-5">
+<h5 id="org278515f">Basic Data Types</h5>
+<div class="outline-text-5" id="text-org278515f">
 <p>
 Go provides a set of basic data types, which are described in the table.
 These types are the foundation of Go development, and many of
@@ -1908,9 +1908,9 @@ rely on the compiler to deal with mismatched types, as shown:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org0eee891" class="outline-5">
-<h5 id="org0eee891">Variables</h5>
-<div class="outline-text-5" id="text-org0eee891">
+<div id="outline-container-org0578c26" class="outline-5">
+<h5 id="org0578c26">Variables</h5>
+<div class="outline-text-5" id="text-org0578c26">
 <p>
 Variables are defined using the var keyword, and, unlike constants, the value assigned to a
 variable can be changed, as shown:
@@ -1959,9 +1959,9 @@ type to be omitted:
 }
 </code></pre>
 </div>
-<div id="outline-container-org93a7164" class="outline-6">
-<h6 id="org93a7164">Short Variable Declaration Syntax</h6>
-<div class="outline-text-6" id="text-org93a7164">
+<div id="outline-container-org0b2b928" class="outline-6">
+<h6 id="org0b2b928">Short Variable Declaration Syntax</h6>
+<div class="outline-text-6" id="text-org0b2b928">
 <p>
 The short variable declaration provides a shorthand for declaring variables, as shown:
 </p>
@@ -2030,9 +2030,9 @@ variable doesn’t change.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgaf3a532" class="outline-6">
-<h6 id="orgaf3a532">Blank Declaration</h6>
-<div class="outline-text-6" id="text-orgaf3a532">
+<div id="outline-container-orge6ee687" class="outline-6">
+<h6 id="orge6ee687">Blank Declaration</h6>
+<div class="outline-text-6" id="text-orge6ee687">
 <p>
 It is illegal in Go to define a variable and not use it:
 </p>
@@ -2084,9 +2084,9 @@ It can be also used to ignore function return values:
 </div>
 </div>
 </div>
-<div id="outline-container-org0d359f3" class="outline-5">
-<h5 id="org0d359f3">Pointers</h5>
-<div class="outline-text-5" id="text-org0d359f3">
+<div id="outline-container-org181e848" class="outline-5">
+<h5 id="org181e848">Pointers</h5>
+<div class="outline-text-5" id="text-org181e848">
 <p>
 Pointers are often misunderstood, especially if you have come to Go from a language such as
 Java or C#, where pointers are used behind the scenes but carefully hidden from the
@@ -2134,9 +2134,9 @@ read the adjacent value. This can be useful but can cause unexpected results, su
 to access the wrong location or a location outside of the memory allocated to the program.
 </p>
 </div>
-<div id="outline-container-org562dcf4" class="outline-6">
-<h6 id="org562dcf4">Some Operators</h6>
-<div class="outline-text-6" id="text-org562dcf4">
+<div id="outline-container-orgcf95a25" class="outline-6">
+<h6 id="orgcf95a25">Some Operators</h6>
+<div class="outline-text-6" id="text-orgcf95a25">
 <p>
 Go doesn’t allow types to be mixed in operations and will not automatically convert types,
 except in the case of untyped constants. To show how the compiler responds to mixed data
@@ -2196,9 +2196,9 @@ combinations, such as converting int values to bool values, are not supported.
 </div>
 </div>
 </div>
-<div id="outline-container-orgff6455e" class="outline-5">
-<h5 id="orgff6455e">Flow Control</h5>
-<div class="outline-text-5" id="text-orgff6455e">
+<div id="outline-container-org152f4f3" class="outline-5">
+<h5 id="org152f4f3">Flow Control</h5>
+<div class="outline-text-5" id="text-org152f4f3">
 <p>
 The flow of execution in a Go application is simple to understand, especially when the
 application is as simple as the example. The statements defined in the special main
@@ -2237,9 +2237,9 @@ assign a new value to an existing variable, or invoke a function
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org5e887bb" class="outline-5">
-<h5 id="org5e887bb">Loops</h5>
-<div class="outline-text-5" id="text-org5e887bb">
+<div id="outline-container-org9912c2f" class="outline-5">
+<h5 id="org9912c2f">Loops</h5>
+<div class="outline-text-5" id="text-org9912c2f">
 <ul class="org-ul">
 <li><p>
 <b>Three-component loop</b>
@@ -2272,9 +2272,9 @@ fmt.<span style="font-weight: bold;">Println</span>(n) <span style="color: #556b
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd7e06d" class="outline-4">
-<h4 id="orgcd7e06d">Collection Types</h4>
-<div class="outline-text-4" id="text-orgcd7e06d">
+<div id="outline-container-org34cd989" class="outline-4">
+<h4 id="org34cd989">Collection Types</h4>
+<div class="outline-text-4" id="text-org34cd989">
 <p>
 Go arrays are a fixed length and contain elements of a single type, which are accessed by
 index,
@@ -2345,9 +2345,9 @@ Arrays are enumerated using the for and range keywords:
 }
 </code></pre>
 </div>
-<div id="outline-container-org16aa5f2" class="outline-5">
-<h5 id="org16aa5f2">Slices</h5>
-<div class="outline-text-5" id="text-org16aa5f2">
+<div id="outline-container-org4107c42" class="outline-5">
+<h5 id="org4107c42">Slices</h5>
+<div class="outline-text-5" id="text-org4107c42">
 <p>
 The best way to think of slices is as a variable-length array because they are useful when
 you don’t know how many values you need to store or when the number changes over time. One
@@ -2450,9 +2450,9 @@ fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;
 }
 </code></pre>
 </div>
-<div id="outline-container-org69424e9" class="outline-6">
-<h6 id="org69424e9">The Copy Function</h6>
-<div class="outline-text-6" id="text-org69424e9">
+<div id="outline-container-org621b1ee" class="outline-6">
+<h6 id="org621b1ee">The Copy Function</h6>
+<div class="outline-text-6" id="text-org621b1ee">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 <span style="font-weight: bold;">import</span> <span style="color: #8a3b3c;">"fmt"</span>
 <span style="font-weight: bold;">func</span> <span style="font-weight: bold;">main</span>() {
@@ -2468,9 +2468,9 @@ fmt.<span style="font-weight: bold;">Println</span>(<span style="color: #8a3b3c;
 </div>
 </div>
 </div>
-<div id="outline-container-org357f856" class="outline-4">
-<h4 id="org357f856">Functions</h4>
-<div class="outline-text-4" id="text-org357f856">
+<div id="outline-container-org3cddb48" class="outline-4">
+<h4 id="org3cddb48">Functions</h4>
+<div class="outline-text-4" id="text-org3cddb48">
 <p>
 Functions are groups of statements that can be used and reused as a single action. To get started
 define a simple function:
@@ -2489,9 +2489,9 @@ define a simple function:
 }
 </code></pre>
 </div>
-<div id="outline-container-orge6179b2" class="outline-5">
-<h5 id="orge6179b2"><code>defer</code></h5>
-<div class="outline-text-5" id="text-orge6179b2">
+<div id="outline-container-orgb0b76b7" class="outline-5">
+<h5 id="orgb0b76b7"><code>defer</code></h5>
+<div class="outline-text-5" id="text-orgb0b76b7">
 <p>
 The defer keyword is used to schedule a function call that will be performed immediately before the current
 function returns, as shown
@@ -2521,9 +2521,9 @@ function returns, as shown
 </div>
 </div>
 </div>
-<div id="outline-container-org0cd7d30" class="outline-4">
-<h4 id="org0cd7d30">Struct</h4>
-<div class="outline-text-4" id="text-org0cd7d30">
+<div id="outline-container-org2f53155" class="outline-4">
+<h4 id="org2f53155">Struct</h4>
+<div class="outline-text-4" id="text-org2f53155">
 <p>
 Custom data types are defined using the Go structs feature:
 </p>
@@ -2557,9 +2557,9 @@ choice during coding. Neither approach is better, and the results are essentiall
 </p>
 </div>
 </div>
-<div id="outline-container-orgcd02a18" class="outline-4">
-<h4 id="orgcd02a18">Interfaces</h4>
-<div class="outline-text-4" id="text-orgcd02a18">
+<div id="outline-container-orgfa23f0c" class="outline-4">
+<h4 id="orgfa23f0c">Interfaces</h4>
+<div class="outline-text-4" id="text-orgfa23f0c">
 <p>
 All the types we&rsquo;ve looked at so far have been concrete types. A concrete type specifies the
 exact representation of its values and exposes the intrinsic operations of that
@@ -2577,17 +2577,17 @@ or more precisely, what behaviors are provided by its methods.
 </p>
 </div>
 </div>
-<div id="outline-container-org7939384" class="outline-4">
-<h4 id="org7939384">Closures</h4>
-<div class="outline-text-4" id="text-org7939384">
+<div id="outline-container-orgcab291e" class="outline-4">
+<h4 id="orgcab291e">Closures</h4>
+<div class="outline-text-4" id="text-orgcab291e">
 <p>
 <a href="https://youtu.be/US3TGA-Dpqo?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6">https://youtu.be/US3TGA-Dpqo?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orga8fb6c7" class="outline-4">
-<h4 id="orga8fb6c7">Packages</h4>
-<div class="outline-text-4" id="text-orga8fb6c7">
+<div id="outline-container-org3d14858" class="outline-4">
+<h4 id="org3d14858">Packages</h4>
+<div class="outline-text-4" id="text-org3d14858">
 <p>
 The first step for all the example projects in this book has been to create a module file,
 which was done with the command:
@@ -2701,9 +2701,9 @@ because it is in the same package:
 ...
 </code></pre>
 </div>
-<div id="outline-container-org4c01bdd" class="outline-5">
-<h5 id="org4c01bdd">Package Conflicts</h5>
-<div class="outline-text-5" id="text-org4c01bdd">
+<div id="outline-container-orgbd52e5d" class="outline-5">
+<h5 id="orgbd52e5d">Package Conflicts</h5>
+<div class="outline-text-5" id="text-orgbd52e5d">
 <p>
 When a package is imported, the combination of the module name and package name ensures that
 the package is uniquely identified. But only the package name is used when accessing the
@@ -2766,9 +2766,9 @@ used without using a prefix, as shown:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgc600038" class="outline-5">
-<h5 id="orgc600038">Package Initialization</h5>
-<div class="outline-text-5" id="text-orgc600038">
+<div id="outline-container-orgd51ca63" class="outline-5">
+<h5 id="orgd51ca63">Package Initialization</h5>
+<div class="outline-text-5" id="text-orgd51ca63">
 <p>
 Each code file can contain an initialization function that is executed only when all
 packages have been loaded and all other initialization—such as defining constants and
@@ -2808,9 +2808,9 @@ calculations that are difficult to perform or that require duplication to perfor
 }
 </code></pre>
 </div>
-<div id="outline-container-org8464451" class="outline-6">
-<h6 id="org8464451">Import Package For Intialization</h6>
-<div class="outline-text-6" id="text-org8464451">
+<div id="outline-container-org693dd41" class="outline-6">
+<h6 id="org693dd41">Import Package For Intialization</h6>
+<div class="outline-text-6" id="text-org693dd41">
 <p>
 Go prevents packages from being imported but not used, which can be a problem if you rely on
 the effect of an initialization function but don’t need to use any of the features the
@@ -2856,9 +2856,9 @@ identifier as an alias for the package name, as shown
 </div>
 </div>
 </div>
-<div id="outline-container-org92bb6a6" class="outline-4">
-<h4 id="org92bb6a6">Interface Composition</h4>
-<div class="outline-text-4" id="text-org92bb6a6">
+<div id="outline-container-org0a4e10b" class="outline-4">
+<h4 id="org0a4e10b">Interface Composition</h4>
+<div class="outline-text-4" id="text-org0a4e10b">
 <p>
 If you are used to languages such as C# or Java, then you will have created a base class and
 created subclasses to add more specific features. The subclasses inherit functionality from
@@ -2945,9 +2945,9 @@ Add a file named boat.go to the store folder with the contents shown:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orga62a0cc" class="outline-4">
-<h4 id="orga62a0cc"><span class="done KILL">KILL</span> Concurrency</h4>
-<div class="outline-text-4" id="text-orga62a0cc">
+<div id="outline-container-org0acff98" class="outline-4">
+<h4 id="org0acff98"><span class="done KILL">KILL</span> Concurrency</h4>
+<div class="outline-text-4" id="text-org0acff98">
 <p>
 &ldquo;Execution happens in some non-deterministic order&rdquo;, &ldquo;Undefined out-of-order execution&rdquo;,
 &ldquo;Non-sequential execution&rdquo;, &ldquo;Parts of a program excute out-of-order or in partial order&rdquo;.
@@ -2955,9 +2955,9 @@ All of those are valid definitions of concurrency.
 See <a href="/~saleh/h/deep_concurrency_in_go.html">Concurrency Patterns in Go</a>
 </p>
 </div>
-<div id="outline-container-org9372dfc" class="outline-5">
-<h5 id="org9372dfc">Goroutines</h5>
-<div class="outline-text-5" id="text-org9372dfc">
+<div id="outline-container-org8181cd6" class="outline-5">
+<h5 id="org8181cd6">Goroutines</h5>
+<div class="outline-text-5" id="text-org8181cd6">
 <p>
 Go has excellent support for writing concurrent applications, using features that are
 simpler and more intuitive than any other language I have used. In this chapter, I describe
@@ -3258,9 +3258,9 @@ channel. The direction of the arrow for a channel specifies the direction of flo
 <li><code>&lt;- chan</code>  :only reading from channel (input channel)</li>
 </ul>
 </div>
-<div id="outline-container-org84b00c6" class="outline-6">
-<h6 id="org84b00c6">Receiving Without Blocking</h6>
-<div class="outline-text-6" id="text-org84b00c6">
+<div id="outline-container-orgf43f18e" class="outline-6">
+<h6 id="orgf43f18e">Receiving Without Blocking</h6>
+<div class="outline-text-6" id="text-orgf43f18e">
 <p>
 The simplest use for select statements is to receive from a channel without blocking,
 ensuring that a goroutine won’t have to wait when the channel is empty.
@@ -3305,9 +3305,9 @@ ensuring that a goroutine won’t have to wait when the channel is empty.
 </div>
 </div>
 </div>
-<div id="outline-container-org30deade" class="outline-4">
-<h4 id="org30deade">Error Handling</h4>
-<div class="outline-text-4" id="text-org30deade">
+<div id="outline-container-org306d038" class="outline-4">
+<h4 id="org306d038">Error Handling</h4>
+<div class="outline-text-4" id="text-org306d038">
 <p>
 This file defines a custom type named Product, an alias for a slice of *Product values, and
 a slice populated using the literal syntax. I have also defined a function to format float64
@@ -3371,9 +3371,9 @@ statements that produce a problematic response from the <code>TotalPrice</code> 
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgbed3f3f" class="outline-4">
-<h4 id="orgbed3f3f"><span class="done KILL">KILL</span> Go Modules</h4>
-<div class="outline-text-4" id="text-orgbed3f3f">
+<div id="outline-container-org84251bb" class="outline-4">
+<h4 id="org84251bb"><span class="done KILL">KILL</span> Go Modules</h4>
+<div class="outline-text-4" id="text-org84251bb">
 <p>
 A module is a collection of Go packages stored in a file tree with a go.mod file at its
 root. The go.mod file defines the module’s module path, which is also the import path used
@@ -3390,9 +3390,9 @@ if a go.mod is found. See the go command documentation for details.) Starting in
 module mode will be the default for all development.
 </p>
 </div>
-<div id="outline-container-org3b4ca47" class="outline-5">
-<h5 id="org3b4ca47">Creating a New Module</h5>
-<div class="outline-text-5" id="text-org3b4ca47">
+<div id="outline-container-org12fc3b4" class="outline-5">
+<h5 id="org12fc3b4">Creating a New Module</h5>
+<div class="outline-text-5" id="text-org12fc3b4">
 <p>
 Create a new, empty directory somewhere outside $GOPATH/src, cd into that directory, and
 then create a new source file, hello.go:
@@ -3444,13 +3444,13 @@ adding a dependency on) code written by other developers.
 </div>
 </div>
 </div>
-<div id="outline-container-org8348ae4" class="outline-3">
-<h3 id="org8348ae4">Go Standard Library</h3>
-<div class="outline-text-3" id="text-org8348ae4">
+<div id="outline-container-org5891260" class="outline-3">
+<h3 id="org5891260">Go Standard Library</h3>
+<div class="outline-text-3" id="text-org5891260">
 </div>
-<div id="outline-container-orgb0eade6" class="outline-4">
-<h4 id="orgb0eade6"><span class="done DONE">DONE</span> Go <code>fstream</code></h4>
-<div class="outline-text-4" id="text-orgb0eade6">
+<div id="outline-container-orgc06efef" class="outline-4">
+<h4 id="orgc06efef"><span class="done DONE">DONE</span> Go <code>fstream</code></h4>
+<div class="outline-text-4" id="text-orgc06efef">
 <p>
 To work with files in Go, we use the <code>os</code> and ~ioutil~packages.
 </p>
@@ -3459,13 +3459,13 @@ To work with files in Go, we use the <code>os</code> and ~ioutil~packages.
 The os.Stat function returns the <code>FileInfo</code> structure describing the file.
 </p>
 </div>
-<div id="outline-container-org5e714a9" class="outline-5">
-<h5 id="org5e714a9">Operate on Files</h5>
-<div class="outline-text-5" id="text-org5e714a9">
+<div id="outline-container-org2b060e3" class="outline-5">
+<h5 id="org2b060e3">Operate on Files</h5>
+<div class="outline-text-5" id="text-org2b060e3">
 </div>
-<div id="outline-container-org64c155c" class="outline-6">
-<h6 id="org64c155c">Checking if a File Exists</h6>
-<div class="outline-text-6" id="text-org64c155c">
+<div id="outline-container-orgbb5fec9" class="outline-6">
+<h6 id="orgbb5fec9">Checking if a File Exists</h6>
+<div class="outline-text-6" id="text-orgbb5fec9">
 <p>
 In the following example, we check if the given file exists:
 </p>
@@ -3499,9 +3499,9 @@ the file does not exist.
 </p>
 </div>
 </div>
-<div id="outline-container-org390979f" class="outline-6">
-<h6 id="org390979f">Creating a File</h6>
-<div class="outline-text-6" id="text-org390979f">
+<div id="outline-container-orgcd2ed51" class="outline-6">
+<h6 id="orgcd2ed51">Creating a File</h6>
+<div class="outline-text-6" id="text-orgcd2ed51">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3525,9 +3525,9 @@ the file does not exist.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org51d4d3c" class="outline-6">
-<h6 id="org51d4d3c">Delete a File</h6>
-<div class="outline-text-6" id="text-org51d4d3c">
+<div id="outline-container-orgd06cdeb" class="outline-6">
+<h6 id="orgd06cdeb">Delete a File</h6>
+<div class="outline-text-6" id="text-orgd06cdeb">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3550,9 +3550,9 @@ the file does not exist.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgf920843" class="outline-6">
-<h6 id="orgf920843">Go File Size</h6>
-<div class="outline-text-6" id="text-orgf920843">
+<div id="outline-container-orgc48ab6e" class="outline-6">
+<h6 id="orgc48ab6e">Go File Size</h6>
+<div class="outline-text-6" id="text-orgc48ab6e">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3578,9 +3578,9 @@ the file does not exist.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgb8edebb" class="outline-6">
-<h6 id="orgb8edebb">Read File</h6>
-<div class="outline-text-6" id="text-orgb8edebb">
+<div id="outline-container-org3f04d21" class="outline-6">
+<h6 id="org3f04d21">Read File</h6>
+<div class="outline-text-6" id="text-org3f04d21">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3602,9 +3602,9 @@ the file does not exist.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgdf91252" class="outline-6">
-<h6 id="orgdf91252">List Files</h6>
-<div class="outline-text-6" id="text-orgdf91252">
+<div id="outline-container-org35cf492" class="outline-6">
+<h6 id="org35cf492">List Files</h6>
+<div class="outline-text-6" id="text-org35cf492">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3648,18 +3648,18 @@ the file does not exist.
 </div>
 </div>
 </div>
-<div id="outline-container-org893e447" class="outline-4">
-<h4 id="org893e447"><span class="done DONE">DONE</span> String</h4>
-<div class="outline-text-4" id="text-org893e447">
+<div id="outline-container-org5a12eb8" class="outline-4">
+<h4 id="org5a12eb8"><span class="done DONE">DONE</span> String</h4>
+<div class="outline-text-4" id="text-org5a12eb8">
 <p>
 The strings package provides a set of functions for processing strings. In the sections that
 follow, I describe the most useful features of the strings package and demonstrate their
 use.
 </p>
 </div>
-<div id="outline-container-org3658bff" class="outline-5">
-<h5 id="org3658bff">Compare Strings</h5>
-<div class="outline-text-5" id="text-org3658bff">
+<div id="outline-container-orgb6bf268" class="outline-5">
+<h5 id="orgb6bf268">Compare Strings</h5>
+<div class="outline-text-5" id="text-orgb6bf268">
 <p>
 The <code>strings</code> packages provides comparison functions;
 </p>
@@ -3712,9 +3712,9 @@ The <code>strings</code> packages provides comparison functions;
 </table>
 </div>
 </div>
-<div id="outline-container-orge93f461" class="outline-5">
-<h5 id="orge93f461">Builder</h5>
-<div class="outline-text-5" id="text-orge93f461">
+<div id="outline-container-orge249bf9" class="outline-5">
+<h5 id="orge249bf9">Builder</h5>
+<div class="outline-text-5" id="text-orge249bf9">
 <pre class="code"><code><span style="font-weight: bold;">type</span> <span style="font-weight: bold;">Builder</span> <span style="font-weight: bold;">struct</span> {
     <span style="color: #556b2f;">// </span><span style="color: #556b2f;">contains filtered or unexported fields
 </span>}
@@ -3750,9 +3750,9 @@ Example:
 </p>
 </div>
 </div>
-<div id="outline-container-orgb21f32c" class="outline-5">
-<h5 id="orgb21f32c">Editing a String</h5>
-<div class="outline-text-5" id="text-orgb21f32c">
+<div id="outline-container-orgc148199" class="outline-5">
+<h5 id="orgc148199">Editing a String</h5>
+<div class="outline-text-5" id="text-orgc148199">
 <p>
 Strings are immutable in Go, you have to convert it to runes then modify it then convert it
 back to a string.
@@ -3765,9 +3765,9 @@ back to a string.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgc11a2de" class="outline-5">
-<h5 id="orgc11a2de">String Mapping</h5>
-<div class="outline-text-5" id="text-orgc11a2de">
+<div id="outline-container-org275ab1d" class="outline-5">
+<h5 id="org275ab1d">String Mapping</h5>
+<div class="outline-text-5" id="text-org275ab1d">
 <pre class="code"><code><span style="font-weight: bold;">package</span> main
 
 <span style="font-weight: bold;">import</span> (
@@ -3796,9 +3796,9 @@ back to a string.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc8e8ae3" class="outline-4">
-<h4 id="orgc8e8ae3"><span class="done DONE">DONE</span> Errors</h4>
-<div class="outline-text-4" id="text-orgc8e8ae3">
+<div id="outline-container-orgb907d91" class="outline-4">
+<h4 id="orgb907d91"><span class="done DONE">DONE</span> Errors</h4>
+<div class="outline-text-4" id="text-orgb907d91">
 <p>
 An error is an abnormal, unexpected condition which occurs in the program. In programming,
 errors are often called bugs. The process of finding and resolving bugs is called debugging.
@@ -3855,9 +3855,9 @@ execution of a program. A panic is Go prints the stack trace to the console, ass
 debugging.
 </p>
 </div>
-<div id="outline-container-orgd66d54c" class="outline-5">
-<h5 id="orgd66d54c">Implementing Errors</h5>
-<div class="outline-text-5" id="text-orgd66d54c">
+<div id="outline-container-orgae2414b" class="outline-5">
+<h5 id="orgae2414b">Implementing Errors</h5>
+<div class="outline-text-5" id="text-orgae2414b">
 <p>
 To define a custom error, we implement the error interface.
 </p>
@@ -3910,9 +3910,9 @@ To define a custom error, we implement the error interface.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org2157d7c" class="outline-5">
-<h5 id="org2157d7c">Comparing Errors</h5>
-<div class="outline-text-5" id="text-org2157d7c">
+<div id="outline-container-org5e1e81d" class="outline-5">
+<h5 id="org5e1e81d">Comparing Errors</h5>
+<div class="outline-text-5" id="text-org5e1e81d">
 <p>
 Declaring an error, and comparing it with <code>'==' (as in err == myPkg.ErrTokenExpired)</code> is no
 longer the best practice with Go 1.13 (Q3 2019).
@@ -3926,9 +3926,9 @@ The right way is:
 </div>
 </div>
 </div>
-<div id="outline-container-orgba2956d" class="outline-4">
-<h4 id="orgba2956d"><span class="done DONE">DONE</span> JSON</h4>
-<div class="outline-text-4" id="text-orgba2956d">
+<div id="outline-container-org79f103b" class="outline-4">
+<h4 id="org79f103b"><span class="done DONE">DONE</span> JSON</h4>
+<div class="outline-text-4" id="text-org79f103b">
 <p>
 <code>JSON</code> is a lightweight data-interchange format. It is easily read and written by humans and
 parsed and generated by machines. The application/json is the official Internet media type
@@ -3998,27 +3998,27 @@ We decode a JSON string into a Go struct and a slice of structs.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org3f1b787" class="outline-4">
-<h4 id="org3f1b787"><span class="done DONE">DONE</span> Object-Relational Mapper</h4>
-<div class="outline-text-4" id="text-org3f1b787">
+<div id="outline-container-org175799c" class="outline-4">
+<h4 id="org175799c"><span class="done DONE">DONE</span> Object-Relational Mapper</h4>
+<div class="outline-text-4" id="text-org175799c">
 <p>
 <b>I decided that ORMs suck, I&rsquo;m going raw SQL, or using SQLBoiler.</b>
 </p>
 </div>
 </div>
-<div id="outline-container-org99e10de" class="outline-4">
-<h4 id="org99e10de"><span class="done KILL">KILL</span> Compiler Options</h4>
+<div id="outline-container-org0a07cb6" class="outline-4">
+<h4 id="org0a07cb6"><span class="done KILL">KILL</span> Compiler Options</h4>
 </div>
-<div id="outline-container-orgd15ea25" class="outline-4">
-<h4 id="orgd15ea25"><span class="done KILL">KILL</span> Logging</h4>
+<div id="outline-container-org202aff3" class="outline-4">
+<h4 id="org202aff3"><span class="done KILL">KILL</span> Logging</h4>
 </div>
-<div id="outline-container-org1d9c71e" class="outline-4">
-<h4 id="org1d9c71e"><span class="done KILL">KILL</span> Testing</h4>
+<div id="outline-container-org9b7cf17" class="outline-4">
+<h4 id="org9b7cf17"><span class="done KILL">KILL</span> Testing</h4>
 </div>
 </div>
-<div id="outline-container-orge9340d1" class="outline-3">
-<h3 id="orge9340d1">Go Project Structure</h3>
-<div class="outline-text-3" id="text-orge9340d1">
+<div id="outline-container-org5a7baa4" class="outline-3">
+<h3 id="org5a7baa4">Go Project Structure</h3>
+<div class="outline-text-3" id="text-org5a7baa4">
 <p>
 If you are trying to learn Go or if you are building a PoC or a simple project for yourself
 this project layout is an overkill. Start with something really simple instead (a single
@@ -4034,9 +4034,9 @@ None of these patterns are used in every single project. Even the vendor pattern
 universal.
 </p>
 </div>
-<div id="outline-container-orga1b1028" class="outline-4">
-<h4 id="orga1b1028"><code>/cmd</code></h4>
-<div class="outline-text-4" id="text-orga1b1028">
+<div id="outline-container-org11bea43" class="outline-4">
+<h4 id="org11bea43"><code>/cmd</code></h4>
+<div class="outline-text-4" id="text-org11bea43">
 <p>
 Main applications for this project.
 </p>
@@ -4054,9 +4054,9 @@ You&rsquo;ll be surprised what others will do, so be explicit about your intenti
 </p>
 </div>
 </div>
-<div id="outline-container-orgf1aa88e" class="outline-4">
-<h4 id="orgf1aa88e"><code>/internal</code></h4>
-<div class="outline-text-4" id="text-orgf1aa88e">
+<div id="outline-container-orgaf6f653" class="outline-4">
+<h4 id="orgaf6f653"><code>/internal</code></h4>
+<div class="outline-text-4" id="text-orgaf6f653">
 <p>
 Private application and library code. This is the code you don&rsquo;t want others importing in
 their applications or libraries. Note that this layout pattern is enforced by the Go
@@ -4066,9 +4066,9 @@ at any level of your project tree.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc059fc9" class="outline-4">
-<h4 id="orgc059fc9"><code>/pkg</code></h4>
-<div class="outline-text-4" id="text-orgc059fc9">
+<div id="outline-container-org3171420" class="outline-4">
+<h4 id="org3171420"><code>/pkg</code></h4>
+<div class="outline-text-4" id="text-org3171420">
 <p>
 Library code that&rsquo;s ok to use by external applications (e.g., /pkg/mypubliclib). Other
 projects will import these libraries expecting them to work, so think twice before you put
@@ -4080,8 +4080,8 @@ and internal directories and when it might make sense to use them.
 </p>
 </div>
 </div>
-<div id="outline-container-org2883b62" class="outline-4">
-<h4 id="org2883b62"><span class="done KILL">KILL</span> <code>/vendor</code></h4>
+<div id="outline-container-org71a99c3" class="outline-4">
+<h4 id="org71a99c3"><span class="done KILL">KILL</span> <code>/vendor</code></h4>
 </div>
 </div>
 </div>

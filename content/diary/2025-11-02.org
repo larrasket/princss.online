@@ -5,10 +5,6 @@
 #+title: Waiting does not make a lot of sense to me
 #+DATE: <2025-11-02 Sun 21:25>
 
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
-
 Most engineering disciplines have a distinction between "waiting" and "blocking". Usually waiting is purposeful and justified (an ongoing process we must await). On the other hand, blocking is usually seen as a symptom of poor design. Most of the waiting I experience is blocking.
 
 Have you ever read the Wikipedia page about waiting halls? Yeah there does [[https://en.wikipedia.org/wiki/Waiting_room][exist]] one, and I when I came through it for the first time I was more inclined towards questioning the existence of "waiting" rather than the existence of a Wikipedia page about waiting halls. But really, why do they exist? No one is going to tell you this, but it has nothing to do with "necessity" or waiting for something to complete (most of the time), it's actually because someone decided that their schedule optimization problem is more important than your time. They've overbooked, underestimated, or simply refuse to implement proper queueing systems with realistic estimates.
@@ -35,4 +31,4 @@ So here I am, waiting. Blocked by a system that doesn't need to block me, suspen
 
 Most of the waiting we do is blocking. And blocking is a failure. Not just an inconvenience. It's a moral failure, a design failure, a failure to treat human consciousness as something worth respecting.
 
-And we call this normal. We call this life.
+And we call this normal. We call this life. #[[id:ydb1kfn02wj0][Modus Vivendi]]
