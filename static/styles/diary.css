@@ -2,21 +2,25 @@ html {
     background-color: var(--white);
     box-sizing: border-box;
 }
+
 a {
     color: var(--darkbrown);
     text-decoration: 1px dotted underline;
     -webkit-transition: 0.25s;
 }
+
 a:hover {
     opacity: 70%;
     -webkit-transition: 0.25s;
 }
+
 body {
     padding-top: 20px;
     display: block;
     margin: auto;
     width: 625px;
 }
+
 .header {
     z-index: 4;
     position: sticky;
@@ -26,16 +30,19 @@ body {
     border-bottom: 1px dotted var(--darkbrown);
     background-color: var(--white);
 }
+
 .header a:hover {
     letter-spacing: 1px;
     -webkit-transition: 0.25s;
 }
+
 .left-header {
     box-sizing: border-box;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 150px;
 }
+
 .right-header {
     border-left: 1px dotted var(--darkbrown);
     text-align: right;
@@ -43,10 +50,12 @@ body {
     padding-bottom: 5px;
     width: 475px;
 }
+
 .content {
     box-sizing: border-box;
     display: flex;
 }
+
 nav {
     z-index: 2;
     position: sticky;
@@ -58,9 +67,11 @@ nav {
     height: calc(100vh - 50px);
     max-height: 80vh;
 }
+
 nav::-webkit-scrollbar {
     width: 0px;
 }
+
 nav a {
     overflow: visible;
     box-sizing: border-box;
@@ -73,6 +84,7 @@ nav a {
     background-color: var(--white);
     -webkit-transition: 0.25s;
 }
+
 nav a:hover {
     letter-spacing: 1px;
     padding-left: 7px;
@@ -83,10 +95,12 @@ nav a:hover {
     border-right: 1px dotted var(--white);
     -webkit-transition: 0.25s;
 }
+
 .nav-space {
     height: 100%;
     border-right: 1px dotted var(--darkbrown);
 }
+
 main {
     z-index: 3;
     display: flex;
@@ -97,14 +111,17 @@ main {
     width: 475px;
     border-left: 1px dotted var(--darkbrown);
 }
+
 main::-webkit-scrollbar {
     width: 0px;
 }
+
 h2 {
     font-size: 15px;
     text-align: center;
     text-decoration: 1px dotted underline var(--darkbrown);
 }
+
 .date {
     margin-bottom: 10px;
     text-align: center;
@@ -112,6 +129,7 @@ h2 {
     font-weight: bold;
     text-decoration: 1px dotted underline var(--darkbrown);
 }
+
 article {
     padding-top: 25px;
     border-bottom: 1px dotted var(--darkbrown);
@@ -119,10 +137,12 @@ article {
     text-align: justify;
     padding-bottom: 10px;
 }
+
 .quote {
     border-left: 1px dotted var(--darkbrown);
     padding-left: 10px;
 }
+
 a.active {
     letter-spacing: 1px;
     overflow: visible;
@@ -135,4 +155,32 @@ a.active {
     padding-left: 7px;
     border-right: none;
     border-bottom: 1px dotted var(--white);
+}
+
+/* Diary pagination - override nav a display:block */
+main .pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-top: 1px dotted var(--darkbrown);
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+main .pagination-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+main .pagination a,
+main .pagination span {
+    display: inline-block;
+    border: none;
+    min-width: auto;
+    padding: 0.25em 0.5em;
 }

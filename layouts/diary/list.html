@@ -64,12 +64,12 @@
       </div>
     </article>
     {{ end }}
+    
+    {{/* Pagination at bottom of main content */}}
+    {{ if $paginator }}
+      {{ partial "pagination.html" $paginator }}
+    {{ end }}
   </main>
-  
-  {{/* Pagination navigation */}}
-  {{ if $paginator }}
-    {{ partial "pagination.html" $paginator }}
-  {{ end }}
 </div>
 <div
   class="header"
