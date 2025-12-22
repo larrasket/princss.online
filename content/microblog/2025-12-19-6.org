@@ -4,4 +4,4 @@
 #+title: Katharina von Bora
 #+date: <2025-06-13 Fri 14:48>
 
-From [[id:npl4k8k0elk0][Papers and journals]]: "An old saying, that the Anti-Christ would be born to a nun by a monk (was once used with regard to Luther’s marriage)." #[[id:qn03i1a1e3k0][Kierkegaard]]
+[[id:npl4k8k0elk0][Papers and journals]]: "An old saying, that the Anti-Christ would be born to a nun by a monk (was once used with regard to Luther’s marriage)." #[[id:qn03i1a1e3k0][Kierkegaard]]
