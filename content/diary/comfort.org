@@ -1,0 +1,69 @@
+:PROPERTIES:
+:ID:       7mfij1q02wj0
+:END:
+#+title:  "Where you fear, there is your mission"
+#+DATE:  <2023-05-07 03:28>
+#+FILETAGS: blog
+
+
+#+BEGIN_PREVIEW
+On the culture of comfort.
+#+END_PREVIEW
+
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+
+I remember years ago when I was watching Black Mirror, an interesting show about
+the dystopian dark future of technology, I recommended it to some people I knew, I
+thought it might help me to consolidate my arguments against the influence that
+modern technology (like social media sites) has against them, how they can
+be tracked and controlled; however all of them couldn't complete the show, not
+even more than one episode. "I don't feel comfortable watching this", they
+said.
+
+At this point I felt they would think it would be discourteous of me to ask
+about "why?" or even to refer to them that this means that there is something
+wrong: having a TV show or an idea to make you feel 'uncomfortable' means nothing
+but having a great fragility in your mind, and it is in a very weak state.
+
+This actually made me to think more about how most of new generations treat
+comfort, they sanctify it. Which is a big issue in my opinion, simply comfort
+does not lead to anything but a stable (in the sense of a bad incessantness)
+state of existence. I personally consider the absolute seeking of comfort to be
+one of the fetid thoughts a man could have, for thee supposed to make a change,
+and a change is never led by comfort. "For believe me,  the secret for
+harvesting from existence the greatest fruitfulness and the greatest enjoyment
+is: /to live dangerously/! Build your cities on the slopes of Vesuvius! Send your
+ships into uncharted seas! Live at war with your peers and yourselves! Be
+robbers and conquerors as long as you cannot be rulers and possessors, you
+seekers of knowledge! Soon the age will be past when you could be content to
+live hidden in forests like shy deer! At long last the search for knowledge will
+reach out for its due: — it will want to rule and possess, and you with it!"[fn:1]
+
+Comfort is a key of ignoring all self-vulnerabilities; you don't feel
+comfortable to go on a fight with someone (if you had to for any reason), which
+might be a wise idea (refer to [[id:3wacz0q02wj0][Les Passions de l'âme]] which is a great book by
+Descartes that explain why all passions and feelings are useful, including fear)
+if they are much stronger than you; however this clearly highlight an obvious
+vulnerability in your body power, working on it will definitely change the fight
+to be a great idea, but accepting the "I don't feel comfortable" to do so will
+only keep you in your low levels.
+
+#+begin_quote
+“Where your fear is, there is your task” — [[id:2a92650b-2c62-4c4a-86d4-fcb377d2b100][Carl Jung]].
+
+“Where you stumble, there lies your treasure. The very cave you are afraid to
+enter turns out to be the source of what you are looking for. The damned thing
+in the cave, that was so dreaded, has become the center.” ― [[id:aec479af-d4d5-4dd2-bdf9-7e05fdef34f3][Joseph Campbell]], The
+Power of Myth.
+#+end_quote
+
+Where you fear, there is your mission.
+
+
+* Footnotes
+
+[fn:1] Nietzsche, F., Williams, B., & Nauckhoff, J. (2001). The Gay Science.
+Cambridge University Press. p. 161

@@ -1,0 +1,106 @@
+:PROPERTIES:
+:ID:       yh144x4121k0
+:END:
+#+title: On Depression
+#+date: <2023-11-29 Wed 08:21>
+
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+
+I've been experiencing random impulses of depression lately, perhaps a part of
+what's diagnosed as mood swings and mood disorders. While I can not decide
+precisely what's going wrong I'm trying to do my best to overcome it. I'm
+sharing my experience here.
+
+I know so many literature descriptive anthology pieces about depression,
+however, I really like [[id:a4u6600134k0][al-Ghazali]]'s[cite:@al-ghazali-2002-deliv-from-error p.135]:
+
+#+begin_quote
+For God put a lock upon my tongue so that I was impeded from public teaching. I
+struggled with myself to teach for a single day, to gratify the hearts of the students
+who were frequenting my lectures, but my tongue would not utter a single word: I was
+completely unable to say anything. As a result that impediment of my speech caused a
+sadness in my heart accompanied by an inability to digest; food and drink became
+unpalatable to me so that I could neither swallow broth easily nor digest a mouthful of
+solid food. That led to such a weakening of my powers that the physicians lost hope
+of treating me and said: “This is something which has settled in his heart and crept
+from it into his humors; there is no way to treat it unless his heart be eased of the
+anxiety which has visited it.”
+
+فكنت أُجاهد نفسي أن أُدرس يومًا واحدًا تطييبًا للقلوب المتخلفة إلي، فكان لا ينطق
+لساني بكلمة ولا استطيعها البتة، حتى اورثت هذه العقلة في اللسان حزنًا في القلب،
+بطلت معاه قوة الهضم ومراءة الطعام والشراب: فكان لا ينساغ لي ثريد، ولا تنهضم لي
+لقمة؛ وتعدى إلى ضعف القوى، حتى قطع الأطباء طمعهم من العلاج وقالوا: هذا أمر نزل
+بالقلب، ومنه سرى إلى المزاج، فلا سبيل اليه بالعلاج، إلا بأن يتروح السر عن الهم الملم.
+#+end_quote
+
+There's always something different in 1st millennium depression literature
+(check out Foucault's "History of Insanity"), perhaps it's the most non-casual
+(at least not from an intellectual perspective) form
+of depression ever recorded.
+
+al-Ghazali depicted later what helped him survive this state, which was
+basically Sufism[fn:1]. I think that this approach might not be very helpful.
+Not specifically Sufism, but intellectual changes generally
+([2025-04-19 Sat 14:00] although many will argue otherwise)
+
+As I mentioned my depression was (is?) swinging, I got the feeling of "I'm
+alright now, that was it, it's overcame" many times before suffering a next
+wave.
+
+The latest "solution" I've reached so far is routine, and I know that the recipe
+I'm going to put now is battle-tested because I've tried it when I was and was
+not in depression, that is; not just keeping self busy but with a purpose to get
+to the next level.
+
+What I've been doing for example is setting a list of activities to do. I've a
+very (very) long bucket list myself, so it is not really about lacking
+organization but doing something at all. The list should be something doable,
+easy and not critical, most importantly it should be insulated from anything you
+would have in a normal to-do-list (i.e. do not add stuff related to you work,
+study or whatever). I believe it should be crowded as well but not too much.
+The mere purpose is to keep yourself busy, apparently one of the most naive
+advice for depression is the one that seems to work. The tasks need to be
+productive, do not add - play a a video game or whatever. Do things that next
+morning you will feel good about the fact you have done them.
+
+When I get up feeling depressed and awful, I push myself into the list,
+simulating to myself that only after finishing this item, this pain is going to
+vanish, and before I even try harder I'd be occupied in getting the first item
+of the list done. Once I'm done with it I proceed with the next item on the list, and
+so on. By end of the day if I'm not feeling better already for all the things
+I have done, I know for certain that I will feel great the next day and I will
+have a severe desire to go into the same action list just like the day before.
+
+The trade-off here is: 1. You can develop the routine regardless of your state, if
+you feel so good today you do it and if you do not you do it. 2. It produces
+something, so even if it does not help healing, at least you are getting things
+done (I say productive and depressed is better than unproductive and depressed).
+
+- [2024-02-11 Sun 05:38] I think this method still works fine after all these
+  months, perhaps the only thing to focus on more is crisis management.
+- [2024-04-04 Thu 15:34] Well for the most part now I can confirm that this
+  works, empirically.
+- [2024-08-05 Mon 23:08] I didn't mention that if you're suffering from some kind of
+  clinical depression (major depressive disorder) you should seek professional help. I
+  thought that was too obvious.
+- [2025-04-19 Sat 14:02] Something else that I think I should have mentioned
+  here is how different it is to have the willing not to be depressed. This is
+  perhaps the most important step in healing from depression for me, and I
+  really regret every time I was extremely depressed and decided not to help
+  myself because I thought it wouldn't make that much of a difference, but it
+  completely will. [[https://en.wikipedia.org/wiki/God_helps_those_who_help_themselves][God helps those who help themselves]]. Always help yourself to
+  get out of depression, like they say, be the one you always wished to have
+  helping you. If you think having a cup of tea, a good workout, or a walk might
+  even slightly change your mood, do it. Or even if you don't think it will, but
+  you believe that you might like it, do it. For me, I found out that doing my
+  favorite activities that are mostly about me and taking care of myself, and
+  making sure that I am doing the best for me to have a good time, that was
+  always the best way for me to get out of depression.
+
+* Footnotes
+
+[fn:1] Read the Sufism chapter of his book if you are interested in more
+details. Also check: [[https://psyche.co/ideas/why-a-sufi-approach-to-healing-mental-illness-is-so-powerful?utm_source=rss-feed][Why a Sufi approach to healing mental illness is so powerful]]

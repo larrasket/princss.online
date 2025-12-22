@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID:       7eskndp02wj0
+:END:
+#+title: Nietzsche on Eulogy
+#+DATE: <2022-12-24 Sat 12:41>
+
+
+#+BEGIN_propert
+{{{s}}} [[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
+#+END_propert
+
+
+I have mentioned before my perspectives on the social media dilemma here +(I
+don't recommend reading it if you did not, I wrote it fanatically 3 years ago)+
+(jun 2023 note: i deleted this post.), my clue was correlated to the [[https://www.urbandictionary.com/define.php?term=Upcummie][upcummie]]
+pleasure that comes from someone's else applause on us, which translates to
+something like upvotes or likes on the internet, and how we're being conditioned
+to it just like a dumb Pavlov's Dog.
+
+I still find this a valid argument, however, it stands on a prolonged fundament, thus we
+actually love the upcommies, praise, and tributes. Personally, I don't, and I don't recall if
+this was a sequence of self-refinement and I've become afraid of being invisibly influenced
+or just because it makes me feel awkward and don't know how to appropriately respond.
+
+#+BEGIN_PREVIEW
+I've been reading [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] recently as you probably guessed, and he did have a staid yet
+poetic dissertation on the very topic. I've collected anthologies of his from different
+books and I'd like to share them here (My naive translation included).
+#+END_PREVIEW
+
+
+
+#+begin_quote
+The endeavour to avoid one's renown, the intentional offending of one's panegyrists, the
+dislike of hearing opinions about one's self, and all through fear of renown: instances like
+these are to be met with; they actually exist—believe it or not!
+
+
+/أن يخشى أحدهم شهرته، ويهين عن قصد هؤلاء الذين يثنون عليه، ويخاف سماع الأحكام التي تصدر في حقه، خشية الثناء،— هذا أمر موجود بالفعل، صدقوا أو لا تصدقوا!/
+#+end_quote
+
+
+
+
+#+begin_quote
+Here is some one who, you perceive, wishes to praise
+you: you bite your lips and brace up your heart: Oh, that that
+cup might go hence! But it does not, it comes! let us therefore
+drink the sweet impudence of the panegyrist, let us overcome
+the disgust and profound contempt that we feel for the innermost
+substance of his praise, let us assume a look of thankful joy—for
+he wished to make himself agreeable to us! And now that it
+is all over we know that he feels greatly exalted; he has been
+victorious over us. Yes, and also over himself, the villain!—for
+it was no easy matter for him to wring this praise from himself.
+
+/تنتبه إلى أن شخصًا يريد أن يثني عليك: تعض على شفتك، ينفبض قلبك، عسى أن تتركني
+هاته الكأس وشأني! لكنها لا تتركك، بل تدنوا منك! لتشرب كأس بذاءة لسان المادح
+العذبة، لتتغلب على الإشمئزاز والاحتقار الشديد اللذان يوحي بهما جوهر ثنائه، لتظهر
+على وجهك ملامح فرحة الاعتراف بجميل ثناءه. قد كان لطيفًا معنا. الآن وقد حدث ذلك
+تعلم أنه يشعر بالابتهاج، لقد انتصر عليك—وعلى ذاته كذلك، هو ذلك الحيوان! لم يكن
+من السهل عليه أن ينتزع من نفسه ذلك الإطراء./
+#+end_quote
+
+
+#+begin_quote
+REFUSING THANKS.—We are perfectly justified in refusing a
+request, but it is never right to refuse thanks—or, what comes to
+the same thing, to accept them coldly and conventionally. This
+
+/قد نرفض طلبًا، ولكن لا يحق لنا أبدًا أن نرفض الثناء، سيعتبر ذلك إهانة كبيرة، لماذا؟/
+#+end_quote
+
+And my favorite one:
+#+begin_quote
+He who bestows something great receives no gratitude; for in accepting it the recipient has
+already been weighed down too much. A refined soul is distressed to know that someone owes
+it thanks; a crude soul, to know that it owes someone thanks. When the gratitude of many to
+one throws away all shame, we behold fame.
+
+/من يمنح ما هو جليل لا يتلقى ثناءًا، لأنه بقبوله يكون قد أُثقل على كاهله الكثير بالفعل. النفس
+المُهذّبة تبأس لشعورها بأن هناك من يدين لها بالشكر؛ رُوحٌ فجة، كي تحس أنها مدينة بالشكر لشخص ما./
+#+end_quote
+
+
+The last one from /Human, all too human/ I think is the most missionary thesis of his in
+this topic:
+
+#+begin_quote
+The reason why the powerful man is grateful is this : his benefactor, through the benefit he
+confers, has mistaken and intruded into the sphere of the powerful man, —now the latter, in
+return, penetrates into the sphere of the benefactor by the act of gratitude. It is a milder
+form of revenge. Without the satisfaction of gratitude, the powerful man would have shown
+himself powerless, and would have been reckoned as such ever after. Therefore every society
+of the good, which originally meant the powerful, places gratitude amongst the first
+duties.—Swift propounded the maxim that men were grateful in the same proportion as they
+were revengeful.
+#+end_quote
+
+
+I think one of the most reasons he was consistent (and it is hard to consistent for an
+intensive writer, they usually have many contradictions) for, is that he knew no one would
+read him then.

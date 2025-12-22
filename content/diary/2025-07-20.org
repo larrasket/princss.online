@@ -7,7 +7,7 @@
 
 I spent some time today reading about the Maxist Internet Archive history. I
 used to contribute to the Arabic section back in the day before realizing that
-this was not really helpful[fn:3]. Anyway, I found it quite funny that it didn't
+this was not really helpful [I'm not talking here about Marxism, but contributing to Arabic translation, such contributions are not really helpful at this point, as you can not reach such an advanced point in learning something without mastering the lingua de franca.]. Anyway, I found it quite funny that it didn't
 take them much time to have their first fight: " By 1996 the website, Marx.org,
 was hosted by a commercial ISP. This was followed by an increased activity from
 the volunteers. In the following years, however, a conflict developed between
@@ -21,4 +21,3 @@ return to its roots and that all writers other than Marx and Engels would be
 removed.
 
 
-[fn:3] I'm not talking here about Marxism, but contributing to Arabic translation, such contributions are not really helpful at this point, as you can not reach such an advanced point in learning something without mastering the lingua de franca.

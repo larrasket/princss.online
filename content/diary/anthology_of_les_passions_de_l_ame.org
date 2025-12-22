@@ -1,0 +1,135 @@
+:PROPERTIES:
+:ID:       3wacz0q02wj0
+:END:
+#+title: Anthology of Les Passions de l'âme
+#+DATE:  <2023-03-11 Sat 10:25>
+#+OPTIONS: broken-links:mark
+#+FILETAGS: anthology
+
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+
+[[id:d786d238-caf1-4d36-ae56-e5e063f1b00a][René Descartes]] contributes to a long tradition of philosophical inquiry into the
+nature of "the passions", I find inspiration in many of Descartes writings,
+however I hesitate to share them because I don't find reading them separately
+will add actually any value. However I found this work "Les Passions de l'âme"
+has many useful independent points.
+
+#+BEGIN_PREVIEW
+Following is an anthology for this great work. (Arabic translations are
+provided!)
+#+END_PREVIEW
+
+
+
+/2023-03/: currently there are only two of them, I will add the rest when I'm
+able to make enough time.
+
+
+
+* The real nature of the conflicts that are usually imagined to take place between the lower and higher parts of the soul.
+
+[..] But there is only one soul in us, and it is not in itself divided into
+different parts: one and the same soul is sensitive and rational, and all its
+appetites are acts of will. The mistake of seeing it as playing the part of
+different, and usually opposing, characters comes purely and simply from failing
+to make the proper distinction between the functions of the soul and those of
+the body. It is to the body alone that we should ascribe whatever can be
+observed within us that is at odds with our reason. So the only conflict at
+issue here is this one: since the little gland in the middle of the brain can be
+impelled in one direction by the soul and in another by the animal spirits,
+which, as I said above, are bodies pure and simple, it often happens that
+the two impulsions are opposed, and that the stronger one nullifies the effect
+of the other. Now, we can distinguish two kinds of movement aroused by the
+spirits in the gland: the first kind represent to the soul either the objects
+that affect the senses, or the impressions formed in the brain, and exert no
+pressure on the will; the second kind, those which cause the passions or the
+accompanying movements of the body, do exert some pressure on it. Although the
+first kind can often impede the actions of the soul, or else be impeded by them,
+nonetheless, because they are not directly contrary to them, no conflict is
+observed to take place. Such conflict is observed only between movements of the
+second kind and the contrary acts of will: for instance, between the pres- sure
+the spirits exert on the gland in order to produce the desire for something in
+the soul, and the contrary pressure of the soul, as it wills to keep away from
+that very thing. The main reason why the conflict makes itself felt is that, as
+has already been stated, the will does not have the power to arouse
+passions directly, and so is obliged to use the indirect approach and to set
+itself to consider various things in succession: now, if it happens that one of
+these thoughts is sufficiently powerful to change the flow of the spirits for a
+moment, it may happen that the next one is not, and that they immediately resume
+their former course, since the prior condition of the nerves, the heart, and the
+blood has remained unchanged.  As a result, the soul feels itself impelled,
+almost simultaneously, to desire and not to desire one and the same thing; and
+this is what has prompted the idea that there are two conflicting powers within
+it. There is, however, another way of conceiving a kind of conflict: a cause
+that produces a certain passion in the soul will often also produce certain
+movements in the body to which the soul makes no contribution, and which it
+halts or tries to halt as soon as it perceives them; this is what we experience
+when something that produces terror.
+
+
+
+والواقع أنه ليس فينا سوى نفس واحدة، وهذه النفس ليس لها في ذاتها أي تعدد للأجزاء.
+فالنفس الحاسة هي النفس العاقلة، وكل رغباتها هي أرادات. إن الخطأ الذي ارتكبه
+البعض حين جعل النفس تلعب دور شخصيات متعددة، متناقضة في العادة فيما بينها، لم يأت
+من عدم التمييز القاطع بين وظائف النفس ووظائف الجسد الذي يجب أن ننسب إليه كل ما
+يمكن أن نلاحظه فينا مما يتعارض مع عقلنا، وهكذا لا تعود هنا من معركة داخل جسدنا
+سوى أن الغدة الصغيرة الموجودة وسط الدماغ يمكن أن تدفعها النفس إلى جهة، بينما
+تدفعها إلى جهة أخرى الأرواح الحيوانية التي ليست سوى أجسام، كما وضحت. ويحصل في
+كثير من الأحيان أن تكون هاتان الدفعتان متناقضتين، وأن تمنع الأقوى ظهور نتيجة
+الأخرى، هذا ويمكننا أن نميز بين نوعين من الحركات التي تثيرها الأرواح في الغدة،
+النوع الأول يمثل للنفس الأغراض التي تحرك الحواس أو الانطباعات التي تلتقي في
+الدماغ، وهذه الحركات لا تترك أي أثر هام على الإرادة. أما الحركات الأخرى فإنها
+تترك أثرًا قويًا، وهذه الحركات هي تلك التي تسبب الانفعالات أو حركات الجسم التي
+تصاحبها حركات النوع الأول رغم أنها تمنع في كثير من الأحيان أفعال النفس أو أن هذه
+تمنعها من الظهور، فإننا لا نلاحظ وجود صراعٍ بينهما، والسبب في ذلك أنها ليست
+متناقضة بشكل مباشر. غير أننا نلاحظ نزاعًا بين النوع الثاني من الحركات والإرادات
+التي تناقضها، فمثلًا هناك نزاع قائم بين الأثر الذي تتركه الأرواح حين تدفع الغدة
+لتسبب في النفس الرغبة لشيء ما، وذلك ما تحاول النفس أن تبعد الغدة عنه عن طريق
+إرادتها في أن تهرب من الشيء عينه. والشيء الأساسي الذي لا يجعل هذا النزاع يظهر هو
+أن الإرادة لا تملك القدرة على إثارة الإنفعالات مباشرةً، كما سبق ووضحت، لذا فإنها
+مضطرة إلى أن تلجأ إلى الحيلة، وأن تواظب على تفحص أشياء عدة، الواحد بعد الآخر،
+فإذا حصل أن احدها كان قادرًا على تغيير مجرى الأرواح لفترة فمن المحتمل أن يكون
+الذي يليه غير قادر، فإن الأرواح تعود رأسًا إلى مجراها الساب، لأن الاستعداد الذي
+كان سابقًا في الأعصاب والقلب لم يتغير، لأن ترغب وألا ترغب في الشيء عينه. وهذه
+الواقعة فرصة ليتخيل الناس أن للنفس قوتين تتصارعان. هذا وما يزال من الممكن أيضًا
+أن نتصور وجود نزاع ما، ذلك أنه في كثير من الأحيان يحصل أن السبب نفسه الذي يثير
+في النفس انفعالا معينًا يثير أيضًا بعض الحركات في الجسم دون أن تشارك النفس في
+إحداثها، بل توقفها أو تحاول ذلك ما أن تلمحها فنشعر بما نشعر به حين يكون هناك ما
+يثير الخوف.
+* How we recognize strength or weakness in a soul, and why the weakest people are so.
+
+
+Now, it is by the outcome of such conflicts that a person can know the strength
+or weakness of his or her soul. For those in whom the will is most naturally
+able to vanquish the passions and halt the accompanying movements of the body
+have, no doubt, the strongest souls.  But there are people who do not give
+themselves the chance to realize their own strength, because they never set the
+will to fight with its own weapons, but only with those that some passions
+supply in order to resist others. What I mean by the will’s own weapons is firm
+and definite judgements concerning the difference between good and evil,
+according to which it has resolved to conduct the actions of its life.  And the
+weakest souls of all are those whose will does not thus determine itself to
+follow certain judgements, but allows itself to be continually swept away by the
+passions of the moment, which, being often mutually contrary, enlist it by turns
+on their own side, and, setting it to fight against itself, reduce the soul to
+the most deplorable possible state. Thus, when terror is representing death as
+the ultimate evil, which can be avoided only by flight, if, on the other hand,
+ambition represents flight as a disgrace worse than death.
+
+
+
+إن كل فرد يعرف ضعف نفسه أو قوتها من خلال نجاح هذه النزاعات. لأن من استطاعات
+إرادتهم أن تتغلب بشكل طبيعي وبسهولة على الانفعالات، وأن توقف حركات الجسم التي
+تصاحبها كانوا يملكون دون شك النفوس الأقوى، ولكن هناك من لا يستطيعون أن يحسوا
+بقوتهم لأنهم لا يجعلون إطلاقًا إرادتهم تصارع بأسلحتها الخاصة بل بالأسلحة التي
+تمدها بها بعض النفعالات من أجل مقاومة انفعالات أخرى. وما أسميه أسلحتها الخاصة
+بها هو الأحكام القاطعة والحازمة المتعلقة بمعرفة الخير والشر التي كانت النفس صممت
+على اتباعها في أعمال حياتها. أما الأنفس الأضعف من الجميع فهي تلك التي لم تصمم
+إرادتها على اتباع أحكام معينة، ولكنها تترك نفسها تنجرف باستمرار مع الانفعالات
+الحاضرة. ولكن لما كانت هذه في معظم الأحيان ناقضة لبعضها البعض فإنها تجذبها إلى
+جانبها الواحدة تلو الأخرى، وتستعملها لمحاربة ذاتها فتضع النفس في أسوا حال يمكن
+أن تكون عليه. وهكذا حين صور الخوف الموت كشر مستطير لا يمكن تجنبه إلا بالهرب، فإن
+الطموح يصور عار هذا الهرب كشر أسوأ من الموت.

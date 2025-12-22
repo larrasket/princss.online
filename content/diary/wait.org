@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       ylc0wry0vqk0
+:CUSTOM_ID: ylc0wry0vqk0
+:END:
+#+title: Waiting does not make a lot of sense to me
+#+DATE: <2025-11-02 Sun 21:25>
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+
+Most engineering disciplines have a distinction between "waiting" and "blocking". Usually waiting is purposeful and justified (an ongoing process we must await). On the other hand, blocking is usually seen as a symptom of poor design. Most of the waiting I experience is blocking.
+
+Have you ever read the Wikipedia page about waiting halls? Yeah there does [[https://en.wikipedia.org/wiki/Waiting_room][exist]] one, and I when I came through it for the first time I was more inclined towards questioning the existence of "waiting" rather than the existence of a Wikipedia page about waiting halls. But really, why do they exist? No one is going to tell you this, but it has nothing to do with "necessity" or waiting for something to complete (most of the time), it's actually because someone decided that their schedule optimization problem is more important than your time. They've overbooked, underestimated, or simply refuse to implement proper queueing systems with realistic estimates.
+
+
+I'm sitting here right now, waiting for God knows what, and I've had enough time to think about how absolutely insane this is. When you have a thread just sitting there doing nothing while it could be doing work, you profile that and you fix it. It's a bug. It's inefficiency. It's the thing that makes your system fall over when you try to scale. But somehow when it's human beings sitting in lobbies or staring at "your call is important to us" screens, we just... accept it?
+
+
+Think about what waiting actually means. When you wait, you're in a state of suspended agency. You can't move forward with what you intended to do. Your plans, your goals, your trajectory through time. All of it gets put on hold. You enter a kind of liminal space where you're not really doing anything, just existing in anticipation of permission to resume your life. And the thing is, sometimes this is unavoidable. Sometimes the universe itself imposes waiting on us. Seeds take time to grow. Wounds take time to heal. Understanding takes time to develop. This is legitimate waiting. This is waiting that corresponds to actual processes unfolding in reality, transformations that cannot be rushed because they're constrained by physics, biology, cognition. The actual fabric of how things work.
+
+But blocking? Blocking is different. Blocking is when you're forced into a state of suspended agency not because anything meaningful is happening, but because someone, somewhere, made a decision about system architecture that treats your time as an acceptable sacrificial resource. Your waiting serves no purpose except to optimize someone else's convenience. Nothing is growing. Nothing is processing. Nothing is happening at all, really, except that you've been placed in a queue, not because the work takes time, but because the system wasn't designed to respect the temporal experience of the people moving through it.
+
+Where it gets even more consciously uncomfortable to me is that, when someone makes you wait unnecessarily, they're making a claim about the relative value of existence itself. Because time isn't just a resource like money or attention, time is the fundamental substrate. It's the medium. When you take someone's time, you're not borrowing a thing they own, you're consuming a portion of their finite conscious experience in the universe. You're saying: the segment of your life that you're spending right now, the irreplaceable minutes of awareness and possibility that you have between birth and death, those matter less than my organizational convenience and my incapability of solving scheduling optimization problems of degree one.
+
+
+This is a form of violence that's normalized so completely that it is not even seen anymore. We've built entire systems predicated on the assumption that some people's time is disposable, that it's acceptable to externalize the costs of poor design onto the subjective experience of whoever happens to need something. And the really insidious part is how it scales. One person making a thousand people wait for an unnecessary hour hasn't just wasted a thousand hours of labor, they've consumed a thousand hours of lived experience. That's weeks of conscious human existence, just... gone. Burned up in service of a system that could have been designed differently.
+
+There's something almost Kafkaesque about it. You're trapped in a system whose logic you can't access, whose progress you can't observe, whose timeline you can't influence. You don't know if anything is actually happening. You don't know if you've been forgotten. You don't know if the wait will be five minutes or five hours. You're in a state of enforced passivity. The only thing you know for certain is that someone, somewhere, decided that this is fine. That your experience of temporal captivity is an acceptable cost of doing business. Waiting doesn't just feel bad, it's objectively wasteful. It's entropy in the system. When you force asynchronous processes to become synchronous, when you serialize things that could be parallel, when you create artificial bottlenecks that serve no functional purpose, you're not just making individuals miserable.
+
+There's a kind of temporal injustice at the heart of modern institutional life, where waiting is distributed inversely to power. Those who can least afford to lose time, because they're paid hourly, because they're juggling multiple responsibilities, because they have the least slack in their schedules, are the ones who wait the most. While those who design the systems, who benefit from the efficiencies of batch processing and serialization, who optimize for their own convenience, barely wait at all. And the really maddening thing is that we have the technology to fix this. We know how to build systems that respect human temporality. We know how to make things asynchronous, to provide feedback, to eliminate artificial serialization, to let people opt in to waiting when it serves their interests rather than forcing them into it by default. We could design the world so that blocking is rare and waiting is transparent and people maintain agency over their own time. But we don't (and this has nothing to do with being cost-effective. I've been in highly funded institutions who suffered from the very same problem).
+
+So here I am, waiting. Blocked by a system that doesn't need to block me, suspended in dead time that serves no purpose, my finite conscious experience being spent on nothing because someone, somewhere, decided that this was an acceptable externality. And I'm supposed to just accept it. To scroll on my phone, to read, to "be patient," as if patience is the appropriate response to unnecessary temporal captivity rather than rage at the casual disregard for human experience that blocking represents.
+
+
+Most of the waiting we do is blocking. And blocking is a failure. Not just an inconvenience. It's a moral failure, a design failure, a failure to treat human consciousness as something worth respecting.
+
+And we call this normal. We call this life.
