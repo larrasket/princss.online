@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       tixkcwk0gwj0
+:END:
+#+title: Would you really trust your feelings?
+#+DATE:  <2023-07-26>
+
+I wrote multiple times about René Descartes's [[id:3wacz0q02wj0][Les Passions de l'âme]], perhaps the most pivotal piece of philosophy that I've encountered thus far. In essence, this treatise is about the comprehension of emotions, their origins, and the appropriate manner in which to respond to them. Descartes didn't know much of neuroscience back then nonetheless he provides an acceptable assertion about where feelings come from. I think this understanding is being underappreciated, although its significance is paramount for achieving self-mastery and self-realization; many times, people over-rely on their emotions. [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] talked about this too[cite:@DawnofDay]:
+
+
+#+begin_quote
+FEELINGS AND THEIR DESCENT FROM JUDGMENTS.—“Trust in your feelings!” But feelings comprise nothing final, original; feelings are based upon the judgments and valuations which are transmitted to us in the shape of feelings (inclinations, dislikes).  The inspiration which springs from a feeling is the grandchild of a judgment—often an erroneous judgment!—and certainly not one's own judgment! Trusting in our feelings simply means obeying our grandfather and grandmother more than the gods within ourselves: our reason and experience.
+#+end_quote
+
+Feelings serve as an intermediary mechanism to align with the dictates of mother nature, but they do not necessarily reflect what is genuinely beneficial for us. A prime illustration of this concept lies in the revulsion we experience when confronted with something deemed 'disgusting,' such as urine. This aversion is indeed quite comprehensible and innate, as many of the things we find repulsive often serve as carriers of harmful bacteria which have potential risk of infection. It is noteworthy to observe how we are subtly conditioned to feel differently in certain situations; for instance, mothers tend to exhibit less disgust towards their own babies' diapers compared to those of other infants[cite:@case-2006-my].  This adaptive response is advantageous as it enables mothers to care for their children more effectively without being overly discomforted by feelings of disgust. Nonetheless, this raises an important question: are these things truly intrinsically disgusting?, or does their perceived disgust emerge from our social conditioning and evolutionary adaptations?
+
+Another case can be observed in our aversion towards certain insects, such as cockroaches, primarily driven by their appearance and association with parasitism. However, let's ask the question contemplating the actual extent of harm that a cockroach can inflict upon us compared to other creatures with which we delight in interacting, like cats and dogs, despite the latter not being domesticated.
+
+
+I noticed that seizures inducing ejaculation becoming increasingly prevalent in rabbits, I couldn't help but notice that some male rabbits even die after mating with females. We cannot question the consciousness to rabbits to question such behaviors, as their level of awareness does not enable them to process facts or anticipate consequences. Nevertheless, this should make us question own judgments. How likely is it that male humans would engage in similar behavior if existed and felt so good (just like sex does)?  To question the validity of our own actions. Many things that we perceive as immensely pleasurable may only be so because our emotions lead us to believe so, without necessarily aligning with what is genuinely good or beneficial in the grand scheme of things. #[[id:ydb1kfn02wj0][Modus Vivendi]]
