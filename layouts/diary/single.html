@@ -28,6 +28,7 @@
       <div class="page-content">
         <div class="date">{{ $date.Format "02/01/2006" }}</div>
         <div class="page-writing">{{ partial "resolve-citations.html" (partial "resolve-roam-links.html" (partial "strip-org-title.html" .Content)) }}<a class="copy-permalink" data-url="{{ .Permalink }}" title="Copy permalink">[permlink]</a></div>
+        {{ partial "extract-backlinks.html" . }}
       </div>
     </article>
   </main>

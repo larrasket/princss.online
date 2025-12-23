@@ -52,7 +52,7 @@
     </div>
     <div class="post-content">
       {{ partial "inject-permlink.html" (slice (partial "resolve-roam-links.html" (partial "strip-org-title.html" $page.Content)) $page.Permalink) }}
-      {{ partial "extract-backlinks.html" $page }}
+        <!--       {{ partial "extract-backlinks.html" $page }} -->
     </div>
   </div>
   {{ end }}

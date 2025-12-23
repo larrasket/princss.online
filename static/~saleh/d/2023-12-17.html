@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The National Anthem</title>
+<meta name="author" content="Salih Muhammed" />
+<meta name="generator" content="Org Mode" />
+<!doctype html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/~saleh/style/toc.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/tufte.css?v=20250130" />
+    <link rel="stylesheet" href="/~saleh/style/main.css?v=20250230" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("#content > p:first-of-type");
+        if (p && /^[\u0600-\u06FF]/.test(p.textContent.trim())) {
+          p.classList.add("arabic");
+        }
+      });
+    </script>
+
+    <script async data-id="101390423" src="//static.getclicky.com/js"></script>
+    <noscript>
+      <p>
+        <img
+          alt="Clicky"
+          width="1"
+          height="1"
+          src="//in.getclicky.com/101390423ns.gif"
+        /></p
+    ></noscript>
+
+    <!-- Import LazySizes - State-of-the-art lazy loading library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async
+    ></script>
+
+    <!-- Optional: Import plugins for better performance -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"
+      async
+    ></script>
+
+    <script>
+      // Only run on pages with 'art_paintings_media' in the path
+      if (window.location.pathname.includes("art_paintings_media")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Configure LazySizes for optimal performance
+          window.lazySizesConfig = window.lazySizesConfig || {};
+          window.lazySizesConfig.loadMode = 1; // Load images one at a time for better performance
+          window.lazySizesConfig.expand = 50; // Load images 50px before they enter viewport
+          window.lazySizesConfig.expFactor = 1.5; // Expand loading area
+          window.lazySizesConfig.hFac = 0.4; // Height factor for loading trigger
+
+          // Add CSS for smooth transitions and collapsible content
+          const style = document.createElement("style");
+          style.textContent = `
+      .lazyload,
+      .lazyloading {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .lazyloaded {
+        opacity: 1;
+      }
+      .collapsible-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .collapsible-content.collapsed {
+        max-height: 0 !important;
+      }
+      .collapsible-content.expanded {
+        max-height: none;
+      }
+      /* Blur effect while loading (optional) */
+      .lazyloading {
+        filter: blur(5px);
+        opacity: 0.7;
+      }
+      .lazyloaded {
+        filter: none;
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Find all h3 elements
+          const h3Elements = document.querySelectorAll("h3");
+
+          h3Elements.forEach(function (h3) {
+            // Make h3 clickable and add icon
+            h3.style.position = "relative";
+            h3.style.cursor = "pointer";
+            h3.style.paddingLeft = "20px";
+            h3.style.userSelect = "none";
+
+            // Add the arrow icon
+            const icon = document.createElement("span");
+            icon.innerHTML = "▶";
+            icon.style.position = "absolute";
+            icon.style.left = "0px";
+            icon.style.top = "50%";
+            icon.style.transform = "translateY(-50%)";
+            icon.style.transition = "transform 0.2s";
+            icon.style.fontSize = "0.8em";
+            icon.style.color = "rgb(102, 102, 102)";
+            icon.style.fontFamily = "monospace";
+
+            h3.insertBefore(icon, h3.firstChild);
+
+            // Find all content after this h3 until the next h3 or end of parent
+            const contentElements = [];
+            let nextElement = h3.nextElementSibling;
+
+            while (nextElement && nextElement.tagName !== "H3") {
+              contentElements.push(nextElement);
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            // Create a wrapper for smooth collapsing
+            const wrapper = document.createElement("div");
+            wrapper.className = "collapsible-content collapsed";
+            wrapper.style.maxHeight = "0";
+
+            // Move content elements into wrapper
+            contentElements.forEach(function (element) {
+              wrapper.appendChild(element);
+            });
+
+            // Insert wrapper after h3
+            h3.parentNode.insertBefore(wrapper, h3.nextSibling);
+
+            // Prepare images for LazySizes lazy loading and make them clickable
+            const prepareImagesForLazyLoading = (container) => {
+              const images = container.querySelectorAll("img");
+              images.forEach(function (img) {
+                // Only process if not already processed
+                if (
+                  !img.classList.contains("lazyload") &&
+                  !img.dataset.processed
+                ) {
+                  // Store original src in data-src for LazySizes
+                  if (
+                    img.src &&
+                    img.src !== "" &&
+                    !img.src.startsWith("data:")
+                  ) {
+                    img.dataset.src = img.src;
+                    // Use a tiny placeholder or low-quality placeholder
+                    img.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3Crect width="1" height="1" fill="%23f0f0f0"/%3E%3C/svg%3E';
+                  }
+
+                  // Handle srcset for responsive images
+                  if (img.srcset && img.srcset !== "") {
+                    img.dataset.srcset = img.srcset;
+                    img.srcset = "";
+                  }
+
+                  // Handle sizes attribute
+                  if (img.sizes) {
+                    img.dataset.sizes = img.sizes;
+                  }
+
+                  // Add LazySizes classes
+                  img.classList.add("lazyload");
+
+                  // Make image clickable - add cursor pointer
+                  img.style.cursor = "pointer";
+
+                  // Add click handler to open image in new tab
+                  img.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent triggering h3 collapse
+
+                    // Get the actual image URL (either from src or data-src)
+                    let imageUrl = this.src;
+                    if (this.dataset.src && !this.src.startsWith("data:")) {
+                      imageUrl = this.dataset.src;
+                    } else if (
+                      this.src.startsWith("data:") &&
+                      this.dataset.src
+                    ) {
+                      imageUrl = this.dataset.src;
+                    }
+
+                    // Open image in new tab
+                    if (imageUrl && !imageUrl.startsWith("data:")) {
+                      window.open(imageUrl, "_blank");
+                    }
+                  });
+
+                  // Mark as processed
+                  img.dataset.processed = "true";
+
+                  // Maintain aspect ratio to prevent layout shift
+                  if (!img.style.aspectRatio && img.width && img.height) {
+                    img.style.aspectRatio = img.width + "/" + img.height;
+                  }
+                }
+              });
+            };
+
+            // Prepare all images in this section for lazy loading
+            prepareImagesForLazyLoading(wrapper);
+
+            // Track collapsed state
+            let isCollapsed = true;
+            let hasBeenExpanded = false;
+
+            // Add click handler
+            h3.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              if (isCollapsed) {
+                // Expand: show content and activate lazy loading
+                icon.style.transform = "translateY(-50%) rotate(90deg)";
+                wrapper.classList.remove("collapsed");
+                wrapper.classList.add("expanded");
+                wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+
+                // Only activate LazySizes for this section when first expanded
+                if (!hasBeenExpanded) {
+                  // Trigger LazySizes to check for images in this newly visible section
+                  if (window.lazySizes) {
+                    // Force LazySizes to check all images in this wrapper
+                    const lazyImages = wrapper.querySelectorAll(".lazyload");
+                    lazyImages.forEach((img) => {
+                      // Add to LazySizes queue
+                      window.lazySizes.loader.unveil(img);
+                    });
+                  }
+                  hasBeenExpanded = true;
+                }
+
+                isCollapsed = false;
+
+                // Recalculate height after images potentially load
+                setTimeout(() => {
+                  if (!isCollapsed) {
+                    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                  }
+                }, 100);
+              } else {
+                // Collapse: hide content
+                icon.style.transform = "translateY(-50%) rotate(0deg)";
+                wrapper.classList.remove("expanded");
+                wrapper.classList.add("collapsed");
+                wrapper.style.maxHeight = "0";
+
+                isCollapsed = true;
+              }
+            });
+
+            // Listen for LazySizes events to adjust height dynamically
+            wrapper.addEventListener("lazyloaded", function (e) {
+              if (!isCollapsed) {
+                // Adjust wrapper height when images load
+                setTimeout(() => {
+                  wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+                }, 50);
+              }
+            });
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if current page should have the formatting applied
+        function shouldApplyFormatting() {
+          const path = window.location.pathname;
+
+          // Check if path matches our target patterns
+          return (
+            path === "/~saleh/stack" ||
+            path === "/~saleh/stack.html" ||
+            path.startsWith("/~saleh/sh/")
+          );
+        }
+
+        // Only proceed if we're on a target page
+        if (!shouldApplyFormatting()) {
+          return;
+        }
+
+        // Add CSS styles
+        function addStyles() {
+          const style = document.createElement("style");
+          style.textContent = `
+      /* Basic styling for entries */
+      .outline-3 {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+      }
+
+      /* Style for reconstructed single paragraph */
+      .entry-paragraph {
+        margin: 0;
+        line-height: 1.5;
+        direction: inherit;
+        unicode-bidi: plaintext;
+      }
+
+      /* Style for date - gray and nice */
+      .entry-date {
+        color: #666;
+        font-size: 0.9em;
+        margin-right: 0.5em;
+      }
+
+      /* Style for tag at end - gray and in parentheses */
+      .entry-tag {
+        display: inline !important;
+        color: #666;
+        margin-left: 0.5em;
+      }
+
+      /* Ensure all children stay inline */
+      .entry-tag * {
+        display: inline !important;
+      }
+
+      /* Override any existing tag styles */
+      .entry-tag p,
+      .entry-tag div {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+
+      /* Hide block elements that will be moved */
+      .outline-3 .moved-block {
+        display: block;
+        margin: 0.5em 0;
+      }
+
+      /* Ensure proper anchor target visibility */
+      .outline-3[id] {
+        scroll-margin-top: 20px;
+      }
+    `;
+          document.head.appendChild(style);
+        }
+
+        // Extract ID from container div
+        function extractIdFromContainer(entry) {
+          const containerId = entry.id;
+          if (containerId && containerId.startsWith("outline-container-")) {
+            return containerId.replace("outline-container-", "");
+          }
+          return null;
+        }
+
+        // Apply the formatting transformation
+        function applyFormatting() {
+          // Process each entry
+          const entries = document.querySelectorAll(".outline-3");
+
+          entries.forEach((entry, index) => {
+            // Extract the anchor ID from the container before transformation
+            const anchorId = extractIdFromContainer(entry);
+
+            // Extract components
+            const h3 = entry.querySelector("h3");
+            const notes = entry.querySelector(".notes");
+            const outlineText = entry.querySelector(".outline-text-3");
+            const tag = entry.querySelector(".tag");
+
+            if (!h3 || !outlineText) return;
+
+            // Get title text (preserve any TODO/DONE prefixes and links)
+            let titleText = h3.innerHTML;
+
+            // Get timestamp
+            let timestampText = "";
+            if (notes) {
+              const timestamp = notes.querySelector(".timestamp");
+              if (timestamp) {
+                timestampText = timestamp.textContent;
+              }
+            }
+
+            // Get content paragraphs (excluding notes, tag, and backlinks)
+            const contentParagraphs = [];
+            const blockElements = [];
+            const backlinks = entry.querySelector(".BACKLINKS");
+
+            Array.from(outlineText.children).forEach((child) => {
+              if (
+                child.classList.contains("notes") ||
+                child.classList.contains("tag") ||
+                child.classList.contains("BACKLINKS")
+              ) {
+                return; // Skip these - they'll be handled separately
+              }
+
+              if (child.tagName === "P") {
+                contentParagraphs.push(child.innerHTML);
+              } else if (
+                child.tagName === "UL" ||
+                child.tagName === "OL" ||
+                child.tagName === "BLOCKQUOTE" ||
+                child.tagName === "PRE" ||
+                child.tagName === "DL" ||
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              } else if (
+                child.tagName === "DIV" &&
+                child.classList.contains("epigraph")
+              ) {
+                blockElements.push(child.outerHTML);
+              }
+            });
+
+            // Get tag HTML (preserve links and formatting)
+            let tagHtml = "";
+            if (tag) {
+              tagHtml = tag.outerHTML;
+            }
+
+            // Construct the new single paragraph
+            let newContent = "";
+
+            // Add date at the start (gray)
+            if (timestampText) {
+              newContent +=
+                '<span class="entry-date">' + timestampText + "</span>";
+            }
+
+            // Add title with emdash
+            newContent += titleText + " — ";
+
+            // Add content paragraphs
+            newContent += contentParagraphs.join(" ");
+
+            // Add tag at the end in parentheses (preserve HTML but force inline)
+            if (tagHtml) {
+              // Extract just the inner content and wrap it properly
+              let tagContent = tag.innerHTML;
+              newContent +=
+                ' <span class="entry-tag">(' + tagContent + ")</span>";
+            }
+
+            // Create new paragraph element
+            const newParagraph = document.createElement("p");
+            newParagraph.className = "entry-paragraph";
+            newParagraph.innerHTML = newContent;
+
+            // Clear the entry
+            entry.innerHTML = "";
+
+            // Preserve the anchor ID by setting it on the transformed entry
+            if (anchorId) {
+              entry.id = anchorId;
+            }
+
+            // Add backlinks FIRST so they can float to the right
+            if (backlinks) {
+              entry.appendChild(backlinks.cloneNode(true));
+            }
+
+            // Then add the main paragraph
+            entry.appendChild(newParagraph);
+
+            // Add any block elements after the paragraph
+            blockElements.forEach((blockHtml) => {
+              const blockDiv = document.createElement("div");
+              blockDiv.className = "moved-block";
+              blockDiv.innerHTML = blockHtml;
+              entry.appendChild(blockDiv);
+            });
+
+            // Add separator after each entry (except the last one)
+            if (index < entries.length - 1) {
+              const separator = document.createElement("hr");
+              separator.style.margin = "1em 0";
+              separator.style.border = "none";
+              separator.style.borderTop = "1px solid #ccc";
+              entry.appendChild(separator);
+            }
+          });
+        }
+
+        // Initialize when DOM is ready
+        function init() {
+          addStyles();
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", applyFormatting);
+          } else {
+            applyFormatting();
+          }
+        }
+
+        // Start the initialization
+        init();
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status">
+  <div class="header" style="
+    display: block !important;!i;!;
+">
+<a href="/">
+<h1 class="title" style="
+margin-block-start: auto;
+    color: black;
+">Hereby, all birds fly</h1>
+      </a>
+      <nav class="site-nav">
+        <a href="/~saleh/p/">all posts</a>
+        <span>•</span>
+        <a href="/~saleh/stack.html">short posts</a>
+        <span>•</span>
+        <a href="/~saleh/fullbooks.html">books</a>
+        <span>•</span>
+        <a href="/~saleh/a.html#2ar8en10n2k0">anthology</a>
+        <span>•</span>
+        <a href="/~saleh/pgp.html">PGP key</a>
+        <span>•</span>
+        <a href="https://www.admonymous.co/larrasket">leave a message</a>
+      </nav>
+<hr class="header-divider" style="margin-block-end: -1em;">
+  </div>
+</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">The National Anthem</h1>
+</header><div class="propert" id="org189539e">
+<p>
+Part of a series on <a href="/~saleh/h/bm.html">Postmodern Abyss: Black Mirror</a>
+</p>
+
+</div>
+<div class="postscript" id="org9a59a3d">
+<p>
+This post is highly based on <a href="#citeproc_bib_item_1">[1]</a>
+</p>
+
+</div>
+
+<div class="PREVIEW" id="org6065655">
+<p>
+This is going to be the first episode from a series about my favorite anthology
+TV show: Black Mirror (2011). It&rsquo;s also about its first episode: The National
+Anthem.
+</p>
+
+</div>
+
+
+<p>
+Black Mirror is one of the cinematic works that I personally believe has a very
+high level of <i>subliminal messaging</i> in a way that makes it has a large domain
+of viewers (which is a main interest for streaming services, for revenues) but still
+present a sophisticated philosophical assertion. It might relate to the popular
+movie —that I admire as well— V for Vendetta (2005) which many people liked for
+different reasons: the action adventure, the ambiguous romantic relationship, the
+anarchism vibes, the anti-anarchism vibes (catholic monarchist V), etc.
+</p>
+
+<p>
+While many people like about Black Mirror its anthologist and thriller style, what
+attracts me really is the philosophical reflections.
+</p>
+<hr>
+<div id="outline-container-sxb2fsp0r1k0" class="outline-2">
+<h2 id="sxb2fsp0r1k0">Is it ever okay to {something bad most of the times}?</h2>
+<div class="outline-text-2" id="text-org9b8942f">
+<div class="tag" id="org8bb445f">
+<p>
+This section was labeled under, or is related to <a href="/~saleh/t/ethics.html">Philosophy of Ethics</a>
+</p>
+
+</div>
+
+<p>
+The episode starts with a sudden great epiphany of the Prime Minister Michael
+Callow knowing about the kidnapping of one of the Royal family, a beloved known
+princess named Susannah, as a ransom, the kidnapper demand the PM of a very
+indecent sexual act, that is to have sex with a pig.
+</p>
+
+<p>
+Before going more into the plot details which is still much interesting, a moral
+question has been just asked: if there a demand \(X\) that might cause the hurt
+\(Y\), however, it will has a terminus of goodness \(Z\) like saving the life of
+something of someone, or even some people, what action should be taken?
+</p>
+
+<p>
+In the example of our PM \(Z\) is saving the life of the princess and \(Y\) would be
+traumatizing the PM (and also hurting the pig if animal rights are to be taken
+in this example). This question might have a harder version that would put the
+risk not on someone reputation but someone&rsquo;s physical safety or life, for
+example, sacrificing one life for 10 people.
+</p>
+
+<p>
+As of Callow understanding the demand and asserting his position while querying
+for his coworkers&rsquo;, he states directly &ldquo;I&rsquo;m not fucking a pig, that&rsquo;s not
+happening&rdquo;. This form &ldquo;I&rsquo;m not fucking a pig&rdquo; while said in the mere focus in
+Callow&rsquo;s interest (saving himself), it abstracts the problem totally to what
+seems an indecent action &ldquo;fucking a pig&rdquo;, this sentence could be taken from any
+context and be still sound. It&rsquo;s the same as &ldquo;I&rsquo;m not killing anybody&rdquo;, &ldquo;I&rsquo;m not
+lying to my wife&rdquo;.
+</p>
+
+<p>
+This kind of abstracting the act to decide its rightness or wrongness —which is
+the view everyone in the show starts with— is called <a href="/~saleh/t/ethics.html">deontological ethics</a>, which
+means that &ldquo;the morality of an action should be based on whether that action
+itself is right or wrong under a series of rules and principles, rather than
+based on the consequences of the action&rdquo;. So in traditional deontological
+ethics, we should not study the consequences of lying to someone, for example
+lying to a thief or a murderer, because lying should be always wrong.
+Contemporary deontological theorists like John Rawls thinks that in such cases
+we should have a &ldquo;moral weight&rdquo; to consider.
+</p>
+
+<p>
+The moral weight of the demand is neglected initially in Callow&rsquo;s statements
+and his interest in self-dignity is evident.
+</p>
+
+<p>
+&ldquo;I do not understand, why it is not on the news?&rdquo; a commoner asks while watching
+the princess YouTube video, meanwhile in UKN, a popular national TV news agency,
+headquarter colleagues are discussing whether to voluntarily complain with the
+government media notice request not to broadcast this event, or to make the best
+of the capitalism of crisis and be the exclusive media provider and profit, &ldquo;A
+woman&rsquo;s life is at stake&rdquo; what seem to be a team leader cries, however, he
+quickly gives up once he finds out that he would be the only one respecting his moral
+obligation, as he knows that many other news media are broadcasting it.
+</p>
+
+<p>
+As mentioned, other philosophical views on moralities are presented throughout
+the episode and we will see how and which events affect the participants views
+on what happens, let&rsquo;s quickly talk about one other ideology in advance; we have
+seen that traditional deontological ethics does not really care about the
+consequences of the event, unlike it, <a href="/~saleh/t/ethics.html">consequentialism</a> suggests than the
+morality of any action merely depends on the consequences of that action.  is
+considered to be one of the consequentialism theories thatprescribe actions that
+maximize happiness and well-being for all affected individuals and take the
+action that will maximize the goodness, so we should take the life of princess
+Susannah, the effect of her death on the society, the effect of having the
+sexual intercourse on Callow&rsquo;s family and reputation.
+</p>
+</div>
+</div>
+<div id="outline-container-7xp5k5q0r1k0" class="outline-2">
+<h2 id="7xp5k5q0r1k0">A preview of the worthy propaganda filter</h2>
+<div class="outline-text-2" id="text-orgb4c7d6f">
+<div class="tag" id="orgec05326">
+<p>
+This section was labeled under, or is related to <a href="/~saleh/h/propaganda.html">Propaganda</a>
+</p>
+
+</div>
+<p>
+The identifiable victim effect is the tendency of individuals to offer greater
+aid when a specific, identifiable person (&ldquo;victim&rdquo;) is observed under hardship,
+as compared to a large, vaguely defined group with the same need
+<a href="#citeproc_bib_item_2">[2]</a>.
+</p>
+
+<p>
+The identifiable victim effect (IVE henceforward) is a commonly used filter in
+everyday media, whether intentional or unintentionally. A current example of it
+is in the ongoing war on Gaza that caused so far the death of more than 10,000
+children in Gaza, however, lots of media campaigns were about the kidnapped
+teenagers and children, who were about 10 to 50. People do not really put weight
+on the 50 Israeli kids more than they would put on 10,000 Arab child
+(hopefully), but humans intuitively would put their attention on something that
+is constantly streamed into their views, and much more identifiable.
+</p>
+
+<p>
+This is used commonly on media, take cancer charities for example, most of the
+time they advertise for a single story that might sound the most touching one
+for viewers instead of presenting the fact that they have so many other cases,
+some of them might be even more critical but it would be either less effective
+for them to market, or it might be disrupting to show them on advertisement.
+</p>
+
+<p>
+Noam Chomsky in his Propaganda Model introduced the concept of worthy and
+unworthy victims. In <a href="#citeproc_bib_item_3">[3]</a>, Chomsky used the case of the murder
+of Jerzy Popieluszko in Poland (which had a very extensive and wide media
+coverage) versus the murder of hundred religious participants in Latin America.
+</p>
+
+<p>
+In nutshell, people will show general inclination for things that they had more
+inputs about, things that the media can make it experience, you can discuss the
+sadness of a victim family for their lose, and that of his friends extensively
+more than you can do with many others, and more than you can do with any other
+story that you media may suppress.
+</p>
+
+<hr>
+
+<p>
+As the public think initially of the demand, all of them are deontologists: &ldquo;I
+do not think anyone should concede to any humiliation under threat&rdquo; a commoner
+explains on TV followed by other agreeing participants, a poll has shown that
+the majority of the public indeed thinks that he should not take the action.
+</p>
+
+<p>
+However, very surprisingly the public views shifts extremely once the media
+broadcasts an experience of the princess suffering, a video showing her finger
+getting cut. 86% of them gain a consensus on Callow should actually do the pig
+thing. The viewers now are consequentialists, although their view of the utility
+is not completely accurate.
+</p>
+
+<p>
+Note that the public were aware of the princess death if Callow decide to
+preserve his dignity, yet they were only touched when they were able to see a
+view, an experience, of the princess suffering; if a graphic emulated media was
+broadcasted instead about the slaughter of the princess it would have the same
+effect on the media.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7b160e" class="outline-2">
+<h2 id="orgc7b160e">The notion of disgust and origin of wrongfulness&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h2>
+<div class="outline-text-2" id="text-orgc7b160e">
+<p>
+The most thing I find very interesting about the episode is how everyone of the
+viewers were interested in thriller storytelling of what will the PM do, what I
+described earlier as subliminal messaging,  ignoring all the moral,
+philosophical and intellectual questioning of the event and its recipients, and
+by &ldquo;everyone&rdquo; I mean both the NPCs in the show and us, the observers.
+</p>
+
+<p>
+I personally believe that this was a very interesting symbolization in the first
+gate into black mirror, akin to a national anthem reciting: while everyone is
+concentrated, a much more bigger interest was happening in the same scene: in
+Blcak Mirror case, that&rsquo;s freeing the princess, for the observer, it is ignoring
+everything but the main story of the PM and Susannah.
+</p>
+
+<p>
+This style is very common especially in the first season, as we are going to see
+in the next episode and next article, the whole episode 2 of season 1 is about
+nothing but the show itself.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf4aeee2" class="outline-2">
+<h2 id="orgf4aeee2">Bibliography</h2>
+<div class="outline-text-2" id="text-orgf4aeee2">
+<style>.csl-left-margin{float: left; padding-right: 0em;}
+ .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">[1]</div><div class="csl-right-inline">B. J. Collins and B. Boesch, “The national anthem and weighing moral obligations.” Wiley, pp. 9–19, Nov. 2019. doi: <a href="https://doi.org/10.1002/9781119578291.ch1">10.1002/9781119578291.ch1</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>
+    <div class="csl-left-margin">[2]</div><div class="csl-right-inline">K. JENNI and G. LOEWENSTEIN, “Explaining the identifiable victim effect,” <i>Journal of risk and uncertainty</i>, vol. 14, no. 3, pp. 235–257, 1997, doi: <a href="https://doi.org/10.1023/a:1007740225484">10.1023/a:1007740225484</a>.</div>
+  </div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>
+    <div class="csl-left-margin">[3]</div><div class="csl-right-inline">N. Chomsky and E. S. Herman, <i>Manufacturing consent: The political economy of the mass media</i>. Bodley Head, 2008. Available: <a href="https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67">https://libgen.li/file.php?md5=ad84472690edfd90edec70d53d5f7d67</a></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status">
+<hr style="
+    clear: both;
+">
+
+  <div class="book-covers" style="margin: 1em 0; padding: 0 10px;">
+    <p style="margin: 0.5em 0; font-style: italic; color: #555;">Some works I recommend engaging with:</p>
+    <div id="books-container" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%;"></div>
+  </div>
+
+
+  <script>
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const allBooks = [
+        {title: 'The Computational Beauty of Nature', author: 'Gary William Flake'},
+        {title: 'Group Psychology', author: 'Sigmund Freud'},
+        {title: 'Logic', author: 'Nicholas Smith'},
+        {title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson'},
+        {title: 'The C Programming Language', author: 'Brian Kernighan'},
+        {title: 'Out of Bounds: Academic Freedom and the Question of Palestine', author: 'M. Abraham'},
+        {title: 'Understanding Power: The Indispensable Chomsky', author: 'Noam Chomsky'},
+        {title: 'Who Rules the World?', author: 'Noam Chomsky'},
+        {title: 'Manufacturing Consent: The Political Economy of the Mass Media', author: 'Noam Chomsky'},
+        {title: 'A People History of The World', author: 'Chris Harman'},
+        {title: 'The Arabs: A History', author: 'Eugene Rogan'},
+        {title: 'State of Terror', author: 'Y. Suarez'},
+        {title: 'A People History of The United States', author: 'Howard Zinn'},
+        {title: 'Killing Hope', author: 'William Blum'},
+        {title: 'Deliverance From Error', author: 'Al-Ghazali'},
+        {title: 'The Dawn of The Day', author: 'Friedrich Nietzsche'},
+        {title: 'Islam and The Destiny of Man', author: 'Gai Eaton'},
+        {title: 'The Polymath', author: 'Waqas Ahmed'},
+        {title: 'Twilight of The Idols', author: 'Friedrich Nietzsche'},
+        {title: 'Manfred', author: 'Lord Byron'},
+        {title: 'Marx in Soho', author: 'Howard Zinn'}
+      ];
+
+      const shuffled = allBooks.sort(() => 0.5 - Math.random());
+      const container = document.getElementById('books-container');
+      let displayedBooks = 0;
+      let bookIndex = 0;
+
+      async function tryNextBook() {
+        if (displayedBooks >= 2 || bookIndex >= shuffled.length) return;
+
+        const book = shuffled[bookIndex];
+        bookIndex++;
+
+        try {
+          const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.title)}+inauthor:${encodeURIComponent(book.author)}&maxResults=1`);
+          const data = await res.json();
+
+          if (data.items && data.items[0]) {
+            const volumeInfo = data.items[0].volumeInfo;
+            if (volumeInfo.imageLinks) {
+              const link = document.createElement('a');
+              link.style.display = 'none';
+              link.style.lineHeight = '0';
+              link.target = '_blank';
+              if (volumeInfo.infoLink) {
+                link.href = volumeInfo.infoLink;
+              }
+
+              const img = document.createElement('img');
+              img.style.cssText = 'height: 140px; border: 1px dotted #666; background: transparent;';
+              img.src = volumeInfo.imageLinks.thumbnail;
+              img.onload = () => {
+                link.style.display = 'inline-block';
+              };
+
+              link.appendChild(img);
+              container.appendChild(link);
+              displayedBooks++;
+              
+              if (displayedBooks < 2) {
+                tryNextBook();
+              }
+            } else {
+              console.log(`Cannot find book cover for: ${book.title} by ${book.author}`);
+              tryNextBook();
+            }
+          } else {
+            console.log(`Cannot find book: ${book.title} by ${book.author}`);
+            tryNextBook();
+          }
+        } catch (err) {
+          console.log(`Error fetching book: ${book.title} by ${book.author}`, err);
+          tryNextBook();
+        }
+      }
+
+      tryNextBook();
+    } else {
+      document.querySelector('.book-covers').style.display = 'none';
+    }
+  </script>
+
+  </div>
+
+
+
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2023-12-17 Sun 23:20. Last build date: 2025-12-22 Mon 22:03.</p>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

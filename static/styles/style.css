@@ -83,6 +83,7 @@ a {
 /* Pagination styling */
 .pagination {
     margin: 2em 0;
+    height: unset;
     padding: 1em 0;
     border-top: 1px dotted var(--darkbrown);
     text-align: center;
