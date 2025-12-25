@@ -5,9 +5,6 @@
 :ID: p4pacx81lik0
 :END:
 #+filetags: :project_archived:
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
 I believe that the software products that Apple builds are some of the most
 well-engineered, well-designed, and well-written software ever. And I think
 there are some reasons for that, most of them are not good ones:
@@ -53,7 +50,7 @@ there are some reasons for that, most of them are not good ones:
 
 Apple's software is good. Sometimes too good. But the reasons behind it are far
 less about pure engineering brilliance and far more about strategic corporate
-control, aggressive pricing, and an ecosystem that thrives on exclusivity.
+control, aggressive pricing, and an ecosystem that thrives on exclusivity. #[[id:4u5664n02wj0][Programming]] #[[id:fxy2iw81lik0][Apple]]
 * DONE writing about apple                                            :noexport:@general:
 :LOGBOOK:
 CLOCK: [2025-03-22 Sat 00:07]--[2025-03-22 Sat 02:27] =>  2:20
