@@ -6,13 +6,10 @@
 :END:
 
 
-#+BEGIN_tag
-{{{t}}} [[id:46whu3b0axj0][Economics]] and [[id:h762nqb0jek0][Marxism]]
-#+END_tag
 #+BEGIN_PREVIEW
 Following is an LLM written introduction into the theory of value. It's easy to
 understand and I thought it might be useful for people who want to quickly
-understand how value works.
+understand how value works. #[[id:46whu3b0axj0][Economics]] and [[id:h762nqb0jek0][Marxism]]
 #+END_PREVIEW
 
 
