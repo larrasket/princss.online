@@ -1,0 +1,83 @@
+:PROPERTIES:
+:ID:       056eos30npk0
+:CUSTOM_ID: 056eos30npk0
+:END:
+#+title: Conventional Commits considered harmful
+#+DATE: <2025-09-30 Tue 02:16>
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+
+#+BEGIN_PREVIEW
+This post was discussed in [[https://lobste.rs/s/szoe3m/conventional_commits_considered][Lobsters]]
+#+END_PREVIEW
+
+
+I could only see two use cases[fn:3] of using the [[https://www.conventionalcommits.org/en/v1.0.0/][Conventional Commits]] v.1.0.0 "convention" when I've heard of it for the first time;
+
+- Your project has a very high dependency on history and you expect that you need to check the modification history thoroughly (whatever the kind of project is, let it be a document or a novel being tracked with Git) so you need a very good searchable history with advanced filtering.
+- You want to fire CI/CD actions on your commits (still questionable purpose and I will explain why).
+
+First let's check the future as described by user [[https://news.ycombinator.com/user?id=_glsb][_glsb]] around 8 years ago:
+
+#+begin_quote
+Imagine the following future:
+
+“Have you linted and unit tested your commit message?”
+
+“Junior Developer wanted. 10 years of Conventional Commits experience required.”
+
+“Download Conventionalizer! Now you can write Conventional Commits in plain English, having all the syntax automatically generated! (node, erlang OTP and Jerry’s pre-alpha TensorFlow binding library required. Windows support coming soon.)”
+
+Something tells me the authors are hard at work solving a problem nobody needs solving.
+#+end_quote
+
+This "future"[fn:1] happened to me last night when I was trying to support a new feature in Doom Emacs, an Emacs distribution that I've been using, however, upon trying to commit my work I noticed that git is failing to make the commits. Upon investigating I found out that (literally) the linter was not passing my commits[fn:2]:
+
+
+#+begin_example
+  1 git … commit --all --
+hint: Waiting for your editor to close the file...
+Waiting for Emacs...
+> Linting commit...
+  > CURRENT feat(evil): support the new thing
+    x Invalid scope: evil
+! Failures: 1
+
+See https://discourse.doomemacs.org/git-conventions
+
+Please adjust your previous attempt:
+feat(evil): support the new thing
+#+end_example
+
+
+I was aware that Doom Emacs is using conventional commits and that the maintainers prefer if the contributors use it too, so I don't really mind doing it since it's the convention for them and I would like to contribute. However, I'm pretty certain that many people just do not give two fucks about how they should style their commits, and just knowing that they need to handle the mental overhead of learning the "proper way" of writing commit messages (oh my God saying that makes me feel horribly silly) but not only that, they need to figure out the proper picklist values of what they need to put between the =(  )= and how to write it (for example =evil= vs =evil-mode=, =:editor= or =:keyboard=), whether their change is breaking or not, whether to put =!= or not when is a change considered breaking, and then learn the modifications that the Doom Emacs maintainers put on that "convention". Can you see how unconventional it is for newcomers or people who just want to make a very small change? It filters out so many contributions.
+
+But.. it must be giving something back, right? No. Most software projects do not benefit from having that amount of structure in their commit messages, because it is really not a likely thing that you will need to filter your commits to find out all the "feat" stuff that were added in x module (which is itself is not maintainable in accuracy, because in most software your commits are crosscutting across many modules).
+
+In fact, almost all of the information that would be added in a "conventional commits" are going to be discussed over and over in the PR anyway, you will still have to write a description describing why this change was introduced, if your change has breaking stuff, you will have to do manual work to check that you didn't break any integration (other than the ones that the CI/CD will handle). You will be just passing this information twice.
+
+What about CI/CD triggers from your commits? While this is really useful, it could be totally replaced by much easier checks, in a project I worked in we used to trigger them with GitHub comments in the PR, another quicker way would be to watch certain packages in the CI/CD. For example consider this commit:
+
+#+begin_example
+fix(keyboard): something was not working
+#+end_example
+
+While =keyboard= is the name of some package. A good way to run CI/CD actions based on this, which is much better than checking the commit and linting it, is to check whether any files under that package were changed, actually doing that will be error-free, as someone might change something in this package and indicate the change as something in totally different package while writing their commits.
+
+Overall this style is just like the many other [[https://xkcd.com/927/][standards and conventions]] and it's okay to use, but it's really harmful to enforce it. It values style over content and filters out contributors who care more about the product they're getting and the code more than how your CI/CD is supposed to be managed.
+
+If you still prefer it you can squeeze a PR commits into a single one that follows your preferred style, but please do not ask contributors to learn unuseful and unportable knowledge.
+
+* Related reads:
+
+- [[https://beyermatthias.de/i-hate-conventional-commits][I hate Conventional Commits — musicmatzes blog]]
+- [[https://srazkvt.codeberg.page/posts/2025-07-06-conventional-commits-makes-me-sad.html][Conventional Commits makes me sad]] ([[https://lobste.rs/s/phfy8a/conventional_commits_makes_me_sad][comments]])
+- [[https://jasminchen.dev/articles/2022/why-conventional-commits-are-a-bad-idea/][Why I think that Conventional Commits are a bad idea | /dev/jasmin]]
+
+* Footnotes
+
+[fn:3] The maintainers promise that using Conventional Commits will enable some other things that I totally fail to comprehend, like: "Communicating the nature of changes to teammates, the public, and other stakeholders". and how this differs from showing just descriptive commits. And who the hell shows commits to stakeholders anyway?
+[fn:2] As you can see my commit is actually complying to the conventional commits style as well as to the Doom Emacs defined modules, my scope was not invalid. My guess is that it was complaining about the empty description, a bug in the linter probably, but you can get now why it is useless overhead from the first place to have a linter to check your commits.
+
+[fn:1] There are even so many tools that will help you transfer your plain English into syntactically correct conventional commits, just like how the comment describes it ([[https://generateconventionalcommit.com ][example]]), nowadays people are using LLMs for that purpose too
