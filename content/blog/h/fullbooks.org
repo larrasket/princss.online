@@ -76,33 +76,33 @@ digitally), with some side notes that could be helpful.
   reading, or the ones I wouldn't definitely reread to the "inexpedient" [fn:8]
   sections.
 * Humanities and the like
-{{{inc(../things/humanities.org)}}}
+{{{inc(../../../../things/humanities.org)}}}
 * Science
-{{{inc(../things/science.org)}}}
+{{{inc(../../../../things/science.org)}}}
 ** Linguistics
-{{{inc(h/lingustics.org)}}}
+{{{inc(lingustics.org)}}}
 ** Intelligence
-{{{inc(../main/intelligence_science.org)}}}
+{{{inc(../../../../main/intelligence_science.org)}}}
 ** Psychology
-{{{inc(../main/psychology.org)}}}
+{{{inc(../../../../main/psychology.org)}}}
 ** Cognitive Science
-{{{inc(../things/cognitive_science.org)}}}
+{{{inc(../../../../things/cognitive_science.org)}}}
 ** Mathematics
-{{{inc(t/mathematics.org)}}}
+{{{inc(../t/mathematics.org)}}}
 ** Computer Science
 :PROPERTIES:
 :CUSTOM_ID: cs
 :END:
-{{{inc(../things/computer_science.org)}}}
+{{{inc(../../../../things/computer_science.org)}}}
 ** Other                                                              :noexport:
 - الرياضات في حياتنا (زلاتكا، ش)
 - إمبراطور المآسي، سيرة للسرطان (موكرجي، س)
 
   Not a study at all, more like a novel. A sad one.
 * Politics
-{{{inc(t/political.org)}}}
+{{{inc(../t/political.org)}}}
 ** Propaganda
-{{{inc(h/propaganda.org)}}}
+{{{inc(propaganda.org)}}}
 * Economics/ Capitalism
 {{{inc(../main/ecno.org)}}}
 * Religion
