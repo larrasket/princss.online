@@ -32,10 +32,7 @@ attracts me really is the philosophical reflections. #[[id:4swh72s0s1k0][Postmod
 :PROPERTIES:
 :ID:       sxb2fsp0r1k0
 :END:
-
-#+BEGIN_tag
-{{{t}}} [[id:v3b25op0r1k0][Philosophy of Ethics]]
-#+END_tag
+#[[id:v3b25op0r1k0][Philosophy of Ethics]]
 
 The episode starts with a sudden great epiphany of the Prime Minister Michael
 Callow knowing about the kidnapping of one of the Royal family, a beloved known
@@ -99,9 +96,8 @@ sexual intercourse on Callow's family and reputation.
 :PROPERTIES:
 :ID:       7xp5k5q0r1k0
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:9kk956p02wj0][Propaganda]]
-#+END_tag
+#[[id:9kk956p02wj0][Propaganda]]
+
 The identifiable victim effect is the tendency of individuals to offer greater
 aid when a specific, identifiable person ("victim") is observed under hardship,
 as compared to a large, vaguely defined group with the same need
@@ -169,5 +165,4 @@ This style is very common especially in the first season, as we are going to see
 in the next episode and next article, the whole episode 2 of season 1 is about
 nothing but the show itself.
 
-* Bibliography
 #+print_bibliography:
