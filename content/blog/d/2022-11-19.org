@@ -9,7 +9,6 @@ This is an adapted Arabic translation (I feel more poetic in Arabic). /Followed
 by the English version/.
 
 
-
 #+begin_quote
 أيّ الوحِدة، ارفعي شاهدك إليِّ وسليني عن حال من هربَ منكِ كالعاصفة الجامحة، من أفلت منك صادحًا: لقد
 طال انفرادي فنسيت الصمت. سليني عما تعلمت ثم أعلميني: زرادشت، لم تخف عني منك خافية، لقد شعرت
