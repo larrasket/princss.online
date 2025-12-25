@@ -24,7 +24,7 @@ Here I collect my highlights from readings. More details of how this works can b
 -----
 * Content
 
-#+begin_src elisp
+#+BEGIN_SRC emacs-lisp :exports results :results value org
 (defun salih/compare-org-id (node1 node2)
   (let ((timestamp1 (cdr (org-id-decode  (org-roam-node-id node1))))
         (timestamp2 (cdr (org-id-decode  (org-roam-node-id node2)))))
@@ -114,7 +114,7 @@ Here I collect my highlights from readings. More details of how this works can b
     (mapconcat 'identity strings "")))
 
 
-(salih/print-text-nodes-anth)
+(eval (salih/print-text-nodes-anth))
 #+end_src
 
 
