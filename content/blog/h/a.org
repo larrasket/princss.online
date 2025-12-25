@@ -24,7 +24,7 @@ Here I collect my highlights from readings. More details of how this works can b
 -----
 * Content
 
-#+BEGIN_SRC emacs-lisp :exports results :results value org
+#+BEGIN_SRC emacs-lisp :results raw
 (defun salih/compare-org-id (node1 node2)
   (let ((timestamp1 (cdr (org-id-decode  (org-roam-node-id node1))))
         (timestamp2 (cdr (org-id-decode  (org-roam-node-id node2)))))
@@ -116,6 +116,524 @@ Here I collect my highlights from readings. More details of how this works can b
 
 (eval (salih/print-text-nodes-anth))
 #+end_src
+
+#+RESULTS:
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-1997-al-athar-kamil.org::#vt0dar70csk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-1997-al-athar-kamil], no. 131. Appeared: 2025-12-12 (16:31)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#qdh4rfv00sk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 34. Appeared: 2025-12-03 (22:35)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#ie265xu00sk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 32. Appeared: 2025-12-03 (22:24)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#i8514eu00sk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 30. Appeared: 2025-12-03 (22:13)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#kkmgczq00sk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 20. Appeared: 2025-12-03 (20:59)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-kashkool.org::#bpf60t00zrk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-kashkool], no. 234. Appeared: 2025-12-02 (17:21)
+-----
+#+INCLUDE: "/Users/l/roam/references/tolstoy-2022-what-shoul.org::#v53i1ea1crk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@tolstoy-2022-what-shoul], no. 72. Appeared: 2025-11-15 (23:04)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#vuycaoc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 156. Appeared: 2025-09-02 (16:51)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#n7yg8oc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 133. Appeared: 2025-09-02 (16:51)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#2gh87oc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 132. Appeared: 2025-09-02 (16:51)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#edoe5oc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 123. Appeared: 2025-09-02 (16:51)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#232k1oc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 63. Appeared: 2025-09-02 (16:51)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#se24hgc1mok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 17. Appeared: 2025-09-02 (16:46)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#jtdklnn08ok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 117. Appeared: 2025-08-22 (16:59)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#0jchxkn08ok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 112. Appeared: 2025-08-22 (16:57)
+-----
+#+INCLUDE: "/Users/l/roam/references/rousseau-2015-rever-solit-walker.org::#3nr308n08ok0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@rousseau-2015-rever-solit-walker], no. 62. Appeared: 2025-08-22 (16:50)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#dvyg4tc0qnk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 18. Appeared: 2025-08-08 (21:24)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#c4higdc0qnk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 18. Appeared: 2025-08-08 (21:15)
+-----
+#+INCLUDE: "/Users/l/roam/references/e.-2011-histor-econom-thoug.org::#ek78xit0qmk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@e.-2011-histor-econom-thoug], no. 32. Appeared: 2025-07-12 (20:03)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2009-diwan-nietz.org::#l0y34kb0omk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2009-diwan-nietz], no. 187. Appeared: 2025-07-11 (01:11)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2009-diwan-nietz.org::#k2t6ufa0omk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2009-diwan-nietz], no. 28. Appeared: 2025-07-11 (00:47)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#if63p1613mk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-25 (13:52)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#sr4el1613mk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-25 (13:52)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#l1nj2a213mk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-25 (12:30)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#lpoe1ce0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:40)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#qrffxzd0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:32)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#93ceexd0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:31)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#gil08xd0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:31)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#2oneupd0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:26)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#xkejind0xlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-20 (14:25)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#3drhyqp0slk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-16 (23:45)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#3xp0pro0slk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-16 (23:24)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#ehb7o150olk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-13 (15:29)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#3n18u440olk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 9. Appeared: 2025-06-13 (15:09)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#ougbu181jlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 8. Appeared: 2025-06-10 (10:30)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#ugjd7m10jlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 8. Appeared: 2025-06-09 (19:13)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#nyv4nr00jlk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 8. Appeared: 2025-06-09 (18:55)
+-----
+#+INCLUDE: "/Users/l/roam/references/hannay-2015-paper-journ.org::#ziw0bv70flk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@hannay-2015-paper-journ], no. 8. Appeared: 2025-06-06 (20:39)
+-----
+#+INCLUDE: "/Users/l/roam/references/caputo-2008-how-kierk.org::#gxm5iyi0elk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@caputo-2008-how-kierk], no. 20. Appeared: 2025-06-06 (06:26)
+-----
+#+INCLUDE: "/Users/l/roam/references/caputo-2008-how-kierk.org::#asi48wh0elk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@caputo-2008-how-kierk], no. 17. Appeared: 2025-06-06 (06:03)
+-----
+#+INCLUDE: "/Users/l/roam/references/gardiner-2002-kierk.org::#4453lfh0elk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@gardiner-2002-kierk], no. 10. Appeared: 2025-06-06 (05:53)
+-----
+#+INCLUDE: "/Users/l/roam/references/gardiner-2002-kierk.org::#af96cyg0elk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@gardiner-2002-kierk], no. 10. Appeared: 2025-06-06 (05:43)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-akbari-1997-al-tibyan.org::#v9g6gde12ik0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-akbari-1997-al-tibyan], no. 109. Appeared: 2025-03-07 (16:13)
+-----
+#+INCLUDE: "/Users/l/roam/references/ibn-1993-tawq-hamam.org::#9cb2mpr02ek0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@ibn-1993-tawq-hamam], no. 48. Appeared: 2024-11-18 (02:37)
+-----
+#+INCLUDE: "/Users/l/roam/references/ibn-1993-tawq-hamam.org::#0a1acfb01ek0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@ibn-1993-tawq-hamam], no. 32. Appeared: 2024-11-17 (02:33)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2009-ecce-homo.org::#4d99s0a0kdk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2009-ecce-homo], no. 5. Appeared: 2024-11-04 (04:34)
+-----
+#+INCLUDE: "/Users/l/roam/references/ibn-1993-tawq-hamam.org::#rfmcfk30kdk0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@ibn-1993-tawq-hamam], no. 17. Appeared: 2024-11-04 (02:15)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#mpk36fk0cak0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 34. Appeared: 2024-08-08 (09:36)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#4t309ck0cak0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 33. Appeared: 2024-08-08 (09:34)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#1qu548k0cak0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 33. Appeared: 2024-08-08 (09:32)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#onvhvsj0cak0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 30. Appeared: 2024-08-08 (09:22)
+-----
+#+INCLUDE: "/Users/l/roam/references/quignard-2019-sex-terror.org::#yef3wjl0m9k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@quignard-2019-sex-terror], no. 69. Appeared: 2024-07-19 (16:41)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#58x88pc0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 114. Appeared: 2024-06-04 (19:26)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#ws8lgcb0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 121. Appeared: 2024-06-04 (18:57)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#pqydbcb0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 125. Appeared: 2024-06-04 (18:57)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#kckh91b0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 119. Appeared: 2024-06-04 (18:50)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#3ol5kxa0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 119. Appeared: 2024-06-04 (18:48)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#mugdusa0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 112. Appeared: 2024-06-04 (18:45)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#d5oigla0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 93. Appeared: 2024-06-04 (18:41)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#xhi7lia0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 88. Appeared: 2024-06-04 (18:39)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#ws1hcga0z7k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 88. Appeared: 2024-06-04 (18:38)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#pdqc46u0i6k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 210. Appeared: 2024-04-25 (19:54)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#386fq4t0i6k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 45. Appeared: 2024-04-25 (19:31)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#pfs2vxs0i6k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 48. Appeared: 2024-04-25 (19:27)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#rbid4jt076k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 40. Appeared: 2024-04-17 (11:25)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#p0j8igz0x5k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 39. Appeared: 2024-04-09 (23:30)
+-----
+#+INCLUDE: "/Users/l/roam/references/al-ghazali-1993-majmuat-rasail.org::#4jsdlq61n4k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@al-ghazali-1993-majmuat-rasail], no. 231. Appeared: 2024-03-06 (04:43)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2010-twilig-idols.org::#t94eaxd094k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2010-twilig-idols], no. 16. Appeared: 2024-02-24 (03:29)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2010-twilig-idols.org::#b102rfd094k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2010-twilig-idols], no. 12. Appeared: 2024-02-24 (03:19)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#kmt2xrb094k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 153. Appeared: 2024-02-24 (02:43)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#m5x7yly034k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 143. Appeared: 2024-02-19 (21:42)
+-----
+#+INCLUDE: "/Users/l/roam/references/flake-1998-comput-beaut-natur.org::#s11dc7e1p3k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@flake-1998-comput-beaut-natur], no. 11. Appeared: 2024-02-09 (12:27)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#yd30m6e0l3k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 46. Appeared: 2024-02-05 (22:40)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#gmwcj2e1j3k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 105. Appeared: 2024-02-04 (23:11)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#q3jjy211t2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 47. Appeared: 2024-01-16 (01:11)
+-----
+#+INCLUDE: "/Users/l/roam/references/nietzsche-2006-thus-spoke.org::#8v663y01t2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@nietzsche-2006-thus-spoke], no. 53. Appeared: 2024-01-16 (01:08)
+-----
+#+INCLUDE: "/Users/l/roam/references/shariati-2007-nanah-esteh.org::#ew0fg5b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@shariati-2007-nanah-esteh], no. 111. Appeared: 2024-01-08 (20:01)
+-----
+#+INCLUDE: "/Users/l/roam/references/shariati-2007-nanah-esteh.org::#xbc855b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@shariati-2007-nanah-esteh], no. 70. Appeared: 2024-01-08 (20:01)
+-----
+#+INCLUDE: "/Users/l/roam/references/DawnofDay.org::#aazc05b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@DawnofDay], no. 201. Appeared: 2024-01-08 (20:01)
+-----
+#+INCLUDE: "/Users/l/roam/references/DawnofDay.org::#y3u8s4b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@DawnofDay], no. 190. Appeared: 2024-01-08 (20:01)
+-----
+#+INCLUDE: "/Users/l/roam/references/DawnofDay.org::#50r024b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@DawnofDay], no. 77. Appeared: 2024-01-08 (20:00)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#6mh1g3b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 9. Appeared: 2024-01-08 (20:00)
+-----
+#+INCLUDE: "/Users/l/roam/references/DawnofDay.org::#j7wfb3b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@DawnofDay], no. 33. Appeared: 2024-01-08 (20:00)
+-----
+#+INCLUDE: "/Users/l/roam/references/aurelius-2012-thoughts.org::#ejw933b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@aurelius-2012-thoughts], no. 9. Appeared: 2024-01-08 (19:59)
+-----
+#+INCLUDE: "/Users/l/roam/references/DawnofDay.org::#eozav2b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@DawnofDay], no. 125. Appeared: 2024-01-08 (19:59)
+-----
+#+INCLUDE: "/Users/l/roam/references/shariati-2007-nanah-esteh.org::#xdmik2b0k2k0" :only-contents t
+
+
+ 
+/Derived from/ [cite:@shariati-2007-nanah-esteh], no. 68. Appeared: 2024-01-08 (19:59)
+-----
 
 
     
