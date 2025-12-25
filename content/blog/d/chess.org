@@ -26,9 +26,8 @@ Circumspection… 3.  Caution… [and] lastly… the habit of not being discoura
 present bad appearances in the state of our affairs.”
 
 
-
 #+BEGIN_tag
-{{{t}}} [[id:rgogo9p02wj0][chess]]
+{{{t}}} 
 #+END_tag
 
 Franklin’s foundation of enumerating the skills cultivated by playing chess
@@ -140,7 +139,7 @@ skills honed by chess proficiency to external domains, it is not entirely
 unreasonable to hypothesize that adults who regularly play chess will also be
 able to apply techniques of strategic decision making to their personal
 endeavors, giving them a competitive edge over those adults who do not play
-chess (Rifner, 1992, Van Zyl, 1991).
+chess (Rifner, 1992, Van Zyl, 1991). #[[id:rgogo9p02wj0][chess]]
 
 Celone, J. (2001). The effects of a chess program on abstract reasoning and
 problem-solving in elementary school children. Southern Connecticut State
