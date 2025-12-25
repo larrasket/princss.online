@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       v192vmb1ask0
+:CUSTOM_ID: v192vmb1ask0
+:END:
+#+title: Programmers and software developers lost the plot on naming their tools
+#+DATE: <2025-12-11 Thu 18:27>
+
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+
+#+BEGIN_PREVIEW
+This post was discussed in [[https://news.ycombinator.com/item?id=46234806][HackerNews]], [[https://lobste.rs/s/qhairc/programmers_software_developers_lost][Lobsters]], and [[https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/][r/coding]]. You can check also my [[id:1ix262b1fsk0][response to some comments]].
+#+END_PREVIEW
+
+In Dec 2022 I watched [[id:tpj43cd0swj0][Richard Stallman]]'s talk on the EmacsConf, it was titled "What I'd like to see in Emacs". One of the interesting points Mr. Stallman pointed out in this talk was "memorable names", "I think every package that you [...] should have a name that helps you remember what job it does. [...] We've had a tendency to give packages names for the sake of pure wordplay or lack of obvious meaning". That Stallman felt compelled to make this point in 2022 tells you everything about how far we've fallen, even within the Emacs ecosystem (known for its descriptive naming conventions, dired for directory editor, eshell for Emacs shell).
+
+There's an odd tendency in modern software development; we've collectively decided that naming things after random nouns, mythological creatures, or random favorite fictional characters is somehow acceptable professional practice. This would be career suicide in virtually any other technical field.
+
+I remembered Stallman's comment lately when I had some difficulties following my friend who was describing some situation in their infrastructure. She was saying something like that: "We're using Viper for configuration management, which feeds into Cobra for the CLI, and then Melody handles our WebSocket connections, Casbin manages permissions, all through Asynq for our job queue.", perhaps only the last software in this statement was saying something about what the package/software actually does, I spent couple of moments trying to make sense of the names she mentioned, googled some of them, and really while I'm doing that I remembered that I never had to do this when interacting with any other fields: the Golden Gate Bridge tells you it spans the Golden Gate strait. The Hoover Dam is a dam, named after the president who commissioned it, not "Project Thunderfall" or "AquaHold." Steel I-beams are called I-beams because they're shaped like the letter I. Even when engineers get creative, there's logic: a butterfly valve actually looks like butterfly wings. You can tell how the name relates to what it actually defines, and how it can be memorable. If you wrote 100 CLIs, you will never counter with a [[https://github.com/spf13/cobra][cobra]].
+
+Same thing applies to other fields like chemical engineering, where people there maintain even stricter discipline. IUPAC nomenclature ensures that 2,2,4-trimethylpentane describes exactly one molecule. No chemist wakes up and decides to call it "Steve" because Steve is a funny name and they think it'll make their paper more approachable.
+* It was not always like that (I believe)
+
+I read a lot into software history, and I can't really say that there was an era of fantastic naming (even very experienced engineers made [[https://en.wikipedia.org/wiki/Inferno_(operating_system)][some]] [[https://en.wikipedia.org/wiki/Go_(programming_language)][very]] [[https://en.wikipedia.org/wiki/Limbo_(programming_language)][silly]] [[https://en.wikipedia.org/wiki/Sam_(text_editor)][naming]]) but at least some current was trying to make some sense in the 80s; grep (global regular expression print), awk (Aho, Weinberger, Kernighan; the creators' initials), sed (stream editor), cat (concatenate), diff (difference). Even when abbreviated, these names were either functional descriptions or systematic derivations. Nobody named the copy command "Sparkle" or the move command "Whisper."
+
+Early programming languages followed similar logic: FORTRAN (Formula Translation), COBOL (Common Business-Oriented Language), BASIC (Beginner's All-purpose Symbolic Instruction Code), SQL (Structured Query Language), I believe Lisp stands for list processing. The pattern was clear: names conveyed purpose or origin. Somewhere around the 2010s, a memetic virus infected software engineering. Perhaps it started innocently, developers tired of boring corporate naming conventions wanted personality in their open-source projects? maybe. A few quirky names were charming. A database named after an animal? Sure, MongoDB (from "humongous") at least has etymological connection to its purpose, even if "Mongo" became the shorthand.
+
+But we didn't stop there. We kept going. Now we're drowning in a zoo of meaningless appellations where the connection between name and function has been severed entirely. Probably pattern accelerated with the rise of GitHub and startup culture. Everyone wanted to be the next Google, a meaningless name that became iconic through market dominance. Google could afford to build brand recognition through billions in advertising and becoming a verb. Your MIT-licensed file parser with 45 GitHub stars cannot.
+* The cognitive tax
+Every obscure name is a transaction cost levied on every developer who encounters it. When you see "libsodium," you must context-switch from problem-solving mode to detective mode: "What does this do? Let me check the README. Ah, it's a crypto library. Why is it called sodium? Because chemistry? Because NaCl? Clever, I suppose." Now, multiply this by dozens of dependencies in a modern project. Each one demands tribute: a few seconds of mental processing to decode the semantic cipher. Those seconds accumulate into minutes and effort, then career-spanning mountains of wasted cognitive effort.
+
+Imagine that you are to explain to a new engineer how is your codebase structured, and the general architecture of some project, and go through the dependencies you use to delegate some certain tasks to and explain how they orchestrate together. Actually let me put my friend's statement again instead: "We're using Viper for configuration management, which feeds into Cobra for the CLI, and then Melody handles our WebSocket connections, Casbin manages permissions, all through Asynq for our job queue".
+
+
+Now pause and actually process that sentence. there's a snake, another snake, music, a mysterious proper noun, and... async-with-a-q? Half your mental RAM is busy pattern-matching these arbitrary tokens to their actual functions instead of focusing on the architectural decisions being discussed. This is the equivalent of a cardiologist saying "we'll install a Butterfly in your Whisper to improve your Thunderbeat" instead of "we'll place a stent in your artery to improve your cardiac output." Compare this to reading a scientific paper in materials science. When you encounter "high-entropy alloys" or "shape-memory polymers," the name itself conveys information. You can make educated guesses about properties and applications before reading a single word of description.
+
+* Some excuses I've heard of 
+I was told some of the following when I shared my concerns about naming [[id:bek89831uxj0][before]], here's my thoughts of some:
+
++ "But memorable names help with marketing!"
+  
+   Sure, if you're building a consumer product. Your HTTP client, cli utility helper, whatever library is not a consumer product. The people who will ever care about it just want to know what it does.
+
++ "Descriptive names are boring!"
+
+  Yes, and surgical instruments are boring. Boring is fine when clarity is paramount. This isn't creative writing class.
+
++ "It's just for fun!" Your fun has externalities.
+
+  Every person who encounters your "fun" name pays a small tax. Across the industry, these taxes compound into significant waste[fn:1].
+
++ "All the good descriptive names are taken!"
+
+  We could have used namespaces, prefixes, or compound terms like every other engineering discipline has done for centuries. We have the technology. But even if you can not do that, at least make the name has anything to do with the product, put a "DB" post-fix, do some word play like how "magit" does. If you couldn't be clear, you could have made it relatable at least.
+* The path forward
+Whatever happened wasn't malicious—it was cultural. As programming shifted from corporate mainframe work to the community builders.[fn:2], the social norms shifted too. 
+
+Thus, we need a cultural correction. Not regulation open source thrives on freedom, but a revival of professional standards through social pressure and education.
+
+Name your library after what it does. Use compound terms. Embrace verbosity if necessary. http-request-validator is infinitely superior to "zephyr" when someone is scanning dependencies at 2 AM debugging a production incident.
+
+If you absolutely must have a cute mascot or reference, fine-make it the project mascot, not the name. PostgreSQL has Slonik the elephant. PostgreSQL is still called PostgreSQL. The elephant doesn't replace semantic meaning.
+
+Reserve the creative names for end-user products where branding matters. For infrastructure, tools, and libraries, choose clarity. Every time.
+
+The next time you're about to name your project after your favorite anime character, pause. Ask yourself: "Would a civil engineer name a bridge support system this way?" If the answer is no, choose a better name.
+
+Our field deserves better than a zoo of random nouns masquerading as professional nomenclature. Clarity isn't boring, it's respect for your users' time and cognitive resources. 
+
+* Footnotes
+
+[fn:2] Which was a good thing. 
+
+[fn:1] And yeah, I know, this is not our biggest concern nor the biggest problem the industry is facing now, but sorry I had to talk about it. 
+
