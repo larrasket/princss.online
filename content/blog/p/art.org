@@ -1,0 +1,370 @@
+:PROPERTIES:
+:ID:       pcui9zv04sk0
+:CUSTOM_ID: pcui9zv04sk0
+:END:
+#+title: Deciding my favorite artist
+#+DATE: <2025-12-06 Sat 23:36>
+#+filetags: :project:
+
+
+
+#+begin_export html
+  <style type="text/css">
+    /*<![CDATA[*/
+    pre {
+      max-height: 300px;
+      overflow: auto;
+    }
+    /*]]>*/
+  </style>
+
+#+end_export
+
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]] and [[id:mvk9gc7014k0][Art]]
+#+END_tag
+
+I enjoy art and paintings, someone dear to me gifted me recently[fn:1] an encyclopedia of art, it has the names of "every"[fn:2] artist, starting from roughly where civilization striated, or to be more accurate it starts 600 B.C. and attributes everything before that to "unknown", which is not a big deal for me.
+
+I started reading from it, checking artworks on daily-basis, and document the ones I like in my PKMS. I do skip so many modern artists (for reasons I can explain somewhere else, and I should) but I believe I can cover them later. As of today, I kept my habit for exploring an artwork everyday, for 253 day, I'm still on the "D" letter.
+
+I didn't encounter yet many artists that I love. When I was asked before about my favorite artist, I usually responded with Caspar David Friedrich, I loved the man's journals before his art. Sometimes I would answer with Karl Friedrich Schinkel or Francois-Auguste Ravier. Sometimes just [[id:ynx5yta0uwj0][Leonadrdo da Vinci]] so the other person can relate and contribute to the conversation about the artist.
+
+For me, choosing a favorite artist is much more difficult that choosing a favorite sonata. I still think that both are not possible, I usually answer such questions only to keep the conversation warm. But what if we can define "favorite"? Because it's really hard to tell, is it asking about the most enjoyable? The most noble? The one I endorse the most?
+
+I had that discussion regarding the word favorite with a colleague, and she had a nice suggestion, what if we could decide a formula (thus, a definition) of the most "favored" artists? her approach was; the most favorable is the one that occurs the most, as simple as that. But I wanted more sophisticated approach. Here's how her approach might be represented formally: 
+
+\[\text{Favor Score} = \frac{L}{T} \times \log(L + 1)\]
+
+where \(L\) represents the number of loved artworks and \(T\) represents the total artworks in your library by that artist.
+
+It simply tries to care more about the /density/ of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you've encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
+I will call this algorithm 1. Let's see how we can implement it.
+
+* Implementing naive occurrence counting (algorithm 1)
+We will need first to start with data collection. The book didn't include a number for how many each artist has of works, and I didn't like all of them so I can't depend on my PKMS, nor did I count them. Lucky enough, [[https://www.wikiart.org][wikiart.org]] provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
+
+#+begin_example
+Ivan Aivazovsky :nworks:   700
+Benjamin West :nworks:   156
+Emile Claus :nworks:   26
+John Constable :nworks:   190
+William Ashford :nworks:   87
+Carl Aagaard :nworks:   220
+#+end_example
+=nworks= here stands for number of works. I also needed to populate this into my PKMS, which is just Org mode file, I loaded the above result into an EMACS buffer, and evaluated the following:
+
+#+begin_src elisp
+(defun salih/org-set-nworks-from-buffer (data-buffer org-buffer)
+  (interactive
+   (list (read-buffer "Data buffer: " (current-buffer))
+         (read-buffer "Org buffer: ")))
+  (let (alist)
+    (with-current-buffer data-buffer
+      (goto-char (point-min))
+      (while (re-search-forward
+              "^\\([^:]+?\\)[[:space:]]*:nworks:[[:space:]]*\\([0-9]+\\)" nil t)
+        (let ((name   (string-trim (match-string 1)))
+              (count  (match-string 2)))
+          (message "Parsed: %s -> %s" name count)
+          (push (cons name count) alist))))
+    (with-current-buffer org-buffer
+      (org-map-entries
+       (lambda ()
+         (let* ((heading (string-trim (nth 4 (org-heading-components))))
+                (entry   (assoc-string heading alist t)))
+           (if entry
+               (progn
+                 (message "Setting %s NWORKS=%s" heading (cdr entry))
+                 (org-set-property "NWORKS" (cdr entry)))
+             (message "No data for: %s" heading))))
+       t 'file))))
+#+end_src
+
+This means that each artist entity in the file will look like the following:
+#+begin_src org
+,** Nicolai Abildgaard
+:PROPERTIES:
+:ID:       i0jf8l21fkk0
+:CUSTOM_ID: i0jf8l21fkk0
+:NWORKS:   30
+:END:
+,** Jacques-Laurent Agasse
+:PROPERTIES:
+:ID:       dcjcb680hkk0
+:CUSTOM_ID: dcjcb680hkk0
+:NWORKS:   45
+:END:
+,** Mariotto Albertinelli
+:PROPERTIES:
+:ID:       2um0gc80hkk0
+:CUSTOM_ID: 2um0gc80hkk0
+:NWORKS:   19
+:END:
+,** Domenico Ghirlandaio
+:PROPERTIES:
+:ID:       1dq2tj80hkk0
+:CUSTOM_ID: 1dq2tj80hkk0
+:NWORKS:   108
+#+end_src
+
+Now we can implement $\frac{L}{T} \times \log(L + 1)\$ easily in Elisp; 
+
+#+begin_src elisp
+(simple-score (loved total)
+              "Simple approach: (L/T) * log(L+1)"
+              (if (and (> total 0) (> loved 0))
+                  (* (/ (float loved) total)
+                     (log (1+ loved)))
+                0.0))
+#+end_src
+
+Here's the simple score result:
+
+
+#+begin_postscript
+Note I'm running this here as of the date of writing it [2025-12-07 Sun 01:02], as I mentioned above, I only browsed the artists of the D letter. I will add here "Last run" property, so reader can relate to the last update date
+
+Last run [2025-12-07 Sun 01:28]
+#+end_postscript
+
+#+begin_example
+Artist                            Total  Simple Eval. 
+
+Thomas Cole                         130       0.5943      
+Alexey Bogolyubov                    46       0.5213      
+Mariotto Albertinelli                19       0.2189      
+Pellizza da Volpedo                  54       0.2162      
+Charles Courtney Curran              32       0.2012      
+Frank Dicksee                        27       0.1540      
+Giuseppe Abbati                      28       0.1485      
+Jasper Francis Cropsey               31       0.1342      
+Frank Cadogan Cowper                 20       0.1099      
+William Ashford                      87       0.1030      
+Pierre-Henri de Valenciennes        100       0.0896      
+Gustav Pope                           9       0.0770      
+Pietro da Cortona                    29       0.0758      
+Ivan Aivazovsky                     700       0.0757      
+Jacques Clement Wagrez               10       0.0693      
+Thomas Francis Dicksee               12       0.0578      
+Gustave-Claude-Etienne Courtois      13       0.0533      
+Jacques-Laurent Agasse               45       0.0488      
+Frederic William Burton              50       0.0439      
+Jean-Joseph-Xavier Bidauld           16       0.0433      
+Edouard Debat-Ponsan                 17       0.0408      
+Denis van Alsloot                    61       0.0360      
+Jean-Baptiste Camille Corot         600       0.0345      
+Arnold Böcklin                      124       0.0335      
+Jacques-Louis David                 128       0.0325      
+Reza Abbasi                          23       0.0301      
+Carl Aagaard                        220       0.0293      
+William-Adolphe Bouguereau          822       0.0292      
+Emile Claus                          26       0.0267      
+Sir Lawrence Alma-Tadema            444       0.0263      
+Thomas Couture                       28       0.0248      
+Hermann David Salomon Corrodi        28       0.0248      
+Alexandre Cabanel                    90       0.0244      
+Nicolai Abildgaard                   30       0.0231      
+Joachim Wtewael                      30       0.0231      
+Charles-Francois Daubigny           102       0.0215      
+Mattia Preti                         33       0.0210      
+Eduard Quitton                       37       0.0187      
+Domingos Sequeira                    40       0.0173      
+Jacques Stella                       41       0.0169      
+Walter Crane                         50       0.0139      
+Battistello Caracciolo               52       0.0133      
+Joseph DeCamp                        54       0.0128      
+John Constable                      190       0.0116      
+Jurriaan Andriessen                  60       0.0116      
+Edwin Austin Abbey                   61       0.0114      
+Oswald Achenbach                     65       0.0107      
+Anselm Feuerbach                     66       0.0105      
+Alexandre Antigna                    67       0.0103      
+Frederic Edwin Church                76       0.0091      
+Giulio Cesare Procaccini             76       0.0091      
+Knud Baade                           79       0.0088      
+Francesco Albani                     80       0.0087      
+Johan Christian Dahl                100       0.0069      
+Domenico Ghirlandaio                108       0.0064      
+Guido Reni                          148       0.0047      
+Benjamin West                       156       0.0044      
+Sandro Botticelli                   207       0.0033      
+#+end_example
+
+
+However, the issue with depending on occurrence is that, it's very likely that the artists who made significantly more artworks than others, to unfairly be on top of the list, e.g. I love around 63 artworks of [[id:2lq0ch91vik0][Ivan Aivazovsky]], but my library of his consists of around 700 artworks (he reportedly made much more than that), it's unfair in my opinion to evaluate this number to another artist, like [[id:34feald0fmk0][Thomas Cole]] for example, who only had around 200 artworks. 
+
+* Entropy approach (algorithm 2) 
+
+The problem with that approach is that, it does not calculate my preference entropy which causes favoritism. For example, I love Caspir's works, I know his melody and life, I would probably relate to any of his works and catch the reference quickly, it's unlikely for me to do the same for someone like John Constable, who I barely know his life. We can count for this like follows:
+
+
+$$\text{Favor Score} = \frac{L}{T} \cdot \left(1 - \frac{1}{\sqrt{T}}\right) \cdot \left(1 + \frac{H(L,T)}{\log(T+1)}\right)$$
+
+It looks a bit scary, but I promise it's as simple as the previous one, let me explain it. Information theory tells us there's something fundamentally missing from the simple ratio approach: the shape of your preference matters.
+
+
+Imagine you're at a museum. Artist A has 100 paintings on display, and you love exactly 50 of them. Artist B has 100 paintings, and you love 95 of them. The simple counting method says they're both “50% favorable” and “95% favorable” respectively, okay, sure. But there's something it misses: with Artist A, you're constantly unsure. Will the next painting move you? It's a coin flip. With Artist B, you /know/ you're going to love it, you know him/her, you know you will relate to it and you probably have a backstory already about the painting. That certainty, that decisive connection is what favoritism actually feels like. Information theory gives us a way to measure this decisiveness through something called “entropy” basically, how surprised you are by your own reactions. When you're consistently in love or consistently unmoved, entropy is low (good!). When you're all over the place, entropy is high (suggests a less meaningful relationship). The formula also builds in a confidence check: if you've only seen 4 works by an artist, you can't be /that/ sure yet, so it gently downweights your score until you've seen enough to really know. 
+
+
+So The \(L/T\) ratio treats all proportions as equal. Loving 50 out of 100 works scores identically to loving 5 out of 10. The key insight from information theory is that entropy captures the decisiveness of your taste.
+
+Consider Shannon entropy:
+
+\(H(L,T) = -\frac{L}{T}\log\frac{L}{T} - \frac{T-L}{T}\log\frac{T-L}{T}\)
+
+This measures the uncertainty in predicting whether you'll love a random work by that artist. When \(L/T \approx 0.5\), entropy maximizes, you're ambivalent, essentially coin-flipping. When \(L/T \to 0\) or \(L/T \to 1\), entropy minimizes, your preference is sharp and predictable. A /favorite/ artist should provoke a strong signal, not statistical noise.
+
+The full equation integrates three components: base affinity (\(L/T\)), confidence scaling (\((1 - 1/\sqrt{T})\) which asymptotically approaches 1 with more samples), and entropy bonus (rewarding low-entropy, decisive preferences). 
+
+Now let's bring both together, but sort by algorithm 2:
+
+#+begin_src elisp
+(defun salih/calculate-artist-favor-scores (org-file)
+  (cl-flet ((simple-score (loved total)
+              "Simple approach: (L/T) * log(L+1)"
+              (if (and (> total 0) (> loved 0))
+                  (* (/ (float loved) total)
+                     (log (1+ loved)))
+                0.0))
+            (entropy-score (loved total)
+              "approach with entropy"
+              (if (or (<= total 0) (< loved 0))
+                  0.0
+                (let* ((ratio (/ (float loved) total))
+                       (confidence (- 1 (/ 1 (sqrt total))))
+                       (p1 ratio)
+                       (p2 (- 1 ratio))
+                       (entropy (if (and (> p1 0) (> p2 0))
+                                    (- (+ (* p1 (log p1))
+                                          (* p2 (log p2))))
+                                  0.0))
+                       (entropy-bonus (if (> total 1)
+                                          (/ entropy (log (1+ total)))
+                                        0.0)))
+                  (* ratio
+                     confidence
+                     (1+ entropy-bonus))))))
+    
+    (with-temp-buffer
+      (insert-file-contents org-file)
+      (org-mode)
+      (goto-char (point-min))
+      
+      (let ((results '()))
+        (while (re-search-forward "^\\*\\* " nil t)
+          (let* ((heading (org-get-heading t t t t))
+                 (id (org-entry-get (point) "ID"))
+                 (nworks (org-entry-get (point) "NWORKS")))
+            
+            (when (and id nworks)
+              (let* ((total (string-to-number nworks))
+                     (node (org-roam-node-from-id id))
+                     (backlinks (when node (org-roam-backlinks-get node)))
+                     (loved (length backlinks))
+                     (simple (simple-score loved total))
+                     (entropy (entropy-score loved total)))
+                
+                (push (list :name heading
+                            :id id
+                            ;; :loved loved
+                            ;; :total total
+                            :simple-score simple
+                            :entropy-score entropy)
+                      results)))))
+        
+        (sort results (lambda (a b)
+                        (> (plist-get a :entropy-score)
+                           (plist-get b :entropy-score))))))))
+#+end_src
+
+
+This gives us:
+
+#+begin_example
+Artist                          Total      Entropy    Simple
+-------------------------------------------------------------------
+Alexey Bogolyubov                  46       0.2105    0.5213
+Thomas Cole                       130       0.1849    0.5943
+Mariotto Albertinelli              19       0.1394    0.2189
+Charles Courtney Curran            32       0.1140    0.2012
+Pellizza da Volpedo                54       0.1043    0.2162
+Frank Dicksee                      27       0.0991    0.1540
+Giuseppe Abbati                    28       0.0957    0.1485
+Jasper Francis Cropsey             31       0.0867    0.1342
+Frank Cadogan Cowper               20       0.0859    0.1099
+Gustav Pope                         9       0.0853    0.0770
+Jacques Clement Wagrez             10       0.0776    0.0693
+Thomas Francis Dicksee             12       0.0659    0.0578
+Gustave-Claude-Etienne Courtois    13       0.0613    0.0533
+Pietro da Cortona                  29       0.0603    0.0758
+William Ashford                    87       0.0538    0.1030
+Jean-Joseph-Xavier Bidauld         16       0.0507    0.0433
+Edouard Debat-Ponsan               17       0.0480    0.0408
+Pierre-Henri de Valenciennes      100       0.0469    0.0896
+Jacques-Laurent Agasse             45       0.0396    0.0488
+Reza Abbasi                        23       0.0363    0.0301
+Frederic William Burton            50       0.0358    0.0439
+Emile Claus                        26       0.0324    0.0267
+Thomas Couture                     28       0.0303    0.0248
+Hermann David Salomon Corrodi      28       0.0303    0.0248
+Denis van Alsloot                  61       0.0296    0.0360
+Nicolai Abildgaard                 30       0.0284    0.0231
+Joachim Wtewael                    30       0.0284    0.0231
+Mattia Preti                       33       0.0260    0.0210
+Ivan Aivazovsky                   700       0.0252    0.0757
+Eduard Quitton                     37       0.0234    0.0187
+Arnold Böcklin                    124       0.0225    0.0335
+Jacques-Louis David               128       0.0219    0.0325
+Domingos Sequeira                  40       0.0217    0.0173
+Jacques Stella                     41       0.0212    0.0169
+Alexandre Cabanel                  90       0.0203    0.0244
+Charles-Francois Daubigny         102       0.0180    0.0215
+Walter Crane                       50       0.0176    0.0139
+Carl Aagaard                      220       0.0172    0.0293
+Battistello Caracciolo             52       0.0170    0.0133
+Joseph DeCamp                      54       0.0164    0.0128
+Jurriaan Andriessen                60       0.0148    0.0116
+Edwin Austin Abbey                 61       0.0146    0.0114
+Jean-Baptiste Camille Corot       600       0.0146    0.0345
+Oswald Achenbach                   65       0.0137    0.0107
+Anselm Feuerbach                   66       0.0135    0.0105
+Alexandre Antigna                  67       0.0133    0.0103
+Sir Lawrence Alma-Tadema          444       0.0130    0.0263
+William-Adolphe Bouguereau        822       0.0119    0.0292
+Frederic Edwin Church              76       0.0118    0.0091
+Giulio Cesare Procaccini           76       0.0118    0.0091
+Knud Baade                         79       0.0114    0.0088
+Francesco Albani                   80       0.0113    0.0087
+John Constable                    190       0.0099    0.0116
+Johan Christian Dahl              100       0.0091    0.0069
+Domenico Ghirlandaio              108       0.0085    0.0064
+Guido Reni                        148       0.0063    0.0047
+Benjamin West                     156       0.0059    0.0044
+Sandro Botticelli                 207       0.0045    0.0033
+Gustav Klimt                      245       0.0038    0.0028
+Peter Paul Rubens                 684       0.0014    0.0010
+Nicolas Poussin                   300       0.0000    0.0000
+#+end_example
+
+Some of my favorite ones were not affected by approach change, like [[id:34feald0fmk0][Thomas Cole]], [[id:zgec92i0dkk0][Alexey Bogolyubov]] and [[id:dcy99130zrk0][Frank Dicksee]], which says that I'm not a lot into favoritism after all :). 
+
+I will add an agenda TODO here to remember to update the evaluation every couple of months.
+
+[2025-12-07 Sun 02:32] Honestly I was expecting much more surprises than that, but I guess once the data inflate more (having more artists in my PKMS, finishing more from the encyclopedia) will help.
+
+* TODO Update favorite artist evaluation                            :@general:
+SCHEDULED: <2026-02-06 Fri +2m>
+:PROPERTIES:
+:LAST_REPEAT: [2025-12-07 Sun 01:35]
+:END:
+:STATS:
+- State "DONE"       from "TODO"       [2025-12-07 Sun 01:35]
+:END:
+
+
+* Footnotes
+[fn:2] More like the ones we get to know 
+[fn:1] I wrote this "recently" around 7 months ago when I got the idea of writing this post, and it was left as a draft. I was gifted that book in Jan 2024, almost a year. 
+
+
