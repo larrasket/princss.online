@@ -1180,7 +1180,6 @@ must of necessity be unhappy.
 — علي شريعتي.
 
     
-* Bibliography
 #+print_bibliography:
 
 * Local Variables                                                     :noexport:
