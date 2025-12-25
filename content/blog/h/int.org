@@ -1,0 +1,95 @@
+#+title: Intelligence: Learning
+#+DATE:  <2023-06-23 Fri 20:45>
+#+filetags: :project:
+
+
+#+BEGIN_PREVIEW
+Learning is the change taking place in a system; it can be either permanent
+improvement of the systematic work or permanent change in the behavior of
+the organism.
+#+END_PREVIEW
+In a complicated system, a change in learning is due to many
+reasons; that is to say, there are many forms of the learning process in the
+same system, and its different parts will undergo different improvements.
+People can set new production rules and set up new behaviors.
+
+
+Following figure provides a proposed framework for learning.
+
+#+CAPTION: Learning system framework
+[[file:..//i/frm.png]]
+
+The principle of learning is that the learner must know the last result,
+i.e. whether the behavior can be improved. It’s better for learner to get
+information about which parts of the behavior are satisfied and which parts
+are not.
+
+
+* Learning theories
+The following is a brief introduction to a list of the most widely-known
+learning theories.
+** Behaviorism
+
+The characteristics of the theory are as follows:
+
+1. It emphasizes that psychology is a science, so we should pay attention to
+   experiment and observation in method and only observe and record the explicit
+   behavior in the research subject.
+2. The basis of explaining constitutive behavior is the individual’s external
+   reaction, and the formation and change of the reaction is the course of
+   restriction.
+3. Paying attention to the influence of environment on individual behavior and
+   not recognizing the importance of individual free will are regarded as
+   determinism.
+4. In education, it advocates both reward and punishment, neglects internal
+   motivation, and emphasizes the training value of external control.
+   Behaviorism became popular in the United States and extended to the
+
+Behaviorism is a significant learning theory that has greatly contributed to our
+understanding of human behavior and the learning process. It emphasizes the role
+of observable behaviors and external stimuli in shaping and modifying behavior.
+Behaviorism has provided valuable insights into how individuals acquire new
+knowledge and skills through conditioning, reinforcement, and punishment.
+
+One of the strengths of behaviorism lies in its focus on objectivity and
+empirical evidence. By emphasizing observable behavior, behaviorists have
+encouraged rigorous experimentation and measurement, enabling the development of
+precise theories and interventions. This approach has been particularly
+influential in fields such as psychology, education, and behavior management.
+
+Behaviorism has also highlighted the importance of environmental factors in
+shaping behavior. It recognizes that individuals' behaviors are influenced by
+their interactions with the environment and the consequences of their actions.
+This perspective has led to the development of effective behavior modification
+techniques, such as operant conditioning, which can be applied in various
+contexts to bring about positive behavioral changes.
+
+However, behaviorism has its limitations. Its exclusive emphasis on observable
+behaviors has been criticized for neglecting internal mental processes,
+subjective experiences, and individual differences. It fails to fully account
+for cognitive processes such as perception, memory, and problem-solving, which
+are crucial in human learning. Additionally, behaviorism's reliance on external
+reinforcement and punishment as primary mechanisms of learning has been
+questioned for its limited consideration of intrinsic motivation and the role of
+internal rewards.
+
+Despite these limitations, behaviorism remains a valuable framework for
+understanding and modifying behavior, particularly in contexts where observable
+outcomes are the primary focus. It has paved the way for the development of
+subsequent learning theories that incorporate cognitive and socio-cultural
+factors, offering a more comprehensive understanding of the learning process.
+** TODO Association
+From the end of 19th century to the beginning of 20th century, Thorndike’s
+learning theory had occupied the leadership in American psychological circles
+for nearly 50 years. Thorndike is the pioneer of animal psychology at Harvard
+University. Since 1896, he systematically studied animal behaviors by using a
+chicken, cat, dog, fish, etc., thus first putting forward the most intact
+learning theory in learning psychology. Through the scientific experiment
+method, he found that individual learning is via a kind of “try to be successful
+accidentally by mistake.” In this way, a kind of connection or combination
+between stimulus and response is established through repeated responses to a
+stimulus. In Thorndike’s view, the essence of learning lay in forming the
+association between situation and response.  So this kind of learning theory is
+known as association theory.
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]
+** TODO write                                                         :@check:

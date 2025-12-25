@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       i4n68770mfk0
+:CUSTOM_ID: i4n68770mfk0
+:END:
+#+title: Distributed Systems Assessment
+
+I've recently received an interesting assessment for developing a system "a
+small part of an ERP system with a  focus on the purchasing process". However,
+the interesting part that I found was in the long list of implementation
+requirements I found in that assessment, which I find pretty handful for
+engineers to test their understanding (as well as for HMs of course) of topics
+like CQRS, Publish-Subscribe Systems, DDD, Onion Architecture and many other
+interesting topics. The assignment PDF is available for download [[file:../i/dsa.pdf][here]].
+
+I will document in this post my progress with the development and the
+requirements.
+
+I will start with the first 3 requirements:
+
+#+begin_quote
+1. Apply the solution for the above problem statement using DDD considering the
+   different  bounded contexts different
+2. Each context should be in a separate repo, and each repo should have a single
+   branch  only for all work even for incomplete work, without that single
+   branch getting damaged,  or impacted by the incomplete work
+3. Each context should be a standalone process
+#+end_quote
+
+* Domain-Driven Design (req. #1, #2, and #3)
+
+Domain-Driven Design (DDD) is one of the most common paradigms in dealing with
+systems of big scale, and pretty common in large scale systems. Of course what
+we are dealing with here is not a large scale system, the business rules are
+pretty straightforward and could be modeled into a simple monolithic app and
+scaled easily, however, for the sake of the test we can neglect this fact.
+
+One of the most used architectural designs in this case is Onion
+Architecture[fn:1].
+
+* Footnotes
+
+[fn:1]A lot of time I see the misusing of "Clean Architecture" to describe Onion
+Architecture. The former was just how Robert C. Martin described Onion
+Architecture: a clean one. But it is not its name.

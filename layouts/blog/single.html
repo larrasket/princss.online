@@ -15,9 +15,9 @@ $artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
 <div class="blog-layout">
   <div class="blog-content">
     <nav class="breadcrumb">
-      <a href="/">home</a> <span class="sep">→</span> {{ if in .File.Dir "t/"
-      }}<a href="/blog/">blog</a> <span class="sep">→</span>
-      <a href="/blog/t/">topics</a>{{ else }}blog{{ end }}
+      <a href="/">home</a> <span class="sep">→</span> 
+      {{ if in .File.Dir "t/" }}<a href="/blog/">blog</a> <span class="sep">→</span>
+      <a href="/blog/t/">topics</a>{{ else }}<a href="/blog/">blog</a>{{ end }}
     </nav>
 
     <main>

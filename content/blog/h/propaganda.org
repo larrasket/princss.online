@@ -1,0 +1,517 @@
+:PROPERTIES:
+:ID:       9kk956p02wj0
+:END:
+#+title: Propaganda
+#+filetags: :project:
+
+
+#+CAPTION: Propaganda, an insidious force that permeates the fabric of society, weaves a web of distorted truths and manipulative narratives. It is the art of persuasion wielded as a weapon, exploiting the vulnerabilities of the human mind to mold opinions, stifle dissent, and shape collective consciousness. Like a venomous serpent, propaganda slithers through the shadows, distorting reality and subverting the very essence of truth.
+[[file:../i/prop.jpg]]
+
+#+BEGIN_PREVIEW
+The propaganda machine ruthlessly indoctrinates, manipulating emotions and appealing to primal instincts, all while camouflaging its ulterior motives behind a veneer of righteousness.
+#+END_PREVIEW
+-----
+{{{indx}}}
+
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links)
+#+END_SRC
+* notes                                                               :noexport:
+** Propaganda as a service                                           :drill:
+:PROPERTIES:
+:ID:       rj7hfiu0kzj0
+:FC_CREATED: 2024-05-05T07:49:14Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:49:14Z |
+:END:
+Propaganda nowadays can be sold as a service. Many [[id:f835e18e-625a-4ea7-ba54-311dd012046b][Social Media Corp]] are
+involved in providing their ad services for propaganda, for example;
+
+- [[id:1bt7228110k0][European Commission used twitter to pursue voters]].
+
+Companies that provide propaganda as a service include [[id:slnjj9u0kzj0][ALP]] and [[id:988jpa70izj0][NationBuilder]].
+** Propagandized Entertainment                                       :drill:
+:PROPERTIES:
+:ID:       tluek7u0hzj0
+:FC_CREATED: 2024-05-05T07:49:15Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:49:15Z |
+:END:
+Entertainment was used as "trap" across the history, [[id:8a3dcsw0gzj0][Nietzsche has described it
+before.]] [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]] expressed it once in an interview, talking about
+[cite:@chomsky-2012-excer-manuf-consen], as a method of propaganda:
+
+#+begin_quote
+This is an oversimplification, but for the eighty per cent [of the population]
+or whatever they are, the main thing is to divert them. To get them to watch
+National Football League. And to worry about ‘Mother with Child with Six Heads,’
+or whatever you pick up on the supermarket stands and so on. Or look at
+astrology. Or get involved in fundamentalist stuff or something or other. Just
+get them away. Get them away from things that matter. And for that it’s
+important to reduce their capacity to think.
+#+end_quote
+** DONE [[https://www.youtube.com/watch?v=s73axK4crZg&list=PLUOvYvXaxY9GkN6c3O7bxFsy0Zf81QR4Y&index=8][Noam Chomsky - 1989-03-15 - Manufacturing Consent]]            :@watch:
+:PROPERTIES:
+:ID:       0xsj21517ak0
+:END:
+- [2024-08-04 Sun 23:33] Questions starts at
+  https://youtu.be/s73axK4crZg?list=PLUOvYvXaxY9GkN6c3O7bxFsy0Zf81QR4Y&t=4731
+  Continue later.
+- [2024-08-04 Sun 23:28] Crazy how he expected the reaction to the propaganda model:
+  https://youtu.be/s73axK4crZg?list=PLUOvYvXaxY9GkN6c3O7bxFsy0Zf81QR4Y&t=4633
+- [2024-08-04 Sun 22:24] The very interesting thing about this lecture actually is how Chomsky shows how propaganda
+  works without theorizing anything, he was not trying to extract a model from the events
+  that he was reciting, but just informing the people with the story. It's astonishing how
+  corrupted the media and government and even without digging for that information of
+  corrupt. It's too obvious.
+:LOGBOOK:
+CLOCK: [2024-08-04 Sun 21:55]--[2024-08-04 Sun 23:35] =>  1:40
+:END:
+A lecture by [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]] on media policies. Available as text:
+https://chomsky.info/19890315/.
+
+
+Chomsky says that the following views have developed in different shapes:
+
+#+begin_quote
+Now in the last- in the modern period you get a much more sophisticated development of
+these ideas. So, for example, Reinhold Niebuhr, who is a much-respected moralist and
+commentator on world affairs, he wrote that rationality belongs to the cool observers, but
+because of the stupidity of the average man, he follows not reason but faith. And this
+na•ve faith requires that necessary illusions be developed. Emotionally potent
+oversimplifications have to be provided by the myth-makers to keep the ordinary person on
+course, because of the stupidity of the average man. That’s the same view, basically.
+#+end_quote
+
+#+begin_quote
+Walter Lippman, who was the dean of American journalists, is the man who invented the
+phrase manufacture of consent. He described the manufacture of consent as a self-conscious
+art and a regular organ of popular government. This, he said, is quite important, this is
+a revolution in the practice of democracy, and he thought it was a worthwhile revolution.
+The reason is, again, the stupidity of the average man. The common interests, he said,
+very largely elude public opinion entirely, and they can be managed only by a specialized
+class whose personal interests reach beyond the locality. That’s Niebuhr’s cool observers.
+You can guess who’s part of them. The person who pronounces these views is always part of
+that group. It’s the others who aren’t. This is in Walter Lippman’s book Public Opinion,
+which appeared shortly after World War I. And the timing is important.
+#+end_quote
+*** Clement Walker: Authority Requires Propaganda                   :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:19:05Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       16cgpw517ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:19:05Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+From [[id:0xsj21517ak0][Noam Chomsky - 1989-03-15 - Manufacturing Consent]].
+
+This contrary view can be traced back to the origins of modern democracy in the 17th
+century English revolution, when, for the first time, the- there was a challenge to the
+right of authority — whether it was the gentry, or the king, or whatever — and there was
+actually the beginnings of a real, radical, democratic movement, with a commitment on the
+part of the people involved, who were very widespread in England, to public involvement
+and control over affairs. They didn’t want to be ruled by the king, and they didn’t want
+to be ruled by parliament, they wanted to run their own affairs. And they were defeated,
+the radical democrats were defeated, but not before doing some important things which had
+a lasting effect.
+
+Well, what I’m interested in now is the reaction to this. The reaction to the first
+efforts at popular democracy — radical democracy, you might call it — were a good deal of
+fear and concern. One historian of the time, Clement Walker, warned that these guys who
+were running- putting out pamphlets on their little printing presses, and distributing
+them, and agitating in the army, and, you know, telling people how the system really
+worked, were having an extremely dangerous effect. They were revealing the mysteries of
+government. And he said that’s dangerous, because it will, I’m quoting him, /it will make
+people so curious and so arrogant that they will never find humility enough to submit to a
+civil rule/. And that’s a problem.
+
+*** [[id:7lpea5517ak0][John Lock]]: The Public Must be Told What To Believe              :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:19:01Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       5az5lw517ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:19:01Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+From [[id:0xsj21517ak0][Noam Chomsky - 1989-03-15 - Manufacturing Consent]].
+
+John Locke, a couple of years later, explained what the problem was. He said, day-laborers
+and tradesmen, the spinsters and the dairy-maids, must be told what to believe; the
+greater part cannot know, and therefore they must believe. And of course, someone must
+tell them what to believe.
+*** [[id:ol94du517ak0][Harold Lasswell]]: People can not Judge Their Own Interests       :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:18:54Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       tdl5ew517ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:18:54Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+#+begin_quote
+If you go back to the International Encyclopedia of Social Sciences published in 1933 —
+days when people were a little more open and honest in what they said — there’s an article
+on propaganda, and it’s well worth reading. There’s an entry under propaganda. The entry
+is written by a leading- one- maybe the leading American political scientist, Harold
+Lasswell, who was very influential, particularly in this area, communications, and so on.
+And in this entry in the International Encyclopedia on propaganda he says, we should not
+succumb to democratic dogmatisms about men being the best judges of their own interests.
+They’re not, he said. Even with the rise of mass education- doesn’t mean that people can
+judge their own interests. They can’t. The best judges of their interests are elites — the
+specialized class, the cool observers, the people who have rationality — and therefore
+they must be granted the means to impose their will. Notice, for the common good. Because,
+again, because- well, he says, because of the ignorance and superstition of the masses, he
+said it’s necessary to have a whole new technique of control, largely through propaganda.
+Propaganda, he says, we shouldn’t have a negative connotation about, it’s neutral.
+Propaganda, he says, is as neutral as a pump handle. You can use it for good, you can use
+it for bad; since were good people, obviously, — that’s sort of true by definition — we’ll
+use it for good purposes, and there should be no negative connotations about that. In
+fact, it’s moral to use it, because that’s the only way that you can save the ignorant and
+stupid masses of the population from their own errors. You don’t let a three year old run
+across the street, and you don’t let ordinary people make their own decisions. You have to
+control them.
+
+
+And why do you need propaganda? Well, he explains that. He says, in military-run or feudal
+societies — what we would these days call totalitarian societies — you don’t really need
+propaganda that much. And the reason is you’ve got a- you’ve got a club in your hand. You
+can control the way people behave, and therefore it doesn’t matter much what they think,
+because if they get out of line you can control them — for their own good, of course. But
+once you lose the club, you know, once the State loses its capacity to coerce by force,
+then you have some problems. The voice of the people is heard — you’ve got all these
+formal mechanisms around that permit people to express themselves, and even participate,
+and vote, and that sort of thing — and you can’t control them by force, because you’ve
+lost that capacity. But the voice of the people is heard, and therefore you’ve got to make
+sure it says the right thing. And in order to make sure it says the right thing, you’ve
+got to have effective and sophisticated propaganda, again, for their own good.
+#+end_quote
+*** [[id:hkb7xg617ak0][Thomas A. Bailey]]: Without deception we turn into dictatorship   :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:32:34Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       hgs86j617ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:32:34Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+#+begin_quote
+The- a presidential- well-known historian, presidential historian, Thomas Baily, explained
+in 1948, that because the masses are notoriously short-sighted, and generally cannot see
+danger until it is at their throats, our statesmen are forced to deceive them into an
+awareness of their own long-run interests. Deception of the people may, in fact, become
+increasingly necessary, unless we are willing to give our leaders in Washington a freer
+hand.
+
+
+In other words, if we continue this nonsense of trying to control them through elections,
+and that sort of thing, it’s going to be necessary to have deception of the people,
+because the masses are too stupid and ignorant to understand the danger that’s at their
+throat. And that’s the role of the media, to carry out the appropriate deception.
+#+end_quote
+
+*** The Trilateral Commission: The Crisis of Democracy              :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:42:04Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       vvbe0z617ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:42:04Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+#+begin_quote
+The Vietnam- the 60s created what liberal elites called a crisis of democracy. That’s the
+title of a quite important book on all of these topics, the first, and in fact, only
+book-length publication of the Trilateral Commission, published in 1975, called The Crisis
+of Democracy. It’s about the problem of governability of democracies. And there was a
+problem of the governability of democracies because people were getting out of hand. The
+domestic enemy was getting out of control, and something had to be done about it.
+
+The Trilateral Commission puts together liberal corporate/State elites from the three
+major centers of State capitalism — Western Europe, the United States, and Japan, that’s
+why the trilateral. And it is the liberal elites. This is the group around Jimmy Carter.
+That’s where he came from, in fact, and virtually all of his cabinet and top advisers.
+It’s that segment of opinion.
+
+The American rapporteur, the guy who gave the report on the- for the United States, was,
+again, Samuel Huntington. And he pointed out that Truman had been able to govern the
+country with the cooperation of a relatively small number of Wall Street lawyers and
+bankers. Then there was no crisis of democracy. That’s the way things are supposed to be.
+
+Incidentally, this kind of vulgar Marxist rhetoric is not untypical of internal documents
+in the government, or in the business press, and so on, and this was intended to be an
+internal document; they didn’t really expect people to read it, but it’s worth reading.
+I’m sure the library has it. They should.
+#+end_quote
+*** [[id:exohh4717ak0][John Jay]]: Rule requires deception, propaganda, indoctrination   :drill:
+:PROPERTIES:
+:FC_CREATED: 2024-08-04T19:45:59Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       dv77j5717ak0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-08-04T19:45:59Z |
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:b1ekly517ak0][Does the west really have democracy?]]
+#+END_tag
+#+begin_quote
+Well, that’s a view that goes right back to the origins of the republic. If you read the
+sayings of the founding fathers, you will discover that that was essentially their view as
+well. They also regarded the public as a dangerous threat. The way the country ought to be
+organized, as John Jay put it, the president of the constitutional convention and the
+first supreme court- chief justice of the supreme court, his- one of his favorite maxims,
+according to his biographer, was that those who run- those who own the country ought to
+govern it. And if they can’t govern it by force, they’ve got to govern it in another way,
+and that ultimately requires deception, propaganda, indoctrination, the manufacture of
+consent.
+#+end_quote
+** DONE [[https://en.wikipedia.org/wiki/Psychological_operations_(United_States)][Psychological operations]]                                     :@read:
+:PROPERTIES:
+:ID:       lyr2nvy0iak0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-13 Tue 04:02]--[2024-08-13 Tue 04:20] =>  0:18
+:END:
+The [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]'s army has a public sectors that handle what they call
+"PSYOP" or "Psychological Operations". From Wikipedia:
+
+#+begin_quote
+Psychological operations (PSYOP) are operations to convey selected information and
+indicators to audiences to influence their motives and objective reasoning, and ultimately
+the behavior of governments, organizations, groups, and large foreign powers.
+
+The purpose of United States psychological operations is to induce or reinforce behavior
+perceived to be favorable to U.S. objectives.
+#+end_quote
+
+While I thought that such a thing must be existing, I'm surprised how the US is not very
+discreet about it, unlike Israel's Unit 8200 for example.
+** [[id:ba890860-2186-4c47-aa40-ed8d144d52be][TikTok]] is now forced to be under US-controlled censorship
+:PROPERTIES:
+:ID:       861dmjz0hpk0
+:CUSTOM_ID: 861dmjz0hpk0
+:END:
+- https://www.npr.org/2025/09/25/nx-s1-5552512/trumps-tiktok-deal-terms-criticized-by-experts-as-a-shakedown
+- https://www.theguardian.com/technology/2025/sep/25/trump-china-tiktok-deal
+- https://abcnews.go.com/Business/trump-announces-deal-hand-tiktok-us-investors/story?id=125924104
+- https://x.com/wikileaks/status/1971199651757031632
+
+TikTok was already being [[id:9jv0mj41y4k0][Controlled by CIA]] But looks like the censorship was not enough.
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** KILL [[https://mru.org/economics-media][Economics of the Media]]                                       :@watch:
+:PROPERTIES:
+:LAST_REPEAT: [2024-08-10 Sat 19:29]
+:ID:       m1bb31u0tfk0
+:CUSTOM_ID: m1bb31u0tfk0
+:END:
+:STATS:
+- State "KILL"       from "TODO"       [2024-08-10 Sat 19:29]
+- State "DONE"       from "TODO"       [2024-08-08 Thu 10:24]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 16:50]
+- State "DONE"       from "TODO"       [2024-07-19 Fri 11:31]
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-10 Sat 19:28]--[2024-08-10 Sat 19:29] =>  0:01
+CLOCK: [2024-08-08 Thu 10:09]--[2024-08-08 Thu 10:24] =>  0:15
+CLOCK: [2024-08-02 Fri 16:21]--[2024-08-02 Fri 16:50] =>  0:29
+CLOCK: [2024-07-19 Fri 11:13]--[2024-07-19 Fri 11:31] =>  0:18
+CLOCK: [2024-06-16 Sun 07:59]--[2024-06-16 Sun 09:20] =>  1:21
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:46whu3b0axj0][Economics]]
+#+END_tag
+** DONE [[https://thesocietypages.org/cyborgology/2011/10/19/followup-chomsky-on-social-media/][Followup: Chomsky on Social Media]]                            :@check:
+:PROPERTIES:
+:ID:       033fu0u0tfk0
+:CUSTOM_ID: 033fu0u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-21 Sat 08:31]--[2023-10-21 Sat 08:39] =>  0:08
+:END:
+Also check the TPS in general.
+#+BEGIN_tag
+{{{t}}} [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Chomsky]] and [[id:f835e18e-625a-4ea7-ba54-311dd012046b][Social Media Corp]]
+#+END_tag
+** KILL [[https://youtu.be/cnj0rmnsAdI][Aljazira documentary on how meta fights for Israel]]           :@watch:
+:PROPERTIES:
+:ID:       eegaj0u0tfk0
+:CUSTOM_ID: eegaj0u0tfk0
+:END:
+- [2024-06-06 Thu 05:52] Couldn't find anything useful.
+:LOGBOOK:
+CLOCK: [2023-12-20 Wed 04:35]--[2023-12-20 Wed 04:55] =>  0:20
+:END:
+Also see https://news.ycombinator.com/item?id=37464482
+#+BEGIN_tag
+{{{t}}} [[id:scwaj4k0ozj0][Meta]] and [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** KILL [[https://link.springer.com/chapter/10.1007/978-3-319-32103-5_65][Russia’s Social Media Propaganda Warfare]]                     :@check:
+:PROPERTIES:
+:ID:       q4q1a0u0tfk0
+:CUSTOM_ID: q4q1a0u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 21:00]--[2024-01-11 Thu 21:02] =>  0:02
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1eacvec1lzj0][Russia]] and [[id:thc4j6p02wj0][Politics]]
+#+END_tag
+** KILL [[https://link.springer.com/chapter/10.1007/978-981-19-5334-7_6][Seeking Legitimation in Political Uncertainties]]              :@check:
+:PROPERTIES:
+:ID:       vcxe30u0tfk0
+:CUSTOM_ID: vcxe30u0tfk0
+:END:
+** TODO [#C] [[https://link.springer.com/chapter/10.1007/978-3-319-94069-4_4][Trump’s War Against the Media]]                           :@check:@later:
+:PROPERTIES:
+:ID:       3y8kqzt0tfk0
+:CUSTOM_ID: 3y8kqzt0tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** TODO [#C] [[https://link.springer.com/chapter/10.1057/978-1-137-54109-3_13][Political Parallelism in Botswana’s Public Media]]        :@check:@later:
+:PROPERTIES:
+:ID:       f12jozt0tfk0
+:CUSTOM_ID: f12jozt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 21:03]--[2024-01-11 Thu 21:04] =>  0:01
+CLOCK: [2024-01-01 Mon 08:30]--[2024-01-01 Mon 12:20] =>  3:50
+:END:
+** TODO [[https://link.springer.com/chapter/10.1057/9781137554505_10][A Study of the Case of The Herald]]                            :@check:@later:
+:PROPERTIES:
+:ID:       9170ozt0tfk0
+:CUSTOM_ID: 9170ozt0tfk0
+:END:
+** DONE [[https://www.newyorker.com/magazine/2023/04/03/the-dirty-secrets-of-a-smear-campaign][The Dirty Secrets of a Smear Campaign]]                        :@read:
+:PROPERTIES:
+:ID:       uhn4nzt0tfk0
+:CUSTOM_ID: uhn4nzt0tfk0
+:END:
+- [2025-08-21 Thu 01:35] \\
+  Very nice aricle of how [[id:slnjj9u0kzj0][ALP]] defemation is like. A summary is [[https://claude.ai/share/f32e40cd-794d-41a8-8c09-c540397d3d1c][here]].
+:LOGBOOK:
+CLOCK: [2025-08-21 Thu 01:14]--[2025-08-21 Thu 01:36] =>  0:22
+:END:
+** KILL [#C] [[https://archive.org/search?query=Media+Studies+104A+-+Lecture][free speach and press]]                                   :@watch:
+:PROPERTIES:
+:ID:       kts9mzt0tfk0
+:CUSTOM_ID: kts9mzt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-29 Wed 22:51]--[2025-01-29 Wed 23:15] =>  0:24
+CLOCK: [2023-11-01 Wed 05:34]--[2023-11-01 Wed 05:35] =>  0:01
+:END:
+I canceled it. Does not provide textbook, lectures are not well represented either.
+** DONE [[https://link.springer.com/chapter/10.1007/978-1-137-32021-6_5][The Propaganda Model: Still Relevant Today? | SpringerLink]]   :@read:
+:PROPERTIES:
+:ID:       e17clzt0tfk0
+:CUSTOM_ID: e17clzt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-01 Fri 23:21]--[2023-12-01 Fri 23:27] =>  0:06
+CLOCK: [2023-11-13 Mon 11:06]--[2023-11-13 Mon 11:14] =>  0:08
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:2gjizbz0gzj0][The Propaganda Model]]
+#+END_tag
+** DONE [[https://monthlyreview.org/2018/01/01/the-propaganda-model-revisited/][Monthly Review | The Propaganda Model Revisited]]              :@read:
+:PROPERTIES:
+:ID:       v7jikzt0tfk0
+:CUSTOM_ID: v7jikzt0tfk0
+:END:
+- [2025-08-22 Fri 14:31] \\
+  Good intoduction if you don't know a lot about the Propaganda Model.
+:LOGBOOK:
+CLOCK: [2025-08-22 Fri 14:24]--[2025-08-22 Fri 14:31] =>  0:07
+CLOCK: [2023-12-07 Thu 06:52]--[2023-12-07 Thu 06:54] =>  0:02
+CLOCK: [2023-10-21 Sat 08:40]--[2023-10-21 Sat 08:41] =>  0:01
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:2gjizbz0gzj0][The Propaganda Model]]
+#+END_tag
+** KILL Post about social media as new manufacturing consent.        :@write:
+Need to read Chomsky's book first.
+** KILL A propaganda example                                         :@check:@later:
+Very interesting propaganda example.. not sure how can I work someday on
+improving the general awareness.
+
+It was a Louay Alkhatib post, seems like I forgot to include it.
+* [[id:omy9ejo02wj0][Books]]                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+Are you interested in reading about the propaganda model? Following related
+literature is recommended, however, I recommend starting with a small modern
+paper: [cite:@Robinson2015]. It examines each filter proposed in the propaganda
+model assessing its relevancy and giving modern examples.
+
+- [[id:889d78a9-8707-407b-9be4-e508c45033c3][Manufacturing Consent: The Political Economy of the Mass Media]] (Chomsky et al.)
+  [fn:: (NOTE: for a readable PDF version, see [[id:acx9s711gzj0][Better PDF version of
+  Manufacuring Consent]]) While it's one of my favorite works ever, I do not
+  think that it was best-written. The book is full with examples for propaganda
+  promoted mainly by the US-based media (of course the book gave a reasoning for
+  that, that's the [[id:c2whd5819zj0][US provides highly accessible information]] systems if compared
+  to any other place) instead of forming and answering questions related to the
+  propaganda model. It's still highly recommended book for people who are new to
+  the real uncovered US politics against enemy states. For further investigation
+  about propaganda models, [cite:@pedro-caranana-2018-propag] is recommended
+  instead.]
+- Media Control: The Spectacular Achievements of Propaganda (Chomsky, N.)[fn::
+  This is an oversimplified Manufacturing Consent, however the latter is about
+  to be an out-of-date model, see [cite:@pedro-caranana-2018-propag]]
+- [[id:8vykhwd0sxj0][The Propaganda Model Today]] (Broudy et al.)
+- [[id:4n7cwpf061k0][The Propaganda Model: Still Relevant Today?]] (Robinson, P.)
+- [[id:zf7553g0w4k0][Media and The Neoliberal Swindle]] (Freedman, D.)
+- [[id:860c1q60efk0][Too Polemical or Too Critical? Chomsky on the Study of the News Media and us Foreign Policy]]
+  (Herring, E.)
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

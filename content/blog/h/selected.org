@@ -1,0 +1,28 @@
+#+title: Selected
+#+DATE: <2025-11-17 Mon 23:22>
+#+filetags: :project:
+
+Selected readings from my daily feed, and my daily surfing.
+
+* Selected Must
+:PROPERTIES:
+:ID:       j0t8uys0frk0
+:CUSTOM_ID: j0t8uys0frk0
+:END:
+* Selected Good
+:PROPERTIES:
+:ID:       ad3itys0frk0
+:CUSTOM_ID: ad3itys0frk0
+:END:
+* TODO Add something to selected.                                     :noexport:@general:
+SCHEDULED: <2025-11-18 Tue +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2025-11-17 Mon 23:27]
+:END:
+- [2025-11-17 Mon 23:27] \\
+  Finished modus
+:STATS:
+- State "DONE"       from "TODO"       [2025-11-17 Mon 23:27]
+:END:
+- [2025-11-17 Mon 23:23] \\
+  Currently at [[id:ydb1kfn02wj0][Modus Vivendi]]

@@ -1,0 +1,1427 @@
+:PROPERTIES:
+:ID:       rib7uvo02wj0
+:END:
+#+title: Representations and Implementations of Graphs
+#+date: <2020-01-04 Tue>
+#+OPTIONS: toc:1
+#+filetags: :project_archived:
+
+#+BEGIN_propert
+{{{s}}} [[id:13122uo02wj0][Exploring Computational Geometry]]
+#+END_propert
+
+* Terminology
+
+A graph $G = (V, E)$ consists of a set of vertices $V$ and a set of edges $E$, such that each edge
+in $E$ is a connection between a pair of vertices in $V$  The number of vertices is
+written $|V|$, and the number of edges is written $|E|$. $|E|$ can range from zero to a maximum
+of $|V|^{2} - |V|$. A graph with relatively few edges is called sparse, while a graph with many
+edges is called dense. A graph containing all possible edges is said to be complete.
+
+
+[[file:../i/old/2022-01-03_18-06-48_screenshot.png]]
+
+#+BEGIN_PREVIEW
+A graph with edges directed from one vertex to another is called a directed graph or
+digraph. A graph whose edges are not directed is called an undirected graph.
+#+END_PREVIEW
+
+
+A graph with labels
+associated with its vertices (as in Figure 11.1(c)) is called a labeled graph. Two
+vertices are adjacent if they are joined by an edge. Such vertices are also called
+neighbors. An edge connecting Vertices $U$ and $V$ is written $(U, V)$. Such an edge
+is said to be incident on Vertices $U$ and $V$. Associated with each edge may be a
+cost or weight. Graphs whose edges have weights (as in Figure 11.1(c)) are said to
+be weighted.
+
+A sequence of vertices $v_1 , v_2 , ..., v_n$ forms a path of length $n − 1$ if there exist
+edges from $v_i$ to $v_{i}+1$ for $1 \leq i < n$. A path is simple if all vertices on the path are
+distinct. The length of a path is the number of edges it contains. A cycle is a path
+of length three or more that connects some vertex v1 to itself. A cycle is simple if
+the path is simple, except for the first and last vertices being the same.
+
+
+[[file:../i/old/2022-01-03_18-10-42_screenshot.png]]
+
+A subgraph $S$ is formed from graph $G$ by selecting a subset $V_s$ of $G$ ’s vertices
+and a subset $E_s$ of $G$ ’s edges such that for every edge $E$ in $E_s$ , both of $E$ ’s vertices
+are in $V_s$ .
+
+An undirected graph is connected if there is at least one path from any vertex
+to any other. The maximally connected subgraphs of an undirected graph are called
+connected components. For example, Figure 11.2 shows an undirected graph with
+three connected components.
+
+A graph without cycles is called acyclic. Thus, a directed graph without cycles
+is called a directed acyclic graph or DAG.
+
+
+A free tree is a connected, undirected graph with no simple cycles. An equiv- alent definition
+is that a free tree is connected and has $|V| - 1$ edges.
+
+
+There are two commonly used methods for representing graphs. The adjacency matrix is
+illustrated by Figure 11.3(b). The adjacency matrix for a graph is a $|V| \cdot |V|$ array.
+Assume that $|V| = n$ and that the vertices are labeled from $V_0$ through $V_{n - 1}$ . Row
+i of the adjacency matrix contains entries for Vertex $v_i$.  Column $j$ in row $i$ is
+marked if there is an edge from $v_i$ to $v_j$ and is not marked otherwise. Thus, the
+adjacency matrix requires one bit at each position. Alternatively, if we wish to associate a
+number with each edge, such as the weight or distance between two vertices, then each matrix
+position must store that number. In either case, the space requirements for the adjacency
+matrix are $O (|V|^2)$.
+
+[[file:../i/old/2022-01-03_18-30-11_screenshot.png]]
+
+The second common representation for graphs is the adjacency list, illustrated
+by Figure 11.3(c). The adjacency list is an array of linked lists. The array is
+$|V|$ items long, with position i storing a pointer to the linked list of edges for Ver-
+tex $v_i$ . This linked list represents the edges by the vertices that are adjacent to
+Vertex $v_i$ .
+
+* Direction Relationships
+:PROPERTIES:
+:CUSTOM_ID: directed
+:END:
+In direction relationships, we relays on the edges between the graph points to tell if it is
+either directed or un-directed graph representation, you can imagine edges like a bridge
+between two places or a road, in social relations (i.e. social media) it's the relation
+between two nodes, for instance, following a twitter account is a process of linking your
+node with this account, here we can distinguish two types of edges based on our needed
+implementation, if we are implementing something like, let's say twitter clone, we should
+consider that each node that will be linked to the other one, should be linked only one
+time.
+
+For example, let's say we have 3 persons, 0, 1 and 2. person 0 follows 1, 2, meanwhile 1
+follows 2 and 2 does not follow anybody, the appropriate representation should be something
+like:
+
+[[file:../i/old/2022-01-03_19-11-01_screenshot.png]]
+
+In the other hand, suppose that the same 3 person are dealing with Facebook friendship, in
+Facebook when you add someone, both of you are 'friends' and both of you appear in each
+other's friend list, therefore we had to make it undirected relation and have each node
+linked to the other one:
+
+[[file:../i/old/2022-01-03_19-16-44_screenshot.png]]
+
+
+An un-directed graph in C(++), using array as an adjacency matrix, looks like the following:
+
+#+begin_src C++
+class Graph {
+
+private:
+
+      bool** adjacencyMatrix;
+
+      int vertexCount;
+
+public:
+
+      Graph(int vertexCount) {
+
+            this->vertexCount = vertexCount;
+
+            adjacencyMatrix = new bool*[vertexCount];
+
+            for (int i = 0; i < vertexCount; i++) {
+
+                  adjacencyMatrix[i] = new bool[vertexCount];
+
+                  for (int j = 0; j < vertexCount; j++)
+
+                        adjacencyMatrix[i][j] = false;
+
+            }
+
+      }
+
+      void addEdge(int i, int j) {
+
+            if (i >= 0 && i < vertexCount && j > 0 && j < vertexCount) {
+
+                  adjacencyMatrix[i][j] = true;
+
+                  adjacencyMatrix[j][i] = true;
+
+            }
+
+      }
+
+      void removeEdge(int i, int j) {
+
+            if (i >= 0 && i < vertexCount && j > 0 && j < vertexCount) {
+
+                  adjacencyMatrix[i][j] = false;
+
+                  adjacencyMatrix[j][i] = false;
+            }
+
+      }
+      bool isEdge(int i, int j) {
+
+            if (i >= 0 && i < vertexCount && j > 0 && j < vertexCount)
+
+                  return adjacencyMatrix[i][j];
+            else
+                  return false;
+      }
+      ~Graph() {
+
+            for (int i = 0; i < vertexCount; i++)
+
+                  delete[] adjacencyMatrix[i];
+
+            delete[] adjacencyMatrix;
+
+      }
+};
+#+end_src
+More minimal representation, using vectors as an adjacency list:
+
+#+begin_src C++
+#include<bits/stdc++.h>
+using namespace std;
+void addEdge(vector<int> adj[], int u, int v)
+{
+	adj[u].push_back(v);
+	adj[v].push_back(u);
+}
+void printGraph(vector<int> adj[], int V) {
+	for (int v = 0; v < V; ++v)
+	{
+		cout << "\n Adjacency list of vertex "
+			<< v << "\n head ";
+		for (auto x : adj[v])
+		cout << "-> " << x;
+		printf("\n");
+	}
+}
+
+int main() {
+	int V = 5;
+	vector<int> adj[V];
+	addEdge(adj, 0, 1);
+	addEdge(adj, 0, 4);
+	addEdge(adj, 1, 2);
+	addEdge(adj, 1, 3);
+	addEdge(adj, 1, 4);
+	addEdge(adj, 2, 3);
+	addEdge(adj, 3, 4);
+	printGraph(adj, V);
+	return 0;
+}
+#+end_src
+
+If we want to make any of those implementations use directed graph instead, we just have to
+comment the corresponding edge adding, i.e. we have to comment this  ~adjacencyMatrix[j][i]
+= false;~  in the first representation, and ~adj[v].push_back(u);~ in the other one.
+
+* Adjacency Matrix vs. Adjacency List
+:PROPERTIES:
+:CUSTOM_ID: adjacency
+:END:
+In the last example I used an adjacency list, like a vector or an array, to represent
+the relationships between nodes. In adjacency list the first node of the linked list
+represents the vertex and the remaining lists connected to this node represents the vertices
+to which this node is connected. This representation can also be used to represent a
+weighted graph. The linked list can slightly be changed to even store the weight of the
+edge, it looks like this in memory:
+
+[[file:../i/old/2022-01-03_20-25-56_screenshot.png]]
+
+/a is the adjacency List representation of the graph a/
+
+However, such a representation is not always efficient, at least from complexity
+perspective, if we need to know the relation between two nodes, we can't ever know that in
+constant time since we have to traverse the whole list to check if a node is included on it
+or node (so we can tell what is the relation between them), it's $O(N)$ complexity.
+
+In the other hand, the adjacency matrix represent looks like this:
+
+ [[file:../i/old/2022-01-03_20-31-26_screenshot.png]]
+
+/b is the Adjacency Matrix representation of the graph a/
+
+Can we know the relation between any two nodes in a constant time? Yes. We just have to
+check which node in the other's list, i.e. if we want to know the relationship between W and
+T, we have to check $W[T]$ and $T[W]$, and we are done. It's very efficient from complexity
+perspective, however it's not the best for memory.
+
+Here's a comparison between each representation:
+
+| Operation      | Adjacency Matrix                                                                              | Adjacency List                                                                                                                 |
+|----------------+-----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------|
+| Storage Space  | Required $O(V^2)$ to represent $V \cdot V$ matrix                                             | We store only the linked nodes, in the worst case that a node is connected with all other nodes, we have $O(V)$ required space |
+| Adding Vertex  | Adding vertex require adding new dimensional to matrix, by copying this will require $O(V^2)$ | We just need to push a new element in list, it takes $O(1)$                                                                    |
+| Adding an edge | To add a new edge we only need to change the boolean value from zero to one, so it's $O(1)$   | We need to make some insertion, takes $O(1)$                                                                                   |
+| Querying       | $O(1)$  to find the existing edge for some node                                               | $O(V)$ to find all relation for node.                                                                                          |
+
+* Multigraph (Multi-edges graph)
+Multigraph is an obscure data structure, since it can be represented in some other ways
+using complex forms of regular undirected graph, however it is not hard to implement. In
+implementing something like roads between points, there are many cases that we have more
+than one roads therefore we have to have this roads recorded within an adjacency list:
+
+[[file:../i/old/2022-01-03_20-14-47_screenshot.png]]
+
+
+An appropriate node to represent this:
+
+#+begin_src C++
+struct Link;
+
+struct Node {
+    Link *firstIn, *lastIn, *firstOut, *lastOut;
+    ... node data ...
+};
+
+struct Link
+{
+    Node *from, *to;
+    Link *prevInFrom, *nextInFrom, *prevInTo, *nextInTo;
+    ... link data ...
+};
+#+end_src
+
+For each Node there are two double-linked lists, one for incoming links and one for outgoing
+links. Each Link knows the starting and ending Node and also has the prev and next pointers
+for the two lists that contain it (the outgoing list in the "from" node and the incoming
+list in the "to" node).
+
+* Weighted Graph
+We can consider all of the last implementations as an unweghted graph representations, we
+don't really care about the specifications of an edge between two nodes. However, in a lot
+of applications we need so. For instance, we need to calculate the distance or the time that
+each road (edge) costs, as well we may lose some sorta of 'points' or win additional poitns
+when we use some way rather than the other, to implement such a model we use a weighted
+graph i.e. a graph with a value within edges.
+
+Something like that shouldn't be hard to implement, we just need to map each edge to some
+value:
+
+#+begin_src C++
+#include <bits/stdc++.h>
+using namespace std;
+void addEdge(vector <pair<int, int> > adj[], int u, int v, int wt) {
+	adj[u].push_back(make_pair(v, wt));
+	adj[v].push_back(make_pair(u, wt));
+}
+void printGraph(vector<pair<int,int> > adj[], int V) {
+	int v, w;
+	for (int u = 0; u < V; u++)
+	{
+		cout << "Node " << u << " makes an edge with \n";
+		for (auto it = adj[u].begin(); it!=adj[u].end(); it++)
+		{
+			v = it->first;
+			w = it->second;
+			cout << "\tNode " << v << " with edge weight ="
+				<< w << "\n";
+		}
+		cout << "\n";
+	}
+}
+
+int main()
+{
+	int V = 5;
+	vector<pair<int, int> > adj[V];
+	addEdge(adj, 0, 1, 10);
+	addEdge(adj, 0, 4, 20);
+	addEdge(adj, 1, 2, 30);
+	addEdge(adj, 1, 3, 40);
+	addEdge(adj, 1, 4, 50);
+	addEdge(adj, 2, 3, 60);
+	addEdge(adj, 3, 4, 70);
+	printGraph(adj, V);
+	return 0;
+}
+
+#+end_src
+
+* Transpose Graph
+:PROPERTIES:
+:CUSTOM_ID: transpose
+:END:
+The transpose of a graph is the converse, transpose or reverse of some directed graph.
+
+Consider the following figure:
+
+[[file:../i/old/2022-01-06_14-45-44_screenshot.png]]
+
+To find the transpose of some graph, we traverse the adjacency list and we find a vertex $v$
+in the adjacency list of vertex u which indicates an edge from $u$ to $v$ in main graph, we just
+add an edge from $v$ to $u$ in the transpose graph.
+
+#+begin_src C++
+#include <bits/stdc++.h>
+using namespace std;
+void addEdge(vector<int> adj[], int src, int dest) {
+	adj[src].push_back(dest);
+}
+
+void displayGraph(vector<int> adj[], int v) {
+	for (int i = 0; i < v; i++) {
+		cout << i << "--> ";
+		for (int j = 0; j < adj[i].size(); j++)
+			cout << adj[i][j] << " ";
+		cout << "\n";
+	}
+}
+
+void transposeGraph(vector<int> adj[], vector<int> transpose[], int v) {
+	for (int i = 0; i < v; i++)
+		for (int j = 0; j < adj[i].size(); j++)
+			addEdge(transpose, adj[i][j], i);
+}
+
+int main() {
+	int v = 5;
+	vector<int> adj[v];
+	addEdge(adj, 0, 1);
+	addEdge(adj, 0, 4);
+	addEdge(adj, 0, 3);
+	addEdge(adj, 2, 0);
+	addEdge(adj, 3, 2);
+	addEdge(adj, 4, 1);
+	addEdge(adj, 4, 3);
+
+	vector<int> transpose[v];
+	transposeGraph(adj, transpose, v);
+	displayGraph(transpose, v);
+	return 0;
+}
+
+#+end_src
+
+In the case of dealing with adjacency matrix, we just have to reverse the matrix.
+#+begin_src C++
+void transpose(int A[][N], int B[][N]) {
+    int i, j;
+    for (i = 0; i < N; i++)
+        for (j = 0; j < N; j++)
+            B[i][j] = A[j][i];
+}
+#+end_src
+
+* Definition Sheet
+:PROPERTIES:
+:CUSTOM_ID: sheet
+:END:
+Words are being kinda confusing in AD's, the following are the most needed definitions in
+graphs, in the case of ambiguity you can backtrack the definitions from here.
+
+| Idiom                         | Definition                                                                                                                                                                                                                                                                                                          |
+|-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Neighbors                     | A vertex $u$ is a neighbor of (or equivalently adjacent to) a vertex $v$ in a graph $G = (V, E)$ if there is an edge ${u, v} \in E$. For a directed graph a vertex $u$ is an in-neighbor of a vertex $v$ if $(u, v) \in E$ and an out-neighbor if $(v, u) \in E$. We also say two edges or arcs are neighbors if they share a vertex. |
+| Neighborhood                  | For an undirected graph $G = (V, E)$, the neighborhood $N_{G}(v)$ of a vertex $v \in V$ is its set of all neighbors of $v$, i.e., $N_{G}(v) = {u {u, v} \in E}$. For a directed graph we use $N_{G}(v)$ to indicate the set of out-neighbors and $N_{G} (v)$ to indicate the set of in-neighbors of $v$. If we use $N_{G} (v)$ for a directed graph, we mean the out neighbors. The neighborhood of a set of vertices $U \subseteq V$ is the union of their neighborhoods. |
+| Incident                      | We say an edge is incident on a vertex if the vertex is one of its endpoints. Similarly we say a vertex is incident on an edge if it is one of the endpoints of the edge.                                                                                                                                           |
+| Reachability & Connectivity   | A vertex $v$ is reachable from a vertex $u$ in $G$ if there is a path starting at $v$ and ending at $u$ in $G$. We use $R_{G}(v)$ to indicate the set of all vertices reachable from $v$ in $G$. An undirected graph is connected if all vertices are reachable from all other vertices. A directed graph is strongly connected if all vertices are reachable from all other vertices. |
+| Cycle                         | In a directed graph a cycle is a path that starts and ends at the same vertex. A cycle can have length one (i.e. a self loop). A simple cycle is a cycle that has no repeated vertices other than the start and end vertices being the same. In an undirected graph a (simple) cycle is a path that starts and ends at the same vertex, has no repeated vertices other than the first and last, and has length at least three. In this course we will exclusively talk about simple cycles and hence, as with paths, we will often drop simple. |
+| Trees and forests             | An undirected graph with no cycles is a forest and if it is connected it is called a tree. A directed graph is a forest (or tree) if when all edges are converted to undirected edges it is undirected forest (or tree). A rooted tree is a tree with one vertex designated as the root. For a directed graph the edges are typically all directed toward the root or away from the root. |
+| Directed acyclie graph        | A directed graph with no cycles is a /directed acyclic graph/ (DAG).                                                                                                                                                                                                                                                |
+| Distance                      | The distance $\delta G(u, v)$ from a vertex $u$ to a vertex $v$ in a graph $G$ is the shortest path (minimum number of edges) from $u$ to $v$. It is also referred to as the shortest path length from $u$ to $v$.                                                                                                  |
+| Diameter                      | The diameter of a graph is the maximum shortest path length over all pairs of vertices.                                                                                                                                                                                                                             |
+| Multigraph                    | Sometimes graphs allow multiple edges between the same pair of vertices, called multi-edges. Graphs with multi-edges are called multi-graphs. We will allow multi-edges in a couple algorithms just for convenience                                                                                                 |
+| Directed Graph                | See [[#directed][Directed Graph]]                                                                                                                                                                                                                                                                                                  |
+| Undirected Graph              | See [[#directed][Unirected Graph]]                                                                                                                                                                                                                                                                                                 |
+| Mother Vertex                 | A mother vertex in a graph $G = (V,E)$ is a vertex $v$ such that all other vertices in $G$ can be reached by a path from $v$.                                                                                                                                                                                       |
+| Strongly Connected Components | A directed graph is strongly connected if there is a path between all pairs of vertices.                                                                                                                                                                                                                            |
+| Equivalence of nodes          | For a directed graph $G$ = $(V,E)$, $\forall u, v \in V, u \equiv v$ if $\exists a$ path from $u$ to $v$ and a path from $v$ to $u$                                                                                                                                                                                 |
+| Biconnected Components        | See [[#biconnected][Biconnected Components]]                                                                                                                                                                                                                                                                                          |
+| Negative Edge Weights         | It is a weighted graph in which the total weight of an edge is negative.                                                                                                                                                                                                                                            |
+| Negative Cycle                | Cycle whose edges sum to a negative value                                                                                                                                                                                                                                                                           |
+| Articulation Point            |                                                                                                                                                                                                                                                                                                                     |
+
+* Graph Traversal
+Given any starting vertex, we can find all the reachable vertices from the start point,
+there are many algorithms that can do this, the simplest of which is depth-frist search.
+
+** Depth First Search (DFS)
+:PROPERTIES:
+:ID:       rz5728e10lk0
+:CUSTOM_ID: rz5728e10lk0
+:END:
+As the name implies, DFS enumerate the deepest paths and only backtracking when it reaches a
+dead end or an already-visited section of the graph. We can simplify the process of the
+algorithm as follows:
+
+- DFS keeps track of the attribute of each vertex, let it be color, unvisited vertices are white by default. Vertices that have been visited but still may be backtracked are colored gray. Vertices which are completely processed are colored black. It prevents loops by skipping non-white vertices.
+
+- Instead of just marking visited vertices, the algorithm also keeps track of the tree generated by the depth-first traversal. It does so by marking the “parent” of each visited vertex, aka the vertex that DFS visited immediately prior to visiting the child.
+
+
+The algorithm takes an input a start vertex $s$, be default it shouldn't really return
+anything, you can make it return the timestamp of finishing the traversing process.
+
+#+begin_src C++
+void DFS(int v) {
+    visited[v] = true;
+    // Do somtmeting here
+    list<int>::iterator i;
+    for (i = adj[v].begin(); i != adj[v].end(); ++i)
+        if (!visited[*i])
+            DFS(*i);
+}
+#+end_src
+
+There is also an iterative approach, which is just the same as the recursive one but in the
+iterative approach: You first insert all the elements into the stack - and then handle the
+head of the stack [which is the last node inserted] - thus the first node you handle is the
+last child.
+
+In the recursive approach: You handle each node when you see it. Thus the first node you
+handle is the first child:
+
+#+begin_src C++
+void Graph::DFS(int s)
+{
+    vector<bool> visited(V, false);
+
+    stack<int> stack;
+
+    stack.push(s);
+
+    while (!stack.empty()) {
+        int s = stack.top();
+        stack.pop();
+
+        if (!visited[s]) {
+            // Do somthing here
+            visited[s] = true;
+        }
+
+        for (auto i = adj[s].begin(); i != adj[s].end(); ++i)
+            if (!visited[*i])
+                stack.push(*i);
+    }
+}
+#+end_src
+
+As the name implies, DFS enumerate the deepest paths and only backtracking when it reaches a
+dead end or an already-visited section of the graph. We can simplify the process of the
+algorithm as follows:
+
+- DFS keeps track of the attribute of each vertex, let it be color, unvisited vertices are white by default. Vertices that have been visited but still may be backtracked are colored gray. Vertices which are completely processed are colored black. It prevents loops by skipping non-white vertices.
+
+- Instead of just marking visited vertices, the algorithm also keeps track of the tree generated by the depth-first traversal. It does so by marking the “parent” of each visited vertex, aka the vertex that DFS visited immediately prior to visiting the child.
+
+
+The algorithm takes an input a start vertex $s$, be default it shouldn't really return
+anything, you can make it return the timestamp of finishing the traversing process.
+
+#+begin_src C++
+void DFS(int v) {
+    visited[v] = true;
+    // Do somtmeting here
+    list<int>::iterator i;
+    for (i = adj[v].begin(); i != adj[v].end(); ++i)
+        if (!visited[*i])
+            DFS(*i);
+}
+#+end_src
+
+There is also an iterative approach, which is just the same as the recursive one but in the
+iterative approach: You first insert all the elements into the stack - and then handle the
+head of the stack [which is the last node inserted] - thus the first node you handle is the
+last child.
+
+In the recursive approach: You handle each node when you see it. Thus the first node you
+handle is the first child:
+
+#+begin_src C++
+void Graph::DFS(int s)
+{
+    vector<bool> visited(V, false);
+
+    stack<int> stack;
+
+    stack.push(s);
+
+    while (!stack.empty()) {
+        int s = stack.top();
+        stack.pop();
+
+        if (!visited[s]) {
+            // Do somthing here
+            visited[s] = true;
+        }
+
+        for (auto i = adj[s].begin(); i != adj[s].end(); ++i)
+            if (!visited[*i])
+                stack.push(*i);
+    }
+}
+#+end_src
+
+** Strongly Connected Components (SCC)
+:PROPERTIES:
+:ID:       a9xiv7e10lk0
+:CUSTOM_ID: a9xiv7e10lk0
+:END:
+
+We will see that any graph $G = (V, E)$ can be partitioned into strongly connected
+components. For a component to be strongly connected, every vertex in the component must be
+reachable from every other vertex in the same component. (See the definition of equivalence
+node in [[#sheet][the definition sheet]]).
+
+*** Kosarju's Algorithm
+:PROPERTIES:
+:CUSTOM_ID: scc
+:END:
+
+Kosaraju-Sharir's algorithm (also known as Kosaraju's algorithm) is a linear time algorithm
+to find the strongly connected components of a directed graph. Aho, Hopcroft and Ullman
+credit it to S. Rao Kosaraju and Micha Sharir. Kosaraju suggested it in 1978 but did not
+publish it, while Sharir independently discovered it and published it in 1981.
+
+The algorithm is baiscally like following:
+1. Create an empty stack ~s~ and traverse the graph using DFS
+   In DFS, avert each recursive calling for the adjacent vertices of a vertex, push the
+   vertex to stack.
+2. Reverse directions of all arcs to obtain the transpose graph. See [[#transpose][transpose graph]].
+
+3. One by one pop a vertex from S while S is not empty. Let the popped vertex be $v$. Take
+   $v$ as source and do DFS. The DFS starting from $v$ prints strongly connected component
+   of $v$. In the above example, we process vertices in order 0, 3, 4, 2, 1 (One by one
+   popped from stack).
+
+For proof, tracing and more info, See [[https://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/GraphAlgor/strongComponent.htm][Strongly Connected Components]].
+
+Implementations in C(++):
+#+begin_src C++
+void DFS(int v, bool visited[]);
+
+Graph getTranspose() {
+    Graph g(V);
+    for (int v = 0; v < V; v++)
+    {
+        list<int>::iterator i;
+        for(i = adj[v].begin(); i != adj[v].end(); ++i)
+        {
+            g.adj[*i].push_back(v);
+        }
+    }
+    return g;
+}
+
+
+void fillOrder(int v, bool visited[], stack<int> &Stack) {
+    visited[v] = true;
+    list<int>::iterator i;
+    for(i = adj[v].begin(); i != adj[v].end(); ++i)
+        if(!visited[*i])
+            fillOrder(*i, visited, Stack);
+    Stack.push(v);
+}
+
+void printSCCs() {
+    stack<int> Stack;
+    bool *visited = new bool[V];
+    for(int i = 0; i < V; i++)
+        visited[i] = false;
+
+    for(int i = 0; i < V; i++)
+        if(visited[i] == false)
+            fillOrder(i, visited, Stack);
+
+    Graph gr = getTranspose();
+
+    for(int i = 0; i < V; i++)
+        visited[i] = false;
+
+    while (Stack.empty() == false)
+    {
+        int v = Stack.top();
+        Stack.pop();
+        if (visited[v] == false) {
+            DFS(v, visited);
+            cout << endl;
+        }
+    }
+}
+#+end_src
+*** KILL Tarjan's Algorithm                                           :@write:
+* Detecting Cycles In Graphs
+:PROPERTIES:
+:ID:       8d3gj8e10lk0
+:CUSTOM_ID: 8d3gj8e10lk0
+:END:
+/Hint: Review cycle definition in the [[#sheet][definition sheet]] above/
+** Using [[id:rz5728e10lk0][Depth First Search (DFS)]]
+We can detect cycles in directed graphs using DFS. This is based on the fact that there is a
+cycle in a graph only if there is a back edge present in the graph. A back edge is an edge
+that is from a node to itself (self-loop) or one of its ancestors in the tree produced by
+DFS.
+
+To detect a back edge, keep track of vertices currently in the recursion stack of function
+for DFS traversal. If a vertex is reached that is already in the recursion stack, then there
+is a cycle in the tree. The edge that connects the current vertex to the vertex in the
+recursion stack is a back edge.
+
+The algorithm is the following:
+
+1. Initially we take the 3 Sets(White,Black and Grey) and stored all the nodes in white set.
+2. Then select a node from white set, then remove it from white set and put into the grey
+   set and then perform DFS traversal.
+3. During traversal, for every neighbouring node which is present in white set, move it from
+   white set to grey set.
+4. During DFS traversal if we find any neighbouring node which is present in a grey set,
+   Hence cycle is present.
+5. During traversal, put a node into the black set if it has no more neighbouring nodes
+   present in white
+
+#+begin_src C++
+#include<bits/stdc++.h>
+using namespace std;
+set<int>white;
+set<int>grey;
+set<int>black;
+int flag=0;
+
+void edge(vector<int>adj[],int u,int v){
+  adj[u].push_back(v);
+}
+
+void CycleDetect(int u,vector<int>adj[]){
+    white.erase(u);
+    grey.insert(u);
+
+    for(int i=0;i<adj[u].size();i++){
+      if(white.find(adj[u][i])!=white.end()) {
+
+      CycleDetect(adj[u][i],adj);
+
+        }
+      if(grey.find(adj[u][i])!=grey.end()){ //check if its is present or not in grey set
+
+        flag=1;
+
+      }
+
+    }
+    black.insert(u);//put into the black set
+
+    grey.erase(u);//remove from the grey set
+}
+
+int main(){
+  vector<int>adj[5];//vector of array to store the graph
+
+  //input for edges
+  edge(adj,0,2);
+  edge(adj,0,1);
+  edge(adj,1,3);
+  edge(adj,2,0);
+  edge(adj,3,3);
+  edge(adj,2,3);
+  edge(adj,2,4);
+  for(int i=0;i<5;i++){
+    white.insert(i);
+  }
+  CycleDetect(0,adj);
+  if(flag==0)cout<<"Graph does not contain cycle"<<endl;
+  else
+  cout<<"Graph contain cycle"<<endl;
+  return 0;
+}
+#+end_src
+
+* Biconnected Components
+:PROPERTIES:
+:CUSTOM_ID: biconnected
+:END:
+The operations that we have implemented thus far are simple extensions of depth first
+and breadth first search. The next operation we implement is more complex and requires
+the introduction of additional terminology. We begin by assuming that $G$ is an
+undirected connected graph.
+
+An articulation point is a vertex $v$ of $G$ such that the deletion of $v$, together with
+all edges incident on $v$, produces a graph, $G$, that has at least two connected com-
+ponents. For example, the connected graph of the following figure has four articulation
+points, vertices 1,3,5, and 7.
+
+[[file:../i/old/2022-04-08_07-58-38_screenshot.png]]
+
+A /biconnected graph/ is a connected graph that *has no articulation points*. The graph of
+the previous figure is not a biconnected graph. In many graph applications, articulation
+points are undesirable. For instance, suppose that the graph of the last figure represents a
+communication network.  In such graphs, the vertices represent communication stations and
+the edges represent communication links. Now suppose that one of the stations that is an
+articulation point fails. The result is a loss of communication not just to and from that
+single station, but also between certain other pairs of stations.
+
+
+A biconnected component of a connected undirected graph is a maximal bicon-
+nected subgraph, $H$, of $G$. By maximal, we mean that $G$ contains no other subgraph that
+is both biconnected and properly contains $H$. It is easy to verify that
+two biconnected components of the same graph have no more than one vertex in common. This
+means that no edge can be in two or more bicon- nected components of a graph. Hence, the
+biconnected components of G partition the edges of G.
+
+
+
+We can find the biconnected components of a connected undirected graph, G, by
+using any depth first spanning tree of G. For example, the function call ~dfs (3)~ applied to
+the graph of the last graph produces the spanning tree of the following figure:
+
+[[file:../i/old/2022-04-08_08-06-21_screenshot.png]]
+
+If redrawn the tree in the following figure:
+
+[[file:../i/old/2022-04-08_08-07-57_screenshot.png]]
+
+
+To better reveal its tree structure. The numbers outside the vertices in either figure give
+the sequence in which the vertices are visited during the depth first search. We call this
+number the depth first number, or $dfn$, of the vertex. For example, $dfn (3) =0$, $dfn (0) =4$,
+and $dfn (9) = 8$. Notice that vertex 3, which is an ancestor of both vertices 0 and 9, has
+a lower dfn than either of these vertices.  Generally, if $u$ and $v$ are two vertices, and u is
+an ancestor of v in the depth first spanning tree,· then $dfn (u) < dfn (v)$.
+
+
+that we cannot reach an ancestor of u using a path that consists of only $w$, descendants of
+These observations lead us to define a value, low, for each
+vertex of $G$ such that low $(u)$ is the lowest depth first number that we can reach from $u$
+using a path of descendants followed by at most one back edge:
+
+[[file:../i/old/2022-04-08_08-23-12_screenshot.png]]
+
+Therefore, *we can say that $u$ is an articulation point if $u$ is either the root of the
+spanning tree and has two or more children, or $u$ is not the root and $u$ has a child $w$
+such that $low (w) \geq dfn (u)$.* The following table is the analysis for the last
+example:
+
+[[file:../i/old/2022-04-08_08-28-50_screenshot.png]]
+
+Form that table we conclude that vertex 1 is an articulation point since it has a child 0
+such that low (0) = 4 ~ dfn (1) = 3. Vertex 7 is also an articulation point since low (8) =9
+~ dfn (7) =7, as is vertex 5 since low (6) =5 ~ dfn (5) = 5. Finally, we note that the root,
+vertex 3, is an articulation point because it has more than one child.
+
+
+#+begin_src c++
+
+// A C++ program to find biconnected components in a given undirected graph
+#include <iostream>
+#include <list>
+#include <stack>
+#define NIL -1
+using namespace std;
+int count = 0;
+class Edge {
+public:
+    int u;
+    int v;
+    Edge(int u, int v);
+};
+Edge::Edge(int u, int v)
+{
+    this->u = u;
+    this->v = v;
+}
+
+// A class that represents an directed graph
+class Graph {
+    int V; // No. of vertices
+    int E; // No. of edges
+    list<int>* adj; // A dynamic array of adjacency lists
+
+    // A Recursive DFS based function used by BCC()
+    void BCCUtil(int u, int disc[], int low[],
+                 list<Edge>* st, int parent[]);
+
+public:
+    Graph(int V); // Constructor
+    void addEdge(int v, int w); // function to add an edge to graph
+    void BCC(); // prints strongly connected components
+};
+
+Graph::Graph(int V)
+{
+    this->V = V;
+    this->E = 0;
+    adj = new list<int>[V];
+}
+
+void Graph::addEdge(int v, int w)
+{
+    adj[v].push_back(w);
+    E++;
+}
+
+// A recursive function that finds and prints strongly connected
+// components using DFS traversal
+// u --> The vertex to be visited next
+// disc[] --> Stores discovery times of visited vertices
+// low[] -- >> earliest visited vertex (the vertex with minimum
+// discovery time) that can be reached from subtree
+// rooted with current vertex
+// *st -- >> To store visited edges
+void Graph::BCCUtil(int u, int disc[], int low[], list<Edge>* st,
+                    int parent[])
+{
+    // A static variable is used for simplicity, we can avoid use
+    // of static variable by passing a pointer.
+    static int time = 0;
+
+    // Initialize discovery time and low value
+    disc[u] = low[u] = ++time;
+    int children = 0;
+
+    // Go through all vertices adjacent to this
+    list<int>::iterator i;
+    for (i = adj[u].begin(); i != adj[u].end(); ++i) {
+        int v = *i; // v is current adjacent of 'u'
+
+        // If v is not visited yet, then recur for it
+        if (disc[v] == -1) {
+            children++;
+            parent[v] = u;
+            // store the edge in stack
+            st->push_back(Edge(u, v));
+            BCCUtil(v, disc, low, st, parent);
+
+            // Check if the subtree rooted with 'v' has a
+            // connection to one of the ancestors of 'u'
+            // Case 1 -- per Strongly Connected Components Article
+            low[u] = min(low[u], low[v]);
+
+            // If u is an articulation point,
+            // pop all edges from stack till u -- v
+            if ((disc[u] == 1 && children > 1) || (disc[u] > 1 && low[v] >= disc[u])) {
+                while (st->back().u != u || st->back().v != v) {
+                    cout << st->back().u << "--" << st->back().v << " ";
+                    st->pop_back();
+                }
+                cout << st->back().u << "--" << st->back().v;
+                st->pop_back();
+                cout << endl;
+                count++;
+            }
+        }
+
+        // Update low value of 'u' only of 'v' is still in stack
+        // (i.e. it's a back edge, not cross edge).
+        // Case 2 -- per Strongly Connected Components Article
+        else if (v != parent[u]) {
+            low[u] = min(low[u], disc[v]);
+            if (disc[v] < disc[u]) {
+                st->push_back(Edge(u, v));
+            }
+        }
+    }
+}
+
+// The function to do DFS traversal. It uses BCCUtil()
+void Graph::BCC()
+{
+    int* disc = new int[V];
+    int* low = new int[V];
+    int* parent = new int[V];
+    list<Edge>* st = new list<Edge>[E];
+
+    // Initialize disc and low, and parent arrays
+    for (int i = 0; i < V; i++) {
+        disc[i] = NIL;
+        low[i] = NIL;
+        parent[i] = NIL;
+    }
+
+    for (int i = 0; i < V; i++) {
+        if (disc[i] == NIL)
+            BCCUtil(i, disc, low, st, parent);
+
+        int j = 0;
+        // If stack is not empty, pop all edges from stack
+        while (st->size() > 0) {
+            j = 1;
+            cout << st->back().u << "--" << st->back().v << " ";
+            st->pop_back();
+        }
+        if (j == 1) {
+            cout << endl;
+            count++;
+        }
+    }
+}
+
+#+end_src
+
+* Union-Find (Disjoint Set)
+A union-find algorithm is an algorithm that performs two useful operations on such a data
+structure:
+
++ Find: Determine which subset a particular element is in. This can be used for determining
+  if two elements are in the same subset.
+
++ Union: Join two subsets into a single subset. Here first we have to check if the two
+  subsets belong to same set. If no, then we cannot perform union.
+
+We already have discussed an algorithm to detect cycle in directed graph. Here Union-Find
+Algorithm can be used to check whether an undirected graph contains cycle or not. The idea
+is that,
+
+#+begin_quote
+Initially create subsets containing only a single node which are the parent of itself. Now
+while traversing through the edges, if the two end nodes of the edge belongs to the same set
+then they form a cycle. Otherwise, perform union to merge the subsets together.
+#+end_quote
+* Reach The Mother Vertex
+/Hint: Review the Mother Vertex in the [[#sheet][definition sheet]] above/
+The mother vertex in the following graph is ~[1, 3, 4]~:
+
+(sadly link image is broken..)
+
+Because using any of those points we can traverse the whole graph (all vertices). To find
+those points, we have to consider the 3 cases of graphs:
+1. Dealing with *undirected connected graph*: In any *undirected graph*, all the points are mother vertices since we can reach any point from wherever vertex.
+2. Dealing with *disconected graphs*: There is *not* a mother vertex in disconected graphs.
+3. Dealing with *directed connected graphs*: there can be more than 2 mother vertices.
+
+We can solve such a problem using DFS algorithm to traverse all vertices and find whether
+we can reach all the vertices from an $x$ point (let $x$ by any vertex), this tekes
+$O(V(V+E))$ time, which is inefficient.
+
+Rather, we can make a use of the Kosaraju's SCC algorithm (See [[#scc][SCC]]), In a graph of
+strongly connected components, mother vertices are always vertices of source component in
+component graph.
+
+#+begin_src C++
+findMother() {
+// visited[] is used for DFS. Initially all are
+// initialized as not visited
+vector <bool> visited(V, false);
+
+// To store last finished vertex (or mother vertex)
+int v = 0;
+
+// Do a DFS traversal and find the last finished
+// vertex
+for (int i = 0; i < V; i++) {
+	if (visited[i] == false)
+	{
+		DFSUtil(i, visited);
+		v = i;
+	}
+}
+
+// If there exist mother vertex (or vertices) in given
+// graph, then v must be one (or one of them)
+
+// Now check if v is actually a mother vertex (or graph
+// has a mother vertex). We basically check if every vertex
+// is reachable from v or not.
+
+// Reset all values in visited[] as false and do
+// DFS beginning from v to check if all vertices are
+// reachable from it or not.
+fill(visited.begin(), visited.end(), false);
+DFSUtil(v, visited);
+for (int i=0; i<V; i++)
+	if (visited[i] == false)
+		return -1;
+return v;
+
+#+end_src
+
+There is many ways to resolve the same problem if we want to get more than 1 mother
+vertex, for example we can tack the last $n$ visited points in the DFS process and check
+them.
+
+* KILL Bellman-Ford's Shortest Path                                   :@write:
+The Bellman-Ford [[id:a43f60c9-4754-450f-ad66-67a9faabb10c][algorithm]] is a way to find single source shortest paths in a graph ith
+negative edge weights (but no negative cycles). The second for loop in this algorithm also
+detects negative cycles.
+
+The first for loop relaxes each of the edges in the graph $n − 1$ times. We claim that after
+$n − 1$ iterations, the distances are guaranteed to be correct.
+
+Overall, the algorithm takes $O(m \cdot n)$ time
+
+- [2024-07-26 Fri 18:17] Oh boy, that has been a TODO for years, I've to KILL it now.
+* Balanced Trees
+
+We call a tree binary if each node in it has at most two children. A node’s left child with
+descendants forms the node’s left sub-tree. The definition of the right sub-tree is similar.
+
+Although suitable for storing hierarchical data, binary trees of this general form don’t
+guarantee a fast lookup. Let’s take as the example the search for number 9 in the following
+tree:
+
+(some links are broken, I'm wokring on fixing that)
+
+#+DOWNLOADED: screenshot @ 2022-07-29 09:50:33
+[[file:../i/old/2022-07-29_09-50-33_screenshot.png]]
+
+
+
+
+Whichever node we visit, we don’t know if we should traverse the left or the right sub-tree
+next. That’s because the tree hierarchy doesn’t follow the relation $\leq$.
+
+So, in the worst case, a search takes $\boldsymbol{O(n)}$ time, where $\boldsymbol{n}$ is the
+number of nodes in the tree.
+
+
+We solve this problem by turning to a special type of binary tree called binary search tree
+(BST). For each node $\boldsymbol{x}$ in a BST, all the nodes in the left sub-tree of
+$\boldsymbol{x}$ contain the values that are strictly lower than $\boldsymbol{x}$. Further, all
+the nodes in the $\boldsymbol{x}$‘s right sub-tree are $\boldsymbol{\geq x}$. For instance:
+
+
+#+DOWNLOADED: screenshot @ 2022-07-29 09:52:24
+[[file:../i/old/2022-07-29_09-52-24_screenshot.png]]
+
+
+The order the tree maintains allows us to prune it during a lookup. Suppose we visit the
+node $x < y$ while searching for y. We can disregard the $x$‘s left sub-tree and focus only on
+the right, which speeds up the search. This is how we find 9 in the above search tree:
+
+
+
+#+DOWNLOADED: screenshot @ 2022-07-29 09:53:07
+[[file:../i/old/2022-07-29_09-53-07_screenshot.png]]
+
+However, the worst-case complexity of the search is still $\boldsymbol{O(n)}$. It occurs if we
+construct the tree from a sorted array, in which case the tree has height n and degenerates
+to a linked list. Since insertion and deletion include the search, all operations commonly
+performed on a BST are $\boldsymbol{O(n)}$ in the worst case. So, it’s the height of the tree
+that determines the complexity. That’s where balanced trees come in. They’re a special type
+of binary search tree.
+
+
+
+
+*A balanced tree is a search tree that doesn’t just maintain the order between nodes. It also
+controls its height, making sure it stays $\boldsymbol{O(\log n)}$ after insertion or
+deletion*.
+
+To do that, a balanced tree must re-balance itself after we add or delete a node. That
+causes a computational overhead and complicates the algorithms for insertion and deletion.
+However, that’s the price we’re ready to pay for a logarithmic-height search tree with fast
+search, insertion, and deletion operations. We won’t cover the re-balancing algorithms in
+this article.
+
+There are several types of such trees. They require all their nodes to be balanced, but the
+notion of balance differs from type to type.
+
+
+
+
+
+
+** AVL Trees
+In an AVL tree, we call a node balanced if the heights of its left and right sub-trees
+differ at most by 1. So, a search tree with root x is an AVL tree if all its nodes are
+balanced in the AVL sense (empty search trees, with height 0, are trivially balanced):
+
+\begin{equation*}
+AVL(x) \iff \left|height(x.left) - height(x.right)\right| \leq 1           \text{ and } AVL(x.left) \text{ and } AVL(x.right)
+\end{equation*}
+
+
+
+#+DOWNLOADED: screenshot @ 2022-07-29 09:57:36
+[[file:../i/old/2022-07-29_09-57-36_screenshot.png]]
+
+
+The AVL tree (named for its inventors Adelson-Velskii and Landis) should be viewed as a BST
+with the following additional property: For every node, the heights of its left and right
+subtrees differ by at most 1. As long as the tree maintains this property, if the tree
+contains n nodes, then it has a depth of at most $O(log n)$. As a result, search for any node
+will cost $O(log n)$, and if the updates can be done in time proportional to the depth of the
+node inserted or deleted, then updates will also cost O(log n), even in the worst case.
+
+The key to making the AVL tree work is to alter the insert and delete routines so as to
+maintain the balance property. Of course, to be practical, we must be able to implement the
+revised update routines in $Θ(log n)$ time.
+
+
+Consider what happens when we insert a node with key value 5, as shown. The tree on the left
+meets the AVL tree balance requirements. After the insertion, two nodes no longer meet the
+requirements. Because the original tree met the balance requirement, nodes in the new tree
+can only be unbalanced by a difference of at most 2 in the subtrees. For the bottommost
+unbalanced node, call it S, there are 4 cases:
+
+#+DOWNLOADED: screenshot @ 2022-07-29 10:35:29
+[[file:../i/old/2022-07-29_10-35-29_screenshot.png]]
+
+1. The extra node is in the left child of the left child of S.
+2. The extra node is in the right child of the left child of S.
+3. The extra node is in the left child of the right child of S.
+4. The extra node is in the right child of the right child of S.
+
+
+Cases 1 and 4 are symmetrical, as are cases 2 and 3. Note also that the unbalanced nodes
+must be on the path from the root to the newly inserted node.  Our problem now is how to
+balance the tree in O(log n) time. It turns out that we can do this using a series of local
+operations known as *rotations*.
+
+
+#+CAPTION: A single rotation in an AVL tree. This operation occurs when the excess node (in subtree A) is in the left child of the left child of the unbalanced node labeled S. By rearranging the nodes as shown, we preserve the BST property, as well as re-balance the tree to preserve the AVL tree balance property. The case where the excess node is in the right child of the right child of the unbalanced node is handled in the same way.
+[[file:../i/old/2022-07-29_10-49-03_screenshot.png]]
+
+
+#+CAPTION: A double rotation in an AVL tree. This operation occurs when the excess node (in subtree B) is in the right child of the left child of the unbalanced node labeled S. By rearranging the nodes as shown, we preserve the BST property, as well as re-balance the tree to preserve the AVL tree balance property. The case where the excess node is in the left child of the right child of S is handled in the same way
+[[file:../i/old/2022-07-29_10-50-12_screenshot.png]]
+
+4 can be fixed using a single rotation, as shown in the first figure. Cases 2 and 3 can
+be fixed using a double rotation, as shown in last figure.
+
+
+#+begin_src c++
+avl *avl_tree::rr_rotat(avl *parent) {
+   avl *t;
+   t = parent->r;
+   parent->r = t->l;
+   t->l = parent;
+   cout<<"Right-Right Rotation";
+   return t;
+}
+avl *avl_tree::ll_rotat(avl *parent) {
+   avl *t;
+   t = parent->l;
+   parent->l = t->r;
+   t->r = parent;
+   cout<<"Left-Left Rotation";
+   return t;
+}
+avl *avl_tree::lr_rotat(avl *parent) {
+   avl *t;
+   t = parent->l;
+   parent->l = rr_rotat(t);
+   cout<<"Left-Right Rotation";
+   return ll_rotat(parent);
+}
+avl *avl_tree::rl_rotat(avl *parent) {
+   avl *t;
+   t = parent->r;
+   parent->r = ll_rotat(t);
+   cout<<"Right-Left Rotation";
+   return rr_rotat(parent);
+}
+avl *avl_tree::balance(avl *t) {
+   int bal_factor = difference(t);
+   if (bal_factor > 1) {
+      if (difference(t->l) > 0)
+         t = ll_rotat(t);
+      else
+         t = lr_rotat(t);
+   } else if (bal_factor < -1) {
+      if (difference(t->r) > 0)
+         t = rl_rotat(t);
+      else
+         t = rr_rotat(t);
+   }
+   return t;
+}
+
+#+end_src
+** Day–Stout–Warren algorithm
+The Day–Stout–Warren (DSW) algorithm is a method for efficiently balancing binary search
+trees – that is, decreasing their height to O(log n) nodes, where n is the total number of
+nodes. Unlike a self-balancing binary search tree, it does not do this incrementally during
+each operation, but periodically, so that its cost can be amortized over many operations.
+
+The algorithm requires linear (O(n)) time and is in-place. The original algorithm by Day
+generates as compact a tree as possible: all levels of the tree are completely full except
+possibly the bottom-most. It operates in two phases.
+
+First, *the tree is turned into a linked list* by means of an in-order traversal, reusing
+the pointers in the (threaded) tree's nodes.
+
+A series of left-rotations forms the second phase. The Stout–Warren modification generates a
+complete binary tree, namely one in which the bottom-most level is filled strictly from left
+to right. This is a useful transformation to perform if it is known that no more inserts
+will be done. It does not require the tree to be threaded, nor does it require more than
+constant space to operate.  Like the original algorithm, Day–Stout–Warren operates in two
+phases, the first entirely new, the second a modification of Day's rotation phase.
+
+The following is a presentation of the basic DSW algorithm in pseudocode, after the
+Stout–Warren paper. It consists of a main routine with three subroutines. The main routine
+is given by
+
+1. Allocate a node, the "pseudo-root", and make the tree's actual root the right child of the pseudo-root.
+2. Call tree-to-vine with the pseudo-root as its argument.
+   #+begin_src lisp
+routine tree-to-vine(root)
+    // Convert tree to a "vine", i.e., a sorted linked list,
+    // using the right pointers to point to the next node in the list
+    tail ← root
+    rest ← tail.right
+    while rest ≠ nil
+        if rest.left = nil
+            tail ← rest
+            rest ← rest.right
+        else
+            temp ← rest.left
+            rest.left ← temp.right
+            temp.right ← rest
+            rest ← temp
+            tail.right ← temp
+   #+end_src
+3. Call vine-to-tree on the pseudo-root and the size (number of elements) of the tree.
+   #+begin_src lisp
+routine vine-to-tree(root, size)
+    leaves ← size + 1 − 2⌊log2(size + 1))⌋
+    compress(root, leaves)
+    size ← size − leaves
+    while size > 1
+        compress(root, ⌊size / 2⌋)
+        size ← ⌊size / 2⌋
+routine compress(root, count)
+    scanner ← roo   t
+    for i ← 1 to count
+        child ← scanner.right
+        scanner.right ← child.right
+        scanner ← scanner.right
+        child.right ← scanner.left
+        scanner.left ← child
+
+   #+end_src
+4. Make the tree's actual root equal to the pseudo-root's right child.
+5. Dispose of the pseudo-root.
+* Binary Tree Traversal
+** DFS
+Often we wish to process a binary tree by “visiting” each of its nodes, each time
+performing a specific action such as printing the contents of the node. Any process
+for visiting all of the nodes in some order is called a traversal. Any traversal that
+lists every node in the tree exactly once is called an enumeration of the tree’s
+nodes. Some applications do not require that the nodes be visited in any particular
+order as long as each node is visited precisely once. For other applications, nodes
+must be visited in an order that preserves some relationship. For example, we might
+wish to make sure that we visit any given node before we visit its children. This is
+called a preorder traversal.
+
+A traversal routine is naturally written as a recursive function. Its input pa-
+rameter is a pointer to a node which we will call root because each node can be
+viewed as the root of a some subtree. The initial call to the traversal function passes
+in a pointer to the root node of the tree. The traversal function visits root and
+its children (if any) in the desired order. For example, a preorder traversal speci-
+fies that root be visited before its children. This can easily be implemented as
+follows.
+
+#+begin_src c++
+template <typename E>
+void preorder(BinNode<E>* root) {
+if (root == NULL) return; // Empty subtree, do nothing
+visit(root);
+// Perform desired action
+preorder(root->left());
+preorder(root->right());
+#+end_src
+Function preorder first checks that the tree is not empty (if it is, then the traversal
+is done and preorder simply returns). Otherwise, preorder makes a call to
+visit, which processes the root node (i.e., prints the value or performs whatever
+computation as required by the application). Function preorder is then called
+recursively on the left subtree, which will visit all nodes in that subtree. Finally,
+preorder is called on the right subtree, visiting all nodes in the right subtree.
+Postorder and inorder traversals are similar. They simply change the order in which
+the node and its children are visited, as appropriate.
+
+An important decision in the implementation of any recursive function on trees
+is when to check for an empty subtree. Function preorder first checks to see if
+the value for root is NULL. If not, it will recursively call itself on the left and right
+children of root. In other words, preorder makes no attempt to avoid calling itself on an
+empty child. Some programmers use an alternate design in which the
+left and right pointers of the current node are checked so that the recursive call is
+made only on non-empty children. Such a design typically looks as follows:
+
+#+begin_src c++
+template <typename E>
+void preorder2(BinNode<E>* root) {
+visit(root); // Perform whatever action is desired
+if (root->left() != NULL) preorder2(root->left());
+if (root->right() != NULL) preorder2(root->right());
+#+end_src
+
+At first it might appear that preorder2 is more efficient than preorder,
+because it makes only half as many recursive calls. (Why?) On the other hand,
+preorder2 must access the left and right child pointers twice as often. The net
+result is little or no performance improvement.
+
+In reality, the design of preorder2 is inferior to that of preorder for two
+reasons. First, while it is not apparent in this simple example, for more complex
+traversals it can become awkward to place the check for the NULL pointer in the
+calling code. Even here we had to write two tests for NULL, rather than the one
+needed by preorder. The more important concern with preorder2 is that it
+tends to be error prone. While preorder2 insures that no recursive calls will
+be made on empty subtrees, it will fail if the initial call passes in a NULL pointer.
+This would occur if the original tree is empty. To avoid the bug, either preorder2
+needs an additional test for a NULL pointer at the beginning (making the subsequent
+tests redundant after all), or the caller of preorder2 has a hidden obligation to
+pass in a non-empty tree, which is unreliable design. The net result is that many
+programmers forget to test for the possibility that the empty tree is being traversed.
+By using the first design, which explicitly supports processing of empty subtrees,
+the problem is avoided.
+
+Another issue to consider when designing a traversal is how to define the visitor
+function that is to be executed on every node. One approach is simply to write a
+new version of the traversal for each such visitor function as needed. The disad-
+vantage to this is that whatever function does the traversal must have access to the
+BinNode class. It is probably better design to permit only the tree class to have
+access to the BinNode class.
+
+** BFS
+#+begin_src c++
+while (q.empty() == false) {
+   Node *node = q.front();
+   cout << node->data << " "; //whatever operation
+   q.pop();
+   if (node->left != NULL)
+      q.push(node->left);
+   if (node->right != NULL)
+      q.push(node->right);
+}
+#+end_src
+* Counting
+
+If we wish to count the number of nodes in a binary tree. The
+key insight is that the total count for any (non-empty) subtree is one for the
+root plus the counts for the left and right subtrees. Where do left and right
+subtree counts come from? Calls to function count on the subtrees will
+compute this for us. Thus, we can implement count as follows.
+
+#+begin_src c++
+template <typename E>
+int count(BinNode<E>* root) {
+if (root == NULL) return 0; // Nothing to count
+return 1 + count(root->left()) + count(root->right());
+}
+#+end_src
+* Height of a Binary Tree
+
+The height of a node in a binary tree is the largest number of edges in a path from a leaf
+node to a target node. If the target node doesn’t have any other nodes connected to it, the
+height of that node would be 0. *The height of a binary tree is the height of the
+root node in the whole binary tree*. In other words, the height of a binary tree is equal to
+the largest number of edges from the root to the most distant leaf node.
+
+A similar concept in a binary tree is the depth of the tree. The depth of a node in a binary
+tree is the total number of edges from the root node to the target node. Similarly, the
+depth of a binary tree is the total number of edges from the root node to the most distant
+leaf node.
+
+One important observation here is that when we calculate the depth of a whole binary tree,
+it’s equivalent to the height of the binary tree.
+
+
+First, we’ll calculate the height of node $C$. So, according to the definition, the height of
+node $C$ is the largest number of edges in a path from the leaf node to node $C$. We can see
+that there are two paths for node $C: C \rightarrow E \rightarrow G$, and $C \rightarrow F$. The
+largest number of edges among these two paths would be $\mathsf{2}$; hence, the height of node
+$C$ is $\mathsf{2}$.
+
+Now we’ll calculate the height of the binary tree. From the root, we can have three
+different paths leading to the leaf nodes: $A \rightarrow C \rightarrow F$, $A \rightarrow B \rightarrow D$, and $A \rightarrow C \rightarrow E \rightarrow G$. Among these three paths, the
+path $A \rightarrow C \rightarrow E \rightarrow G$ contains the largest number of edges, which
+is $\mathsf{3}$. Therefore, the height of the tree is $\mathbf{3}$.
+
+Next, we want to find the depth of node $B$. We can see that from the root, there’s only one
+path to node $B$, and it has one edge. Thus, the depth of node $B$ is $\mathsf{1}$.
+
+As we previously mentioned, the depth of a binary tree is equal to the height of the tree.
+Therefore, the depth of the binary tree is $\mathbf{3}$.

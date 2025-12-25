@@ -1,0 +1,288 @@
+:PROPERTIES:
+:ID:       8lucl1d0swj0
+:END:
+#+title: Linguistics
+#+filetags: :project:permanent:
+#+cite_export: csl  harvard.csl
+
+This page will contain progress in learning linguistics [[id:2c2d7730-4a7d-49a7-903d-0d4ad989a55d][science]]. I'm following mainly
+[[https://linguistics.mit.edu/undergraduate/][Undergraduate Major Program]], however, I'm writing this as of my start so many sources might be added through the course.
+
+
+* [[id:omy9ejo02wj0][Books]]
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+
+- [[id:dgd3ce90tyj0][The Atoms of Language]] (Baker, M.)
+- [[id:361ipf90tyj0][An Introduction to Language]] (Fromkin et al.)
+  [fn:: I didn't finish this in favor of [cite:@fasold-2014] which claims to be
+  "only introduction to linguistics in which each chapter is written by an
+  expert who teaches courses on that topic", also the print is much nicer.]
+- [[id:4o93i811zyj0][An Introduction to Language and Linguistics]] (Fasold et al.)
+- [[id:nspfvfi04zj0][How arbitrary is language?]] (Monaghan et al.)
+- [[id:49fg8am0mbk0][For F*ck's Sake]] (Roache, R.)
+
+** Stemming
+:PROPERTIES:
+:ID:       607e726d-e2f5-4a32-b430-2fb8e157feaa
+:END:
+- [[id:b98c4b4a-01aa-4906-83b0-8dd85c23ec72][A Comparative Survey on Arabic Stemming]] (Mustafa et al.)
+- [[id:6bab6c09-54a8-4579-81ca-f26e7720ed5d][Pattern-based Stemmer Analysis and Implementation on Arabic Text]] (Wulandari et al.)[fn:3]
+- [[id:be2a503f-17f1-405f-8277-82930b297852][New Rules-based Algorithm to Improve Arabic Stemming Accuracy]] (Cherif et al.)
+- [[id:63a1fcf8-bc33-483f-ab76-97bfc530a8db][New Arabic Root Extraction Algorithm]] (Thalji et al.)
+- [[id:01vjsww0hwj0][Corpus for Test, Compare and Enhance Arabic Root Extraction Algorithms]] (Thalji et al.)
+- [[id:ekr6l541dzj0][Light Stemming for Arabic Information Retrieval]] (Larkey et al.)
+- [[id:q3minv71dzj0][Enhanced Algorithm for Extracting The Root of Arabic Words]] (Ghwanmeh et al.)
+- [[id:b22i5981dzj0][A Novel Root Based Arabic Stemmer]] (al-Kabi et al.)
+* notes                                                               :noexport:
+:PROPERTIES:
+:ID:       coh91fp0k6k0
+:END:
+** DONE [[https://en.qantara.de/content/language-and-language-acquisition-how-the-brain-processes-german-and-arabic][The brain can change due to the speaking native language.]]     :@check:
+:PROPERTIES:
+:ID:       o0477se0gyj0
+:END:
+- [2024-05-18 Sat 01:30] So this is very interesting, maybe I'd add it to the reasons for which I might
+  consider learning another language like German, definitely it will open more
+  ways in my brain.
+:LOGBOOK:
+CLOCK: [2023-09-18 Mon 15:52]--[2023-09-18 Mon 16:04] =>  0:12
+:END:
+** DONE [[https://aeon.co/essays/does-language-mirror-the-mind-an-intellectual-history?utm_source=rss-feed][Does language mirror the mind? An intellectual history]]        :@read:selected:
+:PROPERTIES:
+:ID:       cz141jz0p9k0
+:END:
+- [2024-07-22 Mon 03:48] - [[id:0y5hrby0p9k0][Johann Gottfried von Herder]] (1772):
+    - Argued that human language is fundamentally different from animal communication
+    - Emphasized "reflection" (Besonnenheit) as a uniquely human capacity
+    - Proposed that words are created by reflecting on the properties of things
+    - Suggested that different languages encapsulate different worldviews
+    - Believed that language differences accumulate over generations
+    - Advocated for etymological study to understand a language's perspective
+  - [[id:agbbscy0p9k0][Wilhelm von Humboldt]] (early 19th century):
+    - Expanded on Herder's ideas
+    - Proposed a form of linguistic determinism[fn:1]
+    - Argued that language both reflects and shapes worldviews
+    - Described a dialectic relationship between language and thought[fn:2]
+    - Emphasized the importance of grammatical structures in addition to vocabulary
+    - Stressed the need to study literature to fully understand a language's character
+  - [[id:mb80hry0p9k0][Sapir-Whorf hypothesis]]:
+    - Not a precise, testable proposition
+    - Suggests language significantly influences thought and perception
+    - Proposes that different languages create distinct worldviews
+  Now we are post [[id:tkjcx3n080k0][The Cognitive Revolution]], in this era there has been:
+  - Decline in language-critical discourse
+  - Return to more scientific approaches in linguistics
+  - [[id:brh544z0p9k0][Joseph Greenberg]] work questioning links between language structure and culture which:
+    - Focus on structural diversity of languages
+    - Separation of language structure from cognition and culture
+  - [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Chomsky]]'s universal grammar:
+    - Emphasized commonalities across languages rather than differences
+    - Proposed an innate language faculty shared by all humans
+    - Shifted focus from cataloging language differences to finding universal principles
+  - Academic consensus:
+    - Maintained separation between language and thought for most of the 20th century
+    - Discouraged exploration of linguistic relativity
+:LOGBOOK:
+CLOCK: [2024-07-22 Mon 02:58]--[2024-07-22 Mon 04:20] =>  1:22
+:END:
+[2024-01-15 Mon 21:06]
+** DONE [[mu4e:msgid:6e2912e6-c5b1-4c4e-a27d-254d6bbfadb7@larrasket][Speaking a different language can change how you act and feel]] :@read:
+:PROPERTIES:
+:ID:       m7i8dbq02ek0
+:CUSTOM_ID: m7i8dbq02ek0
+:END:
+- [2024-11-18 Mon 02:07] Pretty interesting:
+  #+begin_quote
+  Research across several languages, countries and cultures has also found evidence of
+  specific personality differences depending on which language someone is using. A landmark
+  study published in 2006 involved Spanish-English bilinguals in the United States and
+  Mexico who took personality tests in both languages. Participants tended to score higher
+  in extraversion, agreeableness and conscientiousness when responding in English – patterns
+  that echoed personality data previously observed in monolingual people from the respective
+  countries. In a more recent example, researchers asked Swedish-English bilinguals to fill
+  out a personality questionnaire for an imaginary job interview, using either Swedish or
+  English, at either a Swedish or American company. In one of these experiments,
+  participants who filled out the questionnaire in English had higher extraversion scores.
+  In a somewhat different experiment that included open-ended interview questions,
+  participants using Swedish rated themselves as more agreeable and conscientious.
+  #+end_quote
+:LOGBOOK:
+CLOCK: [2024-11-18 Mon 02:01]--[2024-11-18 Mon 02:07] =>  0:06
+:END:
+[2024-11-01 Fri 00:23]
+** Collateral adjective                                               :drill:
+:PROPERTIES:
+:ID:       o8tb0s80g3k0
+:FC_CREATED: 2024-05-05T07:52:26Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:52:26Z |
+:END:
+In [[id:8lucl1d0swj0][linguistics]], a collateral adjective is an adjective that is identified
+with a particular noun in meaning, but that is not derived from that noun.
+
+For example:
+
+- the word bovine is considered the adjectival equivalent for the noun cattle,
+  but it is derived from a different word, which happens to be the Latin word
+  for "cattle".
+
+- Similarly, lunar serves as an adjective to describe attributes of the Moon;
+  Moon comes from Old English mōna "moon" and lunar from Latin luna "moon".
+
+- terrestrial, means on or relating to the earth.
+
+The adjective thermal and the noun heat have a similar semantic relationship. As
+in these examples, collateral adjectives in English very often derive from the
+Latin or Greek translations of the corresponding nouns. In some cases both the
+noun and the adjective are borrowed, but from different languages, such as the
+noun air (from French) and the adjective aerial (from Latin). The term
+"collateral" refers to these two sides of the relationship.
+** Sapir-Whorf hypothesis
+:PROPERTIES:
+:ID:       mb80hry0p9k0
+:END:
+The idea of linguistic relativity, known also as the Whorf hypothesis, the Sapir–Whorf
+hypothesis, or Whorfianism, is a principle suggesting that the structure of a language
+influences its speakers' worldview or cognition, and thus individuals' languages determine
+or influence their perceptions of the world.
+*** TODO Read more about it                                           :@check:@later:
+:LOGBOOK:
+CLOCK: [2024-09-03 Tue 01:57]--[2024-09-03 Tue 02:02] =>  0:05
+:END:
+it proposes that different languages create distinct worldviews, which I think is quite
+interesting.
+** links                                                              :noexport:
+*** linguist
+:PROPERTIES:
+:ID:       dok4phy0p9k0
+:END:
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** DONE [[mu4e:msgid:e2c86445-515f-4fe3-b321-da0c9a73e751@larrasket][What I found in one of the tiniest languages]]                 :@check:
+:LOGBOOK:
+CLOCK: [2025-11-14 Fri 23:49]--[2025-11-15 Sat 00:01] =>  0:12
+:END:
+[2025-11-13 Thu 21:13]
+** TODO [[https://www.youtube.com/shorts/ory3uFhJSO4][The Most Confusing Sentence in English - YouTube]]             :@watch:
+Also memorize. Interesting infomration.
+** DONE [[mu4e:msgid:c7368e82-e958-4397-a4e6-8723c19497fb@larrasket][Why 60% of English Words are Latin]]                           :@watch:
+:PROPERTIES:
+:ID:       mj4767r0xlk0
+:CUSTOM_ID: mj4767r0xlk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-06-20 Fri 19:15]--[2025-06-20 Fri 19:17] =>  0:02
+:END:
+[2025-06-07 Sat 15:10]
+** DONE [[mu4e:msgid:6c47e616-1707-4efc-bda1-b8328dc24a1e@larrasket][Language and Personality]]                                     :@check:
+:PROPERTIES:
+:ID:       oezhl1u0tfk0
+:CUSTOM_ID: oezhl1u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-08 Sat 16:39]--[2025-03-08 Sat 16:44] =>  0:05
+:END:
+[2024-12-22 Sun 03:34]
+#+BEGIN_tag
+{{{t}}} [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]]
+#+END_tag
+** DONE [[mu4e:msgid:3813199e-5cee-4180-8f65-5e297786fc62@larrasket][Hear the Evolution of the London Accent Over 660 Years]]       :@check:
+:PROPERTIES:
+:ID:       kj83s1u0tfk0
+:CUSTOM_ID: kj83s1u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-16 Mon 04:07]--[2024-09-16 Mon 04:15] =>  0:08
+:END:
+[2024-08-24 Sat 06:50]
+** TODO [#C] [[https://news.ycombinator.com/item?id=36313278][LLMs refute Chomsky’s approach to language]]              :@check:@later:
+:PROPERTIES:
+:ID:       srm4t1u0tfk0
+:CUSTOM_ID: srm4t1u0tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Chomsky]]
+#+END_tag
+** DONE [[https://aeon.co/essays/what-comes-first-ideas-or-words-the-paradox-of-articulation][Thoughts into words]]                                          :@read:
+:PROPERTIES:
+:ID:       fr0l0540x2k0
+:CUSTOM_ID: fr0l0540x2k0
+:END:
+:LOGBOOK:
+CLOCK: [2023-08-04 Fri 03:02]--[2023-08-04 Fri 03:10] =>  0:08
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]]
+#+END_tag
+** KILL [[https://doi.org/10.3389/fpsyg.2015.00361][Have the general vocabulary shrunk?]]                          :@read:@later:
+:PROPERTIES:
+:ID:       tbkk7qa0g3k0
+:CUSTOM_ID: tbkk7qa0g3k0
+:END:
+:LOGBOOK:
+CLOCK: [2025-10-24 Fri 02:31]--[2025-10-24 Fri 02:38] =>  0:07
+CLOCK: [2023-11-08 Wed 11:16]--[2023-11-08 Wed 11:40] =>  0:24
+:END:
+Pretty much interesting article, however, it seems like it is [[https://academia.stackexchange.com/a/184185/176563][not published]] at a
+peer-reviewed journal but a vastly [[https://en.wikipedia.org/wiki/Frontiers_Media#Controversial_articles][sketchy]] one.
+** DONE [[https://theconversation.com/how-linguists-are-unlocking-the-meanings-of-shakespeares-words-using-numbers-212587][unlocking the meanings of Shakespeare’s ]]                     :@read:
+:PROPERTIES:
+:ID:       xv56f2u0tfk0
+:CUSTOM_ID: xv56f2u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-12 Thu 19:02]--[2023-10-12 Thu 19:06] =>  0:04
+:END:
+** TODO [#C] [[https://news.ycombinator.com/item?id=36457940][Three Models for the Description of Language]]            :@check:@later:
+:PROPERTIES:
+:ID:       doelg2u0tfk0
+:CUSTOM_ID: doelg2u0tfk0
+:END:
+** DONE [[mu4e:msgid:4a0b5285-0f67-4ddd-b3f7-b5faa27a284a@larrasket][Why do we say “like,” like, all the time?]]                    :@read:
+:PROPERTIES:
+:ID:       7x2gp2u0tfk0
+:CUSTOM_ID: 7x2gp2u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-26 Thu 12:19]--[2024-09-26 Thu 12:25] =>  0:06
+:END:
+[2024-09-26 Thu 10:49]
+** TODO Study Linguistics                                            :@later:
+[2025-03-22 Sat 14:26]
+Check this too
+https://www.youtube.com/watch?v=7Sw15-vSY8E&list=WL&index=1&t=1s&pp=gAQBiAQB
+** DONE [[mu4e:msgid:05a0b555-c263-4e3c-9d08-09ae10193792@larrasket][Why Arabic Is Terrific (2011)]]                                :@check:
+:PROPERTIES:
+:ID:       54oaazx08lk0
+:CUSTOM_ID: 54oaazx08lk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-08-18 Mon 23:38]--[2025-08-18 Mon 23:44] =>  0:06
+:END:
+[2025-05-18 Sun 18:42]
+* Notes
+* Footnotes
+
+[fn:2] A dialectic relationship refers to a dynamic interaction between two elements or
+concepts that influence and shape each other in an ongoing process. In this context:
+Mutual influence: Both elements affect and modify each other continuously. Synthesis:
+Often, this interaction leads to new ideas or outcomes that combine aspects of both
+elements. Interdependence: Neither element can be fully understood in isolation from the
+other. In the case of Humboldt's view on language and thought: Language shapes our
+thoughts and how we perceive the world. Our thoughts and experiences, in turn, influence
+how we use and develop language. This ongoing interaction continually shapes both our
+language and our thinking in a cyclical, evolving process.
+
+
+
+
+[fn:1] that is, that language not only reflects a particular worldview but is actively
+involved in shaping it: ‘Language,’ he wrote , ‘is the forming organ of thought.
+
+[fn:3] Does not include a testing/accuracy section.

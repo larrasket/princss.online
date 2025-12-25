@@ -1,0 +1,86 @@
+#+TITLE: Proof Mapping is Injection iff Direct Image Mapping is Injection
+#+DATE: <2024-07-01 Mon>
+
+
+
+Let \( f: S \to T \) be a mapping.
+
+Let \( f^\to: \mathcal{P}(S) \to \mathcal{P}(T) \) be the direct image mapping of \( f \).
+
+Then:
+
+\( f^\to \) is an injection {{iff}} \( f: S \to T \) is also an injection.
+
+
+*Proof:*
+
+Suppose \( f: S \to T \) is a mapping, but not injective.
+
+Then:
+\[ \exists x_1 \ne x_2 \in S: f(x_1) = f(x_2) = y \]
+
+Let:
+\[ X_1 = \{ x_1 \} \]
+\[ X_2 = \{ x_2 \} \]
+\[ Y = \{ y \} \]
+
+Then it follows that:
+\[ f^\to(X_1) = f^\to(X_2) = Y \]
+
+Thus \( f^\to: \mathcal{P}(S) \to \mathcal{P}(T) \) is not injective.
+
+So by the Rule of Transposition, the result follows.
+#+BEGIN_QUOTE
+lemma
+#+END_QUOTE
+
+Suppose \( f^\to: \mathcal{P}(S) \to \mathcal{P}(T) \) is not an injection.
+
+Then:
+
+\[ \exists Y \in \mathcal{P}(T): \exists X_1, X_2 \in \mathcal{P}(S): X_1 \ne X_2 \land f^\to(X_1) = f^\to(X_2) = Y \]
+
+There are two cases to consider:
+
+1. Either \( X_1 \) or \( X_2 \) is the empty set.
+2. Neither \( X_1 \) nor \( X_2 \) is the empty set.
+
+WLOG assume that \( X_1 = \emptyset \).
+
+Then, from Image of Empty Set is Empty Set:
+\[ Y = f^\to(X_1) = \emptyset \]
+
+But that means:
+\[ f^\to(X_2) = \emptyset \]
+
+Now \( X_1 \ne X_2 \), so \( X_2 \ne \emptyset \).
+
+Thus:
+\[ \exists x_2 \in X_2: \neg \exists y \in T: f(x_2) = y \]
+which means that \( f \) is not even a mapping, let alone an injection.
+
+The same argument applies if \( X_2 \) is empty.
+#+BEGIN_QUOTE
+lemma
+#+END_QUOTE
+
+Now, assume that neither \( X_1 \) nor \( X_2 \) is the empty set.
+
+As \( X_1 \ne X_2 \), there must be at least one element in either one which is not in the other.
+
+WLOG assume that \( \exists x_1 \in X_1: x_1 \notin X_2 \).
+
+Now suppose \( f(x_1) = y \in Y \).
+
+However, as \( f^\to(X_2) = Y \), there must be some \( x_2 \in X_2 \) such that \( f(x_2) = y \in Y \).
+
+So:
+\[ \exists x_1 \ne x_2 \in S: f(x_1) = f(x_2) \]
+which means, by definition, that \( f \) is not injective.
+
+Thus, if \( f^\to: \mathcal{P}(S) \to \mathcal{P}(T) \) is not an injection then neither is \( f: S \to T \).
+
+Thus, by the Rule of Transposition, the result follows.
+#+BEGIN_QUOTE
+qed
+#+END_QUOTE

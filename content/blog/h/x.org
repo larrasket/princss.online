@@ -1,0 +1,116 @@
+#+title: Exported Content
+#+DATE: <2023-10-16 Mon 07:50>
+#+filetags: :project_archived:
+
+#+BEGIN_PREVIEW
+Content from my zettelkasten made public.
+#+END_PREVIEW
+
+* Sites I block
+:PROPERTIES:
+:ID:       d3p72720j3k0
+:END:
+Following is a regex list of websites that I ban from my internet search
+results:
+
+#+begin_example
+*://www.quora.com/*
+*://www.geeksforgeeks.org/*
+*://www.noor-book.com/*
+*://www.w3schools.com/*
+*://www.arab-books.com/*
+*://equran.me/*
+*://surahquran.org/*
+*://byjus.com/*
+*://www.toppr.com/*
+*://www.vedantu.com/*
+*://surahquran.com/*
+*://www.quran7m.com/*
+*://www.alukah.net/*
+*://knowyourphrase.com/*
+*://english-grammar-lessons.com/*
+*://rpubs.com/*
+*://www.educative.io/*
+*://plotly.com/*
+*://www.programiz.com/*
+*://www.tunefind.com/*
+*://www.ajsp.net/*
+*://replit.com/*
+*://homework.study.com/*
+*://www.libhunt.com/*
+*://www.freepik.com/*
+*://kinsta.com/*
+*://www.hostinger.com/*
+*://news.iqraa.news/*
+*://gate.bald-news.com/*
+*://deepai.org/*
+*://www.chegg.com/*
+*://github-wiki-see.page/*
+*://ar.quora.com/*
+*://news.elbadil.com/*
+*://trend.l0n.news/*
+*://blog.hubspot.com/*
+*://new.akher.news/*
+*://studycorgi.com/*
+*://quran.com/*
+*://www.simplilearn.com/*
+*://www.w3schools.in/*
+*://www.forgottenbooks.com/*
+*://ar.iqraa.news/*
+*://new.l0n.news/*
+*://ethicsunwrapped.utexas.edu/*
+*://wikiarticle.xyz/*
+*://www.studysmarter.co.uk/*
+*://slashdot.org/*
+*://www.bibtex.com/*
+*://www.elaosboa.com/*
+*://news.5lejnews.com/*
+*://www1.elbadil.com/*
+*://www.usnews.com/*
+*://mo.iqraa.news/*
+*://top.5lejnews.com/*
+*://solarabic.com/*
+*://quranopedia.com/*
+*://snyk.io/*
+*://eg.iqraa.news/*
+*://napuzepi.coronatest-unterhaching.de/*
+*://goldprice.org/*
+*://www.alamaltaqa.com/*
+*://we.iqraa.news/*
+*://christian-dogma.com/*
+*://www.masrtimes.com/*
+*://newsy.elsob7.com/*
+*://new.npa-egypt.com/*
+*://www.alarabiya.net/*
+*://nullgrab.com/*
+*://nulled.cx/*
+*://www.nulledtemplates.com/*
+*://stackshare.io/*
+*://www.alamy.com/*
+*://www.udemy.com/*
+#+end_example
+* [[https://archive.org/details/edward-s.-herman-noam-chomsky-manufacturing-consent-the-political-economy-of-the][Better PDF version of Manufacturing Consent]]
+:PROPERTIES:
+:ID:       acx9s711gzj0
+:CUSTOM_ID:       acx9s711gzj0
+:END:
+Just like [[id:2o1dp580eyj0][K&R: The C Programming Language]], I found this fantastic version.
+Download from [[https://archive.org/details/edward-s.-herman-noam-chomsky-manufacturing-consent-the-political-economy-of-the][the archive.]]
+#+BEGIN_UNEXPORTEDTAG
+[[id:sij8m381fwj0][Commentary]]
+#+END_UNEXPORTEDTAG
+* DONE [[https://archive.org/details/k-and-r-the-c-programming-language-digitalized-version][K&R: The C Programming Language]]
+:PROPERTIES:
+:ID:       2o1dp580eyj0
+:CUSTOM_ID:       2o1dp580eyj0
+:END:
+:LOGBOOK:
+CLOCK: [2023-09-17 Sun 00:58]--[2023-09-17 Sun 01:06] =>  0:08
+:END:
+This is the best available online version of K&R. I was looking for it
+everywhere and I could not find it, I looked it up in the chat between me and my
+friend Antar and I found it there. It should be available now on the link above.
+
+#+BEGIN_UNEXPORTEDTAG
+[[id:sij8m381fwj0][Commentary]]
+#+END_UNEXPORTEDTAG

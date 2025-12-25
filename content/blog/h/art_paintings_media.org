@@ -1,0 +1,2160 @@
+:PROPERTIES:
+:ID:       mvk9gc7014k0
+:ROAM_ALIASES: Art painter artist
+:CATEGORY: art
+:END:
+#+title: Art
+#+filetags: :project:permanent:
+
+- [2025-08-08 Fri 01:16] Disabling this page again. Sorry if you were redirected from an art-related link, but that's just too messy to host on my small website. If I ever have the time, I will work on making it exportable.
+- [2025-07-21 Mon 23:25] You can also click on an image to open it in a new tab. This can be helpful if the lazyloader makes the image appear in a late stage (so you will see a gray loader instead of it). The page size is big because it loads a lot of images. I got this feedback from IRC, but the whole purpose of this page, as mentioned before, is only for personal reference.
+- [2025-07-19 Sat 21:16] Sometimes I find myself continually questioning the fundamental purpose of art and beauty. That tension becomes especially pronounced when I consider how the same aesthetic principles that govern a Bach fugue or a neoclassical building also manifest in engineering: the graceful curve of a suspension bridge's cables, the elegant logic of a well-designed algorithm, or the satisfying economy of a mechanical solution that achieves maximum effect with minimal means. Paul Graham's observations in "Hackers and Painters" about the fundamental similarity between engineering and painting suggest that perhaps what we call beauty is actually our recognition of deeper structural harmonies—patterns that reveal themselves whether we're contemplating the mathematical relationships in a Mozart sonata, the load distribution in a cathedral's flying buttresses, or the recursive elegance of a piece of code that solves a complex problem with startling simplicity. This leads me to wonder whether aesthetic experience represents not mere decoration or distraction from reality, but rather our most direct method of perceiving the underlying order that governs natural and human-made systems alike. Maybe that's a TODO to discuss in a post later. Or a wondering thought that will die with me.
+- [2025-07-17 Thu 20:59] I updated the page to include lazy-loading and collapsed all the headings by default, you will have to click them to get them folded. This will require JS to run (for some reason, lazy-loading is not working properly on some mobile phones)
+- [2025-07-16 Wed 05:59]: Some artist are only partially included here, because I absolutely adore every work of them, and I find it unnecessary to include each. As of now, these are:
+  - Thomas Cole
+- [2025-05-09 Fri 04:59] This part is currently available. It used to be marked as a private note. I'm making it available now just for the case of the references I might use in my blog. I plan some day to turn this page into a more pleasant-to-browse website.
+- [2024-02-17 Sat 23:47] I'm a bit confused of how to write my notes on the images, including the artist metadata and my points, in an unstructured data format (plaintext) but still, make it easy for me when the day comes and I want to process this data. Maybe I just should go intuitively?
+- [2024-02-17 Sat 23:30] I've been thinking of building a PKMS-like software but for managing my art collections. By now, I'm considering just maintaining them on this node. Thus, here you can find my favorite paintings and my notes on them.
+* Art Content                                                         :noexport:
+** View of a Fountain and Peterhof Palacel, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       qrl15i91vik0
+:CUSTOM_ID: qrl15i91vik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-29 14:23:57
+[[file:../../media/Art_Content/2025-03-29_14-23-57_screenshot.png]]
+** Frigate Under Sails, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       r9genu91vik0
+:CUSTOM_ID: r9genu91vik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-29 14:31:27
+[[file:../../media/Art_Content/2025-03-29_14-31-27_screenshot.png]]
+** Moonlit Night on the Crimea, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       uy18az91vik0
+:CUSTOM_ID: uy18az91vik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-29 14:34:14
+[[file:../../media/Art_Content/2025-03-29_14-34-14_screenshot.png]]
+** The Bay of Naples at Moonlight Night, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       c6ecyca1vik0
+:CUSTOM_ID: c6ecyca1vik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-29 14:42:26
+[[file:../../media/Art_Content/2025-03-29_14-42-26_screenshot.png]]
+** Azure Grotto. Naples, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       put6rha1vik0
+:CUSTOM_ID: put6rha1vik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-29 14:45:19
+[[file:../../media/Art_Content/2025-03-29_14-45-19_screenshot.png]]
+** Russian squadron on the raid of Sevastopol, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       9hzd3ta1vik0
+:CUSTOM_ID: 9hzd3ta1vik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-29 14:52:08
+[[file:../../media/Art_Content/2025-03-29_14-52-08_screenshot.png]]
+** Evening in the Crimea, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       usm1zwa1vik0
+:CUSTOM_ID: usm1zwa1vik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-29 14:54:27
+[[file:../../media/Art_Content/2025-03-29_14-54-27_screenshot.png]]
+** Night in the Crimea, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       2h594wa0yik0
+:CUSTOM_ID: 2h594wa0yik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-31 08:33:08
+[[file:../../media/Art_Content/2025-03-31_08-33-08_screenshot.png]]
+** Morning, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       lyl5m2h0yik0
+:CUSTOM_ID: lyl5m2h0yik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-31 10:46:35
+[[file:../../media/Art_Content/2025-03-31_10-46-35_screenshot.png]]
+** Lunar night on the Crimean coast, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       67y0k8h0yik0
+:CUSTOM_ID: 67y0k8h0yik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-31 10:50:07
+[[file:../../media/Art_Content/2025-03-31_10-50-07_screenshot.png]]
+** Night in Amalfi, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       5aqgceh0yik0
+:CUSTOM_ID: 5aqgceh0yik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-31 10:53:43
+[[file:../../media/Art_Content/2025-03-31_10-53-43_screenshot.png]]
+** The Ninth Wave, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       2ja4j3b1ajk0
+:CUSTOM_ID: 2ja4j3b1ajk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-04-10 00:02:08
+[[file:../../media/Art_Content/2025-04-10_00-02-08_screenshot.png]]
+** Darial Gorge, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       nxsg2cs01kk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-04-30 05:48:00
+[[file:../../media/Art_Content/2025-04-30_05-48-00_screenshot.png]]
+** Moonlit night near Yalta, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       bdck5h413kk0
+:CUSTOM_ID: bdck5h413kk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-01 22:35:11
+[[file:../../media/Art_Content/2025-05-01_22-35-11_screenshot.png]]
+** The Black Sea, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       smmcf9913kk0
+:CUSTOM_ID: smmcf9913kk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-02 00:17:44
+[[file:../../media/Art_Content/2025-05-02_00-17-44_screenshot.png]]
+** A Rocky Coastal Landscape in the Aegean, [[id:2lq0ch91vik0][Ivan Aivazovsky]]
+:PROPERTIES:
+:ID:       z9x9bd805kk0
+:CUSTOM_ID: z9x9bd805kk0
+:END:
+[[file:../../media/Art_Content/2025-05-02_23-26-02_screenshot.png]]
+** Two Lovers, [[id:2jke0h21tik0][Reza Abbasi]]
+:PROPERTIES:
+:ID:       2ko23k21tik0
+:CUSTOM_ID: 2ko23k21tik0
+:END:
+[[file:../../media/Art_Content/2025-03-27_23-29-28_screenshot.png]]
+** Country Road with Cypresses, [[id:bc7b4p21tik0][Giuseppe Abbati]]
+:PROPERTIES:
+:ID:       aap3io21tik0
+:CUSTOM_ID: aap3io21tik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-27 23:32:02
+[[file:../../media/Art_Content/2025-03-27_23-32-02_screenshot.png]]
+** Marina in Castiglioncello, [[id:bc7b4p21tik0][Giuseppe Abbati]]
+:PROPERTIES:
+:ID:       a88dqt21tik0
+:CUSTOM_ID: a88dqt21tik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-27 23:35:11
+[[file:../../media/Art_Content/2025-03-27_23-35-11_screenshot.png]]
+** Morning, [[id:nmx2lf41tik0][Oswald Achenbach]]
+:PROPERTIES:
+:ID:       x4la6g41tik0
+:CUSTOM_ID: x4la6g41tik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-28 00:10:29
+[[file:../../media/Art_Content/2025-03-28_00-10-29_screenshot.png]]
+** First Love Letter, [[id:bjl0v3x0uik0][Eduard Quitton]]
+:PROPERTIES:
+:ID:       laxao6x0uik0
+:CUSTOM_ID: laxao6x0uik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-28 15:45:38
+[[file:../../media/Art_Content/2025-03-28_15-45-38_screenshot.png]]
+** Ravin, Souvenir D'Algerie, [[id:270apg8014k0][Eugene Fromentin]]
+:PROPERTIES:
+:ID:       jntbxnb014k0
+:END:
+[[file:../../media/Art_Content/2024-02-18_01-02-39_screenshot.png]]
+
+It's sad that Fromentin's writings are not accessible, I'm sure his life had
+many interesting spots and stories to tell about.
+
+** Le Simoun, [[id:270apg8014k0][Eugene Fromentin]]
+:PROPERTIES:
+:ID:       eunaigc014k0
+:END:
+[[file:../../media/Art_Content/2024-02-18_01-20-00_screenshot.png]]
+
+I first saw this painting before learning about Fromentin background so I
+thoguht it's about Abraham's Journey to Canaan or something related. The way the
+man on the white horse is clothed might be the reason.
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:9o1eac80nik0][Peter Paul Rubens]]
+:PROPERTIES:
+:ID:       eom7zf80nik0
+:CUSTOM_ID: eom7zf80nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-22 23:25:19
+[[file:../../media/Art_Content/2025-03-22_23-25-19_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:5bmjog80nik0][Gustav Pope]]
+:PROPERTIES:
+:ID:       uyqhph80nik0
+:CUSTOM_ID: uyqhph80nik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-22 23:26:21
+[[file:../../media/Art_Content/2025-03-22_23-26-21_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:j201sk80nik0][Jacques Clement Wagrez]]
+:PROPERTIES:
+:ID:       oqq8gl80nik0
+:CUSTOM_ID: oqq8gl80nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-22 23:28:36
+[[file:../../media/Art_Content/2025-03-22_23-28-36_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:hd8csm80nik0][Walter Crane]]
+:PROPERTIES:
+:ID:       yv1i7n80nik0
+:CUSTOM_ID: yv1i7n80nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-22 23:29:41
+[[file:../../media/Art_Content/2025-03-22_23-29-41_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:dud71p80nik0][Francesco Albani]]
+:PROPERTIES:
+:ID:       5dd6lo80nik0
+:CUSTOM_ID: 5dd6lo80nik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-22 23:30:30
+[[file:../../media/Art_Content/2025-03-22_23-30-30_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:0xygoq80nik0][Jacques Stella]]
+:PROPERTIES:
+:ID:       eab86q80nik0
+:CUSTOM_ID: eab86q80nik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-22 23:31:26
+[[file:../../media/Art_Content/2025-03-22_23-31-26_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:ec4fas80nik0][Joachim Wtewael]]
+:PROPERTIES:
+:ID:       4uvbmr80nik0
+:CUSTOM_ID: 4uvbmr80nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-22 23:32:21
+[[file:../../media/Art_Content/2025-03-22_23-32-21_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:9vwjys80nik0][Anselm Feuerbach]]
+:PROPERTIES:
+:ID:       ufe6ju80nik0
+:CUSTOM_ID: ufe6ju80nik0
+:END:
+[[file:../../media/Art_Content/2025-03-22_23-33-18_screenshot.png]]
+
+:PROPERTIES:
+:ID:       5ql1at80nik0
+:CUSTOM_ID: 5ql1at80nik0
+:END:
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], Unknown
+:PROPERTIES:
+:ID:       hk58zy80nik0
+:CUSTOM_ID: hk58zy80nik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-22 23:36:43
+[[file:../../media/Art_Content/2025-03-22_23-36-43_screenshot.png]]
+** [[id:j8p4r1s20nik0][The Judgement of Paris]], [[id:2hl40590nik0][Joseph Hauber]]
+#+DOWNLOADED: screenshot @ 2025-03-22 23:40:48
+[[file:../../media/Art_Content/2025-03-22_23-40-48_screenshot.png]]
+** [[id:m4rtyr20seb4st0][Martyrdom of Saint Sebastian]], [[id:2z6a49d0nik0][Mattia Preti]]
+:PROPERTIES:
+:ID:       lcq3y9d0nik0
+:CUSTOM_ID: lcq3y9d0nik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-23 01:09:45
+[[file:../../media/Art_Content/2025-03-23_01-09-45_screenshot.png]]
+** [[id:m4rtyr20seb4st0][Martyrdom of Saint Sebastian]], [[id:733kzdd0nik0][Battistello Caracciolo]]
+:PROPERTIES:
+:ID:       ulvcsed0nik0
+:CUSTOM_ID: ulvcsed0nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-23 01:12:37
+[[file:../../media/Art_Content/2025-03-23_01-12-37_screenshot.png]]
+** [[id:m4rtyr20seb4st0][Martyrdom of Saint Sebastian]], [[id:twl4pfd0nik0][Guido Reni]]
+:PROPERTIES:
+:ID:       6rm27gd0nik0
+:CUSTOM_ID: 6rm27gd0nik0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-03-23 01:13:27
+[[file:../../media/Art_Content/2025-03-23_01-13-27_screenshot.png]]
+** [[id:hz1lah11tik0][Coronation of the Virgin]], [[id:oo5jig01tik0][Domingos Sequeira]]
+:PROPERTIES:
+:ID:       cfb5vk11tik0
+:CUSTOM_ID: cfb5vk11tik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-27 23:09:33
+[[file:../../media/Art_Content/2025-03-27_23-09-33_screenshot.png]]
+** [[id:hz1lah11tik0][Coronation of the Virgin]], [[id:prygzj11tik0][Giulio Cesare Procaccini]]
+:PROPERTIES:
+:ID:       2ej3wk11tik0
+:CUSTOM_ID: 2ej3wk11tik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-27 23:08:27
+[[file:../../media/Art_Content/2025-03-27_23-08-27_screenshot.png]]
+** Illusions, Henry Brown Fuller
+:PROPERTIES:
+:ID:       6ok7lc7024k0
+:END:
+
+[[file:../../media/Art_Content/2024-02-18_17-22-43_screenshot.png]]
+
+
+For some resaon I find this painting very interesting, but I can not explain it.
+I read that "the child represents our natural inclination towards the raw beauty
+and simplicity of the natural world." and "female figure and her classical
+setting symbolize the pursuit of knowledge, refinement, and the ideals of
+civilization" but I do not quite get those explanations. I think it's just a
+beautiful piece of art.
+** Voleurs De Nuit, [[id:270apg8014k0][Eugene Fromentin]]
+:PROPERTIES:
+:ID:       wjyao88014k0
+:END:
+
+[[file:../../media/Art_Content/2024-02-18_00-16-20_screenshot.png]]
+
+[[id:270apg8014k0][Eugene Fromentin]] was an author and painter, I read about his sad substory with
+his childhood friend who went with other man and rejected his proposal. He went
+to Algeria and fell in love with Algerian Sahara. I've many [[id:3904ii8014k0][orientalism]] comments
+on this painting, but what attracts me most is the beautiful blue sky.  I've
+seen real beautiful night skies in my life, so to be fair, this is not really
+beautiful one, however, comparing it to our night sky nowadays, it's really
+beautiful.
+
+The increased use of light-emitting diodes causes our night sky to undergo a 10%
+decrease annually. People would be surprised when you tell them that skies in
+works like Sterrennacht were not a matter of intellectual view but in fact skies
+used to look like that casually. Today you would have to go very near in the
+desert to get such a look, and even that is not comparable to how it used to be.
+(talking about this remind me of [[https://youtu.be/QDRZq1yLhpk][this great episode]] that I watched as a kid,
+"Boys, you're going to remember this for the rest of your lives").
+
+Check this part from رسائل الامام الغزالي about skies:
+
+#+DOWNLOADED: screenshot @ 2022-02-18 00:48:13
+[[file:../../media/Art_Content/2024-02-18_00-48-13_screenshot.png]]
+** The Massacre of the Monks of Tamond, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+:PROPERTIES:
+:ID:       2m761qw05kk0
+:CUSTOM_ID: 2m761qw05kk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-03 08:12:20
+[[file:../../media/Art_Content/2025-05-03_08-12-20_screenshot.png]]
+** Ask Me No more, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+:PROPERTIES:
+:ID:       4qi0dq416kk0
+:CUSTOM_ID: 4qi0dq416kk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-04 05:18:54
+[[file:../../media/Art_Content/2025-05-04_05-18-54_screenshot.png]]
+** Pleading, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+:PROPERTIES:
+:ID:       04rd65908kk0
+:CUSTOM_ID: 04rd65908kk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-05 06:19:41
+[[file:../../media/Art_Content/2025-05-05_06-19-41_screenshot.png]]
+
+Looks a lot like [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]].
+** A Declaration, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+:PROPERTIES:
+:ID:       cmu84l908kk0
+:CUSTOM_ID: cmu84l908kk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-05 06:29:09
+[[file:../../media/Art_Content/2025-05-05_06-29-09_screenshot.png]]
+
+Looks a lot like [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]].
+** O mistress mine, where are you roaming, [[id:7x6isa31tik0][Edwin Austin Abbey]]
+:PROPERTIES:
+:ID:       f4w8jc31tik0
+:CUSTOM_ID: f4w8jc31tik0
+:END:
+#+DOWNLOADED: screenshot @ 2025-03-27 23:50:42
+[[file:../../media/Art_Content/2025-03-27_23-50-42_screenshot.png]]
+
+The painting *O Mistress Mine, Where Are You Roaming?* by Edwin Austin Abbey is
+inspired by Shakespeare’s *Twelfth Night*, and it captures a *romantic or
+dramatic interaction* between the two central figures.
+
+- The man in **red robes** (possibly a nobleman or a clergyman) leans toward the
+  **woman in black and green**, gripping her hand. His posture suggests
+  **urgency, persuasion, or pleading**.
+- The woman looks **surprised or conflicted**, as if caught between **listening
+  to him and resisting his advances**. Her facial expression and hand placement
+  suggest hesitation.
+
+- The figure in the background, partly hidden and playing a lute, likely
+  represents *a musician or a minstrel*.
+- Given the painting’s literary inspiration, she could be connected to *Feste,
+  the fool from *Twelfth Night*, who sings the poem from which the painting
+  takes its name.
+- Her presence suggests that *music is part of the moment*, possibly
+  emphasizing the mood of seduction, longing, or sorrow.
+
+- The setting, with *whitewashed walls, bare trees, and cobblestone ground*,
+  feels *isolated and intimate*, suggesting *a clandestine meeting*.
+- The nobleman's expression and posture indicate an urgent conversation*
+  —perhaps a secret romance, a plea for love, or even an attempt
+  to persuade her into a forbidden affair.
+- The woman’s reserved stance implies indecision—she might be resisting
+  temptation, conflicted between duty and desire.
+** Drawing Room, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+** Expectations, [[id:b5o5tpw05kk0][Sir Lawrence Alma-Tadema]]
+:PROPERTIES:
+:ID:       muj0lsw0akk0
+:CUSTOM_ID: muj0lsw0akk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-07 03:14:58
+[[file:../../media/Art_Content/2025-05-07_03-14-58_screenshot.png]]
+
+Same place as [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]]
+** Landscape, [[id:c893dc71bkk0][Knud Baade]]
+
+#+DOWNLOADED: screenshot @ 2025-05-08 01:14:52
+[[file:../../media/Art_Content/2025-05-08_01-14-52_screenshot.png]]
+** Still Life, [[id:xymdew71bkk0][Jean-Joseph-Xavier Bidauld]]
+
+#+DOWNLOADED: screenshot @ 2025-05-08 01:26:59
+[[file:../../media/Art_Content/2025-05-08_01-26-59_screenshot.png]]
+** Villa am Meer I, [[id:xe6f8nh0dkk0][Arnold Böcklin]]
+:PROPERTIES:
+:ID:       9macjth0dkk0
+:CUSTOM_ID: 9macjth0dkk0
+:END:
+[[file:../../media/Art_Content/2025-05-09_04-26-03_screenshot.png]]
+** [[id:9macjth0dkk0][Villa am Meer I]]I, [[id:xe6f8nh0dkk0][Arnold Böcklin]]
+:PROPERTIES:
+:ID:       pcl4gvh0dkk0
+:CUSTOM_ID: pcl4gvh0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:28:00
+[[file:../../media/Art_Content/2025-05-09_04-28-00_screenshot.png]]
+** Der Gang nach Emmaus, [[id:xe6f8nh0dkk0][Arnold Böcklin]]
+:PROPERTIES:
+:ID:       q11i1bi0dkk0
+:CUSTOM_ID: q11i1bi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:29:34
+[[file:../../media/Art_Content/2025-05-09_04-29-34_screenshot.png]]
+** Mosque in Istanbul, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       hqybz2i0dkk0
+:CUSTOM_ID: hqybz2i0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:34:01
+[[file:../../media/Art_Content/2025-05-09_04-34-01_screenshot.png]]
+** St. Petersburg at Sunset, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       rmvi6bi0dkk0
+:CUSTOM_ID: rmvi6bi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:34:57
+[[file:../../media/Art_Content/2025-05-09_04-34-57_screenshot.png]]
+** St. Petersburg. Sledging on the Neva, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       uvbfxai0dkk0
+:CUSTOM_ID: uvbfxai0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:38:47
+[[file:../../media/Art_Content/2025-05-09_04-38-47_screenshot.png]]
+** View of the Smolny Convent from Bolshaya Okhta, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       jviicdi0dkk0
+:CUSTOM_ID: jviicdi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:40:26
+[[file:../../media/Art_Content/2025-05-09_04-40-26_screenshot.png]]
+** Smolny as seen from Bolshaya Okhta, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       9cg8nfi0dkk0
+:CUSTOM_ID: 9cg8nfi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:41:01
+[[file:../../media/Art_Content/2025-05-09_04-41-01_screenshot.png]]
+** Moonlit night. Grand Canal (Venice), [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       4z30nji0dkk0
+:CUSTOM_ID: 4z30nji0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:43:35
+[[file:../../media/Art_Content/2025-05-09_04-43-35_screenshot.png]]
+** Italian Coast, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       eaegmli0dkk0
+:CUSTOM_ID: eaegmli0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:45:10
+[[file:../../media/Art_Content/2025-05-09_04-45-10_screenshot.png]]
+** Castel Sant'Angelo, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       1y0immi0dkk0
+:CUSTOM_ID: 1y0immi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:45:39
+[[file:../../media/Art_Content/2025-05-09_04-45-39_screenshot.png]]
+** The seashore, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       vyldeni0dkk0
+:CUSTOM_ID: vyldeni0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:46:15
+[[file:../../media/Art_Content/2025-05-09_04-46-15_screenshot.png]]
+** Moonlit evening in Constantinople, [[id:zgec92i0dkk0][Alexey Bogolyubov]]
+:PROPERTIES:
+:ID:       fl9bgoi0dkk0
+:CUSTOM_ID: fl9bgoi0dkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-09 04:46:54
+[[file:../../media/Art_Content/2025-05-09_04-46-54_screenshot.png]]
+** The Rose Garden, [[id:akcl6pw0ekk0][Carl Aagaard]]
+:PROPERTIES:
+:ID:       m5k91pw0ekk0
+:CUSTOM_ID: m5k91pw0ekk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-10 04:01:50
+[[file:../../media/Art_Content/2025-05-10_04-01-50_screenshot.png]]
+** Landscape, [[id:akcl6pw0ekk0][Carl Aagaard]]
+:PROPERTIES:
+:ID:       qnvaxyw0ekk0
+:CUSTOM_ID: qnvaxyw0ekk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-10 04:07:50
+[[file:../../media/Art_Content/2025-05-10_04-07-50_screenshot.png]]
+** View from Jægersborg Dyrehave. Mild daylight, [[id:akcl6pw0ekk0][Carl Aagaard]]
+:PROPERTIES:
+:ID:       et16c8x0ekk0
+:CUSTOM_ID: et16c8x0ekk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-10 04:13:17
+[[file:../../media/Art_Content/2025-05-10_04-13-17_screenshot.png]]
+** The Prayers of the Potuans at the Feast of the Unfathomable God, [[id:i0jf8l21fkk0][Nicolai Abildgaard]]
+:PROPERTIES:
+:ID:       8lf0kl21fkk0
+:CUSTOM_ID: 8lf0kl21fkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-11 00:22:01
+
+[[file:../../media/Art_Content/2025-05-11_00-22-01_screenshot.png]]
+** The Nubian Giraffe, [[id:dcjcb680hkk0][Jacques-Laurent Agasse]]
+:PROPERTIES:
+:ID:       wcb7a780hkk0
+:CUSTOM_ID: wcb7a780hkk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-12 01:49:40
+[[file:../../media/Art_Content/2025-05-12_01-49-40_screenshot.png]]
+** The Playground, [[id:dcjcb680hkk0][Jacques-Laurent Agasse]]
+:PROPERTIES:
+:ID:       99b1h880hkk0
+:CUSTOM_ID: 99b1h880hkk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-12 01:50:26
+[[file:../../media/Art_Content/2025-05-12_01-50-26_screenshot.png]]
+
+** [[id:y4d45i80hkk0][Visitation]], [[id:2um0gc80hkk0][Mariotto Albertinelli]]
+:PROPERTIES:
+:ID:       fc83ge80hkk0
+:CUSTOM_ID: fc83ge80hkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-12 01:53:58
+[[file:../../media/People/2025-05-12_01-53-58_screenshot.png]]
+** [[id:y4d45i80hkk0][Visitation]], [[id:1dq2tj80hkk0][Domenico Ghirlandaio]]
+:PROPERTIES:
+:ID:       ft813l80hkk0
+:CUSTOM_ID: ft813l80hkk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-12 01:57:56
+[[file:../../media/Art_Content/2025-05-12_01-57-56_screenshot.png]]
+** [[id:y4d45i80hkk0][Visitation]] II, [[id:2um0gc80hkk0][Mariotto Albertinelli]]
+:PROPERTIES:
+:ID:       ifc3sq80hkk0
+:CUSTOM_ID: ifc3sq80hkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-12 02:01:25
+[[file:../../media/Art_Content/2025-05-12_02-01-25_screenshot.png]]
+** Winter Landscape, [[id:9p5dy1r0ikk0][Denis van Alsloot]]
+:PROPERTIES:
+:ID:       n8g286r0ikk0
+:CUSTOM_ID: n8g286r0ikk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-13 02:51:41
+[[file:../../media/Art_Content/2025-05-13_02-51-41_screenshot.png]]
+** [[id:n8g286r0ikk0][Winter Landscape]] II, [[id:9p5dy1r0ikk0][Denis van Alsloot]]
+:PROPERTIES:
+:ID:       z58cc8r0ikk0
+:CUSTOM_ID: z58cc8r0ikk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-13 02:52:58
+[[file:../../media/Art_Content/2025-05-13_02-52-58_screenshot.png]]
+** Arcadian Landscape, [[id:3ryipgr0ikk0][Jurriaan Andriessen]]
+:PROPERTIES:
+:ID:       18yh7hr0ikk0
+:CUSTOM_ID: 18yh7hr0ikk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-13 02:58:31
+[[file:../../media/Art_Content/2025-05-13_02-58-31_screenshot.png]]
+** The Lighting, [[id:ujv0blg0lkk0][Alexandre Antigna]]
+:PROPERTIES:
+:ID:       p2sjomg0lkk0
+:CUSTOM_ID: p2sjomg0lkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-15 05:40:45
+[[file:../../media/Art_Content/2025-05-15_05-40-45_screenshot.png]]
+** View in Mount Merrion Park, [[id:2jo4pwg0lkk0][William Ashford]]
+:PROPERTIES:
+:ID:       r7p77yg0lkk0
+:CUSTOM_ID: r7p77yg0lkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-15 05:48:04
+[[file:../../media/Art_Content/2025-05-15_05-48-03_screenshot.png]]
+** A View of Dublin from Chapelizod, [[id:2jo4pwg0lkk0][William Ashford]]
+:PROPERTIES:
+:ID:       7ef5v0h0lkk0
+:CUSTOM_ID: 7ef5v0h0lkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-15 05:49:05
+[[file:../../media/Art_Content/2025-05-15_05-49-05_screenshot.png]]
+** Castle Ward: The Classical Front, [[id:2jo4pwg0lkk0][William Ashford]]
+
+#+DOWNLOADED: screenshot @ 2025-05-15 05:49:35
+[[file:../../media/Art_Content/2025-05-15_05-49-35_screenshot.png]]
+** Mount Kennedy, County Wicklow, [[id:2jo4pwg0lkk0][William Ashford]]
+:PROPERTIES:
+:ID:       g3siw4h0lkk0
+:CUSTOM_ID: g3siw4h0lkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-15 05:51:51
+[[file:../../media/Art_Content/2025-05-15_05-51-51_screenshot.png]]
+** View of Killarney, [[id:2jo4pwg0lkk0][William Ashford]]
+:PROPERTIES:
+:ID:       logeznh0lkk0
+:CUSTOM_ID: logeznh0lkk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-05-15 05:55:08
+[[file:../../media/Art_Content/2025-05-15_05-55-08_screenshot.png]]
+** The Kiss, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       068bpg60wkk0
+:CUSTOM_ID: 068bpg60wkk0
+:END:
+** The Elder Sister, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       twycng60wkk0
+:CUSTOM_ID: twycng60wkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:14:56
+[[file:../../media/Art_Content/2025-05-23_10-14-56_screenshot.png]]
+** Sleep, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       1fgdog60wkk0
+:CUSTOM_ID: 1fgdog60wkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:16:05
+[[file:../../media/Art_Content/2025-05-23_10-16-05_screenshot.png]]
+** Raising her up, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       ej6kqh60wkk0
+:CUSTOM_ID: ej6kqh60wkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:16:43
+[[file:../../media/Art_Content/2025-05-23_10-16-43_screenshot.png]]
+** The Orange, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       nbjjhi60wkk0
+:CUSTOM_ID: nbjjhi60wkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:17:16
+[[file:../../media/Art_Content/2025-05-23_10-17-16_screenshot.png]]
+** The Awakening, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:18:02
+[[file:../../media/Art_Content/2025-05-23_10-18-02_screenshot.png]]
+** Charity or The Indigent Family, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       8vf3gm60wkk0
+:CUSTOM_ID: 8vf3gm60wkk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-05-23 10:18:51
+[[file:../../media/Art_Content/2025-05-23_10-18-51_screenshot.png]]
+** Rest at Harvest, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       73w095n08lk0
+:CUSTOM_ID: 73w095n08lk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-06-01 18:43:37
+[[file:../../media/Art_Content/2025-06-01_18-43-37_screenshot.png]]
+** Maternal Admiration, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       6cd12xb1dlk0
+:CUSTOM_ID: 6cd12xb1dlk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-06-05 22:40:03
+[[file:../../media/Art_Content/2025-06-05_22-40-03_screenshot.png]]
+** The Bunch Of Grapes, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       9mrbfpd0elk0
+:CUSTOM_ID: 9mrbfpd0elk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-06-06 04:33:19
+[[file:../../media/Art_Content/2025-06-06_04-33-19_screenshot.png]]
+** Young Mother Gazing At Her Child, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       r50b9sd0elk0
+:CUSTOM_ID: r50b9sd0elk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-06 04:35:03
+[[file:../../media/Art_Content/2025-06-06_04-35-03_screenshot.png]]
+** Pieta, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       twm55be0elk0
+:CUSTOM_ID: twm55be0elk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:r98aze11tik0][Christian Art]]
+#+END_tag
+
+#+DOWNLOADED: screenshot @ 2025-06-06 04:46:21
+[[file:../../media/Art_Content/2025-06-06_04-46-21_screenshot.png]]
+** A Girl with a Child, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       i707wz70glk0
+:CUSTOM_ID: i707wz70glk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-06-07 14:53:17
+[[file:../../media/Art_Content/2025-06-07_14-53-17_screenshot.png]]
+** Charity, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       okbaxz70glk0
+:CUSTOM_ID: okbaxz70glk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-07 14:54:31
+[[file:../../media/Art_Content/2025-06-07_14-54-31_screenshot.png]]
+** A Young Girl Defending Herself Against  Eros, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       cbv0qjh0glk0
+:CUSTOM_ID: cbv0qjh0glk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-06-07 18:20:48
+[[file:../../media/Art_Content/2025-06-07_18-20-48_screenshot.png]]
+** The Virgin with Angels, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       nc1ltnn0glk0
+:CUSTOM_ID: nc1ltnn0glk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:r98aze11tik0][Christian Art]]
+#+END_tag
+
+#+DOWNLOADED: screenshot @ 2025-06-07 20:32:54
+[[file:../../media/Art_Content/2025-06-07_20-32-54_screenshot.png]]
+** A Little Coaxing, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       eu755co0glk0
+:CUSTOM_ID: eu755co0glk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-07 20:47:08
+[[file:../../media/Art_Content/2025-06-07_20-47-08_screenshot.png]]
+** Pleasant Burden, [[id:54micc60wkk0][William-Adolphe Bouguereau Motherhood Paintings]]
+:PROPERTIES:
+:ID:       acejlxd1ilk0
+:CUSTOM_ID: acejlxd1ilk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-09 18:24:55
+[[file:../../media/Art_Content/2025-06-09_18-24-55_screenshot.png]]
+** Ladmiration, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       15t9dm01jlk0
+:CUSTOM_ID: 15t9dm01jlk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-10 07:49:38
+[[file:../../media/Art_Content/2025-06-10_07-49-38_screenshot.png]]
+** Elegy, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       ya364s00olk0
+:CUSTOM_ID: ya364s00olk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:cbv0qjh0glk0][A Young Girl Defending Herself Against  Eros, William-Adolphe Bouguereau]]
+#+END_tag
+
+#+DOWNLOADED: screenshot @ 2025-06-13 13:56:44
+[[file:../../media/Art_Content/2025-06-13_13-56-44_screenshot.png]]
+** Innocence, [[id:23mfma60wkk0][William-Adolphe Bouguereau]]
+:PROPERTIES:
+:ID:       388le010olk0
+:CUSTOM_ID: 388le010olk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-13 14:01:48
+[[file:../../media/Art_Content/2025-06-13_14-01-48_screenshot.png]]
+** The Meeting on the Turret Stairs, [[id:qse5o7c0rlk0][Frederic William Burton]]
+:PROPERTIES:
+:ID:       mhm2g8c0rlk0
+:CUSTOM_ID: mhm2g8c0rlk0
+:END:
+[[file:../../media/Art_Content/2025-06-16_00-41-00_screenshot.png]]
+
+The subject of the painting is the love story of Hellelil, who fell in love with
+her bodyguard Hildebrand. When her father hears of it, he sends her seven
+brothers to kill Hildebrand. The painting depicts the moment before Hildebrand
+goes out to meet the brothers, kissing Hellelil one last time, and parting with
+the injuction to "say never my name". Hildebrand subdues each brother until he
+comes to the youngest; than Hellelil, forgetting his request, calls to him to
+plead for mercy; as Hildebrand complies, the youngest brother kills him. Said
+brother takes Hellelil back to their house by dragging her from his horse,
+tortures her, and locks her up in a tower for many days, eventually selling her
+for a church bell.
+** The Fallen Angel, [[id:eaphdi80xlk0][Alexandre Cabanel]]
+:PROPERTIES:
+:ID:       ym36dj80xlk0
+:CUSTOM_ID: ym36dj80xlk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-20 12:34:47
+[[file:../../media/Art_Content/2025-06-20_12-34-47_screenshot.png]]
+** Faro, Mount Desert Island, [[id:ig8cxhp01mk0][Frederic Edwin Church]]
+:PROPERTIES:
+:ID:       o9yhcrp01mk0
+:CUSTOM_ID: o9yhcrp01mk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-23 19:35:49
+[[file:../../media/Art_Content/2025-06-23_19-35-49_screenshot.png]]
+** Afternoon Along The River, [[id:ajviyf616mk0][Emile Claus]]
+:PROPERTIES:
+:ID:       z322hg616mk0
+:CUSTOM_ID: z322hg616mk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-06-27 20:38:00
+[[file:../../media/Art_Content/2025-06-27_20-38-00_screenshot.png]]
+** Kaaterskill Falls, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       rt7bnld0fmk0
+:CUSTOM_ID: rt7bnld0fmk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-07-04 06:07:59
+[[file:../../media/Art_Content/2025-07-04_06-07-59_screenshot.png]]
+** Landscape with Figures A Scene from The Last of the Mohicans, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       kkfenud0fmk0
+:CUSTOM_ID: kkfenud0fmk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-04 06:10:37
+[[file:../../media/Art_Content/2025-07-04_06-10-37_screenshot.png]]
+** Expulsion. Moon and Firelight, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       97q8yd01gmk0
+:CUSTOM_ID: 97q8yd01gmk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-07-05 08:29:24
+[[file:../../media/Art_Content/2025-07-05_08-29-24_screenshot.png]]
+** View of L`Esperance on the Schoharie River, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       q518iq10smk0
+:CUSTOM_ID: q518iq10smk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-13 22:27:04
+[[file:../../media/Art_Content/2025-07-13_22-27-04_screenshot.png]]
+** Distant View of Niagara Falls, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       k5ie5l01vmk0
+:CUSTOM_ID: k5ie5l01vmk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-16 17:36:57
+[[file:../../media/Art_Content/2025-07-16_17-36-57_screenshot.png]]
+
+** Wooded Landscape, [[id:mp208ei0ymk0][John Constable]]
+:PROPERTIES:
+:ID:       2o07pji0ymk0
+:CUSTOM_ID: 2o07pji0ymk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-18 17:44:48
+[[file:../../media/Art_Content/2025-07-18_17-44-48_screenshot.png]]
+
+** A Cloud Study, [[id:mp208ei0ymk0][John Constable]]
+:PROPERTIES:
+:ID:       2nc7rb51zmk0
+:CUSTOM_ID: 2nc7rb51zmk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-19 20:09:05
+[[file:../../media/Art_Content/2025-07-19_20-09-05_screenshot.png]]
+** La Cervara, la campagne romaine, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+#+DOWNLOADED: screenshot @ 2025-07-21 01:26:15
+[[file:../../media/Art_Content/2025-07-21_01-26-15_screenshot.png]]
+** View of the Forest of Fontainebleau, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       p181fdq02nk0
+:CUSTOM_ID: p181fdq02nk0
+:END:
+- [2025-07-21 Mon 21:26] next is Camille Corot 108
+#+DOWNLOADED: screenshot @ 2025-07-21 21:23:22
+[[file:../../media/Art_Content/2025-07-21_21-23-22_screenshot.png]]
+** Democritus and the Abderiti, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       tnqaesi06nk0
+:CUSTOM_ID: tnqaesi06nk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-07-24 19:28:09
+[[file:../../media/Art_Content/2025-07-24_19-28-09_screenshot.png]]
+** The Italian Goatherd, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       vjycq8y0ink0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-08-03 03:28:49
+[[file:../../media/Art_Content/2025-08-03_03-28-49_screenshot.png]]
+** [[id:s3b4st14n0nik0][Saint Sebastian]] in a Landscape, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       eq5bh3g0mnk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-05 21:46:47
+[[file:../../media/Art_Content/2025-08-05_21-46-47_screenshot.png]]
+** Fisherman Boating along a Wooded Landscape, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       r666kfg0mnk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-05 21:53:33
+[[file:../../media/Art_Content/2025-08-05_21-53-33_screenshot.png]]
+** Souvenir de Mortefontaine, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       31b9ee70pnk0
+:CUSTOM_ID: 31b9ee70pnk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-08 01:15:03
+[[file:../../media/Art_Content/2025-08-08_01-15-03_screenshot.png]]
+** Moonlit Landscape, [[id:48iifil01nk0][Jean-Baptiste Camille Corot]]
+:PROPERTIES:
+:ID:       w7skvrd1pnk0
+:CUSTOM_ID: w7skvrd1pnk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-08-08 16:30:33
+[[file:../../media/Art_Content/2025-08-08_16-30-33_screenshot.png]]
+** View on the Catskill, Early Autumn, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       0ablccm0qnk0
+:CUSTOM_ID: 0ablccm0qnk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-09 00:51:11
+[[file:../../media/Art_Content/2025-08-09_00-51-11_screenshot.png]]
+** Moonlight, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       ket9qkd1snk0
+:CUSTOM_ID: ket9qkd1snk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-10 23:03:01
+[[file:../../media/Art_Content/2025-08-10_23-03-01_screenshot.png]]
+** Summer TWilight, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       x4na1s902ok0
+:CUSTOM_ID: x4na1s902ok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-17 22:46:07
+[[file:../../media/Art_Content/2025-08-17_22-46-07_screenshot.png]]
+** TODO Sunset of the Arno, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       9ppcg8s03ok0
+:CUSTOM_ID: 9ppcg8s03ok0
+:END:
+** View of Florence from San Miniato, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       70i91s206ok0
+:CUSTOM_ID: 70i91s206ok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-20 21:04:36
+[[file:../../media/Art_Content/2025-08-20_21-04-36_screenshot.png]]
+** Italian Coast Scene with Ruined Tower, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       crnateg07ok0
+:CUSTOM_ID: crnateg07ok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-21 20:11:18
+[[file:../../media/Art_Content/2025-08-21_20-11-18_screenshot.png]]
+** Schroon Mountain, Adirondacks, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       kzr6ylc08ok0
+:CUSTOM_ID: kzr6ylc08ok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-22 13:00:34
+[[file:../../media/Art_Content/2025-08-22_13-00-34_screenshot.png]]
+** The Present, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       pt79j5y09ok0
+:CUSTOM_ID: pt79j5y09ok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-23 14:58:29
+[[file:../../media/Art_Content/2025-08-23_14-58-29_screenshot.png]]
+** The Return, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       wjgg6fp0bok0
+:CUSTOM_ID: wjgg6fp0bok0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-08-25 00:14:22
+[[file:../../media/Art_Content/2025-08-25_00-14-22_screenshot.png]]
+** Schroon, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       fch9f381cok0
+:CUSTOM_ID: fch9f381cok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-26 01:10:00
+[[file:../../media/Art_Content/2025-08-26_01-10-00_screenshot.png]]
+** View of the Arno, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       994dfrq0gok0
+:CUSTOM_ID: 994dfrq0gok0
+:END:
+[[file:../../media/Art_Content/2025-08-28_19-44-11_screenshot.png]]
+** The Architect Dream, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       5v697ht0kok0
+:CUSTOM_ID: 5v697ht0kok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-08-31 21:32:24
+[[file:../../media/Art_Content/2025-08-31_21-32-24_screenshot.png]]
+** The Gardens of the Van Rensselaer Manor House, [[id:34feald0fmk0][Thomas Cole]]
+
+#+DOWNLOADED: screenshot @ 2025-09-09 23:37:49
+[[file:../../media/Art_Content/2025-09-09_23-37-49_screenshot.png]]
+** An Evening in Arcadia, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       paqfq981xok0
+:CUSTOM_ID: paqfq981xok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-10 23:30:27
+[[file:../../media/Art_Content/2025-09-10_23-30-27_screenshot.png]]
+** Mount Aetna from Taormina, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       38f8zt20zok0
+:CUSTOM_ID: 38f8zt20zok0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-11 21:00:36
+[[file:../../media/Art_Content/2025-09-11_21-00-36_screenshot.png]]
+** River in the Catskills, [[id:34feald0fmk0][Thomas Cole]]
+:PROPERTIES:
+:ID:       poe2xsk04pk0
+:CUSTOM_ID: poe2xsk04pk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-15 22:31:09
+[[file:../../media/Art_Content/2025-09-15_22-31-09_screenshot.png]]
+** The Temple of Segesta with the Artist Sketching, [[id:34feald0fmk0][Thomas Cole]]
+
+#+DOWNLOADED: screenshot @ 2025-09-16 22:17:29
+[[file:../../media/Art_Content/2025-09-16_22-17-29_screenshot.png]]
+** Walk of monks to Mount Athos monastery (1905), [[id:d8u0rta0jek0][Hermann Karl.]]
+:PROPERTIES:
+:ID:       1jphecd0cpk0
+:CUSTOM_ID: 1jphecd0cpk0
+:END:
+
+
+#+DOWNLOADED: screenshot @ 2025-09-21 21:26:56
+[[file:../../media/Art_Content/2025-09-21_21-26-56_screenshot.png]]
+** Camel Train in a Sandstorm, [[id:hnuhbcd0cpk0][Hermann David Salomon Corrodi]]
+:PROPERTIES:
+:ID:       bzh7sa20fpk0
+:CUSTOM_ID: bzh7sa20fpk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-24 00:06:07
+[[file:../../media/Art_Content/2025-09-24_00-06-07_screenshot.png]]
+** The Fountain of the Sweet Waters of Asia, on the Bosphorus
+:PROPERTIES:
+:ID:       72iefq01hpk0
+:CUSTOM_ID: 72iefq01hpk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-26 00:53:49
+[[file:../../media/Art_Content/2025-09-26_00-53-49_screenshot.png]]
+** Adam Et Eve, [[id:qz32hxv0ipk0][Gustave-Claude-Etienne Courtois]]
+:PROPERTIES:
+:ID:       fzsf1xv0ipk0
+:CUSTOM_ID: fzsf1xv0ipk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-26 17:24:49
+[[file:../../media/Art_Content/2025-09-26_17-24-49_screenshot.png]]
+** The Romans in their Decadence, [[id:7guc32g0kpk0][Thomas Couture]]
+:PROPERTIES:
+:ID:       3xifm2g0kpk0
+:CUSTOM_ID: 3xifm2g0kpk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-09-28 00:03:51
+[[file:../../media/Art_Content/2025-09-28_00-03-51_screenshot.png]]
+** [[id:2o0iupa0npk0][La Belle Dame sans Merci]], [[id:782jrqa0npk0][Frank Cadogan Cowper]]
+:PROPERTIES:
+:ID:       34e0lua0npk0
+:CUSTOM_ID: 34e0lua0npk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-09-30 04:48:27
+[[file:../../media/Art_Content/2025-09-30_04-48-27_screenshot.png]]
+** The Coast of Genoa, [[id:kglj7vf0opk0][Jasper Francis Cropsey]]
+:PROPERTIES:
+:ID:       vjnbhwf0opk0
+:CUSTOM_ID: vjnbhwf0opk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-01 00:51:48
+[[file:../../media/Art_Content/2025-10-01_00-51-48_screenshot.png]]
+** Warwick Castle, England, [[id:kglj7vf0opk0][Jasper Francis Cropsey]]
+:PROPERTIES:
+:ID:       gtzgnzt0ppk0
+:CUSTOM_ID: gtzgnzt0ppk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-06 22:28:17
+[[file:../../media/Art_Content/2025-10-06_22-28-17_screenshot.png]]
+** Autumn on the Hudson, [[id:kglj7vf0opk0][Jasper Francis Cropsey]]
+:PROPERTIES:
+:ID:       v1ucp950wpk0
+:CUSTOM_ID: v1ucp950wpk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-06 22:38:17
+[[file:../../media/Art_Content/2025-10-06_22-38-17_screenshot.png]]
+** Lady with a Bouquet, [[id:xohgxop01qk0][Charles Courtney Curran]]
+:PROPERTIES:
+:ID:       j4vafyq01qk0
+:CUSTOM_ID: j4vafyq01qk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-11 01:28:03
+[[file:../../media/Art_Content/2025-10-11_01-28-03_screenshot.png]]
+** Hollyhocks and Sunlight, [[id:xohgxop01qk0][Charles Courtney Curran]]
+:PROPERTIES:
+:ID:       hzhg8vr01qk0
+:CUSTOM_ID: hzhg8vr01qk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-11 01:47:57
+[[file:../../media/Art_Content/2025-10-11_01-47-57_screenshot.png]]
+** Peonies, [[id:xohgxop01qk0][Charles Courtney Curran]]
+:PROPERTIES:
+:ID:       tje75zr01qk0
+:CUSTOM_ID: tje75zr01qk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-11 01:50:19
+[[file:../../media/Art_Content/2025-10-11_01-50-19_screenshot.png]]
+** Green Lattice, [[id:xohgxop01qk0][Charles Courtney Curran]]
+:PROPERTIES:
+:ID:       a82fv5s01qk0
+:CUSTOM_ID: a82fv5s01qk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-11 01:54:08
+[[file:../../media/Art_Content/2025-10-11_01-54-08_screenshot.png]]
+** The Return of Hajar, [[id:73l48b716qk0][Pietro da Cortona]]
+:PROPERTIES:
+:ID:       gvy5r9716qk0
+:CUSTOM_ID: gvy5r9716qk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-15 02:21:48
+[[file:../../media/Art_Content/2025-10-15_02-21-48_screenshot.png]]
+** Shakespeare's Globe Theatre, [[id:ied5qr60aqk0][Gustav Klimt]]
+:PROPERTIES:
+:ID:       fiyams60aqk0
+:CUSTOM_ID: fiyams60aqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-17 14:02:45
+[[file:../../media/Art_Content/2025-10-17_14-02-45_screenshot.png]]
+** The Triumph of Divine Providence, [[id:73l48b716qk0][Pietro da Cortona]]
+:PROPERTIES:
+:ID:       50fllvj0aqk0
+:CUSTOM_ID: 50fllvj0aqk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-17 18:45:35
+[[file:../../media/Art_Content/2025-10-17_18-45-35_screenshot.png]]
+** On the barn, [[id:0zif2xf0dqk0][Pellizza da Volpedo]]
+:PROPERTIES:
+:ID:       upg5uyf0dqk0
+:CUSTOM_ID: upg5uyf0dqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-19 23:57:55
+[[file:../../media/Art_Content/2025-10-19_23-57-55_screenshot.png]]
+** Figure study for Spring Idyll, [[id:0zif2xf0dqk0][Pellizza da Volpedo]]
+:PROPERTIES:
+:ID:       7wwkjfl0eqk0
+:CUSTOM_ID: 7wwkjfl0eqk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-20 20:04:49
+[[file:../../media/Art_Content/2025-10-20_20-04-49_screenshot.png]]
+** The mirror of life (And what one does, and the others do), [[id:0zif2xf0dqk0][Pellizza da Volpedo]]
+:PROPERTIES:
+:ID:       5i7jlfl0eqk0
+:CUSTOM_ID: 5i7jlfl0eqk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-20 20:06:03
+[[file:../../media/Art_Content/2025-10-20_20-06-03_screenshot.png]]
+** Spring Idyll, [[id:0zif2xf0dqk0][Pellizza da Volpedo]]
+:PROPERTIES:
+:ID:       rch8nfl0eqk0
+:CUSTOM_ID: rch8nfl0eqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-20 20:07:43
+[[file:../../media/Art_Content/2025-10-20_20-07-43_screenshot.png]]
+** Loving Walk, [[id:0zif2xf0dqk0][Pellizza da Volpedo]]
+:PROPERTIES:
+:ID:       bhu5k2z0fqk0
+:CUSTOM_ID: bhu5k2z0fqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-21 19:16:35
+[[file:../../media/Art_Content/2025-10-21_19-16-35_screenshot.png]]
+** Love at the Fountain of Life, [[id:n93cgz50hqk0][Giovanni Segantini]]
+:PROPERTIES:
+:ID:       xtwfop60hqk0
+:CUSTOM_ID: xtwfop60hqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-22 21:27:16
+[[file:../../media/Art_Content/2025-10-22_21-27-16_screenshot.png]]
+** Winter at the Sognefjord, [[id:kojhh1x0iqk0][Johan Christian Dahl]]
+:PROPERTIES:
+:ID:       qd4eihx0iqk0
+:CUSTOM_ID: qd4eihx0iqk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-10-24 01:08:49
+[[file:../../media/Art_Content/2025-10-24_01-08-49_screenshot.png]]
+** The Crossroads at the Eagle Nest, Forest of Fontainebleau, [[id:xcm06ix0iqk0][Charles-Francois Daubigny]]
+#+DOWNLOADED: screenshot @ 2025-10-24 01:17:48
+[[file:../../media/Art_Content/2025-10-24_01-17-48_screenshot.png]]
+** The Park at St. Cloud, [[id:xcm06ix0iqk0][Charles-Francois Daubigny]]
+:PROPERTIES:
+:ID:       2ns7bt31jqk0
+:CUSTOM_ID: 2ns7bt31jqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-24 21:46:06
+[[file:../../media/Art_Content/2025-10-24_21-46-06_screenshot.png]]
+** Belisarius Begging for Alms, [[id:0t121id1kqk0][Jacques-Louis David]]
+:PROPERTIES:
+:ID:       vay9gkd1kqk0
+:CUSTOM_ID: vay9gkd1kqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-25 19:30:53
+[[file:../../media/Art_Content/2025-10-25_19-30-53_screenshot.png]]
+** [[id:8gb37qg0mqk0][The Illness of Antiochus]], [[id:0t121id1kqk0][Jacques-Louis David]]
+:PROPERTIES:
+:ID:       m2c9psg0mqk0
+:CUSTOM_ID: m2c9psg0mqk0
+:END:
+[[file:../../media/Art_Content/2025-10-26_20-05-30_screenshot.png]]
+** [[id:ym3fn640pqk0][The Death of Socrates]], [[id:0t121id1kqk0][Jacques-Louis David]]
+:PROPERTIES:
+:ID:       aor7kn10pqk0
+:CUSTOM_ID: aor7kn10pqk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-10-28 21:16:29
+[[file:../../media/Art_Content/2025-10-28_21-16-29_screenshot.png]]
+** DONE A Dance to the Music of Time                                 :@read:
+:LOGBOOK:
+CLOCK: [2025-11-15 Sat 01:16]--[2025-11-15 Sat 01:49] =>  0:33
+:END:
+https://en.wikipedia.org/wiki/A_Dance_to_the_Music_of_Time_%28painting%29
+
+#+DOWNLOADED: screenshot @ 2025-11-15 01:49:07
+[[file:../../media/Art_Content/2025-11-15_01-49-07_screenshot.png]]
+
+** Study of Clouds, [[id:38phjra0ark0][Pierre-Henri de Valenciennes]]
+:PROPERTIES:
+:ID:       yxd14va0ark0
+:CUSTOM_ID: yxd14va0ark0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-11-13 21:52:34
+[[file:../../media/Art_Content/2025-11-13_21-52-34_screenshot.png]]
+** View of Rome, [[id:38phjra0ark0][Pierre-Henri de Valenciennes]]
+:PROPERTIES:
+:ID:       jt943nn0brk0
+:CUSTOM_ID: jt943nn0brk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-11-14 20:40:44
+[[file:../../media/Art_Content/2025-11-14_20-40-44_screenshot.png]]
+** The Ancient City of Agrigento, [[id:38phjra0ark0][Pierre-Henri de Valenciennes]]
+:PROPERTIES:
+:ID:       v2mg82w0crk0
+:CUSTOM_ID: v2mg82w0crk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-11-15 17:54:18
+[[file:../../media/Art_Content/2025-11-15_17-54-18_screenshot.png]]
+** [[id:xlv1cwc0erk0][“Cicero Discovering the Tomb of Archimedes”]], [[id:38phjra0ark0][Pierre-Henri de Valenciennes]]
+:PROPERTIES:
+:ID:       vd58bxc0erk0
+:CUSTOM_ID: vd58bxc0erk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-11-16 23:26:03
+[[file:../../media/Art_Content/2025-11-16_23-26-03_screenshot.png]]
+** [[id:xlv1cwc0erk0][“Cicero Discovering the Tomb of Archimedes”]], [[id:rp705yc0erk0][Benjamin West]]
+:PROPERTIES:
+:ID:       6zk3zyc0erk0
+:CUSTOM_ID: 6zk3zyc0erk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-11-16 23:27:03
+[[file:../../media/Art_Content/2025-11-16_23-27-03_screenshot.png]]
+** Classical Landscape with Figures Drinking by a Fountain, [[id:38phjra0ark0][Pierre-Henri de Valenciennes]]
+:PROPERTIES:
+:ID:       tce3wwj0frk0
+:CUSTOM_ID: tce3wwj0frk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-11-23 23:59:23
+[[file:../../media/Art_Content/2025-11-23_23-59-23_screenshot.png]]
+
+** Massage at the Hamam, [[id:u0ehk1q0nrk0][Edouard Debat-Ponsan]]
+:PROPERTIES:
+:ID:       eoz24xp0nrk0
+:CUSTOM_ID: eoz24xp0nrk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-11-23 23:57:09
+[[file:../../media/Art_Content/2025-11-23_23-57-09_screenshot.png]]
+
+** Reflections (Arrangement in Pink and Blue), [[id:1ul96w40yrk0][Joseph DeCamp]] 
+
+#+DOWNLOADED: screenshot @ 2025-12-02 00:38:26
+[[file:../../media/Art_Content/2025-12-02_00-38-26_screenshot.png]]
+** Portrait of Elsa, [[id:dcy99130zrk0][Frank Dicksee]]
+:PROPERTIES:
+:ID:       wu296830zrk0
+:CUSTOM_ID: wu296830zrk0
+:END:
+
+#+DOWNLOADED: screenshot @ 2025-12-02 18:14:11
+[[file:../../media/Art_Content/2025-12-02_18-14-11_screenshot.png]]
+** [[id:uxfk6va0npk0][La Belle Dame sans Merci]], [[id:dcy99130zrk0][Frank Dicksee]]
+:PROPERTIES:
+:ID:       cfc7v4y00sk0
+:CUSTOM_ID: cfc7v4y00sk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-12-03 23:34:04
+[[file:../../media/Art_Content/2025-12-03_23-34-04_screenshot.png]]
+** Yseult, [[id:dcy99130zrk0][Frank Dicksee]]
+:PROPERTIES:
+:ID:       m8m6bl311sk0
+:CUSTOM_ID: m8m6bl311sk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-12-04 19:44:07
+[[file:../../media/Art_Content/2025-12-04_19-44-07_screenshot.png]]
+** Jessica, [[id:nooir8503sk0][Thomas Francis Dicksee]]
+:PROPERTIES:
+:ID:       azx3g9503sk0
+:CUSTOM_ID: azx3g9503sk0
+:END:
+#+DOWNLOADED: screenshot @ 2025-12-05 19:47:11
+[[file:../../media/Art_Content/2025-12-05_19-47-11_screenshot.png]]
+
+* People
+** Ivan Aivazovsky
+:PROPERTIES:
+:ID:       2lq0ch91vik0
+:CUSTOM_ID: 2lq0ch91vik0
+:NWORKS:   700
+:END:
+** Benjamin West
+:PROPERTIES:
+:ID:       rp705yc0erk0
+:CUSTOM_ID: rp705yc0erk0
+:NWORKS:   156
+:END:
+** Emile Claus
+:PROPERTIES:
+:ID:       ajviyf616mk0
+:CUSTOM_ID: ajviyf616mk0
+:NWORKS:   26
+:END:
+** John Constable
+:PROPERTIES:
+:ID:       mp208ei0ymk0
+:CUSTOM_ID: mp208ei0ymk0
+:NWORKS:   190
+:END:
+** William Ashford
+:PROPERTIES:
+:ID:       2jo4pwg0lkk0
+:CUSTOM_ID: 2jo4pwg0lkk0
+:NWORKS:   87
+:END:
+** Carl Aagaard
+:PROPERTIES:
+:ID:       akcl6pw0ekk0
+:CUSTOM_ID: akcl6pw0ekk0
+:NWORKS:   220
+:END:
+** Alexey Bogolyubov
+:PROPERTIES:
+:ID:       zgec92i0dkk0
+:CUSTOM_ID: zgec92i0dkk0
+:NWORKS:   46
+:END:
+** Jean-Joseph-Xavier Bidauld
+:PROPERTIES:
+:ID:       xymdew71bkk0
+:CUSTOM_ID: xymdew71bkk0
+:NWORKS:   16
+:END:
+** Peter Paul Rubens
+:PROPERTIES:
+:ID:       9o1eac80nik0
+:CUSTOM_ID: 9o1eac80nik0
+:NWORKS:   684
+:END:
+** Knud Baade
+:PROPERTIES:
+:ID:       c893dc71bkk0
+:CUSTOM_ID: c893dc71bkk0
+:NWORKS:   79
+:END:
+** Gustav Pope
+:PROPERTIES:
+:ID:       5bmjog80nik0
+:CUSTOM_ID: 5bmjog80nik0
+:NWORKS:   9
+:END:
+** Jacques Clement Wagrez
+:PROPERTIES:
+:ID:       j201sk80nik0
+:CUSTOM_ID: j201sk80nik0
+:NWORKS:   10
+:END:
+** Walter Crane
+:PROPERTIES:
+:ID:       hd8csm80nik0
+:CUSTOM_ID: hd8csm80nik0
+:NWORKS:   50
+:END:
+** Francesco Albani
+:PROPERTIES:
+:ID:       dud71p80nik0
+:CUSTOM_ID: dud71p80nik0
+:NWORKS:   80
+:END:
+** Jacques Stella
+:PROPERTIES:
+:ID:       0xygoq80nik0
+:CUSTOM_ID: 0xygoq80nik0
+:NWORKS:   41
+:END:
+** Joachim Wtewael
+:PROPERTIES:
+:ID:       ec4fas80nik0
+:CUSTOM_ID: ec4fas80nik0
+:NWORKS:   30
+:END:
+** Anselm Feuerbach
+:PROPERTIES:
+:ID:       9vwjys80nik0
+:CUSTOM_ID: 9vwjys80nik0
+:NWORKS:   66
+:END:
+** Joseph Hauber
+:PROPERTIES:
+:ID:       2hl40590nik0
+:CUSTOM_ID: 2hl40590nik0
+:NWORKS:   2
+:END:
+** Mattia Preti
+:PROPERTIES:
+:ID:       2z6a49d0nik0
+:CUSTOM_ID: 2z6a49d0nik0
+:NWORKS:   33
+:END:
+** Battistello Caracciolo
+:PROPERTIES:
+:ID:       733kzdd0nik0
+:CUSTOM_ID: 733kzdd0nik0
+:NWORKS:   52
+:END:
+** Guido Reni
+:PROPERTIES:
+:ID:       twl4pfd0nik0
+:CUSTOM_ID: twl4pfd0nik0
+:NWORKS:   148
+:END:
+** Domingos Sequeira
+:PROPERTIES:
+:ID:       oo5jig01tik0
+:CUSTOM_ID: oo5jig01tik0
+:NWORKS:   40
+:END:
+** Giulio Cesare Procaccini
+:PROPERTIES:
+:ID:       prygzj11tik0
+:CUSTOM_ID: prygzj11tik0
+:NWORKS:   76
+:END:
+Giulio Cesare Procaccini was an Italian painter and sculptor of the early
+Baroque era in Milan.
+** Reza Abbasi
+:PROPERTIES:
+:ID:       2jke0h21tik0
+:CUSTOM_ID: 2jke0h21tik0
+:NWORKS:   23
+:END:
+** Giuseppe Abbati
+:PROPERTIES:
+:ID:       bc7b4p21tik0
+:CUSTOM_ID: bc7b4p21tik0
+:NWORKS:   28
+:END:
+** Edwin Austin Abbey
+:PROPERTIES:
+:ID:       7x6isa31tik0
+:CUSTOM_ID: 7x6isa31tik0
+:NWORKS:   61
+:END:
+** Oswald Achenbach
+:PROPERTIES:
+:ID:       nmx2lf41tik0
+:CUSTOM_ID: nmx2lf41tik0
+:NWORKS:   65
+:END:
+** Eduard Quitton
+:PROPERTIES:
+:ID:       bjl0v3x0uik0
+:CUSTOM_ID: bjl0v3x0uik0
+:NWORKS:   37
+:END:
+** Albrecht Adam
+:PROPERTIES:
+:ID:       res62a71vik0
+:CUSTOM_ID: res62a71vik0
+:NWORKS:   69
+:END:
+His paintings make me want to play Assassin's Creed again.
+** Sir Lawrence Alma-Tadema
+:PROPERTIES:
+:ID:       b5o5tpw05kk0
+:CUSTOM_ID: b5o5tpw05kk0
+:NWORKS:   444
+:END:
+** Arnold Böcklin
+:PROPERTIES:
+:ID:       xe6f8nh0dkk0
+:CUSTOM_ID: xe6f8nh0dkk0
+:NWORKS:   124
+:END:
+
+** Nicolai Abildgaard
+:PROPERTIES:
+:ID:       i0jf8l21fkk0
+:CUSTOM_ID: i0jf8l21fkk0
+:NWORKS:   30
+:END:
+
+** Jacques-Laurent Agasse
+:PROPERTIES:
+:ID:       dcjcb680hkk0
+:CUSTOM_ID: dcjcb680hkk0
+:NWORKS:   45
+:END:
+** Mariotto Albertinelli
+:PROPERTIES:
+:ID:       2um0gc80hkk0
+:CUSTOM_ID: 2um0gc80hkk0
+:NWORKS:   19
+:END:
+** Domenico Ghirlandaio
+:PROPERTIES:
+:ID:       1dq2tj80hkk0
+:CUSTOM_ID: 1dq2tj80hkk0
+:NWORKS:   108
+:END:
+** Denis van Alsloot
+:PROPERTIES:
+:ID:       9p5dy1r0ikk0
+:CUSTOM_ID: 9p5dy1r0ikk0
+:NWORKS:   61
+:END:
+** Jurriaan Andriessen
+:PROPERTIES:
+:ID:       3ryipgr0ikk0
+:CUSTOM_ID: 3ryipgr0ikk0
+:NWORKS:   60
+:END:
+** Alexandre Antigna
+:PROPERTIES:
+:ID:       ujv0blg0lkk0
+:CUSTOM_ID: ujv0blg0lkk0
+:NWORKS:   67
+:END:
+** Sandro Botticelli
+:PROPERTIES:
+:ID:       e2d6e3z0nkk0
+:CUSTOM_ID: e2d6e3z0nkk0
+:NWORKS:   207
+:END:
+** William-Adolphe Bouguereau
+:PROPERTIES:
+:ID:       23mfma60wkk0
+:CUSTOM_ID: 23mfma60wkk0
+:NWORKS:   822
+:END:
+*** [[id:23mfma60wkk0][William-Adolphe Bouguereau]] Motherhood Paintings
+:PROPERTIES:
+:ID:       54micc60wkk0
+:CUSTOM_ID: 54micc60wkk0
+:END:
+*** Bouguereau early competitions
+:PROPERTIES:
+:ID:       aq08zp10olk0
+:CUSTOM_ID: aq08zp10olk0
+:END:
+
+- [2025-06-13 Fri 14:13] This video: https://youtu.be/8qA5g4Evg5I mentions something very interesting,
+  that William Bouguereau won a prize for a figure painting in the École des
+  beaux-arts de Bordeaux, although his practice was only two hours in the morning,
+  compared to his peers who were full-time students.
+** Frederic William Burton
+:PROPERTIES:
+:ID:       qse5o7c0rlk0
+:CUSTOM_ID: qse5o7c0rlk0
+:NWORKS:   50
+:END:
+** Alexandre Cabanel
+:PROPERTIES:
+:ID:       eaphdi80xlk0
+:CUSTOM_ID: eaphdi80xlk0
+:NWORKS:   90
+:END:
+** Frederic Edwin Church
+:PROPERTIES:
+:ID:       ig8cxhp01mk0
+:CUSTOM_ID: ig8cxhp01mk0
+:NWORKS:   76
+:END:
+** DONE Thomas Cole                                                  :@check:
+:PROPERTIES:
+:ID:       34feald0fmk0
+:CUSTOM_ID: 34feald0fmk0
+:NWORKS:   130
+:END:
+- [2025-07-16 Wed 17:48] I need to schedule meditating his works for a full day.
+** Jean-Baptiste Camille Corot
+:PROPERTIES:
+:ID:       48iifil01nk0
+:CUSTOM_ID: 48iifil01nk0
+:NWORKS:   600
+:END:
+** Hermann David Salomon Corrodi
+:PROPERTIES:
+:ID:       hnuhbcd0cpk0
+:CUSTOM_ID: hnuhbcd0cpk0
+:NWORKS:   28
+:END:
+** Gustave-Claude-Etienne Courtois
+:PROPERTIES:
+:ID:       qz32hxv0ipk0
+:CUSTOM_ID: qz32hxv0ipk0
+:NWORKS:   13
+:END:
+** Thomas Couture
+:PROPERTIES:
+:ID:       7guc32g0kpk0
+:CUSTOM_ID: 7guc32g0kpk0
+:NWORKS:   28
+:END:
+** Frank Cadogan Cowper
+:PROPERTIES:
+:ID:       782jrqa0npk0
+:CUSTOM_ID: 782jrqa0npk0
+:NWORKS:   20
+:END:
+** TODO Louis-Philippe Crépin
+:PROPERTIES:
+:ID:       fli4avf0opk0
+:CUSTOM_ID: fli4avf0opk0
+:END:
+** Jasper Francis Cropsey
+:PROPERTIES:
+:ID:       kglj7vf0opk0
+:CUSTOM_ID: kglj7vf0opk0
+:NWORKS:   31
+:END:
+** Charles Courtney Curran
+:PROPERTIES:
+:ID:       xohgxop01qk0
+:CUSTOM_ID: xohgxop01qk0
+:NWORKS:   32
+:END:
+** Pietro da Cortona
+:PROPERTIES:
+:ID:       73l48b716qk0
+:CUSTOM_ID: 73l48b716qk0
+:NWORKS:   29
+:END:
+** Gustav Klimt
+:PROPERTIES:
+:ID:       ied5qr60aqk0
+:CUSTOM_ID: ied5qr60aqk0
+:NWORKS:   245
+:END:
+** Pellizza da Volpedo
+:PROPERTIES:
+:ID:       0zif2xf0dqk0
+:CUSTOM_ID: 0zif2xf0dqk0
+:NWORKS:   54
+:END:
+** TODO Giovanni Segantini
+:PROPERTIES:
+:ID:       n93cgz50hqk0
+:CUSTOM_ID: n93cgz50hqk0
+:END:
+** Johan Christian Dahl
+:PROPERTIES:
+:ID:       kojhh1x0iqk0
+:CUSTOM_ID: kojhh1x0iqk0
+:NWORKS:   100
+:END:
+** Charles-Francois Daubigny
+:PROPERTIES:
+:ID:       xcm06ix0iqk0
+:CUSTOM_ID: xcm06ix0iqk0
+:NWORKS:   102
+:END:
+** Jacques-Louis David
+:PROPERTIES:
+:ID:       0t121id1kqk0
+:CUSTOM_ID: 0t121id1kqk0
+:NWORKS:   128
+:END:
+** Nicolas Poussin
+:PROPERTIES:
+:ID:       5tp1r081vqk0
+:CUSTOM_ID: 5tp1r081vqk0
+:NWORKS:   300
+:END:
+** Pierre-Henri de Valenciennes
+:PROPERTIES:
+:ID:       38phjra0ark0
+:CUSTOM_ID: 38phjra0ark0
+:NWORKS:   100
+:END:
+** Edouard Debat-Ponsan
+:PROPERTIES:
+:ID:       u0ehk1q0nrk0
+:CUSTOM_ID: u0ehk1q0nrk0
+:NWORKS:   17
+:END:
+** Joseph DeCamp
+:PROPERTIES:
+:ID:       1ul96w40yrk0
+:CUSTOM_ID: 1ul96w40yrk0
+:NWORKS:   54
+:END:
+** Frank Dicksee
+:PROPERTIES:
+:ID:       dcy99130zrk0
+:CUSTOM_ID: dcy99130zrk0
+:NWORKS:   27
+:END:
+** Thomas Francis Dicksee
+:PROPERTIES:
+:ID:       nooir8503sk0
+:CUSTOM_ID: nooir8503sk0
+:NWORKS:   12
+:END:
+** Leonardo da Vinci
+* Goodies                                                             :noexport:
+:PROPERTIES:
+:ID:       ww50oy21clk0
+:CUSTOM_ID: ww50oy21clk0
+:END:
+Following are pieces of art, pictures, and objects I like, including things like
+watches and women clothing. Usually found through the internet.
+- https://pin.it/6wVgE37Qv
+- https://pin.it/2n9gxUqTt
+- https://pin.it/1kCfycyAd
+- https://pin.it/5tRojj2ts
+- https://pin.it/5YfTwF3yU
+- https://pin.it/5bBK85j52
+- https://pin.it/4TJVQKPDH
+- https://pin.it/75oPR0zZZ
+- https://pin.it/4TaZihKAG
+- https://pin.it/7BbQiLTQc
+- https://pin.it/55b2YTGFe
+- https://pin.it/djFpzYsN0
+- https://pin.it/6TcBWuXML
+- https://pin.it/7h3HtWQ7J
+- https://pin.it/5N676m5yg
+- https://pin.it/6kELT9pCD
+- https://pin.it/3ASOnvone
+- https://pin.it/5PA0Mseen
+- https://pin.it/vnP32ltm4
+- https://pin.it/26nB39ruP
+- https://pin.it/1xpZSXdil
+- https://pin.it/2dkfTpeRq
+** Watches I might consider getting
+- https://pin.it/5tRojj2ts
+- This one I want to gift someone: https://pin.it/6ql0uPeEc
+- https://pin.it/7zr1MLyzo
+- https://pin.it/1t3hvLh3v
+- https://pin.it/1VOXAXQcb
+- https://pin.it/5jvThYcoJ
+- https://pin.it/3naB4ERqB
+- https://pin.it/4jARLS0ei
+- https://pin.it/3Cgx3QnAR
+- https://pin.it/5PCUg88lb
+* Christian Art                                                       :noexport:
+:PROPERTIES:
+:ID:       r98aze11tik0
+:CUSTOM_ID: r98aze11tik0
+:END:
+Christian art is sacred art which uses subjects, themes, and imagery from [[id:6lkfjxc0nik0][Christianity]]. Most Christian groups use or have used art to some extent, including early Christian art and architecture and Christian media.
+** Coronation of the Virgin
+:PROPERTIES:
+:ID:       hz1lah11tik0
+:CUSTOM_ID: hz1lah11tik0
+:END:
+The Coronation of the Virgin or Coronation of Mary is a subject in Christian art, especially popular in Italy in the 13th to 15th centuries, but continuing in popularity until the 18th century and beyond. Christ, sometimes accompanied by God the Father and the Holy Spirit in the form of a dove, places a crown on the head of Mary as Queen of Heaven. In early versions the setting is a Heaven imagined as an earthly court, staffed by saints and angels; in later versions Heaven is more often seen as in the sky, with the figures seated on clouds. The subject is also notable as one where the whole Christian Trinity is often shown together, sometimes in unusual ways. Crowned Virgins are also seen in Eastern Orthodox Christian icons, specifically in the Russian Orthodox church after the 18th century. Mary is sometimes shown, in both Eastern and Western Christian art, being crowned by one or two angels, but this is considered a different subject.
+** Visitation
+:PROPERTIES:
+:ID:       y4d45i80hkk0
+:CUSTOM_ID: y4d45i80hkk0
+:END:
+In Christianity, the Visitation, also known as the Visitation of the Blessed Virgin Mary, refers to the visit of Mary, who was pregnant with Jesus, to Elizabeth, who was pregnant with John the Baptist, in the Gospel of Luke, Luke 1:39–56. The episode is one of the standard scenes shown in cycles of the Life of the Virgin in art, and sometimes in larger cycles of the Life of Christ in art.
+* TODO Everyday, a beautiful painting.                                :@general:
+SCHEDULED: <2025-12-14 Sun +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2025-12-04 Thu 19:45]
+:END:
+- [2025-08-03 Sun 03:37] I will probably stop adding notes like "next is". My new browse can pin the tab for good, so tracking where I stopped is no longer a problem.
+- [2025-07-24 Thu 19:28] Next is Corot, 135
+- [2025-07-21 Mon 02:03] https://www.wikiart.org/en/camille-corot/all-works#!#filterName:all-paintings-chronologically,resultType:masonry
+- [2025-07-18 Fri 17:46] John Constable 3 / 108
+  Wooded Landscape
+- [2025-07-16 Wed 17:48] Skipping Thomas Cole.
+- [2025-07-13 Sun 22:28] 26, Thomas
+- [2025-07-05 Sat 08:29] 25, Thomas https://www.wikiart.org/en/thomas-cole/all-works#!#filterName:all-paintings-chronologically,resultType:masonry
+- [2025-06-27 Fri 20:39] Next is Léon Cogniet , 1794 - 1880 , 20 artworks
+- [2025-06-23 Mon 19:14] Claricia is next
+- [2025-06-20 Fri 13:14] Next is Rosalba Carriera ,
+- [2025-06-16 Mon 11:25] Next is reviewing the Bs on the other website. There's also another new website
+  that I think deserves checking the As.
+- [2025-06-07 Sat 20:47] William-Adolphe Bouguereau 218 / 430
+- [2025-06-07 Sat 14:55] Next is Soul Carried to Heaven (1878)
+  William-Adolphe Bouguereau 141 / 430
+- [2025-05-12 Mon 02:01] Next is ALLIO, Domenico I
+- [2025-05-11 Sun 00:23] ABONDIO, Antonio
+- [2025-05-10 Sat 04:04] https://www.wga.hu/html_m/a/index.html Juan de La start
+- [2025-05-09 Fri 04:57] 23 Sandro Botticelli
+- [2025-05-07 Wed 03:14] Alma 118
+- [2025-05-04 Sun 05:24] 164, Alma
+- [2025-05-02 Fri 23:38] At 567, Ivan.
+- [2025-05-02 Fri 00:17] At 374, Ivan
+:STATS:
+- State "DONE"       from "TODO"       [2025-12-04 Thu 19:45]
+- State "DONE"       from "TODO"       [2025-12-03 Wed 23:35]
+- State "DONE"       from "TODO"       [2025-12-02 Tue 18:17]
+- State "DONE"       from "TODO"       [2025-12-02 Tue 00:40]
+- State "DONE"       from "TODO"       [2025-11-17 Mon 20:09]
+- State "DONE"       from "TODO"       [2025-11-16 Sun 23:28]
+- State "DONE"       from "TODO"       [2025-11-15 Sat 19:23]
+- State "DONE"       from "TODO"       [2025-11-14 Fri 20:43]
+- State "DONE"       from "TODO"       [2025-11-13 Thu 21:53]
+- State "DONE"       from "TODO"       [2025-11-03 Mon 00:47]
+- State "DONE"       from "TODO"       [2025-10-28 Tue 22:25]
+- State "DONE"       from "TODO"       [2025-10-26 Sun 20:07]
+- State "DONE"       from "TODO"       [2025-10-25 Sat 20:33]
+- State "DONE"       from "TODO"       [2025-10-24 Fri 21:46]
+- State "DONE"       from "TODO"       [2025-10-24 Fri 01:18]
+- State "DONE"       from "TODO"       [2025-10-24 Fri 01:18]
+- State "DONE"       from "TODO"       [2025-10-22 Wed 21:27]
+- State "DONE"       from "TODO"       [2025-10-21 Tue 19:19]
+- State "DONE"       from "TODO"       [2025-10-20 Mon 20:33]
+- State "DONE"       from "TODO"       [2025-10-20 Mon 00:09]
+- State "DONE"       from "TODO"       [2025-10-19 Sun 01:31]
+- State "DONE"       from "TODO"       [2025-10-17 Fri 18:51]
+- State "DONE"       from "TODO"       [2025-10-15 Wed 02:24]
+- State "DONE"       from "TODO"       [2025-10-11 Sat 02:01]
+- State "DONE"       from "TODO"       [2025-10-06 Mon 22:38]
+- State "DONE"       from "TODO"       [2025-10-02 Thu 00:10]
+- State "DONE"       from "TODO"       [2025-10-01 Wed 00:56]
+- State "DONE"       from "TODO"       [2025-09-30 Tue 05:02]
+- State "DONE"       from "TODO"       [2025-09-28 Sun 00:07]
+- State "DONE"       from "TODO"       [2025-09-26 Fri 17:43]
+- State "DONE"       from "TODO"       [2025-09-26 Fri 00:58]
+- State "DONE"       from "TODO"       [2025-09-24 Wed 00:08]
+- State "DONE"       from "TODO"       [2025-09-21 Sun 21:27]
+- State "DONE"       from "TODO"       [2025-09-21 Sun 19:49]
+- State "DONE"       from "TODO"       [2025-09-17 Wed 21:18]
+- State "DONE"       from "TODO"       [2025-09-16 Tue 23:18]
+- State "DONE"       from "TODO"       [2025-09-16 Tue 23:08]
+- State "DONE"       from "TODO"       [2025-09-11 Thu 21:05]
+- State "DONE"       from "TODO"       [2025-09-10 Wed 23:33]
+- State "DONE"       from "TODO"       [2025-08-31 Sun 21:44]
+- State "DONE"       from "TODO"       [2025-08-28 Thu 19:45]
+- State "DONE"       from "TODO"       [2025-08-26 Tue 20:43]
+- State "DONE"       from "TODO"       [2025-08-26 Tue 01:11]
+- State "DONE"       from "TODO"       [2025-08-25 Mon 00:15]
+- State "DONE"       from "TODO"       [2025-08-23 Sat 14:59]
+- State "DONE"       from "TODO"       [2025-08-22 Fri 13:02]
+- State "DONE"       from "TODO"       [2025-08-21 Thu 20:11]
+- State "DONE"       from "TODO"       [2025-08-20 Wed 21:07]
+- State "DONE"       from "TODO"       [2025-08-18 Mon 23:37]
+- State "DONE"       from "TODO"       [2025-08-17 Sun 22:49]
+- State "DONE"       from "TODO"       [2025-08-10 Sun 23:03]
+- State "DONE"       from "TODO"       [2025-08-09 Sat 00:53]
+- State "DONE"       from "TODO"       [2025-08-08 Fri 16:51]
+- State "DONE"       from "TODO"       [2025-08-08 Fri 01:21]
+- State "DONE"       from "TODO"       [2025-08-05 Tue 21:54]
+- State "DONE"       from "TODO"       [2025-08-03 Sun 03:35]
+- State "DONE"       from "TODO"       [2025-07-24 Thu 19:28]
+- State "DONE"       from "TODO"       [2025-07-21 Mon 21:27]
+- State "DONE"       from "TODO"       [2025-07-21 Mon 01:26]
+- State "DONE"       from "TODO"       [2025-07-19 Sat 20:43]
+- State "DONE"       from "TODO"       [2025-07-18 Fri 17:48]
+- State "DONE"       from "TODO"       [2025-07-16 Wed 17:52]
+- State "DONE"       from "TODO"       [2025-07-13 Sun 22:28]
+- State "DONE"       from "TODO"       [2025-07-05 Sat 08:30]
+- State "DONE"       from "TODO"       [2025-07-04 Fri 06:13]
+- State "DONE"       from "TODO"       [2025-06-27 Fri 20:39]
+- State "DONE"       from "TODO"       [2025-06-20 Fri 13:14]
+- State "DONE"       from "TODO"       [2025-06-16 Mon 00:51]
+- State "DONE"       from "TODO"       [2025-06-13 Fri 14:26]
+- State "DONE"       from "TODO"       [2025-06-10 Tue 08:55]
+- State "DONE"       from "TODO"       [2025-06-09 Mon 18:48]
+- State "DONE"       from "TODO"       [2025-06-07 Sat 20:47]
+- State "DONE"       from "TODO"       [2025-06-07 Sat 18:30]
+- State "DONE"       from "TODO"       [2025-06-07 Sat 14:57]
+- State "DONE"       from "TODO"       [2025-06-06 Fri 04:46]
+- State "DONE"       from "TODO"       [2025-05-23 Fri 10:22]
+- State "DONE"       from "TODO"       [2025-05-17 Sat 01:31]
+- State "DONE"       from "TODO"       [2025-05-15 Thu 06:03]
+- State "DONE"       from "TODO"       [2025-05-13 Tue 03:03]
+- State "DONE"       from "TODO"       [2025-05-12 Mon 02:04]
+- State "DONE"       from "TODO"       [2025-05-11 Sun 00:29]
+- State "DONE"       from "TODO"       [2025-05-10 Sat 04:16]
+- State "DONE"       from "TODO"       [2025-05-09 Fri 04:57]
+- State "DONE"       from "TODO"       [2025-05-08 Thu 01:32]
+- State "DONE"       from "TODO"       [2025-05-07 Wed 03:22]
+- State "DONE"       from "TODO"       [2025-05-05 Mon 06:49]
+- State "DONE"       from "TODO"       [2025-05-04 Sun 05:21]
+- State "DONE"       from "TODO"       [2025-05-03 Sat 00:14]
+- State "DONE"       from "TODO"       [2025-05-02 Fri 00:20]
+- State "DONE"       from "TODO"       [2025-04-30 Wed 05:51]
+- State "DONE"       from "TODO"       [2025-04-10 Thu 00:22]
+- State "DONE"       from "TODO"       [2025-03-31 Mon 14:47]
+- State "DONE"       from "TODO"       [2025-03-31 Mon 10:50]
+- State "DONE"       from "TODO"       [2025-03-31 Mon 10:47]
+- State "DONE"       from "TODO"       [2025-03-31 Mon 08:51]
+- State "DONE"       from "TODO"       [2025-03-29 Sat 14:34]
+- State "DONE"       from "TODO"       [2025-03-29 Sat 14:29]
+- State "DONE"       from "TODO"       [2025-03-28 Fri 00:11]
+- State "DONE"       from "TODO"       [2025-03-27 Thu 23:53]
+- State "DONE"       from "TODO"       [2025-03-27 Thu 23:38]
+- State "DONE"       from "TODO"       [2025-03-27 Thu 23:29]
+- State "DONE"       from "TODO"       [2025-03-27 Thu 23:15]
+- State "DONE"       from "TODO"       [2025-03-23 Sun 01:16]
+- State "DONE"       from "TODO"       [2025-03-22 Sat 23:37]
+:END:
+:LOGBOOK:
+CLOCK: [2025-12-12 Fri 16:53]--[2025-12-13 Sat 14:22] => 21:29
+CLOCK: [2025-12-05 Fri 16:27]--[2025-12-05 Fri 19:29] =>  3:02
+CLOCK: [2025-12-04 Thu 19:42]--[2025-12-04 Thu 19:45] =>  0:03
+CLOCK: [2025-12-03 Wed 23:30]--[2025-12-03 Wed 23:35] =>  0:05
+CLOCK: [2025-12-02 Tue 17:38]--[2025-12-02 Tue 18:17] =>  0:39
+CLOCK: [2025-12-02 Tue 00:23]--[2025-12-02 Tue 00:40] =>  0:17
+CLOCK: [2025-11-17 Mon 20:00]--[2025-11-17 Mon 20:09] =>  0:09
+CLOCK: [2025-11-16 Sun 23:12]--[2025-11-16 Sun 23:28] =>  0:16
+CLOCK: [2025-11-15 Sat 14:44]--[2025-11-15 Sat 14:48] =>  0:04
+CLOCK: [2025-11-14 Fri 20:39]--[2025-11-14 Fri 20:43] =>  0:04
+CLOCK: [2025-11-13 Thu 21:29]--[2025-11-13 Thu 21:53] =>  0:24
+CLOCK: [2025-11-03 Mon 00:37]--[2025-11-03 Mon 00:47] =>  0:10
+CLOCK: [2025-11-02 Sun 03:00]--[2025-11-02 Sun 03:17] =>  0:17
+CLOCK: [2025-10-28 Tue 21:10]--[2025-10-28 Tue 22:25] =>  1:15
+CLOCK: [2025-10-26 Sun 19:57]--[2025-10-26 Sun 20:07] =>  0:10
+CLOCK: [2025-10-25 Sat 19:12]--[2025-10-25 Sat 19:51] =>  0:39
+CLOCK: [2025-10-24 Fri 21:35]--[2025-10-24 Fri 21:46] =>  0:11
+CLOCK: [2025-10-24 Fri 00:38]--[2025-10-24 Fri 01:18] =>  0:40
+CLOCK: [2025-10-22 Wed 20:59]--[2025-10-22 Wed 21:27] =>  0:28
+CLOCK: [2025-10-21 Tue 18:53]--[2025-10-21 Tue 19:19] =>  0:26
+CLOCK: [2025-10-20 Mon 19:57]--[2025-10-20 Mon 20:33] =>  0:36
+CLOCK: [2025-10-19 Sun 23:50]--[2025-10-20 Mon 00:09] =>  0:19
+CLOCK: [2025-10-18 Sat 23:59]--[2025-10-19 Sun 01:31] =>  1:32
+CLOCK: [2025-10-17 Fri 18:41]--[2025-10-17 Fri 18:51] =>  0:10
+CLOCK: [2025-10-15 Wed 01:44]--[2025-10-15 Wed 02:24] =>  0:40
+CLOCK: [2025-10-11 Sat 00:57]--[2025-10-11 Sat 02:01] =>  1:04
+CLOCK: [2025-10-06 Mon 22:15]--[2025-10-06 Mon 22:38] =>  0:23
+CLOCK: [2025-10-02 Thu 00:03]--[2025-10-02 Thu 00:10] =>  0:07
+CLOCK: [2025-10-01 Wed 00:17]--[2025-10-01 Wed 00:56] =>  0:39
+CLOCK: [2025-09-30 Tue 04:04]--[2025-09-30 Tue 05:02] =>  0:58
+CLOCK: [2025-09-28 Sun 22:03]--[2025-09-29 Mon 15:59] => 17:56
+CLOCK: [2025-09-27 Sat 23:42]--[2025-09-28 Sun 00:07] =>  0:25
+CLOCK: [2025-09-26 Fri 14:37]--[2025-09-26 Fri 17:43] =>  3:06
+CLOCK: [2025-09-26 Fri 00:43]--[2025-09-26 Fri 00:58] =>  0:15
+CLOCK: [2025-09-23 Tue 23:59]--[2025-09-24 Wed 00:08] =>  0:09
+CLOCK: [2025-09-21 Sun 21:08]--[2025-09-21 Sun 21:27] =>  0:19
+CLOCK: [2025-09-21 Sun 00:56]--[2025-09-21 Sun 19:49] => 18:53
+CLOCK: [2025-09-17 Wed 21:07]--[2025-09-17 Wed 21:18] =>  0:11
+CLOCK: [2025-09-16 Tue 22:15]--[2025-09-16 Tue 22:18] =>  0:03
+CLOCK: [2025-09-15 Mon 22:29]--[2025-09-15 Mon 22:33] =>  0:04
+CLOCK: [2025-09-11 Thu 20:55]--[2025-09-11 Thu 21:05] =>  0:10
+CLOCK: [2025-09-10 Wed 23:24]--[2025-09-10 Wed 23:33] =>  0:09
+CLOCK: [2025-09-09 Tue 23:36]--[2025-09-10 Wed 19:54] => 20:18
+CLOCK: [2025-08-31 Sun 21:30]--[2025-08-31 Sun 21:44] =>  0:14
+CLOCK: [2025-08-28 Thu 19:42]--[2025-08-28 Thu 19:45] =>  0:03
+CLOCK: [2025-08-26 Tue 20:34]--[2025-08-26 Tue 20:43] =>  0:09
+CLOCK: [2025-08-26 Tue 01:07]--[2025-08-26 Tue 01:11] =>  0:04
+CLOCK: [2025-08-25 Mon 00:13]--[2025-08-25 Mon 00:15] =>  0:02
+CLOCK: [2025-08-23 Sat 14:55]--[2025-08-23 Sat 14:59] =>  0:04
+CLOCK: [2025-08-22 Fri 12:58]--[2025-08-22 Fri 13:02] =>  0:04
+CLOCK: [2025-08-21 Thu 20:08]--[2025-08-21 Thu 20:11] =>  0:03
+CLOCK: [2025-08-20 Wed 20:59]--[2025-08-20 Wed 21:07] =>  0:08
+CLOCK: [2025-08-18 Mon 21:59]--[2025-08-18 Mon 23:37] =>  1:38
+CLOCK: [2025-08-17 Sun 22:40]--[2025-08-17 Sun 22:46] =>  0:06
+CLOCK: [2025-08-10 Sun 22:59]--[2025-08-10 Sun 23:03] =>  0:04
+CLOCK: [2025-08-09 Sat 00:33]--[2025-08-09 Sat 00:53] =>  0:20
+CLOCK: [2025-08-08 Fri 01:09]--[2025-08-08 Fri 01:21] =>  0:12
+CLOCK: [2025-08-05 Tue 21:44]--[2025-08-05 Tue 21:54] =>  0:10
+CLOCK: [2025-08-03 Sun 03:21]--[2025-08-03 Sun 03:35] =>  0:14
+CLOCK: [2025-08-02 Sat 06:34]--[2025-08-02 Sat 17:19] => 10:45
+CLOCK: [2025-07-24 Thu 18:52]--[2025-07-24 Thu 19:28] =>  0:36
+CLOCK: [2025-07-21 Mon 21:21]--[2025-07-21 Mon 21:27] =>  0:06
+CLOCK: [2025-07-21 Mon 01:18]--[2025-07-21 Mon 01:26] =>  0:08
+CLOCK: [2025-07-19 Sat 20:05]--[2025-07-19 Sat 20:43] =>  0:38
+CLOCK: [2025-07-18 Fri 17:32]--[2025-07-18 Fri 17:48] =>  0:16
+CLOCK: [2025-07-16 Wed 17:35]--[2025-07-16 Wed 17:52] =>  0:17
+CLOCK: [2025-07-13 Sun 20:47]--[2025-07-13 Sun 22:28] =>  1:41
+CLOCK: [2025-07-05 Sat 08:20]--[2025-07-05 Sat 08:30] =>  0:10
+CLOCK: [2025-07-04 Fri 05:55]--[2025-07-04 Fri 06:13] =>  0:18
+CLOCK: [2025-07-04 Fri 05:09]--[2025-07-04 Fri 05:14] =>  0:05
+CLOCK: [2025-06-30 Mon 13:39]--[2025-06-30 Mon 13:43] =>  0:04
+CLOCK: [2025-06-27 Fri 20:23]--[2025-06-27 Fri 20:39] =>  0:16
+CLOCK: [2025-06-20 Fri 12:24]--[2025-06-20 Fri 13:14] =>  0:50
+CLOCK: [2025-06-18 Wed 00:06]--[2025-06-18 Wed 10:42] => 10:36
+CLOCK: [2025-06-16 Mon 00:23]--[2025-06-16 Mon 00:51] =>  0:28
+CLOCK: [2025-06-13 Fri 13:53]--[2025-06-13 Fri 14:26] =>  0:33
+CLOCK: [2025-06-10 Tue 07:46]--[2025-06-10 Tue 08:55] =>  1:09
+CLOCK: [2025-06-09 Mon 18:20]--[2025-06-09 Mon 18:48] =>  0:28
+CLOCK: [2025-06-07 Sat 20:30]--[2025-06-07 Sat 20:47] =>  0:17
+CLOCK: [2025-06-07 Sat 18:06]--[2025-06-07 Sat 18:30] =>  0:24
+CLOCK: [2025-06-07 Sat 14:49]--[2025-06-07 Sat 14:57] =>  0:08
+CLOCK: [2025-06-06 Fri 04:31]--[2025-06-06 Fri 04:46] =>  0:15
+CLOCK: [2025-06-05 Thu 22:36]--[2025-06-05 Thu 22:54] =>  0:18
+CLOCK: [2025-06-01 Sun 18:33]--[2025-06-01 Sun 18:49] =>  0:16
+CLOCK: [2025-05-23 Fri 09:57]--[2025-05-23 Fri 10:22] =>  0:25
+CLOCK: [2025-05-17 Sat 00:39]--[2025-05-17 Sat 01:31] =>  0:52
+CLOCK: [2025-05-15 Thu 05:35]--[2025-05-15 Thu 06:03] =>  0:28
+CLOCK: [2025-05-13 Tue 02:46]--[2025-05-13 Tue 03:03] =>  0:17
+CLOCK: [2025-05-12 Mon 01:40]--[2025-05-12 Mon 02:04] =>  0:24
+CLOCK: [2025-05-11 Sun 00:07]--[2025-05-11 Sun 00:29] =>  0:22
+CLOCK: [2025-05-10 Sat 03:34]--[2025-05-10 Sat 04:16] =>  0:42
+CLOCK: [2025-05-09 Fri 04:06]--[2025-05-09 Fri 04:57] =>  0:51
+CLOCK: [2025-05-07 Wed 03:10]--[2025-05-07 Wed 03:22] =>  0:12
+CLOCK: [2025-05-06 Tue 23:43]--[2025-05-07 Wed 02:37] =>  2:54
+CLOCK: [2025-05-06 Tue 22:14]--[2025-05-06 Tue 23:42] =>  1:28
+CLOCK: [2025-05-05 Mon 06:15]--[2025-05-05 Mon 06:49] =>  0:34
+CLOCK: [2025-05-04 Sun 05:17]--[2025-05-04 Sun 05:21] =>  0:04
+CLOCK: [2025-05-03 Sat 07:38]--[2025-05-03 Sat 08:35] =>  0:57
+CLOCK: [2025-05-02 Fri 23:20]--[2025-05-03 Sat 00:14] =>  0:54
+CLOCK: [2025-05-02 Fri 00:08]--[2025-05-02 Fri 00:18] =>  0:10
+CLOCK: [2025-04-30 Wed 05:29]--[2025-04-30 Wed 05:51] =>  0:22
+CLOCK: [2025-04-09 Wed 23:58]--[2025-04-10 Thu 00:22] =>  0:24
+CLOCK: [2025-03-31 Mon 10:50]--[2025-03-31 Mon 14:47] =>  3:57
+CLOCK: [2025-03-31 Mon 10:47]--[2025-03-31 Mon 10:50] =>  0:03
+CLOCK: [2025-03-31 Mon 10:44]--[2025-03-31 Mon 10:47] =>  0:03
+CLOCK: [2025-03-31 Mon 08:29]--[2025-03-31 Mon 08:51] =>  0:22
+CLOCK: [2025-03-29 Sat 14:29]--[2025-03-29 Sat 14:34] =>  0:05
+CLOCK: [2025-03-29 Sat 13:29]--[2025-03-29 Sat 14:29] =>  1:00
+CLOCK: [2025-03-27 Thu 23:53]--[2025-03-28 Fri 00:11] =>  0:18
+CLOCK: [2025-03-27 Thu 23:38]--[2025-03-27 Thu 23:53] =>  0:15
+CLOCK: [2025-03-27 Thu 23:29]--[2025-03-27 Thu 23:38] =>  0:09
+CLOCK: [2025-03-27 Thu 23:15]--[2025-03-27 Thu 23:29] =>  0:14
+CLOCK: [2025-03-27 Thu 22:36]--[2025-03-27 Thu 23:15] =>  0:39
+CLOCK: [2025-03-26 Wed 18:04]--[2025-03-27 Thu 00:19] =>  6:15
+CLOCK: [2025-03-24 Mon 02:58]--[2025-03-24 Mon 03:03] =>  0:05
+CLOCK: [2025-03-23 Sun 00:44]--[2025-03-23 Sun 01:16] =>  0:32
+CLOCK: [2025-03-22 Sat 22:51]--[2025-03-22 Sat 23:37] =>  0:46
+CLOCK: [2025-03-22 Sat 20:54]--[2025-03-22 Sat 22:14] =>  1:20
+:END:
+* TODO Parable of the Good Samaritan next Robert Bateman              :@check:@later:
+* TODO Read                                                           :@read:
+:LOGBOOK:
+CLOCK: [2025-05-04 Sun 05:09]--[2025-05-04 Sun 05:17] =>  0:08
+:END:
+https://archive.org/details/7_20200325_20200325
+
+Sir Lawrence Alma-Tadema 9 / 217
+The Death of Hippolytus (1860)
+
+https://www.wikiart.org/en/Alphabet/a/text-list
+* TODO [[mu4e:msgid:20250608144113.3.eca9b1a1beb41c88@mg-d0.substack.com][How Christianity Shaped Art]]                                    :@read:noexport:
+:PROPERTIES:
+:ID:       spk1y380omk0
+:CUSTOM_ID: spk1y380omk0
+:LAST_REPEAT: [2025-09-13 Sat 01:33]
+:END:
+- [2025-09-13 Sat 01:33] \\
+  sad
+:STATS:
+- [2025-09-13 Sat 01:31] \\
+  sad
+- [2025-09-13 Sat 01:29] \\
+  qe
+- [2025-09-13 Sat 01:27] \\
+  gk
+- [2025-09-13 Sat 01:27] \\
+  sa
+- [2025-09-13 Sat 01:25] \\
+  sswda
+:END:
+[2025-06-08 Sun 22:43]
+#+BEGIN_tag
+{{{t}}} [[id:r98aze11tik0][Christian Art]]
+#+END_tag
+* TODO [[https://en.wikipedia.org/wiki/History_painting][History painting - Wikipedia]]                                   :@idea:
+:LOGBOOK:
+CLOCK: [2025-12-04 Thu 23:11]--[2025-12-04 Thu 23:13] =>  0:02
+:END:
+* TODO https://en.wikipedia.org/wiki/Gustave_Courbet
+* TODO https://en.wikipedia.org/wiki/Antonio_da_Correggio
+* TODO https://www.wikiart.org/en/jan-cossiers
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+
+
+sf project deploy start --source-dir "force-app/main/default/classes/ApprovalRequests/tests/ApprovalRequestsControllerTest.cls" --source-dir "force-app/main/default/classes/ApprovalRequests/tests/ApprovalRequestsControllerTest.cls-meta.xml" --ignore-warnings --test-level NoTestRun --wait 120

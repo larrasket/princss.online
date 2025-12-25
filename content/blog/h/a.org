@@ -24,8 +24,101 @@ Here I collect my highlights from readings. More details of how this works can b
 -----
 * Content
 
-{{{anth}}}
+#+begin_src elisp
+(defun salih/compare-org-id (node1 node2)
+  (let ((timestamp1 (cdr (org-id-decode  (org-roam-node-id node1))))
+        (timestamp2 (cdr (org-id-decode  (org-roam-node-id node2)))))
+    (time-less-p  timestamp1 timestamp2)))
 
+
+(defun salih/mkinclude (node remove-title &optional astr)
+  (unless astr
+    (setq astr "**"))
+  (let* ((id (org-roam-node-id node))
+         (entry (org-roam-node-file (org-roam-node-from-id id)))
+         (cite (file-name-sans-extension (file-name-nondirectory entry))))
+    (if remove-title
+        (format "#+INCLUDE: \"%s::#%s\" :only-contents t\n\n\n \n/Derived from/ [cite:@%s], no. %s. Appeared: %s\n-----\n"
+                entry
+                id
+                cite
+                (substring (cl-first (s-split " " (salih/get-node-property node "NOTER_PAGE"))) 1)
+                (format-time-string "%Y-%m-%d (%H:%M)" (cdr (org-id-decode  (org-roam-node-id node)))))
+
+      (format "#+INCLUDE: \"%s::#%s\" :only-contents nil\n"
+              entry
+              id))))
+
+
+(defun salih/get-back-nodes (id &optional no-sort with-sh)
+  (let ((backlinks (org-roam-backlinks-get (org-roam-node-from-id id) :unique t))
+        nodes '())
+    (while backlinks
+      (let* ((source-node (org-roam-backlink-source-node (car backlinks)))
+             (file (org-roam-node-file source-node))
+             ;; Short posts: /sh/, stack.org, OR Hugo diary/microblog
+             (shp (or
+                   (cl-search "/sh/" file)
+                   (cl-search "stack.org" file)
+                   (and (cl-search "/roam/hugo/content/" file)
+                        (or (cl-search "/diary/" file)
+                            (cl-search "/microblog/" file))))))
+        (if (or (and with-sh shp) (and (not with-sh) (not shp)))
+            (push source-node nodes)))
+      (setq backlinks  (cdr backlinks)))
+    (if no-sort (reverse (sort nodes #'salih/compare-timestamps))
+      (sort nodes #'salih/compare-timestamps))))
+
+
+(defun salih/compare-timestamps (node1 node2)
+  "Comparison function to sort structs based on timestamp slot."
+  (let* ((node-1-file (org-roam-node-file node1))
+         (node-2-file (org-roam-node-file node2))
+         (use-id-1 (or
+                    (cl-search "/sh/" node-1-file)
+                    (cl-search "stack.org" node-1-file)))
+         (use-id-2 (or
+                    (cl-search "/sh/" node-2-file)
+                    (cl-search "stack.org" node-2-file)))
+         (timestamp1 (salih/get-date node-1-file (when use-id-1 (org-roam-node-id node1))))
+         (timestamp2 (salih/get-date node-2-file (when use-id-2 (org-roam-node-id node2)))))
+    (time-less-p  timestamp2 timestamp1)))
+
+(defun salih/get-node-property (node property)
+  (cdr (assoc property (org-roam-node-properties node))))
+
+(defun salih/get-date (file &optional node)
+  (if node
+      (cdr (org-id-decode node))
+    (let ((date (org-publish-find-property file :date nil)))
+      ;; DATE is a secondary string.  If it contains
+      ;; a time-stamp, convert it to internal format.
+      ;; Otherwise, use FILE modification time.
+      (cond ((let ((ts (and (consp date) (assq 'timestamp date))))
+               (and ts
+                    (let ((value (org-element-interpret-data ts)))
+                      (and (org-string-nw-p value)
+                           (org-time-string-to-time value))))))
+            ((file-exists-p file)
+             (file-attribute-modification-time (file-attributes file)))))))
+
+
+
+(defun salih/print-text-nodes-anth ()
+  (let* ((nodes (sort (salih/get-back-nodes "3xedczc0i2k0")
+                      #'salih/compare-org-id))
+         (strings '()))
+    (while nodes (push (salih/mkinclude (car nodes) t)
+                       strings)
+           (setq nodes (cdr nodes)))
+    (mapconcat 'identity strings "")))
+
+
+(salih/print-text-nodes-anth)
+#+end_src
+
+
+    
 * Bibliography
 #+print_bibliography:
 

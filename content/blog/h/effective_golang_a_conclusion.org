@@ -1,0 +1,407 @@
+:PROPERTIES:
+:ID:       oz5114p02wj0
+:END:
+#+title: Effective Go: A Conclusion
+#+DATE: <2022-09-20 Tue 03:20>
+#+filetags: :project_archived:
+#+option: toc:t
+#+BEGIN_propert
+{{{s}}} [[id:lvkhzyo02wj0][The Go Programming Language]]
+#+END_propert
+
+
+#+BEGIN_PREVIEW
+Reading the effective Go document.
+#+END_PREVIEW
+
+
+
+So I'm currently reading the effective Go docs (as [[https://go.dev/doc/effective_go][html]], as [[http://www.math.bas.bg/bantchev/place/go/effective-go.pdf][pdf]]).
+
+Years ago when I was learning C, I remember reading something similar, it was by
+google as well. And I think they used to name it 'effective' too. It was hosted
+on github pages by Google and was advocated as the "google-style guidelines".
+Moreover, it had the same problem that I'm facing with effective-go right now:
+there are many things that have nothing to do with the go programming language
+itself, but a general guidelines that you should probably have learned during
+the design principles class. I decided to filter out those irrelevant tips and
+distill a consultation, a recapitulation. So it might help someone.
+
+
+References are used for non-tl;dr that might be interesting for nerds.[fn:2]
+
+* Naming
+
+Names are as important in Go as in any other language. They even have semantic effect: the
+visibility of a name outside a package is determined by whether its first character is upper
+case. It's therefore worth spending a little time talking about naming conventions in Go
+programs.
+** Packages
+  package in ~src/pkg/encoding/base64~ is imported as "~encoding/base64~" but has name ~base64~,
+  *not* ~encoding_base64~ and not ~encodingBase64~. The importer of a package will use the name to
+  refer to its contents (the import . notation is
+** Getters
+Go doesn't provide automatic support for getters and setters. There's nothing wrong with
+providing getters and setters yourself, and it's often appropriate to do so, but it's
+neither idiomatic nor necessary to put =Get= into the getter's name. If you have a field
+called =owner= (lower case, unexported), the getter method should be called =Owner= (upper
+case, exported), not =GetOwner=. The use of upper-case names for export provides the hook to
+discriminate the field from the method. A setter function, if needed, will likely be called
+=SetOwner=. Both names read well in practice:
+
+
+#+begin_example
+owner := obj.Owner()
+if owner != user {
+    obj.SetOwner(user)
+}
+#+end_example
+** Interface (single-method)
+
+By convention, one-method interfaces are named by the method name plus an -er suffix or
+similar modification to construct an agent noun: =Reader=, =Writer=, =Formatter=,
+=CloseNotifier= etc.
+
+There are a number of such names and it's productive to honor them and the function names
+they capture. =Read=, =Write=, =Close=, =Flush=, =String= and so on have canonical
+signatures and meanings. To avoid confusion, don't give your method one of those names
+unless it has the same signature and meaning. Conversely, if your type implements a method
+with the same meaning as a method on a well-known type, give it the same name and signature;
+call your string-converter method =String= not =ToString=.
+** MixedCaps
+Finally, the convention in Go is to use =MixedCaps= or =mixedCaps= rather than underscores
+to write multiword names.
+* Comments
+“Doc comments” are comments that appear immediately before top-level package, const, func,
+type, and var declarations with no intervening newlines. Every exported (capitalized) name
+should have a doc comment.
+
+For syntax, read: https://go.dev/doc/comment#Syntax
+
+** Inside packages
+
+Every package should have a package comment introducing the package. It provides information relevant to the package as a whole and generally sets expectations for the package. Especially in large packages, it can be helpful for the package comment to give a brief overview of the most important parts of the API, linking to other doc comments as needed.
+
+If the package is simple, the package comment can be brief. For example:
+
+#+begin_example go
+// Package path implements utility routines for manipulating slash-separated
+// paths.
+//
+// The path package should only be used for paths separated by forward
+// slashes, such as the paths in URLs. This package does not deal with
+// Windows paths with drive letters or backslashes; to manipulate
+// operating system paths, use the [path/filepath] package.
+package path
+#+end_example
+** KILL Commands
+** ~type~
+A type's doc comment should explain what each instance of that type represents or provides.
+If the API is simple, the doc comment can be quite short. For example:
+
+#+begin_example go
+package zip
+
+// A Reader serves content from a ZIP archive.
+type Reader struct {
+    ...
+}
+#+end_example
+
+
+
+By default, programmers should expect that a type is safe for use only by a single goroutine
+at a time. If a type provides stronger guarantees, the doc comment should state them. For
+example:
+
+
+#+begin_example go
+package regexp
+
+// Regexp is the representation of a compiled regular expression.
+// A Regexp is safe for concurrent use by multiple goroutines,
+// except for configuration methods, such as Longest.
+type Regexp struct {
+    ...
+}
+#+end_example
+
+
+
+For a struct with exported fields, either the doc comment or per-field comments should
+explain the meaning of each exported field. For example, this type's doc comment explains
+the fields:
+
+#+begin_example go
+ package io
+
+// A LimitedReader reads from R but limits the amount of
+// data returned to just N bytes. Each call to Read
+// updates N to reflect the new amount remaining.
+// Read returns EOF when N <= 0.
+type LimitedReader struct {
+    R   Reader // underlying reader
+    N   int64  // max bytes remaining
+}
+#+end_example
+
+As with packages (above) and funcs (below), doc comments for types *start with complete
+sentences naming the declared symbol*. An explicit subject often makes the wording clearer,
+and it makes the text easier to search, whether on a web page or a command line.
+
+
+** ~func~
+
+A func's doc comment should explain what the function returns or, for functions called for
+side effects, what it does. Named arguments or results can be referred to directly in the
+comment, without any special syntax like backquotes. (A consequence of this convention is
+that names like =a=, which might be mistaken for ordinary words, are typically avoided.) For
+example:
+
+
+#+begin_example go
+ package strconv
+
+// Quote returns a double-quoted Go string literal representing s.
+// The returned string uses Go escape sequences (\t, \n, \xFF, \u0100)
+// for control characters and non-printable characters as defined by IsPrint.
+func Quote(s string) string {
+    ...
+}
+#+end_example
+
+** ~const~
+
+Go's declaration syntax allows grouping of declarations, in which case a single doc comment
+can introduce a group of related constants, with individual constants only documented by
+short end-of-line comments. For example:
+#+begin_src go
+// The result of Scan is one of these tokens or a Unicode character.
+const (
+    EOF = -(iota + 1)
+    Ident
+    Int
+    Float
+    Char
+    ...
+)
+#+end_src
+
+
+Sometimes the group needs no doc comment at all. For example:
+
+#+begin_example
+ package unicode // import "unicode"
+
+const (
+    MaxRune         = '\U0010FFFF' // maximum valid Unicode code point.
+    ReplacementChar = '\uFFFD'     // represents invalid code points.
+    MaxASCII        = '\u007F'     // maximum ASCII value.
+    MaxLatin1       = '\u00FF'     // maximum Latin-1 value.
+)
+#+end_example
+
+
+
+On the other hand, ungrouped constants typically warrant a full doc comment starting with a complete sentence. For example:
+
+#+begin_example
+ package unicode
+
+// Version is the Unicode edition from which the tables are derived.
+const Version = "13.0.0"
+#+end_example
+
+** ~var~
+* CHECK Errors
+** Error Strings
+Error strings should not be capitalized (unless beginning with proper nouns or acronyms) or
+end with punctuation, since they are usually printed following other context. That is, use
+~fmt.Errorf("something bad")~ not ~fmt.Errorf("Something bad")~, so that ~log.Printf("Reading %s:
+%v", filename, err)~ formats without a spurious capital letter mid-message. This does not
+apply to logging, which is implicitly line-oriented and not combined inside other messages.
+* Other
+** Semicolons
+Idiomatic Go programs have semicolons only in places such as =for= loop clauses, to separate
+the initializer, condition, and continuation elements. They are also necessary to separate
+multiple statements on a line, should you write code that way[fn:1].
+** Declaring Variables
++ When declaring —but not initializing— a variable, *use the keyword ~var~*
++ When declaring and initializing in the same time, use the short declaration form: ~:=~
+
+When declaring an empty slice, prefer
+#+begin_src go
+var t []string
+#+end_src
+over
+#+begin_src go
+t := []string{}
+#+end_src
+
+The former declares a nil slice value, while the latter is non-nil but zero-length. They are
+functionally equivalent—their ~len~ and ~cap~ are both zero—but the nil slice is the preferred
+style.
+
+
+Note that there are limited circumstances where a non-nil but zero-length slice is
+preferred, such as when encoding JSON objects (a nil slice encodes to null, while []string{}
+encodes to the JSON array []).
+
+When designing interfaces, avoid making a distinction between a nil slice and a non-nil,
+zero-length slice, as this can lead to subtle programming errors.
+
+
+
+** Context
+Values of the context.Context type carry security credentials, tracing information,
+deadlines, and cancellation signals across API and process boundaries. Go programs pass
+Contexts explicitly along the entire function call chain from incoming RPCs and HTTP
+requests to outgoing requests.
+
+*Most functions that use a Context should accept it as their first parameter:*
+
+#+begin_src go
+func F(ctx context.Context, /* other arguments */) {}
+#+end_src
+
+A function that is never request-specific may use context.Background(), but err on the side
+of passing a Context even if you think you don't need to. The default case is to pass a
+Context; only use context.Background() directly if you have a good reason why the
+alternative is a mistake.
+
+*Don't add a Context member to a struct type*; instead add a ~ctx~ parameter to each method on
+that type that needs to pass it along. The one exception is for methods whose signature must
+match an interface in the standard library or in a third party library.
+
+Don't create custom Context types or use interfaces other than Context in function
+signatures.
+
+If you have application data to pass around, put it in a parameter, in the receiver, in
+globals, or, if it truly belongs there, in a Context value.
+
+Contexts are immutable, so it's fine to pass the same ctx to multiple calls that share the
+same deadline, cancellation signal, credentials, parent trace, etc.
+
+** Rand
+Do not use package ~math/rand~ to generate keys, even throwaway ones. Unseeded, the generator
+is completely predictable. Seeded with ~time.Nanoseconds()~, there are just a few bits of
+entropy. Instead, use ~crypto/rand~'s Reader, and if you need text, print to hexadecimal or
+~base64~:
+
+#+begin_src go
+import (
+	"crypto/rand"
+	// "encoding/base64"
+	// "encoding/hex"
+	"fmt"
+)
+
+func Key() string {
+	buf := make([]byte, 16)
+	_, err := rand.Read(buf)
+	if err != nil {
+		panic(err)  // out of randomness, should never happen
+	}
+	return fmt.Sprintf("%x", buf)
+	// or hex.EncodeToString(buf)
+	// or base64.StdEncoding.EncodeToString(buf)
+}
+
+func main() {
+	fmt.Print(Key())
+		}
+#+end_src
+
+#+RESULTS:
+: 357db26fc4003c331ce3253faed249b5
+
+** Import Blank
+Packages that are imported only for their side effects (using the syntax ~import _ "pkg"~)
+should only be imported in the main package of a program, or in tests that require them.
+** Named Result Parameters
+Consider what it will look like in godoc. Named result parameters like:
+
+#+begin_src go
+func (n *Node) Parent1() (node *Node) {}
+func (n *Node) Parent2() (node *Node, err error) {}
+#+end_src
+will be repetitive in godoc; better to use:
+
+#+begin_src go
+func (n *Node) Parent1() *Node {}
+func (n *Node) Parent2() (*Node, error) {}
+#+end_src
+
+On the other hand, if a function returns two or three parameters of the same type, or if the
+meaning of a result isn't clear from context, adding names may be useful in some contexts.
+*Don't name result parameters just to avoid declaring a var inside the function; that trades
+off a minor implementation brevity at the cost of unnecessary API verbosity.*
+
+** Return Values
+
++ If the receiver is a ~map~, ~func~ or ~chan~, don't use a pointer to them. If the receiver is a
+  slice and the method doesn't reslice or reallocate the slice, don't use a pointer to it.
+
++ If the method needs to mutate the receiver, the receiver must be a pointer.
+
++ If the receiver is a ~struct~ that contains a sync.Mutex or similar synchronizing field, the
+  receiver must be a pointer to avoid copying.
+
++ If the receiver is a large ~struct~ or array, a pointer receiver is more efficient. How
+  large is large? Assume it's equivalent to passing all its elements as arguments to the
+  method. If that feels too large, it's also too large for the receiver.
+
++ Can function or methods, either concurrently or when called from this method, be mutating
+  the receiver? A value type creates a copy of the receiver when the method is invoked, so
+  outside updates will not be applied to this receiver. If changes must be visible in the
+  original receiver, the receiver must be a pointer.
+
++ If the receiver is a ~struct~, array or slice and any of its elements is a pointer to
+  something that might be mutating, prefer a pointer receiver, as it will make the intention
+  clearer to the reader.
+
++ If the receiver is a small array or ~struct~ that is naturally a value type (for instance,
+  something like the time.Time type), with no mutable fields and no pointers, or is just a
+  simple basic type such as int or string, a value receiver makes sense. A value receiver
+  can reduce the amount of garbage that can be generated; if a value is passed to a value
+  method, an on-stack copy can be used instead of allocating on the heap. (The compiler
+  tries to be smart about avoiding this allocation, but it can't always succeed.) Don't
+  choose a value receiver type for this reason without profiling first.
+
++ Don't mix receiver types. Choose either pointers or ~struct~ types for all available
+  methods.
+
++ Finally, when in doubt, use a pointer receiver.
+
+
+** KILL Interfaces
+
+Go interfaces generally belong in the package that uses values of the interface type, not
+the package that implements those values. The implementing package should return concrete
+(usually pointer or struct) types: that way, new methods can be added to implementations
+without requiring extensive refactoring.
+
+* Footnotes
+[fn:2] I also might use https://github.com/golang/go/wiki/CodeReview
+
+[fn:1]
+One consequence of the semicolon insertion rules is that you cannot put the opening brace of
+a control structure ( =if=, =for=, =switch=, or =select=) on the next line. If you do, a
+semicolon will be inserted before the brace, which could cause unwanted effects. Write them
+like this
+
+#+begin_example
+if i < f() {
+    g()
+}
+#+end_example
+
+not like this
+
+#+begin_example
+if i < f()  // wrong!
+{           // wrong!
+    g()
+}
+#+end_example
+

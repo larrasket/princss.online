@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       loqfv5p02wj0
+:END:
+#+title: Nietzsche, Unveiling the Depths of Human Existence
+
+
+[[file:../i/f.jpg]]
+
+
+#+BEGIN_PREVIEW
+A series on the profound philosophies and insights of [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Friedrich Nietzsche]]
+#+END_PREVIEW
+
+This series explores Nietzsche's ideas on various aspects of human existence,
+including the concepts of epitaphs, homeland, eulogy, and the desire to excite
+pity.
+
+-----
+
+{{{indx}}}
+
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links)
+#+END_SRC
+
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

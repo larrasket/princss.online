@@ -1,0 +1,355 @@
+:PROPERTIES:
+:ID:       a8bf37c4-358e-4f6c-866b-33c50e4e2b80
+:END:
+#+title: I can also paint
+#+DATE:  <2023-06-22 Thu 13:00>
+#+filetags: :project:
+#+INCLUDE: ~/roam/common/org-macros.setup
+
+#+BEGIN_PREVIEW
+Or; An Introduction to the Fragments of Self
+#+END_PREVIEW
+
+Around the time that he reached the unnerving milestone of turning thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing the reasons he should be given a job. He had been moderately successful as a painter in Florence, but he had trouble ﬁnishing his commissions and was searching for new horizons. In the ﬁrst ten paragraphs, he touted his engineering skills, including his ability to design bridges, waterways, cannons, armored vehicles, and public buildings. Only in the eleventh paragraph, at the end, did he add that he was also an artist. {{{hl(“Likewise in painting I can do everything possible\,” he wrote.)}}}[cite:@isaacson-2017-leonar-vinci]
+
+
+#+begin_export html
+<figure class="resright"><img src="/i/me.jpg" title="Salih M." style="
+    width: 130px;
+    clip-path: circle();
+">
+    <figcaption style="
+    font-size: smaller;
+    /* font-style: italic; */
+    font-weight: bold;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    color: gray;
+">Me.</figcaption>
+
+</figure>
+#+end_export
+
+I don't usually post many stuff about myself online, this page tries to make up for this. I don't like the aspect in general to have a virtual life, this was why I didn't care much to post details about myself online. However, this tended to make people presume things about. I hope that this page will help reducing the severity of unsupported thoughts about me.
+
+* Interests
+I'm interested in the following fields: computer programming, cognitive science, linguistics, history, scientific socialism, propaganda and media studies, moral philosophy and +philosophy of mind+, Islamic philosophy, +Islamic biographical evaluation+ and +modern Takhrij studies+. I've developed a growing interest in the following fields: chemistry and economics.
+
+Other interests are implied in my [[id:omy9ejo02wj0][Books]] list.
+
+I consider myself to be an intermediate chess player, my peak rating ([[https://en.wikipedia.org/wiki/Glicko_rating_system][Glicko]]) was 1950, my current rating on my only active account is 1808 (after a long strike of losing). For my thoughts on chess, see the post [[id:b8u34341owj0][Thoughts on Chess]].
+
+Generally I think chess is one of the few games that I'd like to play (I think gaming is a great waste of time in general), the game GO seems interesting too.
+
+What I like about this kind of games that it is free of anything but the free will of one's decisions. See more on that on [[id:mp56qej0fzj0][A View on Chess]].
+* On the web
+I exist in other places on the web. +I'm on Stack Exchange network. Especially: [[https://skeptics.stackexchange.com/users/69248/][Skeptics SE]] and [[https://islam.stackexchange.com/users/56455/][Islam SE]].+ I also exist on [[https://news.ycombinator.com/user?id=lr0][HN]] and [[https://lobste.rs/~lr0/stories][Lobsters]]. I don't use social media to connect with people. Even when I do, I do not appreciate people who I don't know in person communicating with me there. 
+** If you want to know me
+This gets me to another point. Some people think I'm avoidant for new people. I'm not at all, if you find that we share interests, I'd be glad to know more about you. The best way to communicate with me can be found on the footer of the home page.
+* Projects
+:PROPERTIES:
+:ID:       ixhffy31d8k0
+:END:
+
+- [2025-10-24 Fri 14:33] \\
+  Looking at this now, this is highly outdated, but I've no time to update it at the current moment.
+- +[[https://sr.ht/~lr0/statusless/][statusless]]. A dynamic, programmable, user-defined status bar for dwm+ (and
+  other window managers that use xroot) that follows suckless philosophy. -
+  [2025-05-07 Wed 04:00] I moved to MacOS.
+- +[[https://sr.ht/~lr0/bo/][bo]]. Bin organizer using trash-cli as a backend.+ [2024-11-03 Sun 23:47] I stopped
+  using/maintining bo
+- [[https://git.sr.ht/~lr0/euler][euler]]. solving project euler.
+- [[https://sr.ht/~lr0/ps/][ps]]. other problem solving.
+- [[https://sr.ht/~lr0/tadwin.el/][tadwin.el]]. Emacs publishing blog system (tightly coupled to my org-roam setup)
+  using org-mode. It's used to make this website.
+- +[[https://sr.ht/~lr0/agenda-notifier.go/][agenda-notifier.go]]. agenda-notifier.̶e̶l̶ go is a basic notification daemon for
+  org-mode agenda+. Last time I used it was years ago.
+- [[https://sr.ht/~lr0/rssc/][rssc]]. real-time, self-hostable regex-oriented customization service for atom, rss and
+  json feeds. Many people are using it, but I stopped using it and moved to r2e
+  eventually.
+- [[https://sr.ht/~lr0/RedditorDump/][RedditorDump]]. An open-source intelligence tool to get all the subreddits a
+  reddit user was involved in.
+** TODO [#C] Now                                                      :noexport:@current:
+- [2025-05-07 Wed 04:01] Unmaintained currently.
+[[https://nownownow.com/about][What's now? (click here to know @ nownownow.com)]]
+
+I'm currently working on:
+
+- A research paper for the [[https://sr.ht/~lr0/lugha][lugha]] project. (and I'm working on it generally)
+
+I'm currently reading/investigating:
+
+- The story of civilization, volume 1: our oriental heritage.
+- The fall of the faculty: the rise of the all-administrative university and why it matters
+- A history of western philosophy
+
+** TODO Planned                                                       :@idea:
+
+Projects that I'm considering to get into next.
+
+- +musql+. I'd love a queryable music player that would support generating sets of
+  music using a complex tagging system. Let's say that you have a playlist for
+  sad songs and another one for you when you feel proud. What if you feel both?
+  like a success depression. A possible solution would be creating a new list
+  that includes both. However, what if you need a list that contains only the
+  sad songs that are not about love? It will be impossible with that linear
+  system to do it without manual intervention.
+
+  But if you were able to tag each song as "sad, love", and you had a DSL
+  language for querying (let it be even just SQL), such scenario is very
+  feasible.
+
+  I've been thinking about this idea for a fairly long time. But I'm horrible at
+  designing/implementing UI ends. If you can help, contact me.
+
+  - [2025-03-29 Sat 21:50] Just found out that Apple Music has this feature. I'm
+    canceling this project. See more [[id:p4pacx81lik0][The reason that makes Apple's software better]].
+
+- (as of [2024-10-17 Thu 18:15], I'm no longer interested in this)  [[https://sr.ht/~lr0/cblocks/][cblocks]]. I started
+  this project as an exercise for my C fluency and because I needed an alternative for the
+  dwm bar I'm using, with more flexibility. This project was successful (it reads a
+  compiled C module, load, evaluate it and update the status bar with the evaluated
+  string), however, I wanted to add concurrency which is an essential feature for me.
+  Sadly I totally forgot how hard was it to work with concurrency in C. I think I might
+  rewrite it in Go, but I'm not sure who to implement the dynamism in Go.
+
+- Chronological art browser.
+- Gustave Doré Arabic Divine Comedy. Basically something that shows Doré's work on the
+  divine comedy, with verses in Arabic, showing various translations.
+*** TODO Better web server for the blog                               :@idea:noexport:
+The current web server (default by fly.io), just uploads everything. This makes
+the image size very large when I do any update. I think it would be better if it
+could only upload changed HTMLs.
+* Occupation                                                          :noexport:
+I work as a Software Engineer in FinTech.
+
++I'm not currently certain about listing my profession, despite it being self-explanatory from many posts here and my general online activity, however, I do not like to be defined by it at all, and any other professions in which I may get involved forthcoming.+
+
++This to imply to you my view of what is 'professional', if I ever had the opportunity of being financially independent I'd definitely be. I'm not the kind of "I love my job" people[fn:1], however, I do love my job, but it's a love that means to an end: not to starve to death[fn:8]. (although as of [2025-02-09 Sun 21:57] I acknowledge that I got the opportunity to work with a set of a very smart people that I enjoy being surrounded by and having them as a company. I might need to write about this era of my life someday)+
+
++This is also to say that I don't like spending my time out of work doing, thinking, reading, discussing, or —God forbid— studying anything that is related to my profession. I've many other [[Interests][Interests]] to spend my time on rather than whatever I do to make money.+
+* TODO Religion                                                       :@write:
+I'm Muslim. I disagree with the mainstream definition of Islamic faith, this includes my views of the early history of Islam, caliphate and Shiism. I plan to write about that soon on this website.
+* Languages
+I speak Arabic and English. As my course of learning linguistics, I'm learning
+another language, it's supposed to be German (as of [2024-02-29 Thu 01:05]) but
+I'm considering moving to French. - [2025-05-07 Wed 04:02] Update: my language
+course was paused due to other projects and interests.
+* My favorite animals
+#+begin_quote
+واعلم أن الحيوان هو آية الكون وسِحره؛ وإنّما أنتَ استثناء.
+— عباس ابراهام.
+#+end_quote
+I like to read and study animal behavior. We humans have many intersection
+points with them, you can notice that while contemplating other mammals
+behavior.  [[id:5yu8gy0083k0][Desmond Morris]] was the first one to get me interested in reading
+about animal behavior, after I finished his magnum opus (the naked ape) I was
+looking for more by the same author. I like these animals because I admire some
+of their manners: [[file:../i/2024-01-26_21-34-41_screenshot.png][Hare]], [[file:../i/2024-01-26_21-35-00_screenshot.png][Python]], [[file:../i/2024-01-26_21-35-12_screenshot.png][Jugar]] and [[file:../i/2024-01-26_21-35-28_screenshot.png][Greyish eagle-owl]]. I never owned a pet.
+* Some random preferences
+Olive is my favorite food, most of my favorite recipes contain olive. There is no -generally speaking- any kind of food that I would refuse to eat, however I do refuse to consume any food that contains any form of artificial sweeteners (raw sugar, refined white sugar, etc..). My favorite drink is tea. I do consume lemonade regularly too. My consumption of coffee is high as well, however I do not really prefer it and I only drink it for my need of caffeine. If I can find someday a caffeine substitute (that is comparable to ground coffee) I will quit coffee.
+
+I drink only ground coffee. I try to avoid manufactured instant coffee for health concerns (also most instance coffee products do not have approximate amount of caffeine that ground coffee posses). I don't like coffee with milk.
+* TODO Music                                                          :@write:
+:PROPERTIES:
+:ID:       lfoaq730yck0
+:END:
+- [2025-06-28 Sat 18:38] As of now, some of the following information might be outdated. I plan to
+  update this. I have a last.fm account under my username (larrasket) you can
+  check it.
+
+I used a proprietary music tracker for a while, which informed me that my top
+music artists are:
+
+- [2025-05-02 Fri 00:04] as of today, this list is very outdated. See my last.fm
+  reports for insights about my music: https://www.last.fm/user/larrasket
+
+- Matt Elliot
+- Leonard Cohen
+- Death In June
+- Fairuz
+- Johan Sebastlan Bach
+- Black Hill
+- Elliot Smith
+- Stranger On a Train
+
+I enjoy classics. These are my favorite pieces:
+
+From Bach:
+#+begin_example
+Johann Sebastian Bach - (1704-1750) Toccata and Fugue in D minor, BWV 565.mp3
+Johann Sebastian Bach - (1704-1750) Air on the G String.mp3
+Johann Sebastian Bach - (1704-1750) Brandenburg Concerto No. 3 in G Major, BWV 1048 (Allegro moderato).mp3
+#+end_example
+From Mozart:
+#+begin_example
+Wolfgang Amadeus Mozart - (1785) Piano Concerto No. 21 KV.467 (II.Andante).mp3
+#+end_example
+From others:
+#+begin_example
+ Ludwig van Beethoven - (1801) Sonata No. 14 in C-sharp minor for Piano Op. 27 (No. 2 Moonlight; Adagio sostenuto).mp3
+ Ludwig van Beethoven - (1810) Fur Elise Bagatelle No.25.mp3
+ Ludwig van Beethoven - (1824) Symphony No. 9 In D Minor, Op. 125 Choral (II. Molto vivace; Presto).mp3
+ Gioachino Rossini - (1828) William Tell Overture (excerpt).mp3
+ Johann Strauss - (1864) Marche Persanne, Op. 289.mp3
+ Gabriel Fauré - (1887) Pavane, Op. 50.mp3
+ Nikolai Rimsky-Korsakov - (1899) Flight of the Bumblebee.mp3
+ Francisco Tarrega - (1908) Recuerdos de la Alhambra.mp3
+ Antonín DVOŘÁK - (1893) Symphony No.9 in E Minor, Op. 95 (From The New World, IV. Allegro con fuoco).mp3
+#+end_example
+I rarely enjoy opera;
+#+begin_example
+Léo Delibes                             3. (1883) Lakmé (Flower Duet)
+#+end_example
+
+[[https://youtu.be/F9dBl_pLc3g][TSU! - Prince of Gumbay]] For me, this is the most peaceful piece of music I've
+ever heard.
+
+I do not use Spotify or any other music proprietary platforms. I download and stream music
+offline on my computer machine. [[https://en.wikipedia.org/wiki/Cmus][cmus]] is my music player. See [[Planned][Planned]] for my plans for
+building a music player.
+
+Currently, I'm not interested in exploring any new types of music, I prefer to stick to
+the collection I already have.
+** Leonard Cohen
+:PROPERTIES:
+:ID:       sqw4olv04xj0
+:END:
+#+begin_quote
+There’s truth that lives \\
+And truth that dies \\
+I don’t know which \\
+So nevermind \\
+#+end_quote
+My first time of experiencing Cohen's music was from opening one of my colleagues Spotify
+accounts, I was in high school back then, when I listened to the music, which was Sing
+Another Song, Boys, the seventh song from Songs Of Love And Hate (my ever favorite album
+of his by now), I didn't like it initially, but I felt that it was very different from
+anything I've ever listened to (and I still believe that it's indeed a unique work of
+music).
+
+I remember that I spent days listening to it, I was back then possessing some interest in
+pursuing a biotechnology degree and I was studying a biochemistry textbook; I still get
+some intrusive chemical formulas into my head every time I play the song, because I used
+to study that book while listening to it on repeat, though I do not mind it at all.
+
+I didn't play any other songs by him since that, so I can say that the real time
+for me to learn about Cohen was from the movie [[https://youtu.be/TXwCCWHl5Ak][Exotica (1994)]], since then I fell
+in love with his songwritings, following are my favorite works from him (not sorted):
+
+- Songs Of Love And Hate - 7. Sing Another Song, Boys
+- Leonard Cohen - Thanks for the Dance - 6. The Goal
+- Thanks for the Dance - 1. Happens to the Heart
+- You Want It Darker - 7. It Seemed the Better Way
+- Cohen Live - 9. Who By Fire? - Live in Austin, 1988
+- Live In Dublin - 8. Amen - Live in Dublin
+- Various Positions - 6. The Captain
+- Death Of A Ladies' Man - 1. True Love Leaves No Traces
+- Songs Of Leonard Cohen - 9. Teachers
+- I'm Your Man - 3. Everybody Knows
+- Ten New Songs - 4. Here It Is
+- Recent Songs - 2. Humbled in Love
+- Recent Songs - 10. Ballad of the Absent Mare - Longer Version
+- Songs Of Love And Hate - 1. Avalanche
+** TODO Matt Elliot                                                   :@write:@later:
+My Matt Elliot story is as just as special to me as [[id:sqw4olv04xj0][Leonard Cohen]]'s, but it's still
+ongoing. Someday, I will write about it. I hope it will be soon.
+** Nostalgical Music
+:PROPERTIES:
+:ID:       rsrkab418ck0
+:END:
+I'm easily stirred by music that brings nostalgic melody. I don't dislike it, but it
+extremely affects my mood[fn:3]. Thus I tend to avoid having or listening to any of this
+genre.  Some songs that gives me this kind of vibes are:[fn:5]
+- Ya Waadi Aal Ayame, Ahmed Mounib[fn:2]
+- Dayret El Rehla, Ahmed Mounib
+- Eh fi amal, Fayrouz
+- Bageelek, Hamid El Shaeri
+- Ouda, Hamid El Shaeri
+- Hamid El Shaeri
+- رماد حلمَك | مرثية لـ نجيب سرور[fn:4]
+- Ahmed Mounib, Salma
+- shbbet thaw al thkryat, Omar
+- مع السلامة لو نويت تروح - من تراث السّويداء[fn:6]
+- Nesmet Saba, Hamid el-Shaeri
+- Long Long Time Ago, Javier Navarrete
+- Ana Raga Ashofak, Talal Maddah
+- A Vava Inouva, Idir
+- Bektob esmak ya habibi, Fairouz
+- [2024-10-30 Wed 19:20] No Clear Mind - Dream is Destiny - 8. a new sun
+** Pyotr Ilyich Tchaikovsky's "1812 Overture Finale".
+:PROPERTIES:
+:ID:       jqmep830yck0
+:END:
+This piece is a one of my very few specials. I remember learning about it for the first time
+from the movie V for Vendetta (2005), which is one of my ever favorites, but I didn't pay
+much attention back then, and I think I only learnt about it by the 2022 Russian invasion
+of Ukraine. It affects me very much, and it gives me vibes from [[https://youtu.be/p3pfJukO5QU][Shadows of Forgotten
+Ancestors (Sergei Parajanov, 1965)]]. I only listen to / play both in special occasions, due
+to their great effect on me.
+* TODO Things I do not like                                           :@write:noexport:
+
+[2024-01-11 Thu 01:43] I'm not the kind of person who would get upset easily, I
+do not really mind people doing anything I do not like unless it is critical to
+the core of whatever process we are operating (let it be work or discussion).
+The stuff blew only applies if you are trying to be so nice to me, which I will
+appreciate, not the stuff I want others necessarily to follow.
+
+- I do not like being praised. I usually fail to respond to sentences of the kind "you
+  are smart" and the like.
+  #+begin_quote
+Here is some one who, you perceive, wishes to praise
+you: you bite your lips and brace up your heart: Oh, that that
+cup might go hence! But it does not, it comes! let us therefore
+drink the sweet impudence of the panegyrist, let us overcome
+the disgust and profound contempt that we feel for the innermost
+substance of his praise, let us assume a look of thankful joy—for
+he wished to make himself agreeable to us! And now that it
+is all over we know that he feels greatly exalted; he has been
+victorious over us. Yes, and also over himself, the villain!—for
+it was no easy matter for him to wring this praise from himself.
+([[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]], Dawn of the Day)
+  #+end_quote
+
+  - [2024-04-27 Sat 02:03]
+    #+begin_quote
+Everything which is in any way beautiful is beautiful in itself, and terminates
+in itself, not having praise as part of itself. Neither worse then nor better is
+a thing made by being praised. I affirm this also of the things which are called
+beautiful by the vulgar, for example, material things and works of art. That
+which is really beautiful has no need of anything; not more than law, not more
+than truth, not more than benevolence or modesty. Which of these things is
+beautiful because it is praised, or spoiled by being blamed? Is such a thing as
+an emerald made worse than it was, if it is not praised? or gold, ivory, purple,
+a lyre, a little knife, a flower, a shrub?
+
+Marcus Aurelius (translated by George Long)
+    #+end_quote
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** TODO writing a little about me                                     :@write:@later:
+:LOGBOOK:
+CLOCK: [2024-02-29 Thu 00:57]--[2024-02-29 Thu 01:15] =>  0:18
+CLOCK: [2024-01-11 Thu 01:07]--[2024-01-11 Thu 02:36] =>  1:29
+CLOCK: [2023-11-22 Wed 00:20]--[2023-11-22 Wed 00:50] =>  0:30
+CLOCK: [2023-09-01 Fri 15:03]--[2023-09-01 Fri 15:11] =>  0:08
+CLOCK: [2023-08-13 Sun 19:44]--[2023-08-13 Sun 19:55] =>  0:11
+CLOCK: [2023-08-13 Sun 12:39]--[2023-08-13 Sun 12:57] =>  0:18
+CLOCK: [2023-08-13 Sun 12:17]--[2023-08-13 Sun 12:24] =>  0:07
+:END:
+
+* Footnotes
+
+[fn:8] I've always thought about how obvious this should be, unfortunately my field is one
+of the most domains that get people who are "in love" with their job or what they're
+doing, that's why I thought I needed to put this clear.
+
+[fn:6] https://soundcloud.com/user-645622529/xotaoghzb0fh
+[fn:5] Perhaps every Ahmed Mounib and Hamid El Shaeri songs are qualified here.
+
+[fn:4] I'm not sure of the author: https://soundcloud.com/johnny-singer-81
+[fn:2] Which made me write this list. As of  [2024-09-28 Sat 00:14]
+
+[fn:3] I was told that I've a nostalgia issue and that I usually
+suffer from nostalgic depression, which might be related to my mild Plyushkin's disorder.
+Related: [[id:jene6a516ak0][Nostalgic Bibliography]].
+[fn:1] I might have to say that I also dislike this kind of lifestyle.

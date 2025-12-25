@@ -275,3 +275,20 @@ body {
         text-align: left;
     }
 }
+
+/* Footnotes - inline number and text */
+.footnotes .footnote-definition {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.footnotes .footnote-definition sup {
+    flex-shrink: 0;
+}
+
+.footnotes .footnote-definition p {
+    margin: 0;
+    display: inline;
+}
+

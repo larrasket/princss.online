@@ -1,0 +1,243 @@
+:PROPERTIES:
+:ID:       omy9ejo02wj0
+:END:
+#+TITLE: Bibliography
+# #+options: toc:t
+#+cite_export: csl  harvard.csl
+#+filetags: :books:
+#+HTML_HEAD_EXTRA: <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.add('page-books'));</script>
+#+MACRO: inc #+INCLUDE: "$1::#bk" :only-contents t
+
+#+begin_export HTML
+<head>
+<style>
+
+
+@media screen and (max-width: 1089px) {
+
+.org-ul {
+font-size: 13px;
+    padding: 0;
+
+}
+
+}
+
+p:has(> a:target) {
+  background-color: #ffa;
+}
+
+
+  .footdef {
+    display: block !important;
+  }
+
+.tag span {
+    float: right;
+    margin-right: 0.5em;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    background-color: #eee;
+    line-height: 1;
+}
+
+.org-ul {
+}
+
+# .sidenote {
+#         display: none;
+# }
+
+
+.sidenote a, .footpara a {
+    word-break: break-all !important;
+}
+
+  .footnotes {
+    display: block !important;
+  }
+</style>
+</head>
+#+end_export
+
+- [2025-11-22 Sat 03:01] I had a "he is literally me" reading a biography about [[id:ynx5yta0uwj0][Leonadrdo da Vinci]]: "His notebooks are ﬁlled with lists of books he acquired and passages he copied."[cite:@isaacson-2017-leonar-vinci]
+
+These are neither the books I recommend nor the ones I countenance their views.
+This is a list of the documents/textbooks that I own (either physically or
+digitally), with some side notes that could be helpful.
+- [2024-10-01 Tue 17:37] A useful source for cultures and arts http://www.infocobuild.com/
+- [2023-10-03 Tue 05:13] If you are looking for new courses/topics to learn
+  about, it's highly recommended that you watch this lecture by professor [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]]:
+  https://youtu.be/2p9aKa08cRI [fn:1]
+- [2023-03-06 Mon 00:13] I added some papers here too, I think this makes the
+  'books' title a little bit misleading. Also I moved the books I regret
+  reading, or the ones I wouldn't definitely reread to the "inexpedient" [fn:8]
+  sections.
+* Humanities and the like
+{{{inc(../things/humanities.org)}}}
+* Science
+{{{inc(../things/science.org)}}}
+** Linguistics
+{{{inc(h/lingustics.org)}}}
+** Intelligence
+{{{inc(../main/intelligence_science.org)}}}
+** Psychology
+{{{inc(../main/psychology.org)}}}
+** Cognitive Science
+{{{inc(../things/cognitive_science.org)}}}
+** Mathematics
+{{{inc(t/mathematics.org)}}}
+** Computer Science
+:PROPERTIES:
+:CUSTOM_ID: cs
+:END:
+{{{inc(../things/computer_science.org)}}}
+** Other                                                              :noexport:
+- الرياضات في حياتنا (زلاتكا، ش)
+- إمبراطور المآسي، سيرة للسرطان (موكرجي، س)
+
+  Not a study at all, more like a novel. A sad one.
+* Politics
+{{{inc(t/political.org)}}}
+** Propaganda
+{{{inc(h/propaganda.org)}}}
+* Economics/ Capitalism
+{{{inc(../main/ecno.org)}}}
+* Religion
+{{{inc(t/islam.org)}}}
+* History
+
+"There's a good reason why nobody studies history, it just teaches you too much". — Noam Chomsky.
+
+«إنّ التَارْيخَ فيْ ظَاهِرهِ لا يّزْيدُ عَنِ الإِخْبَار، ولَكِنْ فْي بَاطِنهِ نَظَرٌ وتَحْقيق». — إبن خَلْدُون.
+
+«وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ وَمَا يَعْقِلُهَا إِلَّا الْعَالِمُونَ».
+
+--------------
+
+{{{inc(../things/historian.org)}}}
+* Modus Vivendi
+{{{inc(t/modus.org)}}}
+* Aesthetics
+
+All ancient books which have once been called sacred by man, will have their
+lasting place in the history of mankind, and those who possess the courage, the
+perseverance, and the self-denial of the true miner, and of the true scholar,
+will find even in the darkest and dustiest shafts what they are seeking
+for,—real nuggets of thought, and precious jewels of faith and hope.
+— Max Müller, Introduction to the Upanishads Vol. II.
+
+{{{inc(../things/aesthetic.org)}}}
+
+** Literature
+This section will not be updated anymore.
+
+{{{inc(../things/literature.org)}}}
+
+** Heritage
+{{{inc(../things/islamic_hertiage.org)}}}
+** Poetry
+{{{inc(../main/poetry.org)}}}
+
+* Chess
+
+{{{inc(t/chess.org)}}}
+
+* Current                                                             :noexport:
+Reading:
+- [[id:2cj25u00sxj0][Invisible Var: The US and The Iraq Sanctions]] (Gordon, J)
+- [[id:kq94aly0jxj0][Ḥayy ibn Yaqẓān]] (Zidan, Y)
+- [[id:6ad40bm0nwj0][The Thoughts of Marcus Aurelius]] (Aurelius, M.)
+- [[id:jb7i11x06xj0][Fight Club]] (Palahniuk, C.)
+- [[id:044lps019wj0][Make Something Up]] (Palahniuk, C.)
+- [[id:45fdc50f-6b08-4555-a1dd-417074349cbd][Our Oriental Heritage]] (Durant, W.)
+- [[id:ae695d0f-04a6-4398-9785-0a4e925d689b][History of The French Revolution]] (Soboul, A.)
+- [[id:aa974737-5070-4652-985d-2a7a2ad198e9][History of the Western Philosophy and Theologyy]] (Frame, J. M.)
+- [[id:1f939ce6-6cba-43b6-a19b-4b78890be45b][The Open Society and its Enemies]] (Popper, K. R.)
+- [[id:3fxhry418xj0][Islam and The Destiny of Man]] (Eaton, G)
+- [[id:6y7buw40uwj0][The Polymath]] (Ahmed, W)
+* Other
+- [[id:w083zt618xj0][The Subtle Art of Not Giving a F*ck]] (Manson, M.).
+- [[id:t8w6y3j0dxj0][Why is it so hard to do my work?]] (Leroy, S.)
+- [[id:2qv2wq71yxj0][Ubersleep: Nap-based Sleep Schedules and the Polyphasic Lifestyle]] (Doxyk, P)
+- [[id:4fih09l0f4k0][Qusr al-Kalam]] (Amer, G.)
+- [[id:b20c7yy026k0][Discipline is Destiny]] (Holiday, R.)
+* wt                                                                  :noexport:
+[fn:7] Pretty much up-to-date version of "The Protocols of the Elders of Zion".
+
+[fn:6]   I think this book could make a use for me in the future in giving instances of
+  how most of philosophy authors & books are either pointless or obscure.
+[fn:5]   It's sad that non-scientific (in the academic means) Islamic scholars can not
+  write a readable argument without bloat it with x10 hate and swearing.
+
+
+[fn:4]   Mernissi forces herself to act like an orientalist, however she ain't. Since I
+  can't write a lot in this small box, I'd like to point 3 important issues in
+  this dissertation; 1. Usage of past-criticized Takhrij of some Hadiths, which
+  was claimed by her in /Political Harem: The Prophet and Women/ that it cannot
+  be noted after the prophet, but was 'made up' for interests. 2. Which is sorta
+  correlated with 1, is the inference from history book like Tabaqat al-Kubra.
+  We can not tell what is 'Islamic' based on such late area of the Islamic
+  History. However, if Mernissi surfs what is told to be 'Islamic', not what is
+  'Islamic', those 2 points are not valid. 3. Al-Ghazali used to address his
+  students that were always men, which clarify why he gives advices about
+  treating women, I couldn't interpret it like Mernissi did, that he meant
+  'Women are tools for men to help them pass through the hurdles of life'. This
+  is meaningless.
+
+[fn:3]  A prelude of the human history from the 'civilization' perspective, a
+  deep-rooted academic corresponding would be Will Durant's first chapter of
+  "The Full Story of Civilization", Our Oriental Heritage. Russel's book is good
+  for having a good time with a book “The time
+ 
+
+[fn:2] An inequilateral note about reading /philosophy/; the vast majority of
+philosophy books is not worth reading, in fact it's painful to read it, which is
+a thing I realized too late (~1 year ago, thanks to a friend of mine allowed me
+to read his dissertation in /Obscurantism/ of philosophers), a lot of philosophy
+books I've read in my life was useful but not really that 'useful', this is not
+the best place to explain why, but I'll talk about this in the future Inshaa'
+Allah. Also, read [[https://sophy.ca/blog/2013/03/how-not-to-write-in-philosophy/][How not to write in philosophy -- Against obscurantism]].
+
+# [fn:1] Not a bad book after all, it sounds like neo-Nazis are one of the rare
+#   denomination that preserved some فِطرة and genuine values. Some of the quotes I
+#   liked:
+
+# Unfounded belief is pitfall. A People who do not check the validity and effect
+# of their beliefs with reason will suffer or perish.
+
+# In a democracy those who control the media, and thus the minds of the
+# electorate, have power undreamed by kings or dictators.
+
+# Propaganda is major component in all power systems, both secular and religious;
+# false propaganda is a major component of unprincipled power systems. All power
+# systems endeavor to convince their subjects that the system is good, just,
+# beneficent and noble, as well as worthy of perpetuation and defense. The more
+# jingoistic propaganda issued, the more suspicious one should be of its truth.
+
+# There exists no such thing as rights or privileges under the Laws of Nature. The
+# deer being stalked by a hungry lion has no right to life. However, he may
+# purchase life by obedience to nature ordained instincts for vigilance and
+# flight. Similarly, men have no rights to life, liberty or happiness. These
+# circumstances may be purchased by oneself, by ones family, by ones tribe or by
+# ones ancestors, but they are nonetheless purchases and are not rights.
+# Furthermore, the value of these purchases can only be maintained through
+# vigilance and obedience to Natural Law.
+
+# Tyrannies teach what to think; free men learn how to think.
+
+# Sexual pornography degrades the Nature of all who are involved. A beautiful nude
+# woman is art; a camera between her knees to explore her private parts is
+# pornography. [I think he meant by pornography at the end as pornography in its
+# root Grecian meaning (dirt)]
+
+* References
+#+print_bibliography:
+
+* Footnotes
+[fn:8] As of [2024-11-15 Fri 09:15] this section no longer exists.
+[fn:1] If the link is somehow broken, please search for "Noam Chomsky University of Arizona
+on Feb. 8, 2012" or by the title of the lecture: "Noam Chomsky: Education For
+Whom and For What".
