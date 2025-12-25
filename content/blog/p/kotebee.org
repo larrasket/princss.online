@@ -1,0 +1,70 @@
+:PROPERTIES:
+:CUSTOM_ID: gffg0lh0bek0
+:ID: gffg0lh0bek0
+:END:
+#+title: Extract https://www.kotobee.com/
+#+DATE: <2024-11-24 Sun 18:48>
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+My friend's university sent her today a PDF file that was bundled inside an MS
+windows executable (exe), she needed to run it outside of the Windows machine.
+Upon extracting it, I found it was bundled as a Kotobee ebook, which turned out to
+be a DRM service to create "interactive books". After doing a quick binary
+analysis to ensure that we are indeed dealing with a DRM'd exe file (and not
+embarrassingly a .doc file renamed to be .exe), I managed to build a document out
+of it. Here are the steps:
+
+First of all, simply, extract the exe content:
+#+begin_src sh
+unzip file.exe -d extracted_directory
+#+end_src
+
+The extracted directory should have a similar tree to this:
+#+begin_example
+larrasket [~/tmp/rq/e]$ ls -l
+total 152
+-rw-r--r-- 1 l l   2227 Aug 21 14:42 config.js
+drwxr-xr-x 1 l l     44 Aug 21 14:42 css
+drwxr-xr-x 1 l l     52 Aug 21 14:42 epub
+drwxr-xr-x 1 l l     90 Aug 21 14:42 fonts
+-rw-r--r-- 1 l l  10709 Aug 21 14:42 icon.png
+drwxr-xr-x 1 l l      4 Aug 21 14:42 img
+drwxr-xr-x 1 l l      0 Aug 21 14:42 imgUser
+-rw-r--r-- 1 l l  14844 Aug 21 14:42 index.html
+drwxr-xr-x 1 l l     98 Aug 21 14:42 js
+drwxr-xr-x 1 l l     74 Aug 21 14:42 lib
+drwxr-xr-x 1 l l    232 Aug 21 14:42 locales
+-rw-r--r-- 1 l l 116350 Aug 21 14:42 npmModules.min.js
+-rw-r--r-- 1 l l    294 Aug 21 14:42 package.json
+#+end_example
+
+From here it's very obvious that we can run this node app in a web server. You
+can run a simple http server here:
+#+begin_src sh
+python3 -m http.server 9000
+#+end_src
+And the app will be available at port 9000. Alternatively you can build an epub
+from the provided epub directory:
+
+Inside the epub directory append the mimetype
+
+#+begin_src sh
+zip -0X "../book.epub" mimetype
+zip -rDX9 "../book.epub" * -x "*.DS_Store" -x mimetype
+#+end_src
+
+This will get you the epub. Right after, you can convert it to pdf with
+~epub-tools~:
+
+#+begin_src sh
+ebook-convert ../book.epub ../book.pdf
+#+end_src
+
+As a single command:
+
+#+begin_src sh
+(zip -0X "../book.epub" mimetype && \\
+     zip -rDX9 "../book.epub" * -x "*.DS_Store" -x mimetype) \\
+        && ebook-convert ../book.epub ../book.pdf
+#+end_src
