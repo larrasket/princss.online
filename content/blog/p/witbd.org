@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       x0egwn81crk0
+:CUSTOM_ID: x0egwn81crk0
+:END:
+#+title: What is it to be done?
+#+DATE: <2025-11-15 Sat 10:27>
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]], [[id:2x1fmp71crk0][What Should We Do?]] and [[id:jhxdza81e3k0][Leo Tolstoy]]
+#+END_tag
+
+This is a book by [[id:jhxdza81e3k0][Leo Tolstoy]] that I picked arbitrarily, I didn't know that it would be about poverty, responsibility and socialism, but I found the name catchy (there are multiple works of the same title that I already possess). The book talks about his experience with surrounding poverty, I really loved how smart he was to challenge what was already accepted, and to take responsibility to investigate and instantiate work on it, although of how tremendous and big such a mission (fixing poverty) would sound to anyone, indeed:
+
+#+begin_verse
+فَتىً لا يَضُمُّ القَلبُ هِمّاتِ قَلبِهِ
+وَلَو ضَمَّها قَلبٌ لَما ضَمَّهُ صَدرُ
+#+end_verse
+
+
+I find the conclusions that he arrived at mostly trivial (at least speaking from the current time), but what I find very important to me, is the emotions shared across the book, the responsibility that took place, and the story overall. Here I'm sharing my selections and [[id:2ar8en10n2k0][anthology]] of the articles from the book.
+
+-----
+
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links)
+#+END_SRC
