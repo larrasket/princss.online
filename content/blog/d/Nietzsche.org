@@ -6,18 +6,14 @@
 #+OPTIONS: toc:nil
 
 
-#+BEGIN_propert
-{{{s}}} [[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
-#+END_propert
-
 #+BEGIN_abstract
-You return from where you came: \\
-not dust to dust, \\
-but fire to fire. \\
+You return from where you came: 
+not dust to dust, 
+but fire to fire. 
 
-There will be no more striding the Alps, \\
-no more aphorisms, \\
-no further übermensch notes. \\
+There will be no more striding the Alps, 
+no more aphorisms,
+no further übermensch notes. 
 #+END_abstract
 
 /The following paining of The Torino Horse is the essence;/
@@ -116,8 +112,7 @@ mind, and by firing off at them the grapeshot of petty malice? Most are too
 dishonest, and a few too good, to know anything of this puderzdum; and they
 are welcome to deny if they like that Prosper Merimeet is right when he says:
 "Sachez aussi qu'il n'y a rien de plus commun que de faire Ie mal pour Ie
-plaisir de Ie fairet".
-
+plaisir de Ie fairet". #[[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
 * Footnotes
 [fn:2] Ibid.
 
