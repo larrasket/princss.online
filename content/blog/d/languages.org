@@ -8,10 +8,6 @@
 
 
 
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
-
 
 #+begin_export html
 <head>
@@ -28,7 +24,7 @@
 I do not like programming languages wars and I believe they are
 vastly stupid; every programming language out there had its own views that
 matched with feasible many usages. I claim however that some common ways of
-designing some languages were not optimal at all.
+designing some languages were not optimal at all. #[[id:4u5664n02wj0][Programming]]
 
 My main use case for a programming language is software engineering,
 although sometimes I do scientific computing, most programming languages out
