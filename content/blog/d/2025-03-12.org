@@ -5,9 +5,6 @@
 :lang: ar
 :subtitle: Praise to the Architect of Self
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:nk2kigk0ybk0][al-Mutanabbi]] and [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
 
 قال أبو الطيب:
 #+begin_verse
@@ -65,4 +62,4 @@ their pleasures."
 أي: أن الراحة عنده ليست في السكون والاستقرار، بل في السعي الدؤوب نحو المجد. وقد
 قال [[id:7sq9bk71x2k0][أبو العباس]]: [[id:7wtatv50tfk0][وملحمة]] الإنسان هي ملحمة الانتقال. ولا يكون الانتقال بمجرّد
 الارتحال؛ وإنّما هو عملية عنيفة. ولا يكون ارتحال بلا سيْف: ذهني أو واقِعي. والسيفُ
-أبو الارتحال، ولذات السبب، أبو التاريخ.
+أبو الارتحال، ولذات السبب، أبو التاريخ. #[[id:nk2kigk0ybk0][al-Mutanabbi]] #[[id:ydb1kfn02wj0][Modus Vivendi]]
