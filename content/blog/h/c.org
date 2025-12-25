@@ -7,6 +7,8 @@
 #+cite_export: csl  harvard.csl
 
 
+- [2025-12-26 Fri 00:28] This page got broken. It's still avaialble in the old website though, if you are smart enough you should be able to find it. If you are not, please stay away from me.
+  I'm leaving it without fixing it. For reference only.
 
 #+begin_export HTML
 <head>
