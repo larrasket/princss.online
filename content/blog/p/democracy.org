@@ -1,0 +1,154 @@
+:PROPERTIES:
+:ID:       wgze7ho0i2k0
+:END:
+#+title: Democracy and Irresponsibility: Eghbariah's Case
+#+date:  <2024-01-07 Sun 12:25>
+#+cite_export: csl ieee.csl
+
+#+BEGIN_tag
+{{{t}}} [[id:thc4j6p02wj0][Politics]]
+#+END_tag
+#+BEGIN_UNEXPORTEDTAG
+[[id:c50fn50104k0][Democracy Criticism]]
+#+END_UNEXPORTEDTAG
+#+BEGIN_PREVIEW
+Or: how democracy spoils everything.
+#+END_PREVIEW
+
+I think everyone should agree that science is not, nor should it be, democratic.
+That's probably why science did great in the post-renaissance periods, I
+personally believe that the democratic methodology is one of the greatest
+differences between the humanities and science. While the humanities do not
+embrace any form of democratic methodology, an essence of how democracy works is
+implicit in the way the humanities are usually produced.
+
+An intuitive example of that is rationality and the refutation of irrationality.
+The refutation of irrationality is a very regular activity in doing science,
+it’s actually what science is usually defined as (or how I mostly like to define
+it): discovering truth by uncovering falsehoods. In the humanities, democracy is
+a common thing. It’s the common belief of whatever is there (let it be rational
+or irrational).
+
+
+I'm not going to criticize democracy here as a political system nor its effects
+on academic communities, [cite:@caplan-2007-myth-ration-voter] might give you
+some insights on that about the great problems in democracy like rational
+ignorance and rational irrationality though, I would like instead to talk about
+yet another great issue in democracy, that's: responsibility.
+
+Responsibility is also used as a critique of political democracy: no one takes
+responsibility for their vote because 1. The fraction of one’s vote is too small
+to understand its segmentation, and 2. People are usually manipulated
+psychologically through the voting process, some people might change their vote
+just because they do not like the candidate's name or haircut, and since there
+is no charge of responsibility and since you do not have to legally and
+rationally explain why you voted for that candidate, you can do whatever you
+like.
+
+The tendency to fall for such psychological inclinations rises in situations
+like that because no one is paying for their mistakes, no one is going to put
+you in jail for choosing the wrong candidate (assuming that everything is so
+obvious that the wrongness of one of the candidates can be clearly detected). On
+the other hand, if one were to be judged for their choice, they might have spent
+much of their time doing research to clarify their vote.
+
+
+
+So basically, responsibility and rationality have a direct relationship: the
+more you are responsible for your vote, the less you are irrational about it.
+
+Irrationality does not mean unreasonableness, that’s why we have the public
+choice theory that studies rational irrationality. As I mentioned, you might
+vote for another candidate just because of reasons that you do not like about
+him or things that you believe to be bad about him, but you can not be
+scientifically rational about those reasons even if you are certain about them.
+For example, let’s say you have some religious belief that makes you believe
+that one of that candidate’s campaign promises is unlawful and going to rot the
+world. It’s a religion, so you are probably certain about it ; however, if you
+can not explain your reasons rationally, it will cause many disputes, so it is
+defined here as irrationality.
+
+
+-----
+
+Whilst the current genocide in Gaza has been taking a place, Rabea Eghbariah,
+Palestinian doctoral candidate at Harvard Law School, submitted a 2,000-word
+essay arguing that the assault on Gaza is within the legal framework of
+genocide.
+
+The draft has been in an undergoing process of publication, the typical academic
+process: "solicited, commissioned, contracted, submitted, edited, fact checked,
+copy edited, and approved by the relevant editors" as [[https://theintercept.com/2023/11/21/harvard-law-review-gaza-israel/][reported]].
+
+It seems like a focus group call made the Harvard Law Review president urge to
+call for an emergency meeting of editors to decide the destiny of the essay: one
+of the editors who commissioned the essay, Shahriari-Parsa, "and the other top
+online editor, Sabrina Ochoa, told The Intercept that they had never seen a
+piece face this level of scrutiny at the Law Review".
+
+
+Here I'm not interested in giving an example of the constraints on academic
+freedom, or freedom in general, especially against Palestinian rights, if you
+are interested in that you can find [cite:@abraham-2014-out-bound] rather
+interesting reading (and also check my [[id:0p936gp0kzj0][The Limits on The (allowed) Freedom of
+Speech]]), but instead I want the reader to contemplate on the method which the
+Harvard president called for to decide whether the article should be published
+or not, do note that the essay perfectly qualifies to be published, as it was
+reviewed already:
+
+#+begin_quote
+Following requests from over 30 editors, an emergency meeting of the entire
+journal body was called. After nearly six hours, the more than 100 editors voted
+anonymously on running the piece or not, with a strong majority voting against
+publication.
+#+end_quote
+
+Ironically, the book that I just mentioned had a very similar case, not only
+similar in the usage of irresponsible, irrational, democracy, but it was also
+against a Palestinian-rights defender, [[id:3tt8yy70mzj0][Norman Finkelstein]]: after [[id:ewz2s180mzj0][Alan Dershowitz]]
+continuous accusations and lobbying of DePaul's professors, department
+subsequently invited John Mearsheimer and Ian Lustick, two previously uninvolved
+academics with expertise on the Israel–Palestinian conflict, to evaluate the
+academic merit of Finkelstein's work; they came to the same conclusion
+[cite:@forer-2010-break] that Dershowitz's accusations are based on falsehoods.
+However, later DePaul's political science department voted nine to three, and
+the College of Liberal Arts and Sciences Personnel Committee five to zero, to
+give Finkelstein tenure. The three opposing faculty members subsequently filed a
+minority report opposing tenure, supported by the Dean of the College, Chuck
+Suchar. Not only democracy was wrong used in this example, it was moreover
+violated.
+
+Back to Eghbariah’s story, I think it’s a great depiction and manifestation of
+what I was talking about earlier, how irresponsibility in democracy can lead to
+awful choices: the vote was anonymous, no one had to clear any of their
+intentions, and no one will be asked to clarify them; no one is responsible for
+choosing anything; even the reviewers who initially approved the article
+initially (rationally, as that’s their job) can disapprove it by now due to
+their political views or whatever, as they can now act ’irrationally’ freely.
+
+Irrationality here has reasons (as I mentioned, it does not necessarily have
+implicit unreasonableness), probably the same reasons one of them would have
+against Palestine or why to be pro-Israeli. Reasons that shall be disputed can
+not be introduced as a counterargument to why the essay should not be published,
+but they can be introduced as arguments why one’s self thinks that it should not
+be published.
+
+I will give a final example, suppose you are a Muslim or belong to some ethnic
+group that, for some reason, has a very high crime rate, probably due to
+historical reasons or poverty; and you have a peer-review work to do on a
+statistics project that provides shocking information on how the crime rate is
+very high within your group of people. As a peer-reviewer, you will do your
+typical job, you might be more skeptical here because you have a motivation, but
+this should not change anything if the paper was well written.
+
+Now what if you could just vote anonymously to shut down the paper? No questions
+asked. This will be great, although it’s dishonest: you know that publishing
+such a paper would have a bad effect, and you start to imagine how the media
+will use it and link it to racist reasons, how it will be depicted. These are
+pretty good reasons not to do your job for but unfortunately, such reasons do not
+work in science, the paper should be published if it qualifies to be. Unless you
+can provide a clear error in the content, anything you are going to use as a
+counterargument will be irrationality.
+
+* Bibliography
+#+print_bibliography:
