@@ -4,10 +4,6 @@
 :CUSTOM_ID: 0sj8u1906nk0
 :END:
 
-#+BEGIN_tag
-{{{t}}} [[id:4ly8im40gzj0][Emacs]]
-#+END_tag
-
 I was chatting with some friends on IRC about RSS feeds and elfeed came up.
 While elfeed is great, it has some real limitations - try forwarding a feed item
 as an email, or converting it to HTML for further processing (like turning it
@@ -44,4 +40,4 @@ other formats, or integrate them into my note-taking workflow seamlessly.
 The whole thing just feels so natural - email is already a universal inbox, so
 why not make it truly universal?
 
-Might be related: [[id:swu8typ02wj0][Where to get news?]]
+Might be related: [[id:swu8typ02wj0][Where to get news?]] #[[id:4ly8im40gzj0][Emacs]] #[[id:4u5664n02wj0][Programming]]
