@@ -5,10 +5,6 @@
 #+DATE: <2022-09-20 Tue 03:20>
 #+filetags: :project_archived:
 #+option: toc:t
-#+BEGIN_propert
-{{{s}}} [[id:lvkhzyo02wj0][The Go Programming Language]]
-#+END_propert
-
 
 #+BEGIN_PREVIEW
 Reading the effective Go document.
@@ -28,7 +24,7 @@ the design principles class. I decided to filter out those irrelevant tips and
 distill a consultation, a recapitulation. So it might help someone.
 
 
-References are used for non-tl;dr that might be interesting for nerds.[fn:2]
+References are used for non-tl;dr that might be interesting for nerds #[[id:lvkhzyo02wj0][The Go Programming Language]].[fn:2]
 
 * Naming
 
