@@ -5,9 +5,6 @@
 #+date: <2023-10-07 Sat 16:37>
 #+filetags: :project_archived:
 #+cite_export: csl  harvard.csl
-#+BEGIN_tag
-{{{t}}} [[id:thc4j6p02wj0][Politics]]
-#+END_tag
 #+BEGIN_PREVIEW
 How does the US manipulate global policy using sanctions and political aids as a
 carrot and stick strategy.
@@ -94,7 +91,7 @@ from $70 million to $0.
 
 Sasha Alyson has a fantastic article [cite:@alyson-2021-monet-united-nation]
 investigating further more on UN-related actions, including U.N. membership and
-UNESCO.
+UNESCO. #[[id:thc4j6p02wj0][Politics]]
 * [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                 :noexport:
 ** DONE How does the US manipulate global policy using political aids :@write:
 :LOGBOOK:
