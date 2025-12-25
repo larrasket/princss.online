@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       lkni0t70xmk0
+:CUSTOM_ID: lkni0t70xmk0
+:END:
+#+title: OSS is not free
+#+DATE: <2025-07-17 Thu 20:19>
+
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+
+The Wikipedia entry for "Open-source software movement" explicitly warns: "Not to be confused with Free software movement." This distinction matters profoundly. Software that provides source availability, while certainly superior to closed-source alternatives, does not automatically guarantee user freedom. The "open source" label has become a marketing tool that obscures the more fundamental question: does this software respect user autonomy and control?
+
+Telegram is a good example. The company markets itself as "open-source software," yet only portions of its client code are available, and even that availability is questionable[fn:1]. Compare this to Signal, which provides complete software freedom: users can examine, modify, and distribute the entire codebase. Telegram's selective transparency creates an illusion of openness while maintaining control over critical components.
+
+Meta's approach to AI represents perhaps the most sophisticated example of this. The company releases what it calls "open source" Large Language Models, providing training code to create an appearance of transparency. This selective disclosure ignores the most crucial elements; no training datasets, no raw data access, no processing scripts, no data samples, no reproducibility mechanisms. This strategic omission allows Meta to claim "open source" credentials while maintaining proprietary control over the foundation of their AI systems. The community's response celebrating Meta as a "leading AI company" for these limited releases demonstrates how effectively this strategy manipulates public perception.
+
+Corporations selectively release components that appear generous while withholding elements that would enable true user freedom.
+
+* Footnotes
+
+[fn:1] Many times they release the binaries before the code is updated. 
