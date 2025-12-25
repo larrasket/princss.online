@@ -4,9 +4,8 @@
 :END:
 #+cite_export: csl ieee.csl
 
-#+BEGIN_propert
-{{{s}}} [[id:4swh72s0s1k0][Postmodern Abyss: Black Mirror]]
-#+END_propert
+
+
 #+begin_postscript
 This post is highly based on [cite:@byron-2019-fifteen-million] and Marxism
 Today content about commodity.
@@ -142,7 +141,6 @@ context instead of examining the moralities that it reflects. This concepts
 apply mostly to every episode in /Black Mirror/ where there a great exciting
 plot that attracts everyone, similar to Bing's story and speech, however, to
 most of the consumers, it's just a commodity formed in a video that they
-purchased from a streaming platform. It's a self-referencing scene.
+purchased from a streaming platform. It's a self-referencing scene. #[[id:4swh72s0s1k0][Postmodern Abyss: Black Mirror]]
 
-* Bibliography
 #+print_bibliography:
