@@ -6,14 +6,10 @@
 
 
 #+BEGIN_PREVIEW
-Based on Noam Chomsky's Media Control.
+Based on Noam Chomsky's Media Control. #[[id:9kk956p02wj0][Propaganda]]
 #+END_PREVIEW
 
 
-
-#+BEGIN_propert
-{{{s}}} [[id:9kk956p02wj0][Propaganda]]
-#+END_propert
 
 * [[id:c50fn50104k0][Democracy]] and Spectator Democracy
 :PROPERTIES:
