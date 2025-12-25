@@ -4,11 +4,6 @@
 :ID:       wtn40en02wj0
 :END:
 
-
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]].
-#+END_tag
-
 #+BEGIN_PREVIEW
 My radical thoughts on how computing should be done.
 #+END_PREVIEW
@@ -74,7 +69,7 @@ Here are some tips I wrote to my friend:
 + Many people would recommend using a free operating system such as Linux, I think this is
   good thing however I don't think people would feel comfortable to do it out of advise,
   but out of a need. Use whatever you like until you understand why you should use Linux.
-+ Follow [[http://www.catb.org/~esr/faqs/hacker-howto.html][this great tutorial]].
++ Follow [[http://www.catb.org/~esr/faqs/hacker-howto.html][this great tutorial]]. #[[id:ydb1kfn02wj0][Modus Vivendi]].
 
 * Footnotes
 
