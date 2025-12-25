@@ -1,0 +1,110 @@
+:PROPERTIES:
+:ID:       qyd85md1azj0
+:END:
+#+title: Aids, Sanctions and United States' Nations
+#+date: <2023-10-07 Sat 16:37>
+#+filetags: :project_archived:
+#+cite_export: csl  harvard.csl
+#+BEGIN_tag
+{{{t}}} [[id:thc4j6p02wj0][Politics]]
+#+END_tag
+#+BEGIN_PREVIEW
+How does the US manipulate global policy using sanctions and political aids as a
+carrot and stick strategy.
+#+END_PREVIEW
+
+For anyone who understands the basics of the policies of interests, any kind of
+political aid is always interpreted as matter of interest or to be used as a
+pressure method in the future, [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][U.S.]] foreign assistance to Egypt is a great
+example for that, not only it makes Egypt more dependent on US-Arms systems
+which implies more surveillance (only God knows what backdoor might be in those)
+and need for US services (due to maintenance and training) which will be a great
+future investment for the US arms industry (one of the greatest ever), but it
+also can be used as an efficient pressure point especially on the so-called
+underdeveloped states, i.e. poor countries that probably need these aids the
+most, which are also the only states qualified for receiving them.  In fact we
+have seen this already happening for Egypt more than once, most
+recent in 2022, US withheld $130 million of that military
+aid [cite:@pamuk-2022-u].
+
+Reading [cite:@gordon-2010-invis-war], Joy Gordon tells about what [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Noam Chomsky]]
+described once as "pulverization" of 3rd world/undefendable countries that might
+step on the US toes:
+
+#+begin_quote
+These lessons [of war] are directed to several audiences. For the Third World,
+the message is simple: Don’t raise your heads. A “much weaker” opponent will not
+merely be defeated, but pulverized.
+#+end_quote
+
+Indeed the US could make whatever the change they wanted on [[id:a318d110-eee7-40e6-9d9b-989aebca7dde][Iran]] by running a
+coup d'etat, something that they have practiced very well for decades (see
+[cite:@blum-2003-killin-hope], a fantastic literature on the subject), but this
+would not achieve the pulverization of Iraq.
+
+#+ATTR_HTML: :class iframe-wrapper
+#+begin_figure
+@@html:<iframe width="853" height="480" src="https://www.youtube.com/embed/2feXGli1VnE" frameborder="0" allowfullscreen></iframe>@@
+#+end_figure
+
+
+Gordon discusses the brutal methods that the US applied using sanctions to cause
+a humanitarian crisis in Iraq. The war casualties are known to most of you,
+the [[https://youtu.be/KP1OAD9jSaI][500,000 "worth it" children]] and death of millions, however, Gordon
+encourages us to look upon the "invisible war" effect, for example it's known that
+the alliance targeted many schools, hospitals and other civilian targets (on which
+the international community would comment "nothing serious", of course it's
+impossible to get the US into an international court for a war crime, Nicaragua
+has done its best on that already) however the sanctions resulted in 30% of Iraqi
+health institutions becoming dysfunctional by 1998, 70% of the population suffered
+from anemia and other treatable diseases, the annual death toll of Iraq
+increased by hundreds of thousands due to sanctions on drug imports and lack of
+electricity to operate medical equipment [cite:@gordon-2010-invis-war].
+
+However, something else got me very interested on Gordon's book: the process of
+issuing the security council resolution 661, which was indeed a very critical
+decision for a country like Iraq that is known to import most of its needs (70%
+by that time).
+
+There, the US used sanction and aids as tools to get that resolution passed, as
+Gordon states, all the developing countries that voted for the resolution got
+many privileges; Egypt, Turkey, China and Jordon got to take their stumbled
+loans from the World Bank, and aids were sent to other countries like Colombia,
+Ethiopia and Zaire. Of course alliances had more interested in Iraq itself.
+
+[[id:90ea533f-efdd-4c78-8d2f-648bacd8b466][Yemen]] was one of the countries that voted against that resolution. As I
+mentioned above, countries that voted for it got so many privileges, which tells
+us a little about "how much is a seat on the Security Council
+worth" [cite:@kuziemko-2006-how-secur]? Ilyana Kuziemko and Eric Werker from
+Harvard answer in their analysis[fn:1]:
+#+begin_quote
+We find that a country’s U.S. aid increases by 59 percent and its U.N. aid by 8
+percent when it rotates onto the council. This effect increases during years in
+which key diplomatic events take place (when members’ votes should be especially
+valuable), and the timing of the effect closely tracks a country’s election to,
+and exit from, the council.  Finally, the U.N. results appear to be driven by
+UNICEF, an organization over which the United States has historically exerted
+great control.
+#+end_quote
+
+Here the reader can expect what happened to Yemen; "That will be the most
+expensive ‘no’ vote you ever cast" a U.S. diplomat told the Yemeni ambassador
+before dropping Yemen's aid, a very poor country suffering from unending wars,
+from $70 million to $0.
+
+Sasha Alyson has a fantastic article [cite:@alyson-2021-monet-united-nation]
+investigating further more on UN-related actions, including U.N. membership and
+UNESCO.
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                 :noexport:
+** DONE How does the US manipulate global policy using political aids :@write:
+:LOGBOOK:
+CLOCK: [2023-10-07 Sat 16:37]--[2023-10-07 Sat 18:17] =>  1:40
+:END:
+* Footnotes
+
+[fn:1] I really encourage readers to have a look at that paper for further
+study, it's available for open view on
+https://www.hbs.edu/faculty/Pages/item.aspx?num=22724
+
+* References
+#+print_bibliography:
