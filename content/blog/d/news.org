@@ -1,0 +1,115 @@
+:PROPERTIES:
+:ID:       swu8typ02wj0
+:END:
+#+TITLE: Where to get news?
+#+DATE: <2022-01-19 Wed 01:20>
+
+
+#+BEGIN_PREVIEW
+And why this blog does not provide RSS/Atom feeds or notification updates?
+#+END_PREVIEW
+
+* Why this site does not provide RSS/Atom feeds or notification updates?
+Because it should not, and if you care about such a thing like 'being notified'
+about each new entry so you can make sure that you will never miss a beat to
+consume the wisdom, fun, tech stuff or whatever you believe this blog to provide
+you with, that you want to make the best of each entry here, then those entries
+aren't probably written for you.
+
+There are two main reasons for that, the first one is that I wrote this blog
+with intention, as Nietzsche describes:
+
+#+begin_quote
+A DIGRESSION.—[..] This is not intended to be read through at once, or to be
+read aloud. It is intended more particularly for reference, especially on our
+walks and travels: we must take it up and put it down again after a short
+reading, and, more especially, we ought not to be amongst our usual
+surroundings.[fn:1]
+
+توقفٌ- هذا لم يكتب ليقرأ من البداية للنهاية بسرعة، ولا أن يقرأ بصوتٍ مسموع؛ على القارئ أن يفتحه
+أغلب الوقت، خاصة وهو يتفسح أو وهو مسافر؛ يجب أن يستطيع الغوص إلى أعماقه، ثم ينظر حوله فلا يرى
+شيئًا مألوفًا.
+#+end_quote
+
+Most importantly; I do see an issue in looking forward for the consumption of
+content, such willingness is not regular for poise and self-realization. This
+place should never be a place of interest for anyone to visit and check
+regularly, so few places deserves to be as so.
+* Where to get updates?
+:PROPERTIES:
+:ID:       x2u1lyp02wj0
+:END:
+(like general news or social media updates)
+
+For the digitally young of you who weren't there in the era of google reader
+and the assumptive dependency of RSS XML feed readers; you can check [[https://www.d.umn.edu/itss/training/online/webdesign/rss.html][this page]]
+to learn more about it. Basically it was none-bullshit way to get feed updates:
+instead of reloading the BBC homepage every 10 minutes to check for news, you
+simply follow the XML feeds that they provide with a proper reader.
+
+Why people stopped doing this? It is not clear to be frank. But I anticipate
+that this is related to Google killing Google Reader; obviously many normies
+(majority of Google users) assumed that it means that there is no RSS anymore.
+Nonetheless, I think that it has to do much with social media platforms, since
+you can just follow the BBC page by hitting a button, and get the news feed
+mixed with your friends edgy internet posts.
+
+However, this led to a bigger problem. Bigger than what? Well, there is a main
+problem, you see; the BBC is just a mean of propaganda[fn:6], if you would depend on
+such a resource, you have already committed your first blunder[fn:2]; although
+back then people used to have multiple RSS provider (let's say AP and BBC).
+
+The thing with RSS/Atom feeds, is that it can't be centralized, controlled,
+filtered because it's a very basic and minimal technology, it's up to your feed
+reader to do all of this (if it would, and even in the case of Google Reader, a
+corporate-based reader, it wouldn't). The reader is the only centralized piece
+in this pipeline and it can't be controlled[fn:3].
+
+What people went to, on the other hand, is using not just a centralized; but a
+mind-washing-based, correctness-oriented mind-engineering platforms to sort,
+choose, recommend the news feeds for them (so you get yourselves some extra
+[[https://en.wikipedia.org/wiki/Propaganda_model#Filters][filters]]).
+
+
+Using this method establish a new set of means of mind controlling (beyond that
+one that excited before). I'm taking an advantage of the fact that most readers
+of this blog know already about the incident that exposed how social media
+platforms are used to manipulate the public's mind[fn:5] .
+
+So, what to do about that? Thankfully most of websites and news providers still
+have XML entries (even if they don't use/know about it, for instance, all
+wordpress sites generate rss routes automatically), you can just pick a proper
+RSS/Atom reader and use it.
+
+Remember, whoever controls the media controls your minds;
+
+#+begin_quote
+"Propaganda is major component in all power systems, both secular and
+religious; false propaganda is a major component of unprincipled power systems.
+All power systems endeavor to convince their subjects that the system is good,
+just, beneficent and noble, as well as worthy of perpetuation and defense. The
+more jingoistic propaganda issued, the more suspicious one should be of its truth."
+#+end_quote
+
+Of course, the way that social media choose you feeds (and sort them) is not
+always about what the juice lobby paid them to do for them, the but most of the
+time it is profit-oriented, which can be either unhealthy (in some hows) or
+unuseful as expected (like not getting the educative feeds that you are waiting
+for from some video creator, instead you get consumable content of
+trendy/sexualized content[fn:4]). For most people, getting weaned from social
+media addiction and basically removing these malware from your life can be more
+effective. #[[id:9kk956p02wj0][Propaganda]]
+* Highly recommended further reading
++ Crystallizing Public Opinion
++ Manufacturing Consent (Chomsky)
++ Understanding Power (Chomsky)
+* Footnotes
+
+[fn:6] [2025-07-24 Thu 16:01] of course is is not typically about the BBC,
+almost all media providers are mans of propaganda.
+[fn:5] Aug 2023, I don't really remmeber what I was talking about here.
+
+[fn:4] Here we can feel the advantage of a neutral feed reader.
+[fn:3] Of course the feed providers could be controlled instead.
+[fn:2] Learn more. Read: Media Control (Chomsky), The Propaganda Model Today, Propaganda and the Public Mind (Chomsky)
+[fn:1] Nietzsche, Friedrich. The Dawn of Day, Translated by John McFarland Kennedy, The Macmillan Company. , p. 288.
