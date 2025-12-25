@@ -1,0 +1,5 @@
+#+TITLE: Blog
+#+OPTIONS: toc:nil
+
+This is the blog section.
+
