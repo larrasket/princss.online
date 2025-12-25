@@ -49,13 +49,9 @@ on its consumers. [fn:2]
 :ID:       7y88co21swj0
 :END:
 
-#+BEGIN_tag
-{{{t}}} [[id:9kk956p02wj0][Propaganda]]
-#+END_tag
-
 It's a known claim by porn propagandists that "since rapists are likely to use
 adult content to relieve themselves because it's easier than raping someone" as
-seen [[https://youtu.be/9BcX4evzDjI?t=10][here]].
+seen [[https://youtu.be/9BcX4evzDjI?t=10][here]]. 
 
 However, the vast majority of porn content is correlated with things like the
 degradation of women. If you ask someone to categorize a film for you as
@@ -145,9 +141,7 @@ intrafamilial porn in which wife is presented as either sexual unattractive or
 is in the picture, she is always looking for being penetrated by her father
 [cite:@russell_purcell_2006].
 
-Engaging in sexual activities with children undergoes a transformation with
-pornography from a sickness to a natural activity, which, as Gail Dines argues,
-was an achievement for pornography to have such a normalization[cite:@dines_2010].
+Engaging in sexual activities with children undergoes a transformation with pornography from a sickness to a natural activity, which, as Gail Dines argues, was an achievement for pornography to have such a normalization[cite:@dines_2010]. #[[id:9kk956p02wj0][Propaganda]].
 
 ** Porn and sexual kinkiness
 :PROPERTIES:
@@ -358,9 +352,6 @@ legislative process.
 
 * Masturbation
 
-#+BEGIN_tag
-{{{t}}} [[id:v3b25op0r1k0][Philosophy of Ethics]]
-#+END_tag
 This is a little bit an off-topic, but I do not usually discuss sexual topics
 on this website, and pornography is usually associated with masturbation, so I
 will put my views here too.
@@ -421,20 +412,7 @@ behavior if you have seen a cat before and after being castrated. Sexual
 motivation has always been a major factor in our inducements throughout history,
 some psychologists (psychoanalysis  specifically) argue that it has always been
 the main motivation, and the instant dissimulation of such a motivation
-throughout masturbation will definitely have a bad effect in one’s activity.
-
-
-
-Amin,
-
-Thanks for reaching out and for the generous offer. I’d love to take over
-lr0.org. Please let me know the steps you prefer for the transfer and which
-details you need from my side.
-
-That’s a lovely coincidence that you saw my post. I recognized your name when
-your email came in though, to be honest, the first thing came to mind was the
-interview with Prot rather than EmacsConf.
-
+throughout masturbation will definitely have a bad effect in one’s activity. #[[id:v3b25op0r1k0][Philosophy of Ethics]]
 
 * Footnotes
 
