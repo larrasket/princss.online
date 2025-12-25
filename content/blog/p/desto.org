@@ -7,6 +7,8 @@
 #+BEGIN_PREVIEW
 This is my re-read of "The Insulted and Injured" as part of my
 attempt to complete the complete work of Feydor Dostoyevsky.
+
+- [2025-12-25 Thu 22:43] No idea what this is about.
 #+END_PREVIEW
 
 
@@ -73,5 +75,4 @@ Russian critic at the time, after Fedor wrote his first book "The Poor,"
 which was the most beautiful opening by a writer at the time, his
 subsequent writing came like a dream of Uncle and others until his
 imprisonment, and no one expected him to produce something of value,
-especially Belinsky.
-
+especially Belinsky. #[[id:jnmh8bs0uzj0][Destoevsky]] #[[id:6318fd43-4f0d-4c3b-9c83-5cadbeca2260][Literature]]
