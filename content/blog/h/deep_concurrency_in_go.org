@@ -23,7 +23,7 @@ living their lives. They are existing /concurrently/ to you.
 
 
 #+BEGIN_propert
-{{{s}}} [[id:lvkhzyo02wj0][The Go Programming Language]]
+[[id:lvkhzyo02wj0][The Go Programming Language]]
 #+END_propert
 
 * Why?
