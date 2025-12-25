@@ -3,61 +3,81 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="blog-page">
-  <nav class="breadcrumb">
-    <a href="/">home</a> <span class="sep">→</span> 
-    {{ if eq .Section "blog" }}
+{{/* Generate consistent artwork index using md5 */}}
+{{ $artFiles := readDir "static/images/art" }}
+{{ $artCount := len $artFiles }}
+{{ $hash := md5 .RelPermalink }}
+{{ $hashNum := 0 }}
+{{ range $i, $c := (slice (substr $hash 0 1) (substr $hash 1 1) (substr $hash 2 1)) }}
+  {{ if eq $c "a" }}{{ $hashNum = add $hashNum 10 }}
+  {{ else if eq $c "b" }}{{ $hashNum = add $hashNum 11 }}
+  {{ else if eq $c "c" }}{{ $hashNum = add $hashNum 12 }}
+  {{ else if eq $c "d" }}{{ $hashNum = add $hashNum 13 }}
+  {{ else if eq $c "e" }}{{ $hashNum = add $hashNum 14 }}
+  {{ else if eq $c "f" }}{{ $hashNum = add $hashNum 15 }}
+  {{ else }}{{ $hashNum = add $hashNum (int $c) }}
+  {{ end }}
+{{ end }}
+{{ $artIndex := mod $hashNum $artCount }}
+{{ $artFile := index $artFiles $artIndex }}
+
+<div class="blog-layout">
+  <div class="blog-content">
+    <nav class="breadcrumb">
+      <a href="/">home</a> <span class="sep">→</span> 
+      {{ if in .File.Dir "t/" }}<a href="/blog/">blog</a> <span class="sep">→</span> topics{{ else }}blog{{ end }}
+    </nav>
+    
+    <main>
       {{ if in .File.Dir "t/" }}
-        <a href="/blog/">blog</a> <span class="sep">→</span> topics
+      <h1 class="page-title">Topics</h1>
+      <div class="topics-list">
+        {{ range .Pages }}
+        {{ $title := partial "org-title.html" . }}
+        {{ if $title }}
+        <a href="{{ .RelPermalink }}" class="topic-link">{{ $title }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+      
       {{ else }}
-        blog
-      {{ end }}
-    {{ end }}
-  </nav>
-  
-  <main>
-    {{/* Check if this is /blog/t/ section */}}
-    {{ if in .File.Dir "t/" }}
-    
-    {{/* TOPICS PAGE - show only topic links */}}
-    <h1 class="page-title">Topics</h1>
-    <div class="topics-list">
-      {{ range .Pages }}
-      {{ $title := partial "org-title.html" . }}
-      {{ if $title }}
-      <a href="{{ .RelPermalink }}" class="topic-link">{{ $title }}</a>
-      {{ end }}
-      {{ end }}
-    </div>
-    
-    {{ else }}
-    
-    {{/* BLOG HOME - show recent posts from /p/ */}}
-    <h1 class="page-title">Blog</h1>
-    
-    {{- $allPages := slice -}}
-    {{- range (.Site.GetPage "/blog").RegularPagesRecursive -}}
-      {{- if in .File.Dir "p/" -}}
-        {{ $date := partial "org-date.html" . }}
-        {{ $allPages = $allPages | append (dict "page" . "date" $date) }}
+      <h1 class="page-title">Blog</h1>
+      
+      {{- $allPages := slice -}}
+      {{- range (.Site.GetPage "/blog").RegularPagesRecursive -}}
+        {{- if in .File.Dir "p/" -}}
+          {{ $date := partial "org-date.html" . }}
+          {{ $allPages = $allPages | append (dict "page" . "date" $date) }}
+        {{- end -}}
       {{- end -}}
-    {{- end -}}
-    {{- $allPages = sort $allPages "date" "desc" -}}
-    
-    <div class="posts-list">
-      {{ range $allPages }}
-      {{ $title := partial "org-title.html" .page }}
-      {{ if $title }}
-      <article class="post-entry">
-        <span class="date">{{ .date.Format "Jan 2, 2006" }}</span>
-        <a href="{{ .page.RelPermalink }}">{{ $title }}</a>
-      </article>
+      {{- $allPages = sort $allPages "date" "desc" -}}
+      
+      <div class="posts-list">
+        {{ range $allPages }}
+        {{ $title := partial "org-title.html" .page }}
+        {{ if $title }}
+        <article class="post-entry">
+          <span class="date">{{ .date.Format "Jan 2, 2006" }}</span>
+          <a href="{{ .page.RelPermalink }}">{{ $title }}</a>
+        </article>
+        {{ end }}
+        {{ end }}
+      </div>
+      
+      {{ partial "extract-backlinks.html" . }}
       {{ end }}
-      {{ end }}
+    </main>
+  </div>
+  
+  <div class="separator"></div>
+  
+  <div class="blog-artwork">
+    <div class="artwork-box">
+      <img src="/images/art/{{ $artFile.Name }}" alt="Artwork" loading="lazy">
+      <div class="artwork-note">
+        hash: {{ substr $hash 0 8 }}… → idx {{ $artIndex }}/{{ $artCount }}
+      </div>
     </div>
-    
-    {{ partial "extract-backlinks.html" . }}
-    {{ end }}
-  </main>
+  </div>
 </div>
 {{ end }}

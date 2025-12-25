@@ -5,19 +5,9 @@
 #+DATE: <2023-10-30 Mon 22:40>
 #+filetags: :project_archived:
 
-
 #+BEGIN_PREVIEW
-People are free to do exactly what they are told. ― Ward Churchill
+People are free to do exactly what they are told. ― Ward Churchill 
 #+END_PREVIEW
-
-#+BEGIN_tag
-{{{t}}} [[id:thc4j6p02wj0][Politics]]
-#+END_tag
-
-
-#+BEGIN_UNEXPORTEDTAG
-[[id:0p936gp0kzj0][How free is freedom?]]
-#+END_UNEXPORTEDTAG
 
 Freedom of speech has limits, some argue that they must
 have[cite:@gunatilleke-2020-justif-limit] especially on "dangerous" content that
@@ -67,7 +57,7 @@ violation of freedom in much clearer forms and everywhere in public media.
 
 The purpose of this page page to document news and events that
 are considered to indicate a violation on the freedom of thought and speech,
-especially but not exclusively on views related to the [[id:8x766080mzj0][Israeli–Palestinian conflict]].
+especially but not exclusively on views related to the [[id:8x766080mzj0][Israeli–Palestinian conflict]]. #[[id:thc4j6p02wj0][Politics]]
 
 * Web Summit CEO Resigns After Condemnation of Israeli War Crimes
 :PROPERTIES:
@@ -212,12 +202,13 @@ Columbia University is suspending Students for Justice in Palestine (SJP) and
 Jewish Voice for Peace (JVP) as they "repeatedly violated University policies
 related to holding campus events, culminating in an unauthorized
 event"[cite:@editorial-2023-statem-from].
-* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                 :noexport:
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
 ** DONE Publishing this                                              :@write:
 :LOGBOOK:
 CLOCK: [2023-10-31 Tue 05:53]--[2023-10-31 Tue 06:05] =>  0:12
 CLOCK: [2023-10-30 Mon 22:06]--[2023-10-31 Tue 02:15] =>  4:09
 :END:
+[[id:0p936gp0kzj0][How free is freedom?]]
 * Footnotes
 
 [fn:2] As of the time of writing this he has being confirming that, [[https://twitter.com/AlanDersh/status/1714635187521192417][calling]] for

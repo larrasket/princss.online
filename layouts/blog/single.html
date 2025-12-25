@@ -1,75 +1,75 @@
 {{ define "styles" }}
 <link rel="stylesheet" href="/styles/blog.css" />
-{{ end }}
+{{ end }} {{ define "main" }} {{/* Generate consistent artwork index using md5
+*/}} {{ $artFiles := readDir "static/images/art" }} {{ $artCount := len
+$artFiles }} {{ $hash := md5 .RelPermalink }} {{ $hashNum := 0 }} {{ range $i,
+$c := (slice (substr $hash 0 1) (substr $hash 1 1) (substr $hash 2 1)) }} {{ if
+eq $c "a" }}{{ $hashNum = add $hashNum 10 }} {{ else if eq $c "b" }}{{ $hashNum
+= add $hashNum 11 }} {{ else if eq $c "c" }}{{ $hashNum = add $hashNum 12 }} {{
+else if eq $c "d" }}{{ $hashNum = add $hashNum 13 }} {{ else if eq $c "e" }}{{
+$hashNum = add $hashNum 14 }} {{ else if eq $c "f" }}{{ $hashNum = add $hashNum
+15 }} {{ else }}{{ $hashNum = add $hashNum (int $c) }} {{ end }} {{ end }} {{
+$artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
+}}
 
-{{ define "main" }}
-<div class="blog-page">
-  <nav class="breadcrumb">
-    <a href="/">home</a> <span class="sep">→</span> <a href="/blog/">blog</a> <span class="sep">→</span> 
-    {{ if in .File.Dir "t/" }}<a href="/blog/t/">topics</a> <span class="sep">→</span>{{ end }}
-    <span>{{ .Title }}</span>
-  </nav>
-  
-  <main>
-    {{ $date := partial "org-date.html" . }}
-    {{ $isTopicPage := in .File.Dir "t/" }}
-    
-    {{ if not $isTopicPage }}
-    <time class="post-date">{{ $date.Format "January 2, 2006" }}</time>
-    {{ end }}
-    
-    <h1 class="page-title">{{ .Title }}</h1>
-    
-    {{/* Don't show content for topic pages - just the list */}}
-    {{ if not $isTopicPage }}
-    <div class="post-content">
-      {{ partial "resolve-citations.html" (partial "resolve-roam-links.html" .Content) }}
-    </div>
-    {{ end }}
-    
-    {{/* For /t/ (topics), show articles that reference this topic as a proper list */}}
-    {{ if $isTopicPage }}
-    
-    {{/* Build ID -> date map */}}
-    {{ $idDateMap := dict }}
-    {{ range site.AllPages }}
-      {{ if and .File (eq .File.Ext "org") }}
-        {{ $rawContent := .RawContent }}
-        {{ $idMatches := findRE `:ID:\s+(\S+)` $rawContent }}
-        {{ $pageDate := partial "org-date.html" . }}
-        {{ range $idMatches }}
-          {{ $id := replaceRE `:ID:\s+` "" . }}
-          {{ $idDateMap = merge $idDateMap (dict $id $pageDate) }}
-        {{ end }}
+<div class="blog-layout">
+  <div class="blog-content">
+    <nav class="breadcrumb">
+      <a href="/">home</a> <span class="sep">→</span> {{ if in .File.Dir "t/"
+      }}<a href="/blog/">blog</a> <span class="sep">→</span>
+      <a href="/blog/t/">topics</a>{{ else }}blog{{ end }}
+    </nav>
+
+    <main>
+      {{ $date := partial "org-date.html" . }} {{ $isTopicPage := in .File.Dir
+      "t/" }} {{ if not $isTopicPage }}
+      <div class="post-date">{{ $date.Format "January 2, 2006" }}</div>
       {{ end }}
-    {{ end }}
-    
-    {{ $thisId := "" }}
-    {{ $rawContent := .RawContent }}
-    {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }}
-    {{ if $idMatch }}
-      {{ $idLine := index $idMatch 0 }}
-      {{ $thisId = replaceRE `:ID:\s+` "" $idLine }}
-    {{ end }}
-    
-    {{ if $thisId }}
-    {{ $backlinks := index site.Data.backlinks $thisId }}
-    {{ if $backlinks }}
-    <div class="posts-list">
-      {{ range $backlinks }}
-      {{ $entryDate := index $idDateMap .id }}
-      <article class="post-entry">
-        {{ if $entryDate }}<span class="date">{{ $entryDate.Format "Jan 2, 2006" }}</span>{{ else }}<span class="date">—</span>{{ end }}
-        <a href="{{ .url }}">{{ .title }}</a>
-      </article>
-      {{ end }}
+
+      <h1 class="page-title">{{ .Title }}</h1>
+
+      {{ if not $isTopicPage }}
+      <div class="post-content">
+        {{ partial "resolve-citations.html" (partial "resolve-roam-links.html"
+        .Content) }}
+      </div>
+      {{ end }} {{ if $isTopicPage }} {{ $idDateMap := dict }} {{ range
+      site.AllPages }} {{ if and .File (eq .File.Ext "org") }} {{ $rawContent :=
+      .RawContent }} {{ $idMatches := findRE `:ID:\s+(\S+)` $rawContent }} {{
+      $pageDate := partial "org-date.html" . }} {{ range $idMatches }} {{ $id :=
+      replaceRE `:ID:\s+` "" . }} {{ $idDateMap = merge $idDateMap (dict $id
+      $pageDate) }} {{ end }} {{ end }} {{ end }} {{ $thisId := "" }} {{
+      $rawContent := .RawContent }} {{ $idMatch := findRE `:ID:\s+(\S+)`
+      $rawContent 1 }} {{ if $idMatch }} {{ $idLine := index $idMatch 0 }} {{
+      $thisId = replaceRE `:ID:\s+` "" $idLine }} {{ end }} {{ if $thisId }} {{
+      $backlinks := index site.Data.backlinks $thisId }} {{ if $backlinks }}
+      <div class="posts-list">
+        {{ range $backlinks }} {{ if and (not (in .url "/blog/t/")) (ne .url
+        $.RelPermalink) }} {{ $entryDate := index $idDateMap .id }}
+        <article class="post-entry">
+          {{ if $entryDate }}<span class="date"
+            >{{ $entryDate.Format "Jan 2, 2006" }}</span
+          >{{ else }}<span class="date">—</span>{{ end }}
+          <a href="{{ .url }}">{{ .title }}</a>
+        </article>
+        {{ end }} {{ end }}
+      </div>
+      {{ end }} {{ end }} {{ else }} {{ partial "extract-backlinks.html" . }} {{
+      end }}
+    </main>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="blog-artwork">
+    <div class="artwork-box">
+      <img src="/images/art/{{ $artFile.Name }}" alt="Artwork" loading="lazy" />
+      <div class="artwork-note">
+        this is hashed from my art library to this article, randomely, but you
+        have to see it because you are in my place. Hash: {{ substr $hash 0 8
+        }}… → idx {{ $artIndex }}/{{ $artCount }}
+      </div>
     </div>
-    {{ end }}
-    {{ end }}
-    
-    {{ else }}
-    {{ partial "extract-backlinks.html" . }}
-    {{ end }}
-  </main>
+  </div>
 </div>
 {{ end }}
