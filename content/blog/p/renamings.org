@@ -5,10 +5,6 @@
 #+title: Re: Programmers and software developers lost the plot on naming their tools
 #+DATE: <2025-12-15 Mon 13:17>
 
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
-
 My last post [[id:v192vmb1ask0][Programmers and software developers lost the plot on naming their tools]] was discussed heavily in [[https://news.ycombinator.com/item?id=46234806][HackerNews]], [[https://lobste.rs/s/qhairc/programmers_software_developers_lost][Lobsters]], and [[https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/][r/coding]]. I'd like here to response to some comments that repeated fairly frequently.
 
 * =awk= is not a good name
@@ -67,5 +63,4 @@ That's it. MongoDB clears this bar. PostgreSQL clears it. "Marmot" for a SQLite 
 
 The question isn't "are descriptive names perfect?" They're not. The question is: "are they better than random words?" And the answer is obviously yes.
 
-Every defense of arbitrary naming boils down to: "descriptive naming has edge cases and costs." True. But those costs are one-time (renaming, choosing carefully) or constrained (scope can't silently expand). Random naming has perpetual costs paid by everyone who encounters the tool, forever.
-
+Every defense of arbitrary naming boils down to: "descriptive naming has edge cases and costs." True. But those costs are one-time (renaming, choosing carefully) or constrained (scope can't silently expand). Random naming has perpetual costs paid by everyone who encounters the tool, forever. #[[id:4u5664n02wj0][Programming]]

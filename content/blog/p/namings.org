@@ -5,9 +5,6 @@
 #+title: Programmers and software developers lost the plot on naming their tools
 #+DATE: <2025-12-11 Thu 18:27>
 
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
 
 #+BEGIN_PREVIEW
 This post was discussed in [[https://news.ycombinator.com/item?id=46234806][HackerNews]], [[https://lobste.rs/s/qhairc/programmers_software_developers_lost][Lobsters]], and [[https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/][r/coding]]. You can check also my [[id:1ix262b1fsk0][response to some comments]].
@@ -66,7 +63,8 @@ Reserve the creative names for end-user products where branding matters. For inf
 
 The next time you're about to name your project after your favorite anime character, pause. Ask yourself: "Would a civil engineer name a bridge support system this way?" If the answer is no, choose a better name.
 
-Our field deserves better than a zoo of random nouns masquerading as professional nomenclature. Clarity isn't boring, it's respect for your users' time and cognitive resources. 
+Our field deserves better than a zoo of random nouns masquerading as professional nomenclature. Clarity isn't boring, it's respect for your users' time and cognitive resources. #[[id:4u5664n02wj0][Programming]] 
+
 
 * Footnotes
 

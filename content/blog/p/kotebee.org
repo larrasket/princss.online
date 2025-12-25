@@ -4,9 +4,6 @@
 :END:
 #+title: Extract https://www.kotobee.com/
 #+DATE: <2024-11-24 Sun 18:48>
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
 My friend's university sent her today a PDF file that was bundled inside an MS
 windows executable (exe), she needed to run it outside of the Windows machine.
 Upon extracting it, I found it was bundled as a Kotobee ebook, which turned out to
@@ -68,3 +65,5 @@ As a single command:
      zip -rDX9 "../book.epub" * -x "*.DS_Store" -x mimetype) \\
         && ebook-convert ../book.epub ../book.pdf
 #+end_src
+
+#[[id:4u5664n02wj0][Programming]]

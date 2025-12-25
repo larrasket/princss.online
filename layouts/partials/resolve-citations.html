@@ -1,6 +1,8 @@
 {{- $content := . -}}
 {{- $bibFile := os.ReadFile "data/ref.bib" -}}
 {{- $bib := dict -}}
+{{- $usedKeys := slice -}}
+
 {{- if $bibFile -}}
   {{- $entries := findRE `@\w+\{([^,]+),` $bibFile -}}
   {{- range $entry := $entries -}}
@@ -11,24 +13,59 @@
       {{- $blockContent := index $block 0 -}}
       {{- $author := "" -}}
       {{- $year := "" -}}
+      {{- $title := "" -}}
+      {{- $publisher := "" -}}
+      {{- $journal := "" -}}
+      {{- $url := "" -}}
+      
       {{- $authorMatch := findRE `author\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
       {{- if $authorMatch -}}
         {{- $author = replaceRE `author\s*=\s*\{([^}]+)\}` `$1` (index $authorMatch 0) -}}
       {{- end -}}
+      
       {{- $yearMatch := findRE `year\s*=\s*\{?(\d{4})\}?,?` $blockContent 1 -}}
       {{- if $yearMatch -}}
         {{- $year = replaceRE `year\s*=\s*\{?(\d{4})\}?,?` `$1` (index $yearMatch 0) -}}
+      {{- else -}}
+        {{- /* Fallback: check date field (YYYY-MM-DD format) */ -}}
+        {{- $dateMatch := findRE `date\s*=\s*\{?(\d{4})` $blockContent 1 -}}
+        {{- if $dateMatch -}}
+          {{- $year = replaceRE `date\s*=\s*\{?(\d{4}).*` `$1` (index $dateMatch 0) -}}
+        {{- end -}}
       {{- end -}}
-      {{- $bib = merge $bib (dict $key (dict "author" $author "year" $year)) -}}
+      
+      {{- $titleMatch := findRE `title\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
+      {{- if $titleMatch -}}
+        {{- $title = replaceRE `title\s*=\s*\{([^}]+)\}` `$1` (index $titleMatch 0) -}}
+      {{- end -}}
+      
+      {{- $publisherMatch := findRE `publisher\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
+      {{- if $publisherMatch -}}
+        {{- $publisher = replaceRE `publisher\s*=\s*\{([^}]+)\}` `$1` (index $publisherMatch 0) -}}
+      {{- end -}}
+      
+      {{- $journalMatch := findRE `journal\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
+      {{- if $journalMatch -}}
+        {{- $journal = replaceRE `journal\s*=\s*\{([^}]+)\}` `$1` (index $journalMatch 0) -}}
+      {{- end -}}
+      
+      {{- $urlMatch := findRE `url\s*=\s*\{([^}]+)\}` $blockContent 1 -}}
+      {{- if $urlMatch -}}
+        {{- $url = replaceRE `url\s*=\s*\{([^}]+)\}` `$1` (index $urlMatch 0) -}}
+      {{- end -}}
+      
+      {{- $bib = merge $bib (dict $key (dict "author" $author "year" $year "title" $title "publisher" $publisher "journal" $journal "url" $url)) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
+{{- /* Replace citations and collect used keys */ -}}
 {{- range $match := findRE `\[cite:@([a-zA-Z0-9_-]+)([^\]]*)\]` $content -}}
   {{- $key := replaceRE `\[cite:@([a-zA-Z0-9_-]+).*` `$1` $match -}}
   {{- $locator := replaceRE `\[cite:@[a-zA-Z0-9_-]+([^\]]*)\]` `$1` $match | strings.TrimSpace -}}
   {{- $entry := index $bib $key -}}
   {{- if $entry -}}
+    {{- $usedKeys = $usedKeys | append $key -}}
     {{- $author := $entry.author -}}
     {{- $authorLast := "" -}}
     {{- if in $author " and " -}}
@@ -47,6 +84,37 @@
     {{- $citation := printf "(%s %s%s)" $authorLast $entry.year $locatorFmt -}}
     {{- $content = replace $content $match $citation -}}
   {{- end -}}
+{{- end -}}
+
+{{- /* Remove duplicates from usedKeys */ -}}
+{{- $uniqueKeys := slice -}}
+{{- range $usedKeys -}}
+  {{- if not (in $uniqueKeys .) -}}
+    {{- $uniqueKeys = $uniqueKeys | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Append bibliography if there are citations */ -}}
+{{- if gt (len $uniqueKeys) 0 -}}
+  {{- $bibHtml := "<div class=\"bibliography\"><h2>References</h2><ul>" -}}
+  {{- range $uniqueKeys -}}
+    {{- $entry := index $bib . -}}
+    {{- if $entry -}}
+      {{- $bibEntry := printf "<li><strong>%s</strong> (%s). <em>%s</em>." $entry.author $entry.year $entry.title -}}
+      {{- if $entry.publisher -}}
+        {{- $bibEntry = printf "%s %s." $bibEntry $entry.publisher -}}
+      {{- else if $entry.journal -}}
+        {{- $bibEntry = printf "%s %s." $bibEntry $entry.journal -}}
+      {{- end -}}
+      {{- if $entry.url -}}
+        {{- $bibEntry = printf "%s <a href=\"%s\">Link</a>" $bibEntry $entry.url -}}
+      {{- end -}}
+      {{- $bibEntry = printf "%s</li>" $bibEntry -}}
+      {{- $bibHtml = printf "%s%s" $bibHtml $bibEntry -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $bibHtml = printf "%s</ul></div>" $bibHtml -}}
+  {{- $content = printf "%s%s" $content $bibHtml -}}
 {{- end -}}
 
 {{- $content | safeHTML -}}

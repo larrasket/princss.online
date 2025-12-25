@@ -4,9 +4,6 @@
 :END:
 #+title: Conventional Commits considered harmful
 #+DATE: <2025-09-30 Tue 02:16>
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
 
 #+BEGIN_PREVIEW
 This post was discussed in [[https://lobste.rs/s/szoe3m/conventional_commits_considered][Lobsters]]
@@ -67,7 +64,7 @@ While =keyboard= is the name of some package. A good way to run CI/CD actions ba
 
 Overall this style is just like the many other [[https://xkcd.com/927/][standards and conventions]] and it's okay to use, but it's really harmful to enforce it. It values style over content and filters out contributors who care more about the product they're getting and the code more than how your CI/CD is supposed to be managed.
 
-If you still prefer it you can squeeze a PR commits into a single one that follows your preferred style, but please do not ask contributors to learn unuseful and unportable knowledge.
+If you still prefer it you can squeeze a PR commits into a single one that follows your preferred style, but please do not ask contributors to learn unuseful and unportable knowledge. #[[id:4u5664n02wj0][Programming]]
 
 * Related reads:
 

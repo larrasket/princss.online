@@ -240,3 +240,43 @@
 .backlinks a:hover {
     text-decoration: 1px dotted underline;
 }
+
+/* Bibliography */
+.bibliography {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dotted var(--darkbrown, #2a2420);
+}
+
+.bibliography h2 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 15px;
+}
+
+.bibliography ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bibliography li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bibliography li strong {
+    font-weight: normal;
+}
+
+.bibliography li em {
+    font-style: italic;
+}
+
+.bibliography li a {
+    color: inherit;
+    text-decoration: 1px dotted underline;
+}
+
