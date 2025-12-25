@@ -1,0 +1,227 @@
+:PROPERTIES:
+:ID:       0p936gp0kzj0
+:END:
+#+title:  The Limits on The (allowed) Freedom of Speech
+#+DATE: <2023-10-30 Mon 22:40>
+#+filetags: :project_archived:
+
+
+#+BEGIN_PREVIEW
+People are free to do exactly what they are told. ― Ward Churchill
+#+END_PREVIEW
+
+#+BEGIN_tag
+{{{t}}} [[id:thc4j6p02wj0][Politics]]
+#+END_tag
+
+
+#+BEGIN_UNEXPORTEDTAG
+[[id:0p936gp0kzj0][How free is freedom?]]
+#+END_UNEXPORTEDTAG
+
+Freedom of speech has limits, some argue that they must
+have[cite:@gunatilleke-2020-justif-limit] especially on "dangerous" content that
+could be described as "harmful and offensive", which is arguable of course. I
+call those limits the /overt limits/, the ones that you might get sued of
+criminal speech in many countries.
+
+However, there are always the /undercover limits/, those that you are not likely
+to get sued for practicing them, although you are very likely to get (at the very
+least) marginalized, defamed and underrepresented. The Nazis used this technique for a
+while against the Jews in Germany, it was called the Judenboykott and it was
+years before the Nuremberg Laws (the antisemitic laws that were enacted in Nazi
+Germany), it was a method for marginalizing and underrepresenting the Jewish
+people without the usage of any kind of law enforcement[cite:@pauley-1998-from-prejud-persec].
+
+Marginalization and underrepresentation are indispensable tools for an
+oligarchic democracy, or any state that will find a burden in using law
+enforcement. It's basically the punishment by the elites to align the view for
+the public stakeholders (i.e. the people), they should be only exposed to
+certain views, this way it will prevent them from engaging in any
+unpleasant actions[cite:@chomsky-1997-media-contr p. 24]
+
+#+begin_quote
+As long as people are marginalized and distracted, [they] have no way to
+organize or articulate their sentiments, or even know that others have these
+sentiments. People assume that they are the only people with a crazy idea in
+their heads.
+#+end_quote
+
+Now this comes on a price: teaching the public the lesson of what happens to
+those who are disaligned, they get defamed, marginalized and basically
+/undercover/ oppressed and sometimes proscribed.
+
+As the time of writing this it has been a few weeks since the beginning of the
+[[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]-Gaza 2023 war. Compared to clashes that has been going for the past
+couple of decades between the Palestinian people and the Israeli forces, that
+most recent conflict has been discussed in much bigger scale, many
+Israeli-affiliated systems are doing there hard work to make sure that everyone
+is having standards of support for Israeli militancy.
+
+The kinds of defamation that I mentioned have been always happening with mostly
+all of the past clashes[fn:1], Dr. Matthew Abraham's great book "Out of Bounds:
+Academic Freedom and the Question of Palestine"[cite:@abraham-2014-out-bound]
+collects many examples for that violation but in academic publishing boundaries.
+Due to that exceptional case of the current conflict, we are seeing that
+violation of freedom in much clearer forms and everywhere in public media.
+
+The purpose of this page page to document news and events that
+are considered to indicate a violation on the freedom of thought and speech,
+especially but not exclusively on views related to the [[id:8x766080mzj0][Israeli–Palestinian conflict]].
+
+* Web Summit CEO Resigns After Condemnation of Israeli War Crimes
+:PROPERTIES:
+:ID:       qk0eo7u064k0
+:END:
+
+Paddy Cosgrave, the chief executive officer of a prominent European tech
+conference called Web Summit, resigned from his role on Saturday amid backlash
+for his public statements that suggested [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] was committing war crimes
+[cite:@innocenzio-2023-ceo-israel].
+
+Right after the publication of that statement, his organization, Web Summit,
+suffered from boycotts by [[id:xrh2q3k0ozj0][Google]], [[id:h9t705k0ozj0][Strip]] and [[id:scwaj4k0ozj0][Meta]][cite:@monahan-2023-meta-googl],
+which probably caused his resignation.
+
+* Florida Governor Ban of Pro-Palestinian Student Organization
+The Florida governor and Republican presidential candidate [[id:58y3emp0uzj0][Ron DeSantis]] has
+ordered colleges ban pro-Palestinian groups student organization.
+
+"Based on the National SJP’s support of terrorism, in consultation with Governor
+DeSantis, the student chapters must be deactivated" Rodrigues wrote in a memo
+to university leaders, [[https://www.reuters.com/world/us/floridas-desantis-bans-pro-palestinian-student-group-2023-10-25/][as reported]][cite:@hay-2023-florid-desan].
+* British Ministerial Aide Sacked After Calling for Gaza Ceasefire
+:PROPERTIES:
+:ID:       sare4ib000k0
+:END:
+
+A ministerial aide has been sacked from his government role after calling for a
+ceasefire in Gaza[cite:@morton-2023-paul-brist].
+
+* Many CEOs Promoted by Mass Media Are Calling for Blacklist of Harvard Students After Israel Condemnation Statement
+:PROPERTIES:
+:ID:       xd74xnp0kzj0
+:END:
+
+In 9 Oct 2023 "large number of Harvard student organizations" made a statement
+that's clear about the Israeli conflict. I personally agree with their views,
+what happened in 7 October was a consequence of the Israeli actions for the last
+couple of decades, killing and oppressing Palestinian whilst running the
+greatest open air prison in the world (Gaza).
+
+Though this is what many CEOs did not like, and now they are calling on Harvard
+University to shut them down, asking for a full list of their names
+[cite:@egan-2023-ceos-harvar]. As of the end of October 2023, media has reported
+that millions of 'funds' for top U.S. universities are gone due to disaligned
+views of student about the [[id:8x766080mzj0][Israeli–Palestinian Conflict]].
+[cite:@jack-2023-us-hamas].
+
+In 17 October 2023; many "top law firm" rescinds their job offers to many of
+these top universities [cite:@tenbarge-2023-top-ivy] due to the same reasons.
+All of these are means for lobbying the universities to either suspend the
+students or shut them up somehow (to make sure that only aligned views are
+exposed). The suspension of these students or rescinding them from jobs as top
+companies are doing both serve as an example of the process of alignment
+mentioned on the top of the article.
+* Norman Finkelstein Tenure Rejection and Resignation After Debunking Pro-Israeli Book
+:PROPERTIES:
+:ID:       ysr4rxd0nzj0
+:END:
+
+After the [[https://en.wikipedia.org/wiki/Dershowitz%E2%80%93Finkelstein_affair][Dershowitz–Finkelstein affair]], [[id:ewz2s180mzj0][Alan Dershowitz]] started
+campaigned to block [[id:3tt8yy70mzj0][Norman Finkelstein]] tenure bid at DePaul University. His
+campaign began in 2004 when he sent DePaul president Dennis Holtschneider a
+manuscript, "Literary McCarthyism," arguing that the university should fire
+Finkelstein. He also contacted DePaul political science department chair
+Patrick Callahan.
+
+In 2005, Dershowitz announced his intent to block Finkelstein's tenure bid,
+saying, "I will come at my own expense, and I will document the case against
+Finkelstein" and "I'll demonstrate that he doesn't meet the academic standards
+of the Association of American Universities" [cite:@abraham-2014-out-bound
+p.85], sounds like Dershowitz view of being associated with American
+Universities implies an ultimate support of Israel[fn:2]
+
+In October 2006, he sent members of DePaul's law and political science faculties
+what he called "a dossier of Norman Finkelstein's most egregious academic sins,
+and especially his outright lies, misquotations, and distortions" and lobbied
+DePaul's professors, alumni and administrators to deny Finkelstein tenure
+[cite:@howard-2007-harvar-law].
+
+In May 2007, Dershowitz spoke at Northwestern University and claimed that
+Finkelstein had recently attended a Holocaust denial conference in Iran
+[cite:@abraham-2014-out-bound p. 86].
+
+DePaul's political science committee investigated Dershowitz's accusations
+against Finkelstein and concluded that they were unsubstantiated. The department
+subsequently invited John Mearsheimer and Ian Lustick, two previously uninvolved
+academics with expertise on the Israel–Palestinian conflict, to evaluate the
+academic merit of Finkelstein's work; they came to the same conclusion
+[cite:@forer-2010-break].
+
+In early 2007, DePaul's political science department voted nine to three, and
+the College of Liberal Arts and Sciences Personnel Committee five to zero, to
+give Finkelstein tenure. The three opposing faculty members subsequently filed a
+minority report opposing tenure, supported by the Dean of the College, Chuck
+Suchar.
+* CEO of eLife Fired After Retweeting "The Onion" Parody Post About Israel/Palestine
+:PROPERTIES:
+:ID:       ob983m50rzj0
+:END:
+"I have been informed that I am being replaced as the Editor in Chief of @eLife
+for retweeting a @TheOnion piece that calls out indifference to the lives of
+Palestinian civilians." as reported on his twitter account [cite:@eisen-2023].
+
+Ironically, the post that he retweeted [[id:524app50rzj0][The Onion]] was very expressive! it [[https://www.theonion.com/the-onion-stands-with-israel-because-it-seems-like-yo-1850922505][says]]:
+"‘The Onion’ Stands With Israel Because It Seems Like You Get In Less Trouble
+For That"
+
+In fact, the article does a great job in depicting the situation:
+
+#+begin_quote
+In moments of turmoil such as this, some believe it is the responsibility of a
+newspaper of record like The Onion to delve fully into the nuances of a complex
+and multifaceted conflict that stretches back not just decades but centuries.
+These people are wrong.
+
+Instead, this editorial board wishes to take this opportunity to declare its
+full and unequivocal support for [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] because, frankly, it seems like you get
+in way less trouble for that.
+#+end_quote
+* Artforum Fires Chief Editor Because of His Position From Palestine
+:PROPERTIES:
+:ID:       0mde5bo000k0
+:END:
+David Velasco was removed after the magazine’s publishers said there was a
+flawed editorial process behind the publication of a letter that supported
+Palestinian liberation [cite:@small-2023-artfor-fires].
+
+* MP Andy McDonald Suspends After Speech at Pro-Palestinian Rally
+:PROPERTIES:
+:ID:       fb3797q030k0
+:END:
+Andy McDonald has been suspended as a Labour MP, after the party said he had
+made "deeply offensive" comments relating to the Israel-Gaza war, as reported in
+the BBC[cite:@stuff-2023-andy-mcdon].
+
+* Columbia University Suspends Jewish Voice for Peace and Justice in Palestine
+:PROPERTIES:
+:ID:       0sdaary0e0k0
+:END:
+Columbia University is suspending Students for Justice in Palestine (SJP) and
+Jewish Voice for Peace (JVP) as they "repeatedly violated University policies
+related to holding campus events, culminating in an unauthorized
+event"[cite:@editorial-2023-statem-from].
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                 :noexport:
+** DONE Publishing this                                              :@write:
+:LOGBOOK:
+CLOCK: [2023-10-31 Tue 05:53]--[2023-10-31 Tue 06:05] =>  0:12
+CLOCK: [2023-10-30 Mon 22:06]--[2023-10-31 Tue 02:15] =>  4:09
+:END:
+* Footnotes
+
+[fn:2] As of the time of writing this he has being confirming that, [[https://twitter.com/AlanDersh/status/1714635187521192417][calling]] for
+a condemnation of Harvard students who stands against the Israeli actions.
+
+[fn:1] Of course the ones that the Israeli side were obviously to be blamed for,
+like Cave of the Patriarchs massacre, would just be kept silent about.
