@@ -1,0 +1,12 @@
+#+title: Computer Science Books
+
+
+# I do not like to talk about professional stuff here, but I was asked frequently about books
+# on certain topics related to the [[id:079599ee-d9d4-40ce-8a8a-8b5fc3f81046][computer science]] field, so I decided to list the textbooks I
+# used in my scholarly. Of course, lots of them I did not 'finish', but they are favorable
+# references to me.
+
+# 02 Aug 2023; I will no longer update this page. New scientific books related to cs
+# will be listed in the science section on the other list.
+
+Moved to [[file:fullbooks.org::#cs][books]].

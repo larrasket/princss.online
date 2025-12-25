@@ -1,0 +1,248 @@
+:PROPERTIES:
+:ID:       p6s5gi81a3k0
+:END:
+#+title: Reading List (for others)
+#+filetags: :readin_list:permanent:
+#+MACRO: tag @@latex:\hfill{}\textsc{$1}@@ @@html:&#xa0;&#xa0;&#xa0;<span class="tag"><span class="$1">$1</span></span>@@
+#+MACRO: d @@latex:\hfill{}\textsc{$1}@@ @@html:&#xa0;&#xa0;&#xa0;<span class="tag"><span class="$1">d. $1/10</span></span>@@
+#+MACRO: op @@latex:\hfill{}\textsc{}@@ @@html:&#xa0;&#xa0;&#xa0;<span class="tag"><span class="op">op.</span></span>@@
+#+MACRO: req [[$1][$1]]
+
+
+* NOTE: DRAFT!
+
+#+begin_export HTML
+<head>
+<style>
+
+
+
+.tag span {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    background-color: #eee;
+}
+
+
+</style>
+</head>
+#+end_export
+
+People usually misunderstand my [[id:uu37kln02wj0][Reading List]], which is my personal "wishlist" of
+titles I think I need to check at some point[fn:1], as some list of books I
+recommend reading (this also happens with my [[id:omy9ejo02wj0][Books]] list). My [[id:omy9ejo02wj0][bibliography]] list
+contains the titles that I open in my reading system[fn:2]. They are not sorted
+by any means. I was asked multiple times to provide a reading list for people
+who are not into reading. Important note here, it's very important that I won't
+add it as a side note: *do not fall for "reading cults"*. You do not have to
+read books to be a 'bookworm'.
+
+Reading is not a thing you should be doing as an end for itself, but something
+that we do as an end for something else (more on this at [[id:1g48iao02wj0][About 'Book
+Communities']]). This was one of the reasons that made me stand always against
+reading lists; if you want to learn about something, you should read about it,
+not because reading is good but it happens to be the most efficient way to get
+information, if those information were possible to be held in other formats (let
+it be voice) that were efficient than books, I'd definitely stop reading books.
+
+Why am I changing my view now? I'm not. I still think that people should only
+read about things that interests them (like a certain set of topics they would
+love investigate). However, nowadays most people have programmed and mainstreamed
+soft interests, they lack simple knowledge about what's around to even be
+interested in. I'd sort this list in the same way I'd like my child to read
+about the world, history, science and arts. It's a short list, you should pick
+up your path from here. Although of that, I will, as aforementioned, write it as
+it were the same path I'd go to educate my child[fn:9] .
+
+- [2024-01-31 Wed 17:12]: this list is still in beta and open for suggestions.
+* Format note
++ All titles must not be skipped unless tagged with "op." (optional").
++ Each title has a number appended to it in this form: d. 3. This is a
+  difficultly indicator. Do not take it seriously, nothing is really hard.
++ The first section "Fundamentals, logic, thinking and critical thinking"'s
+  required books (books that are not tagged with op.) are required in the next
+  lists, and they are sorted.
++ Some titles will have a single digit after them, this digit refers to a
+  footnote, the footnotes are at the end of the page.
+
+* Start by knowing what you want
+It was hesitating where to put this section: after or before the [[Fundamentals]], I
+decided finally to put it before it. Most people do not have a clear position
+from their desires and goals (let those be a limited desires -like achieving
+something or buying a product- or a longtime goal).
+
+The average desires are —just similarly to the average mindset and views—
+usually manipulated and programmed, unlike consciousness, desires are
+manipulated unintentionally [most of the time], rather that manipulation usually
+results from the social structure.
+
+So, how to know what do you really want/need/desire? First by understanding how
+those can be subconsciously manipulated. The following articles and videos
+should be a good start.
+
+ - [[https://psyche.co/guides/how-to-know-what-you-really-want-and-be-free-from-mimetic-desire][How to know what you really want (Psyche Guides)]]
+ - [[https://www.youtube.com/watch?v=OgB9p2BA4fw][[video][02 min] René Girard Explains Mimetic Desire]]
+ - [[https://www.youtube.com/watch?v=lNJq6BlVyhM][[video][16 min] The Scapegoat Mechanism]]
+ - [[https://alexdanco.com/2019/04/28/secrets-about-people-a-short-and-dangerous-introduction-to-rene-girard/comment-page-1/][Secrets about People: A Short and Dangerous Introduction to René Girard]]
+ - [[https://youtu.be/5Qu6vBebwwg][[video][103 min]Introduction to Mimetic Theory]]
+
+- [2025-03-29 Sat 22:03] Many people have the problem of not listening. This
+  might be caused by brainrot, short attention span or ADHD-related disorders or
+  by the fact that you just did not learn to listen. If you think that you are
+  not a very well listener, it's better if you start by reading the book: [[id:1fw3jvf0wik0][You're
+  Not Listening: what you're missing and why it matters]] by Kate Murphy. I didn't
+  read it myself (only a few chapters), but trusted sources told me that it will
+  teach you a lot.
+* Fundamentals
+Logic, thinking, and critical thinking and introductory philosophy.
+
++ <<thinking101>>[[id:ysfbya10b3k0][Informal Logical Fallacies]] (Vleet, J.) {{{d(1)}}}
+
+  Logical fallacies are things we experience everyday in native conversation and
+  our daily exposure to media. We use many fallacies all the time in arguments,
+  and they usually help. Take for example ad hominem:
+
+  #+begin_quote
+A: "I believe we should invest more in renewable energy sources to help combat
+climate change."
+
+B: "You're not even a scientist, you're just a musician. Why should anyone
+listen to your opinion on climate change?"
+  #+end_quote
+
+  'A' indeed does not have a reason to justify his questioning. But is that a
+  good argument enough for B? for most people the discussion ends there.
+
+  There are many logical fallacies that are not easily recognizable, learning
+  about them and how to refute them should be a very fun process. This book is
+  about 90 pages and it's easy to read. *If you speak Arabic*, check المغالطات
+  المنطقية لعادل مصطفى, much better version.
++ <<philosophy101>> [[id:pzjhg130b3k0][A History of Western Philosophy]] (Russell, B.) {{{d(5)}}}
+- [[id:6y7buw40uwj0][The Polymath]] (Ahmed, W)[fn:8] {{{d(4)}}}
++ [[id:21b0xb30b3k0][Critical Thinking]] (Bowell et al.)  {{{d(3)}}} {{{op}}}
++ <<logic101>>[[id:ikdelw30b3k0][Beginning Mathematical Logic]] (Smith, P.) {{{d(5)}}}
++ [[id:uq466a50b3k0][In Praise of Idleness ]](Russell, B.) {{{d(3)}}}
++ [[id:sv7dvww0e2k0][Philosophical and Mathematical Logic]] (De Swart, H.)[fn:3] {{{d(8)}}} {{{op}}}
+* History
+
+ My goal in this section will be giving you a generic view on human history and
+ its anthropological interpretation, but also with learning about real human
+ historical events.
+- [[id:tk94g2a0u2k0][The Naked Ape]] (Morris, D.)[fn:6] {{{d(3)}}}
+- <<humanhistory101>>[[id:ii99pw21j2k0][A People History of The World]] (Harman, C.) {{{d(6)}}}
+- <<humanhistory101op>>[[id:32237fa6-388d-4acc-b0cb-f88e7b5bf785][The Human Web]] (McNeill et al.)[fn:4]  {{{d(6)}}} {{{op}}}
+- [[id:lnb7vya0b0k0][The Russian Revolution]] (Smith, S. A.) {{{d(3)}}}
+- [[id:1ftgx751b3k0][The Ottoman Age of Exploration]] (Casale, G.) {{{d(5)}}}
+- [[id:108251b9-770b-407e-87a6-c571d88ba4a7][The Arabs: A History]] (Rogan, E.) {{{d(5)}}}
+- [[id:rt2d5z51b3k0][Killing Hope]] (Blum, W.) {{{d(5)}}}
+- [[id:m0ch6c51b3k0][Before Taliban ]](Edwards, D. B.) {{{d(5)}}}
+- [[id:g9li3l51b3k0][All The Shah Men]] (Kinzer, S.) {{{d(5)}}}
+- [[id:o0359l61b3k0][Engineers of Jihad]] (Gambetta et al.) {{{d(7)}}}
+- [[id:9xt7hq61b3k0][State of Terror]] (Suarez, Y.) {{{d(6)}}}
+- [[id:aibkxw51b3k0][A People History of The United States]] (Zinn, H.) {{{d(5)}}}
+* Science
+- [[id:dgd3ce90tyj0][The Atoms of Language]] (Baker, M.) {{{d(6)}}}
+- [[id:3etcfla0b0k0][Quantum Theory]] (Polkinghorne, J.) {{{d(5)}}}
+- [[id:mipi1wa0b0k0][Cosmology]] (Coles, P.) {{{d(4)}}}
+- [[id:c934c571b3k0][Thinking, Fast and Slow]] (Kahneman, D.) {{{d(6)}}}
+- [[id:z3bakpa0b0k0][Choice Theory]] (Allingham, M.) {{{d(5)}}}
+- [[id:urx84na0b0k0][Cryptography]] (Piper et al.) {{{d(5)}}}
+- [[id:34t29e71b3k0][Why Evolution Is True]] (Coyne, J. A.) {{{d(5)}}}
+- [[id:sz1h7z71b3k0][Evolutionary Psychology]] (Buss, D. M.) {{{d(7)}}}
+* Humanities
+
+Although I do not regard psychoanalysis as a science, those books by Freud
+mention many interesting facts to think about, and will encourage you to question
+many things.
+
+- [[id:3u979u71b3k0][Group Psychology]] (Freud, S.) {{{d(5)}}}
+- [[id:90g3zw71b3k0][Totem and Taboo]] (Freud, S.) {{{d(7)}}}
+- Psychology of Sex Relations (Kinsey, A. C.) {{{d(5)}}}
+- The Social Animal (Aronson, E.) {{{d(6)}}}
+- [[id:wpwhkwq0zwj0][Cognitive Science]] (Friednberg et al.) {{{d(8)}}}
+- The Story of Art (Gombrich, E) {{{d(6)}}}
+* Computer Science
+I personally believe that being a power user is necessary even for people who
+do not have IT-related lives, computer science is the mechanical engineering
+of the modern world.
+
+
+- Structure and Interpretation of Computer Programs (Sussman et al.) {{{d(7)}}}
+- Algorithm Analysis (Shaffer, C.) {{{d(7)}}}
+- Operating Systems (Arpaci-Dusseau et al.) {{{d(7)}}}
+- Database System Concepts (Silerschatz, A.) {{{d(7)}}}
+- [[id:5oj6f9d1pwj0][Introduction to Probability and Statistics]] (Ross, S.)[fn:5] {{{d(8)}}}
+* Politics
+- Capitalism, Socialism and Democracy (Schumpeter, J. A.) {{{d(6)}}}
+- [[id:iajfgqz0a0k0][The Indispensable Chomsky]] (Chomsky et al.) {{{d(7)}}}
+- [[id:qqel2kv06ek0][Who Rules the World?]] (Chomsky, N.) {{{d(5)}}}
+- Media Control (Chomsky, N.) {{{d(5)}}}
+- The Myth of Development (Oswaldo, R.) {{{d(5)}}}
+- Discourse on Voluntary Servitude (Boétie, E.) {{{d(6)}}}
+- [[id:mwcbjj70h2k0][The Myth of The Rational Voter ]](Caplan, B.) {{{d(6)}}}
+- The Dark Side of Democracy (Mann, M.) {{{d(7)}}}
+- [[id:ghu7xl5110k0][History of Economic Thought]] (Hunt et al.)[fn:7] {{{d(8)}}}
+
+* "Non-Non Fictional"
+The previous sections had non fictional books, those ones are not "fictional",
+although some of them are, or more precisely not introduced here as fictional
+** Modus Vivendi
+- [[id:3fxhry418xj0][Islam and The Destiny of Man]] (Eaton, G)
+- [[id:4py58sa0q0k0][The Responsibility of The Intellectual]] (Shariati, A.)
+- [[id:6ad40bm0nwj0][The Thoughts of Marcus Aurelius]] (Aurelius, M.)
+- [[id:afk10521s2k0][Thus Spoke Zarathustra]] (Nietzsche, F.)
+- [[id:c11a6be3-7f3e-4ff1-983a-19bf81e9fa02][The Dawn of The Day]] (Nietzsche, F.)
+** Classics
+Some other must-read books and literature, mostly a part of our pop-culture. And
+they are fun.
+
+#+begin_quote
+he groups a complete history of French Society from which, even in economic
+details (for instance the rearrangement of real and personal property after the
+Revolution) I have learned more than from all the professed historians,
+economists, and statisticians of the period together.
+#+end_quote
+
+Frederick Engels talking bout Honoré de Balzac[cite:@engels-2000-marx-engel].
+
+- Manfred (Byron, L)
+- [[id:g7o3v2v090k0][The Death of Ivan Ilyich ]](Tolostoy, L)
+- Lolita (Nabokob, V)
+- Suddenly Last Summer (Williams, T)
+- [[id:538ejds0uzj0][The Brothers Karamazov]] (Dostoevsky, F)
+- Children of the Alley (Mahfouz, N)
+- The Idiot (Dostoevsky, F)
+- Cat on a Hot Tin Roof (Williams, T)
+- Crime and Punishment (Dostoevsky, F)
+- Orpheus Descending (Williams, T)
+- Marx in Soho (Zinn, H)
+- Crime and Punishment (Dostoevsky, F)
+- The Dream of a Ridiculous Man (Dostoevsky, F)
+* Thoughts?
+Comments? Suggestions? Email me at ~lr0[at]gmx[dot]com~.
+
+* Footnotes
+
+[fn:9] This should imply of course that this list is totally biased.
+[fn:8] I disagree with the author on some aspects, however, this book is very
+important to escape some of the limits that modern educational systems impose on
+us, mainly: the myth of specialization.
+
+[fn:7] Also check Dr Anwar's: [[https://www.youtube.com/playlist?list=PLTMFx0t8kDzc72vtNWeTP05x6WYiDgEx7][Anwar Shaikh: Historical Foundations of Political Economy]]
+[fn:6] {{{req(humanhistory101)}}} provides some critique for this book.
+
+[fn:5] This book is an advanced read for new learners, it's a post-graduate
+level course. Why it's here? It will show you how data (even shallow data, like
+metadata) can be critically useful for gathering useful information, and teach
+you how to do it too.
+[fn:4] This is a great alternative for {{{req(humanhistory101)}}}, although it
+gets replaced by it. It has an Arabic version.
+
+[fn:3] Read this if you found {{{req(logic101)}}} an interesting read.
+[fn:2] As you can guess, inside Emacs.
+
+[fn:1] It's actually more of a legacy list, I usually handle titles that I need
+to check later inside Emacs, but I'm too busy to organize those inside my
+Org-agenda.

@@ -1,0 +1,1382 @@
+:PROPERTIES:
+:ID:       thc4j6p02wj0
+:END:
+#+title: Politics
+#+filetags: :project:link:
+
+
+{{{indx}}}
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+* Links                                                               :noexport:
+** Political Science
+:PROPERTIES:
+:ID:       ihnfrz90jek0
+:CUSTOM_ID: ihnfrz90jek0
+:ROAM_ALIASES: "political scientist"
+:END:
+Political science is the scientific study of politics. It is a social science
+dealing with systems of governance and power
+** Socialism
+:PROPERTIES:
+:ID:       zdzf8xc0jek0
+:CUSTOM_ID: zdzf8xc0jek0
+:END:
+Socialism is an economic and political philosophy encompassing diverse economic
+and social systems characterised by social ownership of the means of production,
+as opposed to private ownership. It describes the economic, political, and
+social theories and movements associated with the implementation of such
+systems.
+** Climate Change
+:PROPERTIES:
+:ID:       n4edkk90tfk0
+:CUSTOM_ID: n4edkk90tfk0
+:END:
+Climate change refers to long-term shifts in temperatures and weather patterns.
+These shifts may be natural, but since the 1800s, human activities have been the
+main driver of climate change, primarily due to the burning of fossil fuels
+(like coal, oil and gas), which produces heat-trapping gases.
+*** KILL [[mu4e:msgid:2dcc3443-5586-4864-89e9-d1bea5084846@larrasket][I care a lot about climate change.]]                         :@read:
+:PROPERTIES:
+:ID:       aafbkio0lgk0
+:CUSTOM_ID: aafbkio0lgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-26 Sun 01:59]--[2025-01-26 Sun 02:04] =>  0:05
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:v3b25op0r1k0][Philosophy of Ethics]]
+#+END_tag
+[2025-01-21 Tue 13:49]
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** KILL [[mu4e:msgid:b44ea036-2ec0-4578-b519-ac571581c030@larrasket][Being Illegal: Ideology and the Law]]                          :@check:
+[2025-07-18 Fri 23:28]
+** TODO [[mu4e:msgid:51f9cc90-5bec-4e19-88f2-9553c304cf59@larrasket][US Military report on "Cognitive Warfare"]]                    :@idea:
+[2025-07-26 Sat 16:12]
+** DONE [[mu4e:msgid:e4657599-7a62-43b9-9702-634e22131b6c@larrasket][Send the Pope to Gaza]]                                        :@check:
+:LOGBOOK:
+CLOCK: [2025-09-09 Tue 20:02]--[2025-09-09 Tue 21:00] =>  0:58
+:END:
+[2025-07-26 Sat 16:13]
+** DONE [[mu4e:msgid:1142035231996.1109196647294.1510744953.0.861200JL.2002@synd.ccsend.com][“Mamma mia.”]]                                                 :@read:
+:PROPERTIES:
+:ID:       wol0mwt0tfk0
+:CUSTOM_ID: wol0mwt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-30 Sun 04:24]--[2025-03-30 Sun 04:38] =>  0:14
+CLOCK: [2025-03-06 Thu 15:18]--[2025-03-06 Thu 15:48] =>  0:30
+:END:
+[2024-12-25 Wed 03:08]
+** DONE [[mu4e:msgid:1142254439152.1109196647294.1510744953.0.771200JL.2002@synd.ccsend.com]["Has anybody ever had a better two weeks?"]]                   :@read:
+:PROPERTIES:
+:ID:       bv1ibi70omk0
+:CUSTOM_ID: bv1ibi70omk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-07-18 Fri 18:53]--[2025-07-18 Fri 18:56] =>  0:03
+:END:
+[2025-07-09 Wed 00:04]
+** DONE [[mu4e:msgid:cm.0116275262718.cydjlhd.hjyujidhuh.y@cmail19.com][‘Comfort Ye My People’]]                                       :@read:
+:PROPERTIES:
+:ID:       dwe5nwt0tfk0
+:CUSTOM_ID: dwe5nwt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-03 Sat 01:05]--[2025-05-03 Sat 01:18] =>  0:13
+:END:
+[2024-12-25 Wed 02:50]
+** DONE [[mu4e:msgid:1142177034649.1109196647294.1510744953.0.771200JL.2002@synd.ccsend.com][“Controlled by Satan."]]                                       :@check:
+:PROPERTIES:
+:ID:       8xy915y08lk0
+:CUSTOM_ID: 8xy915y08lk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-09-11 Thu 19:37]--[2025-09-11 Thu 19:46] =>  0:09
+:END:
+[2025-04-30 Wed 05:15]
+** DONE [[mu4e:msgid:1142124010618.1109196647294.1510744953.0.751200JL.2002@synd.ccsend.com][“Not a given.”]]                                               :@read:
+:LOGBOOK:
+CLOCK: [2025-03-12 Wed 03:07]--[2025-03-12 Wed 03:10] =>  0:03
+:END:
+[2025-03-12 Wed 02:52]
+** DONE [[mu4e:msgid:1142135377569.1109196647294.1510744953.0.901200JL.2002@synd.ccsend.com][“I poured myself a small brandy.”]]                            :@read:
+:PROPERTIES:
+:ID:       3i00gsr0uik0
+:CUSTOM_ID: 3i00gsr0uik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-04-05 Sat 02:36]--[2025-04-05 Sat 02:38] =>  0:02
+:END:
+[2025-03-26 Wed 02:32]
+** DONE [[mu4e:msgid:56763978-e10f-4586-9695-0c8bfbdc9ef6@larrasket][Israel’s war on Gaza is deliberately targeting children]]      :@read:
+:PROPERTIES:
+:ID:       n1r4gmb0nik0
+:CUSTOM_ID: n1r4gmb0nik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-04-05 Sat 02:31]--[2025-04-05 Sat 02:36] =>  0:05
+:END:
+[2025-03-21 Fri 17:35]
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[mu4e:msgid:e9038032-7783-449b-b536-4850a9f000f7@larrasket][America's (lack of) separation between church and state, explained]] :@read:
+:PROPERTIES:
+:ID:       0v45b771mik0
+:CUSTOM_ID: 0v45b771mik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-22 Sat 17:28]--[2025-03-22 Sat 17:43] =>  0:15
+:END:
+[2025-03-17 Mon 00:52]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** DONE [[mu4e:msgid:1142131152814.1109196647294.1510744953.0.791200JL.2002@synd.ccsend.com][“Oopsie … too late.”]]                                         :@read:
+:LOGBOOK:
+CLOCK: [2025-03-22 Sat 13:56]--[2025-03-22 Sat 14:03] =>  0:07
+:END:
+[2025-03-21 Fri 17:45]
+** DONE [[mu4e:msgid:1142116674064.1109196647294.1510744953.0.721201JL.2002@synd.ccsend.com][“I was probably tired and overwhelmed.”]]                      :@read:
+:PROPERTIES:
+:ID:       xn58brz00ik0
+:CUSTOM_ID: xn58brz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-10 Mon 20:18]--[2025-03-10 Mon 20:20] =>  0:02
+:END:
+[2025-03-05 Wed 02:47]
+** DONE [[mu4e:msgid:1142109533488.1109196647294.1510744953.0.791200JL.2002@synd.ccsend.com][“Failure to respond will be taken as a resignation.”]]         :@read:
+:PROPERTIES:
+:ID:       nnj3xqz00ik0
+:CUSTOM_ID: nnj3xqz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-22 Sat 13:55]--[2025-03-22 Sat 13:56] =>  0:01
+CLOCK: [2025-03-12 Wed 14:17]--[2025-03-12 Wed 14:27] =>  0:10
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:mkq7w4m0k9k0][Elon Musk]] and [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+[2025-02-26 Wed 23:23]
+** DONE [[https://www.youtube.com/watch?v=yrRNBMC_zS0&list=WL&index=1&pp=gAQBiAQB][Function of Debt]]                                             :drill:
+:PROPERTIES:
+:FC_CREATED: 2025-03-22T12:40:41Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       lggb1qy0mik0
+:CUSTOM_ID: lggb1qy0mik0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:ex4aa6b0axj0][Capitalism]]
+#+END_tag
+- [2025-03-22 Sat 14:40] Government debt in the United States serves specific political and economic
+  functions beyond mere financing. The federal government currently borrows
+  approximately two billion dollars daily to sustain its operations and
+  obligations.
+
+  When administrations cut taxes for the wealthy while simultaneously increasing
+  spending, they create deficits that must be financed through borrowing - often
+  from the very same wealthy individuals and institutions who received the tax
+  cuts. This creates a system where, instead of collecting adequate taxes from the
+  affluent, the government borrows from them and commits future generations to
+  repaying these loans with interest.
+
+  The national debt, now in the trillions, is effectively owed by the general
+  population to a small group of wealthy creditors. This arrangement functions as
+  an upward redistribution of wealth - ordinary citizens must service this debt
+  through their taxes, while creditors receive guaranteed interest payments.
+
+  Furthermore, large deficits and debt become convenient justifications for
+  cutting social programs. When budgets need balancing, the cuts typically target
+  "non-essential" services like infant feeding programs, disability insurance, and
+  other social safety nets rather than military spending or corporate subsidies.
+
+  The debt system thus serves dual purposes: enriching creditors through interest
+  payments while providing political cover for dismantling public services.
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2025-03-22T12:40:41Z |
+:END:
+** DONE [[mu4e:msgid:70baa4dd-13a5-4599-8600-cb39abda5c9d@larrasket][Hizbuallah Sponosership]]                                      :@check:
+:PROPERTIES:
+:ID:       nk55rqz00ik0
+:CUSTOM_ID: nk55rqz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-04-02 Wed 00:51]--[2025-04-02 Wed 00:53] =>  0:02
+:END:
+[2025-02-26 Wed 23:22]
+#+BEGIN_tag
+{{{t}}} [[id:hi7hrf91b4k0][Lebanon]]
+#+END_tag
+** DONE [[mu4e:msgid:a9e98ee2-5738-4a86-9d4b-82529cf468a5@larrasket][Elon Musk is trying to make sleep deprivation cool again]]     :@check:
+:PROPERTIES:
+:ID:       5nibvhz00ik0
+:CUSTOM_ID: 5nibvhz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-09 Sun 19:59]--[2025-03-09 Sun 20:06] =>  0:07
+:END:
+[2025-02-24 Mon 23:48]
+#+BEGIN_tag
+{{{t}}} [[id:mkq7w4m0k9k0][Elon Musk]]
+#+END_tag
+** DONE [[mu4e:msgid:4ea3a3fe-00b5-495a-a848-a0474e93c33d@larrasket][The US. dept]]                                                 :@read:
+:PROPERTIES:
+:ID:       tpuckhz00ik0
+:CUSTOM_ID: tpuckhz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-04-05 Sat 02:15]--[2025-04-05 Sat 02:29] =>  0:14
+CLOCK: [2025-03-22 Sat 13:54]--[2025-03-22 Sat 13:55] =>  0:01
+:END:
+[2025-02-24 Mon 23:44]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:lggb1qy0mik0][Function of Debt]]
+#+END_tag
+** DONE [[mu4e:msgid:1142071490942.1109196647294.1510744953.0.1082030JL.2002@synd.ccsend.com][“This is a hell of a day.”]]                                   :@read:
+:PROPERTIES:
+:ID:       7vlf5vo0lgk0
+:CUSTOM_ID: 7vlf5vo0lgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-26 Sun 02:07]--[2025-01-26 Sun 02:25] =>  0:18
+:END:
+[2025-01-25 Sat 03:25]
+** DONE [[mu4e:msgid:5f8c5259-067a-4ad3-9705-7ac66d233261@larrasket][Egypt about Islamists taking over Syria]]                      :@read:
+:PROPERTIES:
+:ID:       np6czhs09gk0
+:CUSTOM_ID: np6czhs09gk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-09 Thu 09:16]--[2025-01-09 Thu 09:28] =>  0:12
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:dcl0tc41m3k0][Syria]] and [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+[2025-01-07 Tue 12:31]
+** KILL [[mu4e:msgid:7cf93014-3edc-413c-b8d4-0073f9476be0@larrasket][First wall off, from protecting Israel]]                       :@read:
+[2025-01-10 Fri 22:09]
+** KILL [[mu4e:msgid:b4110ced-fb2c-4348-ac37-c7559bc1a720@larrasket][Lebanon Qaradawi son]]                                         :@read:
+:PROPERTIES:
+:ID:       vub9hgv0bgk0
+:CUSTOM_ID: vub9hgv0bgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-18 Sat 14:30]--[2025-01-18 Sat 14:31] =>  0:01
+:END:
+[2025-01-09 Thu 03:33]
+#+BEGIN_tag
+{{{t}}} [[id:hi7hrf91b4k0][Lebanon]]
+#+END_tag
+** DONE [[mu4e:msgid:beb74e33-5d12-4f17-9de1-81c680d03075@larrasket][Trump 2024 agenda]]                                            :@read:
+:PROPERTIES:
+:ID:       1j786dv0bgk0
+:CUSTOM_ID: 1j786dv0bgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-18 Sat 14:29]--[2025-01-18 Sat 14:30] =>  0:01
+:END:
+[2025-01-09 Thu 03:33]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** KILL [[mu4e:msgid:a8c1f9d4-0e25-4f66-95d5-a2d36f2c1346@larrasket][How musk used conflicts?]]                                     :@read:
+:PROPERTIES:
+:ID:       yyifcbv0bgk0
+:CUSTOM_ID: yyifcbv0bgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-18 Sat 14:27]--[2025-01-18 Sat 14:28] =>  0:01
+:END:
+[2025-01-17 Fri 00:31]
+#+BEGIN_tag
+{{{t}}} [[id:31u2fsi0mzj0][United Kingdom]] and [[id:mkq7w4m0k9k0][Elon Musk]]
+#+END_tag
+** DONE [[mu4e:msgid:e39e7b4c29a565f8cbebeb66a.910abe1809.20250103163003.751235e315.709d44c2@mail223.atl221.rsgsv.net][The nihilism of newcomers]]                                    :@read:
+:PROPERTIES:
+:ID:       im72wfn01gk0
+:CUSTOM_ID: im72wfn01gk0
+:END:
+:LOGBOOK:
+:END:
+[2025-01-10 Fri 21:36]
+#+BEGIN_tag
+{{{t}}} [[id:3301vfu0zfk0][ISIS]]
+#+END_tag
+1. The nature of terrorism in Europe has shifted significantly:
+   - IRA era: Had clear political goals
+   - Post-9/11: Organized jihadist groups with religious objectives
+   - Current (post-2015): Isolated attackers using simple methods, often without
+     clear ideology
+
+2. Recent attacks like the Magdeburg incident show a new pattern:
+   1. Less connection to organized terrorism
+   2. More nihilistic than ideological
+   3. Perpetrators often use basic weapons (vehicles, knives)
+   4. Target vulnerable populations (shoppers, families)
+
+3. Traditional integration is failing because:
+   1. Local working-class culture has eroded
+   2. Immigrants often placed in declining areas
+   3. Lack of community institutions
+   4. Few opportunities to interact with local population
+
+4. Modern integration challenges:
+   1. New arrivals often isolated from both host culture and origin culture
+   2. Multiple nationalities living together without social bonds
+   3. Limited access to mainstream society
+   4. Few pathways to meaningful integration
+
+The author argues the main problem isn't religious extremism but profound
+alienation and disconnection from society
+
+** DONE [[mu4e:msgid:f8f22c92-7b50-4f9c-bc8e-e5abff0447d3@larrasket][The US paid $300m in order to keep a seized Russian yacht]]    :@read:
+:PROPERTIES:
+:ID:       qtu4mau0tfk0
+:CUSTOM_ID: qtu4mau0tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1eacvec1lzj0][Russia]] and [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+[2024-12-22 Sun 03:15]
+#+begin_quote
+كشفت وثائق جديدة أن الولايات المتحدة أنفقت عشرات الملايين من الدولارات على
+امتداد أكثر من عامين من أجل صيانة يخت فخم بقيمة 230 مليون دولار (نحو 183 مليون
+جنيه استرليني)، جرت مصادرته كجزء من الجهود الرامية إلى ملاحقة الأوليغارشيين
+الذين ربطتهم علاقة بالرئيس الروسي فلاديمير بوتين أثناء الحرب في أوكرانيا.
+#+end_quote
+** DONE [[mu4e:msgid:0b00b2f4-78a2-4ecb-8604-a75b25bba8d9@larrasket][The New Orleans attack shows that ISIS hasn’t gone away.]]     :@read:
+:PROPERTIES:
+:ID:       r6sjdmt0tfk0
+:CUSTOM_ID: r6sjdmt0tfk0
+:END:
+- [2025-01-10 Fri 21:40] Reminded me of [[id:im72wfn01gk0][The nihilism of newcomers]].
+:LOGBOOK:
+CLOCK: [2025-01-10 Fri 21:31]--[2025-01-10 Fri 21:40] =>  0:09
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:3301vfu0zfk0][ISIS]]
+#+END_tag
+[2025-01-04 Sat 11:21]
+** DONE [[mu4e:msgid:4e52ec5a-55a0-401c-a1ed-7f18151a5b45@larrasket][Cambridge Archive]]                                            :@read:
+:PROPERTIES:
+:ID:       78igjqu0bgk0
+:CUSTOM_ID: 78igjqu0bgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-18 Sat 14:08]--[2025-01-18 Sat 14:16] =>  0:08
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:31u2fsi0mzj0][United Kingdom]], [[id:bsn6fba0rzj0][Soviet Union]] and [[id:78903b85-1d2d-4564-8c37-7183fa55c617][History]]
+#+END_tag
+[2025-01-15 Wed 16:48]
+** DONE Read Killing Hope section on Suharto                         :@check:
+- [2025-08-21 Thu 20:39] \\
+  Addded to the long interest list
+[2024-11-22 Fri 14:52]
+** KILL [[mu4e:msgid:cm.0026337346436.cwdhkk.hjyujidhuh.y@cmail20.com][‘The Syrian Gulag’]]                                           :@read:
+:PROPERTIES:
+:ID:       pfzfiyt0tfk0
+:CUSTOM_ID: pfzfiyt0tfk0
+:END:
+:LOGBOOK:
+:END:
+[2024-12-23 Mon 00:40]
+#+BEGIN_tag
+{{{t}}} [[id:dcl0tc41m3k0][Syria]]
+#+END_tag
+** DONE [[https://www.swissinfo.ch/ara/%d8%b4%d8%a4%d9%88%d9%86-%d8%ae%d8%a7%d8%b1%d8%ac%d9%8a%d8%a9/%d8%ad%d9%82%d9%88%d9%82-%d8%a7%d9%84%d9%85%d8%b1%d8%a3%d8%a9-%d9%83%d9%8a%d9%81-%d8%aa%d8%b3%d8%aa%d8%ae%d8%af%d9%85-%d8%a7%d9%84%d8%a3%d9%86%d8%b8%d9%85%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%a8%d8%af%d8%a7%d8%af%d9%8a%d8%a9-%d8%a3%d8%ac%d8%b3%d8%a7%d8%af-%d8%a7%d9%84%d9%86%d8%b3%d8%a7%d8%a1-%d9%85%d9%86-%d8%a3%d8%ac%d9%84-%d8%aa%d8%b9%d8%b2%d9%8a%d8%b2-%d9%86%d9%81%d9%88%d8%b0%d9%87%d8%a7/88363593?utm_campaign=foreign-affairs_ar&utm_medium=email&utm_source=newsletter&utm_content=o&utm_term=automatic][How regimes use women]]                                        :@read:
+:PROPERTIES:
+:ID:       24yghnp0tfk0
+:CUSTOM_ID: 24yghnp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-26 Thu 04:00]--[2024-12-26 Thu 04:07] =>  0:07
+CLOCK: [2024-12-24 Tue 08:44]--[2024-12-24 Tue 08:46] =>  0:02
+:END:
+[2024-12-19 Thu 03:55]
+** DONE [[https://youtu.be/AKFamUu6dGw][Conversations with History: John Mearsheimer]]                 :@watch:
+:PROPERTIES:
+:ID:       3mzdf0t0ffk0
+:CUSTOM_ID: 3mzdf0t0ffk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-25 Wed 06:18]--[2024-12-25 Wed 07:06] =>  0:48
+CLOCK: [2024-12-25 Wed 04:51]--[2024-12-25 Wed 06:01] =>  1:10
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:rpj71nc0jek0][John Mearsheimer]]
+#+END_tag
+** TODO How Chomsky says that Vietnam war ended                      :@check:@later:
+:PROPERTIES:
+:ID:       pw7emmp0tfk0
+:CUSTOM_ID: pw7emmp0tfk0
+:END:
+[2024-11-22 Fri 14:53]
+#+BEGIN_tag
+{{{t}}} [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Chomsky]]
+#+END_tag
+** DONE [[https://harpers.org/archive/2020/09/the-big-tech-extortion-racket/][The Big Tech Extortion Racket]]                                :@read:@later:
+:PROPERTIES:
+:ID:       9n18omp0tfk0
+:CUSTOM_ID: 9n18omp0tfk0
+:END:
+- [2025-09-20 Sat 23:19] \\
+  #+begin_quote
+  In the 1970s and 1980s, Robert Bork, Richard Posner, and other neoliberal Chicago School legal scholars set out to overturn America’s antimonopoly regime, targeting the traditional prohibitions on discrimination that common carrier laws had established. Their scholarship later played a major role in the writing of Section 230 of the Communications Decency Act of 1996. In that bill, Congress simultaneously exempted internet platforms from any responsibility to police the content on their sites, and failed entirely to impose on them any requirement to provide equal and just service to all who depend on their networks.
+  #+end_quote
+
+  That's interesting.
+
+  #+begin_quote
+  As a result, Amazon, Google, Facebook, and other platforms were free to develop business models that treated every seller and buyer—every citizen—differently. These corporations exploited this license to the fullest, and have used their power to reorganize entire realms of human activity. Amazon, Google, and Facebook match individuals to specific shoes and clothes, specific restaurants and hotels, specific movies and music, specific jobs and schools, specific drugs and hospitals, specific sexual partners, and even specific books, articles, speakers, and sources of news.
+  #+end_quote
+:LOGBOOK:
+CLOCK: [2025-08-26 Tue 01:27]--[2025-08-26 Tue 01:34] =>  0:07
+CLOCK: [2024-11-23 Sat 18:42]--[2024-11-23 Sat 18:47] =>  0:05
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:53e512f6-aa3a-430e-8ccf-ca787723d4da][Corporation]]
+#+END_tag
+[2024-11-23 Sat 08:38]
+** DONE [[https://harpers.org/archive/2008/11/the-activist/][The activist]]                                                 :@read:
+:LOGBOOK:
+CLOCK: [2025-09-21 Sun 20:44]--[2025-09-21 Sun 21:08] =>  0:24
+CLOCK: [2025-09-15 Mon 22:57]--[2025-09-15 Mon 23:28] =>  0:31
+CLOCK: [2024-11-28 Thu 11:52]--[2024-11-28 Thu 11:55] =>  0:03
+:END:
+[2024-11-23 Sat 08:39]
+** DONE [[mu4e:msgid:1142005654129.1109196647294.1510744953.0.921200JL.2002@synd.ccsend.com][“How was the route, lads?”]]                                   :@read:
+:LOGBOOK:
+CLOCK: [2024-11-28 Thu 09:13]--[2024-11-28 Thu 09:23] =>  0:10
+:END:
+[2024-11-28 Thu 07:07]
+** DONE [[mu4e:msgid:e810b45d-886c-46cc-91a2-2efb133ccab0@larrasket][The deep roots of Americans' hatred of their health care]]     :@read:
+:PROPERTIES:
+:ID:       91odrep0tfk0
+:CUSTOM_ID: 91odrep0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-09-26 Fri 01:56]--[2025-09-26 Fri 02:18] =>  0:22
+:END:
+[2024-12-08 Sun 17:33]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:ubdkllu0zfk0][Health systems]]
+#+END_tag
+*** Inflation Reduction Act contained a provision allowing for Medicare to negotiate prices with drugmakers
+:PROPERTIES:
+:ID:       mmcht401ipk0
+:CUSTOM_ID: mmcht401ipk0
+:END:
+#+begin_quote
+The passage of Obamacare over industry opposition was the first sign that the private sector’s political vise grip was
+loosening, with the Obama White House successfully dividing the industry against itself, targeting insurers and hospitals
+for cuts while in effect buying off pharma’s opposition. The more recent Inflation Reduction Act contained a provision
+allowing for Medicare to negotiate prices with drugmakers, which would lower costs and allow the program to cap
+seniors’ out-of-pocket costs. That would have been unthinkable a generation earlier when Big Pharma lobbied Congress
+to prohibit such a policy. Lawmakers of both parties continue to look hard at how to overhaul the health system to reduce
+costs.
+#+end_quote
+https://www.vox.com/policy/2023/8/30/23850979/medicare-drug-price-negotiations-10-prescription-list
+** DONE [[https://harpers.org/archive/1960/10/the-politics-of-medicine/][The Politics of Medicine, by Edward T. Chase]]                 :@read:
+:PROPERTIES:
+:ID:       y66bfep0tfk0
+:CUSTOM_ID: y66bfep0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-09-26 Fri 19:23]--[2025-09-26 Fri 19:32] =>  0:09
+:END:
+[2024-12-08 Sun 18:14]
+#+BEGIN_tag
+{{{t}}} [[id:ubdkllu0zfk0][Health systems]]
+#+END_tag
+*** medical societies were oriented for wealth
+:PROPERTIES:
+:ID:       m01byp11ipk0
+:CUSTOM_ID: m01byp11ipk0
+:END:
+In ancient Greece, medical knowledge was a holy secret shared only by a few
+families claiming descent from Aesculapius, who became the god of medicine after
+his death. Hippocrates devised his oath to regulate the admission of new
+physicians into guilds, which the ruling families tightly controlled. These
+guilds of antiquity looked after the professional and economic interests of
+medicine. This remains the prime purpose of their successors, the medical
+societies. One of their chief concerns, as with business trade associations, is
+to help the membership make money, substantial money.
+
+** KILL [[mu4e:msgid:2c6057c528fdc6f73fa196d9d.2ef9fb6455.20240906110111.80fd0e0e34.110dc56d@mail161.suw18.rsgsv.net][How climate change is melting our minds]]                      :@read:
+:PROPERTIES:
+:ID:       dqxfir90tfk0
+:CUSTOM_ID: dqxfir90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-30 Sat 20:02]--[2024-11-30 Sat 20:05] =>  0:03
+:END:
+[2024-09-06 Fri 22:34]
+#+BEGIN_tag
+{{{t}}} [[id:n4edkk90tfk0][Climate Change]]
+#+END_tag
+** DONE [[mu4e:msgid:1141979466873.1109196647294.1510744953.0.911200JL.2002@synd.ccsend.com][“We are outnumbered.”]]                                        :@read:
+:PROPERTIES:
+:ID:       2gw8fr90tfk0
+:CUSTOM_ID: 2gw8fr90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-21 Thu 06:10]--[2024-11-21 Thu 06:21] =>  0:11
+:END:
+[2024-11-06 Wed 00:01]
+** DONE [[https://al-akhbar.com/Opinion/47356/%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%82%D8%B5%D8%A9-%D8%B1%D8%A8%D9%8A%D8%B9-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A6%D9%8A][Arabic Spring in]] [[id:c39adf5e-3b8a-4105-b589-932f7b0820a5][Saudi Arabia]]                                :@read:
+:PROPERTIES:
+:ID:       4o1kar90tfk0
+:CUSTOM_ID: 4o1kar90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-03 Tue 17:26]--[2024-12-03 Tue 17:28] =>  0:02
+:END:
+** DONE [[https://al-akhbar.com/Opinion/49567/%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%8A%D9%82%D8%A9-%D9%81%D9%8A-%D9%85%D9%88%D8%A7%D8%AC%D9%87%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D9%83-%D8%A7%D9%84%D8%B4%D8%B9%D8%A8][Deep State]] in [[id:c39adf5e-3b8a-4105-b589-932f7b0820a5][Saudi Arabia]]                                   :@read:
+:PROPERTIES:
+:ID:       g4d72r90tfk0
+:CUSTOM_ID: g4d72r90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-03 Tue 17:30]--[2024-12-03 Tue 17:38] =>  0:08
+:END:
+** KILL [[mu4e:msgid:60962959-e774-4dd7-93b7-a2cd922dfa73@larrasket][No future for hopeless Europeans]]                             :@read:
+:PROPERTIES:
+:ID:       oyvjvq90tfk0
+:CUSTOM_ID: oyvjvq90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-15 Fri 06:59]--[2024-11-15 Fri 07:02] =>  0:03
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:e527bf95-b68b-4c17-ad27-2bcd7d1d1afb][Europe]]
+#+END_tag
+[2024-10-25 Fri 14:24]
+** DONE [[mu4e:msgid:9f07e3eb-2431-4637-8e7c-4fe8bc67004b@larrasket][Do Noam Chomsky's Foreign Policy Views Still Apply?]]          :@watch:
+:PROPERTIES:
+:ID:       hfkklq90tfk0
+:CUSTOM_ID: hfkklq90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-26 Sun 02:48]--[2025-01-26 Sun 02:55] =>  0:07
+:END:
+[2024-10-30 Wed 02:42]
+#+BEGIN_tag
+{{{t}}} [[id:5a780a66-e9ff-4712-8269-3d1cd1556c95][Chomsky]]
+#+END_tag
+** DONE [[mu4e:msgid:e72e17c5-da88-4088-9a74-de63c7a48878@larrasket][Telegram: why the app is Russia]]                              :@read:
+:PROPERTIES:
+:ID:       6360kq90tfk0
+:CUSTOM_ID: 6360kq90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-31 Thu 02:44]--[2024-10-31 Thu 02:46] =>  0:02
+:END:
+[2024-10-11 Fri 08:45]
+#+BEGIN_tag
+{{{t}}} [[id:1eacvec1lzj0][Russia]]
+#+END_tag
+** DONE [[mu4e:msgid:28eb18bf-f569-42b3-b9db-19ea919c959a@larrasket][Iran’s leaders have everything to lose]]                       :@read:
+:PROPERTIES:
+:ID:       hvh54q90tfk0
+:CUSTOM_ID: hvh54q90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-15 Fri 07:02]--[2024-11-15 Fri 07:03] =>  0:01
+:END:
+[2024-10-02 Wed 16:52]
+#+BEGIN_tag
+{{{t}}} [[id:a318d110-eee7-40e6-9d9b-989aebca7dde][Iran]] and [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[mu4e:msgid:fcb32f3f-7fe2-4839-b6d5-dc79cab296a0@larrasket][Most protests fail.]]                                          :@read:
+:PROPERTIES:
+:ID:       et994p90tfk0
+:CUSTOM_ID: et994p90tfk0
+:END:
+- [2024-11-15 Fri 07:11] So basically instead of possessing power and actually do change, we should acknowledge the
+  framework that exists and its ways, and work within it. This article gives us a
+  'scientific' way to work within such state.
+:LOGBOOK:
+CLOCK: [2024-11-15 Fri 07:03]--[2024-11-15 Fri 07:11] =>  0:08
+:END:
+[2024-10-01 Tue 01:39]
+** TODO [[file:../source/منهج مراجعة الارهاب.pdf][NATO's guideline on terrorism]] :@idea:@later:
+:LOGBOOK:
+CLOCK: [2024-11-22 Fri 07:46]--[2024-11-22 Fri 07:49] =>  0:03
+CLOCK: [2024-11-17 Sun 01:53]--[2024-11-17 Sun 01:54] =>  0:01
+:END:
+[2024-10-01 Tue 03:13]
+** DONE [[mu4e:msgid:a9e82526-9a42-40f1-9f1c-afdff85e8894@larrasket][Why do people still back Trump, after everything?]]            :@read:
+:PROPERTIES:
+:ID:       5mocto90tfk0
+:CUSTOM_ID: 5mocto90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-17 Sun 01:39]--[2024-11-17 Sun 01:53] =>  0:14
+:END:
+[2024-09-26 Thu 10:56]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** DONE [[mu4e:msgid:6845f6bc-4d48-43ea-a5a9-5358eaa03ac7@larrasket][vigames are a battleground in the US–China tech war]]          :@read:
+:PROPERTIES:
+:ID:       6qddqo90tfk0
+:CUSTOM_ID: 6qddqo90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-22 Fri 07:49]--[2024-11-22 Fri 07:55] =>  0:06
+:END:
+[2024-09-04 Wed 00:19]
+[2024-09-02 Mon 00:21]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:evp104w0kzj0][China]]
+#+END_tag
+** DONE [[mu4e:msgid:999b1080-7d0a-4cfa-be61-d47886c7ad2c@larrasket][Why Are South Africans So Pro-Palestinian?]]                   :@watch:
+:PROPERTIES:
+:ID:       r8a45o90tfk0
+:CUSTOM_ID: r8a45o90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-12 Thu 07:46]--[2024-09-12 Thu 10:03] =>  2:17
+:END:
+[2024-08-02 Fri 23:52]
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] and [[id:5g56zn90tfk0][South Africa]]
+#+END_tag
+** KILL [[mu4e:msgid:19ddcf1b-9246-4183-969d-8e819c62151a@larrasket][A historic ruling against Google could change the internet]]   :@read:
+:LOGBOOK:
+CLOCK: [2024-08-10 Sat 23:55]--[2024-08-11 Sun 00:07] =>  0:12
+:END:
+[2024-08-07 Wed 21:17]
+#+BEGIN_tag
+{{{t}}} [[id:xrh2q3k0ozj0][Google]] and [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** KILL [[mu4e:msgid:ce8eda60-6219-4c5d-9d99-5c09615f4f71@larrasket][Elon Musk was just forced to reveal real owners of X]]         :@read:
+:PROPERTIES:
+:ID:       3kf9rm90tfk0
+:CUSTOM_ID: 3kf9rm90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-18 Mon 04:35]--[2024-11-18 Mon 04:38] =>  0:03
+:END:
+[2024-08-24 Sat 06:57]
+#+BEGIN_tag
+{{{t}}} [[id:mkq7w4m0k9k0][Elon Musk]] and [[id:jgug5dp0uzj0][Twitter]]
+#+END_tag
+** DONE [[mu4e:msgid:8d87bc2e-62fc-45d6-952a-cd2db9362ddd@larrasket][Free medical school won’t solve the doctor shortage]]          :@read:
+:PROPERTIES:
+:ID:       aa66mm90tfk0
+:CUSTOM_ID: aa66mm90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-07-20 Sat 08:35]--[2024-07-20 Sat 08:43] =>  0:08
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:ubdkllu0zfk0][Health systems]]
+#+END_tag
+[2024-07-20 Sat 05:44]
+** DONE [[mu4e:msgid:b3efdd2e-84be-4acf-8fc9-c18e13eabe2b@larrasket][Breaking Down the Tucker-Putin Interview]]                     :@watch:
+:PROPERTIES:
+:ID:       ka6cjm90tfk0
+:CUSTOM_ID: ka6cjm90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-04-12 Fri 23:39]--[2024-04-12 Fri 23:42] =>  0:03
+:END:
+[2024-02-17 Sat 13:42]
+#+BEGIN_tag
+{{{t}}} [[id:1ngif5v0wek0][Russian invasion of Ukraine]]
+#+END_tag
+** DONE [[mu4e:msgid:226fa7ab-b21e-4f46-9376-4a49dd210af7@larrasket][America’s Most-Wanted Activist Exposes Factory Farms]]         :@watch:
+:PROPERTIES:
+:ID:       iv71rl90tfk0
+:CUSTOM_ID: iv71rl90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-03-23 Sat 12:58]--[2024-03-23 Sat 12:59] =>  0:01
+:END:
+[2024-02-17 Sat 13:42]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** DONE [[mu4e:msgid:2c6057c528fdc6f73fa196d9d.2ef9fb6455.20240409195940.f16713b3e9.9429e7d7@mail193.sea71.mcsv.net][About Roanda Genocide]]                                        :@read:
+:PROPERTIES:
+:ID:       xwicil90tfk0
+:CUSTOM_ID: xwicil90tfk0
+:END:
+- [2024-07-20 Sat 07:21] Not available now, added to the interesting list.
+:LOGBOOK:
+CLOCK: [2024-07-20 Sat 07:14]--[2024-07-20 Sat 07:21] =>  0:07
+:END:
+[2024-04-09 Tue 23:32]
+** DONE [[mu4e:msgid:41925b81-09fc-4c2e-8c77-bbe8bef11253@larrasket][They're coming for TikTok]]                                    :@check:
+:PROPERTIES:
+:ID:       rk60bl90tfk0
+:CUSTOM_ID: rk60bl90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-06-06 Thu 02:35]--[2024-06-06 Thu 02:36] =>  0:01
+:END:
+[2024-03-13 Wed 05:16]
+#+BEGIN_tag
+{{{t}}} [[id:ba890860-2186-4c47-aa40-ed8d144d52be][TikTok]]
+#+END_tag
+** DONE [[https://www.commondreams.org/newswire/manufacturers-of-10-drugs-slated-for-medicare-price-negotiation-spent-billions-more-on-buybacks-dividends-and-executive-compensation-than-rd][Common Dreams Weekly]]                                         :@check:
+:PROPERTIES:
+:ID:       wk93al90tfk0
+:CUSTOM_ID: wk93al90tfk0
+:END:
+I need to investigate how capitalist systems make people vaste the real value of
+labor.
+** DONE [[mu4e:msgid:1edd1cc7-bc12-44f1-b68c-a5ac747b7149@larrasket][Heat is deadly. Why does our culture push us to ignore it?]]   :@read:
+:PROPERTIES:
+:ID:       04q76k90tfk0
+:CUSTOM_ID: 04q76k90tfk0
+:END:
+[2024-07-11 Thu 16:30]
+#+BEGIN_tag
+{{{t}}} [[id:n4edkk90tfk0][Climate Change]]
+#+END_tag
+** DONE [[mu4e:msgid:2c6057c528fdc6f73fa196d9d.2ef9fb6455.20240126134515.d447cf0502.51084a8b@mail189.sea51.mcsv.net][Nuclear power generation likely to break records in 2025]]     :@read:
+:PROPERTIES:
+:ID:       brek4k90tfk0
+:CUSTOM_ID: brek4k90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-02-23 Fri 14:57]--[2024-02-23 Fri 15:09] =>  0:12
+:END:
+[2024-01-26 Fri 20:16]
+** KILL [#C] [[https://protesilaos.com/books/2015-11-08-euhandbook/][A Handbook on the European Union]]                           :@read:
+[2024-02-03 Sat 08:45]
+#+BEGIN_tag
+{{{t}}} [[id:e527bf95-b68b-4c17-ad27-2bcd7d1d1afb][Europe]]
+#+END_tag
+** DONE [[mu4e:msgid:270d87da-a4ff-4939-9f67-d516e84b8ff5@larrasket][What Interest Does the U.S. Have in Who Governs Venezuela?]]   :@watch:
+:PROPERTIES:
+:ID:       cz8edi90tfk0
+:CUSTOM_ID: cz8edi90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-20 Tue 10:30]--[2024-08-20 Tue 11:32] =>  1:02
+:END:
+[2024-08-02 Fri 23:52]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:mwedzi90tfk0][Venezuela]]
+#+END_tag
+** DONE [[https://politics.stackexchange.com/questions/69832/how-did-russia-suddenly-change-from-being-an-atheist-country-to-being-a-christia][Russia change from being an atheist country to Christian]]     :@check:
+:PROPERTIES:
+:ID:       jlp67i90tfk0
+:CUSTOM_ID: jlp67i90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-02-05 Mon 21:44]--[2024-02-05 Mon 21:47] =>  0:03
+:END:
+[2024-01-30 Tue 12:21]
+#+BEGIN_tag
+{{{t}}} [[id:1eacvec1lzj0][Russia]]
+#+END_tag
+** DONE [[https://theconversation.com/the-global-south-is-on-the-rise-but-what-exactly-is-the-global-south-207959][The Global South is on the rise]]                              :@read:
+:PROPERTIES:
+:ID:       bnvc6i90tfk0
+:CUSTOM_ID: bnvc6i90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-29 Fri 06:33]--[2023-12-29 Fri 06:36] =>  0:03
+:END:
+** KILL [[https://lukesmith.xyz/articles/why-its-bad-to-have-high-gdp/][Why It's Bad to Have High GDP | Luke's Webpage]]               :@read:
+:PROPERTIES:
+:ID:       yv00qf90tfk0
+:CUSTOM_ID: yv00qf90tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:46whu3b0axj0][Economics]]
+#+END_tag
+** DONE [[https://books.google.com/books/about/A_History_of_the_Egyptian_Intelligence_S.html?id=-yzCBmGHuzEC#:~:text=Starting%20in%201910%2C%20when%20the,%2C%20including%20fascism%2C%20communism%2C%20army][A History of the Egyptian Intelligence Service:]]              :@check:
+:PROPERTIES:
+:ID:       75i4wa90tfk0
+:CUSTOM_ID: 75i4wa90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 21:18]--[2024-01-11 Thu 21:25] =>  0:07
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+** TODO [#C] Write a report about Egyptian Police                       :@write:
+See Ahmed Mawlan's work.
+** DONE [[https://www.7iber.com/politics-economics/%d8%a7%d9%84%d8%b9%d9%82%d9%88%d8%a8%d8%a7%d8%aa-%d8%a7%d9%84%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af%d9%8a%d8%a9-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9/][About US sanctions]]                                           :@read:
+:PROPERTIES:
+:ID:       gp0hma90tfk0
+:CUSTOM_ID: gp0hma90tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-12 Thu 08:14]--[2023-10-12 Thu 08:16] =>  0:02
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** KILL [[https://foreignpolicy.com/2023/08/09/egypt-economy-debt-imf-sisi-mega-projects/][How Abdel Fattah al-Sisi Ruined Egypt's Economy]]              :@check:
+:PROPERTIES:
+:ID:       wrchca90tfk0
+:CUSTOM_ID: wrchca90tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]] and [[id:9ad509f6-ce6e-4c44-a67d-a95a6d15c6d6][Abdel Fattah El-Sisi]]
+#+END_tag
+** KILL [[https://www.econlib.org/applying-arnold-klings-three-languages-of-politics/][Applying Arnold Kling's Three Languages of Politics -]]        :@read:
+:PROPERTIES:
+:ID:       9d17ve1052k0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-28 Thu 07:14]--[2023-12-28 Thu 07:29] =>  0:15
+:END:
+** DONE [[https://caitlinjohnstone.com/2019/04/20/debunking-all-the-assange-smears/][Debunking All The Assange Smears – Caitlin Johnstone]]         :@read:@later:
+:PROPERTIES:
+:ID:       oo7c7890tfk0
+:CUSTOM_ID: oo7c7890tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-25 Mon 11:45]--[2024-11-25 Mon 11:54] =>  0:09
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:9kk956p02wj0][Propaganda]]
+#+END_tag
+** DONE [[https://theconversation.com/good-jew-bad-jew-new-book-explores-why-the-west-views-brutality-against-ukrainians-and-palestinians-differently-217970][Good Jew, Bad Jew:]]                                           :@check:
+:PROPERTIES:
+:ID:       3fua5890tfk0
+:CUSTOM_ID: 3fua5890tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 21:45]--[2024-01-11 Thu 21:46] =>  0:01
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[https://www-formal.stanford.edu/jmc/progress/marxism.html][Marxism (27-Aug-2008)]]                                        :@read:
+:PROPERTIES:
+:ID:       ces2d790tfk0
+:CUSTOM_ID: ces2d790tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-02-05 Mon 21:47]--[2024-02-05 Mon 21:50] =>  0:03
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:h762nqb0jek0][Marxism]]
+#+END_tag
+Found this on McCarthy web page. I remember that I visited it once, but it felt
+that there is nothing there so I didn't bother tinkering.
+** KILL [[https://www.theguardian.com/commentisfree/2023/nov/16/antisemitism-uk-universities-jewish-students][Why is antisemitism so rife in UK academic settings?]]         :@read:
+:PROPERTIES:
+:ID:       9vxjb790tfk0
+:CUSTOM_ID: 9vxjb790tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-16 Sat 13:46]--[2023-12-16 Sat 13:48] =>  0:02
+:END:
+** DONE [[https://theintercept.com/2023/11/21/harvard-law-review-gaza-israel/][Harvard Law Review Blocks Article About Genocide in Gaza]]     :@read:
+:PROPERTIES:
+:ID:       oadlxwu0zfk0
+:CUSTOM_ID: oadlxwu0zfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-07 Thu 07:09]--[2023-12-07 Thu 07:35] =>  0:26
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] and [[id:wgze7ho0i2k0][Democracy and Irresponsibility: Eghbariah's Case]]
+#+END_tag
+** DONE [[https://labs.ripe.net/author/qasim-lone/palestine-internet-connectivity-as-seen-in-bgp/][Palestine Internet Connectivity as Seen in BGP | RIPE Labs]]   :@read:
+CLOSED: [2023-12-28 Thu 06:05]
+:PROPERTIES:
+:ID:       7v92y690tfk0
+:CUSTOM_ID: 7v92y690tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-28 Thu 05:59]--[2023-12-28 Thu 06:05] =>  0:06
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[https://youtu.be/zO0puljwWJQ][Note about gulf overpolyization on the egyptian economy]]      :@watch:
+:PROPERTIES:
+:ID:       w05l9690tfk0
+:CUSTOM_ID: w05l9690tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-04-11 Thu 18:13]--[2024-04-11 Thu 18:33] =>  0:20
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+** KILL [[https://lukesmith.xyz/articles/politics-matters-most-to-slaves/][Politics Matters Most to Slaves. | Luke's Webpage]]            :@read:
+:PROPERTIES:
+:ID:       h0zk3490tfk0
+:CUSTOM_ID: h0zk3490tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+** KILL [[https://www.marxists.org/archive/kollonta/1921/sex-class-struggle.htm][Sexual Relations and the Class Struggle]]                      :@read:
+:PROPERTIES:
+:ID:       y9803490tfk0
+:CUSTOM_ID: y9803490tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:h762nqb0jek0][Marxism]]
+#+END_tag
+** KILL [[https://twitter.com/laligafrauds/status/1677332557141098497][lgbt impacts]]                                                 :@read:
+:PROPERTIES:
+:ID:       l6862490tfk0
+:CUSTOM_ID: l6862490tfk0
+:END:
+** KILL [#C] [[https://www.youtube.com/watch?v=UQI4cvioqXY][Lenin docs]]                                                 :@watch:
+:PROPERTIES:
+:ID:       evua1490tfk0
+:CUSTOM_ID: evua1490tfk0
+:END:
+** TODO [[https://www.youtube.com/watch?v=I179iIAAvLQ][Bashar and Drugs]]                                             :@watch:@later:
+:PROPERTIES:
+:ID:       h00aq390tfk0
+:CUSTOM_ID: h00aq390tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:dcl0tc41m3k0][Syria]]
+#+END_tag
+** KILL [[https://theconversation.com/international-reaction-to-gaza-siege-has-exposed-the-growing-rift-between-the-west-and-the-global-south-216938][International reaction to Gaza siege]]                         :@read:
+:PROPERTIES:
+:ID:       argdw290tfk0
+:CUSTOM_ID: argdw290tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-12-28 Thu 07:10]--[2023-12-28 Thu 07:14] =>  0:04
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[https://sasapost.co/translation/uae-spread-islamophobia-europe/?fbclid=IwAR16otWVqtn76p2UzATPJg_EN3X1DmWqEoNV2cyjfTCnfMIT8rdLI-ToC1g][UAE and Islamophopia]]                                         :@read:
+:PROPERTIES:
+:ID:       lfias290tfk0
+:CUSTOM_ID: lfias290tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-19 Thu 05:12]--[2023-10-19 Thu 06:22] =>  1:10
+CLOCK: [2023-07-26 Wed 06:56]--[2023-07-26 Wed 07:04] =>  0:08
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:a39g34v0kzj0][Islam in the west]] and [[id:7nj72xs0kzj0][UAE]]
+#+END_tag
+** TODO [[https://www.youtube.com/watch?v=OqjvVOTllrs][Graph of Connections of Egypt's Generals]]                     :@watch:@later:
+:PROPERTIES:
+:ID:       lsm8s090tfk0
+:CUSTOM_ID: lsm8s090tfk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+Might be useful: https://twitter.com/piggipedia?lang=ar
+
+** DONE [[https://otherwords.org/what-decades-of-social-work-taught-me-about-poverty/][What Decades of Social Work Taught Me About Poverty]]          :@read:
+:PROPERTIES:
+:ID:       mg8cc090tfk0
+:CUSTOM_ID: mg8cc090tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-12 Thu 19:10]--[2023-10-12 Thu 19:12] =>  0:02
+:END:
+** KILL [[https://daily.jstor.org/ukraine-russia-and-the-west-a-background-reading-list/][Ukraine, Russia, and the West: A Background Reading List]]     :@read:
+:PROPERTIES:
+:ID:       j2he1y80tfk0
+:CUSTOM_ID: j2he1y80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-11-08 Wed 11:41]--[2023-11-08 Wed 11:42] =>  0:01
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1ngif5v0wek0][Russian invasion of Ukraine]]
+#+END_tag
+** TODO Three languages of politics                                  :@check:@later:
+looks like an interesting book. It's by Arnold Kling. I found it while reading
+[[id:9d17ve1052k0][Applying Arnold Kling's Three Languages of Politics - Econlib]].
+
+https://www.econlib.org/applying-arnold-klings-three-languages-of-politics/
+
+
+#+begin_quote
+– Progressives will communicate along the oppressor-oppressed axis. “My heroes
+are people who have stood up for the underpriviliged. The people I cannot stand
+are the people who are indifferent to the oppression of women, minorities and
+the poor”
+
+– A conservative will communicate along the civilization-barbarism axis. “My
+heroes are people who have stood up for Western values. The people I cannot
+stand are the people who are indifferent to the assault on moral virtues and
+traditions that are the foundation for our civilization”
+
+– A libertarian will communicate along the liberty coercion axis. “My heroes are
+the people who have stood up for individual rights. The people I cannot stand
+are the people who are indifferent to the government taking away people’s
+ability to make their own decision”
+
+
+#+end_quote
+
+Maybe I should reread that article after reading that interesting book.
+** TODO [[https://daily.jstor.org/no-joke/][No Joke]]                                                      :@read:@later:
+:LOGBOOK:
+CLOCK: [2023-08-31 Thu 03:11]--[2023-08-31 Thu 03:31] =>  0:20
+:END:
+interesting. Might be related to my view of calling Fayoumis by katakit
+*** TODO [[https://www.jstor.org/stable/10.5325/studamerhumor.5.1.0031?mag=no-joke][“Deplorable” Satire: Alt-Right Memes, White Genocide Tweets, and Redpilling Normies]] :@check:
+#+begin_quote
+“the alt-right movement relies on irony, humor, and memes for recruitment and
+radicalization on the internet.”
+#+end_quote
+
+*** TODO [[https://www.jstor.org/stable/26579844][Racism without Hatred? Racist Humor and the Myth of "Color-blindness" on JSTOR]] :@check:
+*** TODO [[https://www.jstor.org/stable/10.13169/islastudj.2.1.0059?mag=no-joke][Cultural Politics of Humor in (De)Normalizing Islamophobic Stereotypes]] :@check:
+** KILL [[https://williamdavies.blog/2023/09/18/why-weber/][‘Why Weber?’ ]]                                                :@check:
+:PROPERTIES:
+:ID:       9x7h2x80tfk0
+:CUSTOM_ID: 9x7h2x80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-25 Wed 14:42]--[2023-10-25 Wed 14:44] =>  0:02
+:END:
+** TODO Scientific study to the Holocaust                            :@later:
+from sci:
+
+#+begin_quote
+https://holocausthandbooks.com/index.php?page_id=7
+>The Case Against The Presumed Extermination Of European Jewry .
+Some interesting parts of the book .
+" > This may surprise the reader who regards the tale of Jewish extermination as
+a near certainty; such is simply not the case. There are many considerations sup-
+porting this view, and some are so simple that they may surprise the reader even
+further. The simplest valid reason for being skeptical about the extermination
+claim is also the simplest conceivable reason: at the end of the war, they were
+still there. "
+" > I see three principal reasons for the widespread but erroneous belief in the
+legend of millions of Jews killed by the Germans during World War II: U.S.
+and British troops found horrible piles of corpses in the west German camps
+they captured in 1945 (e.g. Dachau and Belsen), there are no longer large
+communities of Jews in Poland, and historians generally support the legend. "
+" > Cia air photo show no extermination going on . "
+Give a book , a read , it´s long , but at the end you will find curious .
+#+end_quote
+** KILL [[mu4e:msgid:ce8e9563-bd7b-44ef-accd-f837673e868b@larrasket][The Long Civil Rights Movement]]                               :@read:
+:PROPERTIES:
+:ID:       tv814w80tfk0
+:CUSTOM_ID: tv814w80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-23 Sat 11:16]--[2024-11-23 Sat 11:20] =>  0:04
+:END:
+[2024-09-09 Mon 05:04]
+** KILL [[mu4e:msgid:f08ebc04-3fe7-44d9-95ea-ae24c0bf0e63@larrasket][Can we trust the polls this year?]]                            :@read:
+:PROPERTIES:
+:ID:       57r63w80tfk0
+:CUSTOM_ID: 57r63w80tfk0
+:END:
+[2024-09-11 Wed 05:37]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** DONE [[mu4e:msgid:0807ba50-fe04-4eea-adf1-c162406c22c2@larrasket][How Israel keeps evading responsiblity for killing Americans]] :@read:
+:PROPERTIES:
+:ID:       oezk1w80tfk0
+:CUSTOM_ID: oezk1w80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-03 Thu 05:20]--[2024-10-03 Thu 05:22] =>  0:02
+:END:
+[2024-09-14 Sat 12:16]
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]]
+#+END_tag
+** DONE [[mu4e:msgid:47d71c62-01dc-4d71-a348-f4f656b31204@larrasket][Fred Fleitz on Whether U.S. Funding of Israel]]                :@watch:
+:PROPERTIES:
+:ID:       9ivaxu80tfk0
+:CUSTOM_ID: 9ivaxu80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-18 Wed 10:20]--[2024-09-18 Wed 12:41] =>  2:21
+:END:
+[2024-09-12 Thu 02:02]
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] and [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** KILL [[mu4e:msgid:6e2a8b30-3027-449d-bf2c-d568749481a2@larrasket][Donald Trump lost the debate because he’s too online]]         :@read:
+:PROPERTIES:
+:ID:       z8h2ip80tfk0
+:CUSTOM_ID: z8h2ip80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-02 Wed 05:28]--[2024-10-02 Wed 05:37] =>  0:09
+:END:
+[2024-09-12 Thu 01:59]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** DONE [[mu4e:msgid:c517884a-2fe7-48b3-9c67-63fd7403fd3f@larrasket][explains the Trumpist right’s gender politics]]                :@read:
+:LOGBOOK:
+CLOCK: [2024-11-18 Mon 04:33]--[2024-11-18 Mon 04:34] =>  0:01
+:END:
+[2024-09-12 Thu 01:58]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** DONE [[mu4e:msgid:8fafe682-856d-452e-9fc4-8b710cd6904b@larrasket][Why Did 9/11 Happen?]]                                         :@watch:
+:PROPERTIES:
+:ID:       d26fpo80tfk0
+:CUSTOM_ID: d26fpo80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-17 Tue 06:42]--[2024-09-17 Tue 07:02] =>  0:20
+:END:
+[2024-09-14 Sat 12:23]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]]
+#+END_tag
+** DONE [[mu4e:msgid:14a5be4c-7ada-4e73-91ff-16fcd5e1875b@larrasket][Sudan is burning and foreign powers are benefiting]]           :@read:
+:PROPERTIES:
+:ID:       k9g7fn80tfk0
+:CUSTOM_ID: k9g7fn80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-01 Tue 16:51]--[2024-10-01 Tue 17:01] =>  0:10
+:END:
+[2024-09-14 Sat 12:24]
+#+BEGIN_tag
+{{{t}}} [[id:a4dl2o80tfk0][Sudan]]
+#+END_tag
+** DONE [[mu4e:msgid:fa792916-5db2-4a0e-b5e2-aefeca3bcf7b@larrasket][The risk of beauty]]                                           :@read:
+:PROPERTIES:
+:ID:       6lv4bn80tfk0
+:CUSTOM_ID: 6lv4bn80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-21 Sat 00:30]--[2024-09-21 Sat 00:32] =>  0:02
+:END:
+[2024-09-14 Sat 12:29]
+** DONE [[mu4e:msgid:8ed7009f-d6db-47db-b4c8-37de686dffd5@larrasket][How Israel’s Netanyahu survives in his job]]                   :@read:
+:PROPERTIES:
+:ID:       rpqh8n80tfk0
+:CUSTOM_ID: rpqh8n80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-23 Mon 03:10]--[2024-09-23 Mon 03:23] =>  0:13
+:END:
+[2024-09-19 Thu 19:25]
+#+BEGIN_tag
+{{{t}}} [[id:da247eaf-b077-4a61-9495-a21da5c394eb][Israel]] and [[id:16736c66-66da-4c59-97c3-c5955c11baaa][Benjamin Netanyahu]]
+#+END_tag
+** DONE [[mu4e:msgid:a1481b8f-daa4-4c11-8712-68691cf37683@larrasket][Is Google a bigger threat to democracy than Trump? A debate.]] :@read:
+:PROPERTIES:
+:ID:       2zt2gm80tfk0
+:CUSTOM_ID: 2zt2gm80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-18 Mon 04:23]--[2024-11-18 Mon 04:30] =>  0:07
+:END:
+[2024-11-01 Fri 00:22]
+#+BEGIN_tag
+{{{t}}} [[id:a05c97d3-9337-4f35-9a34-e490e6db645d][United States of America]] and [[id:xrh2q3k0ozj0][Google]]
+#+END_tag
+** DONE [[mu4e:msgid:bee33ca0-3882-44ae-814e-42cfab3f2c83@larrasket][Elon Musk has gone all in for Trump]]                          :@read:
+:PROPERTIES:
+:ID:       yy8i0m80tfk0
+:CUSTOM_ID: yy8i0m80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-18 Mon 04:30]--[2024-11-18 Mon 04:32] =>  0:02
+:END:
+[2024-11-05 Tue 23:57]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]], and [[id:mkq7w4m0k9k0][Elon Musk]]
+#+END_tag
+** DONE [[mu4e:msgid:89a48ef2-ef7c-4851-aca2-43644fd223c2@larrasket][Assad officier familiies kicked out]]                          :@read:
+:PROPERTIES:
+:ID:       6nfi8qt0tfk0
+:CUSTOM_ID: 6nfi8qt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-10 Fri 21:18]--[2025-01-10 Fri 21:29] =>  0:11
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:dcl0tc41m3k0][Syria]]
+#+END_tag
+[2025-01-01 Wed 02:10]
+** DONE [[mu4e:msgid:1141970932514.1109196647294.1510744953.0.931201JL.2002@synd.ccsend.com][“Were all going to be dead soon.”]]                            :@read:noexport:
+:PROPERTIES:
+:ID:       klqcz9v0zfk0
+:CUSTOM_ID: klqcz9v0zfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-31 Thu 17:25]--[2024-10-31 Thu 17:34] =>  0:09
+:END:
+** DONE [[mu4e:msgid:1142062708935.1109196647294.1510744953.0.1001200JL.2002@synd.ccsend.com][“I’m going to feed you to the wolves.”]]                       :@read:
+:PROPERTIES:
+:ID:       4xg9g7q0lgk0
+:CUSTOM_ID: 4xg9g7q0lgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-26 Sun 02:30]--[2025-01-26 Sun 02:41] =>  0:11
+:END:
+[2025-01-15 Wed 17:05]
+** DONE [[mu4e:msgid:e955eaf1-d0e2-4f71-b602-09e9b512c3ab@larrasket][Why did they arrest Ahmed Abu Zied?]]                          :@read:
+:PROPERTIES:
+:ID:       49j86xy02hk0
+:CUSTOM_ID: 49j86xy02hk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-02-20 Thu 18:10]--[2025-02-20 Thu 18:16] =>  0:06
+:END:
+[2025-02-04 Tue 23:50]
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+** DONE [[mu4e:msgid:1142072824640.1109196647294.1510744953.0.1121200JL.2002@synd.ccsend.com][“That’s exactly how I play Mario Kart.”]]                      :@read:
+:LOGBOOK:
+CLOCK: [2025-01-30 Thu 16:51]--[2025-01-30 Thu 17:02] =>  0:11
+:END:
+[2025-01-29 Wed 04:02]
+** TODO [[mu4e:msgid:d146a343-4186-472a-9dc1-6340ba165543@larrasket][Prof. John Mearsheimer: Trump Does NOT Want War with Iran]]    :@watch:
+[2025-01-29 Wed 03:58]
+#+BEGIN_tag
+{{{t}}} [[id:rpj71nc0jek0][John Mearsheimer]] and [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** DONE [[mu4e:msgid:559db4bf-46f8-4b4a-a8df-f1bae6581b65@larrasket][Trump against Askars]]                                         :@read:
+:PROPERTIES:
+:ID:       yvlf0cf0jhk0
+:CUSTOM_ID: yvlf0cf0jhk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-02-20 Thu 17:43]--[2025-02-20 Thu 18:09] =>  0:26
+:END:
+[2025-01-17 Fri 23:02]
+#+BEGIN_tag
+{{{t}}} [[id:0fnhhwt0kzj0][Doland Trump]]
+#+END_tag
+** DONE [[mu4e:msgid:1142102941338.1109196647294.1510744953.0.942000JL.2002@synd.ccsend.com][“Our fingers are on the trigger.”]]                            :@read:
+:PROPERTIES:
+:ID:       a876v9z00ik0
+:CUSTOM_ID: a876v9z00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-06 Thu 12:08]--[2025-03-06 Thu 12:13] =>  0:05
+:END:
+[2025-02-19 Wed 23:13]
+** TODO [[mu4e:msgid:72f69e8c-a227-427f-b2f9-a25ee3db792e@larrasket][Monopoly World: Oligarchy & Authoritarianism]]                 :@watch:
+:PROPERTIES:
+:ID:       kdwjydz00ik0
+:CUSTOM_ID: kdwjydz00ik0
+:END:
+[2025-02-22 Sat 23:18]
+** DONE [[mu4e:msgid:1bb34f93-d49a-4cac-8965-3245612aa19d@larrasket][OpenAI’s new anti-jobs program]]                               :@check:
+:LOGBOOK:
+CLOCK: [2025-04-02 Wed 01:31]--[2025-04-02 Wed 01:33] =>  0:02
+:END:
+[2025-01-29 Wed 03:39]
+** DONE [[mu4e:msgid:5e42bef7fee7e6a299c3d932d.74468cb324.20250630035936.44ebe3345a.504d1bce@mail129.suw101.mcdlv.net][Old Eagar Law]]                                                :@check:
+:PROPERTIES:
+:ID:       77o35y70omk0
+:CUSTOM_ID: 77o35y70omk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-07-14 Mon 00:35]--[2025-07-14 Mon 00:38] =>  0:03
+:END:
+[2025-06-30 Mon 12:23]
+#+BEGIN_tag
+{{{t}}} [[id:62cf5008-092a-4405-aefd-3ca90c8f31bf][Egypt]]
+#+END_tag
+* [[id:omy9ejo02wj0][Books]]                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+
+- [[id:1a4ff2ad-cab1-47bf-9426-4c6d375de318][Manifesto of the Communist Party]] (Marx et al.)[fn:11]
+  #+begin_quote
+Nothing would be more erroneous than to stamp the whole of the Communist
+Manifesto simply as an historic document. On the contrary. The principles
+developed by it, the method to which it leads us, the characteristic it gives by
+a few strokes of the capitalist mode of production, are to-day more valid than
+ever. The whole actual development, as well as the whole theoretic
+investigation, of the time since the drawing-up of the Manifesto, are nothing
+but an unbroken line of confirmations of its fundamental conceptions. Never was
+the principle more universally accepted that the history of all hitherto
+existing (civilised) society is the history of class wars; and never has it
+appeared plainer that the great moving power of our times is the class war
+between bourgeoisie and proletariat.
+  #+end_quote
+  From [cite:@kautsky-2009-chapt-four]
+- [[id:5cr04p00tzj0][Out of Bounds: Academic Freedom and the Question of Palestine]] (Abraham, M.)
+- [[id:mwcbjj70h2k0][The Myth of The Rational Voter ]] (Caplan, B.)
+- [[id:ptv9ppv0i2k0][Foundations of Christianity]] (Kautsky, K.)[fn:1]
+- The Dark Side of Democracy (Mann, M.)
+- Global Culture, Globalization and Modernity (Robertson et al.)
+- The Road to Unfreedom (Snyder, T.)
+- Discourse on Voluntary Servitude (Boétie, E.)[fn:12]
+- [[id:iajfgqz0a0k0][Understanding Power: The Indispensable Chomsky]] (Chomsky et al.)
+- The Great Revolt (Zito, S.)
+- [[id:qqel2kv06ek0][Who Rules the World?]] (Chomsky, N.)
+- Who is Charlie, Xenophobia and New Middle Class (Todd, E.)[fn:13]
+- The Myth of Development (Oswaldo, R.)[fn:2]
+- [[id:mgtarfc142k0][How Much is a Seat On the Security Council Worth?]] (Kuziemko et al.)
+- [[id:btij218021k0][Al-nanahaah and al-estehmar ]](Shariati, A.)
+- [[id:ohyf4l118bk0][The Israel Lobby and U.S. Foreign Policy]] (Mearsheimer et al.)
+- [[id:6ldllxn02ek0][Global Language Dictionary]] (Luntz, F.)
+- [[id:k34fhgc07pk0][Civil Society: A Critical Study]] (Beshara, A.)
+- في الثورة والقابلية للثورة (بشارة، ع.)
+- أشياء لن تسمع بها أبدًا (تشومسكي، ن.)
+- معضلة التنمية الإستعمارية: نظرات في دعاوي إيجابيات الاستعمار (صوان، م.)
+- مدخل إلى الأيدولوجيات السياسية (هيود، أ.)
+- قواعد في الممارسة السياسية (سلطان، ج.) [fn:16]
+- */غزو غير مسلح/*[fn:15]
+- [[id:0ntcmjp00bk0][Wreckonomics]] (Andersson et al.)
+- [[id:0pi55ey00ck0][Punishing The Poor]] (Wacquant, L.)
+- [[id:00lij8t0wek0][War in Ukraine]] (Benjamin et al.)
+* Footnotes
+
+[fn:2] أوهَمَ رأس المال الناس أنّ الدُّول "المتقدِّمة" هي كذلك بفعل خفض الإنفاق
+العمومي. ولكن الإنفاق العمومي، مقارنة بالناتِج القومي، لم ينخفِض إلاّ لدى الدُّول
+الفقيرة، وبالذّات بإكراهات من الدُّول "المتقدِّمة". (عباس برهام)
+[fn:1] Also known as: religion and class struggle
+[fn:13]This books is about the laïcité (the f*ricnh secularism) and how the
+xenophobia works as very good engine for moving the French people towards more
+and more so-called 'free speech' movements. A very important and related book is
+Jean Baubérot's La laïcité Française et ses Mutations.
+
+
+[fn:12]   I consider this as a very nice literary message, actually it reminds
+me of how the intellectual treated "crowds" in the early 19 and 20 centuries,
+read about this here [DELETED]. Simply, like Le Bon and Frizer did in there
+psychology and anthropology papers, Étienne de La Boétie is cursing the scum
+peoples who let tyrant governors control and torture them. Of course without
+giving any explanation on why they do so. It's very obsolete to take it as an
+'intellectual' or 'anthropological' approach.
+
+[fn:11]   I won't usually recommend reading this, but I want to make sure that
+everyone will read it, even if you are not going to study Marxism, reading the
+Manifesto at least is أضعف الإيمان to prevent yourself from the odds and the
+ends of the anti-bolshevism propaganda (which usually includes "Marxism"). A
+better alternative would be Nikoalai Bukharin's "ABC of Communism", or even
+better, read Marx carefully.
+
+
+[fn:16]   Both of these books are good reads for kids.
+[fn:15]   I don't know who authored this book/article; however it is not
+available for some reason on the internet and I can't even remember where did I
+download it from, anyway I've reuploaded it; you can get it from /(link is
+broken)/.
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

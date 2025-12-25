@@ -552,21 +552,21 @@ margin-block-start: auto;
 <div id="content" class="content">
 <header>
 <h1 class="title">Lisp Programming Language</h1>
-</header><div class="BACKLINKS" id="orgfa10d56">
+</header><div class="BACKLINKS" id="orga10e7f8">
 <p>
-This section was referenced in <a href="/~saleh/cl.html">Legacy Commentary</a>.
+This section was referenced in <a href="/~saleh/cl.html#hol77960fwj0">Legacy Commentary</a>.
 </p>
 
 </div>
 
-<div class="tag" id="org599007f">
+<div class="tag" id="org9fc201f">
 <p>
-This section was labeled under, or is related to <a href="/~saleh/t/programming.html">programming</a>.
+This section was labeled under, or is related to <a href="/~saleh/t/programming.html#4u5664n02wj0">programming</a>.
 </p>
 
 </div>
 
-<div class="PREVIEW" id="org0946ee4">
+<div class="PREVIEW" id="org666afdf">
 <p>
 Tutorial on Lisp.
 </p>
@@ -577,17 +577,17 @@ Tutorial on Lisp.
 <p>
 The Lisp programming language s a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation. Originally specified in 1958, Lisp is the second-oldest high-level programming language still in common use. Only Fortran is older, by one year. Lisp has changed since its early days, and many dialects have existed over its history. Today, the best-known general-purpose Lisp dialects are Common Lisp, Scheme, Racket and Clojure.
 </p>
-<div id="outline-container-org7976aa1" class="outline-2">
-<h2 id="org7976aa1">Choosing Implementation</h2>
-<div class="outline-text-2" id="text-org7976aa1">
+<div id="outline-container-org57c06ea" class="outline-2">
+<h2 id="org57c06ea">Choosing Implementation</h2>
+<div class="outline-text-2" id="text-org57c06ea">
 <p>
 The first thing you have to do is to choose a Lisp implementation. This may seem like a strange thing to have to do for folks used to languages such as Perl, Python, Visual Basic (VB), C#, and Java. The difference between Common Lisp and these languages is that Common Lisp is defined by its standard—there is neither a single implementation controlled by a benevolent dictator, as with Perl and Python, nor a canonical implementation controlled by a single company, as with VB, C#, and Java. Anyone who wants to read the standard and implement the language is free to do so. Furthermore, changes to the standard have to be made in accordance with a process controlled by the standards body American National Standards Institute (ANSI). That process is designed to keep any one entity, such as a single vendor, from being able to arbitrarily change the standard. Thus, the Common Lisp standard is a contract between any Common Lisp vendor and Common Lisp programmers. The contract tells you that if you write a program that uses the features of the language the way they’re described in the standard, you can count on your program behaving the same in any conforming implementation.
 </p>
 </div>
 </div>
-<div id="outline-container-orga19c73d" class="outline-2">
-<h2 id="orga19c73d">Hello World</h2>
-<div class="outline-text-2" id="text-orga19c73d">
+<div id="outline-container-org3d3b39e" class="outline-2">
+<h2 id="org3d3b39e">Hello World</h2>
+<div class="outline-text-2" id="text-org3d3b39e">
 <p>
 You can just pass &ldquo;Hello World&rdquo; (with quotes) to the Lisp REPEL and you will get your first Hello World in Lisp.
 </p>
@@ -605,7 +605,7 @@ You can take a step toward a real program by writing some code that as a side ef
 </p>
 
 
-<pre class="example" id="org7743da9">
+<pre class="example" id="org985ce8a">
 CL-USER&gt; (format t "hello, world")
 hello, world
 NIL
@@ -626,7 +626,7 @@ At one level, this expression, like all the others you’ve seen, is just anothe
 </div>
 <div id="outline-container-nse0owp02wj0" class="outline-2">
 <h2 id="nse0owp02wj0">Why Lisp?</h2>
-<div class="outline-text-2" id="text-org671e58b">
+<div class="outline-text-2" id="text-orgdbaa721">
 <p>
 Why learn Lisp? Because it lets you do things that you can&rsquo;t do in other languages. If you just wanted to write a function to return the sum of the numbers less than n&gt; say, it would look much the same in Lisp and C:
 </p>
@@ -683,16 +683,16 @@ Lisp style has been evolving in this direction since the 1960s. You can write pr
 </p>
 </div>
 </div>
-<div id="outline-container-org82b33c6" class="outline-2">
-<h2 id="org82b33c6">Lisp Specifications</h2>
-<div class="outline-text-2" id="text-org82b33c6">
+<div id="outline-container-orgd9761b4" class="outline-2">
+<h2 id="orgd9761b4">Lisp Specifications</h2>
+<div class="outline-text-2" id="text-orgd9761b4">
 <p>
 &ldquo;Okay I&rsquo;m convinced&rdquo;
 </p>
 </div>
-<div id="outline-container-org3ebd638" class="outline-3">
-<h3 id="org3ebd638">Evaluation</h3>
-<div class="outline-text-3" id="text-org3ebd638">
+<div id="outline-container-org3a2a611" class="outline-3">
+<h3 id="org3a2a611">Evaluation</h3>
+<div class="outline-text-3" id="text-org3a2a611">
 <p>
 In Lisp, + is a function, and an expression like (+ 2 3) is a function call. When Lisp evaluates a function call, it does so in two steps:
 </p>
@@ -742,9 +742,9 @@ Lists are represented as zero or more elements enclosed in parentheses.  The ele
 </p>
 </div>
 </div>
-<div id="outline-container-org35dd99d" class="outline-3">
-<h3 id="org35dd99d">Data</h3>
-<div class="outline-text-3" id="text-org35dd99d">
+<div id="outline-container-org85aa58d" class="outline-3">
+<h3 id="org85aa58d">Data</h3>
+<div class="outline-text-3" id="text-org85aa58d">
 <p>
 Lisp offers all the data types we find in most other languages, along with several others that we don&rsquo;t. One data type we have used already is the integer, which is written as a series of digits: 256. Another data type Lisp has in common with most other languages is the string, which is represented as a series of characters surrounded by double-quotes: &ldquo;ora et labora&rdquo;. Integers and strings both evaluate to themselves.
 </p>
@@ -769,9 +769,9 @@ We are now in a position to appreciate one of the most remarkable features of Li
 </p>
 </div>
 </div>
-<div id="outline-container-org176c126" class="outline-3">
-<h3 id="org176c126">List Operations</h3>
-<div class="outline-text-3" id="text-org176c126">
+<div id="outline-container-org789b6fc" class="outline-3">
+<h3 id="org789b6fc">List Operations</h3>
+<div class="outline-text-3" id="text-org789b6fc">
 <p>
 The function cons builds lists. If its second argument is a list, it returns a new list with the first argument added to the front:
 </p>
@@ -817,9 +817,9 @@ There are also <code>first</code> and <code>second</code>, you can guess what is
 </p>
 </div>
 </div>
-<div id="outline-container-orgd44ab5d" class="outline-3">
-<h3 id="orgd44ab5d">Truth</h3>
-<div class="outline-text-3" id="text-orgd44ab5d">
+<div id="outline-container-orge7ec931" class="outline-3">
+<h3 id="orge7ec931">Truth</h3>
+<div class="outline-text-3" id="text-orge7ec931">
 <p>
 In Common Lisp, the symbol t is the default representation for truth. Like
 nil, t evaluates to itself. The function <code>listp</code> returns true if its argument is
@@ -852,9 +852,9 @@ There are <code>and</code> and <code>or</code> functions, you probably can tell 
 </p>
 </div>
 </div>
-<div id="outline-container-org251860a" class="outline-3">
-<h3 id="org251860a">Basic Functions</h3>
-<div class="outline-text-3" id="text-org251860a">
+<div id="outline-container-org4e092f9" class="outline-3">
+<h3 id="org4e092f9">Basic Functions</h3>
+<div class="outline-text-3" id="text-org4e092f9">
 <p>
 You can define new functions with defun. It usually takes three or more
 arguments: a name, a list of parameters, and one or more expressions that
@@ -887,9 +887,9 @@ that member does it, I evaluate the truth value t.
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orga76ca5f" class="outline-3">
-<h3 id="orga76ca5f">I/O</h3>
-<div class="outline-text-3" id="text-orga76ca5f">
+<div id="outline-container-orgcc92804" class="outline-3">
+<h3 id="orgcc92804">I/O</h3>
+<div class="outline-text-3" id="text-orgcc92804">
 <p>
 The most general output function in Common Lisp is f ormat. It takes two or more
 arguments: the first indicates where the output is to be printed, the second is
@@ -929,9 +929,9 @@ function that prompts the user for input, and returns whatever is entered:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org9c2704e" class="outline-3">
-<h3 id="org9c2704e">Variables</h3>
-<div class="outline-text-3" id="text-org9c2704e">
+<div id="outline-container-org5653231" class="outline-3">
+<h3 id="org5653231">Variables</h3>
+<div class="outline-text-3" id="text-org5653231">
 <p>
 One of the most frequently used operators in Common Lisp is <code>let</code> , which
 allows you to introduce new local variables.
@@ -984,9 +984,9 @@ whether some symbol is the name of a global variable or constant, use boundp:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org992df8e" class="outline-3">
-<h3 id="org992df8e">Assignment</h3>
-<div class="outline-text-3" id="text-org992df8e">
+<div id="outline-container-org4e064d1" class="outline-3">
+<h3 id="org4e064d1">Assignment</h3>
+<div class="outline-text-3" id="text-org4e064d1">
 <p>
 In Common Lisp the most general assignment operator is setf. We can use
 it to do assignments to either kind of variable:
@@ -1002,9 +1002,9 @@ it to do assignments to either kind of variable:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orga98b24e" class="outline-3">
-<h3 id="orga98b24e">Iteration</h3>
-<div class="outline-text-3" id="text-orga98b24e">
+<div id="outline-container-org183e60e" class="outline-3">
+<h3 id="org183e60e">Iteration</h3>
+<div class="outline-text-3" id="text-org183e60e">
 <p>
 When we want to do something repeatedly, it is sometimes more natural to
 use iteration than recursion. A typical case for iteration is to generate some
@@ -1024,7 +1024,7 @@ do can create variables, and the first argument is a list of variable
 specifications. Each element of this list can be of the form
 </p>
 
-<pre class="example" id="org7d2e043">
+<pre class="example" id="orgec0713b">
 {variable initial update)
 </pre>
 
@@ -1069,9 +1069,9 @@ through the elements of a list, for example, you would be more likely to use
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org73bd389" class="outline-3">
-<h3 id="org73bd389">Functions as Objects</h3>
-<div class="outline-text-3" id="text-org73bd389">
+<div id="outline-container-org227604f" class="outline-3">
+<h3 id="org227604f">Functions as Objects</h3>
+<div class="outline-text-3" id="text-org227604f">
 <p>
 In Lisp, functions are regular objects, like symbols or strings or lists. If we
 give the name of a function to function, it will return the associated object.
@@ -1104,7 +1104,7 @@ Just as we can use <code>'</code> as an abbreviation for quote, we can use <code
 abbreviation for function:
 </p>
 
-<pre class="example" id="orge8b8d91">
+<pre class="example" id="org42bfb0b">
 (apply #'+ l) ==  (apply (function +) l)
 </pre>
 
@@ -1129,7 +1129,7 @@ function <code>f</code>, because <code>'f</code> will still refer to the global 
 whichever function might be stored in its symbol-function slot). E.g.
 </p>
 
-<pre class="example" id="orgdc65051">
+<pre class="example" id="orgb289625">
 (cl-flet ((car (x y) (+ x y)))
   (list #'car 'car))
 =&gt;
@@ -1193,9 +1193,9 @@ function call, for example:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orge13285b" class="outline-3">
-<h3 id="orge13285b">Types</h3>
-<div class="outline-text-3" id="text-orge13285b">
+<div id="outline-container-org2838d22" class="outline-3">
+<h3 id="org2838d22">Types</h3>
+<div class="outline-text-3" id="text-org2838d22">
 <p>
 Lisp has an unusually flexible approach to types. In many languages, variables
 are what have types, and you can&rsquo;t use a variable without specifying its type.
@@ -1215,9 +1215,9 @@ We will study types in details later.
 </div>
 </div>
 </div>
-<div id="outline-container-org74ca70d" class="outline-2">
-<h2 id="org74ca70d">Lists</h2>
-<div class="outline-text-2" id="text-org74ca70d">
+<div id="outline-container-orgb6a043d" class="outline-2">
+<h2 id="orgb6a043d">Lists</h2>
+<div class="outline-text-2" id="text-orgb6a043d">
 <p>
 In Lisp, lists are one of the fundamental data structures in Lisp. In the
 earliest dialects they were the only data structure: the name &ldquo;Lisp&rdquo; originally
@@ -1226,9 +1226,9 @@ Common Lisp is a general-purpose programming language with a wide variety of
 data structures.
 </p>
 </div>
-<div id="outline-container-orgc8c2926" class="outline-3">
-<h3 id="orgc8c2926">Conses</h3>
-<div class="outline-text-3" id="text-orgc8c2926">
+<div id="outline-container-org1933f9d" class="outline-3">
+<h3 id="org1933f9d">Conses</h3>
+<div class="outline-text-3" id="text-org1933f9d">
 <p>
 We previously introduced <code>cons</code>, <code>car</code>, and <code>cdr</code>, the primitive list
 manipulation functions, what cons really does is combine two objects into a
@@ -1281,9 +1281,9 @@ defined:
 <pre class="code"><code>(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">our-atom</span> (x) (not (consp x )))
 </code></pre>
 </div>
-<div id="outline-container-org6b35427" class="outline-4">
-<h4 id="org6b35427">Equality</h4>
-<div class="outline-text-4" id="text-org6b35427">
+<div id="outline-container-org9c3fbce" class="outline-4">
+<h4 id="org9c3fbce">Equality</h4>
+<div class="outline-text-4" id="text-org9c3fbce">
 <p>
 Each time you call cons, Lisp allocates a new piece of memory with room
 for two pointers. So if we call cons twice with the same arguments, we get
@@ -1301,9 +1301,9 @@ back two values that look the same, but are in fact distinct objects:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgcd41113" class="outline-4">
-<h4 id="orgcd41113">Pointers</h4>
-<div class="outline-text-4" id="text-orgcd41113">
+<div id="outline-container-org5752f72" class="outline-4">
+<h4 id="org5752f72">Pointers</h4>
+<div class="outline-text-4" id="text-org5752f72">
 <p>
 One of the secrets to understanding Lisp is to realize that variables have
 values in the same way that lists have elements. As conses have pointers to
@@ -1341,9 +1341,9 @@ one variable the value of another, the two variables will have e q l values:
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf352ed" class="outline-3">
-<h3 id="orgdf352ed">Example: Compression</h3>
-<div class="outline-text-3" id="text-orgdf352ed">
+<div id="outline-container-org375b053" class="outline-3">
+<h3 id="org375b053">Example: Compression</h3>
+<div class="outline-text-3" id="text-org375b053">
 <p>
 As an example, this section shows how to perform a simple form of compression on
 lists. This algorithm goes by the impressive name of <code>run-length</code>, it should
@@ -1405,9 +1405,9 @@ of lists, lists of lists;
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org00f1d5a" class="outline-3">
-<h3 id="org00f1d5a">Access</h3>
-<div class="outline-text-3" id="text-org00f1d5a">
+<div id="outline-container-orgc288b91" class="outline-3">
+<h3 id="orgc288b91">Access</h3>
+<div class="outline-text-3" id="text-orgc288b91">
 <p>
 Common Lisp has additional access functions defined in terms of <code>car</code> and
 <code>cdr</code>. To find the element at a given position in a list we call <code>nth</code>,
@@ -1433,9 +1433,9 @@ nthcdr.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd74bd12" class="outline-3">
-<h3 id="orgd74bd12">Mapping functions</h3>
-<div class="outline-text-3" id="text-orgd74bd12">
+<div id="outline-container-org8211ed5" class="outline-3">
+<h3 id="org8211ed5">Mapping functions</h3>
+<div class="outline-text-3" id="text-org8211ed5">
 <p>
 Common Lisp provides several functions for calling functions on the elements
 of a list. The most frequently used is mapcar, which takes a function and
@@ -1457,14 +1457,14 @@ successive <code>cdrs</code> of the lists:
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org1e3a5c3" class="outline-3">
-<h3 id="org1e3a5c3">Trees</h3>
-<div class="outline-text-3" id="text-org1e3a5c3">
+<div id="outline-container-orgbf3594b" class="outline-3">
+<h3 id="orgbf3594b">Trees</h3>
+<div class="outline-text-3" id="text-orgbf3594b">
 <p>
 Conses can also be considered as binary trees, with the car representing the
 right subtree and the cdr the left. For example, the list
 </p>
-<pre class="example" id="org3c1e386">
+<pre class="example" id="org79e04cd">
 (a (b c) d)
 </pre>
 
@@ -1473,7 +1473,7 @@ is also the tree represented in the following figure:
 </p>
 
 
-<figure id="orgfe4566c">
+<figure id="orgd48dc00">
 <img src="../i/old/2023-03-05_17-47.png" alt="2023-03-05_17-47.png">
 
 </figure>
@@ -1516,9 +1516,9 @@ subtrees:
 </p>
 </div>
 </div>
-<div id="outline-container-org3cc9349" class="outline-3">
-<h3 id="org3cc9349">Sequences</h3>
-<div class="outline-text-3" id="text-org3cc9349">
+<div id="outline-container-org14f45d5" class="outline-3">
+<h3 id="org14f45d5">Sequences</h3>
+<div class="outline-text-3" id="text-org14f45d5">
 <p>
 Another way to think of a list is as a series of objects in a particular order.
 In Common Lisp, sequences include both lists and vectors.
@@ -1555,9 +1555,9 @@ argument. So if you don&rsquo;t want your original sequence modified, pass a cop
 </p>
 </div>
 </div>
-<div id="outline-container-org0426afb" class="outline-3">
-<h3 id="org0426afb">Dotted Pair Notation</h3>
-<div class="outline-text-3" id="text-org0426afb">
+<div id="outline-container-orgfcf5b64" class="outline-3">
+<h3 id="orgfcf5b64">Dotted Pair Notation</h3>
+<div class="outline-text-3" id="text-orgfcf5b64">
 <p>
 Dotted pair notation is a general syntax for cons cells that represents the CAR
 and CDR explicitly. In this syntax, <code>(a . b)</code> stands for a cons cell whose CAR
@@ -1571,9 +1571,9 @@ only used if the CDR of a cons cell is not a list.
 </p>
 </div>
 </div>
-<div id="outline-container-org7641d25" class="outline-3">
-<h3 id="org7641d25"><span class="done KILL">KILL</span> Example: Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h3>
-<div class="outline-text-3" id="text-org7641d25">
+<div id="outline-container-org3872ec8" class="outline-3">
+<h3 id="org3872ec8"><span class="done KILL">KILL</span> Example: Shortest Path&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h3>
+<div class="outline-text-3" id="text-org3872ec8">
 <p>
 Following code contains a program for finding the shortest path through a
 network.  The function <code>shortest-path</code> takes a start node, a destination node,
@@ -1600,15 +1600,15 @@ We can visualize it like this:
 </p>
 
 
-<figure id="orgc4c5474">
+<figure id="org59cc3da">
 <img src="../i/old/Oa3OgZT.png" alt="Oa3OgZT.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org7d677ed" class="outline-3">
-<h3 id="org7d677ed">Garbage</h3>
-<div class="outline-text-3" id="text-org7d677ed">
+<div id="outline-container-orgd1c7a80" class="outline-3">
+<h3 id="orgd1c7a80">Garbage</h3>
+<div class="outline-text-3" id="text-orgd1c7a80">
 <p>
 Lists can be slow for several reasons. They offer sequential instead of random
 access, so retrieving a given element takes longer in a list than an array, for
@@ -1635,7 +1635,7 @@ called garbage, and the scavenging operation is called garbage collection, or
 GC.
 </p>
 
-<pre class="example" id="org0f58a55">
+<pre class="example" id="org12061cc">
 &gt; (setf 1st (list 'a &gt;b }c))
 (A B C)
 &gt; (setf 1st nil)
@@ -1662,9 +1662,9 @@ leaks and dangling pointers are simply impossible in Lisp.
 </div>
 </div>
 </div>
-<div id="outline-container-org5451577" class="outline-2">
-<h2 id="org5451577">Data Structure</h2>
-<div class="outline-text-2" id="text-org5451577">
+<div id="outline-container-org54cbbed" class="outline-2">
+<h2 id="org54cbbed">Data Structure</h2>
+<div class="outline-text-2" id="text-org54cbbed">
 <p>
 The preceding discussed the list, Lisp&rsquo;s most versatile data structure.  This
 chapter shows how to use Lisp&rsquo;s other data structures: arrays (including vectors
@@ -1672,9 +1672,9 @@ and strings), structures, and hash tables. They may not be as flexible as lists,
 but they can make access faster, and take up less space.
 </p>
 </div>
-<div id="outline-container-org45253da" class="outline-3">
-<h3 id="org45253da">Arrays</h3>
-<div class="outline-text-3" id="text-org45253da">
+<div id="outline-container-org3c8cc73" class="outline-3">
+<h3 id="org3c8cc73">Arrays</h3>
+<div class="outline-text-3" id="text-org3c8cc73">
 <p>
 In Common Lisp, you can make an array by calling make-array with a list
 of dimensions as the first argument. To make a 2x3 array we would say:
@@ -1704,13 +1704,13 @@ However, in the cause of vectors there is a fastere function which is <code>svre
 </code></pre>
 </div>
 </div>
-<div id="outline-container-orgf82d9af" class="outline-3">
-<h3 id="orgf82d9af"><span class="done KILL">KILL</span> Structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h3>
+<div id="outline-container-org6370a49" class="outline-3">
+<h3 id="org6370a49"><span class="done KILL">KILL</span> Structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_write">@write</span></span></h3>
 </div>
 </div>
-<div id="outline-container-orga18eef3" class="outline-2">
-<h2 id="orga18eef3">Functions</h2>
-<div class="outline-text-2" id="text-orga18eef3">
+<div id="outline-container-org4574876" class="outline-2">
+<h2 id="org4574876">Functions</h2>
+<div class="outline-text-2" id="text-org4574876">
 <p>
 Understanding functions is one of the keys to understanding Lisp. Conceptually,
 functions are at the core of Lisp. Practically, they are one of the most useful
@@ -1736,9 +1736,9 @@ By setting the symbol-function of some name to a function,
 <pre class="code"><code>(add2 3)
 </code></pre>
 </div>
-<div id="outline-container-org876c8d7" class="outline-3">
-<h3 id="org876c8d7">Tags</h3>
-<div class="outline-text-3" id="text-org876c8d7">
+<div id="outline-container-org7befa2e" class="outline-3">
+<h3 id="org7befa2e">Tags</h3>
+<div class="outline-text-3" id="text-org7befa2e">
 <p>
 We&rsquo;ve already seen four functions for retrieving elements of sequences:
 nth for lists, aref and svref for vectors, and char for strings. Common
@@ -1805,9 +1805,9 @@ standard set listed in this table:
 </div>
 </div>
 </div>
-<div id="outline-container-org8f2bae8" class="outline-2">
-<h2 id="org8f2bae8">Functional Programming</h2>
-<div class="outline-text-2" id="text-org8f2bae8">
+<div id="outline-container-org401f78d" class="outline-2">
+<h2 id="org401f78d">Functional Programming</h2>
+<div class="outline-text-2" id="text-org401f78d">
 <p>
 Functional programming means writing programs that work by returning values,
 instead of by modifying things. It is the dominant paradigm in Lisp.  Most
@@ -1871,25 +1871,25 @@ telephone, as compared to letters, enabled a new style of communication.
 </p>
 </div>
 </div>
-<div id="outline-container-org09681be" class="outline-2">
-<h2 id="org09681be">Some Other Resources</h2>
-<div class="outline-text-2" id="text-org09681be">
+<div id="outline-container-org0f5649f" class="outline-2">
+<h2 id="org0f5649f">Some Other Resources</h2>
+<div class="outline-text-2" id="text-org0f5649f">
 <ul class="org-ul">
 <li><a href="https://www.reddit.com/r/lisp/comments/tna6zo/moving_from_the_beam_to_common_lisp_what_are_my/i21hjef/">Concurrncy</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde18f38" class="outline-2">
-<h2 id="orgde18f38"><span class="todo TODO">TODO</span> Ray-Tracing</h2>
+<div id="outline-container-org8678a1f" class="outline-2">
+<h2 id="org8678a1f"><span class="todo TODO">TODO</span> Ray-Tracing</h2>
 </div>
-<div id="outline-container-org247707b" class="outline-2">
-<h2 id="org247707b">Misc: <code>eqal?</code></h2>
-<div class="outline-text-2" id="text-org247707b">
+<div id="outline-container-org4cd3f62" class="outline-2">
+<h2 id="org4cd3f62">Misc: <code>eqal?</code></h2>
+<div class="outline-text-2" id="text-org4cd3f62">
 <ul class="org-ul">
 <li><p>
 <code>(eq x y)</code> is true if and only if x and y are the same identical object.
 </p>
-<pre class="example" id="org6094ac4">
+<pre class="example" id="org44d0ea6">
 (eq 'a 'b) is false.
 (eq 'a 'a) is true.
 (eq 3 3) might be true or false, depending on the implementation.
@@ -1915,7 +1915,7 @@ The <code>eql</code> predicate is true if its arguments are <code>eq</code>, or 
 of the same type with the same value, or if they are character objects that
 represent the same character.
 </p>
-<pre class="example" id="org08a9ebd">
+<pre class="example" id="org4510bdd">
 (eql 'a 'b) is false.
 (eql 'a 'a) is true.
 (eql 3 3) is true.
@@ -1940,7 +1940,7 @@ and only if their printed representations are the same.</li>
 </ul>
 </div>
 <div id="outline-container-yt" class="outline-3">
-<h3 id="yt"><a href="/~saleh/yt.html">YouTube Channels</a></h3>
+<h3 id="yt"><a href="/~saleh/yt.html#6ed1b62f-0992-46dc-aefd-40c471ae0b66">YouTube Channels</a></h3>
 <div class="outline-text-3" id="text-yt">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/@joshbetts1022">Josh Betts</a></li>

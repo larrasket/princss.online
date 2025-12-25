@@ -1,0 +1,868 @@
+:PROPERTIES:
+:ID:       uu37kln02wj0
+:ROAM_ALIASES: rbook
+:END:
+#+title: Reading List
+#+OPTIONS: toc:t
+#+OPTIONS: broken-links:mark
+
+
+Please note: These are neither the books I recommend nor the ones I agree with
+their ideologies; the but a list of the documents/textbooks that I own, with
+some notes of (as a review) that could be helpful to anyone in the future, thus,
+this list proudly contains horribly written books.
+
+*IMPORTANT: If you are looking for a reading list for reading recommendation, see [[id:p6s5gi81a3k0][Reading
+List (for others)]] or [[id:omy9ejo02wj0][Bibliography]]*
+
+*IMPORTANT: categories are totally messed up here*.
+
+
+* Canceled
+- Of Popes and Unicorns: Science, Christianity, and How the Conflict Thesis Fooled the World
+- Writing with Style: Conversations on the Art of Writing
+- Qaddafi and the United States Since 1969 by Edward P. Haley
+- Orientalism - Macfie, Alexander Lyon
+
+* Later
+* History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+** Middle East/ Ummah
+- Social Origins of Dictatorship and Democracy: Lord and Peasant in the Making of the Modern World
+- Beyond Chutzpah: On the Misuse of Anti-Semitism and the Abuse of History
+- The Intellectual Life (Sertillanges, A)
+- _Egypt (Springborg, R)_
+- _Infidels (Wheatcroft, A)_[fn:5]
+- تاريخ تونس (الهادي، م)
+- Zarathustra's Secret (Köhler, J)
+- الحرب العراقية-الإيرانية (القصاب، ع)
+- المقاومة (مروة، ك)
+- الحرب القذرة (سويدية، ح
+- الجزائر إلى أين (مجموعة باحثين)
+- إيران: الثورة الخفية (كوفيل، ت)
+
+  I think I need a better set of book on Iran history.
+- Great Myths of the Brain (Jarrett, C)
+- موسوعة تاريخ أوروبا (الزيدي، م)
+- تاريخ أوروبا في العصور الوسطى (بيشوب، م)
+- تاريخ مصر القومي، (الرفاعي، ع)
+- المشروع الصهيوني وبداية الوعي العربي لمخاطره (الشلبي، س)
+- استعمار مصر (ميشيل، ت)
+- _الفكر المصري في القرن الثامن عشر بين الجمود والتجديد (العزباوي، ع_)
+- الإسلاميون والقضية الفلسطينية (موسى، ب)
+- ليبيا (بازامه، م)
+- قصة الثورة الإيرانية (ذبيح، س)
+- تشكيل الأجنحة السياسية في إيران (برزين، س)
+- A History of Modern Iran (Abrahamian, E)
+- الانتقال من الثورة إلى الدولة[fn:82]
+- نقد الثورة المصرية
+- الثورة المستمرة
+- حول العرب والعروبة
+- قصة تونس من البداية
+- عن الحرية (زكي نجيب محمود)
+- How the West Stole Democracy from the Arabs[fn:51]
+- تاريخ إيران السياسي بين ثورتين
+- إفريقيا جنوب الصحراء (زبادية)
+- التراث الشعبي والشعر الملحون بالجزائر
+- دور استراتيجة المقاومة الإسلامية[fn:69]
+- Mecca of Revolution[fn:72]
+- Berber Government[fn:73]
+- Markets of Civilization [fn:28]
+- الصراع على الخليج العربي[fn:74]
+- محاضرات في تاريخ الجزائر[fn:70]
+- قضايا ودراسات في تاريخ الجزائر[fn:71]
+- تاريخ الثقافة في ليبيا[fn:77]
+- الدولة والمسألة الثقافية في الجزائر
+- _الدولة والمسألة الثقافية في تونس_
+- _الدولة والمسألة الثقافية في المغرب_
+- البعث السوري (تاريخ موجز)
+- موقف الاقباط من الحكم الاسلامي
+- مُوجز لتاريخ الشيوعية
+- Anarchism (Ward)
+- Ancient Warfare (Sidebottom)
+- The Birth of The Clinic (Foucault)
+- لبنان (بيضون)
+- لبنان بين الطوائف (عساف)
+- لبنان تاريخه وتراثه
+- مسارات مفكر عربي (محمد الشيخ)
+- تاريخ الشيوعية في الشرق الأوسط
+- تسلف الأخوان
+- Inheriting Syria
+- All the Shah's Men
+- George Lincoln Rockwell
+- معجم ما ألف في فضائل وتاريخ المسجد الأقصى والقدس وفلسطين ومدنها
+** Ancient World
+- المدن الفينيقية (مهران)
+- المدن الكبرى (مهران)
+- بنو إسرائيل(مهران)
+- تاريخ العراق القديم (مهران)
+- دراسات في تاريخ العرب (مهران)
+- دليل مصطلحات ثورة التحرير الجزائرية (مرتاض، ع)
+
+** Crusades
+
+- What were the Crusades? (Riley-Smith)
+- Crusades (Jonathan Riley-Smith)
+- الأيام الحاسمة في الحروب الصليبية
+** Rome and Ancient Europe
+- الإمبراطورية الرومانية (لورو)
+- Europe: A History (Norman Davies)
+- A Brief History of the Romans (Oxford)
+- The Early History of Rome (Livy)
+- The Twelve Caesars (Suctonius)
+- Metamorphose (Ovid)
+- The Aeneid (Virgil)
+- The Jewish Wars (Josephus)
+- Rubicon: The Last Years of the Roman Republic
+
+** The West
+- Colonialism and Neocolonialism (Sartre)
+- How the Scots Invented the Modern World
+- Pirate Hunter of the Caribbean
+- Postwar (Judt)
+- A Commonwealth of Thieves (Keneally)
+- Neptune's Inferno (Hornfischer)
+- Hot Time in the Old Town (Kohn)
+- Pox[fn:53] (Willrich)
+- Slavery by Another Name (Blackmon)
+- Been in the Storm So Long (Litwack)
+- London[fn:54] (Ackroyd)
+- Empire[fn:55]  (Stewart)
+- Lost to the West (Brownworth)[fn:9]
+- 1492 (Blaut)[fn:10]
+- Birth of Britain (Barnes)
+- The Tudors (Meyer)[fn:11]
+- Founding Brothers (Ellis)
+- Freedom Summer (Watson)[fn:12]
+- Marco Polo (Bergreen)
+- The First Battle (Lehrack)[fn:13]
+- Affection and Trust (Acheson)[fn:14]
+- The Empire Project (Darwin)
+- Crimes of Paris (Hoobler)
+- Crucible of War (Anderson)[fn:15]
+- Lords of the Sea (Hale)[fn:16]
+- Freethinkers (Jacoby)[fn:17]
+- Going Dutch (Jardine)[fn:18]
+- The Decline and Fall of the British Empire 1781-1997
+** Story of a History
+
+- مختصر تاريخ العالم (غومبريتش)
+- Unfamiliar Fishes (Vowell)
+- Uncommon Grounds (Pendergrast)
+- In the Garden of Beasts (Coll)
+- Devil at My Heels (Zamperini)
+- In Pharaoh's Army (Wolff)
+- Living Our Language (Treuer)
+- The Classical World (Filkins)
+- Practicing History (Tuchman)
+- The Indian Ocean (Pearson)
+- The Missing Pages (Watenpaugh)
+- تاريخ الدبلوماسية (بلاك)
+** The United States
+- Operation Paperclip[fn:62]
+- Killing for Coal[fn:63]
+- The Image[fn:26] (Boorstin)
+- The Fourth Star (Jaffe)
+- The Idea of America (Wood)
+- Americans in Paris (Glass)
+- The Ascent of Money (Ferguson)
+- The American Revolution (Wood)
+- The Warmth of Other Suns (Wilkerson)
+- The Atlantic and Its Enemies (Stone)
+- Open Veins of Latin America (Galeano)
+- The Fabulous History of the Dismal Swamp Company (Royster)
+- The Culture of Critique
+** Asian Warfare
+- Red Capitalism (Howie)[fn:20]
+- Great Soul (Lelyveld)[fn:21]
+- China Witness (Xinran)
+- Forgotten Wars (Harper)[fn:22]
+- Ancient Chinese Warfare (Sawyer)
+- Pakistan[fn:56]  (Lieven)
+- Genghis Khan and the Making of the Modern World (Weatherford)
+- White Mughals[fn:57]
+- صعود الصين
+- China in War and Revolution
+- The Cambridge History of China [fn:27]
+- Inventing the Nation
+**  Europe
+#+DOWNLOADED: screenshot @ 2022-09-24 21:14:25
+- النظام القديم والثورة الفرنسية
+- Nazi Germany and the Jews (Friedländer)
+- Trotsky (Volkogonov)
+- The Wars Against Napoleon (Franceschi)
+- Napoleon's Wars (Esdaile)
+- Russia Against Napoleon (Lieven)
+- Europe's Tragedy (Wilson)
+- Black Lamb and Grey Falcon[fn:23] (West)
+- Yugoslavia (Chomsky)
+- Lucrezia Borgia (Bradford)
+- Stalingrad (Beevor)
+- A Chosen Few (Kurlansky)[fn:24]
+- عصر القومية
+- المسألة الألمانية
+- تاريخ الحركات القومية (نور الدين حاطوم)
+- فرق الشيعة ( النوبختي)
+- الصراع بين البرجوازية والإقطاع (شكري، م)
+
+* Economics/ Capitalism
+- Basic Economics[fn:64]
+- The Company[fn:48]
+- The Culture of the New Capitalism
+- Studies in Mutualist Political Economy
+- Capitalism and Modern Social Theory
+- Capital in the Twenty-First Century
+- Capital et Idéologie (Piketty)
+- Does Capitalism Has a Future?
+- Socialism Betrayed (Keeran)
+- A Brief History of Neoliberalism
+- Capitalist Nursery Fables
+- How to Change the World
+- Beyond Capitalism (Dowbor)
+- Why Marx Was Right
+- الإشتراكية واقتصاد السوق[fn:49]
+- سيكولوجية المال
+- صندوق النقط الدولي (فولف)
+- Austerity[fn:59]
+- Circular Economy (Jessica)
+- ملف جوجل (نوفاك)
+- What Money Can't Buy (Sandel)
+* Marxism
+
+- The Society of the Spectacle (Debord)
+- كارل ماركس (برلين)
+- مختارات لينين
+- مدخل إلى علم السياسية (لاسكي)
+- +ماركس ضد نيتشه+
+- History and Class Consciousness
+- The Theory of the Novel
+- الماركسية اللينينية ونظرية الحزب
+- +Islam and Capitalism+
+- النشاط الجنسي وصراع الطبقات
+- متى يطلع الفجر؟ (جان بول أوليفييه)
+- ثورة الزنج
+- الماركسيون والدين (فيريه)
+- النشاط الجنسي وصراع الطبقات
+- نظام العمل المأجور (أنجلس)
+- عرض موجز للماركسية
+- الصراع الأمريكي السوفياتي في الشرق الأوسط
+- اطروحات الماركسية حول العولمة
+- في تمرحل التاريخ
+- مقدمات نظرية: لدراسة أثر الفكر الاشتراكي في حركة التحرر الوطني
+- الاستعمار الجديد (غوامي نكروما)
+- Marxism and Nationalism (Vanaik)
+- ثورة مصر والصراع الطبقي المفتوح
+- دفاعًا عن الماركسية (كورنفورث)
+- حول مسائل مرحلة الإنتقال من الرأسمالية الى الأشتراكية و دكتاتورية البروليتاريا
+- Dialectical and Historical Materialism (Stalin)
+- ألف باء شيوعية
+- الماركسية الصحيحة (لوكاش)
+- التاريخ والوعي الطبقي (لوكاش)
+- State and Revolution (Lenin)
+- The Ego and his Own (Stirner)
+- الفكر الحقوقي البرجوازي (تومانوف، ف)
+** Struggle
+
+- دور العنف (إنجلز)
+- النبي المسلح
+- الماركسية وحرب العصابات
+- كيف تصنع ete ناجحًا
+- تجارب ست ثورات عالمية
+- الماركسية وحرب العصابات
+** Hardcore Capitalism
+- الكتاب الأسود للرأسمالية
+- الطب الإمبريالي
+- أوروبا والتخلف في أفريقيا
+- أمبراطورية الإرهاب [fn:50]
+- المثقفون المزيفون (باسكال بونيفاس)
+- ما بعد الرأسمالية المتهالكة
+- الاستعمار الجديد (جاك وودس)
+- Canada in Africa (Engler)
+- الإرهاب المعولم
+- The Protestant Ethic and the Spirit of Capitalism
+- Canada in Africa 300 Years of Aid and Exploitation
+- Why Liberalism Failed (Daneen)
+- American War Machine (Scott)
+- Provincialization and Class Struggle in Africa
+- _الرأسمالية والفصام_
+*** Authors                                                           :noexport:
+-  Immanuel Wallerstein
+- Galal Amin
+- Samir Amin
+* ʿAqīdah
+- قراءة جديدة لحروب الردة
+- كتب العلوين المقدسة
+- مجموعة الأحاديث العلوية
+- المهدية في الاسلام (محمد حسن)
+- اخوان الصفا (عمر الدسوقي)
+- المناظرات والردود العلوية
+- ملخص تاريخ الخوارج (محمد شريف سليم)
+- العقل في المجتمع العراقي (شاكر شاهين)
+- رسائل الحكمة العلوية
+- فرق الشيعة المتطرفين (جابر عبدالعال)
+- الميثولوجيا عند العرب قبل الإسلام (سليم الحوت)
+- الهداية الكبرى (الحسين بن حمدان الخصيبي)
+- الحجة والدليل في نصر الدين الذليل
+- الحكمة السومرية في العراق القديم (قاشا)
+- المعتزلة (قاشا)
+- اليزيدية (الديوه جي)
+- اليزيدية (سعيد سمو)
+- اليزيدية (صديق الدملوجي)
+- وحدة الوجود العقلية (الوائلي)
+- عقائد الباطنية (الهادي الطاهري)
+- المذاهب في العراق (الخيون)
+- الدرزية (نسيب مكارم)
+- عقائد الشيعة الاثني عشرية (جنوف)
+- شعر الأسماعيلية (عامر البصري)
+- المُخلص (الناصر صديقي[fn:8])
+- المعتزلة والثورة (عمارة)
+- نقد الخطاب السلفي (السمهوري)
+- المعتزلة ثورة الفكر الاسلامي الحر
+- The Monks of War (Desmond Seward)
+- God's Philosophers (Hannam)
+- Doubt (Hecht)
+- Life After Death (Segal)
+- Rome's Gothic Wars (Kulikowski)
+- Rubicon (Holland)
+- Life in a Medieval City (Gies)
+- Life in a Medieval Village (Gies)
+- Cathedral, Forge, and Waterwheel (Gies)
+- Evicted From Eternity (Herzfeld)
+- أضواء على السنة المحمدية (أبو زهرة)
+- فتح المضيرة (أبو زهرة)
+- العدالة الاجتماعية في الإسلام (قطب)
+- شروط النهضة (مالك بن نبي)
+- مشكلة الأفكار في العالم الإسلامي (مالك بن نبي)
+- معاوية (العقاد)
+- الإسلام والاستبداد السياسي (محمد الغزالي)
+- ماذا خسر العالم بانحطاط المسلمين (الندوي)
+- المذاهب التفسيرية عند الشيعة والسنة
+- براءة الأشعريين من عقائد المخالفين
+- الصواعق الإلهية
+- كشف الارتياب في أتباع محمد بن عبد الوهاب
+- كتاب الأشاعرة في ميزان أهل السنة
+- الفكر الشيعي المبكر
+- كلمات قصر لعلي بن أبي طالب
+- الرد على المتعصب العنيد المانع من ذم يزيد
+- الأباضية عقيدة ومذهبة
+- الدروز (أوبنهايم)
+- السيرة النبوية (مهران)
+- الإمام علي (مهران)
+- الإمامة (مهران)
+- العروة الوثقى (محمد عبده)
+- معجم المؤلفات الاسلامية[fn:68]
+- الفرق الصوفية في الإسلام[fn:75]
+- الإباضية بين الفرق الإسلامية
+- الخوارج (عبد الكريم عقل)
+- عصر الخلافة الراشدة[fn:79]
+- تطهير الجنان واللسان[fn:80]
+- الإجابة[fn:81]
+- وحدة الوجود العقلية
+- نحو انقاذ التاريخ الإسلامي
+- ملخص تاريخ الخوارج
+- ملحم شكر[fn:84]
+- كيف تسللت الليبرالية
+- ماذا خسر العالم بانحطاط المسلمين
+- الغلو في مصطلح الملل والنحل والرجال
+- تيارات الفكر الإسلامي (محمد عمارة)
+- القول الواجبب (الهندي)
+- أزمة أفريقية الاقتصادية في الإسلام
+- Christianity/Islam (Schoun)
+- النصوص (الآقادادي)
+- مناهج علماء المسلمين في البحث العلمي
+- الإسلام على مفترق الطرق
+- الإسلام (عبد القادر عودة)
+- الإسلام يتحدى (وحيد الدين)
+- التجديد والتحريم والتأويل
+- الخطاب والتأويل
+- النص، السلطة، الحقيقة
+- نقد الخطاب الديني
+- الديمقراطية في الإسلام
+- المسألة اليهودية (حسين)
+- محنة الإسلام الكبرى (طه بدر)
+- السلطة في الإسلام (عبدالجواد ياسين)
+* Democracy
+- _ديموقراطيات في خطر (ألفريد ستبيان)_
+- الديموقراطية ونقادها (دال)
+- _الديموقراطية: أبحاث مختارة (لاري دايموند)_
+- _عالم بلا قانون (فيليب ساندز)_
+- _موت الديموقراطية (هث)_
+- الديموقراطية الإله الذي فشل (هوبا)
+* History of Mathematics
+
+# This is a VERY good idea, I would understand math much worse if i hadn't read
+# about where the concepts came from and what problems led to developing them
+# further. Read the books by William Dunham, especially Journey through Genius.
+# Men of Mathematics by Bell is a good classic with biographies of major
+# mathematicians. Overall best is probably Stillwell's Mathematics and its
+# History, which will also teach you real math from basically all fields.  Another
+# one you might want to check out is Mathematics: Its Content, Methods and Meaning
+# by a team of soviet authors. Not historical but a great overview.
+
+- Journey through Genius
+- Men of Mathematics
+- Mathematics and its history
+- Mathematics: Its Content, Methods and Meaning
+
+- How to Prove It (Velleman)
+- Elements of Set Theory (Enderton)
+- Foundation of Analysis (Landau)
+- Basic Mathematics (Lang)
+- Principle of Mathematics (Oakley)
+- Transition to Advanced Mathematics
+- Calclus (Spivak)
+
+* Greek
+- Ancient Greece[fn:19]
+- Bibliotheca (Apollodorus)
+- The Iliad, The Odyssy (Alexander Pope's Translation)
+- Works and Days (Theogony)
+- The Histories (Herodotus)
+
+* Humanities & Anthropology
+
+
+- النفس والجنس والجريمة
+- علم الفراسة (زيدان)
+- تأملات في الفلسفة الأولى (ديكارت)
+- الفلسفة (موضوعات مفتاحية)
+- المثقفون العرب والتراث[fn:83]
+- تاريخ التأريخ (كوثراني)
+- Engaging Political Philosophy
+- Black Skin, White Masks
+- الهوبيت والفلسفة
+- تَفَكَر (بلاكبرن)
+- جون لوك (دن)
+- الموسوعة النفسية الجنسية
+- مدرسة فرانكفورت
+- Political Psychology[fn:58]
+- Reflections from Damaged Life (Moralia)
+- Hegel's Dialectic of Desire and Recognition-State
+- The Big Question (Higgins)
+- Mutanabii (Larkin)
+- The Alternative (Mosley)
+- The Revolt of the Masses
+- Popular Government (Maine)
+- Heretics (Chesterton)
+- Imperium (Varange)
+- For My Legionaries (Codreanu)
+- Into the Darkness (Stoddard)
+- Short History of Decay (Cioran)
+- The Bow of Ulysses (Froude)
+- Essay on Catholicism (Cortes)
+- The Constitution of Liberty (Hayek)
+- Men Among The Runis (Evola)
+- A Defense of Aristocracy
+- The Death of the West
+- Industrial Society and Its Future
+- The Biocentric Worldview (Klages)
+- The Dicline of the West (Splengler)
+- Reflections on the Revolution in France
+- Origins and Doctrine of Fascism
+- The Culture of Critique (MacDonald)
+- Understanding Human History (Hart)
+- Hitler's Revolution (Tedor)
+- Race and the Third Reich (Hutton)
+- Hellstorm (Goodrich)
+- Hilter (Stolfi)
+- Understanding the Jewish Influence (MacDonald)
+- Revolt Against Modern World (Evola)
+- The Way of Men (Donovan)
+- Why The West is Best (Ibn Warraq)
+- Why I'm not M (Ibn Warraq)
+- A Handbook of Traditional Living (Raido)
+- The Essential Difference (Baron-Cohen)
+- Blood and Soil (Bramwell)
+- Madison Grant
+- Man Swarm (Foremen)
+- Ecology (Arne Naess)
+- A Fresh Look at Empiricism
+- Between Two Ages  (Brzezinski)
+- Brave New World (Huxley)
+- The Scientific Outlook
+- War Against The Weak (Black)
+- The Grand Chessboard (Brzezinski)
+- Mysteries of the Grail[fn:1]
+- Metaphysics of War[fn:3]
+- Meditation on the Peaks[fn:4]
+- The Metaphysics of Sex[fn:6]
+- The Hermetic Tradition[fn:7]
+- Introduction to Magic
+
+* Fitness
+- Science and Practice of Strength Training
+- Starting Strength (Rippetoe)
+
+* Social Nationalism
+
++ Facing Total War: German Sucicty, 1914-1918
++ Germany after the First World War
++ The Coming of the Third Reich
++ Weimar: Why did German Democracy Fail?
++ The Nazi Voter: The Social Foundations of Fascism in Germuny
++ Nazism, 1919-1945. A Documentary Reader, Vol I: The Rise to Power
++ The Idealogical Origins of Nazi Imperialism
++ The Crisis of German Ideology: Intellcctusl Origins of the Third Reich
++ Nictzsche, Godfather of Fascism?: On the Uses and Abuses of a Philosophy
++ The Nietzsche Legacy in Germany: 15901990
++ Who Voted for Hitler? (Hamilton)
++ Jews and the German State: The Political History of a Minority
+
+* Middle East Struggle Related
+- Apocalypse in Islam
+- From Deep State to Islamic State
+- Gaza: A History
+- The Arab Revolution
+- التنظيمات اليسارية في الخليج والجزيرة
+- Terrorism[fn:42]  (Eqbal)
+- الطاغية (إمام[fn:2])
+- The Unmaking of Arab Socialism (Kadri)
+- Egypt[fn:43]
+- Middle East Illusions
+- Can Non-Europeans Think? (Dabashi)
+- The Invention of the Jewish People
+- العربية السعودية[fn:44]
+- في المسألة العربية
+- المحنة العربية[fn:45]
+- أن تكون عربيا في أيامنا
+- أزمة الحضارة العربية أم أزمة البرجوازيات العربية؟
+- مدخل إلى نقض الفكر الطائفي (مهدي عامل)
+- عروبة مِصر (غالي شكري)
+- في نقد الخطاب العربي الراهن
+- تكوين العقل العربي
+- سقوط إسرائيل (باري شميش)
+- سورية[fn:46]
+- _العرب_[fn:47]
+- بحوث في التاريخ الاجتماعي والثقافي للجزائر إبان الاحتلال الفرنسي
+** On The Zionism Movement and The Israeli Occupation in Palestine
+- Ethnocracy (Yifachel)
+- Language They Understand (Thrall)
+- Invention of Ancient Israel
+- Gaza in Crisis (Chomsky)
+- اتفاق أوسلو وتداعياته
+- الفكر السياسي الفلسطيني 1964-1974
+- حول التناقض والممارسة في الثورة الفلسطينية]]
+- ما بعد الصهيونية ومستقبل المجتمع الإسرائيلي
+- الاقتصاد السياسي لصناعة التقنية العالية في اسرائيل
+- استراتيجية التحرير الكامل واستراتيجية الحل السياسي
+- الهيكل التنظيمي للانتفاضة وأساليب العمل ربعي المهدون
+- شبهات حول الثورة الفلسطينية
+- الصهيونية غير اليهودية
+** Authors                                                            :noexport:
+- Jean-Pierre Filiu
+* Misc Authors
+- Antony C. Sutton
+- Immanuel Wallerstein
+- Gustave Doré
+- Dante Alighieri
+- Walter Rodney
+* Poetry
+- +The Canteos (Pound)+
+- Collected Poems (Kipling)
+- Collected Poems (T.S. Eliot)
+- Complete Poetry (William Bake)
+- The Unfortunates (Bear)
+* Politics
+- _Propaganda and the Public Mind (Chomsky)_
+- The Protestant Ethic (Weber)
+- The New Age of Empire (Andrews)
+- Anarchism (Guerin)
+- Postcapitalist Desire (Fisher)
+- The Myth of Religious Violence
+- The Great Delusion (John Mearsheimer)
+- The Fourth Political Theory
+- Biology as ideology (Lewontin)
+- Political Psychology (Houghton)
+- How Democracies Die (Levitsky)
+- The Year 501
+- Soft Power (Nye)
+- How Fascism Works (Stanley)
+- Desert (Anonymous)
+- العلمانية الجزئية والعلمانية الشاملة
+- الدين والعلمانية في سياق تاريخي
+- أميركا والإبادات الجماعية
+- فخ النيوليبرالية في دول الخليج
+- الطريق إلى التطرف
+- المثقفون العرب والتراث
+- المدينة الإسلامية والأصولية والإرهاب
+- Occupy (Chomsky)
+- Perilous Power[fn:25] (Chomsky)
+- Hegemony or Survival (Chomsky)
+- Imperial Ambitions (Chomsky)
+- Pirates and Emperors (Chomsky)
+- The Leaderless Revolution (Ross)
+- The China Model[fn:60]
+- The Impossible State[fn:61]
+- تفكيك الإشتراكية العربية
+- جذور العنصرية العربية
+- لماذا نكره الإسلام السياسي
+- Global Culture (Featherstone)
+- Rogue States (Chomsky)
+- النبوءة والسياسة
+- طريق الحرير (فرانكوبان، ب)
+- Nervous States: Democracy and the Decline of Reason (Davies, W)
+* Science-related
+- Fossils (Thomson)
+- The Behaviour of the Domestic Cat
+- In Defence of Dogs (Bradshaw)
+- The Domestic Cat (Bateson)
+- كيف ينتشر السلوك؟
+- The Mismeasure of Man[fn:78]
+- علم النفس مذهبًا (فيتز، ب)
+* Chess
+- Amateur to IM (Hawkins)
+- Chess for Zebras (Rowson)
+- Chess Fundamentals (Capablanca)
+- Judgement and Planning in Chess (Euwe)
+- Winning with Chess Psychology
+- Think Like a Grandmaster (Kotov)
+- Understanding Chess Endgames
+* Heritage
+- تاريخ الحسين
+- حديقة الحقيقة
+- تاريخ الزركلي
+- وفيات الأعيان
+- تاريخ الرسول والملوك
+- تاريخ الإسلام
+- الكامل في التريخ
+- الطبقات الكبير
+- سير أعلام النبلاء
+- مرآة الزمان في تاريخ الأعيان
+- البستان الجامع
+- التاريخ المعتبر
+* Aesthetics
+- _Culture and Value (Wittgenstein)_
+- _Esoterism as Principle and as Way_
+- شرح نهج البلاغة
+- الدر الفريد
+- The Flinch (Smith)
+- Wisdom for the Soul
+- التذكرة
+- قصص العرب
+- نفح الطيب من غصن الأندلس الرطيب
+- مقامات الحريري
+- قول على قول
+- حلية الأولياء
+- Joseph de Maistre
+- Alberto Moravia
+- Ismail Kadare
+- Ivan Turgenev
+- Jonathan Swift
+* Literature
+
+- The Illuminatus! Trilogy (Wilson, R. and Shea, R.)
+- Confession (Gorky, M.)
+- Death with Interruptions (Saramago, J.)
+- Perfume: The Story of a Murderer (Suskind, P.)
+- Prljave ruke (Kazantzakis, N.)
+- Christ Recrucified (Kazantzakis, N.)
+- Nausea (Sartre, J.-P.)
+- Growth of the Soil (Hamsun)
+- جناح السرطان (سولجينيتسين، أ.)
+- Confessions of a Mask (Mishima, Y.)
+- A Hero of Our Time (Lermontov)
+- Storm of Steel (Junger)
+- The Glass Bees (Junger)
+- The Bostonians (James)
+- Tarr (Lewis)
+- The Chosen (Potock)
+- Buddenbrooks (Mann)
+- The Magic Mountain (Mann)
+* Uncatagorized
+
+- /Anarchism/ by Daniel Guerin
+- /Anarcho-Syndicalism: Theory and Practice/ by Rudolf Rocker
+- Bakunin on Anarchy: Selected Works by the Activist-Founder of World Anarchism
+- /Demanding the Impossible: A History of Anarchism/ by Peter H. Marshall
+- /Homage to Catalonia/ by George Orwell
+- /Mutual Aid: A Factor in Evolution/ by Peter Kropotkin
+- /The Origins of the Korean War Vol I. & II  by Bruce Cumings\\
+- /The Battle for Guatemala: Rebels, Death Squads, and U.S. Power  by Susanne Jonas\\
+- Checkout losing hope (reread)
+- /Imperial State and Revolution: The United States and Cuba, 1952-1986/ by Morris H. Morley
+- The Horrors of the Half-Known Life: Male Attitudes Toward Women and Sexuality in Nineteenth-Century America
+- /The People's Religion: American Faith in the 90's/ by George Gallup Jr. and Jim Castelli
+- /White-Out: The C.I.A., Drugs and the Press/ by Alexander Cockburn and Jeffrey St. Clair
+- /The ABCs of Political Economy * * by Robert Hahnel/
+- /Business Organization and the Myth of the Market Economy  by William Lazonick\\ /
+- /Business as a System of Power/ by Robert A. Brady
+- /Capitalism and Its Economics: A Critical History/ by Douglas F. Dowd
+- /The Corporation: The Pathological Pursuit of Profit and Power/ by Joel Bakan
+- /Corporate Control, Corporate Power  by Edward S. Herman\\
+- /Wall Street: How It Works and for Whom/ by Doug Henwood
+- /The Wealth of Nations/ by Adam Smith
+- /No Contest: The Case Against Competition/ by Alfie Kohn
+- /Moral Minds: The Nature of Right and Wrong/ by Marc D. Hauser
+- /America by Design: Science, Technology, and the Rise of Corporate Capitalism  by David F. Noble\\
+- /Bad Samaritans/ by Ha-Joon Chang
+- /Economics and World History: Myths and Paradoxes  by Paul Bairoch\\
+- /The Bolsheviks and Workers' Control, 1917 to 1921  by Maurice Brinton\\
+- /The End of Empire  by John Strachey\\
+- /The Unknown Revolution, 1917-1921  by Voline\\
+- /The Absence of Peace: Understanding the Israeli-Palestinian Conflict  by Nicholas Guyatt\\
+- /Blaming the Victims: Spurious Scholarship and the Palestinian Question  edited by Christopher Hitchens and Edward Said\\
+- /The Holocaust Industry: Reflections on the Exploitation of Jewish Suffering  by Norman G. Finkelstein\\
+- /Image and Reality of the Israel-Palestine Conflict/ by Norman G. Finkelstein
+- /The Israeli Connection: Who Israel Arms and Why/ by Benjamin Beit-Hallahmi
+- /Israeli Foreign Policy: South Africa and Central America/ by Jane Hunter
+- /My Home, My Prison  by  Raymonda Hawa Tawil\\
+  /
+- /The Rise and Fall of Palestine: A Personal Account of the Intifada Years/ by Norman G. Finkelstein
+- /The Third Way: A Journal of Life in the West Bank  by Raja Shehadeh\\
+  /
+- /The West Bank Story/ by Rafik Halabi
+- /Beyond Hypocrisy: Decoding the News in an Age of Propaganda  by Edward S. Herman\\
+- /The British Press: a Manifesto  edited by James Curran\\
+- /The Daily Newspaper in America: The Evolution of a Social Instrument  by  Alfred McClung Lee\\
+- /Inventing Reality: The Politics of the Mass Media  by Michael Parenti\\
+- /Propaganda/ by Edward L. Bernays
+- /Egypt in the Reign of Muhammad Ali  by  Afaf Lutfi Al-Sayyid Marsot\\
+- /The Fire This Time: U.S. War Crimes in the Gulf  by Ramsey Clark\\
+- /The U.S. Press and Iran: Foreign Policy and the Journalism of Deference/ by William A. Dorman and Mansour Farhang
+- /A Discourse on the Origins of Inequality/ by Jean-Jacques Rousseau 
+- /Main Currents of Marxism: Its Rise, Growth, and Dissolution/ by Leszek Kolakowski
+- /The/ Real /Terror Network: Terrorism in Fact and Propaganda/ by Edward S. Herman
+- /Terrorism and the State: A Critique of Domination Through Fear/ by William D. Perdue
+- /Western State Terrorism/ edited by Alexander George
+- /After Such Knowledge, What Forgiveness?/ by Jonathan C. Randal
+- /The American Occupation of Japan: The Origins of the Cold War in Asia/ by Michael Schaller
+- /In Search of Enemies: A C.I.A. Story  by John Stockwell/
+- /Inevitable Revolutions: The United States in Central America  by Walter LaFeber/
+* Footnotes
+[fn:28]Islam and Racial Capitalism in Algeria
+
+[fn:27] Vol. 12
+[fn:19] A political, social, and cultural history
+
+[fn:7] This important survey of alchemical symbols and doctrines sets.  forth the
+mysterious worldview and_teachings of the pracitioners of the "royal art" One of
+the leading exponents of the Hermetic tradition, Julius Evola_demonstrates _the
+singularity of subject matter tha lies behind the words of all adepts in al
+ages, showing how alchemy-often misunderstood as primitive,chemistry or a mere
+template for the Jungian process of ‘individuation’is nothing less than a
+universal Secret science of human and natural transformation.
+
+[fn:6] A comprehensive work on the metaphysical aspects of sexuality. Julius Evola
+sheds new light on the mystical and spiritual expression of sexual love. This
+in-depth study explores the sexual rites of sacred traditions, and shows how
+religion, mysticism, folklore, and mythology all contain erotic forms in which
+the deep potentialities of human beings are recognized.
+
+[fn:4] Evola articulates the close relationship between the physical rigors of
+mountain climbing and the ascent of the initiate toward self-transcendence.
+
+Julius Evola, a leading exponent of esoteric thought, was also an ardent
+mountain climber who personally scaled the peaks of the Tyrols, Alps, and
+Dolomites. For Evola the physical conquest of a mountain, with all the courage,
+selftranscendence and mental lucidity that it entails, becomes an inseparable
+and complementary part of spiritual awakening. It is no coincidence that many
+ancient cultures chose mountains as the abodes of their gods and considered the
+rigorous ascent of peaks as the task of heroes and initiates. In modern times,
+which tend to suffocate the heroic with naked self interest, the mountain still
+forms part of the profound dimension of spirit where the soul finds within
+itself more than what it thought itself to be. In Meditations on the Peaks,
+Evola combines recollections of his own experiences with reflections on other
+inspirational men and women who shared his view of the transcendent greatness of
+mountains.
+
+[fn:3] These essays, originally written by Evola during the 1930s and '40s, deal
+with war from a spiritual and heroic perspective. Evola selects specific
+examples from the Nordic, Vedic, Roman, Persian, Islamic and other traditions to
+demonstrate how traditionalists can prepare themselves to experience war in a
+way that will allow them to overcome the limited possibilities offered by our
+materialistic and degraded age, thereby transcending the Age of Kali and
+entering the world of heroism by achieving a higher state of consciousness,
+which Evola depicts as an effective realisation of the ultimate purpose of life.
+
+His call to action, however, is not that of today's armies, which ask nothing
+more of their soldiers than to become mercenaries in the temporary employ of a
+decadent class. Still less is it a call to misdirected or nihilistic violence.
+Rather, Evola presents the warrior as one who lives an integrated and purposeful
+way of life - one who adopts a specifically Aryan view of the world in which the
+political aims of a war are not its ultimate justification, but rather war is
+seen as merely a means through which the warrior finds his calling to a higher
+and more complete form of existence beyond the political, and in accordance with
+the teachings of the great spiritual texts. More importantly, he shows how the
+ideal of the warrior extends beyond the battlefield into other aspects of
+traditional living, even in times of peace.
+
+
+[fn:1] In this important study of the meaning of the Grail, one of Europe's
+greatest esoteric philosophers discloses the pre-Christian and initiatic sources
+of this symbolic motif that is so central to Western mythology and culture. He
+demonstrates how the main features of the legend are from an older tradition
+analogous to the great heroic sagas and cycles of the North, and that the Grail
+itself is a symbol of initiation. Evola uncovers the hidden meaning in the often
+surreal adventures of the knights who searched for the Grail, interpreting them
+as inner experiences and tests for the seeker. He also explores the history of
+the myth in the Middle Ages, its use by the Knights Templar and the Cathars, its
+legacy during the decline of the Holy Roman Empire, and its links with
+Rosicrucianism, alchemy, and Masonry.
+
+This excursion into the realm of the Grail throws new light on an endlessly
+fascinating subject.
+[fn:23] A Journey Through Yugoslavia.
+[fn:24] Jewish Survival in Europe.
+[fn:53] An American History
+[fn:54] A Biography
+[fn:55] Lost Britain
+[fn:10] The Debate on Colonialism, Eurocentrism, and History
+[fn:11] The Complete Story of England's Most Notorious Dynasty
+[fn:12] The Savage Season of 1964 That Made Mississippi Burn and Made
+[fn:13] Operation Starlite and the Beginning of the Blood Debt in Vietnam
+[fn:14] The Personal Correspondence of Harry S. Truman and Dean Acheson, 1953-1971
+[fn:15] The Seven Years' War and the Fate of Empire in British North America,
+1754-1766
+[fn:16] The Epic Story of the Athenian Navy and the Birth of Democracy
+[fn:17] A history of American secularism
+[fn:18] How England Plundered Holland's Glory by William Appleman Williams. See
+Also A People's History of American Empire (Zinn)
+
+[fn:20] The Fragile Financial Foundation of China's Extraordinary Rise
+[fn:21] Mahatma Gandhi and His Struggle with India
+[fn:22] Freedom and Revolution in Southeast Asia
+[fn:83] طرابيشي
+[fn:58] Situations, Individuals, and Cases
+[fn:78] Jay Gould
+[fn:25] The Middle East and US Foreign Policy. Dialogues on Terror, Democracy, War,
+and Justice
+[fn:60] Political Meritocracy and the Limits of Democracy
+[fn:61] Islam, Politics, and Modernity's Moral Predicament
+[fn:42] Theirs & Ours
+[fn:2] دراسة فلسفثية لصور من الاستبداد السياسي
+[fn:43]  Revolution, Failed Transition and Counter-Revolution
+[fn:44] مملكة في مواجهة المخاطر
+[fn:45] الدولة ضد الأمة
+[fn:46] درب الآلام نحو الحرية
+[fn:47] من مرج دابق إلى سايكس – بيكو
+[fn:48]  A Short History of a Revolutionary Idea
+[fn:64] A Citizen's Guide to the Economy
+[fn:49]  تجارب الصين - فيتنام - كوبا
+[fn:59] The History of a Dangerous Idea
+[fn:5] A History of the Conflict Between Christendom and Islam
+[fn:82] الخبرة الإيرانية
+[fn:51]  The Syrian Congress of 1920 and the Destruction of its Historic
+Liberal-Islamic Alliance
+[fn:69] رسالة دكتوراة عز الدين سامي كساب
+[fn:72] Algeria, Decolonization, and the Third World Order
+[fn:73] The Kabyle Polity in Pre-Colonial Algeria
+[fn:74] طه التكريتي
+[fn:70] قاسم سعد الله
+[fn:71]  جمال فنان
+[fn:77] مهدي بن يونس
+[fn:68] في الرد على الفرق الوهابية
+[fn:8] بحث في الفكر المهدوي
+[fn:75] ترمنجهام
+[fn:79] أكرم ضياء العمري
+[fn:80] ابن حجر الهيثمي
+[fn:81] فيما استدركته عائشة على الصحابة
+[fn:84] أضواء على الصابئين
+[fn:62] The Secret Intelligence Program that Brought Nazi Scientists to America
+[fn:63] America's Deadliest Labor War
+[fn:26] A Guide to Pseudo-Events in America
+[fn:56] A Hard Country
+[fn:57]  Love and Betrayal in Eighteenth-Century India
+[fn:9] The Forgotten Byzantine Empire That Rescued Western Civilization
+[fn:50] السياسة الأميركية العابرة للقارات في الأمن والاقتصاد ومكافحة الإرهاب

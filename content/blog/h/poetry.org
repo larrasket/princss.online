@@ -1,0 +1,6 @@
+#+title: ~/poetry
+#+options: toc:nil
+* you are being redirect to [~/poetry]. please be patient;
+#+begin_export html
+<meta http-equiv="refresh" content="2;url=https://mega.nz/folder/eXZkADYI#kRN8T3_wIC-675s73tEcIw" />
+#+end_export

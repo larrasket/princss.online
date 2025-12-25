@@ -1,0 +1,124 @@
+#+title: Nietzsche's epitaph
+#+DATE: <2022-08-31 Wed 07:28>
+:PROPERTIES:
+:ID:       zn45uxv0t2k0
+:END:
+#+OPTIONS: toc:nil
+
+
+#+BEGIN_propert
+{{{s}}} [[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]
+#+END_propert
+
+#+BEGIN_abstract
+You return from where you came: \\
+not dust to dust, \\
+but fire to fire. \\
+
+There will be no more striding the Alps, \\
+no more aphorisms, \\
+no further übermensch notes. \\
+#+END_abstract
+
+/The following paining of The Torino Horse is the essence;/
+
+
+"Life itself must have some interest in not having such a type of
+self-contradiction die out. For an ascetic life is such a self-contradiction.
+Here a resentment without equal is in control, something with an insatiable
+instinct and will to power, which wants to become master, not over something in
+life but over life itself, over its deepest, strongest, most basic conditions.
+Here an attempt is being made to use one's power to block up the sources of that
+power. Here one directs one's gaze, with a green malice, against one's inherent
+physiological health, particularly against its means of expression—beauty and
+joy—while one experiences and seeks for a feeling of pleasure in mistrust,
+atrophy, pain, accident, ugliness, voluntary loss, self-denial,
+self-flagellation, self-sacrifice. All this is paradoxical to the highest
+degree. Here we stand in front of a dichotomy which essentially wants to be a
+dichotomy, which enjoys itself in the midst of this suffering and gets even more
+self-aware and more triumphant in proportion to the decrease in its own
+pre-requisite, the physiological capacity for life. "Triumph in the ultimate
+agony"—under this supreme sign the ascetic ideal has always fought. Inside this
+riddle of seduction, in this picture of delight and torment it sees its highest
+light, its salvation, its final victory. Crux, nux, lux [cross, nut, light]—for
+the ascetic ideal these are all one thing."
+
+It was a thunderbolt reading [[id:1634e2c7-c5aa-44bf-b0c7-00ff078366f3][Nietzsche]] collected poems for the first time,
+felt like discovering a revelation of his, also over the time and over grasping
+Nietzsche's 'philosophy' more and more, it turns to make any verselet standing
+along with, let's say, a piece from Ecce Homo, as a very atypical thing.
+
+Unambiguously the reason for that is correlated to the perspectivism Nietzsche
+had about the master–slave morality, and the realization of power, and cruelty
+to pity, "*Not to take a thing pathetically*.—What we do to benefit ourselves
+should not bring us in any moral praise, either from others or from ourselves,
+and the same remark applies to those things which we do to please ourselves. It
+is looked upon as bon ton among superior men to refrain from taking things
+pathetically in such cases, and to refrain from all pathetic feelings: the man
+who has accustomed himself to this has retrieved his naïveté."[fn:1] The problem
+with this is that the discourse of Nietzsche's life himself is very pathetic and
+contradicted to this mentality. Moreover, what's make me feel how much did it
+cause pain to him, is that he talked a lot about this 'shame' of being tired
+against your own philosophy, the self-adversary! This is what The Torino Horse
+paining was to, it is not the slave morals hugging the horse nor the master
+whipping it, the but, a tired 'knight' against his philosophy:
+
+#+begin_quote
+SHAME.—Look at that noble steed pawing the ground, snorting,
+longing for a ride, and loving its accustomed rider—but, shameful
+to relate, the rider cannot mount to-day, he is tired.—Such is
+the shame felt by the weary thinker in the presence of his own
+philosophy!
+#+end_quote
+
+"عار. ها هو فرس السباق يضرب بحوافره الأرض ويصهل، متشوق للسباق، مُحب للفارس الذي اعتقا    د
+امتطاءه، ولكن ياللعار! لا يستطيع ركوب الفرس، إنه مُتعب. كذا هو المُفكر المتعب أمام فلسفته"[fn:2].
+
+
+
+*The desire to excite pity.*  Larochefoucauld is certainly right when, in the
+most noteworthy passage of his self-portrait (first printed 1658), he warns all
+those who possess reason against pity, when he advises that it be left to those
+people of the commonality who (because their actions are not determined by
+reason) require the passions if they are to be brought to the point of aiding a
+sufferer or energetically intervening in a case of misfortune; while pity, in
+his (and Plato' s) judgment, enfeebles the soul. One should, to be sure,
+manifest pity, but take care not to possess it; for the unfortunate are so
+stupid that the manifestation of pity constitutes for them the greatest good in
+the world. - Perhaps one can warn even more strongly against this having pity if
+one understands this need felt by the unfortunate, not precisely as stupidity
+and intellectual deficiency, as a kind of mental disturbance that misfortune
+brings with it (that, indeed, is how Larochefoucauld seems to conceive it), but
+as something quite different and more suspicious. Observe children who weep
+and wail in order that they shall be pitied, and therefore wait for the moment
+when their condition will be noticed; live among invalids and the mentally
+afflicted and ask yourself whether their eloquent moaning and complaining, their
+displaying of misfortune, does not fundamentally have the objective of hurting
+those who are with them: the pity which these then express is a consolation for
+the weak and suffering, inasmuch as it shows them that, all their weakness
+notwithstanding, they possess at any rate one power: the power to hurt. In this
+feeling of superiority of which the manifestation of pity makes him conscious,
+the unfortunate man gains a sort of pleasure; in the conceit of his imagination
+he is still of sufficient import­ ance . to cause affliction in the world . The
+thirst for pity is thus a thirst for self-enjoyment, and that at the expense of
+one's fellow men; it displays man in the whole ruthlessness of his own dear
+self: but not precisely in his 'stupidity', as Larochefoucauld thinks. - In the
+conversations of social life, three-quarters of all questions are asked,
+three-quarters of all answers given, in order to cause just a little pain to the
+other party; that is why many people have such a thirst for social life: it
+makes them aware of their strength. In such countless but very small doses in
+which malice makes itself felt it is a powerful stimulant to life: just as
+benevolence, disseminated through the human world in the same form, is the
+ever available medicine. - But will there be many honest men prepared to admit
+that causing pain gives pleasure? that one not seldom entertains oneself ­ and
+entertains oneself well - by mortifying other people, at least in one's own
+mind, and by firing off at them the grapeshot of petty malice? Most are too
+dishonest, and a few too good, to know anything of this puderzdum; and they
+are welcome to deny if they like that Prosper Merimeet is right when he says:
+"Sachez aussi qu'il n'y a rien de plus commun que de faire Ie mal pour Ie
+plaisir de Ie fairet".
+
+* Footnotes
+[fn:2] Ibid.
+
+[fn:1] Nietzsche, F. W.,; Kennedy, J. M. (2007). The dawn of day. Dover Publications.

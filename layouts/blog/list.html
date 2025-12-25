@@ -1,0 +1,63 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/blog.css" />
+{{ end }}
+
+{{ define "main" }}
+<div class="blog-page">
+  <nav class="breadcrumb">
+    <a href="/">home</a> <span class="sep">→</span> 
+    {{ if eq .Section "blog" }}
+      {{ if in .File.Dir "t/" }}
+        <a href="/blog/">blog</a> <span class="sep">→</span> topics
+      {{ else }}
+        blog
+      {{ end }}
+    {{ end }}
+  </nav>
+  
+  <main>
+    {{/* Check if this is /blog/t/ section */}}
+    {{ if in .File.Dir "t/" }}
+    
+    {{/* TOPICS PAGE - show only topic links */}}
+    <h1 class="page-title">Topics</h1>
+    <div class="topics-list">
+      {{ range .Pages }}
+      {{ $title := partial "org-title.html" . }}
+      {{ if $title }}
+      <a href="{{ .RelPermalink }}" class="topic-link">{{ $title }}</a>
+      {{ end }}
+      {{ end }}
+    </div>
+    
+    {{ else }}
+    
+    {{/* BLOG HOME - show recent posts from /p/ */}}
+    <h1 class="page-title">Blog</h1>
+    
+    {{- $allPages := slice -}}
+    {{- range (.Site.GetPage "/blog").RegularPagesRecursive -}}
+      {{- if in .File.Dir "p/" -}}
+        {{ $date := partial "org-date.html" . }}
+        {{ $allPages = $allPages | append (dict "page" . "date" $date) }}
+      {{- end -}}
+    {{- end -}}
+    {{- $allPages = sort $allPages "date" "desc" -}}
+    
+    <div class="posts-list">
+      {{ range $allPages }}
+      {{ $title := partial "org-title.html" .page }}
+      {{ if $title }}
+      <article class="post-entry">
+        <span class="date">{{ .date.Format "Jan 2, 2006" }}</span>
+        <a href="{{ .page.RelPermalink }}">{{ $title }}</a>
+      </article>
+      {{ end }}
+      {{ end }}
+    </div>
+    
+    {{ partial "extract-backlinks.html" . }}
+    {{ end }}
+  </main>
+</div>
+{{ end }}

@@ -1,0 +1,631 @@
+:PROPERTIES:
+:ID:       nm0dxtp02wj0
+:END:
+#+title: Islam
+#+filetags: :project:link:
+
+#+CAPTION: Allah is beautiful, loves beauty. (hadith)
+[[file:../i/gamil.jpg]]
+
+{{{indx}}}
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+* Notes                                                               :noexport:
+** Quraish meet to unify their response to the [[id:rjxga881zzj0][Prophet]] :drill:
+:PROPERTIES:
+:FC_CREATED: 2025-03-10T04:15:17Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       fn1jtek06ik0
+:CUSTOM_ID: fn1jtek06ik0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2025-03-10T04:15:17Z |
+:END:
+Quraish didn't have a single response to Islam, they rejected it as whole, but
+with no specific reason:
+
+- [[id:vqyalpk06ik0][Quran 28:57]]: they acknowledged the goodness of Quran, but refuse to accept it
+  due to economical privilege they possess
+- [[id:w4x55tk06ik0][Quran 25:21]] and [[id:90710vk06ik0][Quran 25:7]]: asking for an angel.
+- [[id:neg5twk06ik0][Quran 25:8]]: asking for a more wealthy man to have that Quran.
+- [[id:tahjazk06ik0][Quran 43:31]]: asking for an already existing leader.
+
+And others like in [[id:4i5bu6l06ik0][Quran 17:93]].
+
+[[id:6j1be9l06ik0][Walid ibn al-Mughira]], called for a meet between the leaders of Quraish so they
+can have only a single response, so they look solid in front of the Arab:
+
+#+begin_quote
+ثم إن الوليد بن المغيرة اجتمع إليه نفر من قريش ، وكان ذا سن فيهم ، وقد حضر
+الموسم فقال لهم : يا معشر قريش ، إنه قد حضر هذا الموسم ، وإن وفود العرب ستقدم
+عليكم فيه ، وقد سمعوا بأمر صاحبكم هذا ، فأجمعوا فيه رأيا واحدا ، ولا تختلفوا
+فيكذب بعضكم بعضا ، ويرد قولكم بعضه بعضا ؛ قالوا : فأنت يا أبا عبد شمس ، فقل وأقم
+لنا رأيا نقول به ، قال : بل أنتم فقولوا أسمع ؛ قالوا : نقول كاهن ، قال : لا والله
+ما هو بكاهن ، لقد رأينا الكهان فما هو بزمزمة الكاهن ولا سجعه ؛ قالوا : فنقول :
+مجنون ، قال : ما هو بمجنون لقد رأينا الجنون وعرفناه ، فما هو بخنقه ، ولا تخالجه
+، ولا وسوسته ، قالوا : فنقول : شاعر ؛ قال : ما هو بشاعر ، لقد عرفنا الشعر كله
+رجزه وهزجه وقريضه ومقبوضه ومبسوطه ، فما هو بالشعر ؛ قالوا : فنقول : ساحر ؛ قال :
+ما هو بساحر ، لقد رأينا السحار وسحرهم ، فما هو بنفثهم ولا عقدهم ؛ قالوا : فما
+نقول يا أبا عبد شمس ؟ قال : والله إن لقوله لحلاوة ، وإن أصله لعذق ، وإن فرعه
+لجناة - قال ابن هشام : ويقال لغدق - وما أنتم بقائلين من هذا شيئا إلا عرف أنه
+باطل ، وإن أقرب القول فيه لأن تقولوا ساحر ، جاء بقول هو سحر يفرق به بين المرء
+وأبيه ، وبين المرء وأخيه ، وبين المرء [ ص: 271 ] وزوجته ، وبين المرء وعشيرته .
+فتفرقوا عنه بذلك ، فجعلوا يجلسون بسبل الناس حين قدموا الموسم ، لا يمر بهم أحد
+إلا حذروه إياه ، وذكروا لهم أمره .
+
+فأنزل الله تعالى في الوليد بن المغيرة وفي ذلك من قوله : ذرني ومن خلقت وحيدا
+وجعلت له مالا ممدودا وبنين شهودا ومهدت له تمهيدا ثم يطمع أن أزيد كلا إنه كان
+لآياتنا عنيدا أي خصيما .
+#+end_quote
+
+** Lying in Hadith [[id:lwk8am20bzj0][Terminology]]                   :drill:
+:PROPERTIES:
+:ID:       grnb5731c5k0
+:FC_CREATED: 2024-05-05T07:50:19Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:50:19Z |
+:END:
+In hadith terminology "lying" is talking about a thing that came not to be true:
+
+#+begin_quote
+وحَدَّثَنِي مُحَمَّدُ بْنُ أَبِي عَتَّابٍ قَالَ حَدَّثَنِي عَفَّانُ عَنْ مُحَمَّدِ بْنِ يَحْيَى بْنِ سَعِيدٍ الْقَطَّانِ عَنْ أَبِيهِ
+قَالَ لَمْ نَرَ الصَّالِحِينَ فِي شَيْءٍ أَكْذَبَ مِنْهُمْ فِي الْحَدِيثِ قَالَ ابْنُ أَبِي عَتَّابٍ فَلَقِيتُ أَنَا مُحَمَّدَ بْنَ
+يَحْيَى بْنِ سَعِيدٍ الْقَطَّانِ فَسَأَلْتُهُ عَنْهُ فَقَالَ عَنْ أَبِيهِ لَمْ تَرَ أَهْلَ الْخَيْرِ فِي شَيْءٍ أَكْذَبَ مِنْهُمْ فِي
+الْحَدِيثِ قَالَ مُسْلِم يَقُولُ يَجْرِي الْكَذِبُ عَلَى لِسَانِهِمْ وَلَا يَتَعَمَّدُونَ الْكَذِبَ صحيح مسلم 1/ 43.
+#+end_quote
+
+#+begin_quote
+قال النووي في شرح الحديث: مَعْنَاهُ مَا قَالَهُ مُسْلِمٌ أَنَّهُ يَجْرِي الْكَذِبُ عَلَى أَلْسِنَتِهِمْ وَلَا
+يَتَعَمَّدُونَ ذَلِكَ لِكَوْنِهِمْ لَا يُعَانُونَ صِنَاعَةَ أَهْلِ الْحَدِيثِ، فَيَقَع الْخَطَأ فِي رِوَايَاتهمْ وَلَا
+يَعْرِفُونَهُ وَيَرْوُونَ الْكَذِب، وَلَا يَعْلَمُونَ أَنَّهُ كَذِبٌ. وَقَدْ قَدَّمْنَا أَنَّ مَذْهَب أَهْل الْحَقّ أَنَّ الْكَذِب هُوَ
+الْإِخْبَار عَنْ الشَّيْء بِخِلَافِ مَا هُوَ عَمْدًا كَانَ أَوْ سَهْوًا أَوْ غَلَطًا.
+#+end_quote
+
+
+Regardless of their intentions.
+** Ahkam                                                              :drill:
+:PROPERTIES:
+:ID:       dpy07wd1n4k0
+:FC_CREATED: 2024-05-05T07:50:16Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:50:16Z |
+:END:
+
+Sharia rulings fall into one of five categories known as “the five rulings”
+(الأحكام الخمسة, al-aḥkām al-khamsa):
+
+- farḍ/wājib (واجب / فرض) - compulsory, obligatory
+- mustaḥabb/mandūb (مستحب) - recommended
+- mubāḥ (مباح) - neutral, not involving God's judgment
+- makrūh (مكروه) - disliked, reprehensible
+- ḥarām/maḥzūr (محظور / حرام) - forbidden
+
+A typical human does all of the 5, the prophet only commit Wajib, mandub, Jaez.
+** Why does not men wear hijab                                        :drill:
+:PROPERTIES:
+:ID:       k2gde47183k0
+:FC_CREATED: 2024-05-05T07:50:13Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:50:13Z |
+:END:
+In [[id:nm0dxtp02wj0][Islam]] All humans wear some kind of Hijab, including men. "provided you with
+clothing to cover your bodies, and for luxury" (Quran 7:26), women's Hijab is
+branched from a mutual origin. However, it's obviously more sever than what
+men's Satr part, I think that this is due to:
+*** Unlike men, women rarely get arousal by opposite gender naked parts
+:PROPERTIES:
+:ID:       ztdbtm7183k0
+:END:
+  In the famous Kinsey study the majority of the women sample were not
+  erotically aroused by their observations[cite:@kinsey-1953-sexual-behav].
+  [[https://en.wikipedia.org/wiki/Kinsey_Reports][Kinsey's reports]] confirmed generally that men are much more likely to get
+  arousal by visuals[fn:1].
+
+  Although Gunter Schmidt and Volkmar Sigusch and Fred Klein
+  [cite:@schmidt-1970-sex-differ] was published to contradict the data from
+  Kinsey's report, it reported too that women are less aroused by visuals
+  although they are more aroused than men with the use of erratic literature,
+  this was also the same results reported by a survey study in
+  1977[cite:@gillan-1979-male], in which women were reportedly aroused by text
+  and voice intimate media more that visuals, unlike men.
+
+  Another survey study reported in [cite:@cook-1979-love-attrac p. 479] showed
+  that the majority of women themselves report that they do not enjoy male
+  nudity. Here's the results from page 479:
+#+DOWNLOADED: screenshot @ 2025-11-21 19:57:21
+[[file:../../media/notes/2025-11-21_19-57-21_screenshot.png]]
+*** Biologically, men are much more physically stronger than women
+According to the US' [[https://www.nsvrc.org/sites/default/files/publications_nsvrc_factsheet_media-packet_statistics-about-sexual-violence_0.pdf][National Sexual Violence Resource
+Center]][cite:@black-2011-nation-intim], "One in five women and one in 71 men
+will be raped at some point in their lives". The difference is obvious.
+Probably this does not need citations to prove, men's abilities make them able
+to defend themselves more than most mature women.
+
+** DONE [[mu4e:msgid:f592fd75-1e98-44ae-87d0-06f1121fdd78@larrasket][Why did the Prophet marry Zienab]] :@read:
+:PROPERTIES:
+:ID:       780bmhg0uek0
+:CUSTOM_ID: 780bmhg0uek0
+:END:
+- [2024-11-28 Thu 22:50] Baghawi adds a very good point:
+
+  #+begin_quote
+  جاء عن إسماعيل السُّدِّيّ في قوله: {وإذْ تَقُولُ لِلَّذِي أنْعَمَ اللَّهُ عَلَيْهِ وأَنْعَمْتَ عَلَيْهِ} الآية،
+  قال: بلغنا أن هذه الآية أُنزلت في زينب بنت جحش، وكانت أمها أميمة بنت عبد المطلب
+  عمة رسول الله صلى الله عليه وسلم، فأراد أن يزوِّجها زيد بن حارثة، فكرهتْ ذلك، ثم
+  إنها رضيتْ بما صنع رسول الله صلى الله عليه وسلم، فزوَّجها إياه، ثم أعلم الله نبيه
+  بعد أنها مِن أزواجه، فكان يستحي أن يأمر زيد بن حارثة بطلاقها، وكان لا يزال يكون
+  بين زيد وزينب بعض ما يكون بين الناس، فيأمره رسول الله صلى الله عليه وسلم أن يمسك
+  عليه زوجه، وأن يتقي الله، وكان يخشى الناس أن يعيبوا عليه أن يقولوا: تزوج امرأة
+  ابنه. وكان رسول الله صلى الله عليه وسلم قد تبنّى زيدًا([3]).
+
+  وعن علي بن زيد بن جدعان قال: قال لي علي بن الحسين زين العابدين: ما يقول الحسن في
+  قوله: {وتُخْفِي فِي نَفْسِكَ ما اللَّهُ مُبْدِيهِ}؟ فقلت له. فقال: لا، ولكن الله أعلم نبيَّه أن
+  زينب ستكون من أزواجه قبل أن يتزوجها، فلمّا أتاه زيد يشكو إليه قال: «اتق الله،
+  وأمسك عليك زوجك». فقال: قد أخبرتك أني مزوِّجكها، {وتُخْفِي فِي نَفْسِكَ ما اللَّهُ
+  مُبْدِيهِ}([4]).
+
+  وهذا التأويل استحسنه جمعٌ من المتقدّمين والمتأخرين، منهم الحكيم الترمذي، وأبو
+  المظفر السمعاني، والبغوي، وأبو بكر ابن العربي، والقاضي عياض، والقرطبي، وأبو
+  حيان، والجلال البلقيني، والتقي المقريزي، والقسطلاني، واللقاني، والبيجوري،
+  وغيرهم.
+
+  يقول البغوي بعد أن أورد رواية علي بن الحسين: (وهذا هو الأولى والأليق بحال
+  الأنبياء، وهو مطابق للتلاوة؛ لأن الله علم أنه يبدي ويظهر ما أخفاه، ولم يُظهِر غير
+  تزويجها منه، فقال: {زَوَّجْنَاكَهَا}، فلو كان الذي أضمره رسول الله صلى الله عليه وسلم
+  محبتها أو إرادة طلاقها لكان يظهر ذلك؛ لأنه لا يجوز أن يخبر أنه يظهره ثم يكتمه فلا
+  يظهره. فدل على أنه إنما عوتب على إخفاء ما أعلمه الله أنها ستكون زوجة له، وإنما
+  أخفاه استحياء أن يقول لزيد: التي تحتك وفي نكاحك ستكون امرأتي، وهذا قول حَسَنٌ
+  مُرضٍ)([5]).
+
+  وقال ابن العربي: (وإنما الجائز في ذلك ما رواه علي بن الحسين على ما تقدَّم، بدليل
+  قوله: {وتُخْفِي فِي نَفْسِكَ ما اللَّهُ مُبْدِيهِ}، والذي أبدى الله زواجها خاصَّة هو الذي أخفاه
+  رسول الله صلى الله عليه وسلم)([6]).
+  #+end_quote
+:LOGBOOK:
+CLOCK: [2024-11-28 Thu 22:23]--[2024-11-28 Thu 23:02] =>  0:39
+CLOCK: [2024-11-28 Thu 17:47]--[2024-11-28 Thu 17:57] =>  0:10
+:END:
+[2024-11-27 Wed 07:45]
+#+BEGIN_tag
+{{{t}}} [[id:rjxga881zzj0][Prophet]]
+#+END_tag
+** Muslim leaders didn't go to Haj                                    :noexport:
+:PROPERTIES:
+:ID:       comgzh20bek0
+:CUSTOM_ID: comgzh20bek0
+:END:
+[[https://www.alukah.net/culture/0/89706/%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%85%D8%B3%D8%A8%D9%88%D9%83-%D9%81%D9%8A-%D8%B0%D9%83%D8%B1-%D9%85%D9%86-%D8%AD%D8%AC-%D9%85%D9%86-%D8%A7%D9%84%D8%AE%D9%84%D9%81%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%83-%D9%84%D9%84%D9%85%D9%82%D8%B1%D9%8A%D8%B2%D9%8A/][This]] book mentions the Muslim leaders who didn't go to Haj:
+#+begin_quote
+ومن العجيب أن أحدًا من ملوك بني أيوب في مصر لم يحج
+#+end_quote
+[[id:7sq9bk71x2k0][Abbass Braham]]'s [[https://x.com/abbassbraham/status/926523009661206529/photo/1][comment]]:
+#+begin_quote
+أنّ القُدس ربّما كانت أهمّ عند الأيوبيين من مكّة
+#+end_quote
+** Did Jesus exist?
+:PROPERTIES:
+:ID:       qiu7ls60ifk0
+:CUSTOM_ID: qiu7ls60ifk0
+:END:
+Resources on historical Jesus.
+*** DONE [[https://youtu.be/SRfFLjWLybA][Did Jesus Exist? (video)]]   :@watch:
+:PROPERTIES:
+:ID:       ss4ggbv0zfk0
+:CUSTOM_ID: ss4ggbv0zfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-27 Fri 05:00]--[2024-12-27 Fri 05:45] =>  0:45
+CLOCK: [2024-12-27 Fri 03:59]--[2024-12-27 Fri 04:03] =>  0:04
+:END:
+*** TODO Did Jesus really exit?                                       :@idea:
+Chilton, Bruce & Craig A. Evans (ed.) (1998). Studying the historical Jesus:
+Evaluations of the state of Current Research. Brill.
+
+** The story of [[id:t5t7nst0fik0][Zunairah]]                         :noexport:drill:
+:PROPERTIES:
+:FC_CREATED: 2025-03-17T03:31:58Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:ID:       syr0nyt0fik0
+:CUSTOM_ID: syr0nyt0fik0
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2025-03-17T03:31:59Z |
+:END:
+After being manumitted, Zunairah lost her eyesight. The Quraysh claimed, "Al-lāt
+and Al-‘Uzzá are the ones that have taken away her sight." But she replied, "No,
+by the house of Allah, you are lying. Al-Lat and Al-Uzza can neither harm nor
+heal and they have not afflicted me. This is from Allah." Later she recovered
+her eyesight, a healing that the Muslims attributed to Allah. However, the
+Quraysh then said, "This is some of Muhammad's magic." When Abu Bakr saw she was
+being tortured, he bought and freed her, along with her companion in slavery
+Lubaynah. Her date of death is unknown, but she died after the Migration to
+Madina.
+** Azan was revealed out of a dream                                   :drill:
+:PROPERTIES:
+:ID:       u0nio4c0l3k0
+:FC_CREATED: 2024-05-05T07:50:12Z
+:FC_TYPE:  normal
+:FC_ALGO:  sm2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   0 |     0.00 | 2024-05-05T07:50:12Z |
+:END:
+Reading [[id:2kkf3x70tfk0][Dreams in Islam]], I was shocked by:
+#+begin_quote
+In the early centuries of Islam, people recorded many dreams for their potential significance. One
+tradition holds that the Islamic call to prayer was the product of an instruction given by an angel who
+appeared in a dream to Muhammad’s companion ‘Abd Allah b. Zayd.
+#+end_quote
+
+I didn't know that fact. Here's the hadith text from Sirah:
+
+#+begin_quote
+فبينما هم على ذلك ، إذ رأى عبد الله بن زيد بن ثعلبة بن عبد ربه ، أخو بلحارث بن
+الخزرج ، النداء ، فأتى رسول الله صلى الله عليه وسلم ، فقال له : يا رسول الله ،
+إنه طاف بي هذه الليلة طائف : مر بي رجل عليه ثوبان أخضران ، يحمل ناقوسا في يده ،
+فقلت له : يا عبد الله ، أتبيع هذا الناقوس ؟ قال : وما تصنع به ؟ قال : قلت : ندعو
+به إلى الصلاة ، قال : أفلا أدلك على خير من ذلك ؟ قال : قلت : وما هو ؟ قال :
+تقول : الله أكبر الله أكبر ، الله أكبر الله أكبر ، أشهد أن لا إله إلا الله ،
+أشهد أن لا إله إلا الله ، أشهد أن محمدا رسول الله ، أشهد أن محمدا رسول الله ، حي
+على الصلاة ، حي على الصلاة ، حي على الفلاح ، حي على الفلاح ، الله أكبر الله أكبر
+، لا إله إلا الله
+#+end_quote
+#+begin_quote
+قَالَ: فَلَمَّا أَصْبَحْتُ أَتَيْتُ رَسُولَ اللَّهِ ﷺ فَأَخْبَرْتُهُ بِمَا رَأَيْتُ، فَقَالَ رَسُولُ اللَّهِ ﷺ: إنَّ هَذِهِ
+الرُّؤْيَا حَقٌّ إنْ شَاءَ اللَّهُ، ثُمَّ أَمَرَ بِالتَّأْذِينِ، فَكَانَ بِلَالٌ مَوْلَى أَبِي بَكْرٍ يُؤَذِّنُ بِذَلِكَ وَيَدْعُو
+رَسُولَ اللَّهِ ﷺ إلَى الصَّلَاةِ. قَالَ: فَجَاءَهُ فَدَعَاهُ ذَاتَ غَدَاةٍ إلَى الْفَجْرِ، فَقِيلَ لَهُ: إنَّ رَسُولَ
+اللَّهِ ﷺ نَائِمٌ، فَصَرَخَ بِلَالٌ بِأَعْلَى صَوْتِهِ: "الصَّلَاةُ خَيْرٌ مِن النَّوْمِ".
+#+end_quote
+
+I thought that Azan was an original part of Islam.
+* Links                                                               :noexport:
+** Sunnah
+:PROPERTIES:
+:ID:       ivakg491zzj0
+:END:
+sunnah, also spelled sunna, are the traditions and practices of the Islamic prophet
+Muhammad that constitute a model for Muslims to follow. The sunnah is what all the Muslims
+of Muhammad's time evidently saw and followed and passed on to the next generations.
+** Ibadi
+:PROPERTIES:
+:ID:       2p1b5690r2k0
+:END:
+The Ibadi movement or Ibadism is a school of [[id:nm0dxtp02wj0][Islam]]. It has been called by some the third
+branch of Islam, along with Sunni Islam and Shia Islam. The followers of Ibadism are known
+as the Ibadis.
+** Kharijites
+:PROPERTIES:
+:ID:       k4d1b8w0cck0
+:END:
+The Kharijites, also called al-Shurat, were an Islamic sect which emerged during the First
+Fitna. The first Kharijites were supporters of Ali who rebelled against his acceptance of
+arbitration talks to settle the conflict with his challenger, Mu'awiya, at the Battle of
+Siffin in 657
+
+** al-Bukhari
+:PROPERTIES:
+:ID:       swkh9ay0cck0
+:END:
+Bukhari was a 9th-century Muslim muhaddith who is widely regarded as the most important
+hadith scholar in the history of Sunni Islam. Al-Bukhari's extant works include the hadith
+collection Sahih al-Bukhari, al-Tarikh al-Kabir, and al-Adab al-Mufrad.
+** Mu'tazilism
+:PROPERTIES:
+:ID:       hnijgf2134k0
+:CUSTOM_ID: hnijgf2134k0
+:END:
+Mu'tazilism is an Islamic theological school that appeared in early Islamic
+history and flourished in Basra and Baghdad.
+** Mihnah
+:PROPERTIES:
+:ID:       tuaaaq70jek0
+:CUSTOM_ID: tuaaaq70jek0
+:END:
+The Mihna was a period of religious persecution instituted by the Abbasid caliph
+al-Ma'mun in 833 AD in which religious scholars were punished, imprisoned, or
+even killed unless they conformed to Muʿtazila doctrine.
+*** TODO Research the creation of the Quran Mehnah                    :@idea:
+:LOGBOOK:
+CLOCK: [2024-09-30 Mon 20:20]--[2024-09-30 Mon 20:34] =>  0:14
+CLOCK: [2024-09-30 Mon 19:14]--[2024-09-30 Mon 19:50] =>  0:36
+:END:
+[2024-08-18 Sun 16:03]
+** Abd Allah ibn Mu'awiya
+:PROPERTIES:
+:ID:       duckbdi0uek0
+:CUSTOM_ID: duckbdi0uek0
+:END:
+Abd Allah ibn Mu'awiya ibn Abd Allah al-Hashimi was an Alid leader who started a
+rebellion against the [[id:5jt4x3w030k0][Umayyad Caliphate]] at Kufa and later Persia during the
+Third Fitna.
+** Christianity
+:PROPERTIES:
+:ID:       6lkfjxc0nik0
+:CUSTOM_ID: 6lkfjxc0nik0
+:ROAM_ALIASES: Christian
+:END:
+** Walid ibn al-Mughira
+:PROPERTIES:
+:ID:       6j1be9l06ik0
+:CUSTOM_ID: 6j1be9l06ik0
+:END:
+Al-Walid ibn al-Mughira al-Makhzumi was the chief of the Banu Makhzum clan of
+the Quraysh tribe.
+** Redah
+:PROPERTIES:
+:ID:       ize17o50tfk0
+:CUSTOM_ID: ize17o50tfk0
+:END:
+Apostasy in Islam is commonly defined as the abandonment of Islam by a Muslim,
+in thought, word, or through deed.
+* [[id:omy9ejo02wj0][Books]]                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+- [[id:v1z15ff0dak0][al-Sirah al-Nabawiyyah]] (Ibn Hisham, a.)
+- [[id:7580q231fxj0][The Origins and Early Development of Shia Islam]] (Ja'fari, S)
+- [[id:fu9926j0ryj0][Khilafat o Malukiyat]] (Maududi, A)
+- [[id:idb7nm41m4k0][Zaid's Tafsir Ghareeb al-Quran]] (al-Jalali, J.)[fn:2]
+- Islam and Science (Hoodbhoy, P.)[fn:1]
+- [[id:7m7180u0x5k0][Avesta]] (Abdulrahman, K.)[fn:3]
+- [[id:ixegdgm0y5k0][Burahin al-Nubuwwah]] (Amery, S.)
+- [[id:850krqe0dak0][Writing Sirah Among Arab Scholars]] (Bziouech, H.)
+- [[id:c4x7h6w0hak0][Jadl al-Tanzeel]] (al-Khayyun, R.)
+- [[id:lb73s3y0hak0][The debates of the Createdness of the Qur’an]] (Ediwibowo, S.)
+- [[id:0e8i3uy0hak0][Freewill, Qadar, and Kasb]] (Salem, F.)
+- [[id:j0a4ut50kak0][The Prophet's Life]] (Hussien, T.)
+- [[id:4dfjayv0qgk0][Repetition in the Story of Moses and Pharaoh in Holy Quran]] (Ghiyasvand et al.)
+- [[id:edniq2g0uhk0][al-Sirah al-Nabawiyyah al-Sahihah]] (al-Umari, A. D.)
+- ابن رشد (الجابري، م.)
+- مذاهب الإسلاميين (البدوي، ع.)
+- الفتنة الكبرى (حسين، ط.)
+- محي الدين بن عربي، حياته ومذهبه (بلاتيوس، أ.)
+- الوحدة الإسلامية (أبو زهرة، م.)
+- الأحوال الشخصية (أبو زهرة، م.)
+- من قاموس التراث (العلوي، هـ.)
+- الإمام زيد (أبو زهرة، م.)
+- أبو حنيفة (أبو زهرة، م.)
+- ابن حنبل (أبو زهرة، م.)
+- الشافعي (أبو زهرة، م.)
+- مالك (أبو زهرة، م.)
+- ابن حزم (أبو زهرة، م.)
+** Wahhabism
+- [[id:50fe1418-f2b8-4dc9-9ef8-1e26c20063a2][Wahhabism and the World Understanding Saudi Arabia's Global Influence on Islam]] (Mandaville, P.)
+- Intellectual Life in the Ḥijāz before Wahhabism (al-Abduljabbar, N. A.)
+** Other
+- مثالب معاوية (المالكي، ف.)[fn:19]
+- مثالب معاوية 2 (المالكي، ف.)
+- نقد رأي ابن تيمية في إسلام معاوية (المالكي، ف.)
+- الإغتيال السياسي في الإسلام (العلوي، ط.)
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** TODO Investigate what Islam says about history                    :@idea:
+:PROPERTIES:
+:NOTER_PAGE: (15 . 0.5154639175257731)
+:END:
+- [2024-11-15 Fri 07:25] This was originally a task from while reading al-Kamel fi al-Tarikh. It's about
+  understanding the notation of time in Quran.
+:LOGBOOK:
+CLOCK: [2024-11-15 Fri 07:24]--[2024-11-15 Fri 07:25] =>  0:01
+:END:
+** DONE [[https://youtu.be/cPKwxczMg-g][Obedience to the ruler in Islam]]                              :@watch:
+:PROPERTIES:
+:ID:       jukay580tfk0
+:CUSTOM_ID: jukay580tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-28 Sat 09:52]--[2024-12-28 Sat 10:17] =>  0:25
+:END:
+** DONE [[https://networks.h-net.org/node/6386/reviews/6610/noor-abaza-debates-islam-and-knowledge-malaysia-and-egypt-shifting]['Debates on Islam and Knowledge in Malaysia and Egyp]]         :@check:
+:PROPERTIES:
+:ID:       0gclh6s09gk0
+:CUSTOM_ID: 0gclh6s09gk0
+:END:
+- [2024-06-17 Mon 10:46] The book print is honestly too bad.
+:LOGBOOK:
+CLOCK: [2024-06-17 Mon 10:40]--[2024-06-17 Mon 10:49] =>  0:09
+:END:
+** DONE Check A Culture of Ambiguity: A History of Islam (Ahmed, L.) :@check:
+:PROPERTIES:
+:ID:       udq2adv0zfk0
+:CUSTOM_ID: udq2adv0zfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-09-03 Tue 02:09]--[2024-09-03 Tue 02:13] =>  0:04
+:END:
+[2024-06-30 Sun 17:41]
+** TODO Research [[id:dvm333a1pak0][Abu Talib]] death in [[id:9r677591zzj0][Shia Islam]]'s views               :@idea:
+[2024-08-18 Sun 15:40]
+** TODO Investigate Aisha's Age                                      :@idea:
+[2024-08-22 Thu 06:01]
+** DONE [[https://islam.stackexchange.com/q/53552/56455][Why Ibraheem was referred to as Ummah in this verse]]          :@check:
+:PROPERTIES:
+:ID:       swmi0180tfk0
+:CUSTOM_ID: swmi0180tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-04-27 Sat 02:56]--[2024-04-27 Sat 03:12] =>  0:16
+:END:
+[2024-02-02 Fri 02:46]
+#+BEGIN_tag
+{{{t}}} [[id:2m957s50d4k0][Quranic Notes]]
+#+END_tag
+** DONE [[mu4e:msgid:2e284d6f-9019-4fe2-9187-49e2fa4304ca@larrasket][The Imamah of Ibrahim]]                                        :@watch:
+:PROPERTIES:
+:ID:       crh7y080tfk0
+:CUSTOM_ID: crh7y080tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-06-06 Thu 05:55]--[2024-06-06 Thu 06:10] =>  0:15
+CLOCK: [2024-04-15 Mon 17:59]--[2024-04-15 Mon 18:52] =>  0:53
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:swmi0180tfk0][Why Ibraheem was referred to as Ummah in this verse]]
+#+END_tag
+[2024-02-17 Sat 13:37]
+
+** DONE [#C] [[https://hawramani.com/professor-abu-zahra-the-egyptian-islamic-scholar-who-rejected-the-punishment-of-stoning/][Scholar Who Rejected the Punishment of Stoning]]          :@read:
+:PROPERTIES:
+:ID:       ss68u080tfk0
+:CUSTOM_ID: ss68u080tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-08-09 Sat 01:29]--[2025-08-09 Sat 01:45] =>  0:16
+CLOCK: [2023-08-17 Thu 21:24]--[2023-08-17 Thu 21:47] =>  0:23
+:END:
+Interesting article to work on.
+** TODO Response to Abdallah Salah on Claims about Shia Islam        :@idea:
+[2024-01-24 Wed 06:41]
+search with this message: وحوار الورث فلأن فاطمة لم تكن سمعت بحديث أن الأنبياء لا يُرثون
+** DONE [[https://psyche.co/ideas/why-a-sufi-approach-to-healing-mental-illness-is-so-powerful?utm_source=rss-feed][Why a Sufi approach to healing mental]]                        :@check:
+:PROPERTIES:
+:ID:       poegm080tfk0
+:CUSTOM_ID: poegm080tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 20:33]--[2024-01-11 Thu 20:50] =>  0:17
+- [2024-01-11 Thu 20:32] Maybe I will check it when I learn more about sufism. Or should I just check it
+  now ?
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1cce869c-498e-44dd-ae37-60210504eb8f][Psychology]]
+#+END_tag
+** KILL [[https://youtu.be/PBRoxb2Yn-U?t=121][Very interesting topic about relations between Islamic views]] :@check:
+:PROPERTIES:
+:ID:       zr43qhv0zfk0
+:CUSTOM_ID: zr43qhv0zfk0
+:END:
+- [2024-05-07 Tue 07:37] Fuck youtube the video went down.
+:LOGBOOK:
+CLOCK: [2024-05-07 Tue 07:35]--[2024-05-07 Tue 07:37] =>  0:02
+:END:
+[2024-03-12 Tue 11:52]
+Also see: [[https://www.islamweb.net/ar/fatwa/93591/%D8%A7%D9%84%D8%A7%D8%A6%D8%AA%D9%85%D8%A7%D9%85-%D8%A8%D9%85%D9%86-%D9%8A%D9%81%D8%B9%D9%84-%D9%85%D8%A7-%D9%8A%D8%A8%D8%B7%D9%84-%D8%A7%D9%84%D9%88%D8%B6%D9%88%D8%A1-%D8%B9%D9%84%D9%89-%D9%85%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%85%D8%A3%D9%85%D9%88%D9%85][here]] and [[https://www.islamweb.net/ar/fatwa/17301/%D8%B5%D9%84%D8%A7%D8%A9-%D8%A7%D9%84%D9%85%D8%A3%D9%85%D9%88%D9%85-%D8%AE%D9%84%D9%81-%D8%A5%D9%85%D8%A7%D9%85-%D9%85%D8%AE%D8%A7%D9%84%D9%81-%D9%84%D9%87-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D8%B0%D9%87%D8%A8%D8%B1%D8%A4%D9%8A%D8%A9-%D8%B4%D8%B1%D8%B9%D9%8A%D8%A9#:~:text=%D8%A7%D9%84%D8%AD%D9%85%D8%AF%20%D9%84%D9%84%D9%87%20%D9%88%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9%20%D9%88%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%89,%D9%85%D8%B0%D9%87%D8%A8%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85%20%D8%AF%D9%88%D9%86%20%D9%85%D8%B0%D9%87%D8%A8%20%D8%A7%D9%84%D9%85%D8%A3%D9%85%D9%88%D9%85.][here]].
+** TODO Mou'awyah                                                    :@write:
+:LOGBOOK:
+CLOCK: [2023-09-27 Wed 01:36]--[2023-09-27 Wed 01:45] =>  0:09
+:END:
+** DONE [[https://www.youtube.com/watch?v=-1qiAQCJKCE][Trahoom]]                                                      :@watch:
+:PROPERTIES:
+:ID:       x37e7x70tfk0
+:CUSTOM_ID: x37e7x70tfk0
+:END:
+** DONE [[mu4e:msgid:41d19461-b0b3-49e0-a161-81fe0080772e@larrasket][Dreams in Islam]]                                              :@read:
+:PROPERTIES:
+:CUSTOM_ID: 2kkf3x70tfk0
+:ID:       2kkf3x70tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-02-05 Mon 21:50]--[2024-02-05 Mon 22:03] =>  0:13
+:END:
+[2024-01-28 Sun 16:35]
+** KILL [[https://www.brookings.edu/articles/rethinking-political-islam/][Rethinking Political Islam]]                                   :@read:
+:PROPERTIES:
+:ID:       drm5fv70tfk0
+:CUSTOM_ID: drm5fv70tfk0
+:END:
+:LOGBOOK:
+- [2024-02-23 Fri 14:56] I thought this was an article or book. I'm not interested in reading those
+  separate papers about Islamic groups.
+CLOCK: [2024-02-23 Fri 14:53]--[2024-02-23 Fri 14:57] =>  0:04
+:END:
+[2024-01-26 Fri 12:24]
+#+BEGIN_tag
+{{{t}}} [[id:thc4j6p02wj0][Politics]]
+#+END_tag
+** TODO Al fotouhat AL Makiah might be interesting to read no?       :@check:@later:
+** KILL [[https://youtu.be/SZU-em6URmw][When You're Too Rational to Be Rational!]]                     :@watch:
+:PROPERTIES:
+:ID:       kgv4tiv0zfk0
+:CUSTOM_ID: kgv4tiv0zfk0
+:END:
+[2024-01-23 Tue 10:56]
+** DONE write question about Attack on Fatima's house                :@general:
+:LOGBOOK:
+CLOCK: [2024-01-24 Wed 06:55]--[2024-01-24 Wed 07:34] =>  0:39
+:END:
+** KILL [[https://aeon.co/essays/a-history-of-the-modern-islamic-movement-that-is-salafism?utm_source=rss-feed][A history of the modern Islamic movement that is Salafism]]    :@check:
+:PROPERTIES:
+:ID:       nor9fq70tfk0
+:CUSTOM_ID: nor9fq70tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-21 Sat 08:25]--[2023-10-21 Sat 08:31] =>  0:06
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:78903b85-1d2d-4564-8c37-7183fa55c617][History]]
+#+END_tag
+** TODO Interesting about readings of Quran                          :@check:@later:
+:PROPERTIES:
+:ID:       m4n42q70tfk0
+:CUSTOM_ID: m4n42q70tfk0
+:END:
+https://youtu.be/yJdZNM_Mfhc?t=583
+[2023-12-29 Fri 06:17]
+** DONE Uploading Mystical library to youtube                        :@else:
+SCHEDULED: <2023-11-27 Mon 22:00>
+:LOGBOOK:
+CLOCK: [2023-11-27 Mon 22:51]--[2023-11-27 Mon 23:05] =>  0:14
+CLOCK: [2023-11-26 Sun 16:40]--[2023-11-26 Sun 18:00] =>  1:20
+CLOCK: [2023-11-26 Sun 16:16]--[2023-11-26 Sun 16:17] =>  0:01
+:END:
+** DONE [[https://youtu.be/LGFGbNnee5U][Why there's no powerful Ulama in this age]]                    :@watch:
+:PROPERTIES:
+:ID:       fx44so70tfk0
+:CUSTOM_ID: fx44so70tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-29 Sun 03:21]--[2024-12-29 Sun 03:50] =>  0:29
+:END:
+** DONE [[mu4e:msgid:c194f4ae-ab00-45ad-b25f-849f1dfd9e8a@larrasket][Shia on Khaleed ibn elWaleed]]                                 :@read:
+:PROPERTIES:
+:ID:       a8akpaz00ik0
+:CUSTOM_ID: a8akpaz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-04-09 Wed 22:28]--[2025-04-09 Wed 23:32] =>  1:04
+:END:
+[2025-02-22 Sat 23:13]
+#+BEGIN_tag
+{{{t}}} [[id:9r677591zzj0][Shia Islam]] and [[id:q5fhpbz00ik0][Khaled ibn al-Walid]]
+#+END_tag
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:
+
+* Footnotes
+
+[fn:3] Dr. Abdulrahman Khalil's introduction is extremely interesting. Avesta is
+very interesting to read as well, however, the current version is filled with
+paganism. It's hard for a plain reader like me to filter all it to reach for
+some wisdom, but I might do it someday.
+[fn:19] Poorly written book, nothing new or special in the study, the author
+tends to have an evident ignorance on Takhrij al-hadith.
+[fn:1] Check my (very old unrevised) review: [[id:c1c6b159-608c-4db1-9c55-88f33883f079][Pervez Hoodbhoy's Islam and Science]].
+[fn:2] whoever attributed this to Zaid, they did not spend enough time writing
+it.

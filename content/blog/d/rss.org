@@ -1,0 +1,47 @@
+#+title: Email as a universal feed reader
+:PROPERTIES:
+:ID:       0sj8u1906nk0
+:CUSTOM_ID: 0sj8u1906nk0
+:END:
+
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+
+I was chatting with some friends on IRC about RSS feeds and elfeed came up.
+While elfeed is great, it has some real limitations - try forwarding a feed item
+as an email, or converting it to HTML for further processing (like turning it
+into Org mode notes). These pain points got me thinking.
+
+Three years ago, I switched to mu4e for email management and fell in love with
+how extensible it is. The query system is incredible - you can find exactly the
+emails you want with surgical precision.
+
+Then it hit me: why not use this same powerful interface for *everything*? RSS
+feeds, newsletters, email subscriptions, Reddit, YouTube - all in one unified
+view. The approach seemed so intuitive to me that I'm genuinely surprised more
+people don't do this.
+
+Here's my current setup that gives me a single dashboard for all content (It's Ridiculously Simple):
+
+1. Install rss2email; plenty of guides online for this. Add all your feeds and
+   configure it to use a unique identifier (I use
+   =myusername+feeds@mymailprovider.com= as the sender address).
+
+2. Set up email filtering; Create a rule in your email provider to catch
+   anything with your unique RSS identifier and automatically file it into an
+   =/rss= folder. The trickier part is manually moving your existing newsletters
+   and subscriptions into this folder too, but it's a one-time task.
+
+3. Configure mu4e views; set up your mu4e to display the RSS folder however
+   you like.
+
+That's it. Now I have RSS feeds, newsletters, Reddit posts, YouTube
+notifications, and everything else that supports RSS/Atom in one searchable,
+taggable, forwardable interface. I can process items as emails, convert them to
+other formats, or integrate them into my note-taking workflow seamlessly.
+
+The whole thing just feels so natural - email is already a universal inbox, so
+why not make it truly universal?
+
+Might be related: [[id:swu8typ02wj0][Where to get news?]]

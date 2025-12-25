@@ -1,0 +1,136 @@
+#+title: Thoughts on Chess
+#+DATE: <2023-08-01 Tue 12:10>
+:PROPERTIES:
+:ID:       b8u34341owj0
+:END:
+#+filetags: :project_archived:
+
+#+BEGIN_tag
+{{{t}}} [[id:rgogo9p02wj0][chess]]
+#+END_tag
+
+I mentioned previously somewhere in this site (can't be sure where, check the
+[[id:rgogo9p02wj0][Chess]] label for me and inform me please) that I aim to reach ~1600-1800 on the
+[[https://en.wikipedia.org/wiki/Glicko_rating_system][Glicko rating system.]] According to lichess.org, As of the time of writing this
+post, I'm now on 1951, and "better than 90.3% of Rapid players" with my brand
+new account.
+
+#+BEGIN_PREVIEW
+Here are my 'finial' thoughts of chess after ~7 months of actively engaging with
+it.
+#+END_PREVIEW
+
+
+* Ratings
+
+I posses 2 accounts other than the mentioned one. I'm rated 1800 in one of them,
+which is older and 1500-1600 in the other, which is oldest. I play actively on
+those accounts too since I'm logged into them on my other machines, however my
+rating does not move much on them. I have developed a simple theory that
+accounts for that phenomenon; in internet chess, players may not always approach
+the game with utmost seriousness, things like hastiness and recklessness are
+likely to occur.  I have observed a recurring pattern in my games. After
+securing approximately five consecutive victories, I tend to lose three games
+consecutively. This may be attributed to a sense of vexation following a loss,
+leading to subsequent blunders similar to the fact that you are likely to
+blunder even worse after your first blunder in the game, no matter how
+insignificant it was). Thus, I do not really acknowledge any of these ratings,
+not only mine but I do not think that this rating is actually valid if it is to
+respect player actual performance (which is not the case, it's only interested
+in the record of wining/losing). I think in this case the FIDE rating is
+plausible since players tend to be more serious on their tournaments games.
+
+Let's take this game for example;
+#+begin_export html
+<iframe src="https://lichess.org/embed/game/jnUUKXfQ?theme=auto&bg=auto#14" width=600 height=397 frameborder=0></iframe>
+#+end_export
+
+In this particular game, my opponent committed a significant blunder by playing
+Nc6, which ultimately granted me a knight and a favorable winning position. The
+computer analysis indicates that, at best, my opponent would have to sacrifice
+the queen to avoid an inevitable checkmate. This blunder occurred early in the
+opening phase, leading to their defeat in just 9 moves.
+My opponent held a rating of 1948, slightly higher than my own rating of 1940.
+However, if this player had been randomly matched against a 1400-rated player,
+that player would likely have taken advantage of the opportunity and secured a
+quick victory; this would result in 100+ rating points for this player.
+
+
+During my observation of numerous chess live streams featuring top players, I
+came across a noteworthy phenomenon. In both rapid and blitz games, I noticed a
+recurring pattern of terrible blunders occurring in the opening and middle game
+stages. these blunders were not exploited by either side, I believe that this
+has to do with the complacency that those players have, yeah it is not likely
+that a high-rated opponent will blunder in the opening or miss a checkmate so it
+doesn't worth calculating for it, and of course the player does not want to lose
+time.
+
+I think those ratings are valid only if we consider how unserious people are on
+internet chess, thus it is not really about how good you are at the game.
+* Brain
+I posted before on [[id:i70j8rp02wj0][Chess and Brains]], yet it was only a draft from the
+internet. I've tried to study chess effects thoroughly recently when I started
+to give the game more of my time. I don't believe, as scientifically proved as
+well [cite:@djakow-1927-chess] [cite:@Doll1987IntelligenzUS]. Even other things
+that people would expect chess masters to be better at like cognitive processing
+and imagination, top players are not any better than the average of normal
+humans, they are only better at it in the domain of the game itself. Which I
+always believed about the 'cognitive improvement' that was always exclaimed with
+video games, I think it's true, but it's only to the domain of the game[cite:@chessbrain].
+* General Improvement
+I believe that chess is very useful though; I like the fact that it was  the
+only game that received adherence from Islamists back in the day, because unlike
+other dice-based games, which was prohibited by the prophet, chess is
+essentially related to your willingness and not to luck and chances.
+
+Engaging in chess exercises the mind, providing valuable mental training, though
+its benefits might not always be fully quantifiable or universally experienced
+by players.
+
+
+An exemplar lesson from chess is pragmatism. The game teaches individuals to
+adopt a pragmatic approach, always striving to make the best moves, even in the
+face of blunders. Players learn to anticipate their opponent's potential moves
+and plan their tactics accordingly, preparing for the worst-case scenario (that
+is the best move they can play). These qualities are not only valuable within
+the context of the game but can also be applied to real-life situations.
+
+However, as one's chess rating surpasses 1800, the focus often shifts more
+towards memorization and minimal pattern recognition, rather than purely strategic
+thinking. If you want to advance over 1600; you probably have to memorize an
+opening, defense and a system.
+
+The journey in chess is replete with numerous rewards before
+reaching that point (when memorization activity becoming dominate, and most of
+your opponents are 'professional' players). It remains an exquisite abstract game, founded on
+fundamental principles such as precise calculations, piece development, and
+coordination. The path to improvement lies in wholeheartedly committing to these
+principles. Observing how this dedication elevates one's mentality can be
+analogous to the philosophy advocated by Stoicists, which revolves around the
+pursuit of 1. precision. 2. action. 3. will [cite:@aurelius-2012-thoughts].
+
+See also [[id:6swjyso02wj0][All Life is Problem Solving]].
+* A View on Chess
+:PROPERTIES:
+:ID:       mp56qej0fzj0
+:END:
+Not only improvement in chess becomes more and more related to training on,
+studying and memorizing non-reusable knowledge, but also the state of
+'maintaining' a level or a rating mostly transforms from psychologically
+strenuous battles into medulla spinalis-based automatic routinized moves; it
+becomes more of a a time-killer.
+
+At this point, I do not think that I will keep my routine of playing chess. I
+closed one of my accounts to announce the end of this peregrination but I
+quickly realized that I may change my mind at some point. So I kept my second
+account [[https://lichess.org/@/Halag2/perf/rapid][Halag2]].
+
+My closed account reached its highest rating at 1951, and it was 1940 before
+closing it (the other [[https://lichess.org/@/Halag2/perf/rapid][Halag2]] c.r. 1808. h.r. 1861).
+
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** DONE Writing about my ultimate thoughts on chess                  :@write:
+:LOGBOOK:
+CLOCK: [2023-08-01 Tue 13:20]--[2023-08-01 Tue 15:19] =>  1:59
+CLOCK: [2023-08-01 Tue 12:05]--[2023-08-01 Tue 12:38] =>  0:33
+:END:

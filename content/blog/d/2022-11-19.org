@@ -1,0 +1,46 @@
+#+title: Thuiskomst—A Return
+:PROPERTIES:
+:ID:       xk44wnp02wj0
+:END:
+#+OPTIONS: broken-links:t
+
+
+This is an adapted Arabic translation (I feel more poetic in Arabic). /Followed
+by the English version/.
+
+
+
+#+begin_quote
+أيّ الوحِدة، ارفعي شاهدك إليِّ وسليني عن حال من هربَ منكِ كالعاصفة الجامحة، من أفلت منك صادحًا: لقد
+طال انفرادي فنسيت الصمت. سليني عما تعلمت ثم أعلميني: زرادشت، لم تخف عني منك خافية، لقد شعرت
+أنك وحيد بين الجميع فسادك من الوحشة ما لم تعرفه في وجودي.
+
+ذَاك ما تعلمته، إن الفرق بين الوحدة والوحشة لبعيد، هذه هي الحكمة التي تعلمتها الآن، فأدركت
+أنك ستبقى أبدًا الغريب المستوحش بين الناس، حتى ولو بذلوا حبهم لك.
+
+‏إنك هنا تأوي إلى مسكنك فيمكنك أن تقول ما تريد، ففي العزلة لا يخجل الإنسان من خطرات سريرته
+المتصلِّبة. كل شيء هنا ينقاد إلى بيانك متحببًا طائعًا؛ لأن الأشياء كلها تقصدك لتعتليك وتعلو أنت
+رموزها كمطايا تذهب بك مطلوقة العَنان نحو الحقائق جميعها.
+
+‏إنني أشعر ههنا بأن لكل شيء روحه ومعناه، فكل كائن يريد أن يعبر عن سريرته وكل ما سيكون يطمح
+إلى تعلُّم البيان مني، أما هنالك فكل قول عبث وهراء وخير حكمة للناس هي النسيان والفناء، وهذا ما
+تعلمته منهم، وإذا ما أراد أحدهم أن يفهم كل شيء وجب عليه أن يستولي على كل شيء، وما تمتد إلى
+الأخذ يداي الطاهرتان. لقد تولاني الاشمئزاز من رائحة أنفاسهم، فوا أسفاه على زمن طويل قضيته
+حيث يضجون ويتنفسون.
+
+هكذا تكلم زرادشت.
+#+end_quote
+
+
+#+begin_verse
+Oh solitude! Oh you my home solitude! I lived wild too long in wild foreign lands to not return to you with tears!
+Now go ahead and threaten me with your finger, like mothers threaten; now smile at me, like mothers smile; now say to me: “And who was it that once stormed out on me like a storm wind? – who called out in leaving: ‘too long have I sat with solitude, and I have forgotten how to keep silent!’ That – you have learned now? Oh Zarathustra, I know everything, and that you were more forsaken among the many, you solitary one, than ever with me!
+Being forsaken is one thing, solitude is another: that – you have now learned! And that among human beings you will always be wild and foreign.
+Wild and foreign even when they love you; for what they want above all is to be spared!
+But here you are in your own home and house; here you can speak everything out and pour out all the reasons, nothing here is ashamed of obscure, obstinate feelings.
+Here all things come caressingly to your rhetoric and they flatter you, for they want to ride on your back. Here you ride on every parable to every truth.
+Here you may speak uprightly and forthrightly to all things, and truly, it rings like praise in their ears that someone talks straight with all things!
+#+end_verse
+
+
+#[[id:loqfv5p02wj0][Nietzsche, Unveiling the Depths of Human Existence]]

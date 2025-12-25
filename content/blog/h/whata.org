@@ -1,0 +1,58 @@
+#+title: What is the anthology page?
+#+date:  <2024-04-26 Fri 12:25>
+
+
+What's this? This page —like many of other programmatically created pages on this
+website— is the reaper of doing a zettelkasten-like methodology while reading
+inside GNU/Emacs. I like to take notes of my favorite excerpt/quotes while
+reading, I used to share those back in the day when I used social media,
+currently I do not publish them. From time to time I append them on the top of
+[[id:x3cceno02wj0][TL;DRs]] entities, not very often though. After adopting Emacs as my main reading
+platform, I started to build the habit of tagging things that I might like to
+keep as a nice excerpt with "@anthology" tag. Today I thought why not gather
+those notes together? And here we go:
+
+#+begin_src elisp
+(defun salih/print-text-nodes-anth ()
+  (let* ((nodes (sort (salih/get-back-nodes "3xedczc0i2k0")
+                      #'salih/compare-org-id))
+         (strings '()))
+    (while nodes (push (salih/mkinclude (car nodes) t)
+                       strings)
+           (setq nodes (cdr nodes)))
+    (mapconcat 'identity strings "")))
+#+end_src
+
+#+begin_src elisp
+(defun salih/mkinclude (node remove-title &optional astr)
+  (unless astr
+    (setq astr "**"))
+  (let* ((id (org-roam-node-id node))
+         (entry (org-roam-node-file (org-roam-node-from-id id)))
+         (cite (file-name-sans-extension (file-name-nondirectory entry))))
+    (if remove-title
+        (format "#+INCLUDE: \"%s::#%s\" :only-contents t\n\n\n \n/Derived from/ [cite:@%s], p. %d. Appeared: %s\n-----\n"
+                entry
+                id
+                cite
+                (first (read (cdr (assoc "NOTER_PAGE" (org-roam-node-properties node)))))
+                (format-time-string "%Y-%m-%d (%H:%M)" (cdr (org-id-decode  (org-roam-node-id node)))))
+
+        (format "#+INCLUDE: \"%s::#%s\" :only-contents nil\n"
+            entry
+            id))))
+#+end_src
+
+It's a part of my [[https://sr.ht/~lr0/tadwin.el/][tadwin.el: Emacs publishing blog system]]. Some of those notes
+are not OCR'd rather written by hand, please inform me of any typos (find my
+email at the footer of the home page). After Each note you should find a
+bibliographical reference to the source, check the corresponding source in the
+bibliography at the end of the page.
+
+Each citation contains a number, notated with no. (for page/section
+number) This is taken from a Lisp value that's recorded in my notes.  Here is a
+raw note example ~:NOTER_PAGE: (53 . 0.5005149330587024)~.  It's important to
+note that this Lisp value is taken from the document numbering not the print,
+more importantly, it does not refer to a reference number. For example I'd
+usually quote poetry with piece number rather than the page (as it's easier to
+trace in different prints), but here it's denoted by the page.

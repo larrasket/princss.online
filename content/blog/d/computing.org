@@ -1,0 +1,86 @@
+#+TITLE: Computers are no longer used
+#+DATE: <2023-07-12 Wed 22:40>
+:PROPERTIES:
+:ID:       wtn40en02wj0
+:END:
+
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]].
+#+END_tag
+
+#+BEGIN_PREVIEW
+My radical thoughts on how computing should be done.
+#+END_PREVIEW
+
+I believe that most people are suffering from computing illiteracy, this, however, was not
+the case through the history of computing.
+
+The main reason for that is the way that things are introduced to modern computer users,
+like mobile phone users. It's so limited, in FOSS conferences these kinds of software are
+notorious of using their users, not the other way around.  If we are to get back in time
+and tell some computer user in the 90s that people are going to pay for getting machines
+that will execute uncharted instructions, they would be surprised just as telling a Jew in
+the 40s that [[https://youtu.be/UAb_5YZ7nFU][people are going to pay to visit Auschwitz]].
+
+So what happened? People were misled to believe that they are having the same computing
+quality with a much less steep learning curve, which was a lie. A lie that has proven itself to be
+very useful for corporates whose interests are being reinforced by the ignorance of users.
+Proprietary software serves a good example for that, people now run their life totally on
+someone's else machine, providing it with all information not only about themselves but
+the closest people to them as well.
+
+The misconduct that software companies perform is another example too, let's take the
+Windows 11 upgrade as an example; please pay us $130 for the new version which will ask
+you to pay a higher-resources machine, which also we are going to use to track everything we
+can about you, selling information about you as much as we can, bloating your experience
+with ads everywhere and we will provide you with one of the worst malfunction software to
+use that barely work (sorry we can't afford fixing it because of legacy support) compiled
+on the most unnecessarily complicated operating system ever to existed.
+
+At some point of history, that in which people who experienced old computers interfaces
+and new one, there was that sector of people who knew what was really going on and how
+this new method of computing is engineered to use people, not computers. However, after
+this kind dominated, it's now the default way of doing computing.
+
+The way things were always required people to understand what is going on in their
+machine, yes, it required sophisticated understanding and it was time-consuming for some,
+but how did it yield? Users understood computers very well and their computing experience
+was much better than that of most average modern computer users.
+
+Here are some tips I wrote to my friend:
+
++ A good smart phone is a dumb phone. Smart phones are nothing but tools to collect
+  information about you and let you deluge in and endless consumption series (or at least
+  most applications there are designed for so). You can not
+  achieve anything on a smart phone. You can not study, you can not read extensively, you
+  can not produce any useful content, in fact you can not even consume useful content,
+  but short stupid videos. Ask yourself when was the most recent time that you
+  did something useful on your phone? Yes you are probably consuming something and not
+  doing anything useful at all. This kind of social engineering is useful only for the
+  people who are running your phone, whose interests are in keeping you for as much
+  possible time using it as they can.
+
+  Throwing your smartphone away is the first step in doing computing the right way.
++ Learn programming. It is not hard, it is not only for computer scientists and software
+  developers, it's easy and everyone should be able to do it, and it's the way to achieve
+  magic on your machine.
++ Ask questions. I knew some software developers who never knew how the tools that they
+  were using actually worked[fn:1]. To understand computers well, always ask questions and
+  seek answers for them. Recommended questions to start with: Do I know what are things
+  that my machine is executing? Is my machine invulnerable? How does my operating system
+  work?
++ Understand what is computing capable and incapable of. See [[id:vw1jrno02wj0][Computer boundries]].
++ Many people would recommend using a free operating system such as Linux, I think this is
+  good thing however I don't think people would feel comfortable to do it out of advise,
+  but out of a need. Use whatever you like until you understand why you should use Linux.
++ Follow [[http://www.catb.org/~esr/faqs/hacker-howto.html][this great tutorial]].
+
+* Footnotes
+
+[fn:1] I remember one time I was showing a C# developer something on my machine,
+and I split emacs screen showing two files, one of them is Julia and other is
+C#. He was surprised that my "version of Visual Studio" can run programming
+language other than C#. He didn't have the basic understanding that anything is
+just a text than can be compiled by a command, and edit by a text editor. He
+never questioned himself how things like Visual Studio even work.

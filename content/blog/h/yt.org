@@ -1,0 +1,169 @@
+:PROPERTIES:
+:ID:       6ed1b62f-0992-46dc-aefd-40c471ae0b66
+:END:
+#+TITLE: YouTube Channels
+#+OPTIONS: toc:t
+#+MACRO: inc #+INCLUDE: "$1::#yt"  :only-contents t
+
+
+Channels are sorted according to my preferences and their level of relativity to
+the heading. Except for the controversy and podcasts.
+
+- [2025-05-09 Fri 18:57] Extremely out of date.
+- [2024-06-17 Mon 14:13] Updated.
+* Classics
+:PROPERTIES:
+:CUSTOM_ID: classics
+:END:
+
+{{{inc(../things/classic_music.org)}}}
+* Computers
+:PROPERTIES:
+:CUSTOM_ID: computers
+:END:
+
+{{{inc(../things/computer_science.org)}}}
+** Go
+:PROPERTIES:
+:CUSTOM_ID: go
+:END:
+{{{inc(h/go.org)}}}
+** Lisp
+:PROPERTIES:
+:CUSTOM_ID: lsp
+:END:
+{{{inc(cs/lisp.org)}}}
+** Competitive Programming
+:PROPERTIES:
+:CUSTOM_ID: cp
+:END:
+{{{inc(../things/problem_solving.org)}}}
+** Emacs
+:PROPERTIES:
+:CUSTOM_ID: em
+:END:
+{{{inc(../main/emacs.org)}}}
+** Database Systems
+:PROPERTIES:
+:CUSTOM_ID: ds
+:END:
+{{{inc(../things/databases.org)}}}
+** C/C++
+:PROPERTIES:
+:CUSTOM_ID: c
+:END:
+{{{inc(../things/c_programming_language.org)}}}
+** C#/.NET
+:PROPERTIES:
+:CUSTOM_ID: nt
+:END:
+{{{inc(../things/c_channels.org)}}}
+** Operating Systems
+:PROPERTIES:
+:CUSTOM_ID: os
+:END:
+{{{inc(../things/operating_systems.org)}}}
+** Other
+:PROPERTIES:
+:CUSTOM_ID: ott
+:END:
+- [[https://www.youtube.com/@codecastcommunity8192][CodeCast Community]]
+- [[https://www.youtube.com/channel/UCuNzTdzcO2RwHd_YUrhIFcw][Adam James VODS]]
+- [[https://www.youtube.com/@HaskellatWork][Haskell at Work]]
+- [[https://www.youtube.com/@codingmath][Coding Math]]
+- [[https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw][3Blue1Brown]]
+- [[https://www.youtube.com/@LinuxRecipe/videos][Ahmed Alkabary]]
+- [[https://www.youtube.com/@AI1998][Ahmed ibrahim]]
+- [[https://www.youtube.com/@AmrSGhoneim/featured][Amr S. Ghoneim ]]
+- [[https://www.youtube.com/@NoBoilerplate][No Boilerplate]]
+- [[https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA][Fireship]]
+- [[https://www.youtube.com/channel/UC8wKWWarusivFpIcUx9ilOw][By Default]]
+- [[https://www.youtube.com/channel/UCnHX5FjwtQpxkCGziuh4NJA][Logan Smith ]]
+* Chess
+:PROPERTIES:
+:CUSTOM_ID: chess
+:END:
+{{{inc(t/chess.org)}}}
+
+* Science and Philosophy
+:PROPERTIES:
+:CUSTOM_ID: sci
+:END:
+{{{inc(../things/science.org)}}}
+* History
+{{{inc(../things/historian.org)}}}
+* Aesthetic
+:PROPERTIES:
+:CUSTOM_ID: ath
+:END:
+
+{{{inc(../things/aesthetic.org)}}}
+* Entertainment
+:PROPERTIES:
+:CUSTOM_ID: ent
+:END:
+{{{inc(../things/entertainment.org)}}}
+* Controversy
+:PROPERTIES:
+:CUSTOM_ID: contv
+:END:
+{{{inc(../things/controversy.org)}}}
+* Podcasts
+:PROPERTIES:
+:CUSTOM_ID: pd
+:END:
+** Science and History
+:PROPERTIES:
+:CUSTOM_ID: hst
+:END:
++ [[https://rss.art19.com/sean-carrolls-mindscape][Sean Carroll's Mindscape]]
++ [[https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/d2c4e775-99ce-4c17-b04c-ac380133d68c/2c6993d0-eac8-4252-8c4e-ac380133d69a/podcast.rss][Hidden Brain]]
++ [[https://notrelated.xyz/rss][Not Related! A Big-Braned Podcast]]
++ [[https://feed.podbean.com/hopwag2/feed.xml][History of Indian and Africana Philosophy]]
++ [[https://feed.podbean.com/hopwag/feed.xml][History of Philosophy Without Any Gaps]]
++ [[https://podcasts.files.bbci.co.uk/b006qk11.rss][Moral Maze]]
++ [[https://rss.acast.com/history-of-ideas][Talking Politics: HISTORY OF IDEAS]]
++ [[http://feeds.feedburner.com/dancarlin/history?format=xml][Dan Carlin's Hardcore History]]
++ [[https://feeds.buzzsprout.com/1129142.rss][يد خفية]]
+** Other
+:PROPERTIES:
+:CUSTOM_ID: othtt
+:END:
++ [[https://www.benbenandblue.com/episodes?format=rss][Ben, Ben and Blue Ben]]
++ [[https://fair.org/feed/podcast][CounterSpin]]
++ [[https://feeds.megaphone.fm/darknetdiaries][Darknet Diaries]]
++ [[http://feeds.feedburner.com/TheLastPodcastOnTheLeft?format=xml][Last Podcast On The Left]]
++ [[https://lexfridman.com/feed/podcast/][Lex Fridman Podcast]]
++ [[https://feeds.megaphone.fm/pod-save-the-world][Pod Save the World]]
++ [[https://feeds.megaphone.fm/replyall][Reply All]]
++ [[https://feeds.npr.org/510333/podcast.xml][Throughline]]
++ [[https://omny.fm/shows/baadams/playlists/podcast.rss][بعد أمس]]
+* Other                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: other
+:END:
+- [[https://www.youtube.com/@YollaKhalife][Yolla Khalife]]
+- [[https://www.youtube.com/@musicpalestineheritage][لفلسطين نغني Music Palestine heritage]]
++ [[https://www.youtube.com/@AvetisCodes][AvetisCodes ]]
+
+  Contains good tutorials for programming newcomers.
+
++ [[https://www.youtube.com/@JordanBarlow][Jordan Barlow]]
+
+  Same as previous.
+
++ [[https://www.youtube.com/@r3dux][r3dux]]
+# Saleh, [3/16/23 3:14 AM]
+# this guy contacted me years ago in discord or some place, he wanted to play chess with me and i told him i will later
+
+# Saleh, [3/16/23 3:14 AM]
+# he told ok here is my yt channel, my lichess username is same as the channel
+
+# Saleh, [3/16/23 3:15 AM]
+# https://lichess.org/@/r3dux
+
+# Saleh, [3/16/23 3:15 AM]
+# he is not active
+
+# Saleh, [3/16/23 3:15 AM]
+# i wonder if he still remembers

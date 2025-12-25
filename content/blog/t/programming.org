@@ -1,0 +1,1111 @@
+:PROPERTIES:
+:ID:       4u5664n02wj0
+:END:
+#+title: Programming
+#+filetags: :project:
+
+
+
+{{{indx}}}
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+* Notes                                                               :noexport:
+** Software shouldn't be modified by people who do not understand it
+:PROPERTIES:
+:ID:       uxbjbtu01ik0
+:CUSTOM_ID: uxbjbtu01ik0
+:END:
+I read it in: [[id:gdxisrt0tfk0][Software Design is Knowledge Building]]
+#+begin_quote
+In his Software Aging paper, David Parnas warns against putting
+software in the hands of developers who haven’t contributed to (and
+thus don’t understand) its design:
+
+    Although it is essential to upgrade software to prevent aging,
+    changing software can cause a different form of aging. The
+    designer of a piece of software usually had a simple concept in
+    mind when writing the program. If the program is large,
+    understanding that concept allows one to find those sections of
+    the program that must be altered when an update or correction is
+    needed. Understanding that concept also implies understanding the
+    interfaces used within the system and between the system and its
+    environment.
+
+    Changes made by people who do not understand the original design
+    concept almost always cause the structure of the program to
+    degrade. Under those circumstances, changes will be inconsistent
+    with the original concept; in fact, they will invalidate the
+    original concept. Sometimes the damage is small, but often it is
+    quite severe. After those changes, one must know both the original
+    design rules, and the newly introduced exceptions to the rules, to
+    understand the product. After many such changes, the original
+    designers no longer understand the product. Those who made the
+    changes, never did. In other words, nobody understands the
+    modified product. Software that has been repeatedly modified
+    (maintained) in this way becomes very expensive to update. Changes
+    take longer and are more likely to introduce new “bugs”. Change
+    induced aging is often exacerbated by the fact that the
+    maintainers feel that they do not have time to update the
+    documentation. The documentation becomes increasingly inaccurate
+    thereby making future changes even more difficult.
+#+end_quote
+** Casey Muratori incident
+:PROPERTIES:
+:ID:       rbhbt571krk0
+:CUSTOM_ID: rbhbt571krk0
+:END:
+From: https://news.ycombinator.com/item?id=38650254
+
+Microsoft’s new terminal application rendered text extremely slowly, like 10 minutes to cat 1gb of text slow.
+
+Casey submitted a bug saying that it’s slow and should be much much faster.
+Microsoft responded something like “text is hard … … phd dissertation on rendering text”
+
+Casey made a terminal renderer with more features than Microsoft’s renderer in a weekend, it performed orders of magnitude faster, had zero optimization work performed and he jokingly (and hilariously) titled the video “a phd dissertation”.
+
+Next, the excuse parade rolled in and came up with all manner of excuses as to why Muratoris renderer was so much faster, so he made a follow up video addressing the excuse parade, as well as containing some very minor optimization.
+
+Also note that Casey’s implementation isn’t even as fast as things could be. His optimizations are minor.
+
+https://github.com/microsoft/terminal/issues/10362
+https://m.youtube.com/playlist?list=PLEMXAbCVnmY6zCgpCFlgggR...
+** The case against OOP
+:PROPERTIES:
+:ID:       ntm4uwa1krk0
+:CUSTOM_ID: ntm4uwa1krk0
+:END:
+Here there's a list of critiques against Object-Oriented Programming, I agree with most of which. This is a reference list, for people who never faced a critique of OOP, as well as a reference for me to refer to when people who only worked with OOO for the most of their lives are questioning how could anything be wrong with it (I worked for a while with people who had no clue that there are other possibilities for writing software, or even couldn't imagine that procedural code could be sometimes better than an OOO variant.)
+- [[https://www.youtube.com/watch?v=QM1iUe6IofM][Object-Oriented Programming is Bad]] [video]
+  Funny enough that when I looked up for this video to add to this list, I found that it has a thumb-down mark on YouTube. Likely it was an impulsive reaction from me when I watched it when I was learning programming for the first time ever, and it popped up in the way.
+
+  I agree with everything in this video and its follow-ups (they're next in the list). OOP does not make a lot of sense at the first place, but most importantly, it's extremely difficult to do it properly. It's theoretically possible to abide by all the "good practices" in the OO world, and do readable, simple and modular OO code, but it's extremely hard to make engineers follow all of these principle. It's an expensive barrier that has proven itself over and over to be a great failure.
+
+  This is my main argument against OOP; even if it theoretically works, from an engineering perspective, it is really bad. Having your tools/concepts to be easy, intuitive, and unlikely to cause abuse and bugs, is a great part of what engineering is about.
+- [[https://www.youtube.com/watch?v=IRTfhkiAqPw&t=1115s][Object-Oriented Programming is Embarrassing]] [video]
+- [[https://www.youtube.com/watch?v=V6VP-2aIcSc][Object-Oriented Programming is Garbage]] [video]
+- [[https://cscalfani.medium.com/goodbye-object-oriented-programming-a59cda4c0e53][Goodbye, OOP]] [medium]
+- [[https://readmedium.com/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7][Object-Oriented Programming — The Trillion Dollar Disaster]]
+- [[https://wiki.c2.com/?ArgumentsAgainstOop][Arguments against OOP]] [c2wiki]
+- [[https://www.youtube.com/watch?v=tD5NrevFtbU]["Clean" Code, Horrible Performance]] [video]
+- [[https://boxbase.org/entries/2020/aug/3/case-against-oop/][Case against OOP is understated, not overstated]]
+- [[https://alexanderdanilov.dev/en/articles/oop][OOP: the worst thing that happened to programming]]
+- [[https://www.youtube.com/watch?v=wo84LFzx5nI][OOP: Anatomy of a Thirty-five-year Mistake]] [vide]
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** KILL [[mu4e:msgid:fa36049f-80bc-4f68-9d1e-a424687a3941@larrasket][AWK technical notes (2023)]]                                   :@check:
+:LOGBOOK:
+CLOCK: [2025-11-15 Sat 19:25]--[2025-11-15 Sat 19:26] =>  0:01
+:END:
+[2025-11-02 Sun 23:59]
+** DONE [[mu4e:msgid:20251010145611.6700c5654aff2610@mg.every.to][Seeing Science Like a Language Model]]                         :@check:
+:LOGBOOK:
+CLOCK: [2025-10-15 Wed 02:24]--[2025-10-15 Wed 02:25] =>  0:01
+:END:
+[2025-10-14 Tue 23:59]
+** DONE [[mu4e:msgid:bfabd7b0-3c2c-48c9-b61d-7e17bc8a49f8@larrasket][UTF-8 is a brilliant design]]                                  :@check:
+:LOGBOOK:
+CLOCK: [2025-10-07 Tue 01:01]--[2025-10-07 Tue 01:07] =>  0:06
+:END:
+[2025-09-15 Mon 19:06]
+** DONE [[mu4e:msgid:71ca797e-b699-44ec-95be-0b35cf294dea@larrasket][Vibe coding has turned senior devs into 'AI babysitters']]     :@check:
+:LOGBOOK:
+CLOCK: [2025-09-27 Sat 23:37]--[2025-09-27 Sat 23:39] =>  0:02
+:END:
+[2025-09-16 Tue 23:59]
+** DONE [[mu4e:msgid:238b81bf-158d-47df-9089-7f0841d5d509@larrasket][Pass: Unix Password Manager]]                                  :@check:
+:LOGBOOK:
+CLOCK: [2025-10-02 Thu 01:28]--[2025-10-02 Thu 01:30] =>  0:02
+CLOCK: [2025-09-15 Mon 22:34]--[2025-09-15 Mon 22:55] =>  0:21
+:END:
+[2025-09-15 Mon 19:09]
+** DONE [[mu4e:msgid:d4df61f1-4e50-459a-96b9-9eceb709b058@larrasket][These days, systemd can be a cause of restrictions on daemons]] :@read:
+:LOGBOOK:
+CLOCK: [2025-09-28 Sun 00:12]--[2025-09-28 Sun 01:05] =>  0:53
+CLOCK: [2025-09-26 Fri 19:22]--[2025-09-26 Fri 19:23] =>  0:01
+:END:
+[2025-09-25 Thu 23:59]
+** DONE [[mu4e:msgid:69f30348-d161-44c7-b785-3588f4244a0d@larrasket][Some stuff on how Linux consoles interact with the mouse]]     :@read:
+:LOGBOOK:
+CLOCK: [2025-10-07 Tue 01:28]--[2025-10-07 Tue 01:31] =>  0:03
+:END:
+[2025-09-25 Thu 23:59]
+** DONE musa al hassy                                                :@check:
+:LOGBOOK:
+CLOCK: [2025-10-01 Wed 00:06]--[2025-10-01 Wed 00:17] =>  0:11
+:END:
+** KILL [[https://archive.ph/20251111131213/https://www.nybooks.com/articles/2025/12/04/how-the-web-was-lost-internet-this-is-for-everyone/#selection-1161.0-1164.0][How the web was lost]]                                         :@check:
+:LOGBOOK:
+CLOCK: [2025-11-17 Mon 20:14]--[2025-11-17 Mon 20:29] =>  0:15
+:END:
+** DONE [[https://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html][OOP bad 2]]                                                    :@read:
+** DONE [[https://curtispoe.org/articles/why-is-object-oriented-programming-bad.html][OOP bad.]]                                                     :@read:
+:LOGBOOK:
+CLOCK: [2025-11-17 Mon 23:43]--[2025-11-18 Tue 00:51] =>  1:08
+:END:
+** DONE [[https://tonyarcieri.com/4-fatal-flaws-in-deterministic-password-managers][4 fatal flaws in deterministic password managers]]             :@check:
+:PROPERTIES:
+:ID:       hhlhg360yrk0
+:CUSTOM_ID: hhlhg360yrk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-12-02 Tue 00:55]--[2025-12-02 Tue 01:03] =>  0:08
+:END:
+** KILL Fix the auto git commit thing.                               :@general:
+** KILL Might be a good idea to make a merge request on r2e to allow encrypted password or something
+[2025-08-28 Thu 19:39] or at least just having that password coming from a .env file
+** TODO Consider movint to iterm                                     :@general:
+** DONE [[mu4e:msgid:bbf9cb81-c6c6-440d-9c2a-3f09c7445a82@larrasket][Claude Code Can Debug Low-level Cryptography]]                 :@check:
+:LOGBOOK:
+CLOCK: [2025-11-17 Mon 20:30]--[2025-11-17 Mon 22:02] =>  1:32
+:END:
+[2025-11-02 Sun 23:59]
+** DONE [[mu4e:msgid:848d220e-4cd6-49c1-9d3b-9c540d347a14@larrasket][How I Use Every Claude Code Feature]]                          :@check:
+:PROPERTIES:
+:ID:       2fp6z870zrk0
+:CUSTOM_ID: 2fp6z870zrk0
+:END:
+- [2025-12-02 Tue 19:42] \\
+  Good advice:
+
+  - Don’t @-File Docs. If you have extensive documentation elsewhere, it’s tempting to @-mention those files in your CLAUDE.md. This bloats the context window by embedding the entire file on every run. But if you just mention the path, Claude will often ignore it. You have to pitch the agent on why and when to read the file. “For complex … usage or if you encounter a FooBarError, see path/to/docs.md for advanced troubleshooting steps.”
+  - Don’t Just Say “Never.” Avoid negative-only constraints like “Never use the --foo-bar flag.” The agent will get stuck when it thinks it must use that flag. Always provide an alternative.
+:LOGBOOK:
+CLOCK: [2025-12-02 Tue 19:35]--[2025-12-02 Tue 19:41] =>  0:06
+:END:
+[2025-11-02 Sun 23:59]
+#+BEGIN_tag
+{{{t}}} [[id:pqw53cg0uek0][LLMs]]
+#+END_tag
+** DONE [[mu4e:msgid:ba5e2a62-ea34-400f-84c4-f921a22f707f@larrasket][Moving tables across PostgreSQL instances]]                    :@check:
+:PROPERTIES:
+:ID:       qz0gcv70zrk0
+:CUSTOM_ID: qz0gcv70zrk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-12-02 Tue 19:53]--[2025-12-02 Tue 20:02] =>  0:09
+:END:
+[2025-11-02 Sun 23:59]
+** TODO Integrate this to Doom                                       :@idea:
+https://www.reddit.com/r/emacs/comments/1mrvgmn/oc_i_created_package_upgrade_guard_a_diffchecking/?share_id=CCux0iYmBiP1mzJmw8tSo&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=3
+** TODO [[https://github.com/ivoronin/TomatoBar/issues/95][Allow change inputs of timers by typing numbers instead of]]   :@idea:
+** TODO Work on the HN thing                                         :@idea:
+SCHEDULED: <2026-12-19 Sat>
+[2025-07-29 Tue 21:10]
+** TODO Analysis HackerNews                                          :@idea:
+[2024-08-12 Mon 00:12]
+I think it might be useful to analysis the website and the interactions.
+https://news.ycombinator.com/item?id=36491335 contains an API. We can know for example
+what the most site with interactions.
+** TODO Manal and Alaa                                               :@idea:
+[2025-08-02 Sat 03:29]
+I thoguht that it might be a nice idea to have a replica of their site.
+** TODO Merge conflict detector                                      :@idea:
+[2025-08-22 Fri 14:52]
+** TODO I want to make a doom theme that looks like a rug            :@idea:
+:PROPERTIES:
+:ID:       mxy6trx08lk0
+:CUSTOM_ID: mxy6trx08lk0
+:END:
+[2025-05-27 Tue 01:44]
+** TODO Fix all Org Ids with broken links                            :@idea:
+[2024-12-03 Tue 22:22]
+** TODO [[https://aiprobook.com/deep-learning-for-programmers/][Deep Learning for Programmers]]                                :@read:
+SCHEDULED: <2026-01-09 Fri>
+:PROPERTIES:
+:ID:       yb5cqtp0tfk0
+:CUSTOM_ID: yb5cqtp0tfk0
+:END:
+:STATS:
+- Rescheduled from "[2025-10-17 Fri]" on [2025-10-17 Fri 12:02] \\
+  Hope you have a better place now.
+- Rescheduled from "[2025-07-05 Sat]" on [2025-07-05 Sat 08:31] \\
+  Added a note.
+:END:
+- [2025-07-05 Sat 08:31] Spent my money on the mac. Other priorities. Rescheduling.
+- [2025-03-19 Wed 10:12] Thanks.. not much of okay. But alhamdililah. Trying to get better soon.
+- [2024-12-14 Sat 01:53] I think you should have money by that new date. And I hope you are okay too.
+- [2024-08-12 Mon 07:39] I can not find this book for free anywhere, it sounds very good for me to crash more with
+  deep learning.. and it's nice because it's in clojure, it will help me understand clojure
+  more. I will try to look for it later
+** TODO Build a similar gallery website                              :@idea:
+- [2024-08-23 Fri 15:27] https://photos.nwalsh.com/
+** TODO [[https://www.youtube.com/watch?v=Z4AgvG2Xg0k][CMPRSN (Compression Overview)]]                                :@watch:@later:
+** TODO Beauty is Our Business                                       :@idea:
+** TODO A Discipline of Programming                                  :@later:
+** TODO Building a chess cheating system                             :@idea:@later:
+:LOGBOOK:
+CLOCK: [2023-09-16 Sat 01:40]--[2023-09-16 Sat 01:58] =>  0:18
+:END:
+Maybe when I know how to do GUI better than that.
+** TODO [#C] Chart for blog statistic                                :@idea:
+:LOGBOOK:
+CLOCK: [2023-06-20 Tue 20:20]--[2023-06-20 Tue 20:59] =>  0:39
+:END:
+** TODO [[https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/][Distributed systems theory]]                                   :@check:@later:
+:PROPERTIES:
+:ID:       wqlciqp0tfk0
+:CUSTOM_ID: wqlciqp0tfk0
+:END:
+** TODO [[https://youtu.be/6MOtFkl2tq0][Optimizing Go Request Latency with]]                           :@check:@later:
+:PROPERTIES:
+:ID:       shn2dqp0tfk0
+:CUSTOM_ID: shn2dqp0tfk0
+:END:
+Might be useful at some point.
+** TODO [[https://akkadia.org/drepper/cpumemory.pdf][What every programmin should know about memoery]]*             :@idea:@later:
+:PROPERTIES:
+:ID:       gy8c3qp0tfk0
+:CUSTOM_ID: gy8c3qp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-10-24 Fri 02:29]--[2025-10-24 Fri 02:30] =>  0:01
+CLOCK: [2025-08-22 Fri 02:30]--[2025-08-22 Fri 03:39] =>  1:09
+:END:
+** TODO [[https://softwareengineering.stackexchange.com/questions/448766/how-to-make-scrum-less-stressful][estimation - How to make Scrum less stressful ]]               :@check:@later:
+:PROPERTIES:
+:ID:       pfs25pp0tfk0
+:CUSTOM_ID: pfs25pp0tfk0
+:END:
+** TODO Arabic Academic Socity                                       :@idea:
+*** TODO Arabic BibTex Generator
+:LOGBOOK:
+CLOCK: [2023-10-01 Sun 17:29]--[2023-10-01 Sun 18:22] =>  0:53
+CLOCK: [2023-10-01 Sun 06:55]--[2023-10-01 Sun 08:11] =>  1:16
+CLOCK: [2023-09-30 Sat 09:55]--[2023-09-30 Sat 10:30] =>  0:35
+CLOCK: [2023-09-30 Sat 08:01]--[2023-09-30 Sat 08:17] =>  0:16
+:END:
+**** KILL Meet with Mustafa Rady
+SCHEDULED: <2023-10-02 Mon>
+*** DONE Doing front end
+:LOGBOOK:
+CLOCK: [2023-10-01 Sun 16:25]--[2023-10-01 Sun 17:29] =>  1:04
+CLOCK: [2023-10-01 Sun 11:47]--[2023-10-01 Sun 13:38] =>  1:51
+CLOCK: [2023-10-01 Sun 08:12]--[2023-10-01 Sun 08:22] =>  0:10
+:END:
+** TODO Rewrite the blog in Clojure                                  :@idea:
+[2024-11-17 Sun 04:24]
+** deps
+:PROPERTIES:
+:ORDERED:  t
+:END:
+*** TODO Study computer cryptography                                :@idea:
+*** TODO [[https://www.tandfonline.com/doi/full/10.1080/23742917.2016.1226650][Will quantum computers be the end of public key encryption?]] :@read:
+:LOGBOOK:
+CLOCK: [2023-10-07 Sat 16:28]--[2023-10-07 Sat 16:30] =>  0:02
+CLOCK: [2023-10-03 Tue 10:46]--[2023-10-03 Tue 10:53] =>  0:07
+:END:
+
+** KILL [[mu4e:msgid:b189c18b-d805-44c8-aa3d-749cb0201cc3@larrasket][Self-taught engineers often outperform (2024)]]                :@check:
+:LOGBOOK:
+CLOCK: [2025-08-26 Tue 01:19]--[2025-08-26 Tue 01:24] =>  0:05
+:END:
+[2025-07-18 Fri 17:21]
+** KILL [[mu4e:msgid:1923106a-cea6-44ac-8665-fdd4f96b679a@larrasket][My Emacs writing experience]]                                  :@check:
+:LOGBOOK:
+CLOCK: [2025-09-09 Tue 20:00]--[2025-09-09 Tue 20:01] =>  0:01
+:END:
+[2025-07-26 Sat 16:13]
+** KILL App like Silicoio                                            :@idea:
+[2025-08-22 Fri 14:49]
+** KILL [[mu4e:msgid:05f903f6-9402-4c69-8827-1a46c582c80c@larrasket][AI can now stalk you with just a single vacation photo]]       :@check:
+:LOGBOOK:
+CLOCK: [2025-09-20 Sat 20:45]--[2025-09-20 Sat 20:46] =>  0:01
+:END:
+[2025-06-07 Sat 15:13]
+** KILL Github PRs Visualizer                                        :@idea:
+[2025-05-28 Wed 12:43]
+** KILL [#A] [[https://news.ycombinator.com/item?id=43337028]]           :@read:
+:LOGBOOK:
+CLOCK: [2025-03-22 Sat 13:52]--[2025-03-22 Sat 13:54] =>  0:02
+:END:
+[2025-03-12 Wed 02:53]
+** KILL Make org-roam search fault-tolerant                          :@idea:
+- [2025-03-29 Sat 20:21] This is possible to implement, however the main issue with that is the fact that
+  I will have to host something, which I don't want to.
+:LOGBOOK:
+CLOCK: [2025-03-29 Sat 20:13]--[2025-03-29 Sat 20:21] =>  0:08
+:END:
+[2025-03-12 Wed 01:46]
+** KILL [[mu4e:msgid:32584057-d42e-40a1-854a-a8556934e947@larrasket][Should Programming Languages Be Safe or Powerful?]]            :@read:
+:PROPERTIES:
+:ID:       ginhghu0tfk0
+:CUSTOM_ID: ginhghu0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-16 Mon 04:07]--[2024-12-16 Mon 04:08] =>  0:01
+:END:
+[2024-12-16 Mon 01:12]
+** KILL [[mu4e:msgid:c5697450-0258-40a3-a7af-8c08568560af@larrasket][There's No Such Thing as Software Productivity (2012)]]        :@read:
+:PROPERTIES:
+:ID:       jbwfb4u0tfk0
+:CUSTOM_ID: jbwfb4u0tfk0
+:END:
+:LOGBOOK:
+:END:
+[2024-12-20 Fri 02:51]
+** KILL [[mu4e:msgid:9a690372-cf9e-4b3a-af23-056f4c6f6c50@larrasket][Mandelbrot deep zoom theory and practice (2021)]]              :@read:
+:PROPERTIES:
+:ID:       9a20dht0tfk0
+:CUSTOM_ID: 9a20dht0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-03 Sat 00:59]--[2025-05-03 Sat 01:00] =>  0:01
+:END:
+[2025-01-04 Sat 11:35]
+** KILL Move to another Window Manager                                :@idea:
+[2024-11-23 Sat 10:20]
+** KILL Make Emacs insensitive for Arabic diacritics                  :@idea:
+:LOGBOOK:
+:END:
+[2024-12-03 Tue 15:52]
+** KILL A program to follow women's cycle                             :@idea:
+- [2024-06-23 Sun 07:09] I thought this for [[id:dqk8vx40xyj0][Menna Yasser]]. I think I will wait to get someone to
+   care about again.
+[2024-06-20 Thu 00:56] Should be simple, I think there would be some medical algorithms
+involved, I will use it on menna.
+
+** KILL Collection of Art                                             :@idea:
+
+#+DOWNLOADED: screenshot @ 2024-08-04 13:52:05
+[[file:../../media/\[\[id:4b45b3aa-faac-4698-ba6b-b120ac166453\]\[agenda\]\]/2024-08-04_13-52-05_screenshot.png]]
+
+- [2024-08-04 Sun 13:52] I want a PKMS system to store art like this
+
+** KILL solve one code gulf problem                                  :@general:
+:LOGBOOK:
+- [2024-01-13 Sat 23:40] Well, I think most of codegolf problems are none sense by now. I think I better
+  check out art of computer programming.
+CLOCK: [2024-01-13 Sat 22:46]--[2024-01-13 Sat 23:40] =>  0:54
+CLOCK: [2024-01-13 Sat 21:07]--[2024-01-13 Sat 22:22] =>  1:15
+:END:
+https://codegolf.stackexchange.com/questions?tab=Votes
+** KILL setting up racket                                            :@else:
+:LOGBOOK:
+CLOCK: [2024-01-12 Fri 21:02]--[2024-01-12 Fri 22:51] =>  1:49
+:END:
+** KILL [[https://github.com/rougier/scientific-visualization-book][An open access book on scientific visualization using]]        :@check:
+:PROPERTIES:
+:ID:       6nhjktp0tfk0
+:CUSTOM_ID: 6nhjktp0tfk0
+:END:
+Might worth checking it out Nope, going to use Julia plot.
+** KILL aljazeria X bot                                              :@else:
+- [2024-06-23 Sun 06:48] Twtter new API sucks shit, I'm down with trying.. also the fact that i still
+  need to create new account is tedious.
+:LOGBOOK:
+CLOCK: [2024-06-23 Sun 06:10]--[2024-06-23 Sun 06:48] =>  0:38
+:END:
+** KILL [[mu4e:msgid:305eb47f-2390-442d-a281-7fb3730a6ef7@larrasket][DeepFake Social Engineering Attacks]]                          :@watch:
+:PROPERTIES:
+:ID:       4oacftp0tfk0
+:CUSTOM_ID: 4oacftp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-04-12 Fri 23:17]--[2024-04-12 Fri 23:24] =>  0:07
+:END:
+[2024-02-17 Sat 13:40]
+** KILL learning about autotool                                      :@else:
+:LOGBOOK:
+CLOCK: [2023-11-14 Tue 10:41]--[2023-11-14 Tue 15:24] =>  4:43
+:END:
+** KILL building dwm blocks in C                                     :@else:
+- [2023-11-15 Wed 14:55] Fuck it. concurrency in C is just a nightmare. But I've learnd enough I guess.
+  If I need concurrency in the future I'd just use Go.
+:LOGBOOK:
+CLOCK: [2023-11-15 Wed 11:18]--[2023-11-15 Wed 14:55] =>  3:37
+CLOCK: [2023-11-13 Mon 08:58]--[2023-11-13 Mon 09:05] =>  0:07
+CLOCK: [2023-11-13 Mon 05:01]--[2023-11-13 Mon 07:34] =>  2:33
+CLOCK: [2023-11-12 Sun 06:05]--[2023-11-12 Sun 12:31] =>  6:26
+CLOCK: [2023-11-12 Sun 04:57]--[2023-11-12 Sun 05:39] =>  0:42
+CLOCK: [2023-11-12 Sun 02:49]--[2023-11-12 Sun 04:49] =>  2:00
+CLOCK: [2023-11-11 Sat 05:40]--[2023-11-11 Sat 16:12] => 10:32
+CLOCK: [2023-11-11 Sat 03:15]--[2023-11-11 Sat 04:49] =>  1:34
+:END:
+** KILL Working on rdump project                                     :@else:
+:LOGBOOK:
+CLOCK: [2023-10-19 Thu 03:01]--[2023-10-19 Thu 04:20] =>  1:19
+:END:
+** KILL Building a music player in C                                  :@idea:
+:LOGBOOK:
+CLOCK: [2023-11-24 Fri 11:57]--[2023-11-24 Fri 15:49] =>  3:52
+CLOCK: [2023-11-10 Fri 04:46]--[2023-11-10 Fri 04:54] =>  0:08
+:END:
+** KILL cproj                                                        :@idea:
+:LOGBOOK:
+CLOCK: [2023-11-09 Thu 07:24]--[2023-11-09 Thu 08:18] =>  0:54
+:END:
+** KILL [#C] [[https://youtu.be/xf6Vt6iElNw][You’re Probably Doing Pagination Wrong]]                  :@watch:
+:PROPERTIES:
+:ID:       2yl57tp0tfk0
+:CUSTOM_ID: 2yl57tp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-11-05 Sun 04:14]--[2023-11-05 Sun 04:15] =>  0:01
+:END:
+** KILL Bitwise oerations                                            :@check:
+:LOGBOOK:
+CLOCK: [2023-10-20 Fri 14:44]--[2023-10-20 Fri 14:56] =>  0:12
+:END:
+** KILL [[http://dist-prog-book.com/chapter/4/dist-langs.html#three-major-approaches-to-distributed-languages][Distributed Programming Languages]]                            :@idea:
+:PROPERTIES:
+:ID:       etz0ksp0tfk0
+:CUSTOM_ID: etz0ksp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-20 Fri 14:56]--[2023-10-20 Fri 15:18] =>  0:22
+CLOCK: [2023-09-16 Sat 02:04]--[2023-09-16 Sat 04:02] =>  1:58
+:END:
+Start [[https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB][here]].
+** KILL Consider some problem solving                                :@current:
+:LOGBOOK:
+CLOCK: [2023-10-30 Mon 16:52]--[2023-10-30 Mon 17:12] =>  0:20
+CLOCK: [2023-10-29 Sun 13:36]--[2023-10-29 Sun 14:49] =>  1:13
+CLOCK: [2023-10-27 Fri 21:19]--[2023-10-27 Fri 23:15] =>  1:56
+CLOCK: [2023-10-26 Thu 21:57]--[2023-10-26 Thu 22:14] =>  0:17
+CLOCK: [2023-10-25 Wed 15:33]--[2023-10-25 Wed 16:35] =>  1:02
+CLOCK: [2023-10-25 Wed 15:17]--[2023-10-25 Wed 15:33] =>  0:16
+CLOCK: [2023-10-22 Sun 06:40]--[2023-10-22 Sun 08:29] =>  1:49
+CLOCK: [2023-10-20 Fri 15:18]--[2023-10-20 Fri 17:24] =>  2:06
+:END:
+** KILL Racket might be worth learning                               :@idea:
+Slow, exception handling and centralized package repo. Unusalbe for me. C for
+the rescue.
+** KILL Find someway to mirror sr.ht to github                       :@idea:
+** KILL [[https://github.com/kubevirt/community/issues/257][check new summer of code]]                                     :@general:
+SCHEDULED: <2024-02-22 Thu>
+:LOGBOOK:
+CLOCK: [2024-02-21 Wed 23:58]--[2024-02-22 Thu 00:57] =>  0:59
+CLOCK: [2024-01-15 Mon 06:30]--[2024-01-15 Mon 06:31] =>  0:01
+:END:
+** KILL Problem Solving                                              :@else:
+:LOGBOOK:
+CLOCK: [2023-05-08 Mon 18:15]--[2023-05-08 Mon 18:50] =>  0:35
+CLOCK: [2023-05-07 Sun 22:37]--[2023-05-08 Mon 00:18] =>  1:41
+CLOCK: [2023-05-07 Sun 22:36]--[2023-05-07 Sun 22:37] =>  0:01
+CLOCK: [2023-05-02 Tue 15:49]--[2023-05-02 Tue 20:36] =>  4:47
+:END:
+** KILL [#C] org-noter explorer                                      :@idea:
+:LOGBOOK:
+CLOCK: [2023-05-06 sáb 02:17]--[2023-05-06 Sat 03:06] =>  0:49
+CLOCK: [2023-05-06 sáb 01:09]--[2023-05-06 sáb 01:28] =>  0:19
+:END:
+A project to build web explorer from org-noter pages
+
+** KILL [#C] timer for systemctl                                     :@idea:
+:LOGBOOK:
+CLOCK: [2023-11-03 Fri 02:21]--[2023-11-03 Fri 06:46] =>  4:25
+:END:
+** KILL [#C] [[https://youtu.be/g9n0a0644B4][Mike's Cube Code - Computerphile]]                        :@watch:
+:LOGBOOK:
+CLOCK: [2024-01-11 Thu 20:31]--[2024-01-11 Thu 20:32] =>  0:01
+:END:
+** KILL use mustafa rady to build org-noter exporter                 :@idea:
+** KILL [[https://softwareengineering.stackexchange.com/q/448155/434388][Shouldn't deep copy be the default, not shallow copy?]]        :@check:
+:PROPERTIES:
+:ID:       6u0h6pp0tfk0
+:CUSTOM_ID: 6u0h6pp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-20 Fri 14:39]--[2023-10-20 Fri 14:41] =>  0:02
+:END:
+** KILL make ang more lightweight                                     :@idea:
+:LOGBOOK:
+- [2023-12-21 Thu 04:47] Or actually fix ang
+:END:
+
+** KILL Move from sourcehut to your own git                          :@idea:
+[2024-07-24 Wed 17:28]
+https://news.ycombinator.com/item?id=1564897
+** KILL [[mu4e:msgid:00032bed-3933-43a2-a30a-345eff322c1e@larrasket][If GPUs Are So Good, Why Do We Still Use CPUs at All?]]        :@read:
+:LOGBOOK:
+:END:
+[2025-01-09 Thu 03:37]
+** KILL [[mu4e:msgid:5e40ce37-ec3a-41a8-92b9-5ba47e15ee33@larrasket][Is AI really thinking and reasoning — or just pretending to?]] :@read:
+:PROPERTIES:
+:ID:       6lak7dz00ik0
+:CUSTOM_ID: 6lak7dz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-24 Mon 01:25]--[2025-03-24 Mon 01:30] =>  0:05
+:END:
+[2025-02-22 Sat 23:15]
+** DONE [[mu4e:msgid:2b98fce4-fa66-43b0-b703-ee206d7ab1a7@larrasket][An Open-Source Maintainer's Guide to Saying No]]               :@check:
+:PROPERTIES:
+:ID:       2bghbmy0ppk0
+:CUSTOM_ID: 2bghbmy0ppk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-10-02 Thu 01:33]--[2025-10-02 Thu 01:45] =>  0:12
+:END:
+:DATE:
+[2025-09-15 Mon 19:08]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+"So what’s the playbook? In FastMCP, we recently tried to nudge this behavior by requiring an issue for every PR. In a perfect example of unintended consequences, we now get single-sentence issues opened a second before the PR…"
+
+** DONE VsCode Build                                                 :@general:
+SCHEDULED: <2025-08-08 Fri>
+[2025-08-05 Tue 23:34]
+** DONE clean laptop                                                 :@general:
+[2025-08-05 Tue 22:53]
+** DONE Remove tmux                                                  :@general:
+[2025-08-04 Mon 23:59]
+** DONE Fix the STAT Drawer in Org-mode                              :@later:@general:
+[2025-08-05 Tue 23:59]
+** DONE [[https://www.sabrina.dev/p/ultimate-ai-coding-guide-claude-code][How I use claude code]]                                        :@check:
+:PROPERTIES:
+:ID:       vc5h9061xok0
+:CUSTOM_ID: vc5h9061xok0
+:END:
+- [2025-09-10 Wed 22:42] \\
+  Good artile. Used it in my [[id:xyvazbb1tok0][AI Tips]].
+:LOGBOOK:
+:END:
+[2025-08-05 Tue 23:59]
+** DONE [[mu4e:msgid:db79a072-75d8-4333-9857-f3b5a047a30d@larrasket][Most leading AI chatbots exaggerate science findings.]]        :@read:
+:PROPERTIES:
+:ID:       v3jjfpx08lk0
+:CUSTOM_ID: v3jjfpx08lk0
+:END:
+- [2025-06-20 Fri 19:15] Interesting study.
+:LOGBOOK:
+CLOCK: [2025-06-20 Fri 19:14]--[2025-06-20 Fri 19:15] =>  0:01
+CLOCK: [2025-06-20 Fri 19:01]--[2025-06-20 Fri 19:14] =>  0:13
+:END:
+[2025-05-27 Tue 01:55]
+** DONE [[mu4e:msgid:0f94e036-9910-4107-b3cb-36f09a391253@larrasket][Links (87)]]                                                   :@check:
+:PROPERTIES:
+:ID:       4q14s980omk0
+:CUSTOM_ID: 4q14s980omk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-09-17 Wed 22:56]--[2025-09-17 Wed 23:01] =>  0:05
+:END:
+[2025-05-01 Thu 21:54]
+** DONE [[mu4e:msgid:3f82657f-ed25-44ec-8d91-29c011bacd64@larrasket][I don't think AGI is right around the corner]]                 :@check:
+:PROPERTIES:
+:ID:       48e8nt70omk0
+:CUSTOM_ID: 48e8nt70omk0
+:END:
+[2025-07-09 Wed 00:00]
+** DONE [[mu4e:msgid:70faa8ca-1cd9-4886-9cac-f3926bf484f3@larrasket][Why AI is still dumb and not scary at all (pt. 1)]]            :@check:
+:PROPERTIES:
+:ID:       b6tjeyr0uik0
+:CUSTOM_ID: b6tjeyr0uik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-09-26 Fri 18:38]--[2025-09-26 Fri 18:52] =>  0:14
+:END:
+[2025-03-09 Sun 17:33]
+** DONE [[mu4e:msgid:284dfdd3-874a-4f0a-8fec-07f1f538a64c@larrasket][Emacs: custom Org clock report for my coaching]]               :@check:
+:PROPERTIES:
+:ID:       d4mcw6u0tfk0
+:CUSTOM_ID: d4mcw6u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-28 Fri 01:40]--[2025-03-28 Fri 01:47] =>  0:07
+:END:
+[2024-12-16 Mon 00:49]
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+** DONE [[mu4e:msgid:d1990f51-59c2-48b0-8259-f595a14f8af4@larrasket][Show HN: I made a movie recommendation app based on your mood]] :@check:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:57]--[2025-05-12 Mon 03:01] =>  0:04
+:END:
+[2025-03-17 Mon 01:02]
+** DONE [[mu4e:msgid:3e9d8a88-665f-4d27-b953-e2235b705fce@larrasket][Emacs for Everything]]                                         :@check:
+:PROPERTIES:
+:ID:       5idj6nt0oik0
+:CUSTOM_ID: 5idj6nt0oik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-24 Mon 01:08]--[2025-03-24 Mon 01:15] =>  0:07
+:END:
+[2025-03-17 Mon 00:57]
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+** DONE [[mu4e:msgid:fa618630-375b-445b-816d-04746be72ce0@larrasket][Limits to Growth (1972)]]                                      :@read:
+:PROPERTIES:
+:ID:       meffb2010ik0
+:CUSTOM_ID: meffb2010ik0
+:END:
+[2024-12-31 Tue 09:41]
+** DONE Fixing tesseract-to-xclip                                    :@else:
+:PROPERTIES:
+:ID:       am83lcl03ik0
+:CUSTOM_ID: am83lcl03ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-07 Fri 23:37]--[2025-03-07 Fri 23:58] =>  0:21
+CLOCK: [2025-02-25 Tue 00:46]--[2025-02-25 Tue 01:43] =>  0:57
+CLOCK: [2025-03-07 Fri 16:35]--[2025-03-07 Fri 17:51] =>  1:16
+:END:
+** DONE [[mu4e:msgid:f36aaf15-01b1-4046-9ef6-7774954f441a@larrasket][Software Design is Knowledge Building]]                        :@read:
+:PROPERTIES:
+:ID:       gdxisrt0tfk0
+:CUSTOM_ID: gdxisrt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-06 Thu 14:42]--[2025-03-06 Thu 15:03] =>  0:21
+:END:
+[2024-12-31 Tue 09:40]
+** DONE [[mu4e:msgid:2e677ff9-70a0-4768-a388-35ac2f5a8159@larrasket][An "oh fuck" moment in time]]                                  :@read:
+:PROPERTIES:
+:ID:       y6tdbww0bgk0
+:CUSTOM_ID: y6tdbww0bgk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-01-18 Sat 14:35]--[2025-01-18 Sat 15:02] =>  0:27
+:END:
+[2025-01-14 Tue 00:21]
+#+BEGIN_tag
+{{{t}}} [[id:pqw53cg0uek0][LLMs]]
+#+END_tag
+** DONE [[mu4e:msgid:8d491f48-2175-49d0-9774-795d2d7865d1@larrasket][Into CPS, never to return]]                                    :@read:
+:PROPERTIES:
+:ID:       kj1htrt0tfk0
+:CUSTOM_ID: kj1htrt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:37]--[2025-05-12 Mon 02:39] =>  0:02
+:END:
+[2024-12-31 Tue 09:35]
+** DONE [[mu4e:msgid:a2011865-0724-4bc6-bfd2-2257603d0ab0@larrasket][The RAM Myth]]                                                 :@read:
+:PROPERTIES:
+:ID:       w240j4u0tfk0
+:CUSTOM_ID: w240j4u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:30]--[2025-05-12 Mon 02:37] =>  0:07
+CLOCK: [2024-12-29 Sun 08:08]--[2024-12-29 Sun 08:09] =>  0:01
+:END:
+[2024-12-20 Fri 02:51]
+** DONE [[mu4e:msgid:efd8828e-48a4-4aae-b755-bba655657825@larrasket][ByteDance's Recommendation System]]                            :@read:
+:PROPERTIES:
+:ID:       oxkg24u0tfk0
+:CUSTOM_ID: oxkg24u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-03 Sat 01:00]--[2025-05-03 Sat 01:03] =>  0:03
+:END:
+[2024-12-21 Sat 05:56]
+** DONE [[mu4e:msgid:19157ea8-3357-4649-85c3-29b43449f692@larrasket][Implementing the the Raft distributed consensus algorithm]]    :@check:
+:PROPERTIES:
+:ID:       nmxa03u0tfk0
+:CUSTOM_ID: nmxa03u0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:56]--[2025-05-12 Mon 02:57] =>  0:01
+:END:
+[2024-12-22 Sun 03:34]
+** DONE [[mu4e:msgid:80889791-30c5-43f8-9312-a0b6772a2800@larrasket][What we learned copying all the best code assistants]]         :@read:
+:PROPERTIES:
+:ID:       qk64hht0tfk0
+:CUSTOM_ID: qk64hht0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-26 Wed 18:00]--[2025-03-26 Wed 18:04] =>  0:04
+:END:
+[2025-01-04 Sat 11:35]
+** DONE [[mu4e:msgid:6e2d4cfc-e10a-4a71-b7d0-d45711e1311a@larrasket][Programming as Theory Building [pdf]​]]                         :@read:
+:PROPERTIES:
+:ID:       46wb0ht0tfk0
+:CUSTOM_ID: 46wb0ht0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-03 Sat 00:56]--[2025-05-03 Sat 00:59] =>  0:03
+CLOCK: [2025-02-20 Thu 18:16]--[2025-02-20 Thu 18:19] =>  0:03
+CLOCK: [2025-01-29 Wed 22:46]--[2025-01-29 Wed 22:51] =>  0:05
+:END:
+[2025-01-04 Sat 11:35]
+** DONE [[mu4e:msgid:2a136691-2fb4-4ba0-9744-a9ac3f74a873@larrasket][Letting Language Models Write My Website]]                     :@check:
+:PROPERTIES:
+:ID:       50ejeup0tfk0
+:CUSTOM_ID: 50ejeup0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:53]--[2025-05-12 Mon 02:56] =>  0:03
+:END:
+[2025-01-01 Wed 02:13]
+** DONE [[mu4e:msgid:8c131b1f-6e75-4cd5-86db-55b0f318b321@larrasket][Ghost Engineer]]                                               :@read:
+:PROPERTIES:
+:ID:       nazjcup0tfk0
+:CUSTOM_ID: nazjcup0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-18 Wed 08:40]--[2024-12-18 Wed 09:19] =>  0:39
+:END:
+[2024-12-18 Wed 01:58]
+** DONE [[mu4e:msgid:49c6bdb2-0600-4102-b7cc-34fdbf9ce138@larrasket][Show HN: Musoq – Query Anything with SQL Syntax]]              :@check:
+:PROPERTIES:
+:ID:       zkd4cup0tfk0
+:CUSTOM_ID: zkd4cup0tfk0
+:END:
+- [2024-12-28 Sat 09:36] Looks very complicating, I don't think it's practical.
+:LOGBOOK:
+CLOCK: [2024-12-28 Sat 09:35]--[2024-12-28 Sat 09:36] =>  0:01
+:END:
+[2024-12-19 Thu 03:47]
+** DONE [[mu4e:msgid:a99575b6-4f2b-4d8a-a379-18dee271d90b@larrasket][You deserve a better browser than Google Chrome]]              :@read:
+:PROPERTIES:
+:ID:       k6wabup0tfk0
+:CUSTOM_ID: k6wabup0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-23 Sat 18:23]--[2024-11-23 Sat 18:25] =>  0:02
+:END:
+[2024-11-23 Sat 08:21]
+** DONE Organize Git, Github, your blog after your first payroll     :@general:
+SCHEDULED: <2025-01-27 Mon>
+:LOGBOOK:
+CLOCK: [2025-01-29 Wed 00:17]--[2025-01-29 Wed 00:56] =>  0:39
+CLOCK: [2025-01-28 Tue 17:44]--[2025-01-28 Tue 23:10] =>  5:26
+:END:
+- [2024-12-12 Thu 06:33] https://news.ycombinator.com/item?id=1564897
+  https://www.linode.com/docs/guides/websites/hosting/
+
+  having a single VPS sounds like a good idea.
+[2024-12-06 Fri 15:46]
+** DONE Organize your blog after your first payroll                  :@general:
+SCHEDULED: <2025-01-27 Mon>
+[2024-12-06 Fri 15:46]
+** DONE Renew your yearly sr.ht subscription                         :@general:
+:PROPERTIES:
+:LAST_REPEAT: [2024-11-18 Mon 00:03]
+:END:
+- [2024-11-18 Mon 00:03] I decided I will move to my own Git.
+:STATS:
+- State "DONE"       from "TODO"       [2024-11-18 Mon 00:03]
+- State "DONE"       from "TODO"       [2023-09-13 Wed 16:39]
+:END:
+** DONE [[mu4e:msgid:91bc6fb0-9af5-4e65-8589-8cc0122b8655@larrasket][Scala in 100 Seconds]]                                         :@watch:
+:PROPERTIES:
+:ID:       7m0fytp0tfk0
+:CUSTOM_ID: 7m0fytp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-20 Tue 10:25]--[2024-08-20 Tue 10:30] =>  0:05
+:END:
+[2024-07-31 Wed 15:21]
+** DONE statuesless                                                  :@general:
+:PROPERTIES:
+:ID:       q0jctp51tlk0
+:CUSTOM_ID: q0jctp51tlk0
+:END:
+- [2024-06-27 Thu 13:57] Was fixing the IP issue
+:LOGBOOK:
+CLOCK: [2024-06-27 Thu 13:37]--[2024-06-27 Thu 13:56] =>  0:19
+CLOCK: [2024-07-02 Tue 04:11]--[2024-07-02 Tue 04:47] =>  0:36
+CLOCK: [2024-07-01 Mon 10:49]--[2024-07-01 Mon 11:48] =>  0:59
+CLOCK: [2024-06-15 Sat 08:41]--[2024-06-15 Sat 09:07] =>  0:26
+CLOCK: [2024-06-15 Sat 08:30]--[2024-06-15 Sat 08:32] =>  0:02
+CLOCK: [2024-06-15 Sat 04:53]--[2024-06-15 Sat 08:30] =>  3:37
+CLOCK: [2024-06-17 Mon 12:22]--[2024-06-17 Mon 12:43] =>  0:21
+CLOCK: [2024-06-17 Mon 07:14]--[2024-06-17 Mon 07:49] =>  0:35
+CLOCK: [2024-06-26 Wed 15:13]--[2024-06-26 Wed 16:03] =>  0:50
+:END:
+** DONE lastfm tacker                                                :@idea:
+:LOGBOOK:
+CLOCK: [2023-11-27 Mon 05:09]--[2023-11-27 Mon 06:17] =>  1:08
+CLOCK: [2023-11-26 Sun 23:13]--[2023-11-27 Mon 05:03] =>  5:50
+CLOCK: [2023-11-26 Sun 02:09]--[2023-11-26 Sun 07:03] =>  4:54
+:END:
+** DONE I can't find a lisp                                          :@write:
+:LOGBOOK:
+CLOCK: [2024-07-22 Mon 01:56]--[2024-07-22 Mon 02:23] =>  0:27
+:END:
+** DONE Trying generative art                                        :@idea:
+:LOGBOOK:
+CLOCK: [2024-02-09 Fri 09:54]--[2024-02-09 Fri 11:37] =>  1:43
+CLOCK: [2024-02-09 Fri 07:37]--[2024-02-09 Fri 08:45] =>  1:08
+CLOCK: [2024-02-09 Fri 05:51]--[2024-02-09 Fri 06:15] =>  0:24
+CLOCK: [2024-02-09 Fri 04:58]--[2024-02-09 Fri 05:09] =>  0:11
+:END:
+** DONE Devin Comedy Project                                         :@idea:
+:LOGBOOK:
+CLOCK: [2024-02-18 Sun 17:11]--[2024-02-18 Sun 17:49] =>  0:38
+CLOCK: [2024-02-18 Sun 13:50]--[2024-02-18 Sun 14:06] =>  0:16
+CLOCK: [2024-02-17 Sat 23:24]--[2024-02-18 Sun 01:34] =>  2:10
+:END:
+** DONE look for language to learn                                   :@general:
+:LOGBOOK:
+CLOCK: [2024-02-24 Sat 03:39]--[2024-02-24 Sat 04:47] =>  1:08
+:END:
+** DONE [[mu4e:msgid:78955085-77f3-4519-a437-d2eab3913881@larrasket][Getting Free Stuff From AI Chat Bots]]                         :@watch:
+:PROPERTIES:
+:ID:       tp7fitp0tfk0
+:CUSTOM_ID: tp7fitp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-03-21 Thu 05:29]--[2024-03-21 Thu 05:48] =>  0:19
+:END:
+[2024-02-20 Tue 12:58]
+** DONE [[https://youtu.be/phYM4L1BBjI?list=PL9IEJIKnBJjGsttQusXPNuEknLQ6leUfS][Types and Structuring Memory in C.]]                           :@watch:
+:PROPERTIES:
+:ID:       s418osp0tfk0
+:CUSTOM_ID: s418osp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-03 Tue 06:54]--[2023-10-03 Tue 06:57] =>  0:03
+:END:
+** DONE [[https://news.ycombinator.com/item?id=37618319][Lisp facilitate complex bioinformatics software]]              :@read:
+:PROPERTIES:
+:ID:       k429lsp0tfk0
+:CUSTOM_ID: k429lsp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-21 Sat 07:49]--[2023-10-21 Sat 07:52] =>  0:03
+:END:
+** DONE Selected Writings on Computing: A Personal Perspective       :@check:
+** DONE [[https://www.scheme.com/][(chez (chez scheme))]]                                         :@check:
+:PROPERTIES:
+:ID:       9xziesp0tfk0
+:CUSTOM_ID: 9xziesp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-09-28 Thu 04:05]--[2023-09-28 Thu 04:41] =>  0:36
+:END:
+Seems interesting. people say it has a native code speed.
+** DONE [[https://michael.orlitzky.com/articles/lets_not_encrypt.xhtml][{ Let's not Encrypt }]]                                        :@read:selected:
+:PROPERTIES:
+:ID:       xqr4esp0tfk0
+:CUSTOM_ID: xqr4esp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-09-26 Tue 08:57]--[2023-09-26 Tue 10:15] =>  1:18
+:END:
+** DONE [[https://blog.giovanh.com/blog/2021/08/21/is-git-master-a-dirty-word/][Is (git) master a dirty word? / GioCities]]                    :@read:
+:PROPERTIES:
+:ID:       djv88sp0tfk0
+:CUSTOM_ID: djv88sp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-21 Sat 07:54]--[2023-10-21 Sat 08:11] =>  0:17
+:END:
+** DONE Work on agenda-notifier                                      :@general:
+:LOGBOOK:
+CLOCK: [2023-09-05 Tue 12:00]--[2023-09-05 Tue 14:21] =>  2:21
+:END:
+Trying [[id:5cnh2s31cwj0][Emacs]] agenda-notifier.
+** DONE make a git repo to your blog                                 :@general:
+:LOGBOOK:
+CLOCK: [2023-06-24 Sat 16:18]--[2023-06-24 Sat 17:03] =>  0:45
+CLOCK: [2023-06-24 Sat 15:20]--[2023-06-24 Sat 15:42] =>  0:22
+:END:
+
+** DONE [#C] Trying to make blog nicer                               :@general:
+:PROPERTIES:
+:ID:       74x9yrp0tfk0
+:CUSTOM_ID: 74x9yrp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-06-12 Mon 00:10]--[2023-06-12 Mon 02:58] =>  2:48
+CLOCK: [2023-06-10 Sat 09:24]--[2023-06-10 Sat 12:43] =>  3:19
+CLOCK: [2023-05-21 Sun 16:41]--[2023-05-21 Sun 20:23] =>  3:42
+CLOCK: [2023-05-21 Sun 16:13]--[2023-05-21 Sun 16:33] =>  0:20
+:END:
+
+** DONE Get ement to work again                                      :@general:
+:PROPERTIES:
+:ID:       s1dexrp0tfk0
+:CUSTOM_ID: s1dexrp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-06-13 Tue 13:54]--[2023-06-13 Tue 14:07] =>  0:13
+CLOCK: [2023-06-13 Tue 13:06]--[2023-06-13 Tue 13:54] =>  0:48
+:END:
+For some reason that pantalaimon cocksucker was storing some kind of data
+somewhere that I couldn't reach. I used --data-path to specify custom location
+to skip using cachedd data. Which caused this issue.
+
+** DONE [[https://www.youtube.com/watch?v=y4FhsdisKeE][Programming Types Mindsets - YouTube]]                         :@watch:
+:PROPERTIES:
+:ID:       iu3hwrp0tfk0
+:CUSTOM_ID: iu3hwrp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-06-30 Fri 01:22]--[2023-06-30 Fri 01:23] =>  0:01
+CLOCK: [2023-06-08 Thu 09:43]--[2023-06-08 Thu 10:00] =>  0:17
+:END:
+** DONE [[https://www.youtube.com/watch?v=MDy7JQN5MN4][Efficient Struct Configuration Pattern For Go]]                :@watch:
+:PROPERTIES:
+:ID:       xzlhvrp0tfk0
+:CUSTOM_ID: xzlhvrp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-06-30 Fri 01:23]--[2023-06-30 Fri 01:33] =>  0:10
+:END:
+
+** DONE [[https://lukesmith.xyz/articles/why-i-use-the-gpl-and-not-cuck-licenses/][Why I Use the GPL and Not Cuck Licenses]]                      :@read:
+:PROPERTIES:
+:ID:       ltm0trp0tfk0
+:CUSTOM_ID: ltm0trp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-08-04 Fri 13:14]--[2023-08-04 Fri 13:28] =>  0:14
+:END:
+** DONE refactor dwm                                                 :@nothing:
+:LOGBOOK:
+CLOCK: [2023-08-05 Sat 10:25]--[2023-08-05 Sat 12:02] =>  1:37
+:END:
+- [X] learn the current keys
+- [X] change color border colors. red.
+- [X] change default terminal
+- [X] migrate to other key deamon manager
+- [X] change wallpapers
+- [X] make dwm uses the autostart
+- [X] make emcas trans
+- [X] make kitty trans
+** DONE Building comment server [[id:k4n8wt308xj0][Blog]].                                :@else:
+:LOGBOOK:
+CLOCK: [2023-08-21 Mon 16:31]--[2023-08-21 Mon 17:27] =>  0:56
+CLOCK: [2023-08-20 Sun 23:22]--[2023-08-21 Mon 05:29] =>  6:07
+CLOCK: [2023-08-20 Sun 14:52]--[2023-08-20 Sun 18:00] =>  3:08
+CLOCK: [2023-08-20 Sun 05:40]--[2023-08-20 Sun 10:02] =>  4:22
+CLOCK: [2023-08-17 Thu 23:32]--[2023-08-18 Fri 01:04] =>  1:32
+CLOCK: [2023-08-17 Thu 22:53]--[2023-08-17 Thu 23:15] =>  0:22
+CLOCK: [2023-08-17 Thu 15:04]--[2023-08-17 Thu 17:00] =>  1:56
+CLOCK: [2023-08-17 Thu 13:20]--[2023-08-17 Thu 14:45] =>  1:25
+CLOCK: [2023-08-17 Thu 00:28]--[2023-08-17 Thu 03:41] =>  3:13
+CLOCK: [2023-08-16 Wed 03:11]--[2023-08-16 Wed 04:05] =>  0:54
+:END:
+** DONE [[https://en.wikipedia.org/wiki/Desmond_Paul_Henry][Desmond Paul Henry - Wikipedia]]                               :@read:
+:PROPERTIES:
+:ID:       ejfkaop0tfk0
+:CUSTOM_ID: ejfkaop0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-02 Fri 14:00]--[2024-08-02 Fri 14:30] =>  0:30
+:END:
+** DONE [[https://youtu.be/2ryz9IPIQes?list=UULF9-y-6csu5WGm29I7JiwpnA][Discussing Digital Twins]]                                     :@watch:
+:PROPERTIES:
+:ID:       2itaynp0tfk0
+:CUSTOM_ID: 2itaynp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-11-28 Thu 09:28]--[2024-11-28 Thu 09:43] =>  0:15
+:END:
+** DONE [[https://www.youtube.com/watch?v=7U-RbOKanYs][Password Cracking - Computerphile - YouTube]]                  :@watch:
+:PROPERTIES:
+:ID:       ay1dxnp0tfk0
+:CUSTOM_ID: ay1dxnp0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-03 Tue 21:11]--[2024-12-03 Tue 22:18] =>  1:07
+:END:
+
+** DONE [[mu4e:msgid:84534c6d-6f9a-4258-bef2-6693e7de9384@larrasket][Database mocks are not worth it]]                              :@check:
+:PROPERTIES:
+:ID:       kij43rt0tfk0
+:CUSTOM_ID: kij43rt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:52]--[2025-05-12 Mon 02:53] =>  0:01
+:END:
+[2024-12-31 Tue 09:45]
+** DONE [[mu4e:msgid:50f63828-c9c2-4afc-a6b3-ea211d5d227c@larrasket][Ask HN: What's Your Morning Routine?]]                         :@check:
+:PROPERTIES:
+:ID:       vlj44rt0tfk0
+:CUSTOM_ID: vlj44rt0tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-12 Mon 02:49]--[2025-05-12 Mon 02:52] =>  0:03
+:END:
+[2024-12-31 Tue 09:43]
+** DONE [[mu4e:msgid:b01ff2fe-98f8-4537-b500-8f57beb5ab61@larrasket][Show HN: I built open source file sharing solution using AWS S3]] :@check:
+:PROPERTIES:
+:ID:       v3145rt0tfk0
+:CUSTOM_ID: v3145rt0tfk0
+:END:
+[2024-12-31 Tue 09:42]
+** DONE [[mu4e:msgid:f0a28a58-cedf-4d2d-933c-b8dfc6894803@larrasket][Show HN: BadSeek – How to backdoor large language models]]     :@check:
+:PROPERTIES:
+:ID:       v21iwfz00ik0
+:CUSTOM_ID: v21iwfz00ik0
+:END:
+[2025-02-22 Sat 23:22]
+** DONE [[mu4e:msgid:10319853-76fc-47e6-9d1c-b8137bd24462@larrasket][Bybit loses $1.5B in hack but can cover loss, CEO confirms]]   :@check:
+:PROPERTIES:
+:ID:       jc738hz00ik0
+:CUSTOM_ID: jc738hz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-01 Sat 06:56]--[2025-03-01 Sat 07:00] =>  0:04
+:END:
+[2025-02-22 Sat 23:23]
+** DONE [[mu4e:msgid:43c1ab4a-ccbe-412d-b429-08c69af8f02a@larrasket][I found a backdoor into my bed]]                               :@check:
+:PROPERTIES:
+:ID:       mtqk3hz00ik0
+:CUSTOM_ID: mtqk3hz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-12 Wed 03:22]--[2025-03-12 Wed 03:23] =>  0:01
+:END:
+[2025-02-22 Sat 23:23]
+** DONE [[mu4e:msgid:8abb55a3-ee6e-41f0-a706-fa35e7e7b44c@larrasket][Why Ruby on Rails still matters]]                              :@check:
+:PROPERTIES:
+:ID:       cjji2hz00ik0
+:CUSTOM_ID: cjji2hz00ik0
+:END:
+:LOGBOOK:
+:END:
+[2025-02-22 Sat 23:24]
+** DONE [[mu4e:msgid:5e4fc299-0789-4ad5-9029-d4227971aa65@larrasket][Johnny.Decimal – A system to organise your life]]              :@check:
+:PROPERTIES:
+:ID:       dmz7ygz00ik0
+:CUSTOM_ID: dmz7ygz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-30 Sun 04:19]--[2025-03-30 Sun 04:22] =>  0:03
+:END:
+[2025-02-22 Sat 23:23]
+** DONE [[mu4e:msgid:76e882b2-4e7b-424e-a331-a86624d1a6dd@larrasket][Clean Code vs. A Philosophy Of Software Design]]               :@check:
+:PROPERTIES:
+:ID:       m8ledqz00ik0
+:CUSTOM_ID: m8ledqz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-03-30 Sun 04:05]--[2025-03-30 Sun 04:14] =>  0:09
+:END:
+[2025-02-26 Wed 23:17]
+** DONE [[mu4e:msgid:2e5130f6-135e-41ee-b328-442e743156ed@larrasket][macOS Tips and Tricks]]                                        :@check:
+SCHEDULED: <2025-05-17 Sat>
+:PROPERTIES:
+:ID:       q6ua2rz00ik0
+:CUSTOM_ID: q6ua2rz00ik0
+:END:
+:LOGBOOK:
+CLOCK: [2025-05-17 Sat 02:38]--[2025-05-17 Sat 02:58] =>  0:20
+CLOCK: [2025-03-07 Fri 20:07]--[2025-03-07 Fri 20:13] =>  0:06
+:END:
+[2025-03-01 Sat 03:28]
+** DONE [[mu4e:msgid:7d961315-e1bd-4130-9e3e-c734f60d37f1@larrasket][What can be computed? A practical guide to the theory of computation (2018) [pdf]​]] :@check:
+:PROPERTIES:
+:ID:       37i71rz00ik0
+:CUSTOM_ID: 37i71rz00ik0
+:END:
+:LOGBOOK:
+:END:
+[2025-03-01 Sat 03:27]
+** DONE Writing about distributed systems                            :@else:
+:LOGBOOK:
+CLOCK: [2025-04-01 Tue 13:56]--[2025-04-01 Tue 14:34] =>  0:38
+:END:
+** [[https://wok.oblomov.eu/tecnologia/google-killing-open-web/][Google is killing the open web]]
+:PROPERTIES:
+:ID:       zll0non0jrk0
+:CUSTOM_ID: zll0non0jrk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:xrh2q3k0ozj0][Google]] and [[id:ad3itys0frk0][Selected Good]]
+#+END_tag
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

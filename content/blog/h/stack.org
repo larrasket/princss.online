@@ -1,0 +1,441 @@
+:PROPERTIES:
+:ID:       x3cceno02wj0
+:ROAM_ALIASES: stack
+:END:
+#+TITLE: TL;DRs
+#+OPTIONS: toc:nil
+#+filetags: :project:
+#+INCLUDE: ~/roam/common/org-macros.setup
+
+* Posts
+:PROPERTIES:
+:CUSTOM_ID:       posts
+:END:
+** The very sad situation of Tony Marston                            :noexport:
+:PROPERTIES:
+:ID:       w462wfd17sk0
+:CUSTOM_ID: w462wfd17sk0
+:END:
+:DATE:
+[2025-12-09 Tue 12:30]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+I had the first I met with Tony Marston <https://www.tonymarston.net> on the Internet was on Dec 2024, when I read his 2018 "Why I don't do Domain Driven Design", I found it a bit strange post, but in a good way (what I believed back then), I thought it's an enjoyable discussion, so I post it on Hacker News and it was discussed a bit [[https://news.ycombinator.com/item?id=42539477][there]]. I never met with Marston again, but I learnt that he had some radical, sometimes ridiculous, views. But how doesn't, right? Couple of days ago there was a discussion on GitHub about Object-Oriented Programming, I was not investing a lot of effort there pointing out my views, because it was obvious to me that the opponents are not distinguishing between "encourages", "allows", and "emphasize" bad practices[fn:8]. Someone replied to my comment there, I didn't pay a lot of attention once they mentioned that inheritance and encapsulation magnified their productivity. "you lost me after "inheritance". It sounds like you have no idea of how bad code looks like" [[https://github.com/gentlee/gentlee.github.io/discussions/4#discussioncomment-15183074][I wrote]]. I got a very strange response from their side, projecting, and just bizarre. "If my code is THAT bad, then why has it won numerous awards? If you think YOUR code is better than mine then take this challenge to prove it."[fn:9], the bottom line was "Note that in all cases I was using a development framework that I had designed and built myself. How many frameworks have you written?". I was just speechless at this moment when I read the email. I couldn't response, when I browsed some of the website, I realized this was Tony from the DDD article, but the rest of the website and content was not pretty at all, it felt like I went into a limited intelligence 70 years old elder who was a lot into programming. I've shown the commend to some of my friends who couldn't take it seriously at all, especially the "how many frameworks", one [[https://www.reddit.com/r/programmingcirclejerk/comments/1pgl5n3/note_that_in_all_cases_i_was_using_a_development/][posted]] it on r/programmingcirclejerk. The people there had more tolerance than me to look at Marston's world, and some made deeper investigations: "Let me explain something. There's a guy who writes code. He claims he can create in PHP in 5 minutes what would take 5 days to create using COBOL. He creates a product. He gets a letter saying his product has been nominated. The organization that gives out the prizes has a Twitter account without any announcements and a simple website that clearly states that participation is free. But to get the award and beautiful photos - you have to pay. Oh, and you won't find a list of nominees or a list of who received their award on their website. This guy writes that his anon fans nominated him, but I wouldn't be surprised if this organization itself creates spam mailings. I think it's even a little sad. Stupidity and self-confidence are a terrible combination. This guy seems to be losing touch with reality. Sad...", I opened Marston's [[https://old.reddit.com/user/TonyMarston][reddit profile]], first glance was -100 karma, I know reddit its awful but really how bad you need to be to get to -100? I found that the guy is just ragebaiting[fn:10] the whole PHP community, getting [[https://www.reddit.com/r/PHP/comments/yx0cte/comment/iyp3zfz/][roasted]] over and [[https://www.reddit.com/r/PHP/comments/111f0r4/i_hate_deprecation_of_passing_null_to_nonnullable/][over]] and [[https://old.reddit.com/r/PHP/comments/z5ap2a/an_overview_of_the_architecture_on_which_the/][over]]. Some dude wrote on a [[https://old.reddit.com/r/PHP/comments/yx0cte/how_to_create_a_family_of_forms_to_maintain_the/iwmmoe0/][comment]] "You just HAVE to look up this guy's website and previous discussions both here and on Sitepoint. You'll be entertained for hours.", although of all this continuous criticism and even bullying of the guy, he is so [[https://www.tonymarston.net/php-mysql/core-developers-are-idiots.html][rude]] and [[https://www.tonymarston.net/php-mysql/please-do-not-break-our-language.html][arrogant]], let alone stupid. I just feel sad for this, what it takes for someone to be like this? "When I read this, I imagined how David Lynch (RIP) would film it: a developer tries to start working but IDE is not installed on his computer. The developer takes a desperate step and tries to download and install IDE himself, but it turns out that IDE is already installed, it's just that its shortcut is not on the desktop. As if everything is not so bad, but the next moment he launches Vi... Panic, the clock on the wall starts ticking loudly. The developer calls his colleagues and asks for help but hears loud laughter in response..." ‒ [[https://www.reddit.com/r/programmingcirclejerk/comments/1pgl5n3/comment/nsuh46b/][BenchEmbarrassed7316]].
+** Anti-natalist is biased if you have kids                          :noexport:
+:PROPERTIES:
+:ID:       wz78tv10xqk0
+:CUSTOM_ID: wz78tv10xqk0
+:END:
+:DATE:
+[2025-11-03 Mon 21:55]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]] and [[id:s21gdg016qk0][Power imbalance]]
+#+END_tag
+Your opinion about natialism is not really valid when you're old, although it is
+the only time you can tell whether it was a good idea or not. If you are a 50
+years old woman without kids, your anti-natalism is definitely biased, you can
+no longer reproduce, you no longer have the power imbalance. 
+** Give me more build systems                                        :noexport:
+:PROPERTIES:
+:ID:       zbcfboz0jqk0
+:CUSTOM_ID: zbcfboz0jqk0
+:END:
+:DATE:
+[2025-10-24 Fri 20:17]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+Installing Zathura on OSX: ~==> Fetching dependencies for homebrew-zathura/zathura/zathura: cmake, ninja, python@3.14, meson, certifi, sphinx-doc, freetype, pcre2, glib, libtiff, gdk-pixbuf, harfbuzz, pango, librsvg, adwaita-icon-theme, desktop-file-utils, dbus, libxfixes, libxi, libxtst, at-spi2-core, gsettings-desktop-schemas, hicolor-icon-theme, libepoxy, gtk+3, girara, intltool, json-glib, libmagic and gtk-mac-integration~. Why is all that needed? Why do I need 3 build systems (ninja, cmake and meson) for a single software?
+** And No More Shall We Part                                         :noexport:
+:PROPERTIES:
+:ID:       bss4bdj0jqk0
+:CUSTOM_ID: bss4bdj0jqk0
+:END:
+:DATE:
+[2025-10-24 Fri 14:24]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+https://www.youtube.com/watch?v=pccwXPLd1YQ Exactly how I feel to Emacs after finding an Elisp package that does something that required me to switch my display editor to another software.
+** Some other notes on [[id:x0z0fu11qxj0][exception handling]]
+:PROPERTIES:
+:ID:       qow1lzo0aqk0
+:CUSTOM_ID: qow1lzo0aqk0
+:END:
+- [2025-11-15 Sat 15:52] \\
+  Reading https://ieeexplore.ieee.org/document/7832935/ today. It mentions that most common uses of =catch=: 1. Logs the error rather than recovering from it 2. About 80% of people are using the common "Exception" class, rather than their subclasses.
+:DATE:
+[2025-10-17 Fri 20:35]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+I wrote about exception handling before in my draft on programming languages, generally, I consider exception handling to be extremely distasteful, and before you relate this to me being biased toward functional states, no I had this feeling from the first day writing C#; I was always astonished by how the MS documentation was strictly telling us "hey be careful with this thing" and hopping for the best, and for the way my app needed a "global exception handler" that swallows everything, and I looked and looked for a way in which I could just know whether a function throw or not, I assumed that I'm getting something wrong, because I couldn't believe that this is a standard practice and due to my insufficient experience back then, I couldn't find any literature discussing this problem. I wrote about a similar concern in my old mentioned draft, but it's far from complete in the regard of why throwing exceptions is generally a terrible idea. Here I'm sharing some of contributions that I found: 1. [[https://www.lighterra.com/papers/exceptionsharmful/][Exception Handling Considered Harmful]][fn:6] 2. [[https://www.joelonsoftware.com/2003/10/13/13/][13 – Joel on Software]] 3. [[https://pianomanfrazier.com/post/exceptions-considered-harmful/][Exceptions Considered Harmful]] 4. [[https://dave.cheney.net/2012/01/18/why-go-gets-exceptions-right][Why Go gets exceptions right | Dave Cheney]]. From the other side: 1. [[https://eiriktsarpalis.wordpress.com/2017/02/19/youre-better-off-using-exceptions/][You’re better off using Exceptions – Eirik Tsarpalis' blog]] and I have a quick response for some issues it demonstrates; a. An Awkward Reconciliation: this assumes that the programming language you are using, library or other called functions are going to throw, which is invalid if you can never have this state in your language. b. Boilerplate: this is a style preference IMO, most of Go developers for example do not mind the infamous ~if err != nil~ for me it's explicit and eloquent. c. Where’s my Stacktrace?: exporting the Stacktrace has nothing to do with throwing exceptions, it's very possible to expose it in almost all languages (including Go) without exceptions. 2. [[https://nedbatchelder.com/text/exceptions-vs-status.html][Exceptions vs. status returns | Ned Batchelder]][fn:7].
+** TODO [[id:50fllvj0aqk0][The Triumph of Divine Providence by Pietro da Cortona]]      :@idea:noexport:@later:
+:PROPERTIES:
+:ID:       l5v2j4k0aqk0
+:CUSTOM_ID: l5v2j4k0aqk0
+:END:
+:DATE:
+[2025-10-17 Fri 18:50]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:mvk9gc7014k0][Art]]
+#+END_tag
+ The Triumph of Divine Providence by Pietro da Cortona  Mindblowing work. I can't find any good literature that explains it thoroughly. Might be worth investigating some day.
+** TODO [#C] [[id:3xifm2g0kpk0][The Romans in their Decadence]]                         :@read:noexport:@later:
+:PROPERTIES:
+:ID:       g180s3g0kpk0
+:CUSTOM_ID: g180s3g0kpk0
+:END:
+:DATE:
+[2025-09-27 Sat 23:59]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:mvk9gc7014k0][Art]]
+#+END_tag
+I really like this painting a lot, but I fail to properly interpret it. Do you know a good interpretation? Share it in the email please (this applies also if you're reading this post in a distant future, I keep track of long old TODOs).
+** "Clean Architecture"
+:PROPERTIES:
+:ID:       byb2fy71zpk0
+:CUSTOM_ID: byb2fy71zpk0
+:END:
+:DATE:
+[2025-10-09 Thu 19:10]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+[[id:08oaz130rek0][I care about]] [[id:bek89831uxj0][naming]]. I wrote recently about how I hate the way [[id:7jpiga90whk0][Microsoft]] names its products ([[https://news.ycombinator.com/item?id=44930297][see here]]). Seemingly, Microsoft champions have the same issue. There's a common thing in the Microsoft Java++ (C#) ecosystem called "clean architecture". I still remember hearing the term from my coworker for the first time and I thought she was talking "clean" as in an adjective not a term. Why the hell someone would call a design pattern "clean", how clean is it?
+** "[[https://evil.readthedocs.io/en/latest/settings.html][This variable must be set before Evil is loaded.]]"
+:PROPERTIES:
+:ID:       24u27g21apk0
+:CUSTOM_ID: 24u27g21apk0
+:END:
+- [2025-09-26 Fri 00:57] \\
+  https://github.com/doomemacs/doomemacs/pull/8518
+:DATE:
+[2025-09-20 Sat 18:05]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+Why?
+** Note for Windows Programmers
+:PROPERTIES:
+:ID:       tpqa1lq04pk0
+:CUSTOM_ID: tpqa1lq04pk0
+:END:
+:DATE:
+[2025-09-15 Mon 23:59]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+Reading [cite:@hall-2023-beejs-guide]. It has an interesting note for Windows
+programmers: "At this point in the guide, historically, I’ve done a bit of
+bagging on Windows, simply due to the fact that I don’t like it very much. But
+then Windows and Microsoft (as a company) got a lot better. Windows 10 coupled
+with WSL (below) actually makes for a decent operating system. Not really a lot
+to complain about.  Well, a little—for example, I’m writing this (in 2025) on a
+2015 laptop that used to run Windows 10. Eventually it got too slow and I
+installed Linux on it. And have been using it ever since.  But now we have
+Windows 11 that apparently requires beefier hardware than Windows 10. I’m not a
+fan of that. The OS should be as unobtrusive as possible and not require you to
+spend more money.  The extra CPU power should be for apps, not the OS!
+Additionally, Microsoft knows what you want, and what you want is more
+advertising! Right? In your operating system! Weren’t you missing that? Now you
+can have it with Windows 11.  So… I still encourage you to try Linux , BSD ,
+illumos or any other flavor of Unix instead of Windows.". It's a nice harsh
+punch for newcomers. I still think that MS Windows is one of the worst blocking
+obstacles in 21th computing. Perhaps one big factor that made mobile usage
+thrive they way it is, was the way MS made the desktop experience so bad, and
+the way Apple made it unaffordable.
+
+** [[https://youtu.be/dSlMmCD5quc][Emacs bankruptcy]]
+:PROPERTIES:
+:ID:       glwbc9x01pk0
+:CUSTOM_ID: glwbc9x01pk0
+:END:
+:DATE:
+[2025-09-13 Sat 20:22]
+:END:
+I was recently introduced to the concept Emacs Bankruptcy (EB) by this cool
+video from Jake B. I have done EB maybe more than 10 times, I never knew the
+term though. I'm currently in the process of doing another one, hopefully the
+last.
+** C#, Dating, and Ukraine War
+:PROPERTIES:
+:ID:       jxdgqja0rok0
+:CUSTOM_ID: jxdgqja0rok0
+:END:
+:DATE:
+[2025-09-05 Fri 22:09]
+:END:
+These might sound extremely unrelated topics, and yes they are. Around 4 or 5
+years ago I used to watch a YouTuber who started his channel with the pandamic,
+and I was learning some C# patterns then. He was making these nice videos about
+C#, and his way of explaining some topics was really fun. However, he started
+also giving some dating advices[fn:5], I stopped following him when he started
+doing all that dating stuff, but later he made a single one video on Ukraine
+war, it was about the tanks. The video went so popular and since then his
+channel got around 500K followers, I don't recall him making any videos again on
+tech or dating and I'm unsure if he even kept them. The reason why I'm talking
+about him (and sorry if it will disappoint you), is that he keeps popping into
+my mind every once and a while, and I totally forgot about him and his name, and
+the story sounds very unfamiliar that if I tell anyone about it they might not
+believe me. So I'm putting this here, if you know what I'm talking about, even
+if you're reading this 5 years later, let me know that I'm not the only person
+who remembers that strange phenomena.
+** mpv on MacOS                                                      :noexport:
+:DATE:
+[2025-09-02 Tue 16:41]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+I had a discussion with the MPV developers regarding the software state on
+MacOS (it was held on IRC), typically I was against MPV enabling "gaming mode"
+to perform better, it's a very unarthodox action that no player else does, and
+very annoying because, obviously, it is not a game, moreover it costs a lot of
+unnecessary allocation and energy. Today I noticed how horrible the
+auto-resizing feature is when you are having multiple monitors set together.
+Consdiering moving my configuration totally out of it.
+** Privacy Violations                                                :noexport:
+:PROPERTIES:
+:ID:       ncn9fjo08ok0
+:CUSTOM_ID: ncn9fjo08ok0
+:END:
+:DATE:
+[2025-08-22 Fri 17:18]
+:END:
+I've done some digital privacy violation acts throughout different periods, that
+I'm not very proud of. Some of them involved some people with whom I shared
+personal trust. Last year in 22 Jul, I discussed them with a close friend and we
+made a journal for all of them. I realized then how most of these incidents
+(almost all of them, the exception goes for a single one) I was not the one to
+behold liable of the violation, rather, it's usually another entity that he or
+she had shared the information with (usually inadvertently) which I dealt with
+(for example botnet-as-a-service providers and RAT markets). Obv, وَمَا أُبَرِّئُ نَفْسِي,
+I am guilty for doing it in the first place, but what I'm pointing out here is
+that most people who are getting digitally violated (that, basically, most of
+tech illiterates out there) chosen not to care much about being violated by
+someone at the first place, it only mattered to them when that shared
+information was delivered to someone relevant, i.e. to me.
+** أبن سينا عن الحواس                                                :noexport:
+:PROPERTIES:
+:ID:       dw5k49l08ok0
+:CUSTOM_ID: dw5k49l08ok0
+:END:
+:DATE:
+[2025-08-22 Fri 16:03]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+في قصة حي بن يقظان، يكلم حي رفيقه ابن سينا عن أشخاص حضروا مع الأخير ويحذرهم منه،
+يتضح في التفسير اللاحق أنه ما كان يتحدث إلا عن حواس ابن سينا بشكلٍ رمزي. أثناء
+قرائتي القصة مرة أخرى منذ أيام لاحظت هذا الوصف الجميل للحدس والتحذير منه: وأنك
+لمبتلى بانتقاد حق ذلك [صالح: أي حق ما تحدثه به نفسك وهواك] من زوره، واستخلاص
+صوابه من غواشي خطئة، إذا لا بد لك منه [صالح: يقصد أنه يستحيل أن تعيش دونه أو
+تخالصه] فربما أخذ التوفيق بيدك ورفعك عن محيط الضلالة [صالح: وهي الحالة التي يسعى
+لها العاقلون] وربما أوفقك التحير، وربما غرك شاهد الزور.
+** [[https://mastodon.schub.social/@denschub/114996915811779017][An LLM Rant]]
+:DATE:
+[2025-08-22 Fri 15:06]
+:END:
+A nice one actually.
+** https://news.ycombinator.com/item?id=3151465
+:DATE:
+[2025-08-22 Fri 14:53]
+:END:
+Haha.
+** A note on anger                                                   :noexport:
+:PROPERTIES:
+:ID:       oabd0kc0qnk0
+:CUSTOM_ID: oabd0kc0qnk0
+:END:
+:DATE:
+[2025-08-08 Fri 01:59]
+:END:
+
+Following is a good note on anger, mentioned in
+[cite:@al-muqaffaa-2019-al-durrah-yateem]: اعلم أن من الناس ناسًا كثيرًا يبلغ من
+أحدهم الغضبُ — إذا غضب — أن يحمله ذلك على الكلوح والتقطيب في وجه غير من أغضبه،
+وسوء اللفظ لمن لا ذنب له، والعقوبة لمن لم يكن يهم بعقوبته، وسوء المعاقبة باليد
+واللسان لمن لم يكن يريد به إلا دون ذلك، ثم يبلغ به الرضى — إذا رضي — أن يتبرَّع
+بالأمر ذي الخطر لمن ليس بمنزلة ذلك عنده، ويعطي من لم يكن أعطاه، ويكرم من لا حق
+له ولا مودَّة. فاحذرْ هذا الباب كلَّه، فإنه ليس أحدٌ أسوأَ حالًا من أهل القدرة الذين
+يُفرِّطون باقتدارهم في غضبهم وسرعة رضاهم، فإنه لو وصف بهذه الصفة من يلتبس بعقله أو
+يتخبَّطه المسُّ أن يُعاقِب في غضبه غيرَ من أغضبه، ويحبو عند رضاه غيرَ من أرضاه، لكان
+جائزًا في صفته.
+
+** Emacs M4 Experience
+:DATE:
+[2025-07-05 Sat 02:54]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4ly8im40gzj0][Emacs]]
+#+END_tag
+Using Intel processor for all these years, which is quite slow compared to Apple
+Chips, made me spend a lot of work to optimize my single-threaded favorite
+display editor. The experience was pleasant overall, but using it now on a very
+fast computer, it is not just pleasant it is blazingly fast. The difference is
+just unimaginable.
+** Supabase
+:PROPERTIES:
+:ID:       op50qae1ylk0
+:CUSTOM_ID: op50qae1ylk0
+:END:
+- [2025-06-23 Mon 00:10] Today I thought of giving nhost a try.
+  https://github.com/nhost/nhost/discussions/2498 Horrible. What's the point of
+  making such a project even open source if it is going to be useless to the community?
+:DATE:
+[2025-06-21 Sat 21:49]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+I had a terrible experience trying to self-host Supabase today. I have read on
+the community posts that the experience is usually not very pleasant, however, I
+found official maintainers responding to that saying that it was improved, with
+a video showing it running on a 2GB of RAM and 2vCPUs droplet. I had various
+problems with getting the docker-compose to work; apparently you can not really
+change the default passwords without running into an authentication issue (see
+[[https://github.com/supabase/supabase/issues/11957][here]] for example), and even if you fixed that you will go through couple of
+[[https://github.com/supabase/cli/issues/2737][analytics]] issues. My biggest concern, however, was that I was never able to get
+anything to run on the very small droplet that the maintainer showed off, in
+fact, the only specifications that could provide the bare minimum performance
+(that is: the dashboard is loading) was 8GB of RAM, and two dedicated CPUs (yes,
+dedicated, not vCPUs), however, even with that a lot of problems persisted (many
+features are not working, and it is a hell to try to authenticate the CLI with
+that setup). I wonder if their development team is choosing deliberately not to
+make the self-host experience better to enforce people to use their cloud
+services instead of selfhosting it. I really do not get the point of having such
+a software to be open-source if it won't be easy to self-host.
+** TODO Lilla Cabot Perry                                          :@check:noexport:@later:
+:PROPERTIES:
+:ID:       zoq1kz80xlk0
+:CUSTOM_ID: zoq1kz80xlk0
+:END:
+- [2025-08-20 Wed 23:02] \\
+  Her life looks interesting too. Might look into her later.
+:LOGBOOK:
+CLOCK: [2025-08-20 Wed 23:00]--[2025-08-20 Wed 23:02] =>  0:02
+:END:
+:DATE:
+[2025-06-20 Fri 12:44]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:mvk9gc7014k0][Art]]
+#+END_tag
+Her works are really touching
+** Floyd's tortoise and hare
+:PROPERTIES:
+:ID:       jvne8ie10lk0
+:CUSTOM_ID: jvne8ie10lk0
+:END:
+- [2025-05-27 Tue 02:59] Just found out that flattenability of graphs [[https://en.wikipedia.org/wiki/Graph_flattenability][are folklore too]]. Wondering if a
+  lot of graph theories are like that.
+:DATE:
+[2025-05-27 Tue 02:56]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]] and [[id:rib7uvo02wj0][Representations and Implementations of Graphs]]
+#+END_tag
+TIL that Robert W. Floyd is not the real author of Floyd's cycle-finding algorithm: The algorithm is named after Robert W. Floyd, who was credited with its invention by Donald Knuth. However, the algorithm does not appear in Floyd's published work, and this may be a misattribution: Floyd describes algorithms for listing all simple cycles in a directed graph in a 1967 paper, but this paper does not describe the cycle-finding problem in functional graphs that is the subject of this article. In fact, Knuth's statement (in 1969), attributing it to Floyd, without citation, is the first known appearance in print, and it thus may be a folk theorem, not attributable to a single individual. I wonder if anyone asked Donald Knuth about that in an interview.
+** TODO [[id:e2d6e3z0nkk0][Sandro Botticelli]] Symbol of goodness                    :@check:@later:
+- [2025-06-16 Mon 00:43] I have a feeling that [[id:qse5o7c0rlk0][Frederic William Burton]] did the same thing.
+:DATE:
+[2025-05-17 Sat 00:43]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:mvk9gc7014k0][Art]]
+#+END_tag
+I noticed how he is always painting the very same woman over and over. Worth checking later.
+investigating.
+** God on Trail (2008)                                               :noexport:
+:PROPERTIES:
+:ID:       iiwe1xv0nkk0
+:CUSTOM_ID: iiwe1xv0nkk0
+:END:
+:DATE:
+[2025-05-16 Fri 23:35]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:kwlj2jo02wj0][Cinema]]
+#+END_tag
+شخصية أديك في هذا الفيلم جميلة. [[file:i/mpv-shot0060.jpg][هذه الصورة له في أول مجيئة للمعسكر]] ويمكنك أن
+تراه في [[https://www.youtube.com/watch?v=9MgXqxmRQOg][هذا الفيديو]] وهو يدافع عن خطة الله بكل فصاحة وبيان قبل أن يتعرض لمحاولة
+إذلاله الأولى من الألمان، ففي الجلسة الثانية من المحكمة يحاول أن يدافع مرة أخرى
+عن خطة الله ولكن لا يلبث إلا أن ينهمر في البكاء على حاله ([[file:i/COPY_1_God on Trial \[2008\]DVDRip\[Xvid\]AC3 5.1\[Eng\]BlueLady _FROM_00-51-59-840_TO_00-52-44-680.mp4][فيديو]]) ولا ريب أنه فقد
+من إيمانه جزءا جراء البلاء. اللهم لا تختبرني وأعني إن اختبرتني.
+** Good video on setting boundaries                                  :noexport:
+:PROPERTIES:
+:ID:       2cb3f0z0uik0
+:CUSTOM_ID: 2cb3f0z0uik0
+:END:
+:DATE:
+[2025-03-28 Fri 16:24]
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+Here's a good video from TikTok about setting boundaries in kinds of
+friendships: https://www.tiktok.com/@the3rdside/video/7479090078267231534. I
+find myself trying to explain this kind of boundaries people from time to time.
+* Archive
+[[id:53n3o570urk0][2024]]  | [[id:01bar570urk0][2023]] | [[id:sjv6u570urk0][2022]] 
+
+- [2025-11-29 Sat 00:38] \\
+  I made the archive for 2024. Moreover, I changed the archive from containing only every 3 months (I stole this from rms), to be of all the year.
+- [2025-06-28 Sat 20:04] 2024-2025 was a heavy time. I will probably organize it
+  in the archive after I get over it.
+  
+  +December 2023-February 2024 | September 2023-November 2023 | June 2023-August 2023 | March 2023-May 2023 | December 2022-February 2023 | September 2022-November 2023+
+* (outdated) How does this page work
+- [2025-11-29 Sat 00:40] \\
+  As of now this is very outdated, this blog runs from a highly sophisticated (yes I'm calling it that) Elisp system.
+[2022-09-23 Fri 20:15]: If you are an old reader (if such a thing exists) of this blog, you should know by now about my many old attempts of creating a stack-based posting that works within my editing environment (Emacs) which has always failed. I'm very good at Elisp, suck at writing Elisp packages \*Sigh\* life doesn't give you everything. Anyway I thought that everything I need to implement such a workflow, is only a program that appends an entity top of a string, and I started to implement it as a separated program in Go. However, while doing it I recognized that ~(org-caputre)~ already does it, just needed a simple custom configuration:
+#+begin_src elisp
+(setq +org-capture-journal-file "~/blog/content/stack.org")
+(setq org-capture-templates
+      '(("j" "Journal" entry
+           (file+headline +org-capture-journal-file "Posts")
+           "* %<%A, %d %B %Y>\n%?"  :prepend t)))
+#+end_src
+
+I also found a predefined way of doing it that build a full hierarchy date for
+the entity, but I decided to go simple this time.
+
+*Cons;*
+
++ I've to archive it myself, no pagination.
++ [2022-10-05 Wed 20:18]: I figured out a workaround to archive, and I don't
+  think I really need tags. Everything works great.
++ [2024-02-15 Thu 20:19]: I do not find this workflow very good as of now, I do
+  not think that archiving is necessary either. I wil try to think of something
+  else soon.
+
+* Footnotes
+[fn:10]Or not really, you need to know what you are saying is rubbish to be "ragebaiting" 
+
+[fn:9] The attached "challenge" leads nowhere, you can find the working link easily though. 
+[fn:8] That is, if you will accept a tool for what it is, regardless of what it allows you to do with it, and how likely it is to be misused, you are doing a very bad job from an engineering perspective.  
+
+[fn:7]Skipping commenting in this one, since the former source implicitly included all of its claims.
+[fn:6] I enjoyed that post a lot, and Patterson seems to be very thoughtful and thorough author, it's sad that he is not oftenly writing anymore. I'm planning to go through the old posts that are still on that website.
+
+[fn:5] which was hilarious, because he looked like
+someone who would really make use of some
+
+
+[fn:2]Not exported to the blog. Might be exported later.
+
+[fn:1] Some are born posthumously
+

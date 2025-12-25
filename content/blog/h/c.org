@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ROAM_ALIASES: nice
+:ID:       sij8m381fwj0
+:END:
+#+TITLE: Commentary
+#+filetags: :project:commentary:
+#+cite_export: csl  harvard.csl
+
+
+
+#+begin_export HTML
+<head>
+<style>
+.timestamp-wrapper {border-top: none}
+</style>
+</head>
+#+end_export
+
+
+- [2024-02-17 Sat 16:57]: *Commentaries are deprecated.* New entities will not
+  be included.
+
+For old entries, see [[id:hol77960fwj0][Legacy Commentary]]. The [[#bib][bibliography]] is at the end of the page.
+
+{{{comments}}}
+
+
+* TODO  Migrate to TL;DRs
+- [2025-07-04 Fri 21:11] Would be nice to migrate this to [[id:x3cceno02wj0][TL;DRs]]
+* Bibliography
+:PROPERTIES:
+:CUSTOM_ID: bib
+:END:
+#+print_bibliography:
+

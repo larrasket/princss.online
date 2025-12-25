@@ -1,0 +1,160 @@
+:PROPERTIES:
+:ID:       hol77960fwj0
+:END:
+#+TITLE: Legacy Commentary
+
+#+BEGIN_EXPORT html
+	<a id="hide-link" href="#/" onclick="hideDates()">Click to hide dates</a>
+	<a id="show-link" href="#/" class="hide" onclick="showDates()">Click to display dates</a>
+    <script>
+window.onload = function() {
+  hideDates();
+};
+    </script>
+
+#+END_EXPORT
+
+# Because why not? I will not contribute to an awesome-prototype github repo
+# anyways. /side-note/ I usually archive (on the WaybackMachine) anything that I
+# might think I will read again, so if you encounter with any broken url, check it
+# on the WaybackMachine. /Another side-note/ I'm adding posts in an ascending
+# order (first are newest).
+
+
+
+
+ + [[https://youtu.be/4EMcm9vzlnI?t=115][How GO Was Created - Less Is More]] "I do not think people who love rust could
+   go to another language they're kind of sucked into rusthole" lmao. /(2023/07/24)/
+ + [[https://youtu.be/YbYpGmp1ij0][Keep Linux Open and Free!!!! Oracle Dunks on IBM]] kek. /(2023/07/12)/
+ + [[https://youtu.be/MDy7JQN5MN4][The Most Efficient Struct Configuration Pattern For Go]]. It's actually very
+   useful pattern to use. I've used it a lot in Go, it was inspired to me from
+   [[id:vlm4vsn02wj0][Lisp]] (I can tell that is one of the most common patterns in Lisp). I was
+   thinking today if it will be possible to have a fantastic control-statement
+   function in Go like Lisp's ~IF~. /(2023/06/30)/
+ + [[https://old.reddit.com/r/rust/comments/12b7p2p/the_rust_programming_language_absolutely/][The Rust programming language absolutely positively sucks]]. I like the fact
+   that they published it in r/rust. /(2023/06/22)/
+ + [[https://youtu.be/cNWhyadNbCk][Prompt Engineering is The New C++]] /(2023/06/19)/
+ + [[https://medium.com/@bjax_/a-tale-of-unwanted-disruption-my-week-without-amazon-df1074e3818b][A Tale of Unwanted Disruption: My Week Without Amazon]]. Smart housing is
+   one of the worst ideas that we have been through so far. Just as bad as
+   thinking in the 90s that people in the next millennium would execute programs
+   that they don't know how they are implemented. /(2023/06/19)/
+ + [[https://stallman.org/archives/2023-mar-jun.html#12_June_2023_(Robot_taxi_killed_dog)][Robot taxi killed dog]] Is rms' comment very irrelevant? /(2023/06/18)/
+ + [[https://youtu.be/odi248rgkw8?t=4058][Editor/IDE Tier List]] "I've never met someone who used emacs that I'm not just
+   impressed with". Okay he fixed it right away. /(2023/06/13)/
+   + [[https://youtu.be/odi248rgkw8?t=4018][Editor/IDE Tier List]] "I never opened it I never used it there was only that
+     weird guy at work who uses it". This way to describe emacs hits me hard
+     actually. /(2023/06/13)/
+ + [[https://youtu.be/urcL86UpqZc][Interview with an Emacs Enthusiast in 2023 [Colorized]​]]. "- So you are going to
+   treat it as a text buffer? - I treat my whole life as a text buffer" lol. /(2023/06/11)/
+ + [[https://tinyclouds.org/rant][I hate almost all software]]. Totally agree. This industry is just horrible. /(2023/06/06)/
+ + [[https://github.com/nolimits4web/Swiper/issues/1631][drag gets all fucked to fuck when you click and drag and release outside of the slider shit · Issue #1631 · nolimits4web/swiper]].
+   This is how we handle technical documentation for bugs, ladies and gentlemen. /(2023/06/06)/
+ + [[https://www.washingtonpost.com/world/interactive/2023/israel-palestinians-raids-west-bank/][Israeli agents conducted targeted killings in West Bank, killing a child]]. I've
+   studied some propaganda modules years ago that explained me much of what I'm
+   seeing in the mass media, yet it is never enough to make you see what is going
+   behind the scene that would make the washingtonpost publish such a report. /(2023/05/30)/
+ # + [[https://youtu.be/G2KFTd9NJTM][If Fight Club Was]]. lmao. [[id:0z79crn02wj0][relate.]] /(2023/05/30)/
+ + [[https://youtu.be/7KVY8zW2zXU?t=101][The Stack Overflow Survey]]. "I did do crystalmeth but that's different than
+   crystal" this actually hits hard if you know that theprimeagen is an
+   ex-crystalmeth addict. /(2023/05/23)/
+ + [[https://www.youtube.com/@DirectorZ333/videos][DirectorZ333.]] Found this fan youtube channel today, seems that they used to
+   make nice music videos for their favorite songs a decade ago. It's sad how
+   such things being buried forever. /(2023/05/20)/
+ + [[https://youtu.be/UKCW4nJmIwE][Episode 01: The Great Idea of Wisdom]] /(2023/05/20)/
+ + [[https://old.reddit.com/r/golang/comments/13jvo70/go_job_interview_questions/][Go job interview questions]]. Software industry is going always into worse and
+   worse situation due to its dim hiring process. /(2023/05/19)/
+ + [[https://youtu.be/v53okHVQZuA][Vim vs Emacs | Prime Reacts]]. "Those who run terminal emulator inside
+   of their text editor have already screwed up" lmao. /(2023/05/19)/
+ + [[https://en.wikipedia.org/wiki/Hero%27s_journey][Hero's journey - Wikipedia]]. I was much younger when I read Campell's "[[id:99f7d930-51d8-4764-a5a1-5a6641c25dd6][The hero with a thousand faces]]" for the first time. My thoughts now towards
+   [[id:49ed6a36-2379-4a45-8309-47036383cd1c][psychoanalyses]] are much developed compared to then, yet they are not decisive.
+   I think I'm going to reread it to have more definitive view of psychoanalysis. /(2023/05/19)/
+ + [[https://old.reddit.com/r/cscareerquestions/comments/13iwhqm/why_cant_i_land_a_job/][Why can't I land a job : cscareerquestions]]. "challenging challenges". Btw, let
+   me put my opinion on language models here too. I don't think they are bad in
+   general but in fact they solve only one problem; the bureaucratic writings.
+   You can ask it to write you any useless load of "scalable", "ascendable" or
+   whatever words the HR will be happy seeing while checking your resume. /(2023/05/16)/
+ + [[http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html][Writing academic papers with org-mode]]. A thorough explanation. I feel
+   confidence when I see this kind of intuition of teleportation; the explained
+   workflow is very similar to what I've been doing, however I thought that what
+   I'm doing is special workflow of mine. /(2023/05/12)/
+ + [[https://theframeblog.com/2020/12/28/olympian-frames-frederic-lord-leighton/][Olympian frames: Frederic, Lord Leighton]]. /(2023/05/06)/
+ + [[https://wiki2.org/en/Poetry_of_Catullus][Poetry of Catullus — Wikipedia Republished // WIKI 2]]. /(2023/05/05)/
+ + [[https://math.stackexchange.com/questions/697096/prove-that-any-palindrome-with-an-even-number-of-digits-is-divisible-by-11%5D][Prove that any palindrome with an even number of digits is divisible by 11]] Was solving some euler problems today, found this interesting pattern in palindrome product:
+
+   #+name: org1a40f26
+   #+begin_example
+    3 digits:            913 x            993 =                       906609, 7ms
+    4 digits:           9999 x           9901 =                     99000099, 0ms
+    5 digits:          99681 x          99979 =                   9966006699, 11ms
+    6 digits:         999999 x         999001 =                 999000000999, 0ms
+    7 digits:        9997647 x        9998017 =               99956644665999, 812ms
+    8 digits:       99999999 x       99990001 =             9999000000009999, 0ms
+    9 digits:      999920317 x      999980347 =           999900665566009999, 508259ms
+   10 digits:     9999999999 x     9999900001 =         99999000000000099999, 0ms
+   11 digits:    99999943851 x    99999996349 =       9999994020000204999999, 420031ms
+   12 digits:   999999999999 x   999999000001 =     999999000000000000999999, 0ms
+   13 digits: ?
+   14 digits: 99999999999999 x 99999990000001 = 9999999000000000000009999999, 0ms
+   #+end_example
+
+   /(2023/04/10)/
+ + [[https://github.com/kmx-io/repo][kmx-io/repo: Source repository utilities in Common Lisp]] Sometimes all what you are missing is one piece. /(2023/03/18)/
+ + [[https://old.reddit.com/r/lisp/comments/11szcrl/microsoft_excel_as_lisp_ide/][Microsoft Excel as Lisp IDE]] Do people even hear themselves? /(2023/03/17)/
+ + [[https://youtu.be/q2A-MkGjvmI][Let’s try ChatGPT. Is it any good?]]. A nice review. /(2023/01/30)/
+ + [[https://poweruser.blog/embedding-python-in-go-338c0399f3d5][Embedding Python in Go.]] /(2022/12/22)/
+ + [[https://kristoff.it/blog/why-go-and-not-rust/][Why Go and not Rust?]] /(2022/12/18)/
+ + [[https://www.draketo.de/software/decentralized-moderation.html][The path towards decentralized moderation]] I wish if the web stayed like that, when
+   everyone has its place that they really own and control. /(2022/12/13)/
+ + [[https://www.salkosuo.net/2015/10/22/elite-for-emacs.html][Elite for Emacs]] /(2022/12/09)/
+ + [[http://www.catb.org/~esr/faqs/hacker-howto.html][How To Become A Hacker]]
+   Why this guide is not ubiquitous enough? I found it months ago when I was browsing Paul
+   Geraham blog (he was arguing about an entry about Lisp /[[http://www.paulgraham.com/avg.html?viewfullsite=1][here]]/). I think it's a very
+   suitable guide for everyone who is involved into using computer, it's a sad fact that even
+   modern 'computer scientests' need such a guide. /(2022/12/05)/
+ + [[https://www.iwriteiam.nl/index.html][I write, therefore I am]]
+   I respect this place. /(2022/12/01)/
+ + [[http://lists.warhead.org.uk/pipermail/iwe/2005-July/000130.html][Why Lisp macros are cool, a Perl perspective]] /(2022/11/26)/
+ + [[https://github.com/ThreeDotsLabs/go-web-app-antipatterns][Go Web App Anti-Patterns]] /(2022/11/22)/
+ + [[https://appliedgo.net/limericks/?utm_source=reddit][Poetry time! Go proverbs as limericks]]
+
+   #+begin_verse
+ There once was a programmer named Joe
+ Who loved coding in Go, don't you know?
+ He found it quite neat
+ With concurrency sweet
+ And a syntax that was oh so low-key
+
+ With goroutines running in parallel
+ His code ran faster than a serial
+ He could handle many tasks
+ With ease and with panache
+ Thanks to Go's ability to scale.
+
+ So if you want your code to be lean
+ And run faster than you've ever seen
+ Give Go a try
+ And watch your code fly
+ And see what it can do for your machine
+   #+end_verse
+
+   /(2022/12/18)/
+
+
++ [[https://harmful.cat-v.org/software/c++/I_did_it_for_you_all][Bjarne Stroustrup: "I Did It For You All..."]] lmao. /(2022/11/05)/
++ [[https://hacks.mozilla.org/2022/11/improving-firefox-stability-with-this-one-weird-trick/][Improving Firefox stability with this one weird trick]] This is funny. /(2022/11/01)/
++ [[https://youtu.be/Wy9WvF5gWYg][Org-roam-bibtex - Quick Presentation]]. One of the best workflows I've ever seen. /(2022/11/29)/
++ [[https://youtu.be/M6iZaOYPq60?list=TLPQMTExMjIwMjIEoACD7ER6ew][What are your thoughts on ChatGPT?]] /(2022/11/25)/
++ [[https://youtu.be/p2tdFE28Jdg][How do you maintain a large code base?]] /(2022/11/21)/
++ [[https://youtu.be/o9pEzgHorH0][Stop Writing Classes]] /(2022/11/16)/
++ [[https://youtu.be/d7KHAVaX_Rs][Just In Time (JIT) Compilers]] /(2022/11/12)/
++ [[https://youtu.be/3TBq__oKUzk][RubyConf 2017: 4 Programming Paradigms in 45 Minutes by Aja Hammerly]] /(2022/11/08)/
++ [[https://youtu.be/J2YdjpWJJHs][Embedding WebKit in Emacs: XWidgets+WebKit Feature Preview]] Seems very
+  interesting. I used to think it's a hopeless technological when I tried it
+  with
+  ~M-x xwidget-webkit-browse-url~, damn it I don't want even to remember. However I recently
+  tried [[https://github.com/akirakyle/emacs-webkit][akirakyle/emacs-webkit]] and it rocks, I've been thinking of replacing chromium with
+  it. Now, XWidgets seems very promising to me. I wish I had some free time to develop
+  great things with it. /(2022/11/04)/
++ [[https://youtu.be/DWzprRWPI68][We have a problem.]] /(2022/11/12)/
+  /(2022/12/19)/
++ [[https://www.youtube.com/shorts/wBIjv5g-loM][Three reasons YouTube loves #shorts]] /(2022/09/20)/

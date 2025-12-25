@@ -1,0 +1,571 @@
+:PROPERTIES:
+:ROAM_ALIASES: math
+:ID:       ej076sp02wj0
+:END:
+#+title: Mathematics
+#+filetags: :project:link:
+
+
+#+CAPTION: True Golden Spiral: the length of the side of a larger square to the next smaller square is in the ‘Golden Ratio’.
+[[file:../i/pr.jpg]]
+
+#+begin_quote
+“Non mi legga chi non e matematico.”
+
+“Let no one read me who is not a mathematician.”
+
+Leonardo da Vinci
+#+end_quote
+The other thing in my life that is only about the absolute truth. See: [[id:8ay4irp02wj0][A Prelude
+Over Mathematics]].
+
+{{{indx}}}
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+
+* [[id:omy9ejo02wj0][Books]]                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+- [[id:52n2u0y0pwj0][Introduction to Linear Algebra]] (Strang, G.)
+- [[id:w1s05uz0v0k0][The Calculus Wars]] (Bardi, J. S.)
+- [[id:ycoi0ih0xxj0][Differential Equations for Dummies]] (Holzner, S.)
+- [[id:7bp8wrh0xxj0][Differential Equations w/ Applications and Historical Notes]] (Simmons, G.)
+- [[id:sv7dvww0e2k0][Philosophical and Mathematical Logic]] (De Swart, H.)
+- [[id:ikdelw30b3k0][Beginning Mathematical Logic]] (Smith, P.)
+* Notes                                                               :noexport:
+** TODO Project Euler
+:PROPERTIES:
+:LAST_REPEAT: [2024-01-15 Mon 03:59]
+:END:
+:LOGBOOK:
+CLOCK: [2024-06-30 Sun 15:20]--[2024-06-30 Sun 15:48] =>  0:28
+CLOCK: [2024-07-01 Mon 13:47]--[2024-07-01 Mon 14:10] =>  0:23
+CLOCK: [2024-07-01 Mon 12:32]--[2024-07-01 Mon 13:10] =>  0:38
+CLOCK: [2024-07-01 Mon 11:48]--[2024-07-01 Mon 12:08] =>  0:20
+CLOCK: [2024-07-01 Mon 10:48]--[2024-07-01 Mon 10:49] =>  0:01
+CLOCK: [2024-07-03 Wed 14:32]--[2024-07-03 Wed 15:26] =>  0:54
+CLOCK: [2024-06-23 Sun 07:23]--[2024-06-23 Sun 10:29] =>  3:06
+CLOCK: [2024-01-15 Mon 03:39]--[2024-01-15 Mon 03:58] =>  0:19
+CLOCK: [2023-07-28 Fri 02:51]--[2023-07-28 Fri 03:04] =>  0:13
+CLOCK: [2023-07-26 Wed 17:26]--[2023-07-26 Wed 18:31] =>  1:05
+CLOCK: [2023-07-25 Tue 21:28]--[2023-07-25 Tue 21:29] =>  0:01
+CLOCK: [2023-07-20 Thu 15:03]--[2023-07-20 Thu 16:55] =>  1:52
+:END:
+*** DONE [#C] [[https://en.wikipedia.org/wiki/Catalan_number][Catalan number - Wikipedia]]                            :@read:
+:LOGBOOK:
+CLOCK: [2025-10-17 Fri 15:12]--[2025-10-17 Fri 16:03] =>  0:51
+:END:
+Related to [[https://projecteuler.net/problem=15][#15 Lattice Paths]]
+[[https://stackoverflow.com/a/3308585][s]]
+*** KILL [#C] [[https://www.topcoder.com/thrive/articles/Prime%20Numbers,%20Factorization%20and%20Euler%20Function][Prime Numbers, Factorization and Euler Function]]       :@read:
+** Birthday Paradox
+:PROPERTIES:
+:ID:       8anghp402ak0
+:END:
+
+In Mathematics, The birthday paradox states that  In a room of just 23 people
+there’s a 50-50 chance of at least two people having the same birthday. In a
+room of 75 there’s a 99.9% chance of at least two people matching.
+
+The reason behind it looks anomalous and paradoxical to us is because we tend to
+think about probabilistic
+[[file:../../media/plot.png]]
+
+** Sieve's [[id:a43f60c9-4754-450f-ad66-67a9faabb10c][Algorithm]]
+:PROPERTIES:
+:ID:       ymgijkz0n8k0
+:END:
+
+#+begin_quote
+To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:
+
+1. Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).
+2. Initially, let p equal 2, the smallest prime number.
+3. Enumerate the multiples of p by counting in increments of p from 2p to n, and
+   mark them in the list (these will be 2p, 3p, 4p, ...; the p itself should not
+   be marked).
+4. Find the smallest number in the list greater than p that is not marked. If
+   there was no such number, stop. Otherwise, let p now equal this new number
+   (which is the next prime), and repeat from step 3.
+5. When the algorithm terminates, the numbers remaining not marked in the list
+   are all the primes below n.
+
+#+end_quote
+** Zeno's Paradox of Achilles and the Tortoise
+:PROPERTIES:
+:ID:       zgjcnsh0x8k0
+:END:
+Sometime around the fifth century B.C., the Greek philosopher Zeno posed a
+paradox that now bears his name. Suppose that Achilles and a tortoise are to run
+a footrace. Let’s assume that Achilles is exactly twice as fast as the tortoise.
+(Our tortoise is obviously a veritable Hercules among his kind.) To make things
+fair, the tortoise will get a head start of 1000 meters. After the start of the
+race, by the time Achilles runs 1000 meters, the tortoise is still ahead by 500
+meters. However, Achilles is a far superior athlete, so he easily covers the
+next 500 meters. During this time, the tortoise has managed to go another 250
+meters. We can repeat the process for an infinite number of time slices while
+always finding the tortoise just a bit ahead of Achilles. Will Achilles ever
+catch up to the tortoise?
+
+In other words, what this paradox is actually questioning is whether an infinite
+number of $x$ (in this case, time slices) can even occur when thinking of it
+mathematically. Zeno has structured the same paradox in another way, assume that
+you are moving an object from $p_1$ to $p_24, at some point the object has
+reached half the distance to $p_2$ then one-third to $p_2$, then one to the
+forth of $p_2$ and so to infinite number of the fractions to which the object
+will reach $p_2$, we know that's impossible to reach the end of something that
+has the attribute of infinitude, so will even $p_2$ be reached?
+
+\[
+\sum_{i=1}^{\infty} \frac{1}{2^i} = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots
+\]
+
+And the answer to this paradox is fairly simple in modern algebra, as we know
+that having something that has the attribute of infinitude, does not imply that
+this thing has an infinite sum. Take for example this box:
+
+[[file:../../media/Notes/2024-06-30_16-25-56_screenshot.png]]
+
+We can see that the right portion of the box is exactly equal to its left, we
+note too that the right portion has an infinite continuation of division,
+however we know too that this infinite division will sum up to $0.5$ no matter
+what.
+** Prime Numbers
+:PROPERTIES:
+:ID:       rjh37zn0y8k0
+:END:
+A prime number is a positive integer, which is divisible on 1 and itself. The
+other integers, greater than 1, are composite. Coprime integers are a set of
+integers that have no common divisor other than 1 or -1.
+*** Euclid’s theorem
+:PROPERTIES:
+:ID:       hosg3qo0y8k0
+:END:
+There is no largest prime number.
+
+To prove this, let’s consider only n prime numbers: $p_1$, $p_2$, …, $p_n$. But no prime
+$p_i$ divides the number
+
+N = p1 * p2 * … * pn + 1,
+
+so N cannot be composite. This contradicts the fact that the set of primes is
+finite.
+*** Sieve of Eratosthenes
+:PROPERTIES:
+:ID:       1f616qo0y8k0
+:END:
+The most efficient way to find all small primes was proposed by the Greek
+mathematician Eratosthenes. His idea was to make a list of positive integers not
+greater than n and sequentially strike out the multiples of primes less than or
+equal to the square root of n. After this procedure only primes are left in the
+list.
+
+Here's a [[id:911epup02wj0][Julia]] implementation:
+
+#+begin_src example
+function sieve_of_eratosthenes(limit)
+    is_prime = trues(limit)
+    is_prime[1] = false  # 1 is not a prime number
+
+    for i in 2:sqrt(limit)
+        if is_prime[i]
+            for j in i^2:i:limit
+                is_prime[j] = false
+            end
+        end
+    end
+
+    primes = []
+    for i in 2:limit
+        if is_prime[i]
+            push!(primes, i)
+        end
+    end
+
+    return primes
+end
+#+end_src
+
+*** Prime Numbers Theorem
+:PROPERTIES:
+:ID:       g58jq4r0y8k0
+:END:
+The prime number theorem (PNT) describes the asymptotic distribution of the
+prime numbers among the positive integers. It formalizes the intuitive idea that
+primes become less common as they become larger by precisely quantifying the
+rate at which this occurs.
+
+The first such distribution found is π(N) ~ N / log(N) , where π(N) is the
+prime-counting function (the number of primes less than or equal to N) and
+log(N) is the natural logarithm of N. This means that for large enough N, the
+probability that a random integer not greater than N is prime is very close to 1
+/ log(N).
+*** Goldbach’s Conjecture
+:PROPERTIES:
+:ID:       9wq8t9r0y8k0
+:END:
+It's one of the famous non-proven conjectures so far. For any integer n (n ≥ 4)
+there exist two prime numbers p1 and p2 such that p1 + p2 = n.
+
+** Kaprekar's constant
+:PROPERTIES:
+:ID:       59m80xb009k0
+:END:
+The number 6174 is known as Kaprekar's constant after the Indian mathematician D. R. Kaprekar. This number is renowned for the following rule:
+
+1. Take any four-digit number, using at least two different digits (leading zeros are allowed).
+2. Arrange the digits in descending and then in ascending order to get two four-digit numbers, adding leading zeros if necessary.
+3. Subtract the smaller number from the bigger number.
+4. Go back to step 2 and repeat.
+
+The above process, known as Kaprekar's routine, will always reach its fixed
+point, 6174, in at most 7 iterations.[4] Once 6174 is reached, the process will
+continue yielding 7641 – 1467 = 6174. For example, choose 1459:
+
+9541 – 1459 = 8082
+8820 – 0288 = 8532
+8532 – 2358 = 6174
+7641 – 1467 = 6174
+
+** Prefect Numbers
+:PROPERTIES:
+:ID:       fy80cm9049k0
+:END:
+In number theory, a perfect number is a positive integer that is equal to the
+sum of its positive proper divisors, that is, divisors excluding the number
+itself. For instance, 6 has proper divisors 1, 2 and 3, and 1 + 2 + 3 = 6, so 6
+is a perfect number. The next perfect number is 28, since 1 + 2 + 4 + 7 + 14
+= 28.
+
+** Mersenne Primes
+:PROPERTIES:
+:ID:       u9qear9049k0
+:END:
+In mathematics, a *Mersenne prime* is a prime number that is one less than a
+power of two. That is, it is a prime number of the form /M _{n}/ = 2 ^{/n/} − 1
+for some integer /n/. They are named after Marin Mersenne, a French Minim friar,
+who studied them in the early 17th century. If /n/ is a composite number then so
+is 2 ^{/n/} − 1. Therefore, an equivalent definition of the Mersenne primes is
+that they are the prime numbers of the form /M _{p}/ = 2 ^{/p/} − 1 for some
+prime /p/.
+
+Mersenne primes Mp are closely connected to [[id:fy80cm9049k0][Prefect Numbers]]. In the 4th century
+BC, Euclid proved that if 2p − 1 is prime, then 2^p − 1(2^p − 1) is a perfect
+number.
+
+
+#+DOWNLOADED: screenshot @ 2024-09-21 00:23:43
+[[file:../../media/Notes/2024-09-21_00-23-43_screenshot.png]]
+
+** Pronic number
+:PROPERTIES:
+:ID:       w3sch1o0k9k0
+:END:
+A pronic number is a number that is the product of two consecutive integers, that is, a
+number of the form. The study of these numbers dates back to Aristotle.
+
+** Googol and GoogolPlex
+:PROPERTIES:
+:ID:       bfo2fy10f9k0
+:END:
+
+A googol is the large number 10^100. In decimal notation, it is written as the
+digit 1 followed by one hundred zeroes. A googol is a very big number, more than
+humans can imagine. For example if you think of how many grains of sand you can
+fit in a big room,  well not that big, it will be around in the range of 30-100
+billion. Not that big. Less that a Googol. What about the number of all
+particles in the universe, that's about 10^80, this is still less than a Googol.
+Okay how about a universe filled of grains of sand? that will be about 10^90,
+which is still less than a Googol. A Googolplex is a 10^(Googol). It's a very
+big number that if we use every particular in the universe to write one of its
+zeros, we won't be able to write it all down.
+** Poincaré conjecture and Grigori Perelman
+:PROPERTIES:
+:ID:       712luj00qak0
+:END:
+Grigori Perelmans solved the Poincaré conjecture but declined the prizes for it. From
+wikipeda:
+
+#+begin_quote
+However, Perelman declined to accept the prize. Sir John Ball, president of the
+International Mathematical Union, approached Perelman in Saint Petersburg in June 2006 to
+persuade him to accept the prize. After 10 hours of attempted persuasion over two days,
+Ball gave up. Two weeks later, Perelman summed up the conversation as follows: "He
+proposed to me three alternatives: accept and come; accept and don't come, and we will
+send you the medal later; third, I don't accept the prize. From the very beginning, I told
+him I have chosen the third one ... [the prize] was completely irrelevant for me.
+Everybody understood that if the proof is correct, then no other recognition is
+needed." He was quoted as saying, "'I'm not interested in money or fame, I don't want
+to be on display like an animal in a zoo. I'm not a hero of mathematics. I'm not even that
+successful; that is why I don't want to have everybody looking at me.'
+#+end_quote
+** [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]] of Numbers
+:PROPERTIES:
+:ID:       bi85cia14ak0
+:END:
+Philosophy of mathematics is the branch of philosophy that deals with the nature of mathematics and its relationship with other human activities.
+*** Platnoism Numbers
+Mathematical Platonism is the form of realism that suggests that mathematical entities are
+abstract, have no spatiotemporal or causal properties, and are eternal and unchanging.
+This is often claimed to be the view most people have of numbers. The term Platonism is
+used because such a view is seen to parallel Plato's Theory of Forms and a "World of
+Ideas" (Greek: eidos (εἶδος)) described in Plato's allegory of the cave: the everyday
+world can only imperfectly approximate an unchanging, ultimate reality. Both Plato's cave
+and Platonism have meaningful, not just superficial connections, because Plato's ideas
+were preceded and probably influenced by the hugely popular Pythagoreans of ancient
+Greece, who believed that the world was, quite literally, generated by numbers.
+*** fictionalism
+Mathematical fictionalism was brought to fame in 1980 when Hartry Field published Science
+Without Numbers,[57] which rejected and in fact reversed Quine's indispensability
+argument. Where Quine suggested that mathematics was indispensable for our best scientific
+theories, and therefore should be accepted as a body of truths talking about independently
+existing entities, Field suggested that mathematics was dispensable, and therefore should
+be considered as a body of falsehoods not talking about anything real. He did this by
+giving a complete axiomatization of Newtonian mechanics with no reference to numbers or
+functions at all. He started with the "betweenness" of Hilbert's axioms to characterize
+space without coordinatizing it, and then added extra relations between points to do the
+work formerly done by vector fields. Hilbert's geometry is mathematical, because it talks
+about abstract points, but in Field's theory, these points are the concrete points of
+physical space, so no special mathematical objects at all are needed.
+* Links                                                               :noexport:
+** Formula                                                           :noexport:
+:PROPERTIES:
+:ID:       n8w1pi81wwj0
+:END:
+** Chaos theory
+:PROPERTIES:
+:ID:       w8vcd990jek0
+:CUSTOM_ID: w8vcd990jek0
+:END:
+Chaos theory is an interdisciplinary area of scientific study and branch of
+mathematics. It focuses on underlying patterns and deterministic laws of
+dynamical systems that are highly sensitive to initial conditions. These were
+once thought to have completely random states of disorder and irregularities
+*** Fractals
+:PROPERTIES:
+:ID:       zwsf5a90jek0
+:CUSTOM_ID: zwsf5a90jek0
+:END:
+In mathematics, a fractal is a geometric shape containing detailed structure at arbitrarily small scales, usually having a fractal dimension strictly exceeding the topological dimension. Many fractals appear similar at various scales, as illustrated in successive magnifications of the Mandelbrot set.
+Wikipedia
+*** Mathematician
+:PROPERTIES:
+:ID:       i7alxb90jek0
+:CUSTOM_ID: i7alxb90jek0
+:END:
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** KILL [[mu4e:msgid:7b9494ce-47e9-48a3-94fb-49af11ef8b70@larrasket][What god has to do in mathematics]]                            :@check:
+:LOGBOOK:
+CLOCK: [2025-11-15 Sat 19:26]--[2025-11-15 Sat 19:31] =>  0:05
+:END:
+[2025-11-02 Sun 23:59]
+** TODO [[mu4e:msgid:bea79e4e-e7dd-4b19-8baa-105f826dedf2@larrasket][But what is a Laplace Transform?]]                             :@watch:
+[2025-10-14 Tue 23:59]
+** TODO [[mu4e:msgid:558bac09-ab46-46f5-a6fc-80cf55401ab8@larrasket][Why Laplace transforms are so useful]]                         :@watch:
+[2025-11-13 Thu 21:18]
+** DONE [[mu4e:msgid:097bc79e-fedf-4730-8b8e-b1b46dae3140@larrasket][How to Study Mathematics (2017)]]                              :@read:
+:PROPERTIES:
+:ID:       o8x0bc80tfk0
+:CUSTOM_ID: o8x0bc80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-02 Mon 15:10]--[2024-12-02 Mon 15:57] =>  0:47
+:END:
+[2024-12-02 Mon 14:55]
+** TODO [[https://youtu.be/dK_narib4do?list=PLE418513C3CDF6C11][The Unreasonable Effectiveness of Mathematics 1/7]]            :@watch:
+:PROPERTIES:
+:ID:       380aec80tfk0
+:CUSTOM_ID: 380aec80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-12-21 Sat 07:47]--[2024-12-21 Sat 08:20] =>  0:33
+:END:
+** TODO [[mu4e:msgid:1f8fcff8-29ea-4bb9-9e40-1657dda7cdfc@larrasket][The Mandelbrot Set Explained]]                                 :@watch:
+:PROPERTIES:
+:ID:       kk0bfc80tfk0
+:CUSTOM_ID: kk0bfc80tfk0
+:END:
+[2024-11-16 Sat 03:46]
+** TODO Tabadil and Twafer                                           :@idea:
+[2024-08-20 Tue 05:32]
+Study those. it's really important. I coudn't solve the HN problem and I really think it's
+helpful to understand it
+** KILL [#C] [[https://www.youtube.com/watch?v=cW27QJYNXtU][Sleeping Beauty Paradox]]                                 :@check:
+:LOGBOOK:
+CLOCK: [2023-10-25 Wed 14:49]--[2023-10-25 Wed 14:53] =>  0:04
+CLOCK: [2023-08-17 Thu 23:15]--[2023-08-17 Thu 23:23] =>  0:08
+:END:
+** DONE [[https://www.youtube.com/@numberphile/videos][Watch an old numberphile video]]                               :@watch:
+:PROPERTIES:
+:LAST_REPEAT: [2024-08-18 Sun 07:09]
+:END:
+- [2024-08-18 Sun 15:44] I don't really see a point in doing that anymore.
+- [2024-07-20 Sat 14:00] Watced video about history of pi
+- [2024-07-18 Thu 07:08] I watched [[https://youtu.be/abv4Fz7oNr0][Pi and Bouncing Ball]], which is interesting but I'm not really sure why it does work.
+- [2024-07-18 Thu 05:11] Just watched the [[https://youtu.be/D6tINlNluuY][forty two]] video, really naive. It's a special number because it has many
+  "O"s and Douglas Adam felt so.
+- [2024-07-17 Wed 03:19] Watched [[https://youtu.be/daro6K6mym8][this]] video about the fact that:
+  #+begin_example
+  1/9801 = 0.(000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969799)(repeat)
+  #+end_example
+
+  In fact it looked so interesting at first, however I felt later that it's later obvious
+  and strightforward. See this [[https://math.stackexchange.com/a/102684][answer]] on SE.
+:STATS:
+- State "KILL"       from "TODO"       [2024-08-18 Sun 07:09]
+- State "KILL"       from "TODO"       [2024-08-18 Sun 04:31]
+- State "KILL"       from "TODO"       [2024-08-15 Thu 22:58]
+- State "KILL"       from "TODO"       [2024-08-14 Wed 22:35]
+- State "KILL"       from "TODO"       [2024-08-14 Wed 00:01]
+- State "DONE"       from "TODO"       [2024-08-12 Mon 06:09]
+- State "DONE"       from "TODO"       [2024-08-10 Sat 15:32]
+- State "DONE"       from "TODO"       [2024-08-09 Fri 02:10]
+- State "DONE"       from "TODO"       [2024-08-08 Thu 04:52]
+- State "DONE"       from "TODO"       [2024-08-08 Thu 01:53]
+- State "DONE"       from "TODO"       [2024-08-04 Sun 14:45]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 17:24]
+- State "DONE"       from "TODO"       [2024-07-28 Sun 16:14]
+- State "DONE"       from "TODO"       [2024-07-28 Sun 16:10]
+- State "DONE"       from "TODO"       [2024-07-25 Thu 06:27]
+- State "DONE"       from "TODO"       [2024-07-25 Thu 06:27]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 13:50]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 12:03]
+- State "DONE"       from "TODO"       [2024-07-22 Mon 04:35]
+- State "DONE"       from "TODO"       [2024-07-22 Mon 04:31]
+- State "DONE"       from "TODO"       [2024-07-20 Sat 14:00]
+- State "DONE"       from "TODO"       [2024-07-18 Thu 07:08]
+- State "DONE"       from "TODO"       [2024-07-18 Thu 05:12]
+- State "DONE"       from "TODO"       [2024-07-17 Wed 03:22]
+- State "DONE"       from "TODO"       [2024-07-14 Sun 03:06]
+- State "DONE"       from "TODO"       [2024-07-05 Fri 21:38]
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-18 Sun 15:40]--[2024-08-18 Sun 15:44] =>  0:04
+CLOCK: [2024-08-12 Mon 05:36]--[2024-08-12 Mon 06:09] =>  0:33
+CLOCK: [2024-08-10 Sat 15:24]--[2024-08-10 Sat 15:32] =>  0:08
+CLOCK: [2024-08-09 Fri 02:05]--[2024-08-09 Fri 02:10] =>  0:05
+CLOCK: [2024-08-08 Thu 01:02]--[2024-08-08 Thu 01:53] =>  0:51
+CLOCK: [2024-08-04 Sun 14:24]--[2024-08-04 Sun 14:45] =>  0:21
+CLOCK: [2024-08-02 Fri 17:07]--[2024-08-02 Fri 17:24] =>  0:17
+CLOCK: [2024-07-28 Sun 16:10]--[2024-07-28 Sun 16:14] =>  0:04
+CLOCK: [2024-07-28 Sun 16:02]--[2024-07-28 Sun 16:10] =>  0:08
+CLOCK: [2024-07-25 Thu 06:19]--[2024-07-25 Thu 06:27] =>  0:08
+CLOCK: [2024-07-25 Thu 05:54]--[2024-07-25 Thu 05:56] =>  0:02
+CLOCK: [2024-07-23 Tue 13:42]--[2024-07-23 Tue 13:50] =>  0:08
+CLOCK: [2024-07-23 Tue 11:48]--[2024-07-23 Tue 12:03] =>  0:15
+CLOCK: [2024-07-22 Mon 04:31]--[2024-07-22 Mon 04:35] =>  0:04
+CLOCK: [2024-07-22 Mon 04:22]--[2024-07-22 Mon 04:31] =>  0:09
+CLOCK: [2024-07-20 Sat 13:50]--[2024-07-20 Sat 14:00] =>  0:10
+CLOCK: [2024-07-18 Thu 06:34]--[2024-07-18 Thu 07:08] =>  0:34
+CLOCK: [2024-07-18 Thu 05:05]--[2024-07-18 Thu 05:12] =>  0:07
+CLOCK: [2024-07-17 Wed 02:12]--[2024-07-17 Wed 03:21] =>  1:09
+CLOCK: [2024-07-15 Mon 02:28]--[2024-07-15 Mon 03:26] =>  0:58
+CLOCK: [2024-07-14 Sun 02:08]--[2024-07-14 Sun 02:37] =>  0:29
+CLOCK: [2024-07-12 Fri 03:55]--[2024-07-12 Fri 04:05] =>  0:10
+CLOCK: [2024-07-05 Fri 20:32]--[2024-07-05 Fri 21:07] =>  0:35
+CLOCK: [2024-07-02 Tue 20:39]--[2024-07-02 Tue 20:46] =>  0:07
+CLOCK: [2024-07-01 Mon 14:46]--[2024-07-01 Mon 15:07] =>  0:21
+:END:
+[2024-06-30 Sun 16:36]
+** DONE [[https://youtu.be/GItmC9lxeco?list=TLPQMTgwODIwMjRw8OAIsatojg][Poincaré Conjecture - Numberphile]]                            :@watch:
+:PROPERTIES:
+:ID:       rrofsc80tfk0
+:CUSTOM_ID: rrofsc80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-18 Sun 17:01]--[2024-08-18 Sun 17:26] =>  0:25
+:END:
+** DONE [[https://youtu.be/aVUUbNbQkbQ][Egyptian Fractions and the Greedy Algorithm - Numberphile]]    :@watch:
+:PROPERTIES:
+:ID:       tdp5wc80tfk0
+:CUSTOM_ID: tdp5wc80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-03-24 Sun 20:47]--[2024-03-24 Sun 20:52] =>  0:05
+:END:
+** TODO the book differential equations and historical note          :@idea:@later:
+seems interesting
+** DONE [[https://www.math.fsu.edu/~wxm/Arnold.htm][V.I. Arnold, On teaching mathematics]]                         :@read:
+:PROPERTIES:
+:ID:       ip9czc80tfk0
+:CUSTOM_ID: ip9czc80tfk0
+:END:
+- [2024-07-05 Fri 16:17] I was so tired.. Had ishal
+:LOGBOOK:
+CLOCK: [2024-07-05 Fri 16:17]--[2024-07-05 Fri 16:26] =>  0:09
+CLOCK: [2024-07-05 Fri 14:31]--[2024-07-05 Fri 15:56] =>  1:25
+CLOCK: [2024-03-27 Wed 06:07]--[2024-03-27 Wed 06:08] =>  0:01
+:END:
+** KILL [[https://math.stackexchange.com/q/4773803/1222996][Find the Expected Travel Distance of the Ambulance]]           :@check:
+** DONE [[https://philosophy.stackexchange.com/a/103251/67989][Is there a distance so small it can't be further divided?]]    :@watch:
+:PROPERTIES:
+:ID:       0rn51d80tfk0
+:CUSTOM_ID: 0rn51d80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-21 Sat 08:11]--[2023-10-21 Sat 08:24] =>  0:13
+:END:
+** TODO [[https://en.wikipedia.org/wiki/Sleeping_Beauty_problem][Sleeping Beauty problem]]                                      :@check:@later:
+:PROPERTIES:
+:ID:       8w9i2d80tfk0
+:CUSTOM_ID: 8w9i2d80tfk0
+:END:
+** DONE [#C] [[https://en.wikipedia.org/wiki/Doomsday_rule][Doomsday rule - Wikipedia]]                               :@check:
+:PROPERTIES:
+:ID:       k50a4d80tfk0
+:CUSTOM_ID: k50a4d80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-10-12 Thu 00:47]--[2023-10-12 Thu 00:49] =>  0:02
+:END:
+** KILL [[https://en.wikipedia.org/wiki/Zeller's_congruence][Zeller's congruence - Wikipedia]]                              :@check:
+** TODO [#C] Calc                                                    :@idea:
+:LOGBOOK:
+CLOCK: [2023-07-18 Tue 19:29]--[2023-07-18 Tue 23:16] =>  3:47
+CLOCK: [2023-07-18 Tue 16:57]--[2023-07-18 Tue 18:35] =>  1:38
+CLOCK: [2023-07-18 Tue 13:48]--[2023-07-18 Tue 14:45] =>  0:57
+CLOCK: [2023-07-13 Thu 02:11]--[2023-07-13 Thu 07:25] =>  5:14
+CLOCK: [2023-07-06 Thu 10:33]--[2023-07-06 Thu 13:22] =>  2:49
+CLOCK: [2023-07-06 Thu 07:44]--[2023-07-06 Thu 08:27] =>  0:43
+CLOCK: [2023-07-06 Thu 01:50]--[2023-07-06 Thu 04:52] =>  3:02
+CLOCK: [2023-07-04 Tue 03:59]--[2023-07-04 Tue 05:17] =>  1:18
+CLOCK: [2023-07-03 Mon 01:18]--[2023-07-03 Mon 02:56] =>  1:38
+CLOCK: [2023-07-02 Sun 01:53]--[2023-07-02 Sun 02:24] =>  0:31
+CLOCK: [2023-07-01 Sat 19:24]--[2023-07-01 Sat 20:36] =>  1:12
+:END:
+** DONE [[https://youtu.be/R33RoMO6xeA][Is 1 a Prime Number?]]                                         :@watch:
+:PROPERTIES:
+:ID:       2pv9ed80tfk0
+:CUSTOM_ID: 2pv9ed80tfk0
+:END:
+- [2024-07-23 Tue 14:57] I personally don't like this video and I think it's unnecessarily long..
+  https://youtu.be/IQofiPqhJ_s video by numberphile is better.
+:LOGBOOK:
+CLOCK: [2024-07-23 Tue 14:57]--[2024-07-23 Tue 14:58] =>  0:01
+CLOCK: [2023-08-14 Mon 03:49]--[2023-08-14 Mon 03:58] =>  0:09
+CLOCK: [2023-08-14 Mon 03:36]--[2023-08-14 Mon 03:42] =>  0:06
+:END:
+That view he mentioned about Phythagoreans views of numbers is very interesting
+** TODO [[mu4e:msgid:209fab8a-4b67-4b0a-b796-93a5f66c661f@larrasket][A cute probability fact (part 1)]]                             :@watch:
+:PROPERTIES:
+:ID:       rnj4qd80tfk0
+:CUSTOM_ID: rnj4qd80tfk0
+:END:
+[2024-09-11 Wed 05:48]
+** DONE [[https://youtu.be/R476CTKUIr4][Breaking the rules of math π = 0]]                             :@watch:
+:PROPERTIES:
+:ID:       h3a2sd80tfk0
+:CUSTOM_ID: h3a2sd80tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2023-08-14 Mon 03:59]--[2023-08-14 Mon 04:03] =>  0:04
+:END:
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

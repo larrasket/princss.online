@@ -1,0 +1,361 @@
+#+title: Implementing Salesforce SSO with Cognito Using SF SessionID
+#+DATE: <2025-03-29 Sat 02:02>
+:PROPERTIES:
+:ID:       peqdauc0vik0
+:CUSTOM_ID: peqdauc0vik0
+:END:
+#+filetags: :project:
+
+* TODO Rewrite this                                                 :@write:
+# #+BEGIN_tag
+# {{{t}}} [[id:4u5664n02wj0][Programming]]
+# #+END_tag
+
+I've been reading recently Distributed Systems by Steen, M. v., &
+Tanenbaum, A. S. [cite:@maarten-2023-distr-system]. And it provides a very nice
+introduction into the topic. Something I liked really from the book, how it
+starts with distinguishing between convoluted terms like distributed systems and
+decentralized systems. I experience this issue a lot while talking in an
+engineering context and I find someone suggesting a distributed approach,
+however, many of the listeners confuse it with other definitions like
+service-based architecture and the like.
+
+#+DOWNLOADED: screenshot @ 2025-04-01 14:04:55
+[[file:../i/2025-04-01_14-04-55_screenshot.png]]
+
+
+In this article I will go quickly over that distinction.
+
+To understand the difference between distributed and decentralized
+systems, we must first consider how networked systems emerge. There are
+typically two distinct evolutionary paths that lead to computers being
+connected together.
+
+The first path, which we might call the integrative approach, starts
+with independent, often heterogeneous systems that need to be connected
+to enable new functionalities or services. These systems typically exist
+within different administrative domains, were created separately, and
+are brought together because of emerging needs to share data or
+functionality. The European air traffic control system exemplifies this
+approach - numerous national systems, each independently developed and
+operated, must interconnect to enable coordinated management of
+continental airspace.
+
+The second path, which we call the expansive approach, begins with a
+single system that grows beyond the capabilities of a single computer,
+requiring additional machines to meet operational demands. This
+expansion is typically driven by performance needs, reliability
+requirements, or geographic distribution of users. Amazon's retail
+platform followed this trajectory - what began as a simple online
+bookstore running on a few servers has expanded to a massive
+infrastructure of hundreds of thousands of computers spread across the
+globe.
+
+These different origins lead to fundamentally different system
+characteristics, which we can distinguish as follows:
+
+- *A decentralized system* is a networked computer system in which
+  processes and resources are /necessarily/ spread across multiple
+  computers.
+- *A distributed system* is a networked computer system in which
+  processes and resources are /sufficiently/ spread across multiple
+  computers.
+
+The key distinction here lies in the words "necessarily" versus
+"sufficiently." In decentralized systems, distribution is a fundamental
+requirement dictated by constraints that make centralization impossible.
+In distributed systems, distribution is a design choice implemented to
+achieve specific quality attributes.
+Enterprise applications often require robust authentication mechanisms that can
+seamlessly integrate with existing identity providers. For organizations heavily
+invested in Salesforce, leveraging their established identity system for
+authenticating users across other applications presents significant benefits.
+This article explores a detailed implementation of Single Sign-On between
+Salesforce and AWS Cognito using custom authentication challenges, enabling
+applications to authenticate users with their Salesforce credentials without
+requiring additional password management.
+
+Final flow chart ([[file:../i/sf-cognito.png][click here for full-width image]]):
+
+[[file:../i/sf-cognito.png]]
+
+* The Authentication Challenge
+Standard OAuth flows typically require implementing specific protocols and
+maintaining redirect URIs. However, many enterprise scenarios benefit from a
+different approach - using existing session tokens from Salesforce directly.
+This approach allows applications to verify a user's identity based on their
+active Salesforce session, simplifying the authentication process while
+maintaining security.
+
+The core challenge lies in validating Salesforce session tokens and mapping them
+to appropriate user identities in AWS Cognito. When Cognito serves as the
+central identity management system for your applications, this mapping becomes
+crucial for maintaining consistent user profiles across platforms.
+* Architecture Overview
+
+The solution employs AWS Cognito's custom authentication flow capabilities,
+leveraging Lambda triggers to process Salesforce tokens. Four key Lambda
+functions collaborate to create this authentication experience:
+
+1. A token validator service that verifies Salesforce tokens and manages user creation
+2. A define-auth-challenge Lambda that controls the authentication flow
+3. A create-auth-challenge Lambda that requests the Salesforce token
+4. A verify-auth-challenge Lambda that validates the token against Salesforce APIs
+
+The interaction between these components creates a seamless authentication
+experience while ensuring proper validation of user identities.
+
+* Implementation Details
+
+** Setting Up the Cognito User Pool
+
+First, we need a Cognito user pool configured to use custom authentication
+challenges. This requires disabling the standard authentication flows and
+connecting our Lambda triggers.
+
+For AWS Console users, this involves:
+1. Creating a Cognito user pool
+2. Under "Sign-in experience", selecting "Custom" for the authentication flow
+3. Under "Lambda triggers", connecting the three Lambda functions to their respective triggers
+
+For Terraform users, the configuration resembles:
+
+#+BEGIN_SRC hcl
+resource "aws_cognito_user_pool" "myUsers_pool" {
+  name = "your_pool_name"
+
+  lambda_config {
+    define_auth_challenge = module.define-myUsers-auth-challenge-lambda.lambda_function_arn
+    create_auth_challenge = module.create-myUsers-auth-challenge-lambda.lambda_function_arn
+    verify_auth_challenge = module.verify-myUsers-auth-challenge-lambda.lambda_function_arn
+  }
+
+  # Additional configuration...
+}
+#+END_SRC
+
+** The Token Validator Service
+
+The token validator is a separate Lambda exposed as an API that serves as the
+entry point for authentication. It validates Salesforce tokens and ensures users
+exist in Cognito before starting the auth flow:
+
+#+BEGIN_SRC javascript
+async function validateSalesforceToken(sessionId) {
+  try {
+    const url = `${SALESFORCE_URL}/services/data/v56.0/chatter/users/me`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${sessionId}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.status !== 200) {
+      return { isValid: false, reason: `Invalid token, status: ${response.status}` };
+    }
+
+    const responseData = await response.json();
+    return responseData.email ? { isValid: true, email: responseData.email } :
+                               { isValid: false, reason: "Email not found" };
+  } catch (error) {
+    return { isValid: false, reason: `Validation error: ${error.message}` };
+  }
+}
+#+END_SRC
+
+This function makes a call to Salesforce's API to validate the token and
+retrieve the user's email, which serves as the basis for identity mapping.
+
+** The Cognito Lambda Triggers
+
+*** Define Auth Challenge
+
+The define-auth-challenge Lambda controls the authentication flow by determining
+which challenges to present and when to issue tokens:
+
+#+BEGIN_SRC javascript
+export const handler = async (event) => {
+  // first challenge in session
+  if (!event.request.session || event.request.session.length === 0) {
+    event.response.challengeName = "CUSTOM_CHALLENGE";
+    event.response.failAuthentication = false;
+    event.response.issueTokens = false;
+  } else {
+    // subsequent challenges
+    const lastChallenge = event.request.session[event.request.session.length - 1];
+
+    if (lastChallenge.challengeResult === true) {
+      // passed - issue tokens
+      event.response.issueTokens = true;
+      event.response.failAuthentication = false;
+    } else {
+      // failed - try again or fail auth
+      event.response.challengeName = "CUSTOM_CHALLENGE";
+      event.response.failAuthentication = false;
+    }
+  }
+  return event;
+};
+#+END_SRC
+
+*** Create Auth Challenge
+
+This Lambda creates the challenge requesting the Salesforce token:
+
+#+BEGIN_SRC javascript
+export const handler = async (event) => {
+  event.response = {
+    publicChallengeParameters: {
+      challenge: "Please provide your Salesforce session token"
+    },
+    privateChallengeParameters: {
+      challenge: "salesforce_token"
+    },
+    challengeMetadata: "SALESFORCE_TOKEN"
+  };
+  return event;
+};
+#+END_SRC
+
+*** Verify Auth Challenge
+
+The verify-auth-challenge Lambda performs the critical task of validating the token against Salesforce:
+
+#+BEGIN_SRC javascript
+async function validateSalesforceToken(sessionId, instanceUrl, expectedEmail) {
+  // request to Salesforce API
+  const options = {
+    hostname: new URL(instanceUrl).hostname,
+    path: "/services/data/v56.0/chatter/users/me",
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${sessionId}`,
+      "Content-Type": "application/json"
+    }
+  };
+
+  // token and check email match
+  // ...
+
+  if (expectedEmail && responseData.email) {
+    const emailMatches = responseData.email.toLowerCase() === expectedEmail.toLowerCase();
+    if (!emailMatches) {
+      return { isValid: false, reason: "Email mismatch" };
+    }
+    return { isValid: true };
+  }
+}
+#+END_SRC
+
+* The Username Dilemma
+
+A critical consideration in this implementation revolves around Cognito
+usernames. While it might seem intuitive to use email addresses as usernames in
+Cognito, this approach creates complications in the custom authentication flow.
+When initiating authentication with Cognito, you must provide the actual
+internal Cognito username - not an alias, preferred username, or email, even if
+Cognito is configured to accept these alternate identifiers.
+
+This becomes particularly problematic when supporting multiple identity
+providers. For instance, if a user authenticates through both Salesforce and
+Facebook, Cognito will generate different usernames for each provider. A user
+authenticating through Facebook might receive a system-generated username like
+"Facebook_12345678", while the same user authenticating through Salesforce would
+have a different username.
+
+To address this challenge, our token validator service uses a deterministic
+approach to generate usernames based on email addresses:
+
+#+BEGIN_SRC javascript
+async function createCognitoUser(email) {
+  const usernameBase = email.replace(/@/g, "-at-").replace(/\./g, "-");
+  const randomSuffix = randomBytes(4).toString("hex");
+  const username = `${usernameBase}-${randomSuffix}`;
+
+  const createCommand = new AdminCreateUserCommand({
+    UserPoolId: ADMIN_COGNITO_USER_POOL_ID,
+    Username: username,
+    UserAttributes: [
+      { Name: "email", Value: email },
+      { Name: "email_verified", Value: "true" }
+    ],
+    MessageAction: "SUPPRESS"
+  });
+
+  // Create user in Cognito
+}
+#+END_SRC
+
+Applications must first call the token validator service to retrieve the Cognito
+username corresponding to their Salesforce token before initiating the Cognito
+authentication flow with this username. This two-step process maintains the
+integrity of identity mapping across authentication systems.
+
+* Infrastructure as Code
+
+For employing Infrastructure as Code practices, defining these Lambda functions
+and their permissions through Terraform provides consistency and
+reproducibility. The key components include:
+
+1. Lambda function definitions for each component
+2. IAM policies granting appropriate permissions
+3. Lambda permissions allowing Cognito to invoke the functions
+
+A sample excerpt for the verify-auth-challenge Lambda:
+
+#+BEGIN_SRC hcl
+module "verify-myUsers-auth-challenge-lambda" {
+  #...
+  version      = "~>7.20.0"
+  function_name = "verify-myUsers-auth-challenge"
+  handler      = "index.handler"
+  runtime      = "nodejs22.x"
+
+  environment_variables = {
+    SALESFORCE_URL = var.SALESFORCE_URL
+  }
+
+  # Additional configuration...
+}
+
+#+END_SRC
+
+For AWS Console users, similar permissions must be configured manually through
+the IAM console, ensuring Lambda functions have appropriate access to Cognito
+operations and that Cognito can invoke the Lambda triggers.
+
+* Security Considerations
+
+This authentication flow involves handling sensitive Salesforce session tokens,
+requiring careful attention to security practices:
+
+1. All Lambda functions should operate within a VPC with appropriate network
+   controls
+2. Token transmission should occur only over encrypted connections
+3. IAM permissions should follow the principle of least privilege
+4. Token validation should verify both the token validity and the user's email
+   match
+
+Additionally, token lifetimes and session management should align with
+organizational security policies, potentially implementing refresh mechanisms
+for long-lived sessions.
+
+* Conclusion
+
+The integration of Salesforce authentication with AWS Cognito through custom
+challenges provides a powerful mechanism for extending Salesforce's identity
+system to other applications. This approach delivers a seamless user experience
+while maintaining robust security controls and identity mapping.
+
+By leveraging Lambda functions to handle the authentication flow, organizations
+can implement sophisticated validation logic while benefiting from Cognito's
+comprehensive identity management capabilities. The solution accommodates the
+complexities of username management across identity providers and can be
+deployed consistently using infrastructure as code practices.
+
+As enterprise identity landscapes continue to evolve, this pattern offers a
+flexible foundation for integrating diverse authentication systems within the
+AWS ecosystem, ultimately simplifying the user experience while maintaining
+security and compliance requirements.

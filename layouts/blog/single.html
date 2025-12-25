@@ -1,0 +1,75 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/blog.css" />
+{{ end }}
+
+{{ define "main" }}
+<div class="blog-page">
+  <nav class="breadcrumb">
+    <a href="/">home</a> <span class="sep">→</span> <a href="/blog/">blog</a> <span class="sep">→</span> 
+    {{ if in .File.Dir "t/" }}<a href="/blog/t/">topics</a> <span class="sep">→</span>{{ end }}
+    <span>{{ .Title }}</span>
+  </nav>
+  
+  <main>
+    {{ $date := partial "org-date.html" . }}
+    {{ $isTopicPage := in .File.Dir "t/" }}
+    
+    {{ if not $isTopicPage }}
+    <time class="post-date">{{ $date.Format "January 2, 2006" }}</time>
+    {{ end }}
+    
+    <h1 class="page-title">{{ .Title }}</h1>
+    
+    {{/* Don't show content for topic pages - just the list */}}
+    {{ if not $isTopicPage }}
+    <div class="post-content">
+      {{ partial "resolve-citations.html" (partial "resolve-roam-links.html" .Content) }}
+    </div>
+    {{ end }}
+    
+    {{/* For /t/ (topics), show articles that reference this topic as a proper list */}}
+    {{ if $isTopicPage }}
+    
+    {{/* Build ID -> date map */}}
+    {{ $idDateMap := dict }}
+    {{ range site.AllPages }}
+      {{ if and .File (eq .File.Ext "org") }}
+        {{ $rawContent := .RawContent }}
+        {{ $idMatches := findRE `:ID:\s+(\S+)` $rawContent }}
+        {{ $pageDate := partial "org-date.html" . }}
+        {{ range $idMatches }}
+          {{ $id := replaceRE `:ID:\s+` "" . }}
+          {{ $idDateMap = merge $idDateMap (dict $id $pageDate) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{ $thisId := "" }}
+    {{ $rawContent := .RawContent }}
+    {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }}
+    {{ if $idMatch }}
+      {{ $idLine := index $idMatch 0 }}
+      {{ $thisId = replaceRE `:ID:\s+` "" $idLine }}
+    {{ end }}
+    
+    {{ if $thisId }}
+    {{ $backlinks := index site.Data.backlinks $thisId }}
+    {{ if $backlinks }}
+    <div class="posts-list">
+      {{ range $backlinks }}
+      {{ $entryDate := index $idDateMap .id }}
+      <article class="post-entry">
+        {{ if $entryDate }}<span class="date">{{ $entryDate.Format "Jan 2, 2006" }}</span>{{ else }}<span class="date">—</span>{{ end }}
+        <a href="{{ .url }}">{{ .title }}</a>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+    
+    {{ else }}
+    {{ partial "extract-backlinks.html" . }}
+    {{ end }}
+  </main>
+</div>
+{{ end }}

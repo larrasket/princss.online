@@ -1,9 +1,6 @@
 {{- $content := . -}}
 
-{{- /* Load blog ID mapping from data file */ -}}
-{{- $blogIds := site.Data.blog_ids | default dict -}}
-
-{{- /* Build a map of org-roam ID -> anchor link for Hugo content */ -}}
+{{- /* Build a map of org-roam ID -> URL from Hugo content only */ -}}
 {{- $idMap := dict -}}
 {{- range site.AllPages -}}
   {{- if and .File (eq .File.Ext "org") -}}
@@ -12,14 +9,12 @@
     {{- if $idMatch -}}
       {{- $idLine := index $idMatch 0 -}}
       {{- $id := replaceRE `:ID:\s+` "" $idLine -}}
-      {{- /* Create anchor link: /section/#DDMMYYYY */ -}}
-      {{- $anchor := printf "/%s/#%s" .Section (.Date.Format "02012006") -}}
-      {{- $idMap = merge $idMap (dict $id $anchor) -}}
+      {{- $idMap = merge $idMap (dict $id .RelPermalink) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* Replace id: links - check Hugo pages first, then blog_ids, then strip */ -}}
+{{- /* Replace id: links */ -}}
 {{- $idLinkPattern := `<a href="id:([^"]+)"[^>]*>([^<]+)</a>` -}}
 {{- $matches := findRE $idLinkPattern $content -}}
 {{- range $matches -}}
@@ -32,20 +27,14 @@
     {{- if $textMatch -}}
       {{- $linkText = replaceRE `>|</a>` "" (index $textMatch 0) -}}
     {{- end -}}
-    {{- /* Check Hugo pages first */ -}}
+    {{- /* If ID found in Hugo content, make it a link */ -}}
     {{- if index $idMap $id -}}
       {{- $newHref := index $idMap $id -}}
       {{- $oldPattern := printf `href="id:%s"` $id -}}
       {{- $newPattern := printf `href="%s"` $newHref -}}
       {{- $content = replace $content $oldPattern $newPattern -}}
-    {{- /* Then check blog_ids (nested static site) */ -}}
-    {{- else if index $blogIds $id -}}
-      {{- $blogUrl := index $blogIds $id -}}
-      {{- $oldPattern := printf `href="id:%s"` $id -}}
-      {{- $newPattern := printf `href="/~saleh%s#%s"` $blogUrl $id -}}
-      {{- $content = replace $content $oldPattern $newPattern -}}
-    {{- /* Not found - strip to plain text */ -}}
     {{- else -}}
+      {{- /* ID not found - replace link with plain text */ -}}
       {{- $oldLink := . -}}
       {{- $content = replace $content $oldLink $linkText -}}
     {{- end -}}

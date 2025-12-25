@@ -1,0 +1,21 @@
+{{- /*
+  Extract title from org file, handling :PROPERTIES: before #+title:
+  Hugo's default parser fails when PROPERTIES comes first.
+*/ -}}
+{{- $page := . -}}
+{{- $title := $page.Title -}}
+
+{{- /* If title is empty, try to extract from raw content */ -}}
+{{- if or (not $title) (eq $title "") -}}
+  {{- if and $page.File (eq $page.File.Ext "org") -}}
+    {{- $rawContent := $page.RawContent -}}
+    {{- $pattern := `(?mi)^#\+title:\s*(.+)$` -}}
+    {{- $match := findRE $pattern $rawContent 1 -}}
+    {{- if $match -}}
+      {{- $line := index $match 0 -}}
+      {{- $title = replaceRE `(?i)^#\+title:\s*` "" $line -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $title -}}

@@ -1,0 +1,139 @@
+:PROPERTIES:
+:ID:       v3b25op0r1k0
+:END:
+#+title: Philosophy of Ethics
+
+
+{{{indx}}}
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+#+BEGIN_tag
+{{{t}}} [[id:a4154d94-7914-48ce-bcd8-025ac0608d5b][Philosophy]]
+#+END_tag
+* Notes                                                               :noexport:
+** Deontological ethics
+:PROPERTIES:
+:ID:       0ay33tp0r1k0
+:END:
+in Philosophy of Ethics deontological ethics ([[id:lwk8am20bzj0][Terminology]]), in philosophy, ethical theories
+that place special emphasis on the relationship between duty and the morality of
+human actions. The term deontology is derived from the Greek deon, “duty,” and
+logos, “science.”
+** Consequentialism
+:PROPERTIES:
+:ID:       yix9gup0r1k0
+:END:
+Consequentialism ([[id:lwk8am20bzj0][Terminology]]) is a class of normative, teleological
+ethical theories that holds that the consequences of one's conduct are the
+ultimate basis for judgement about the rightness or wrongness of that conduct.
+** Philosophy of consent
+:PROPERTIES:
+:ID:       k6j4v110g4k0
+:END:
+Watching [[https://youtu.be/Sbm1mKciOiM?list=PLXKKIUdnOESHQ7pJUMbOz4rIF4178u6Ox][philosophy of sex.]]
+
+We might say: A person consents to P when they understand what P is, agree to do
+P, and are not coerced, i.e. are not under duress. But what counts as coercion;
+what counts as duress? (for example, is saying, have sex with me or I will not
+give you some of my cake, coercion?)
+
+A Nozickian account: X coerces Y into sex when:
+
+1) X aims to make Y acquiesce to sex;
+2) If Y doesn’t acquiesce, X will threatens to bring about some consequence that
+   is less desirable to Y than acquiescing to sex;
+3) X's threat is credible.
+
+Then we can compare the two actions to detect coercion; if you go with the
+one that is not sex, but still being better with it, then it is not coercion
+(and therefor not a threat): you can go okay without a chocolate cake rather
+than being raped.
+
+Problem: “Have sex with me or I'll break up with you.” Is than an acceptable
+threat? Mostly no. What about a woman that's not happy with her sex life and she
+tells her partner: we need to work that out or I'm going to leave. Sounds okay.
+But according to Nozickian's approach this is coercion because it's worse in
+this case not to have sex.
+
+One way to fix the Nozickian account is to make coercion relative to what's normal
+or expected. Sex is normal/expected in relationships.
+
+Wertheimer: “X coerces Y into sexual relations when (1) X proposes to make Y
+worse off relative to where Y has a right to be if she does not acquiesce and (2) it
+is reasonable for Y to succumb to X's proposal.”
+
+Billionaire case: Frank is a billionaire, Sarah the mother of a child with a serious
+illness that she can't afford the treatment for. Frank offers to pay on the condition
+that she have sex with him weekly for a year.
+
+On the one hand, Sarah has no good options, which seems to undermine her
+ability to make a voluntary choice.
+
+On the other, we often have to choose the lesser of various evils. If you face either
+chemotherapy or death, doctors aren't coercing you into chemotherapy.
+
+For Wertheimer, this is not coercion because Sarah doesn't have a right to Frank’s
+money.
+
+
+-----
+
+Argument from the Chihuahua: In this example, the Chihuahua was brought into
+my house without my consent. Dougherty suggests that the same kind of thing is
+going on with Victoria and Chloe.
+
+Argument from the concept of consent: To consent that X does P to you is to
+waive your right that X not do P to you. But how to determine which particular
+rights you waive?
+
+Dougherty: the rights you waive are the rights you intend to waive.
+
+Victoria has the right to refuse to have sex with people who don’t care about the
+environment. She can consent to sex with an environmentalist, without consenting
+to sex with somebody who isn’'t an environmentalist.
+
+Victoria only waives her right not to have sex with an environmentalist. So Chloe's
+deception invalidates her consent.
+
+Problem: isn't deception just part of the game? People lie about all sorts of things.
+It seems absurd to treat that as rape.
+
+-----
+
+Subjectivism: consent is a matter of having a particular mental state, e.g. thinking
+something like “I agree to have sex with X."
+
+Performativism: consent is behavioural; it involves performing certain actions,
+such as uttering “I agree to have sex with you.”
+
+- Case 1: X is completely paralyzed, and desperately wants to have sex with Y
+  but can't communicate this. To his delight, Y has sex with him anyway.
+- Case 2: X and Y have just started dating. X falls asleep. While X is asleep, Y
+  has sex with her. X is perfectly happy for Y to do this, but hasn't told this
+  to Y.
+
+The subjectivist would say that in these cases, X consented (Y just didn't know
+that X consented). The performativist would say that X didn’t consent.
+
+
+1. The only way to assess whether or not consent obtains is by examining
+   people’s behaviour. Response: deliberation is a mental process, but the only
+   way to tell whether deliberation occurred is by examining behaviour.
+
+2. Consent is morally transformative. If a person doesn’t know whether or not
+   you consent, he acts wrongly if he has sex with you. On subjectivism, consent
+   can't be morally transformative. Consent itself is impotent, since we can't
+   read minds.
+
+Your consent matters because of the difference it makes to what other people
+have a reason to believe.  Response: distinction between harm and culpability.
+The subjectivist can grant that, if X hasn't expressed her consent, Y has acted
+wrongly and is culpable.
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

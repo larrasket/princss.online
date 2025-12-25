@@ -1,0 +1,60 @@
+#+title: Why Apple makes better software
+#+DATE: <2025-03-17 Mon 00:07>
+:PROPERTIES:
+:CUSTOM_ID: p4pacx81lik0
+:ID: p4pacx81lik0
+:END:
+#+filetags: :project_archived:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+I believe that the software products that Apple builds are some of the most
+well-engineered, well-designed, and well-written software ever. And I think
+there are some reasons for that, most of them are not good ones:
+
+1. Apple products are massively overpriced, which creates a significant surplus
+   that allows them to invest heavily in software development. Capitalism
+   rewards monopolistic pricing, and Apple has mastered the art of leveraging
+   brand power and exclusivity to justify insane markups. Unlike something like
+   Linux, which I’ve used for a long time, open-source projects struggle to get
+   consistent funding or sponsorship, making it much harder to compete at the
+   same level.
+2. Apple does not care about backward compatibility, worldwide compatibility, or
+   anything else outside its walled garden. Their software is built to work
+   exclusively on Apple hardware, and they have zero interest in making it
+   usable for non-Apple users. They also deprecate anything older than seven
+   years, forcing people into costly upgrades. As someone who has worked
+   extensively with system architecture and design, I can confirm that a
+   significant amount of engineering effort typically goes into maintaining
+   backward compatibility and ensuring interoperability with the rest of the
+   tech ecosystem. By outright ignoring these two concerns, Apple engineers get
+   to focus almost entirely on UX, making their software feel smoother and more
+   polished than competitors.
+3. Since (1), Apple can afford to invest in developing much better SDKs, which
+   ensures that software built on their platforms is high quality. This is why
+   you often find software that exists on both Apple’s OSs and other operating
+   systems but still runs better on Apple’s—because their development tools and
+   ecosystem are simply better funded. This also attracts top-tier developers
+   who prefer the stability and optimization of Apple’s environment, further
+   reinforcing their advantage.
+4. Apple controls both the hardware and the software, which means they don’t
+   have to deal with the same fragmentation issues that plague other ecosystems.
+   Unlike Windows or Android, where developers have to account for a ridiculous
+   range of hardware variations, Apple’s tight integration allows them to
+   optimize performance and deliver a more cohesive experience. However, this
+   comes at the cost of user freedom—if Apple decides they don’t want you
+   running certain apps or repairing your own device, you’re out of luck.
+5. The cult-like marketing and closed ecosystem trap users into staying within
+   Apple’s platform. iMessage lock-in, proprietary file formats, restrictive App
+   Store policies—everything is designed to make switching inconvenient. This
+   means Apple doesn’t just create good software; they create software that
+   *feels* indispensable, even when there are equal or better alternatives
+   elsewhere.
+
+Apple's software is good. Sometimes too good. But the reasons behind it are far
+less about pure engineering brilliance and far more about strategic corporate
+control, aggressive pricing, and an ecosystem that thrives on exclusivity.
+* DONE writing about apple                                            :noexport:@general:
+:LOGBOOK:
+CLOCK: [2025-03-22 Sat 00:07]--[2025-03-22 Sat 02:27] =>  2:20
+:END:

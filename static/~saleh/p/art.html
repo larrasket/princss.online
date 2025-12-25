@@ -593,9 +593,9 @@ margin-block-start: auto;
   /*]]>*/
 </style>
 
-<div class="tag" id="org0d8cdb6">
+<div class="tag" id="org6265a03">
 <p>
-This section was labeled under, or is related to <a href="/~saleh/t/programming.html">Programming</a> and <a href="/~saleh/h/art_paintings_media.html">Art</a>
+This section was labeled under, or is related to <a href="/~saleh/t/programming.html#4u5664n02wj0">Programming</a> and <a href="/~saleh/h/art_paintings_media.html#mvk9gc7014k0">Art</a>
 </p>
 
 </div>
@@ -636,14 +636,14 @@ where \(L\) represents the number of loved artworks and \(T\) represents the tot
 It simply tries to care more about the <i>density</i> of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you&rsquo;ve encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
 I will call this algorithm 1. Let&rsquo;s see how we can implement it.
 </p>
-<div id="outline-container-org1048bcf" class="outline-2">
-<h2 id="org1048bcf">Implementing naive occurrence counting (algorithm 1)</h2>
-<div class="outline-text-2" id="text-org1048bcf">
+<div id="outline-container-org065ff46" class="outline-2">
+<h2 id="org065ff46">Implementing naive occurrence counting (algorithm 1)</h2>
+<div class="outline-text-2" id="text-org065ff46">
 <p>
 We will need first to start with data collection. The book didn&rsquo;t include a number for how many each artist has of works, and I didn&rsquo;t like all of them so I can&rsquo;t depend on my PKMS, nor did I count them. Lucky enough, <a href="https://www.wikiart.org">wikiart.org</a> provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
 </p>
 
-<pre class="example" id="org6933524">
+<pre class="example" id="org0a5cc70">
 Ivan Aivazovsky :nworks:   700
 Benjamin West :nworks:   156
 Emile Claus :nworks:   26
@@ -726,7 +726,7 @@ Here&rsquo;s the simple score result:
 </p>
 
 
-<div class="postscript" id="orgb5a0326">
+<div class="postscript" id="org2d64587">
 <p>
 Note I&rsquo;m running this here as of the date of writing it <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:02]</span></span>, as I mentioned above, I only browsed the artists of the D letter. I will add here &ldquo;Last run&rdquo; property, so reader can relate to the last update date
 </p>
@@ -737,7 +737,7 @@ Last run <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun
 
 </div>
 
-<pre class="example" id="orgff332e8">
+<pre class="example" id="org0ad8215">
 Artist                            Total  Simple Eval. 
 
 Thomas Cole                         130       0.5943      
@@ -802,13 +802,13 @@ Sandro Botticelli                   207       0.0033
 
 
 <p>
-However, the issue with depending on occurrence is that, it&rsquo;s very likely that the artists who made significantly more artworks than others, to unfairly be on top of the list, e.g. I love around 63 artworks of <a href="/~saleh/h/art_paintings_media.html">Ivan Aivazovsky</a>, but my library of his consists of around 700 artworks (he reportedly made much more than that), it&rsquo;s unfair in my opinion to evaluate this number to another artist, like <a href="/~saleh/h/art_paintings_media.html">Thomas Cole</a> for example, who only had around 200 artworks. 
+However, the issue with depending on occurrence is that, it&rsquo;s very likely that the artists who made significantly more artworks than others, to unfairly be on top of the list, e.g. I love around 63 artworks of <a href="/~saleh/h/art_paintings_media.html#2lq0ch91vik0">Ivan Aivazovsky</a>, but my library of his consists of around 700 artworks (he reportedly made much more than that), it&rsquo;s unfair in my opinion to evaluate this number to another artist, like <a href="/~saleh/h/art_paintings_media.html#34feald0fmk0">Thomas Cole</a> for example, who only had around 200 artworks. 
 </p>
 </div>
 </div>
-<div id="outline-container-org486f3c2" class="outline-2">
-<h2 id="org486f3c2">Entropy approach (algorithm 2)</h2>
-<div class="outline-text-2" id="text-org486f3c2">
+<div id="outline-container-org5dbf5f5" class="outline-2">
+<h2 id="org5dbf5f5">Entropy approach (algorithm 2)</h2>
+<div class="outline-text-2" id="text-org5dbf5f5">
 <p>
 The problem with that approach is that, it does not calculate my preference entropy which causes favoritism. For example, I love Caspir&rsquo;s works, I know his melody and life, I would probably relate to any of his works and catch the reference quickly, it&rsquo;s unlikely for me to do the same for someone like John Constable, who I barely know his life. We can count for this like follows:
 </p>
@@ -915,7 +915,7 @@ Now let&rsquo;s bring both together, but sort by algorithm 2:
 This gives us:
 </p>
 
-<pre class="example" id="org6f06b47">
+<pre class="example" id="org0005925">
 Artist                          Total      Entropy    Simple
 -------------------------------------------------------------------
 Alexey Bogolyubov                  46       0.2105    0.5213
@@ -982,7 +982,7 @@ Nicolas Poussin                   300       0.0000    0.0000
 </pre>
 
 <p>
-Some of my favorite ones were not affected by approach change, like <a href="/~saleh/h/art_paintings_media.html">Thomas Cole</a>, <a href="/~saleh/h/art_paintings_media.html">Alexey Bogolyubov</a> and <a href="/~saleh/h/art_paintings_media.html">Frank Dicksee</a>, which says that I&rsquo;m not a lot into favoritism after all :). 
+Some of my favorite ones were not affected by approach change, like <a href="/~saleh/h/art_paintings_media.html#34feald0fmk0">Thomas Cole</a>, <a href="/~saleh/h/art_paintings_media.html#zgec92i0dkk0">Alexey Bogolyubov</a> and <a href="/~saleh/h/art_paintings_media.html#dcy99130zrk0">Frank Dicksee</a>, which says that I&rsquo;m not a lot into favoritism after all :). 
 </p>
 
 <p>
@@ -994,9 +994,9 @@ I will add an agenda TODO here to remember to update the evaluation every couple
 </p>
 </div>
 </div>
-<div id="outline-container-org2930641" class="outline-2">
-<h2 id="org2930641"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
-<div class="outline-text-2" id="text-org2930641">
+<div id="outline-container-org7d23719" class="outline-2">
+<h2 id="org7d23719"><span class="todo TODO">TODO</span> Update favorite artist evaluation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_general">@general</span></span></h2>
+<div class="outline-text-2" id="text-org7d23719">
 <div class="notes"> <ul class="org-ul">
 <li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <span class="timestamp-wrapper"><span class="timestamp">[2025-12-07 Sun 01:35]</span></span></li>
 </ul>
@@ -1121,7 +1121,7 @@ More like the ones we get to know
 
 
 
-<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-12-06 Sat 23:36. Last build date: 2025-12-07 Sun 14:52.</p>
+<p> I seek refuge in God, from Satan the rejected. Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.34). Written by: Salih Muhammed, by the date of: 2025-12-06 Sat 23:36. Last build date: 2025-12-23 Tue 00:31.</p>
 
 
 

@@ -1,0 +1,51 @@
+#+title: A useful Git 'trick'
+#+DATE: <2025-07-02 Wed 01:23>
+:PROPERTIES:
+:ID: pkdgxxi0cmk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+Lately someone, who had left my team, left behind him a very big branch that its
+base can not be easily detected (due to the inflated number of branches we have
+in that repo). Following are couple of ways that would have helped me to detect
+that branch (saying /would have/ to imply to you that it didn't, due to the
+big number of merges in that branch, but it indeed /would have helped/ in
+a bit smaller repo).
+
+* Git: List all the branches compared to this branch with behind/ahead logs
+:PROPERTIES:
+:ID:       uv8g13k0cmk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1b86d9fe-124e-42ca-ae42-7e336ff8038b][Tech Search]]
+#+END_tag
+#+begin_src sh
+#!/bin/bash
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+echo "Branch analysis for: $current_branch"
+
+for branch in $(git for-each-ref --format='%(refname:short)' refs/remotes refs/heads | grep -v "$current_branch" | grep -v "staging-mas"); do
+    if merge_base=$(git merge-base "$branch" HEAD 2>/dev/null); then
+        ahead=$(git rev-list --count "$merge_base..HEAD" 2>/dev/null)
+        behind=$(git rev-list --count "$merge_base..$branch" 2>/dev/null)
+        if [ "$ahead" -gt 0 ]; then
+            echo "$branch: $ahead commits ahead, $behind commits behind"
+        fi
+    fi
+done
+#+end_src
+* Trying to find only the modified files
+:PROPERTIES:
+:ID:       kjr773k0cmk0
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:1b86d9fe-124e-42ca-ae42-7e336ff8038b][Tech Search]]
+#+END_tag
+The previous way didn't help much in my case, I found that the optimal way would
+be just migrating the files I care about into a separate branch (since there are
+no dependencies in this repo). I needed to get the files that were modified in
+this branch by that person:
+#+begin_src sh
+git log main..HEAD --author="The Dude Full Name <TheDudeEmail@smth.edu>" --name-status --pretty=format:
+#+end_src

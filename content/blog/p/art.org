@@ -20,10 +20,6 @@
 
 #+end_export
 
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]] and [[id:mvk9gc7014k0][Art]]
-#+END_tag
-
 I enjoy art and paintings, someone dear to me gifted me recently[fn:1] an encyclopedia of art, it has the names of "every"[fn:2] artist, starting from roughly where civilization striated, or to be more accurate it starts 600 B.C. and attributes everything before that to "unknown", which is not a big deal for me.
 
 I started reading from it, checking artworks on daily-basis, and document the ones I like in my PKMS. I do skip so many modern artists (for reasons I can explain somewhere else, and I should) but I believe I can cover them later. As of today, I kept my habit for exploring an artwork everyday, for 253 day, I'm still on the "D" letter.
@@ -39,7 +35,7 @@ I had that discussion regarding the word favorite with a colleague, and she had 
 where \(L\) represents the number of loved artworks and \(T\) represents the total artworks in your library by that artist.
 
 It simply tries to care more about the /density/ of appreciation within exposure rather than occurrence. The ratio \(r/T\) captures what we might call “hit rate”: how consistently an artist moves you relative to how much of their work you've encountered. An artist who captivates you with 30 out of 50 works demonstrates a more reliable connection than one who captivates you with 63 out of 700. The logarithmic term \(\log(L + 1)\) is a “volume bonus” that prevents the formula from over-penalizing prolific artists. The logarithm grows slowly enough to reward breadth of appreciation without letting it dominate the hit rate.
-I will call this algorithm 1. Let's see how we can implement it.
+I will call this algorithm 1. Let's see how we can implement it. 
 
 * Implementing naive occurrence counting (algorithm 1)
 We will need first to start with data collection. The book didn't include a number for how many each artist has of works, and I didn't like all of them so I can't depend on my PKMS, nor did I count them. Lucky enough, [[https://www.wikiart.org][wikiart.org]] provides a number of artworks for each artist entity. A quick trick, that I learnt from the Data Engineering 101 class, got me the following list:
@@ -361,7 +357,7 @@ SCHEDULED: <2026-02-06 Fri +2m>
 :STATS:
 - State "DONE"       from "TODO"       [2025-12-07 Sun 01:35]
 :END:
-
+#[[id:4u5664n02wj0][Programming]] #[[id:mvk9gc7014k0][Art]]
 
 * Footnotes
 [fn:2] More like the ones we get to know 

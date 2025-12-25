@@ -1,0 +1,87 @@
+#+title: Cognitive Dissonance in Ethics and Moral Relativism
+#+DATE: <2024-09-12 Thu 11:00>
+:PROPERTIES:
+:ID:       5z1kghw0mbk0
+:END:
+
+#+BEGIN_tag
+{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
+#+END_tag
+
+#+begin_quote
+SHAME.—Look at that noble steed pawing the ground, snorting,
+longing for a ride, and loving its accustomed rider—but, shameful
+to relate, the rider cannot mount to-day, he is tired.—Such is
+the shame felt by the weary thinker in the presence of his own
+philosophy!
+#+end_quote
+
+"عار. ها هو فرس السباق يضرب بحوافره الأرض ويصهل، متشوق للسباق، مُحب للفارس الذي اعتاد
+امتطاءه، ولكن ياللعار! لا يستطيع ركوب الفرس، إنه مُتعب. كذا هو المُفكر المتعب أمام فلسفته"[fn:1].
+
+
+
+For a background, I posted this on account recently:
+
+#+begin_quote
+Let $\varphi$ be a universal ethical model where $\varphi(x) = -1$ means that $x$ is an
+unethical action.  Let person $Y$ be someone who does the behavior $M$ in daily basis
+where $\varphi(M)=-1$. $Y$ acknowledges $M$ as a bad behavior but he/she does not have the
+will power to retrain from it and he/she lives with this inconsistency and accepts to live
+in shame with these actions. Let person $Z$, in the contrary, not acknowledging
+$\varphi(M)=-1$ based on his/her own philosophy of $\varphi$, thus, he/she does $M$ freely
+without an inconsistency in his/her life, without shame. Do note that Z might be inclined
+to his/her POV of o just for the fact that he/she indeed likes doing $M$. Which person
+possess a better lifestyle and understanding?
+#+end_quote
+
+
+So:
+
+- $Y$ acknowledges $\varphi(M) = -1$, thus experiencing $\lambda = \text{shame}$.
+- $Z$ does not acknowledge $\varphi(M) = -1$, thus devoid of $\lambda$.
+Also let:
+- $\Lambda(Y) = \lambda$ represent shame,
+- $\Lambda(Z) = 0$ represent no shame,
+
+So we have:  $\Lambda(Y) = \lambda \quad \text{iff} \quad \varphi(M) = -1$ and  $\Lambda(Z) = 0 \quad \text{iff} \quad \varphi'(M) \neq -1$
+
+(for the sake of simplicity I will use male pronouns for Z and Y)
+
+Here's my own view. $Y$ is a self-flagellating ascetic, and $Z$ is liberated: person $Y$, is
+ensnared within a cruel dichotomy. He is consciously aware of the moral infraction he
+commits and that his actions are steeped in unethical mire, inducing a wretched cycle of
+shame. Knowing full well the chains that bind him, he lacks the  will to snap these links.
+He lives, therefore, in antagonizing dissonance—a sad harmony of recognition and
+helplessness. Instead of succumbing to external judgment, $Z$ uses $\varphi'$, an
+individualized ethical model based on personal philosophy and existential authenticity.
+
+$Z$ is crafting and adhering to self-determined values rather than the prescribed
+dictates of the herd. This is not mere ignorance or blissful disconnection; it is active
+revaluation (Umwertung aller Werte)— the reevaluation of all values, a courageous endeavor
+to reconstruct the moral landscape based on self-sovereignty.
+While $Y$ grapples with $\lambda$—a product of subjugation to the external ethical
+model—$Z$ lives in radical freedom. His ethical stance, albeit perceived as transgressive
+by $\varphi$, is an authentic expression of his will to power. [[id:loqfv5p02wj0][Nietzsche]] placed supreme
+value on the creation of one’s own values, an act requiring immense courage and
+intellectual vigor.
+
+$Y$'s struggle, though seemingly noble, is secondary to the transformative potency of
+$Z$'s path. What $Z$'s lifestyle looks to me would be:
+
+- Creation of new values by not acknowledging $\varphi(M) = -1$, $Z$ challenges the
+  established norms and creates new values indicative of his inner autonomy;
+- More importantly, authenticity, $Z$’s behavior aligns with his intrinsic nature
+
+Will to power. $Z$’s rejection of $\lambda$ and the traditional moral construct is a
+testament to his will to power. $Z$ does not agree to live in shame, and hopefully he is
+rational, thus his view of what $\varphi'$ is like is much more consistent which means
+that he does not agree to what goes out of that model. We can not infer $Z$ to hedonism,
+because, unless being irrational, the model $\varphi'$ will never be fit for all what he
+considers as a pleasure.[fn:2]
+
+* Footnotes
+[fn:1] Nietzsche, F. W.,; Kennedy, J. M. (2007). The dawn of day. Dover Publications.
+[fn:2] As of writing that, I think there's an issue with that argument,
+as it depends on Z's rationality and it falls apart without it. I might have to update
+that later

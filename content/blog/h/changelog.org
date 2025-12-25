@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       m6w73ho02wj0
+:END:
+#+TITLE: Changelog
+#+DATE:  <2023-06-10>
+
++ /(2023/07/15)/ adjusted short posts in tags.
+
++ /(2023/06/10)/: The following drafts and archive files are completely purged:
+  #+begin_example
+  ;; csarchive
+  -rwxr-xr-x 1 l l  51K Jun 10 09:50 api.org
+  -rwxr-xr-x 1 l l  20K Jun 10 09:50 buildapi.org
+  -rw-r--r-- 1 l l  11K Jun 10 09:50 cc.org
+  -rwxr-xr-x 1 l l 150K Jun 10 09:50 csharp.org
+  -rw-r--r-- 1 l l  30K Jun 10 09:50 db.org
+  -rwxr-xr-x 1 l l  14K Jun 10 09:50 f.org
+  -rw-r--r-- 1 l l  55K Jun 10 11:13 fixing_the_coding_interview.org
+  -rw-r--r-- 1 l l  15K Jun 10 09:50 grpc.org
+  -rw-r--r-- 1 l l  14K Jun 10 09:51 js.org
+  -rwxr-xr-x 1 l l  34K Jun 10 09:51 json.org
+  -rwxr-xr-x 1 l l  46K Jun 10 09:51 linq.org
+  -rw-r--r-- 1 l l  57K Jun 10 09:51 os.org
+  -rwxr-xr-x 1 l l  39K Jun 10 09:51 psql.org
+  -rwxr-xr-x 1 l l  17K Jun 10 09:51 s.org
+  -rw-r--r-- 1 l l 6.9K Jun 10 09:51 solid.org
+  -rw-r--r-- 1 l l  56K Jun 10 09:51 sql.org
+
+  ;; csblog
+  -rw-r--r-- 1 l l 3.6K Jun  1 01:17 andy_tanenbaum.org
+  -rw-r--r-- 1 l l 1.3K Jun  1 01:21 egrub.org
+  -rw-r--r-- 1 l l 1.8K Jun  1 01:20 grub.org
+  -rw-r--r-- 1 l l 5.4K Jun  1 01:21 rocks.org
+  -rw-r--r-- 1 l l 6.3K Jun  1 01:20 tor.org
+
+  ;; csdarft
+
+
+  -rw-r--r-- 1 l l 9.0K Apr 30 00:44 arch.org
+  -rwxr-xr-x 1 l l  27K Apr 30 00:44 con.org
+  -rwxr-xr-x 1 l l  16K Apr 30 00:44 ef.org
+  -rwxr-xr-x 1 l l  13K Apr 30 00:44 mvc.org
+  -rw-r--r-- 1 l l 4.0K Apr 30 00:44 prlsm.org
+  -rw-r--r-- 1 l l 6.3K Apr 30 00:44 tsql.org
+  #+end_example
+
+
+

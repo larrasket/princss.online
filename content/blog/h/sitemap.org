@@ -1,0 +1,461 @@
+* [[file:stack.org][TL;DRs]]
+#+begin_smth
+Fri 19 Dec 2025
+#+end_smth
+* [[file:fullbooks.org][Bibliography]]
+#+begin_smth
+Sat 22 Nov 2025
+#+end_smth
+* [[file:pgp.org][Public PGP Key]]
+#+begin_smth
+Tue 04 Nov 2025
+#+end_smth
+* [[file:ar.org][منهج ديكارت باللغة العربية]]
+#+begin_smth
+Thu 30 Oct 2025
+#+end_smth
+* [[file:c.org][Commentary]]
+#+begin_smth
+Sat 18 Oct 2025
+#+end_smth
+* [[file:rlfo.org][Reading List (for others)]]
+#+begin_smth
+Sat 18 Oct 2025
+#+end_smth
+* [[file:csbooks.org][Computer Science Books]]
+#+begin_smth
+Sat 18 Oct 2025
+#+end_smth
+* [[file:cl.org][Legacy Commentary]]
+#+begin_smth
+Sat 18 Oct 2025
+#+end_smth
+* [[file:qw.org][qw]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* [[file:rbooks.org][Reading List]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* [[file:test.org][Test]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* [[file:poetry.org][~/poetry]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* [[file:yt.org][YouTube Channels]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* [[file:whata.org][What is the anthology page?]]
+#+begin_smth
+Fri 26 Apr 2024
+#+end_smth
+* [[file:a.org][Anthology and Treasury]]
+#+begin_smth
+Sun 07 Jan 2024
+#+end_smth
+* [[file:changelog.org][Changelog]]
+#+begin_smth
+Sat 10 Jun 2023
+#+end_smth
+* d
+** [[file:d/rss.org][Email as a universal feed reader]]
+#+begin_smth
+Sat 18 Oct 2025
+#+end_smth
+** *Arabic* [[file:d/2025-09-04.org][Allah Nour]]
+#+begin_smth
+Thu 04 Sep 2025
+#+end_smth
+** [[file:d/value.org][The Theory of Value and Surplus Value: A Comprehensive Introduction]]
+#+begin_smth
+Tue 29 Jul 2025
+#+end_smth
+** [[file:d/git.org][A useful Git 'trick']]
+#+begin_smth
+Wed 02 Jul 2025
+#+end_smth
+** [[file:d/distributedsys.org][What is a distributed system]]
+#+begin_smth
+Tue 01 Apr 2025
+#+end_smth
+** [[file:d/sf-cognito.org][Implementing Salesforce SSO with Cognito Using SF SessionID]]
+#+begin_smth
+Sat 29 Mar 2025
+#+end_smth
+** [[file:d/chekhov.org][Selected Works of Selected Works of Chekhov]]
+#+begin_smth
+Fri 28 Mar 2025
+#+end_smth
+** [[file:d/apple.org][Why Apple makes better software]]
+#+begin_smth
+Mon 17 Mar 2025
+#+end_smth
+** *Arabic* [[file:d/2025-03-12.org][Praise to the Architect of Self]]
+#+begin_smth
+Wed 12 Mar 2025
+#+end_smth
+** *Arabic* [[file:d/2025-03-11.org][A believer eats in one intestine]]
+#+begin_smth
+Tue 11 Mar 2025
+#+end_smth
+** *Arabic* [[file:d/2025-03-01.org][Where the Love of Life Delivers]]
+#+begin_smth
+Sat 01 Mar 2025
+#+end_smth
+** *Arabic* [[file:d/2025-02-15.org][The Poet]]
+#+begin_smth
+Sat 15 Feb 2025
+#+end_smth
+** *Arabic* [[file:d/2024-11-17.org][Incompetence by Abbass Braham]]
+#+begin_smth
+Sun 17 Nov 2024
+#+end_smth
+** [[file:d/cogethi.org][Cognitive Dissonance in Ethics and Moral Relativism]]
+#+begin_smth
+Thu 12 Sep 2024
+#+end_smth
+** [[file:d/2024-07-09.org][The Age of Commodity]]
+#+begin_smth
+Tue 09 Jul 2024
+#+end_smth
+** [[file:d/2024-01-16.org][Note on marriage]]
+#+begin_smth
+Tue 16 Jan 2024
+#+end_smth
+** [[file:d/2023-12-17.org][The National Anthem]]
+#+begin_smth
+Sun 17 Dec 2023
+#+end_smth
+** [[file:d/islg.org][Solving Introduction to Statistical Learning with Applications]]
+#+begin_smth
+Mon 18 Sep 2023
+#+end_smth
+** [[file:d/languages.org][Thoughts on langauges]]
+#+begin_smth
+Thu 10 Aug 2023
+#+end_smth
+** [[file:d/chess2.org][Thoughts on Chess]]
+#+begin_smth
+Tue 01 Aug 2023
+#+end_smth
+** [[file:d/2023-07-26.org][Would you really trust your feelings?]]
+#+begin_smth
+Wed 26 Jul 2023
+#+end_smth
+** [[file:d/porn.org][Notes about the pornography industry]]
+#+begin_smth
+Fri 21 Jul 2023
+#+end_smth
+** [[file:d/computing.org][Computers are no longer used]]
+#+begin_smth
+Wed 12 Jul 2023
+#+end_smth
+** [[file:d/2023-02-02.org][Extemporaneously Three Notes]]
+#+begin_smth
+Thu 02 Feb 2023
+#+end_smth
+** [[file:d/chess.org][Chess and Brains]]
+#+begin_smth
+Tue 06 Dec 2022
+#+end_smth
+** [[file:d/crisis.org][A Guide to Existential Crisis, v1]]
+#+begin_smth
+Sat 26 Nov 2022
+#+end_smth
+** [[file:d/2022-11-19.org][Thuiskomst—A Return]]
+#+begin_smth
+Sat 19 Nov 2022
+#+end_smth
+** [[file:d/Nietzsche.org][Nietzsche's epitaph]]
+#+begin_smth
+Wed 31 Aug 2022
+#+end_smth
+* p
+** [[file:p/renamings.org][Re: Programmers and software developers lost the plot on naming their tools]]
+#+begin_smth
+Mon 15 Dec 2025
+#+end_smth
+** [[file:p/namings.org][Programmers and software developers lost the plot on naming their tools]]
+#+begin_smth
+Thu 11 Dec 2025
+#+end_smth
+** [[file:p/art.org][Deciding my favorite artist]]
+#+begin_smth
+Sat 06 Dec 2025
+#+end_smth
+** [[file:p/witbd.org][What is it to be done?]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:p/cc.org][Conventional Commits considered harmful]]
+#+begin_smth
+Tue 30 Sep 2025
+#+end_smth
+** [[file:p/ossnfoss.org][OSS is not free]]
+#+begin_smth
+Thu 17 Jul 2025
+#+end_smth
+** [[file:p/kotebee.org][Extract https://www.kotobee.com/]]
+#+begin_smth
+Sun 24 Nov 2024
+#+end_smth
+** [[file:p/fcinema.org][Cinema]]
+#+begin_smth
+Mon 02 Sep 2024
+#+end_smth
+** *Arabic* [[file:p/music.org][Regarding Music Prohibition in Islam]]
+#+begin_smth
+Tue 20 Feb 2024
+#+end_smth
+** [[file:p/democracy.org][Democracy and Irresponsibility: Eghbariah's Case]]
+#+begin_smth
+Sun 07 Jan 2024
+#+end_smth
+** [[file:p/freedom.org][The Limits on The (allowed) Freedom of Speech]]
+#+begin_smth
+Mon 30 Oct 2023
+#+end_smth
+** [[file:p/un.org][Aids, Sanctions and United States' Nations]]
+#+begin_smth
+Sat 07 Oct 2023
+#+end_smth
+** [[file:p/news.org][Where to get news?]]
+#+begin_smth
+Wed 19 Jan 2022
+#+end_smth
+** [[file:p/mediacontrol.org][On Media and 'Neo-Democracy']]
+#+begin_smth
+Sun 15 Aug 2021
+#+end_smth
+** [[file:p/conection.org][“Connection” and “Meant-To-Be”]]
+#+begin_smth
+Sat 22 May 2021
+#+end_smth
+** [[file:p/desto.org][Humiliated and Insulted by Fyodor Dostoevsky]]
+#+begin_smth
+Fri 11 Dec 2020
+#+end_smth
+* h
+** [[file:h/art_paintings_media.org][Art]]
+#+begin_smth
+Sun 14 Dec 2025
+#+end_smth
+** [[file:h/lingustics.org][Linguistics]]
+#+begin_smth
+Wed 03 Dec 2025
+#+end_smth
+** [[file:h/bm.org][Postmodern Abyss: Black Mirror]]
+#+begin_smth
+Fri 21 Nov 2025
+#+end_smth
+** [[file:h/selected.org][Selected]]
+#+begin_smth
+Mon 17 Nov 2025
+#+end_smth
+** [[file:h/witbd06.org][Moral blindness]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/witbd05.org][Confession of guilt]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/witbd04.org][Real goodness]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/witbd03.org][Fake goodness]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/witbd02.org][Do they deserve help?]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/witbd01.org][Is misery born of poverty, or does it precede it?]]
+#+begin_smth
+Sat 15 Nov 2025
+#+end_smth
+** [[file:h/propaganda.org][Propaganda]]
+#+begin_smth
+Fri 26 Sep 2025
+#+end_smth
+** [[file:h/abbass_braham.org][Abbass Braham, fragments]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:h/derp.org][Distributed Systems Assessment]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:h/islg.org][Reading ISLP (but with Go)]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:h/email.org][Email Guide]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:h/n.org][Nietzsche, Unveiling the Depths of Human Existence]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:h/injection.org][Proof Mapping is Injection iff Direct Image Mapping is Injection]]
+#+begin_smth
+Mon 01 Jul 2024
+#+end_smth
+** [[file:h/x.org][Exported Content]]
+#+begin_smth
+Mon 16 Oct 2023
+#+end_smth
+** [[file:h/jerusalem.org][Qur'an and Jerusalem]]
+#+begin_smth
+Wed 28 Jun 2023
+#+end_smth
+** [[file:h/int.org][Intelligence: Learning]]
+#+begin_smth
+Fri 23 Jun 2023
+#+end_smth
+** [[file:h/me.org][I can also paint]]
+#+begin_smth
+Thu 22 Jun 2023
+#+end_smth
+** [[file:h/deep_concurrency_in_go.org][Concurrency and Parallelism in Go]]
+#+begin_smth
+Fri 30 Sep 2022
+#+end_smth
+** [[file:h/effective_golang_a_conclusion.org][Effective Go: A Conclusion]]
+#+begin_smth
+Tue 20 Sep 2022
+#+end_smth
+** [[file:h/go.org][[draft][don't take it seriously] Go Incomplete Guide]]
+#+begin_smth
+Sun 09 Jan 2022
+#+end_smth
+** [[file:h/gmtry.org][Introduction to Computational Geometry]]
+#+begin_smth
+Sat 18 Dec 2021
+#+end_smth
+** [[file:h/graph.org][Representations and Implementations of Graphs]]
+#+begin_smth
+Sat 04 Jan 2020
+#+end_smth
+** islg
+*** [[file:h/islg/notes.org][Notes from ISLP]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+* cs
+** [[file:cs/go-totur.org][Go Tutorial]]
+#+begin_smth
+Fri 28 Nov 2025
+#+end_smth
+** [[file:cs/design.org][System Design Notes]]
+#+begin_smth
+Sun 09 Nov 2025
+#+end_smth
+** [[file:cs/mongo.org][Some notes from Mongo]]
+#+begin_smth
+Sat 08 Nov 2025
+#+end_smth
+** [[file:cs/8086.org][8086]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:cs/lisp.org][Lisp Programming Language]]
+#+begin_smth
+Thu 16 Feb 2023
+#+end_smth
+** [[file:cs/go.org][The Go Programming Language]]
+#+begin_smth
+Sun 09 Jan 2022
+#+end_smth
+** [[file:cs/g.org][Exploring Computational Geometry]]
+#+begin_smth
+Sat 18 Dec 2021
+#+end_smth
+** go
+*** [[file:cs/go/01-philosophy-culture-design.org][Philosophy, culture and design]]
+#+begin_smth
+Sun 30 Nov 2025
+#+end_smth
+* sh
+** [[file:sh/2024.org][2024]]
+#+begin_smth
+Mon 01 Jan 2024
+#+end_smth
+** [[file:sh/2023.org][2023]]
+#+begin_smth
+Sun 01 Jan 2023
+#+end_smth
+** [[file:sh/2022.org][2022]]
+#+begin_smth
+Sat 01 Jan 2022
+#+end_smth
+* dis
+** [[file:dis/toplessness.org][Sexuality and Culture]]
+#+begin_smth
+Thu 31 Aug 2023
+#+end_smth
+* a
+** [[file:a/stem.org][The Status of Arabic Stemming Algorithms]]
+#+begin_smth
+Tue 30 May 2023
+#+end_smth
+** [[file:a/islam.org][Pervez Hoodbhoy's Islam and Science]]
+#+begin_smth
+Sun 07 Nov 2021
+#+end_smth
+* s
+** [[file:s/messaging.org][About Digital Communication Platforms]]
+#+begin_smth
+Fri 02 Jun 2023
+#+end_smth
+** [[file:s/email.org][Emails and Privacy]]
+#+begin_smth
+Fri 07 Apr 2023
+#+end_smth
+* t
+** [[file:t/political.org][Politics]]
+#+begin_smth
+Tue 23 Dec 2025
+#+end_smth
+** [[file:t/programming.org][Programming]]
+#+begin_smth
+Sat 06 Dec 2025
+#+end_smth
+** [[file:t/modus.org][Modus Vivendi]]
+#+begin_smth
+Fri 05 Dec 2025
+#+end_smth
+** [[file:t/islam.org][Islam]]
+#+begin_smth
+Tue 02 Dec 2025
+#+end_smth
+** [[file:t/mathematics.org][Mathematics]]
+#+begin_smth
+Sat 22 Nov 2025
+#+end_smth
+** [[file:t/ethics.org][Philosophy of Ethics]]
+#+begin_smth
+Sat 22 Nov 2025
+#+end_smth
+** [[file:t/conversation.org][Conversation]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:t/chess.org][Chess]]
+#+begin_smth
+Fri 25 Jul 2025
+#+end_smth
+** [[file:t/tayyib.org][المتنبي]]
+#+begin_smth
+Sat 15 Feb 2025
+#+end_smth
+
+*** -     -                     -                                     -                                                       -                                                                     -           - 

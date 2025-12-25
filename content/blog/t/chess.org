@@ -1,0 +1,81 @@
+:PROPERTIES:
+:ID:       rgogo9p02wj0
+:END:
+#+title: Chess
+#+filetags: :project_archived:link:
+
+
+#+CAPTION: Faust and Mephisto playing chess by Moritz Retzsch . The painting captures the essence of an eternal struggle, where Faust's insatiable thirst for knowledge clashes with Mephistopheles' seductive lure. Each move on the chessboard becomes a metaphorical step in the profound philosophical dance between light and darkness, questioning the boundaries of morality and the pursuit of enlightenment.
+[[file:../i/90813.jpeg]]
+
+-----
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+
+{{{indx}}}
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** KILL [#C] Chess                                                   :@nothing:
+:LOGBOOK:
+CLOCK: [2024-12-26 Thu 08:28]--[2024-12-26 Thu 10:34] =>  2:06
+CLOCK: [2023-08-03 Thu 06:43]--[2023-08-03 Thu 06:52] =>  0:09
+CLOCK: [2023-08-02 Wed 05:57]--[2023-08-02 Wed 06:52] =>  0:55
+CLOCK: [2023-08-02 Wed 03:31]--[2023-08-02 Wed 03:43] =>  0:12
+CLOCK: [2023-08-01 Tue 12:38]--[2023-08-01 Tue 13:20] =>  0:42
+CLOCK: [2023-08-01 Tue 01:58]--[2023-08-01 Tue 02:19] =>  0:21
+CLOCK: [2023-08-01 Tue 01:03]--[2023-08-01 Tue 01:19] =>  0:16
+CLOCK: [2023-07-31 Mon 22:34]--[2023-07-31 Mon 23:12] =>  0:38
+CLOCK: [2023-07-30 Sun 00:27]--[2023-07-30 Sun 01:17] =>  0:50
+CLOCK: [2023-07-29 Sat 05:36]--[2023-07-29 Sat 06:53] =>  1:17
+CLOCK: [2023-07-29 Sat 04:56]--[2023-07-29 Sat 05:27] =>  0:31
+CLOCK: [2023-07-28 Fri 23:51]--[2023-07-29 Sat 00:38] =>  0:47
+CLOCK: [2023-07-28 Fri 22:21]--[2023-07-28 Fri 22:35] =>  0:14
+CLOCK: [2023-07-28 Fri 06:18]--[2023-07-28 Fri 07:27] =>  1:09
+CLOCK: [2023-07-22 Sat 16:43]--[2023-07-22 Sat 17:55] =>  1:12
+:END:
+
+** DONE [[https://www.sciencetimes.com/articles/27306/20200915/10-things-playing-chess-brain.htm][10 Things Chess Does To Your Brain]]                           :@read:
+Bullshit article.
+* [[id:6ed1b62f-0992-46dc-aefd-40c471ae0b66][YouTube Channels]]                                                    :noexport:
+:PROPERTIES:
+:CUSTOM_ID: yt
+:END:
+- [[https://www.youtube.com/@STLChessClub][Saint Louis Chess Club]]
+- [[https://www.youtube.com/@Chessfactor][Chessfactor ]]
+- [[https://www.youtube.com/@ChessNetwork][ChessNetwork ]]
+- [[https://www.youtube.com/@JohnBartholomewChess][John Bartholomew]]
+- [[https://www.youtube.com/@DanielNaroditskyGM][Daniel Naroditsky]]
+- [[https://www.youtube.com/@chesswebsite][thechesswebsite]]
+- [[https://www.youtube.com/@KebuChess][Krishna Prem]]
+- [[https://www.youtube.com/@JimsChessChannel][Jim's Chess Channel]]
+- [[https://www.youtube.com/@pawnbreak][Pawnbreak]]
+- [[https://www.youtube.com/@eric-rosen][Eric Rosen]]
+- [[https://www.youtube.com/@ChessTroll][Chess Troll ]]
+- [[https://www.youtube.com/@ChesscomArabic][Chesscom Arabic ]]
+- [[https://www.youtube.com/@ChesscomIndia][Chesscom India ]]
+- [[https://www.youtube.com/@chess_amature][هواة شطرنج]]
+- [[https://www.youtube.com/@Khatibo_Fish][كش ملك الخطيب]]
+- [[https://www.youtube.com/@Horuschess][حورس للشطرنج]]
+- [[https://www.youtube.com/@7abshtakanat_Shataranj][حبشتكنات شطرنجية]]
+- [[https://www.youtube.com/@user-ml6sc4xm9u][المحترف الاول]]
+* [[id:omy9ejo02wj0][Books]]                                                               :noexport:
+:PROPERTIES:
+:CUSTOM_ID: bk
+:END:
+
+- [[id:69af51e3-318f-4055-867c-7f6b8eba39c5][Play Winning Chess]] (Seirawan, W)[fn:1]
+- A First Book of Morphy (Lawson, D)
+- Chess Openings for Dummies (Eade, J)
+- 7 Deadly Chess Sins (Rowson, J)
+- Improve Your Chess Pattern Recognition (Oudeweetering, A)
+- The Soviet Chess Primer (Maizelis, I)
+- Logical Chess: Move by Move (Chernev, I)
+
+* Footnotes                                                           :noexport:
+[fn:1] I wish if I've started with this book instead of chess for dummies.
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:

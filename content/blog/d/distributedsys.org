@@ -1,0 +1,310 @@
+#+title: What is a distributed system
+#+DATE: <2025-04-01 Tue 13:55>
+:PROPERTIES:
+:ID:       behkc161zik0
+:CUSTOM_ID: behkc161zik0
+:END:
+#+filetags: :project:
+
+* TODO Rewrite this                                                 :@write:
+# #+BEGIN_tag
+# {{{t}}} [[id:4u5664n02wj0][Programming]]
+# #+END_tag
+
+I've been reading recently Distributed Systems by Steen, M. v., &
+Tanenbaum, A. S. [cite:@maarten-2023-distr-system]. And it provides a very nice
+introduction into the topic. Something I liked really from the book, how it
+starts with distinguishing between convoluted terms like distributed systems and
+decentralized systems. I experience this issue a lot while talking in an
+engineering context and I find someone suggesting a distributed approach,
+however, many of the listeners confuse it with other definitions like
+service-based architecture and the like.
+
+#+DOWNLOADED: screenshot @ 2025-04-01 14:04:55
+[[file:../i/2025-04-01_14-04-55_screenshot.png]]
+
+
+In this article I will go quickly over that distinction.
+
+To understand the difference between distributed and decentralized
+systems, we must first consider how networked systems emerge. There are
+typically two distinct evolutionary paths that lead to computers being
+connected together.
+
+The first path, which we might call the integrative approach, starts
+with independent, often heterogeneous systems that need to be connected
+to enable new functionalities or services. These systems typically exist
+within different administrative domains, were created separately, and
+are brought together because of emerging needs to share data or
+functionality. The European air traffic control system exemplifies this
+approach - numerous national systems, each independently developed and
+operated, must interconnect to enable coordinated management of
+continental airspace.
+
+The second path, which we call the expansive approach, begins with a
+single system that grows beyond the capabilities of a single computer,
+requiring additional machines to meet operational demands. This
+expansion is typically driven by performance needs, reliability
+requirements, or geographic distribution of users. Amazon's retail
+platform followed this trajectory - what began as a simple online
+bookstore running on a few servers has expanded to a massive
+infrastructure of hundreds of thousands of computers spread across the
+globe.
+
+These different origins lead to fundamentally different system
+characteristics, which we can distinguish as follows:
+
+- *A decentralized system* is a networked computer system in which
+  processes and resources are /necessarily/ spread across multiple
+  computers.
+- *A distributed system* is a networked computer system in which
+  processes and resources are /sufficiently/ spread across multiple
+  computers.
+
+The key distinction here lies in the words "necessarily" versus
+"sufficiently." In decentralized systems, distribution is a fundamental
+requirement dictated by constraints that make centralization impossible.
+In distributed systems, distribution is a design choice implemented to
+achieve specific quality attributes.
+* When Distribution Cannot Be Avoided
+
+Decentralized systems emerge when resources and processes must be
+distributed across multiple computers due to constraints that make
+centralization impossible or infeasible. These constraints typically
+fall into several categories:
+
+** Administrative and Organizational Boundaries
+Many systems must operate across organizational boundaries where each
+participant maintains independent control over their resources. Medical
+research provides a clear example of this constraint. Patient data is
+typically stored within individual hospital systems due to privacy
+regulations, institutional policies, and legal requirements. When
+researchers want to develop machine learning models that leverage data
+from multiple hospitals, they cannot simply aggregate all data in one
+location.
+
+This necessity drives the development of federated learning systems,
+where the model training algorithm travels to each hospital's local data
+center, performs computations on the local data, and then shares only
+the model updates (not the raw data) with a central coordinating
+service. Stanford University's DAWN project has implemented such a
+system for medical image analysis, allowing multiple medical centers to
+collectively train diagnostic algorithms without sharing protected
+patient data.
+
+The constraint here is not technical but organizational and regulatory -
+the data must remain under the control of the original institution. The
+decentralization is necessary, not optional.
+
+** Trust Limitations
+Some systems operate in environments where no single entity can or
+should be trusted with complete control. Financial systems often
+encounter this constraint, particularly when facilitating transactions
+between parties with limited trust relationships.
+
+Bitcoin and other blockchain-based systems represent quintessential
+examples of trust-driven decentralization. Participants in these
+networks do not trust any single authority to maintain a ledger of
+transactions. Instead, the ledger is fully replicated across thousands
+of nodes, with a consensus protocol ensuring agreement on the
+transaction history despite potentially malicious actors.
+
+The Bitcoin network processes hundreds of millions of dollars in
+transactions daily without requiring users to trust any central
+authority. This approach fundamentally differs from traditional banking
+systems where a central authority (the bank) maintains transaction
+records. The decentralization isn't merely a design preference—it's
+the core innovation that enables the system's trustless operation.
+
+** Geographic and Physical Constraints
+Some systems are decentralized because their physical components must
+exist in specific geographic locations. Weather monitoring networks
+illustrate this constraint clearly. Weather sensors must be physically
+distributed across the geography they monitor—sensors in New York tell
+us nothing about the weather in Los Angeles.
+
+The National Weather Service operates thousands of monitoring stations
+across the United States, each collecting local atmospheric data. This
+data feeds into predictive models that forecast weather patterns. The
+decentralization of data collection is an inherent requirement of the
+system's purpose, not a design choice.
+
+Similarly, the control systems for power grids must be partially
+decentralized because of the physical distribution of generation and
+transmission infrastructure. While centralized oversight exists, local
+control systems must make real-time decisions based on local conditions,
+as the time required to communicate with a central authority would make
+the system too slow to respond to rapidly changing conditions.
+
+** Regulatory Requirements
+Increasingly, regulatory frameworks require certain types of data to
+remain within specific geographic or jurisdictional boundaries. The
+European Union's General Data Protection Regulation (GDPR) and similar
+regulations worldwide have forced many global companies to decentralize
+their data storage and processing.
+
+Microsoft, for example, operates distinct Azure cloud regions throughout
+the world, with data centers that keep European customer data within EU
+borders. This decentralization isn't driven by technical considerations
+but by regulatory requirements that make centralization legally
+impossible.
+
+* When Distribution Is a Choice
+Distributed systems, by contrast, involve spreading processes and
+resources across multiple computers to achieve goals like scalability,
+fault tolerance, or performance optimization—not because such
+distribution is fundamentally necessary. In these systems,
+centralization would be theoretically possible, if not always practical.
+
+** Web Search Engines
+Google's search engine handles billions of queries daily across a
+massive distributed infrastructure. When users enter a search query,
+their request is processed by multiple systems: one to parse the query,
+others to search different portions of the index, and still others to
+rank and assemble the results.
+
+This distribution isn't necessary in the sense that a single
+(theoretical) supercomputer could perform all these functions. Rather,
+Google distributes its system to achieve specific quality attributes:
+scalability to handle the query volume, fault tolerance to maintain
+service despite hardware failures, and performance to deliver results
+within milliseconds.
+
+The company famously built its infrastructure using thousands of
+commodity servers rather than a few high-end machines, making an
+explicit design choice to distribute processing horizontally. This
+approach provided cost advantages and simplified scaling as demand grew.
+
+** Content Delivery Networks
+Akamai operates over 340,000 servers in more than 135 countries. When
+users visit websites served through Akamai's CDN, they're transparently
+redirected to nearby servers that host copies of the requested content.
+
+This distribution isn't necessary for the content to be accessible—a
+single central server could theoretically serve all users. However, by
+distributing content based on geographic proximity to users, CDNs reduce
+latency, improve bandwidth utilization, and enhance the user experience.
+The system makes sophisticated decisions about which content to
+replicate where, based on usage patterns and performance metrics.
+
+Netflix employs a similar strategy, placing content caching servers
+within internet service providers' networks. This distributed approach
+allows them to deliver high-definition video streams to millions of
+concurrent users without overwhelming internet backbones—a sufficient
+distribution to achieve their performance requirements.
+
+* Centralized Solutions Work
+A persistent misconception in system design holds that centralized
+solutions are inherently flawed—unable to scale, vulnerable to
+failures, and limited in performance. This view often leads to
+unnecessary distribution, introducing complexity without corresponding
+benefits.
+
+In reality, logically centralized systems can be implemented in
+physically distributed ways that provide excellent scalability and
+reliability. The Domain Name System (DNS) exemplifies this approach.
+Logically, DNS is organized as a global hierarchical tree, with the root
+of the tree appearing to be a centralization point and potential single
+point of failure. However, the root is physically implemented as 13 sets
+of servers, each set itself implemented as a distributed system using
+anycast routing to direct queries to the nearest instance.
+
+This design delivers the simplicity and consistency of a centralized
+approach with the resilience and scalability of distribution. Despite
+numerous distributed denial-of-service attacks targeting the DNS root
+servers over the years, the system has maintained remarkable stability.
+
+Similarly, many modern cloud services present centralized interfaces to
+users while implementing distributed architectures behind the scenes.
+Amazon's S3 storage service appears to users as a single, infinitely
+scalable storage system, hiding the complex distribution mechanisms that
+enable this illusion.
+
+* Necessity versus Sufficiency
+The key distinction between decentralized and distributed systems stems
+from whether the distribution is necessary or merely sufficient:
+
+1. In decentralized systems, distribution is a fundamental requirement
+   imposed by external constraints. The system cannot function without
+   distribution because administrative boundaries, trust limitations,
+   geographic constraints, or regulatory requirements make
+   centralization impossible.
+
+2. In distributed systems, distribution is a design choice made to
+   achieve specific quality attributes like scalability, fault
+   tolerance, or performance. Centralization would be theoretically
+   possible, though perhaps impractical for various reasons.
+
+This distinction has profound implications for system design,
+implementation, and operation:
+
+** Complexity Management
+Decentralized systems must manage the inherent complexity of
+distribution without the option of simplifying through centralization.
+This often requires sophisticated consensus mechanisms, complex security
+models, and careful handling of partial failures.
+
+The Google Spanner database illustrates how challenging this can be. To
+maintain consistent data across globally distributed data centers,
+Spanner relies on GPS receivers and atomic clocks to provide precise
+time synchronization. This extraordinary complexity is necessary because
+the system must maintain consistency across administrative domains while
+supporting global distribution.
+
+Distributed systems can often leverage centralized control planes even
+while distributing data and processing. Kubernetes, the container
+orchestration system, uses a centralized control plane to manage
+distributed container workloads, simplifying many aspects of system
+management.
+
+** Performance Expectations and Tradeoffs
+Decentralized systems typically incur performance penalties for their
+necessary distribution. Bitcoin processes only a few transactions per
+second compared to Visa's tens of thousands, because its decentralized
+consensus mechanism prioritizes trustlessness over throughput.
+
+Distributed systems can often achieve performance improvements through
+their distribution. Hadoop distributes data processing across computer
+clusters to enable analysis of datasets too large for single machines,
+turning distribution into a performance advantage rather than a
+liability.
+
+** Evolution and Governance
+Decentralized systems face unique challenges in evolution. Changes to
+the Bitcoin protocol, for example, require broad consensus among a
+diverse community of miners, developers, and users. This governance by
+consensus makes rapid evolution difficult but protects the system's
+decentralized nature.
+
+Distributed systems that remain under unified administrative control can
+evolve more rapidly. Amazon can update its distributed retail platform
+without seeking consensus beyond its own engineering teams, allowing for
+more agile responses to changing requirements.
+
+* Minimal Distribution
+The distinction between distributed and decentralized systems—based on whether
+distribution is sufficient or necessary—provides a powerful framework for
+understanding networked computer systems. Decentralized systems distribute
+because they must, accepting the inherent complexity as the cost of addressing
+administrative, trust, geographic, or regulatory constraints. Distributed
+systems distribute because doing so provides benefits that outweigh the added
+complexity.
+
+This distinction isn't merely academic. It guides fundamental architectural
+decisions, influences technology selection, shapes operational practices, and
+determines how systems evolve over time. By understanding whether your system
+needs to be decentralized or merely distributed, you can make more informed
+tradeoffs between simplicity and distribution.
+
+As computing continues to expand across organizational and geographic
+boundaries, more systems will incorporate both necessary decentralization and
+sufficient distribution. The most successful architectures will be those that
+apply each approach judiciously—decentralizing what must be decentralized,
+distributing what benefits from distribution, and centralizing everything else.
+
+The principle of minimal distribution—distribute only what is necessary or
+sufficiently beneficial—serves as a valuable guide for navigating the
+complexity of modern networked systems. By embracing this principle, architects
+can build systems that balance the benefits of distribution against its
+significant costs, delivering solutions that are as simple as possible but as
+distributed as necessary.

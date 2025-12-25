@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       2ar8en10n2k0
+:END:
+#+title: Anthology and Treasury
+#+cite_export: csl  harvard.csl
+#+date:  <2024-01-07 Sun 12:25>
+#+filetags: :project_archived:
+
+#+begin_export HTML
+<head>
+<style>
+.timestamp-wrapper {display: none !important;}
+
+p {
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+}
+
+</style>
+</head>
+#+end_export
+
+Here I collect my highlights from readings. More details of how this works can be found [[file:whata.org][here]].
+-----
+* Content
+
+{{{anth}}}
+
+* Bibliography
+#+print_bibliography:
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:
+
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** DONE Build anthology                                              :@idea:
+:LOGBOOK:
+CLOCK: [2024-01-08 Mon 18:40]--[2024-01-08 Mon 23:24] =>  4:44
+CLOCK: [2024-01-08 Mon 13:17]--[2024-01-08 Mon 13:41] =>  0:24
+:END:
+[2024-01-08 Mon 12:16]

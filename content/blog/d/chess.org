@@ -1,0 +1,158 @@
+#+TITLE: Chess and Brains
+#+DATE: <2022-12-06 Tue 10:35>
+:PROPERTIES:
+:ID:       i70j8rp02wj0
+:END:
+
+#+begin_abstract
+/Text found on the internet/
+#+end_abstract
+
+#+BEGIN_PREVIEW
+Chess and Brains, scientifically
+#+END_PREVIEW
+
+
+Several enthusiastic historical practitioners of chess have espoused their
+beliefs that the skills associated with chess can be extrapolated to external
+scenarios. One of the first documented cases of an intellectual asserting that
+connections exist between chess proficiency and other skills is Benjamin
+Franklin’s 1750 essay The Morales of Chess. In this essay, Franklin hypothesized
+that “The game of Chess is not merely an idle amusement.  Several very valuable
+qualities of the mind, useful in the course of human life, are to be acquired or
+strengthened by it, so as to become habits, ready on all occasions.” He then
+enumerated these specific qualities, listing them as “1. Foresight… 2.
+Circumspection… 3.  Caution… [and] lastly… the habit of not being discouraged by
+present bad appearances in the state of our affairs.”
+
+
+
+#+BEGIN_tag
+{{{t}}} [[id:rgogo9p02wj0][chess]]
+#+END_tag
+
+Franklin’s foundation of enumerating the skills cultivated by playing chess
+eventually became the groundwork for several academic studies conducted in the
+20th and 21st centuries.  These studies, in turn, have helped parents and school
+administrators across the world to justify teaching young children chess, in the
+hopes of simultaneously improving their cognitive capabilities. Chess education
+is a mandatory component of elementary school in Armenia, and local school
+districts across United States, Russia, and other nations, have chosen to
+incorporate chess into their curricula in order to stimulate the cognitive
+skills of children (Milat, 1997).
+
+Many studies have been done associating study of chess with heightened
+intellectual prowess in school aged children (Ferguson, 1995). Dr. Robert
+Ferguson, a researcher with a keen interest in the effects of chess on cognitive
+development, compiled and discussed a list of supporting studies in his 1995
+research summary Chess in Education. Ferguson discussed numerous studies,
+conducted in multiple different nations, during the timeframe 1974 to 1995. Each
+study reinforced initial hypotheses that playing chess can potentially
+contribute to improved cognitive capabilities outside of the game.
+
+The first of the studies discussed by Ferguson took place in Zaire during the
+mid 1970s.  Approximately 100 students, aged 16-18, were randomly selected to
+either be a part of the treatment or the control group. The treatment group
+received two hours of weekly chess instruction over the course of an academic
+year, while the control group instead was exposed to two hours of additional
+schooling in the default curriculum. Both groups took exams designed to measure
+problem solving, verbal, and mathematical skills, both at the beginning of the
+year and at the end of the year (Ferguson, 1995).
+
+Despite having pretest scores similar to those earned by students in the control
+group, students in the treatment group ended up scoring markedly higher than
+their control group counterparts on the posttest analysis. This increase in
+scores was shown to be statistically significant across the entire treatment
+group, and was not just limited to the more skilled chess players. Researchers
+used this information to conclude that receiving the one year of chess
+instruction led to improved verbal and mathematical aptitudes in test subjects
+(Ferguson, 1995). The conclusion that chess proficiency is positively correlated
+with cognitive development led to the researchers making the normative claim
+that “the introduction of chess as a regular elective course [in schools] would
+be of positive benefit.”
+
+The results of the Zaire experiment have been supported by the results of a
+myriad other trials by other researchers. In an experiment conducted in Belgium
+from 1974-1976, researcher Johan Christiaen concluded that the inclusion of
+chess lessons in an elementary school classroom facilitated “earlier
+intellectual maturation” as defined the experimenters and measured by
+standardized examinations (Christiaen, 1977). From 1979-1983, Ferguson conducted
+a study in which a treatment group of randomly selected elementary school
+children received regular chess instruction in their classrooms. The results of
+his study supported his initial hypothesis, and led to the conclusion that
+receiving chess instruction generally leads to statistically significant
+improvements in both the raw test scores and percentile rankings of students
+(Ferguson, 1995).
+
+In 2001, Jim Celone conducted a research study in which a small, self-selected,
+group of elementary school children received chess instruction over the course
+of eight weeks. The study aimed to determine if a correlation exists between
+chess proficiency and the ability for children to solve logical thinking
+problems both related and unrelated to chess. A comparison of pretest and
+posttest results indicated that receiving regular chess instruction led students
+to be more adept at solving logical thinking problems in both categories.
+Students scored significantly higher on the posttest chess puzzles than they had
+on similar pretest chess puzzles, and also made improvements from pretest to
+posttest on an examination of logic puzzles that were not based around chess
+(Celone, 2001).
+
+In addition to these various studies, which have documented a positive
+correlation between chess proficiency and scores on standardized examinations,
+several studies have associated chess playing with improvement in other
+cognitive traits, such as memory, creativity, critical thinking, and originality
+(Ferguson, 1995). While many studies have demonstrated that chess can be
+effectively used as a tool to facilitate improvement on standardized
+examinations, admittedly fewer studies have examined the correlation between
+chess proficiency and otherwise unrelated intellectual pursuits.
+
+One study, conducted by Philip Rifner from 1991-1992, aimed to determine whether
+or not students who practiced general problem solving skills through playing
+chess could successfully apply those skills to an unrelated domain, in this
+case, poetic analysis. The study concluded that chess proficiency develops
+skills which students can indeed apply to other fields. Students were shown to
+be more adept at poetic analysis as a result of exposure to chess, leading to
+the conclusion that chess potentially accelerates cognitive development in a
+multitude of capacities (Rifner, 1992).
+
+Due to the widespread acknowledgement of the intellectual benefits associated
+with playing chess, initiatives have been undertaken across the globe to
+incorporate the game into school curricula. In the United States, the initiative
+has been spearheaded by the American Chess Foundation (ACF) and the United
+States Chess Federation (USCF) (Milat, 1997). One specific initiative, based in
+New Jersey, officially sanctioned the use of chess as an educational tool in
+elementary schools, declaring that “instruction in chess during the second grade
+will enable pupils to learn skills which will serve them throughout their
+lives.” Similar efforts to incorporate chess into school curricula have taken
+place in nations as diverse as Russia, Venezuela, and Armenia. The legislative
+bodies responsible for these initiatives have officially stated their beliefs
+that learning chess helps students develop cognitive skills which are directly
+applicable to their external lives.
+
+Unfortunately, research into skills enhanced by chess proficiency typically
+focuses on case studies of elementary school, middle school, and high school
+aged children. There is a glaring lack of research into the impacts of chess
+proficiency on the capabilities of adults to succeed in external endeavors.
+President Truman famously compared international politics to a game of chess,
+referencing inherent similarities between the two subject matters, specifically
+the need for strategic decision making in a competitive environment (Truman,
+1947). Because studies have shown that children have the capacity to apply
+skills honed by chess proficiency to external domains, it is not entirely
+unreasonable to hypothesize that adults who regularly play chess will also be
+able to apply techniques of strategic decision making to their personal
+endeavors, giving them a competitive edge over those adults who do not play
+chess (Rifner, 1992, Van Zyl, 1991).
+
+Celone, J. (2001). The effects of a chess program on abstract reasoning and
+problem-solving in elementary school children. Southern Connecticut State
+University). ProQuest Dissertations and Theses, , 42-42 p. Retrieved
+http://search.proquest.com/docview/250187240?accountid=15053. (250187240).
+
+Van Zyl, Anna Sophia,Aletta Johanna. (1991). The significance of playing chess
+in improving a child's intellectual actualisation. (afrikaans text); University
+of Pretoria (South Africa)). ProQuest Dissertations and Theses, , 0-1. Retrieved
+from http://search.proquest.com/docview/303963721?accountid=15053. (303963721).
+
+Pearson, T. R. (2009). The effects of learning to play chess on the nonverbal
+reasoning abilities of grade 5 students. Nipissing University (Canada)).
+ProQuest Dissertations and Theses, , 150. Retrieved from
+http://search.proquest.com/docview/305060144?accountid=15053.  (305060144).
