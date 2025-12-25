@@ -115,7 +115,7 @@ body {
 /* Page title */
 .page-title {
     font-size: 18px;
-    font-style: italic;
+    /* font-style: italic; */
     margin: 0 0 15px;
 }
 
@@ -292,3 +292,63 @@ body {
     display: inline;
 }
 
+h1 {
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+}
+
+p {
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+}
+
+/* Verse blocks - centered with preserved line breaks */
+.verse {
+    text-align: center !important;
+    white-space: pre-line;
+    font-style: italic;
+    margin: 1.5em auto;
+    max-width: 90%;
+    line-height: 1.8;
+}
+
+/* Verse blocks - centered with preserved line breaks */
+.verse-block {
+    text-align: center !important;
+    font-style: italic;
+    margin: 1.5em auto;
+    max-width: 90%;
+    line-height: 2;
+
+    font-style: italic;
+    color: #6d4c41;
+    margin: 2em 0;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+    border: none !important;
+    background: none;
+    position: relative;
+    padding: 2em 0;
+}
+
+.verse-block::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background-image: url("/style/svg/-236.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(80%) brightness(0.5) opacity(0.08);
+    z-index: -1;
+}
+
+.verse-block p {
+    white-space: pre-wrap;
+    text-align: center !important;
+}

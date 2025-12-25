@@ -4,7 +4,7 @@
 :END:
 
 #+BEGIN_PREVIEW
-On stupidity, chess, and rejection. #[[id:ydb1kfn02wj0][Modus Vivendi]]
+On stupidity, chess, and rejection. #[[id:ydb1kfn02wj0][Modus Vivendi]] #[[id:rgogo9p02wj0][chess]]
 #+END_PREVIEW
 
 * On Rejection
@@ -55,11 +55,6 @@ yields very fine even in smarter people.
 :PROPERTIES:
 :ID:       q5thg9p02wj0
 :END:
-
-#+BEGIN_tag
-{{{t}}} [[id:rgogo9p02wj0][chess]]
-#+END_tag
-
 I'm currently interesting in doing some personal work in chess programming. I
 noticed a common pattern, that is after passing 1800~2300 in a chess rating
 system (like Glicko), chess basically transforms into a job related to

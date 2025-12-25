@@ -60,9 +60,9 @@
 {{- end -}}
 
 {{- /* Replace citations and collect used keys */ -}}
-{{- range $match := findRE `\[cite:@([a-zA-Z0-9_-]+)([^\]]*)\]` $content -}}
-  {{- $key := replaceRE `\[cite:@([a-zA-Z0-9_-]+).*` `$1` $match -}}
-  {{- $locator := replaceRE `\[cite:@[a-zA-Z0-9_-]+([^\]]*)\]` `$1` $match | strings.TrimSpace -}}
+{{- range $match := findRE `\[cite:@([a-zA-Z0-9_.\-]+)([^\]]*)\]` $content -}}
+  {{- $key := replaceRE `\[cite:@([a-zA-Z0-9_.\-]+).*` `$1` $match -}}
+  {{- $locator := replaceRE `\[cite:@[a-zA-Z0-9_.\-]+([^\]]*)\]` `$1` $match | strings.TrimSpace -}}
   {{- $entry := index $bib $key -}}
   {{- if $entry -}}
     {{- $usedKeys = $usedKeys | append $key -}}

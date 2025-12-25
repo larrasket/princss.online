@@ -1,0 +1,583 @@
+:PROPERTIES:
+:ID:       7sq9bk71x2k0
+:CATEGORY: braham
+:END:
+#+title: Abbass Braham, fragments
+#+filetags: :project_archived:link:
+Dr. Abbass Braham is a [[id:4vnbbc3024k0][Mauritanian]] visiting Assistant Professor of History at the
+University of Louisiana at Lafayette. He happens to be one of the most astonishing minds
+that I really admire. This series collects posts by him that caught my interst.
+
+-----
+
+{{{indx}}}
+
+#+BEGIN_SRC emacs-lisp :exports results :results value html
+(salih/print-back-links t)
+#+END_SRC
+
+* Local Variables                                                     :noexport:
+Local Variables:
+salih/rebuild: t
+End:
+* [[id:4b45b3aa-faac-4698-ba6b-b120ac166453][agenda]]                                                              :noexport:
+** DONE [[https://hekmah.org/%d9%86%d9%82%d8%af-%d8%ae%d8%b7%d8%a7%d8%a8-%d8%a7%d9%84%d8%a5%d8%b5%d9%84%d8%a7%d8%ad-%d8%a7%d9%84%d8%af%d9%8a%d9%86%d9%8a-%d9%85%d8%af%d8%ae%d9%84-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84%d9%8a/][Ibn khaldon Politics]]                                         :@read:
+:PROPERTIES:
+:ID:       ekvhxot0zfk0
+:CUSTOM_ID: ekvhxot0zfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-08-04 Sun 15:54]--[2024-08-04 Sun 16:00] =>  0:06
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:qevkb860tfk0][Khaldun]] and [[id:ihnfrz90jek0][Political Science]]
+#+END_tag
+https://twitter.com/abbassbraham/status/723574368647802880
+** DONE reorganize Abbass Braham content.                            :@general:
+SCHEDULED: <2024-11-20 Wed>
+- [2024-11-16 Sat 05:32] I started downloading the archive.
+:LOGBOOK:
+CLOCK: [2024-11-17 Sun 07:21]--[2024-11-17 Sun 10:20] =>  2:59
+CLOCK: [2024-11-17 Sun 06:14]--[2024-11-17 Sun 06:30] =>  0:16
+:END:
+[2024-07-11 Thu 00:50] download all the content from  twitter retweets and
+organize them in the system
+** DONE Reading his old tweets                                       :@general:
+:PROPERTIES:
+:CATEGORY: abbass
+:LAST_REPEAT: [2025-06-16 Mon 00:51]
+:END:
+- [2025-06-13 Fri 13:53] Next is feb 2020
+- [2025-06-10 Tue 07:12] Next is oct 2018
+:STATS:
+- State "DONE"       from "TODO"       [2025-06-16 Mon 00:51]
+- State "DONE"       from "TODO"       [2025-06-13 Fri 13:53]
+- State "DONE"       from "TODO"       [2025-06-11 Wed 13:07]
+- State "DONE"       from "TODO"       [2025-06-10 Tue 07:13]
+- State "DONE"       from "TODO"       [2025-06-09 Mon 14:19]
+- State "DONE"       from "TODO"       [2025-06-08 Sun 14:44]
+- State "DONE"       from "TODO"       [2024-11-12 Tue 07:12]
+- State "DONE"       from "TODO"       [2024-11-04 Mon 00:33]
+- State "DONE"       from "TODO"       [2024-11-03 Sun 23:45]
+- State "DONE"       from "TODO"       [2024-11-01 Fri 16:17]
+- State "DONE"       from "TODO"       [2024-10-31 Thu 22:47]
+- State "DONE"       from "TODO"       [2024-10-31 Thu 22:39]
+- State "DONE"       from "TODO"       [2024-10-31 Thu 17:23]
+- State "DONE"       from "TODO"       [2024-10-31 Thu 01:29]
+- State "DONE"       from "TODO"       [2024-10-31 Thu 01:28]
+- State "DONE"       from "TODO"       [2024-10-27 Sun 12:03]
+- State "DONE"       from "TODO"       [2024-10-26 Sat 19:29]
+- State "DONE"       from "TODO"       [2024-10-21 Mon 10:02]
+- State "DONE"       from "TODO"       [2024-10-16 Wed 08:55]
+- State "DONE"       from "TODO"       [2024-10-15 Tue 05:23]
+- State "DONE"       from "TODO"       [2024-10-15 Tue 05:23]
+- State "DONE"       from "TODO"       [2024-10-13 Sun 07:38]
+- State "DONE"       from "TODO"       [2024-10-12 Sat 04:38]
+- State "DONE"       from "TODO"       [2024-10-11 Fri 08:29]
+- State "DONE"       from "TODO"       [2024-10-07 Mon 05:25]
+- State "DONE"       from "TODO"       [2024-10-07 Mon 03:00]
+- State "DONE"       from "TODO"       [2024-10-07 Mon 03:08]
+- State "DONE"       from "TODO"       [2024-10-03 Thu 03:05]
+- State "DONE"       from "TODO"       [2024-10-02 Wed 01:45]
+- State "DONE"       from "TODO"       [2024-09-28 Sat 21:53]
+- State "DONE"       from "TODO"       [2024-09-28 Sat 16:26]
+- State "DONE"       from "TODO"       [2024-09-26 Thu 18:24]
+- State "DONE"       from "TODO"       [2024-09-24 Tue 21:12]
+- State "DONE"       from "TODO"       [2024-09-24 Tue 08:07]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 16:52]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 04:36]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 04:25]
+- State "DONE"       from "TODO"       [2024-09-23 Mon 02:28]
+- State "DONE"       from "TODO"       [2024-09-22 Sun 15:41]
+- State "DONE"       from "TODO"       [2024-09-21 Sat 08:22]
+- State "DONE"       from "TODO"       [2024-09-20 Fri 10:11]
+- State "DONE"       from "TODO"       [2024-09-18 Wed 10:11]
+- State "DONE"       from "TODO"       [2024-09-17 Tue 06:32]
+- State "DONE"       from "TODO"       [2024-09-16 Mon 08:23]
+- State "DONE"       from "TODO"       [2024-09-16 Mon 01:34]
+- State "DONE"       from "TODO"       [2024-09-12 Thu 03:50]
+- State "DONE"       from "TODO"       [2024-09-11 Wed 07:03]
+- State "DONE"       from "TODO"       [2024-09-06 Fri 06:36]
+- State "DONE"       from "TODO"       [2024-09-04 Wed 18:22]
+- State "DONE"       from "TODO"       [2024-09-02 Mon 21:21]
+- State "DONE"       from "TODO"       [2024-09-02 Mon 20:53]
+- State "DONE"       from "TODO"       [2024-09-02 Mon 20:48]
+- State "DONE"       from "TODO"       [2024-09-01 Sun 23:58]
+- State "DONE"       from "TODO"       [2024-09-01 Sun 23:40]
+- State "DONE"       from "TODO"       [2024-09-01 Sun 23:34]
+- State "DONE"       from "TODO"       [2024-09-01 Sun 22:58]
+- State "DONE"       from "TODO"       [2024-08-31 Sat 19:39]
+- State "DONE"       from "TODO"       [2024-08-31 Sat 17:48]
+- State "DONE"       from "TODO"       [2024-08-30 Fri 04:41]
+- State "DONE"       from "TODO"       [2024-08-27 Tue 17:13]
+- State "DONE"       from "TODO"       [2024-08-26 Mon 11:38]
+- State "DONE"       from "TODO"       [2024-08-25 Sun 05:36]
+- State "DONE"       from "TODO"       [2024-08-24 Sat 13:47]
+- State "DONE"       from "TODO"       [2024-08-23 Fri 17:45]
+- State "DONE"       from "TODO"       [2024-08-23 Fri 04:53]
+- State "DONE"       from "TODO"       [2024-08-22 Thu 05:10]
+- State "KILL"       from "TODO"       [2024-08-22 Thu 03:24]
+- State "DONE"       from "TODO"       [2024-08-20 Tue 05:08]
+- State "DONE"       from "TODO"       [2024-08-18 Sun 05:48]
+- State "DONE"       from "TODO"       [2024-08-18 Sun 04:54]
+- State "KILL"       from "TODO"       [2024-08-18 Sun 04:39]
+- State "KILL"       from "TODO"       [2024-08-17 Sat 04:38]
+- State "DONE"       from "TODO"       [2024-08-13 Tue 22:36]
+- State "DONE"       from "TODO"       [2024-08-12 Mon 23:23]
+- State "DONE"       from "TODO"       [2024-08-11 Sun 23:37]
+- State "DONE"       from "TODO"       [2024-08-10 Sat 06:54]
+- State "DONE"       from "TODO"       [2024-08-09 Fri 05:42]
+- State "DONE"       from "TODO"       [2024-08-08 Thu 04:02]
+- State "DONE"       from "TODO"       [2024-08-05 Mon 18:34]
+- State "DONE"       from "TODO"       [2024-08-04 Sun 21:54]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 19:08]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 18:57]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 13:15]
+- State "DONE"       from "TODO"       [2024-08-02 Fri 12:10]
+- State "DONE"       from "TODO"       [2024-08-01 Thu 13:42]
+- State "DONE"       from "TODO"       [2024-08-01 Thu 13:26]
+- State "DONE"       from "TODO"       [2024-07-27 Sat 16:52]
+- State "DONE"       from "TODO"       [2024-07-26 Fri 16:07]
+- State "DONE"       from "TODO"       [2024-07-26 Fri 05:38]
+- State "DONE"       from "TODO"       [2024-07-25 Thu 05:23]
+- State "DONE"       from "TODO"       [2024-07-24 Wed 17:21]
+- State "DONE"       from "TODO"       [2024-07-24 Wed 00:31]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 18:43]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 18:28]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 14:52]
+- State "DONE"       from "TODO"       [2024-07-23 Tue 11:32]
+- State "DONE"       from "TODO"       [2024-07-22 Mon 01:44]
+- State "DONE"       from "TODO"       [2024-07-22 Mon 01:26]
+- State "DONE"       from "TODO"       [2024-07-18 Thu 09:50]
+- State "DONE"       from "TODO"       [2024-07-18 Thu 07:11]
+- State "DONE"       from "TODO"       [2024-07-18 Thu 05:05]
+- State "DONE"       from "TODO"       [2024-07-17 Wed 01:57]
+- State "DONE"       from "TODO"       [2024-07-16 Tue 01:45]
+- State "DONE"       from "TODO"       [2024-07-14 Sun 01:56]
+- State "DONE"       from "TODO"       [2024-07-13 Sat 00:41]
+- State "DONE"       from "TODO"       [2024-07-13 Sat 00:09]
+- State "DONE"       from "TODO"       [2024-07-11 Thu 01:41]
+- State "DONE"       from "TODO"       [2024-07-11 Thu 01:00]
+- State "DONE"       from "TODO"       [2024-07-11 Thu 00:59]
+- State "DONE"       from "TODO"       [2024-07-05 Fri 00:33]
+- State "DONE"       from "TODO"       [2024-07-04 Thu 22:12]
+- State "DONE"       from "TODO"       [2024-07-03 Wed 16:57]
+- State "DONE"       from "TODO"       [2024-07-03 Wed 16:54]
+- State "DONE"       from "TODO"       [2024-07-03 Wed 11:20]
+- State "DONE"       from "TODO"       [2024-07-02 Tue 20:30]
+- State "DONE"       from "TODO"       [2024-07-01 Mon 10:47]
+- State "DONE"       from "TODO"       [2024-06-30 Sun 12:33]
+- State "DONE"       from "TODO"       [2024-06-29 Sat 14:09]
+- State "DONE"       from "TODO"       [2024-06-29 Sat 10:57]
+- State "DONE"       from "TODO"       [2024-06-26 Wed 15:08]
+- State "DONE"       from "TODO"       [2024-06-26 Wed 07:15]
+- State "DONE"       from "TODO"       [2024-06-25 Tue 05:24]
+- State "DONE"       from "TODO"       [2024-06-25 Tue 05:24]
+- State "DONE"       from "TODO"       [2024-06-24 Mon 09:47]
+- State "DONE"       from "TODO"       [2024-06-24 Mon 08:41]
+- State "DONE"       from "TODO"       [2024-06-22 Sat 21:40]
+- State "DONE"       from "TODO"       [2024-06-22 Sat 04:05]
+- State "DONE"       from "TODO"       [2024-06-21 Fri 03:58]
+- State "DONE"       from "TODO"       [2024-06-21 Fri 03:50]
+- State "DONE"       from "TODO"       [2024-06-19 Wed 04:16]
+- State "DONE"       from "TODO"       [2024-06-18 Tue 01:14]
+- State "DONE"       from "TODO"       [2024-06-17 Mon 10:38]
+- State "DONE"       from "TODO"       [2024-06-16 Sun 07:55]
+- State "DONE"       from "TODO"       [2024-06-15 Sat 00:44]
+- State "DONE"       from "TODO"       [2024-06-14 Fri 05:57]
+- State "DONE"       from "TODO"       [2024-06-05 Wed 23:27]
+- State "DONE"       from "TODO"       [2024-06-04 Tue 21:55]
+- State "DONE"       from "TODO"       [2024-06-02 Sun 01:03]
+- State "DONE"       from "TODO"       [2024-06-01 Sat 21:19]
+- State "DONE"       from "TODO"       [2024-05-24 Fri 01:04]
+- State "DONE"       from "TODO"       [2024-05-18 Sat 01:39]
+- State "DONE"       from "TODO"       [2024-05-16 Thu 21:17]
+- State "DONE"       from "TODO"       [2024-05-07 Tue 02:27]
+- State "DONE"       from "TODO"       [2024-05-06 Mon 04:14]
+- State "DONE"       from "TODO"       [2024-05-05 Sun 07:48]
+- State "KILL"       from "TODO"       [2024-04-18 Thu 17:51]
+- State "KILL"       from "TODO"       [2024-04-17 Wed 07:49]
+- State "DONE"       from "TODO"       [2024-04-15 Mon 12:18]
+- State "DONE"       from "TODO"       [2024-04-14 Sun 17:53]
+- State "DONE"       from "TODO"       [2024-04-13 Sat 00:18]
+- State "DONE"       from "TODO"       [2024-04-12 Fri 09:25]
+- State "DONE"       from "TODO"       [2024-04-11 Thu 05:22]
+- State "DONE"       from "TODO"       [2024-04-10 Wed 04:01]
+- State "DONE"       from "TODO"       [2024-04-09 Tue 16:33]
+- State "DONE"       from "TODO"       [2024-04-08 Mon 13:05]
+- State "KILL"       from "TODO"       [2024-04-08 Mon 11:35]
+- State "KILL"       from "TODO"       [2024-04-08 Mon 11:35]
+- State "KILL"       from "TODO"       [2024-04-06 Sat 06:09]
+- State "KILL"       from "TODO"       [2024-04-06 Sat 06:08]
+- State "DONE"       from "TODO"       [2024-03-30 Sat 05:33]
+- State "DONE"       from "TODO"       [2024-03-29 Fri 09:09]
+- State "DONE"       from "TODO"       [2024-03-28 Thu 07:25]
+- State "DONE"       from "TODO"       [2024-03-27 Wed 05:15]
+- State "DONE"       from "TODO"       [2024-03-25 Mon 01:25]
+- State "DONE"       from "TODO"       [2024-03-25 Mon 00:01]
+- State "DONE"       from "TODO"       [2024-03-24 Sun 11:42]
+- State "DONE"       from "TODO"       [2024-03-23 Sat 12:56]
+- State "KILL"       from "TODO"       [2024-03-22 Fri 23:30]
+- State "DONE"       from "TODO"       [2024-03-21 Thu 06:31]
+- State "DONE"       from "TODO"       [2024-03-20 Wed 08:22]
+- State "DONE"       from "TODO"       [2024-03-19 Tue 11:18]
+- State "KILL"       from "TODO"       [2024-03-19 Tue 10:15]
+- State "KILL"       from "TODO"       [2024-03-19 Tue 10:15]
+- State "DONE"       from "TODO"       [2024-03-16 Sat 09:55]
+- State "KILL"       from "TODO"       [2024-03-16 Sat 04:25]
+- State "DONE"       from "TODO"       [2024-03-14 Thu 12:25]
+- State "DONE"       from "TODO"       [2024-03-13 Wed 05:24]
+- State "DONE"       from "TODO"       [2024-03-13 Wed 05:08]
+- State "DONE"       from "TODO"       [2024-03-12 Tue 13:32]
+- State "DONE"       from "TODO"       [2024-03-11 Mon 07:53]
+- State "DONE"       from "TODO"       [2024-03-08 Fri 07:20]
+- State "DONE"       from "TODO"       [2024-03-05 Tue 06:06]
+- State "DONE"       from "TODO"       [2024-03-04 Mon 01:57]
+- State "DONE"       from "TODO"       [2024-03-02 Sat 08:27]
+- State "DONE"       from "TODO"       [2024-03-01 Fri 18:45]
+- State "DONE"       from "TODO"       [2024-02-29 Thu 01:43]
+- State "DONE"       from "TODO"       [2024-02-28 Wed 00:35]
+- State "DONE"       from "TODO"       [2024-02-27 Tue 01:34]
+- State "DONE"       from "TODO"       [2024-02-26 Mon 03:38]
+- State "DONE"       from "TODO"       [2024-02-25 Sun 23:02]
+- State "DONE"       from "TODO"       [2024-02-24 Sat 14:14]
+- State "DONE"       from "TODO"       [2024-02-23 Fri 21:48]
+- State "DONE"       from "TODO"       [2024-02-22 Thu 02:10]
+- State "DONE"       from "TODO"       [2024-02-21 Wed 23:58]
+- State "DONE"       from "TODO"       [2024-02-21 Wed 23:58]
+- State "DONE"       from "TODO"       [2024-02-19 Mon 18:46]
+- State "DONE"       from "TODO"       [2024-02-17 Sat 20:18]
+- State "DONE"       from "TODO"       [2024-02-18 Sun 13:20]
+- State "DONE"       from "TODO"       [2024-02-10 Sat 01:24]
+- State "DONE"       from "TODO"       [2024-02-09 Fri 04:39]
+- State "DONE"       from "TODO"       [2024-02-08 Thu 00:31]
+- State "DONE"       from "TODO"       [2024-02-08 Thu 00:31]
+- State "DONE"       from "TODO"       [2024-02-05 Mon 19:21]
+- State "DONE"       from "TODO"       [2024-02-04 Sun 17:25]
+- State "DONE"       from "TODO"       [2024-02-03 Sat 20:14]
+- State "DONE"       from "TODO"       [2024-02-02 Fri 21:06]
+- State "DONE"       from "TODO"       [2024-02-02 Fri 04:18]
+- State "DONE"       from "TODO"       [2024-01-31 Wed 18:33]
+- State "DONE"       from "TODO"       [2024-01-31 Wed 18:33]
+- State "DONE"       from "TODO"       [2024-01-31 Wed 18:33]
+- State "KILL"       from "TODO"       [2024-01-29 Mon 05:36]
+- State "DONE"       from "TODO"       [2024-01-29 Mon 05:36]
+- State "DONE"       from "TODO"       [2024-01-26 Fri 22:33]
+- State "DONE"       from "TODO"       [2024-01-25 Thu 19:00]
+- State "DONE"       from "TODO"       [2024-01-24 Wed 08:52]
+- State "DONE"       from "TODO"       [2024-01-23 Tue 09:44]
+- State "DONE"       from "TODO"       [2024-01-22 Mon 01:56]
+- State "DONE"       from "TODO"       [2024-01-22 Mon 01:56]
+- State "DONE"       from "TODO"       [2024-01-20 Sat 10:24]
+- State "DONE"       from "TODO"       [2024-01-19 Fri 04:46]
+:END:
+:LOGBOOK:
+CLOCK: [2025-06-20 Fri 12:22]--[2025-06-20 Fri 12:24] =>  0:02
+CLOCK: [2025-06-13 Fri 13:47]--[2025-06-13 Fri 13:53] =>  0:06
+CLOCK: [2025-06-11 Wed 12:57]--[2025-06-11 Wed 13:07] =>  0:10
+CLOCK: [2025-06-10 Tue 06:58]--[2025-06-10 Tue 07:13] =>  0:15
+CLOCK: [2025-06-08 Sun 13:59]--[2025-06-08 Sun 14:44] =>  0:45
+CLOCK: [2024-11-12 Tue 07:07]--[2024-11-12 Tue 07:12] =>  0:05
+CLOCK: [2024-11-04 Mon 00:24]--[2024-11-04 Mon 00:33] =>  0:09
+CLOCK: [2024-11-01 Fri 15:55]--[2024-11-01 Fri 16:17] =>  0:22
+CLOCK: [2024-10-31 Thu 22:39]--[2024-10-31 Thu 22:47] =>  0:08
+CLOCK: [2024-10-31 Thu 22:32]--[2024-10-31 Thu 22:39] =>  0:07
+CLOCK: [2024-10-31 Thu 17:20]--[2024-10-31 Thu 17:23] =>  0:03
+CLOCK: [2024-10-31 Thu 01:07]--[2024-10-31 Thu 01:18] =>  0:11
+CLOCK: [2024-10-28 Mon 23:09]--[2024-10-29 Tue 02:19] =>  3:10
+CLOCK: [2024-10-27 Sun 23:57]--[2024-10-28 Mon 00:02] =>  0:05
+CLOCK: [2024-10-27 Sun 00:07]--[2024-10-27 Sun 00:08] =>  0:01
+CLOCK: [2024-10-26 Sat 19:23]--[2024-10-26 Sat 19:29] =>  0:06
+CLOCK: [2024-10-23 Wed 11:30]--[2024-10-23 Wed 11:49] =>  0:19
+CLOCK: [2024-10-22 Tue 11:35]--[2024-10-22 Tue 12:09] =>  0:34
+CLOCK: [2024-10-21 Mon 09:26]--[2024-10-21 Mon 10:02] =>  0:36
+CLOCK: [2024-10-20 Sun 15:43]--[2024-10-20 Sun 16:19] =>  0:36
+CLOCK: [2024-10-18 Fri 11:46]--[2024-10-18 Fri 12:23] =>  0:37
+CLOCK: [2024-10-17 Thu 15:58]--[2024-10-17 Thu 16:11] =>  0:13
+CLOCK: [2024-10-17 Thu 15:35]--[2024-10-17 Thu 15:42] =>  0:07
+CLOCK: [2024-10-17 Thu 09:13]--[2024-10-17 Thu 10:21] =>  1:08
+CLOCK: [2024-10-16 Wed 08:47]--[2024-10-16 Wed 08:55] =>  0:08
+CLOCK: [2024-10-15 Tue 04:59]--[2024-10-15 Tue 05:23] =>  0:24
+CLOCK: [2024-10-13 Sun 06:02]--[2024-10-13 Sun 06:13] =>  0:11
+CLOCK: [2024-10-12 Sat 04:23]--[2024-10-12 Sat 04:38] =>  0:15
+CLOCK: [2024-10-11 Fri 08:22]--[2024-10-11 Fri 08:29] =>  0:07
+CLOCK: [2024-10-07 Mon 07:19]--[2024-10-07 Mon 07:24] =>  0:05
+CLOCK: [2024-10-07 Mon 05:13]--[2024-10-07 Mon 05:25] =>  0:12
+CLOCK: [2024-10-07 Mon 03:00]--[2024-10-07 Mon 03:08] =>  0:08
+CLOCK: [2024-10-07 Mon 02:50]--[2024-10-07 Mon 03:00] =>  0:10
+CLOCK: [2024-10-07 Mon 02:49]--[2024-10-07 Mon 02:50] =>  0:01
+CLOCK: [2024-10-03 Thu 02:55]--[2024-10-03 Thu 03:05] =>  0:10
+CLOCK: [2024-10-02 Wed 01:37]--[2024-10-02 Wed 01:45] =>  0:08
+CLOCK: [2024-09-28 Sat 21:39]--[2024-09-28 Sat 21:53] =>  0:14
+CLOCK: [2024-09-28 Sat 15:55]--[2024-09-28 Sat 16:26] =>  0:31
+CLOCK: [2024-09-27 Fri 23:44]--[2024-09-28 Sat 01:40] =>  1:56
+CLOCK: [2024-09-26 Thu 18:13]--[2024-09-26 Thu 18:24] =>  0:11
+CLOCK: [2024-09-24 Tue 20:56]--[2024-09-24 Tue 21:12] =>  0:16
+CLOCK: [2024-09-24 Tue 06:22]--[2024-09-24 Tue 08:07] =>  1:45
+CLOCK: [2024-09-23 Mon 16:49]--[2024-09-23 Mon 16:52] =>  0:03
+CLOCK: [2024-09-23 Mon 04:25]--[2024-09-23 Mon 04:36] =>  0:11
+CLOCK: [2024-09-23 Mon 04:07]--[2024-09-23 Mon 04:25] =>  0:18
+CLOCK: [2024-09-23 Mon 02:01]--[2024-09-23 Mon 02:28] =>  0:27
+CLOCK: [2024-09-22 Sun 15:24]--[2024-09-22 Sun 15:41] =>  0:17
+CLOCK: [2024-09-21 Sat 08:11]--[2024-09-21 Sat 08:22] =>  0:11
+CLOCK: [2024-09-20 Fri 10:00]--[2024-09-20 Fri 10:11] =>  0:11
+CLOCK: [2024-09-18 Wed 10:07]--[2024-09-18 Wed 10:11] =>  0:04
+CLOCK: [2024-09-17 Tue 06:16]--[2024-09-17 Tue 06:32] =>  0:16
+CLOCK: [2024-09-16 Mon 08:20]--[2024-09-16 Mon 08:23] =>  0:03
+CLOCK: [2024-09-16 Mon 01:22]--[2024-09-16 Mon 01:34] =>  0:12
+CLOCK: [2024-09-12 Thu 03:10]--[2024-09-12 Thu 03:50] =>  0:40
+CLOCK: [2024-09-11 Wed 06:53]--[2024-09-11 Wed 07:03] =>  0:10
+CLOCK: [2024-09-06 Fri 05:33]--[2024-09-06 Fri 06:36] =>  1:03
+CLOCK: [2024-09-04 Wed 18:08]--[2024-09-04 Wed 18:22] =>  0:14
+CLOCK: [2024-09-02 Mon 20:54]--[2024-09-02 Mon 21:21] =>  0:27
+CLOCK: [2024-09-02 Mon 20:48]--[2024-09-02 Mon 20:53] =>  0:05
+CLOCK: [2024-09-02 Mon 20:39]--[2024-09-02 Mon 20:48] =>  0:09
+CLOCK: [2024-09-01 Sun 23:45]--[2024-09-01 Sun 23:58] =>  0:13
+CLOCK: [2024-09-01 Sun 23:34]--[2024-09-01 Sun 23:40] =>  0:06
+CLOCK: [2024-09-01 Sun 23:24]--[2024-09-01 Sun 23:34] =>  0:10
+CLOCK: [2024-09-01 Sun 22:36]--[2024-09-01 Sun 22:58] =>  0:22
+CLOCK: [2024-08-31 Sat 19:30]--[2024-08-31 Sat 19:39] =>  0:09
+CLOCK: [2024-08-31 Sat 17:01]--[2024-08-31 Sat 17:48] =>  0:47
+CLOCK: [2024-08-30 Fri 03:49]--[2024-08-30 Fri 04:41] =>  0:52
+CLOCK: [2024-08-27 Tue 17:04]--[2024-08-27 Tue 17:13] =>  0:09
+CLOCK: [2024-08-26 Mon 11:15]--[2024-08-26 Mon 11:38] =>  0:23
+CLOCK: [2024-08-25 Sun 05:11]--[2024-08-25 Sun 05:36] =>  0:25
+CLOCK: [2024-08-24 Sat 13:40]--[2024-08-24 Sat 13:47] =>  0:07
+CLOCK: [2024-08-23 Fri 17:36]--[2024-08-23 Fri 17:45] =>  0:09
+CLOCK: [2024-08-23 Fri 04:34]--[2024-08-23 Fri 04:53] =>  0:19
+CLOCK: [2024-08-22 Thu 04:43]--[2024-08-22 Thu 05:10] =>  0:27
+CLOCK: [2024-08-20 Tue 05:00]--[2024-08-20 Tue 05:08] =>  0:08
+CLOCK: [2024-08-18 Sun 21:37]--[2024-08-18 Sun 21:44] =>  0:07
+CLOCK: [2024-08-18 Sun 05:22]--[2024-08-18 Sun 05:48] =>  0:26
+CLOCK: [2024-08-18 Sun 04:43]--[2024-08-18 Sun 04:54] =>  0:11
+CLOCK: [2024-08-13 Tue 22:31]--[2024-08-13 Tue 22:36] =>  0:05
+CLOCK: [2024-08-12 Mon 23:13]--[2024-08-12 Mon 23:23] =>  0:10
+CLOCK: [2024-08-11 Sun 23:21]--[2024-08-11 Sun 23:37] =>  0:16
+CLOCK: [2024-08-10 Sat 06:51]--[2024-08-10 Sat 06:54] =>  0:03
+CLOCK: [2024-08-09 Fri 05:29]--[2024-08-09 Fri 05:42] =>  0:13
+CLOCK: [2024-08-08 Thu 03:42]--[2024-08-08 Thu 04:02] =>  0:20
+CLOCK: [2024-08-05 Mon 18:17]--[2024-08-05 Mon 18:34] =>  0:17
+CLOCK: [2024-08-04 Sun 21:38]--[2024-08-04 Sun 21:54] =>  0:16
+CLOCK: [2024-08-02 Fri 18:58]--[2024-08-02 Fri 19:08] =>  0:10
+CLOCK: [2024-08-02 Fri 12:57]--[2024-08-02 Fri 13:14] =>  0:17
+CLOCK: [2024-08-02 Fri 11:58]--[2024-08-02 Fri 12:10] =>  0:12
+CLOCK: [2024-08-01 Thu 13:26]--[2024-08-01 Thu 13:42] =>  0:16
+CLOCK: [2024-08-01 Thu 13:06]--[2024-08-01 Thu 13:26] =>  0:20
+CLOCK: [2024-07-28 Sun 17:50]--[2024-07-28 Sun 18:45] =>  0:55
+CLOCK: [2024-07-27 Sat 16:46]--[2024-07-27 Sat 16:52] =>  0:06
+CLOCK: [2024-07-27 Sat 06:06]--[2024-07-27 Sat 06:26] =>  0:20
+CLOCK: [2024-07-26 Fri 15:57]--[2024-07-26 Fri 16:07] =>  0:10
+CLOCK: [2024-07-26 Fri 05:30]--[2024-07-26 Fri 05:38] =>  0:08
+CLOCK: [2024-07-25 Thu 05:08]--[2024-07-25 Thu 05:23] =>  0:15
+CLOCK: [2024-07-24 Wed 16:10]--[2024-07-24 Wed 17:21] =>  1:11
+CLOCK: [2024-07-24 Wed 00:20]--[2024-07-24 Wed 00:31] =>  0:11
+CLOCK: [2024-07-23 Tue 18:39]--[2024-07-23 Tue 18:43] =>  0:04
+CLOCK: [2024-07-23 Tue 18:20]--[2024-07-23 Tue 18:28] =>  0:08
+CLOCK: [2024-07-23 Tue 14:14]--[2024-07-23 Tue 14:52] =>  0:38
+CLOCK: [2024-07-23 Tue 13:50]--[2024-07-23 Tue 13:51] =>  0:01
+CLOCK: [2024-07-23 Tue 11:01]--[2024-07-23 Tue 11:32] =>  0:31
+CLOCK: [2024-07-22 Mon 14:26]--[2024-07-22 Mon 14:50] =>  0:24
+CLOCK: [2024-07-22 Mon 11:03]--[2024-07-22 Mon 11:06] =>  0:03
+CLOCK: [2024-07-22 Mon 01:26]--[2024-07-22 Mon 01:44] =>  0:18
+CLOCK: [2024-07-22 Mon 01:11]--[2024-07-22 Mon 01:26] =>  0:15
+CLOCK: [2024-07-18 Thu 09:47]--[2024-07-18 Thu 09:50] =>  0:03
+CLOCK: [2024-07-18 Thu 07:08]--[2024-07-18 Thu 07:11] =>  0:03
+CLOCK: [2024-07-18 Thu 03:09]--[2024-07-18 Thu 03:47] =>  0:38
+CLOCK: [2024-07-17 Wed 01:25]--[2024-07-17 Wed 01:48] =>  0:23
+CLOCK: [2024-07-16 Tue 01:24]--[2024-07-16 Tue 01:45] =>  0:21
+CLOCK: [2024-07-15 Mon 04:27]--[2024-07-15 Mon 23:20] => 18:53
+CLOCK: [2024-07-14 Sun 01:52]--[2024-07-14 Sun 01:56] =>  0:04
+CLOCK: [2024-07-14 Sun 01:29]--[2024-07-14 Sun 01:36] =>  0:07
+CLOCK: [2024-07-13 Sat 00:14]--[2024-07-13 Sat 00:41] =>  0:27
+CLOCK: [2024-07-13 Sat 00:02]--[2024-07-13 Sat 00:09] =>  0:07
+CLOCK: [2024-07-11 Thu 01:00]--[2024-07-11 Thu 01:41] =>  0:41
+CLOCK: [2024-07-11 Thu 00:59]--[2024-07-11 Thu 01:00] =>  0:01
+CLOCK: [2024-07-11 Thu 00:49]--[2024-07-11 Thu 00:59] =>  0:10
+CLOCK: [2024-07-09 Tue 15:04]--[2024-07-09 Tue 16:46] =>  1:42
+CLOCK: [2024-07-05 Fri 00:10]--[2024-07-05 Fri 00:33] =>  0:23
+CLOCK: [2024-07-04 Thu 19:44]--[2024-07-04 Thu 20:35] =>  0:51
+CLOCK: [2024-07-03 Wed 16:54]--[2024-07-03 Wed 16:57] =>  0:03
+CLOCK: [2024-07-03 Wed 11:10]--[2024-07-03 Wed 11:20] =>  0:10
+CLOCK: [2024-07-02 Tue 20:13]--[2024-07-02 Tue 20:30] =>  0:17
+CLOCK: [2024-07-01 Mon 10:36]--[2024-07-01 Mon 10:47] =>  0:11
+CLOCK: [2024-06-30 Sun 14:38]--[2024-06-30 Sun 14:44] =>  0:06
+CLOCK: [2024-06-30 Sun 12:26]--[2024-06-30 Sun 12:33] =>  0:07
+CLOCK: [2024-06-29 Sat 13:32]--[2024-06-29 Sat 14:09] =>  0:37
+CLOCK: [2024-06-29 Sat 07:43]--[2024-06-29 Sat 10:57] =>  3:14
+CLOCK: [2024-06-29 Sat 07:29]--[2024-06-29 Sat 07:36] =>  0:07
+CLOCK: [2024-06-26 Wed 15:02]--[2024-06-26 Wed 15:08] =>  0:06
+CLOCK: [2024-06-26 Wed 06:25]--[2024-06-26 Wed 06:46] =>  0:21
+CLOCK: [2024-06-25 Tue 05:01]--[2024-06-25 Tue 05:24] =>  0:23
+CLOCK: [2024-06-24 Mon 08:41]--[2024-06-24 Mon 09:47] =>  1:06
+CLOCK: [2024-06-24 Mon 02:51]--[2024-06-24 Mon 03:11] =>  0:20
+CLOCK: [2024-06-23 Sun 03:53]--[2024-06-23 Sun 03:57] =>  0:04
+CLOCK: [2024-06-22 Sat 21:32]--[2024-06-22 Sat 21:40] =>  0:08
+CLOCK: [2024-06-22 Sat 03:18]--[2024-06-22 Sat 04:05] =>  0:47
+CLOCK: [2024-06-21 Fri 03:50]--[2024-06-21 Fri 03:58] =>  0:08
+CLOCK: [2024-06-21 Fri 03:30]--[2024-06-21 Fri 03:50] =>  0:20
+CLOCK: [2024-06-19 Wed 03:53]--[2024-06-19 Wed 04:16] =>  0:23
+CLOCK: [2024-06-18 Tue 00:41]--[2024-06-18 Tue 01:14] =>  0:33
+CLOCK: [2024-06-17 Mon 10:15]--[2024-06-17 Mon 10:38] =>  0:23
+CLOCK: [2024-06-16 Sun 07:45]--[2024-06-16 Sun 07:55] =>  0:10
+CLOCK: [2024-06-16 Sun 01:16]--[2024-06-16 Sun 01:34] =>  0:18
+CLOCK: [2024-06-15 Sat 00:17]--[2024-06-15 Sat 00:44] =>  0:27
+CLOCK: [2024-06-14 Fri 05:46]--[2024-06-14 Fri 05:57] =>  0:11
+CLOCK: [2024-06-11 Tue 06:04]--[2024-06-11 Tue 06:25] =>  0:21
+CLOCK: [2024-06-10 Mon 20:24]--[2024-06-10 Mon 21:00] =>  0:36
+CLOCK: [2024-06-07 Fri 21:13]--[2024-06-07 Fri 21:53] =>  0:40
+CLOCK: [2024-06-05 Wed 23:06]--[2024-06-05 Wed 23:27] =>  0:21
+CLOCK: [2024-06-04 Tue 21:55]--[2024-06-04 Tue 22:28] =>  0:33
+CLOCK: [2024-06-04 Tue 21:54]--[2024-06-04 Tue 21:55] =>  0:01
+CLOCK: [2024-06-04 Tue 21:15]--[2024-06-04 Tue 21:54] =>  0:39
+CLOCK: [2024-06-02 Sun 00:55]--[2024-06-02 Sun 01:03] =>  0:08
+CLOCK: [2024-06-01 Sat 21:14]--[2024-06-01 Sat 21:19] =>  0:05
+CLOCK: [2024-06-01 Sat 17:07]--[2024-06-01 Sat 17:18] =>  0:11
+CLOCK: [2024-05-31 Fri 03:12]--[2024-05-31 Fri 03:26] =>  0:14
+CLOCK: [2024-05-28 Tue 23:57]--[2024-05-29 Wed 00:37] =>  0:40
+CLOCK: [2024-05-26 Sun 21:18]--[2024-05-26 Sun 23:42] =>  2:24
+CLOCK: [2024-05-25 Sat 20:41]--[2024-05-25 Sat 21:42] =>  1:01
+CLOCK: [2024-05-24 Fri 00:48]--[2024-05-24 Fri 01:04] =>  0:16
+CLOCK: [2024-05-18 Sat 01:31]--[2024-05-18 Sat 01:39] =>  0:08
+CLOCK: [2024-05-17 Fri 23:18]--[2024-05-17 Fri 23:55] =>  0:37
+CLOCK: [2024-05-17 Fri 12:03]--[2024-05-17 Fri 12:15] =>  0:12
+CLOCK: [2024-05-16 Thu 21:08]--[2024-05-16 Thu 21:17] =>  0:09
+CLOCK: [2024-05-14 Tue 17:21]--[2024-05-14 Tue 17:24] =>  0:03
+CLOCK: [2024-05-14 Tue 15:01]--[2024-05-14 Tue 16:28] =>  1:27
+CLOCK: [2024-05-12 Sun 07:06]--[2024-05-12 Sun 09:12] =>  2:06
+CLOCK: [2024-05-11 Sat 04:34]--[2024-05-11 Sat 05:04] =>  0:30
+CLOCK: [2024-05-07 Tue 02:05]--[2024-05-07 Tue 02:27] =>  0:22
+CLOCK: [2024-05-06 Mon 04:01]--[2024-05-06 Mon 04:14] =>  0:13
+CLOCK: [2024-05-05 Sun 07:38]--[2024-05-05 Sun 07:48] =>  0:10
+CLOCK: [2024-05-04 Sat 06:28]--[2024-05-04 Sat 08:35] =>  2:07
+CLOCK: [2024-05-03 Fri 07:40]--[2024-05-03 Fri 07:44] =>  0:04
+CLOCK: [2024-05-02 Thu 07:24]--[2024-05-02 Thu 07:56] =>  0:32
+CLOCK: [2024-04-28 Sun 09:28]--[2024-04-28 Sun 09:41] =>  0:13
+CLOCK: [2024-04-23 Tue 20:18]--[2024-04-23 Tue 21:00] =>  0:42
+CLOCK: [2024-04-17 Wed 11:30]--[2024-04-17 Wed 11:55] =>  0:25
+CLOCK: [2024-04-14 Sun 17:41]--[2024-04-14 Sun 17:53] =>  0:12
+CLOCK: [2024-04-13 Sat 00:11]--[2024-04-13 Sat 00:18] =>  0:07
+CLOCK: [2024-04-12 Fri 08:58]--[2024-04-12 Fri 09:25] =>  0:27
+CLOCK: [2024-04-11 Thu 05:19]--[2024-04-11 Thu 05:22] =>  0:03
+CLOCK: [2024-04-11 Thu 05:18]--[2024-04-11 Thu 05:19] =>  0:01
+CLOCK: [2024-04-10 Wed 03:52]--[2024-04-10 Wed 04:01] =>  0:09
+CLOCK: [2024-04-09 Tue 16:09]--[2024-04-09 Tue 16:33] =>  0:24
+CLOCK: [2024-04-08 Mon 11:35]--[2024-04-08 Mon 13:05] =>  1:30
+CLOCK: [2024-04-06 Sat 06:09]--[2024-04-06 Sat 14:40] =>  8:31
+CLOCK: [2024-04-03 Wed 23:30]--[2024-04-04 Thu 00:07] =>  0:37
+CLOCK: [2024-03-30 Sat 04:28]--[2024-03-30 Sat 05:33] =>  1:05
+CLOCK: [2024-03-29 Fri 06:41]--[2024-03-29 Fri 09:09] =>  2:28
+CLOCK: [2024-03-28 Thu 07:07]--[2024-03-28 Thu 07:25] =>  0:18
+CLOCK: [2024-03-27 Wed 04:39]--[2024-03-27 Wed 05:15] =>  0:36
+CLOCK: [2024-03-26 Tue 03:07]--[2024-03-26 Tue 03:44] =>  0:37
+CLOCK: [2024-03-24 Sun 01:06]--[2024-03-24 Sun 01:18] =>  0:12
+CLOCK: [2024-03-24 Sun 00:40]--[2024-03-24 Sun 01:03] =>  0:23
+CLOCK: [2024-03-23 Sat 12:53]--[2024-03-23 Sat 12:56] =>  0:03
+CLOCK: [2024-03-22 Fri 23:33]--[2024-03-22 Fri 23:45] =>  0:12
+CLOCK: [2024-03-22 Fri 20:59]--[2024-03-22 Fri 22:14] =>  1:15
+CLOCK: [2024-03-21 Thu 02:23]--[2024-03-21 Thu 02:55] =>  0:32
+CLOCK: [2024-03-20 Wed 08:07]--[2024-03-20 Wed 08:22] =>  0:15
+CLOCK: [2024-03-16 Sat 04:25]--[2024-03-16 Sat 04:58] =>  0:33
+CLOCK: [2024-03-14 Thu 12:12]--[2024-03-14 Thu 12:25] =>  0:13
+CLOCK: [2024-03-13 Wed 13:48]--[2024-03-13 Wed 14:01] =>  0:13
+CLOCK: [2024-03-13 Wed 04:20]--[2024-03-13 Wed 05:08] =>  0:48
+CLOCK: [2024-03-12 Tue 08:49]--[2024-03-12 Tue 09:21] =>  0:32
+CLOCK: [2024-03-11 Mon 07:38]--[2024-03-11 Mon 07:53] =>  0:15
+CLOCK: [2024-03-10 Sun 02:37]--[2024-03-10 Sun 03:34] =>  0:57
+CLOCK: [2024-03-08 Fri 23:15]--[2024-03-09 Sat 05:07] =>  5:52
+CLOCK: [2024-03-08 Fri 06:59]--[2024-03-08 Fri 07:20] =>  0:21
+CLOCK: [2024-03-05 Tue 05:48]--[2024-03-05 Tue 06:06] =>  0:18
+CLOCK: [2024-03-04 Mon 01:17]--[2024-03-04 Mon 01:57] =>  0:40
+CLOCK: [2024-03-02 Sat 07:26]--[2024-03-02 Sat 07:40] =>  0:14
+CLOCK: [2024-03-01 Fri 17:50]--[2024-03-01 Fri 18:45] =>  0:55
+CLOCK: [2024-02-29 Thu 21:59]--[2024-02-29 Thu 22:46] =>  0:47
+CLOCK: [2024-02-29 Thu 01:15]--[2024-02-29 Thu 01:43] =>  0:28
+CLOCK: [2024-02-28 Wed 00:13]--[2024-02-28 Wed 00:35] =>  0:22
+CLOCK: [2024-02-27 Tue 01:13]--[2024-02-27 Tue 01:34] =>  0:21
+CLOCK: [2024-02-26 Mon 03:16]--[2024-02-26 Mon 03:38] =>  0:22
+CLOCK: [2024-02-25 Sun 16:51]--[2024-02-25 Sun 17:22] =>  0:31
+CLOCK: [2024-02-24 Sat 14:07]--[2024-02-24 Sat 14:14] =>  0:07
+CLOCK: [2024-02-23 Fri 21:06]--[2024-02-23 Fri 21:26] =>  0:20
+CLOCK: [2024-02-23 Fri 15:41]--[2024-02-23 Fri 15:48] =>  0:07
+CLOCK: [2024-02-22 Thu 14:19]--[2024-02-22 Thu 14:55] =>  0:36
+CLOCK: [2024-02-22 Thu 01:59]--[2024-02-22 Thu 02:10] =>  0:11
+CLOCK: [2024-02-21 Wed 20:51]--[2024-02-21 Wed 22:09] =>  1:18
+CLOCK: [2024-02-21 Wed 02:19]--[2024-02-21 Wed 13:53] => 11:34
+CLOCK: [2024-02-20 Tue 01:19]--[2024-02-20 Tue 02:03] =>  0:44
+CLOCK: [2024-02-19 Mon 18:37]--[2024-02-19 Mon 18:46] =>  0:09
+CLOCK: [2024-02-19 Mon 17:18]--[2024-02-19 Mon 17:59] =>  0:41
+CLOCK: [2024-02-18 Sun 12:05]--[2024-02-18 Sun 13:20] =>  1:15
+CLOCK: [2024-02-18 Sun 11:16]--[2024-02-18 Sun 11:30] =>  0:14
+CLOCK: [2024-02-17 Sat 19:37]--[2024-02-17 Sat 20:17] =>  0:40
+CLOCK: [2024-02-17 Sat 15:35]--[2024-02-17 Sat 16:56] =>  1:21
+CLOCK: [2024-02-10 Sat 01:12]--[2024-02-10 Sat 01:24] =>  0:12
+CLOCK: [2024-02-09 Fri 11:42]--[2024-02-09 Fri 12:07] =>  0:25
+CLOCK: [2024-02-09 Fri 07:24]--[2024-02-09 Fri 07:37] =>  0:13
+CLOCK: [2024-02-09 Fri 02:18]--[2024-02-09 Fri 04:39] =>  2:21
+CLOCK: [2024-02-07 Wed 23:50]--[2024-02-08 Thu 00:31] =>  0:41
+CLOCK: [2024-02-07 Wed 02:15]--[2024-02-07 Wed 02:25] =>  0:10
+CLOCK: [2024-02-07 Wed 01:39]--[2024-02-07 Wed 01:43] =>  0:04
+CLOCK: [2024-02-05 Mon 19:11]--[2024-02-05 Mon 19:21] =>  0:10
+CLOCK: [2024-02-05 Mon 05:09]--[2024-02-05 Mon 05:22] =>  0:13
+CLOCK: [2024-02-04 Sun 21:12]--[2024-02-04 Sun 21:28] =>  0:16
+CLOCK: [2024-02-04 Sun 16:58]--[2024-02-04 Sun 17:18] =>  0:20
+CLOCK: [2024-02-03 Sat 18:56]--[2024-02-03 Sat 19:55] =>  0:59
+CLOCK: [2024-02-02 Fri 20:11]--[2024-02-02 Fri 20:50] =>  0:39
+CLOCK: [2024-02-02 Fri 00:30]--[2024-02-02 Fri 00:41] =>  0:11
+CLOCK: [2024-01-31 Wed 17:19]--[2024-01-31 Wed 18:33] =>  1:14
+CLOCK: [2024-01-29 Mon 20:21]--[2024-01-29 Mon 20:35] =>  0:14
+CLOCK: [2024-01-28 Sun 23:19]--[2024-01-29 Mon 01:26] =>  2:07
+CLOCK: [2024-01-28 Sun 20:42]--[2024-01-28 Sun 21:44] =>  1:02
+CLOCK: [2024-01-27 Sat 11:35]--[2024-01-27 Sat 11:50] =>  0:15
+CLOCK: [2024-01-26 Fri 12:20]--[2024-01-26 Fri 12:56] =>  0:36
+CLOCK: [2024-01-25 Thu 18:19]--[2024-01-25 Thu 19:00] =>  0:41
+CLOCK: [2024-01-24 Wed 21:58]--[2024-01-24 Wed 22:27] =>  0:29
+CLOCK: [2024-01-24 Wed 08:07]--[2024-01-24 Wed 08:52] =>  0:45
+CLOCK: [2024-01-23 Tue 09:31]--[2024-01-23 Tue 09:44] =>  0:13
+CLOCK: [2024-01-22 Mon 05:29]--[2024-01-22 Mon 05:58] =>  0:29
+CLOCK: [2024-01-22 Mon 01:31]--[2024-01-22 Mon 01:56] =>  0:25
+CLOCK: [2024-01-20 Sat 09:54]--[2024-01-20 Sat 10:24] =>  0:30
+CLOCK: [2024-01-19 Fri 07:00]--[2024-01-19 Fri 07:32] =>  0:32
+CLOCK: [2024-01-19 Fri 04:01]--[2024-01-19 Fri 04:46] =>  0:45
+CLOCK: [2024-01-19 Fri 03:10]--[2024-01-19 Fri 04:01] =>  0:51
+CLOCK: [2024-01-19 Fri 02:10]--[2024-01-19 Fri 03:06] =>  0:56
+:END:
+** DONE Al-Maslaha                                                   :@read:
+:LOGBOOK:
+:END:
+- [X] https://twitter.com/abbassbraham/status/701299230304894977
+- [X] https://twitter.com/abbassbraham/status/701299535243390976
+- [X] https://twitter.com/abbassbraham/status/701299769604313088
+- [X] https://twitter.com/abbassbraham/status/701299970293411841
+- [X] https://twitter.com/abbassbraham/status/701301076536918016
+** DONE [[https://hekmah.org/%d8%a5%d9%84%d8%ba%d8%a7%d8%a1-%d8%a7%d9%84%d8%ae%d9%84%d8%a7%d9%81%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d8%aa%d8%b2%d9%84%d8%a9-%d8%ad%d8%aa%d9%91%d9%89-%d8%b9%d8%b5%d8%b1-%d8%a7%d9%84%d9%85/][canceling of khilafa]]                                         :@read:
+:PROPERTIES:
+:ID:       y1kkk660tfk0
+:CUSTOM_ID: y1kkk660tfk0
+:END:
+:LOGBOOK:
+CLOCK: [2024-10-11 Fri 22:23]--[2024-10-11 Fri 22:29] =>  0:06
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:78903b85-1d2d-4564-8c37-7183fa55c617][History]] and [[id:nm0dxtp02wj0][Islam]]
+#+END_tag
+** DONE Early history of Takfir                                      :@read:
+:PROPERTIES:
+:ID:       muabz560tfk0
+:CUSTOM_ID: muabz560tfk0
+:END:
+:LOGBOOK:
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:nm0dxtp02wj0][Islam]]
+#+END_tag
+- [X]  https://twitter.com/abbassbraham/status/698246200051433472
+- [X]  https://twitter.com/abbassbraham/status/698252583752740864
+- [X]  https://twitter.com/abbassbraham/status/698252925064183808
+- [X]  https://twitter.com/abbassbraham/status/698254020553519104
+** DONE On [[https://alaalam.org/ar/society-and-culture-ar/item/615][Amazighs]]
+:LOGBOOK:
+CLOCK: [2024-12-12 Thu 05:57]--[2024-12-12 Thu 06:06] =>  0:09
+:END:
+#+BEGIN_tag
+{{{t}}} [[id:92z5s460tfk0][Amazighs]]
+#+END_tag
