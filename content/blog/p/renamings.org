@@ -1,0 +1,71 @@
+:PROPERTIES:
+:ID:       1ix262b1fsk0
+:CUSTOM_ID: 1ix262b1fsk0
+:END:
+#+title: Re: Programmers and software developers lost the plot on naming their tools
+#+DATE: <2025-12-15 Mon 13:17>
+
+#+BEGIN_tag
+{{{t}}} [[id:4u5664n02wj0][Programming]]
+#+END_tag
+
+My last post [[id:v192vmb1ask0][Programmers and software developers lost the plot on naming their tools]] was discussed heavily in [[https://news.ycombinator.com/item?id=46234806][HackerNews]], [[https://lobste.rs/s/qhairc/programmers_software_developers_lost][Lobsters]], and [[https://www.reddit.com/r/coding/comments/1pku3xh/programmers_and_software_developers_lost_the_plot/][r/coding]]. I'd like here to response to some comments that repeated fairly frequently.
+
+* =awk= is not a good name
+This comment specifically argues on this part:
+
+#+begin_actualquote
+I read a lot into software history, and I can't really say that there was an era of fantastic naming (even very experienced engineers made [[https://en.wikipedia.org/wiki/Inferno_(operating_system)][some]] [[https://en.wikipedia.org/wiki/Go_(programming_language)][very]] [[https://en.wikipedia.org/wiki/Limbo_(programming_language)][silly]] [[https://en.wikipedia.org/wiki/Sam_(text_editor)][naming]]) but at least some current was trying to make some sense in the 80s; grep (global regular expression print), awk (Aho, Weinberger, Kernighan; the creators' initials), sed (stream editor), cat (concatenate), diff (difference).
+#+end_actualquote
+
+Perhaps I was not very clear, but I didn't claim that any of these are good-enough names. Unlike many other disciplines, computer scientists never considered the problem of naming seriously, ideally, as I claimed in the previous post, we would have compound terms or namespaces for naming (so when another person develop another global regular expression print, it won't have collision with grep). Instead, my claim was that any of these names are still much better than "dogfind" or whatever anime character someone would pick to name their regex implementation after. Awk is indeed a bad name, but at least people back then were able to relate it to something, even if it was the author initials.
+* Scientists have Sonic hedgehog, and [[https://en.wikipedia.org/wiki/List_of_unusual_biological_names][other]] very [[https://en.wikipedia.org/wiki/List_of_unusual_biological_names][unusual names]]
+The claim was that even other scientists maintain some strange naming. But you can notice from the linked Wikipedia links how they indicate that they're "unusual", this should be enough to explain how this case differs from what we have in software development, which is the norm. Here's my response to one of the comments that mentioned Sonic hedgehog and some other bad names: 
+
+#+begin_actualquote
+Sonic hedgehog is a terrible example this case. Researchers literally had to tell parents their children had mutations in the "sonic hedgehog gene." The scientific community recognized this was a problem and it's a widely-known controversy. It's cited as an example of bad naming in medical ethics discussions.
+
+Boaty McBoatface? officials overrode the vote to name it after David Attenborough. The actual research submarine got the joke name. Again, this proves my point.
+
+Fat Gary was an internal chip designation that never needed to be public-facing. Perfectly fine.
+
+"Names are only for distinct identification" if efficiency was not at a question. Why use worse identifiers when better ones cost the same?
+#+end_actualquote
+** There's a lot of mythological links in most, even recent, scientific naming
+Again, very different case. My response:
+
+#+begin_actualquote
+The "Raptor Lake" codename in microprocessors is internal, the product ships with systematic designation. Engineers spec chips by model numbers that encode generation, tier, and performance class.
+
+In Pharmaceuticals, Doctors prescribe "sildenafil," not "Viagra." The generic name describes chemical structure. Brand names are marketing for consumers, not professional nomenclature.
+
+Mythology in chemistry/astronomy has centuries of legacy and connects to human cultural history. Calling an element "Titanium" after Titans carries weight. Calling a SQL replicator "Marmot" connects to... what, exactly? A weekend at the zoo?
+#+end_actualquote
+* If the community followed the author's guidance, we would have names like "Generic LLM wrapper 690" 
+My response:
+
+#+begin_actualquote
+Not at all. You don't name by category, you can name by function or approach. PostgreSQL isn't "Generic SQL Database 47" it's the successor to Ingres (Post-Ingres-SQL). If your "LLM wrapper" does nothing distinctive worth naming, maybe don't publish it. But if it specifically handles streaming, call it something like "llm-stream-client." If it focuses on prompt templating, "prompt-template-engine." The name encodes the actual value proposition.
+
+I actually stated this on the post, but let me reiterate, I think that naming things in somehow fun way is totally okay as long as it stays relevant to what the tool actually does (you can have this achieved by play wording suffixes (Mongo"DB", Open"SSL", Ma"git" are good examples, all are better than elephant, dog, and beaver).
+#+end_actualquote
+
+Again, we had much better technology to do much more effectively than that.
+
+
+Now what all these objections have in common? They're all defending the status quo by pointing to edge cases, internal designations, or acknowledged mistakes in other fields. But renaming is hard!" (So get it right initially.) "But scope changes!" (That's a feature, not a bug, the name should constrain scope.) None of these arguments address the core problem: the cumulative cognitive tax imposed on every developer who encounters your arbitrarily-named tool. They're optimizing for the creator's convenience at shipping time while ignoring the compound interest of confusion paid by every user thereafter.
+* What I'm Actually Asking For
+I'm not insisting every tool be named with Germanic compound precision. I'm asking for a return to the basic professional standard that existed (roughly) before we decided software engineering was too cool for clarity.
+
+The bar is remarkably low:
+
+- Does the name give any hint about the domain? (Database, HTTP, parsing, etc.)
+- Does it avoid actively misleading people about what it does?
+- Could someone plausibly guess the category from the name alone?
+
+That's it. MongoDB clears this bar. PostgreSQL clears it. "Marmot" for a SQLite replicator does not. "Isso" for a commenting system does not. "Viper" for configuration management does not.
+
+The question isn't "are descriptive names perfect?" They're not. The question is: "are they better than random words?" And the answer is obviously yes.
+
+Every defense of arbitrary naming boils down to: "descriptive naming has edge cases and costs." True. But those costs are one-time (renaming, choosing carefully) or constrained (scope can't silently expand). Random naming has perpetual costs paid by everyone who encounters the tool, forever.
+
