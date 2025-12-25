@@ -5,15 +5,11 @@
 :END:
 #+filetags: :project_archived:
 
-#+BEGIN_tag
-{{{t}}} [[id:rgogo9p02wj0][chess]]
-#+END_tag
-
 I mentioned previously somewhere in this site (can't be sure where, check the
 [[id:rgogo9p02wj0][Chess]] label for me and inform me please) that I aim to reach ~1600-1800 on the
 [[https://en.wikipedia.org/wiki/Glicko_rating_system][Glicko rating system.]] According to lichess.org, As of the time of writing this
 post, I'm now on 1951, and "better than 90.3% of Rapid players" with my brand
-new account.
+new account. #[[id:rgogo9p02wj0][chess]]
 
 #+BEGIN_PREVIEW
 Here are my 'finial' thoughts of chess after ~7 months of actively engaging with
