@@ -126,9 +126,8 @@ Here I collect my highlights from readings. More details of how this works can b
 -----
 #+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#qdh4rfv00sk0" :only-contents t
 
-
  
-/Derived from/ [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 34. Appeared: 2025-12-03 (22:35)
+from/ /Derived [cite:@al-muqaffaa-2019-al-durrah-yateem], no. 34. Appeared: 2025-12-03 (22:35)
 -----
 #+INCLUDE: "/Users/l/roam/references/al-muqaffaa-2019-al-durrah-yateem.org::#ie265xu00sk0" :only-contents t
 
