@@ -55,11 +55,12 @@ body {
     .blog-artwork {
         width: 420px;
         flex-shrink: 0;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
     }
 
     .artwork-box {
-        position: sticky;
-        top: 20px;
         border: 1px dotted var(--darkbrown);
     }
 
@@ -85,7 +86,6 @@ body {
 }
 
 @media (min-width: 1100px) {
-
     .separator,
     .blog-artwork {
         display: block;
@@ -245,10 +245,6 @@ body {
 
 .backlinks-title {
     font-style: italic;
-}
-
-.backlinks a {
-    text-decoration: none;
 }
 
 .backlinks a:hover {
@@ -473,4 +469,49 @@ blockquote {
     font-style: italic;
     margin: 5px 0 15px 0;
     color: var(--darkbrown, #2a2420);
+}
+
+/* Mobile/Desktop backlinks visibility */
+.backlinks-mobile {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.backlinks-desktop {
+    display: none;
+}
+
+@media (min-width: 1100px) {
+    .backlinks-mobile {
+        display: none;
+    }
+
+    .backlinks {
+        border-top: unset;
+    }
+
+    .backlinks-desktop {
+        display: block;
+
+        /* background: rgba(125, 85, 72, 0.03); */
+        /* box-shadow: 0 0 0 4px rgba(125, 85, 32, 0.03); */
+
+        /* margin-top: 25px; */
+        /* padding-top: 20px; */
+        /* border-top: 1px dotted var(--darkbrown, #2a2420); */
+        /* background-color: bisque; */
+    }
+
+    .backlinks-desktop .backlinks {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .backlinks-desktop .backlinks-title {
+        font-style: italic;
+    }
+
+    .backlinks-desktop .backlinks a {
+        display: inline;
+    }
 }

@@ -27,7 +27,7 @@
   <span class="backlinks-title">Referenced in: </span>
   {{- $total := len $backlinks -}}
   {{- range $i, $link := $backlinks -}}
-    <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if lt (add $i 1) $total }}, {{ end -}}
+    <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if eq (add $i 2) $total }} and {{ else if lt (add $i 1) $total }}, {{ end -}}
   {{- end -}}
 </div>
   {{- end -}}

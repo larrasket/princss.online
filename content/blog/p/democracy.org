@@ -5,11 +5,6 @@
 #+date:  <2024-01-07 Sun 12:25>
 #+cite_export: csl ieee.csl
 
-#+BEGIN_tag
-{{{t}}} 
-#+END_tag
-#+BEGIN_UNEXPORTEDTAG
-#+END_UNEXPORTEDTAG
 #+BEGIN_PREVIEW
 Or: how democracy spoils everything.
 #+END_PREVIEW
