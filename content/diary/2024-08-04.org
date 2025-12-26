@@ -3,9 +3,6 @@
 :END:
 #+title: Nostalgic Bibliography
 #+DATE: <2024-08-04 Sun 03:32>
-#+BEGIN_tag
-{{{t}}} 
-#+END_tag
 I'm reorganizing my [[id:omy9ejo02wj0][bibliography]], found out that there are many titles that I felt
 nostalgic towards. Many titles are related to people I used to discuss with or phases in
 my life. Some of them are:
