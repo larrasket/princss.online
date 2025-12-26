@@ -130,3 +130,7 @@ a {
 img {
     mix-blend-mode: multiply;
 }
+
+p {
+    unicode-bidi: plaintext !important;
+}

@@ -357,7 +357,7 @@ SCHEDULED: <2026-02-06 Fri +2m>
 :STATS:
 - State "DONE"       from "TODO"       [2025-12-07 Sun 01:35]
 :END:
-#[[id:4u5664n02wj0][Programming]] #[[id:mvk9gc7014k0][Art]]
+#[[id:4u5664n02wj0][Programming]] #[[id:mvk9gc7014k0][Art]] #[[id:ej076sp02wj0][Mathematics]]
 
 * Footnotes
 [fn:2] More like the ones we get to know 

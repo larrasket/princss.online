@@ -300,12 +300,10 @@ h5,
 h6,
 h7,
 h8 {
-    text-align: start !important;
     unicode-bidi: plaintext !important;
 }
 
 p {
-    text-align: start !important;
     unicode-bidi: plaintext !important;
 }
 
