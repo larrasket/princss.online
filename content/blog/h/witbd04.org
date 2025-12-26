@@ -5,10 +5,6 @@
 #+title: Real goodness
 #+DATE: <2025-11-15 Sat 22:51>
 
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
-
 I began again to analyze the matter from a third and purely personal point of view. Among the phenomena which particularly impressed me during my benevolent activity, there was one,—a very strange one,—which I could not understand for a long time.
 
 Whenever I happened, in the street or at home, to give a poor person a trifling sum without entering into conversation with him, I saw on his face, or imagined I saw, an expression of pleasure and gratitude, and I myself experienced an agreeable feeling at this form of charity. I saw that I had done what was expected of me. But when I stopped and began to question the man about his past and present life, entering more or less into particulars, I felt it was impossible to give him 3 or 20 kopeks; and I always began to finger the money in my purse, and, not knowing how much to give, I always gave more under these circumstances; but, nevertheless, I saw that the poor man went away from me dissatisfied. When I entered into still closer intercourse with him, my doubts as to how much I should give increased; and, no matter what I gave, the recipient seemed more and more gloomy and dissatisfied.
@@ -65,4 +61,4 @@ So everyone regards me as the cook's wife did. And I had gone about with the not
 
 No wonder I was ashamed. But before I can begin to do good I must leave off the evil and put myself in a position in which I should cease to cause it. But all my course of life is evil. If I were to give away a hundred thousand, I should not yet have put myself in a condition in which I could do good, because I have still five hundred thousand left.
 
-It is only when I possess nothing at all that I shall be able to do a little good; such as, for instance, the poor prostitute did who nursed a sick woman and her child for three days. Yet this seemed to me to be but so little! And I ventured to think of doing good! One thing only was true, which I at first felt on seeing the hungry and cold people outside Liapin's house,—that I was guilty of that; and that to live as I did was impossible, utterly impossible. What shall we do then? If somebody still needs an answer to this question, I will, by God's permission, give one, in detail.
+It is only when I possess nothing at all that I shall be able to do a little good; such as, for instance, the poor prostitute did who nursed a sick woman and her child for three days. Yet this seemed to me to be but so little! And I ventured to think of doing good! One thing only was true, which I at first felt on seeing the hungry and cold people outside Liapin's house,—that I was guilty of that; and that to live as I did was impossible, utterly impossible. What shall we do then? If somebody still needs an answer to this question, I will, by God's permission, give one, in detail. #[[id:x0egwn81crk0][What is it to be done?]]
