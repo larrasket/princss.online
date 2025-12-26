@@ -5,10 +5,6 @@
 #+title: Confession of guilt
 #+DATE: <2025-11-15 Sat 22:52>
 
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
-
 It was hard for me to own this; but when I had got so far I was terrified at the delusion in which I had been living. I had been head over ears in the mud myself, and yet I had been trying to drag others out of it.
 
 What is it that I really want? I want to do good; I want to contrive so that no human beings shall be hungry and cold, and that men may live as it is proper for them to live. I desire this; and I see that in consequence of all sorts of violence, extortions, and various expedients in which I too take part, the working people are deprived of the necessary things, and the non-working community, to whom I also belong, monopolize the labour of others. I see that this use of other people's labour is distributed thus: That the more cunning and complicated the devices employed by the man himself (or by those from whom he has inherited his property), the more largely he employs the labours of other people, and the less he works himself.
@@ -47,4 +43,4 @@ All my life is spent thus: I eat, talk, and listen; then I eat, write, or read, 
 
 The woman who nursed the sick old man helped him; the peasant's wife, who cut a slice of her bread earned by herself, from the very sowing of the corn that made it, helped the hungry one; Simon, who gave three kopeks which he had earned, assisted the pilgrim, because these three kopeks really represented his labour; but I had served nobody, worked for no one, and knew very well that my money did not represent my labour.
 
-And so I felt that in money, or in money's worth, and in the possession of it, there was something wrong and evil; that the money itself, and the fact of my having it, was one of the chief causes of those evils which I had seen before me; and I asked myself, What is money?
+And so I felt that in money, or in money's worth, and in the possession of it, there was something wrong and evil; that the money itself, and the fact of my having it, was one of the chief causes of those evils which I had seen before me; and I asked myself, What is money? #[[id:x0egwn81crk0][What is it to be done?]]
