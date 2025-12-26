@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       glwbc9x01pk0
+:CUSTOM_ID: glwbc9x01pk0
+:END:
+#+title: 2025 09 13
+#+DATE: <2025-12-26 Fri 02:41>
+
+
+I was recently introduced to the concept [[https://youtu.be/dSlMmCD5quc][Emacs Bankruptcy]] (EB) by this cool
+video from Jake B. I have done EB maybe more than 10 times, I never knew the
+term though. I'm currently in the process of doing another one, hopefully the
+last.
