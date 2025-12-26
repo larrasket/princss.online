@@ -4,7 +4,6 @@
 #+title: I can also paint
 #+DATE:  <2023-06-22 Thu 13:00>
 #+filetags: :project:
-#+MACRO: hl @@html:<span style="background-color: #FFFF00;">$1</span>@@
 
 
 #+BEGIN_PREVIEW
@@ -160,31 +159,26 @@ music artists are:
 I enjoy classics. These are my favorite pieces:
 
 From Bach:
-#+begin_example
-Johann Sebastian Bach - (1704-1750) Toccata and Fugue in D minor, BWV 565.mp3
-Johann Sebastian Bach - (1704-1750) Air on the G String.mp3
-Johann Sebastian Bach - (1704-1750) Brandenburg Concerto No. 3 in G Major, BWV 1048 (Allegro moderato).mp3
-#+end_example
-From Mozart:
-#+begin_example
+
+
+- Johann Sebastian Bach - (1704-1750) Toccata and Fugue in D minor, BWV 565.mp3
+- Johann Sebastian Bach - (1704-1750) Air on the G String.mp3
+- Johann Sebastian Bach - (1704-1750) Brandenburg Concerto No. 3 in G Major, BWV 1048 (Allegro moderato).mp3
 Wolfgang Amadeus Mozart - (1785) Piano Concerto No. 21 KV.467 (II.Andante).mp3
-#+end_example
 From others:
-#+begin_example
- Ludwig van Beethoven - (1801) Sonata No. 14 in C-sharp minor for Piano Op. 27 (No. 2 Moonlight; Adagio sostenuto).mp3
- Ludwig van Beethoven - (1810) Fur Elise Bagatelle No.25.mp3
- Ludwig van Beethoven - (1824) Symphony No. 9 In D Minor, Op. 125 Choral (II. Molto vivace; Presto).mp3
- Gioachino Rossini - (1828) William Tell Overture (excerpt).mp3
- Johann Strauss - (1864) Marche Persanne, Op. 289.mp3
- Gabriel Fauré - (1887) Pavane, Op. 50.mp3
- Nikolai Rimsky-Korsakov - (1899) Flight of the Bumblebee.mp3
- Francisco Tarrega - (1908) Recuerdos de la Alhambra.mp3
- Antonín DVOŘÁK - (1893) Symphony No.9 in E Minor, Op. 95 (From The New World, IV. Allegro con fuoco).mp3
-#+end_example
+
+ - Ludwig van Beethoven - (1801) Sonata No. 14 in C-sharp minor for Piano Op. 27 (No. 2 Moonlight; Adagio sostenuto).mp3
+ - Ludwig van Beethoven - (1810) Fur Elise Bagatelle No.25.mp3
+ - Ludwig van Beethoven - (1824) Symphony No. 9 In D Minor, Op. 125 Choral (II. Molto vivace; Presto).mp3
+ - Gioachino Rossini - (1828) William Tell Overture (excerpt).mp3
+ - Johann Strauss - (1864) Marche Persanne, Op. 289.mp3
+ - Gabriel Fauré - (1887) Pavane, Op. 50.mp3
+ - Nikolai Rimsky-Korsakov - (1899) Flight of the Bumblebee.mp3
+ - Francisco Tarrega - (1908) Recuerdos de la Alhambra.mp3
+ - Antonín DVOŘÁK - (1893) Symphony No.9 in E Minor, Op. 95 (From The New World, IV. Allegro con fuoco).mp3
 I rarely enjoy opera;
-#+begin_example
-Léo Delibes                             3. (1883) Lakmé (Flower Duet)
-#+end_example
+
+- Léo Delibes                             3. (1883) Lakmé (Flower Duet)
 
 [[https://youtu.be/F9dBl_pLc3g][TSU! - Prince of Gumbay]] For me, this is the most peaceful piece of music I've
 ever heard.
@@ -195,6 +189,7 @@ building a music player.
 
 Currently, I'm not interested in exploring any new types of music, I prefer to stick to
 the collection I already have.
+
 ** Leonard Cohen
 :PROPERTIES:
 :ID:       sqw4olv04xj0
