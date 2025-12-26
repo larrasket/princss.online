@@ -1,21 +1,53 @@
-{{- /* Native backlinks partial - finds all pages that link to this page's ID */}}
-{{- /* Usage: {{ partial "native-backlinks.html" . }} */}}
+{{- /* Native backlinks partial - finds all pages that link to ANY ID in this page */}}
+{{- /* Now supports sub-heading IDs and links with #anchor */}}
 
-{{- $thisId := "" -}}
-{{- $idMatch := findRE `:ID:\s+(\S+)` .RawContent 1 -}}
-{{- if $idMatch -}}
-  {{- $thisId = replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+{{- /* Extract ALL IDs from this page (top-level and sub-headings) */}}
+{{- $allIds := slice -}}
+{{- $idMatches := findRE `:ID:\s+(\S+)` .RawContent -}}
+{{- range $idMatches -}}
+  {{- $id := replaceRE `:ID:\s+` "" . -}}
+  {{- $allIds = $allIds | append $id -}}
 {{- end -}}
 
-{{- if $thisId -}}
+{{- if $allIds -}}
+  {{- /* Map of id -> anchor (using CUSTOM_ID if available) */}}
+  {{- $idToAnchor := dict -}}
+  {{- $customIdMatches := findRE `:CUSTOM_ID:\s+(\S+)` $.RawContent -}}
+  {{- range $customIdMatches -}}
+    {{- $customId := replaceRE `:CUSTOM_ID:\s+` "" . -}}
+    {{- $idToAnchor = merge $idToAnchor (dict $customId $customId) -}}
+  {{- end -}}
+  
   {{- $backlinks := slice -}}
   {{- range site.AllPages -}}
     {{- if and .File (eq .File.Ext "org") -}}
       {{- if ne .RelPermalink $.RelPermalink -}}
-        {{- if in .RawContent $thisId -}}
+        {{- $content := .RawContent -}}
+        {{- $foundId := "" -}}
+        {{- range $allIds -}}
+          {{- if in $content . -}}
+            {{- $foundId = . -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $foundId -}}
           {{- $title := partial "org-title.html" . -}}
           {{- if $title -}}
-            {{- $backlinks = $backlinks | append (dict "url" .RelPermalink "title" $title) -}}
+            {{- /* Build URL with anchor if it's a sub-heading (not first ID) */}}
+            {{- $url := .RelPermalink -}}
+            {{- $anchor := index $idToAnchor $foundId -}}
+            {{- if and $anchor (ne $foundId (index $allIds 0)) -}}
+              {{- $url = printf "%s#%s" .RelPermalink $anchor -}}
+            {{- end -}}
+            {{- /* Check if already added (avoid duplicates) */}}
+            {{- $exists := false -}}
+            {{- range $backlinks -}}
+              {{- if eq .title $title -}}
+                {{- $exists = true -}}
+              {{- end -}}
+            {{- end -}}
+            {{- if not $exists -}}
+              {{- $backlinks = $backlinks | append (dict "url" $url "title" $title) -}}
+            {{- end -}}
           {{- end -}}
         {{- end -}}
       {{- end -}}

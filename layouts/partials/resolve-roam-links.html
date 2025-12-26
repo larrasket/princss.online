@@ -1,15 +1,30 @@
 {{- $content := . -}}
 
-{{- /* Build a map of org-roam ID -> URL from Hugo content only */ -}}
+{{- /* Build a map of org-roam ID -> URL from Hugo content (ALL IDs, including sub-headings) */ -}}
 {{- $idMap := dict -}}
 {{- range site.AllPages -}}
   {{- if and .File (eq .File.Ext "org") -}}
     {{- $rawContent := .RawContent -}}
-    {{- $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 -}}
-    {{- if $idMatch -}}
-      {{- $idLine := index $idMatch 0 -}}
-      {{- $id := replaceRE `:ID:\s+` "" $idLine -}}
-      {{- $idMap = merge $idMap (dict $id .RelPermalink) -}}
+    {{- $baseUrl := .RelPermalink -}}
+    {{- /* Extract ALL IDs from this page */ -}}
+    {{- $idMatches := findRE `:ID:\s+(\S+)` $rawContent -}}
+    {{- $customIdMatches := findRE `:CUSTOM_ID:\s+(\S+)` $rawContent -}}
+    {{- /* First ID is the page-level ID (no anchor) */ -}}
+    {{- $isFirst := true -}}
+    {{- range $idMatches -}}
+      {{- $id := replaceRE `:ID:\s+` "" . -}}
+      {{- if $isFirst -}}
+        {{- $idMap = merge $idMap (dict $id $baseUrl) -}}
+        {{- $isFirst = false -}}
+      {{- else -}}
+        {{- /* Sub-heading: use ID as anchor */ -}}
+        {{- $idMap = merge $idMap (dict $id (printf "%s#%s" $baseUrl $id)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* Also map CUSTOM_IDs for anchor links */ -}}
+    {{- range $customIdMatches -}}
+      {{- $customId := replaceRE `:CUSTOM_ID:\s+` "" . -}}
+      {{- $idMap = merge $idMap (dict $customId (printf "%s#%s" $baseUrl $customId)) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
