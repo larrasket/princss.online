@@ -16,18 +16,18 @@ the heading. Except for the controversy and podcasts.
 :CUSTOM_ID: classics
 :END:
 
-{{{inc(../things/classic_music.org)}}}
+{{{inc(../../../../things/classic_music.org)}}}
 * Computers
 :PROPERTIES:
 :CUSTOM_ID: computers
 :END:
 
-{{{inc(../things/computer_science.org)}}}
+{{{inc(../../../../things/computer_science.org)}}}
 ** Go
 :PROPERTIES:
 :CUSTOM_ID: go
 :END:
-{{{inc(h/go.org)}}}
+{{{inc(go.org)}}}
 ** Lisp
 :PROPERTIES:
 :CUSTOM_ID: lsp
