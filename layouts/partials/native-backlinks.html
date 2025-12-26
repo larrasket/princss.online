@@ -1,5 +1,5 @@
 {{- /* Native backlinks partial - finds all pages that link to ANY ID in this page */}}
-{{- /* Now supports sub-heading IDs and links with #anchor */}}
+{{- /* Now includes "leads to" (outgoing links) appended after "referenced in" */}}
 
 {{- /* Extract ALL IDs from this page (top-level and sub-headings) */}}
 {{- $allIds := slice -}}
@@ -9,16 +9,62 @@
   {{- $allIds = $allIds | append $id -}}
 {{- end -}}
 
-{{- if $allIds -}}
-  {{- /* Map of id -> anchor (using CUSTOM_ID if available) */}}
-  {{- $idToAnchor := dict -}}
-  {{- $customIdMatches := findRE `:CUSTOM_ID:\s+(\S+)` $.RawContent -}}
-  {{- range $customIdMatches -}}
-    {{- $customId := replaceRE `:CUSTOM_ID:\s+` "" . -}}
-    {{- $idToAnchor = merge $idToAnchor (dict $customId $customId) -}}
+{{- /* Build global ID -> page info map for outgoing links */}}
+{{- $globalIdMap := dict -}}
+{{- range site.AllPages -}}
+  {{- if and .File (eq .File.Ext "org") -}}
+    {{- $rawContent := .RawContent -}}
+    {{- $pageUrl := .RelPermalink -}}
+    {{- $pageIdMatches := findRE `:ID:\s+(\S+)` $rawContent -}}
+    {{- range $pageIdMatches -}}
+      {{- $id := replaceRE `:ID:\s+` "" . -}}
+      {{- $globalIdMap = merge $globalIdMap (dict $id $pageUrl) -}}
+    {{- end -}}
   {{- end -}}
-  
-  {{- $backlinks := slice -}}
+{{- end -}}
+
+{{- /* Build global ID -> title map */}}
+{{- $globalTitleMap := dict -}}
+{{- range site.AllPages -}}
+  {{- if and .File (eq .File.Ext "org") -}}
+    {{- $rawContent := .RawContent -}}
+    {{- $pageTitle := partial "org-title.html" . -}}
+    {{- $pageIdMatches := findRE `:ID:\s+(\S+)` $rawContent -}}
+    {{- range $pageIdMatches -}}
+      {{- $id := replaceRE `:ID:\s+` "" . -}}
+      {{- if $pageTitle -}}
+        {{- $globalTitleMap = merge $globalTitleMap (dict $id $pageTitle) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Find outgoing links (pages this page links to) */}}
+{{- $outgoing := slice -}}
+{{- $idLinkMatches := findRE `id:([a-zA-Z0-9]+)` .RawContent -}}
+{{- range $idLinkMatches -}}
+  {{- $id := replaceRE `id:` "" . -}}
+  {{- $targetUrl := index $globalIdMap $id -}}
+  {{- $targetTitle := index $globalTitleMap $id -}}
+  {{- if and $targetUrl $targetTitle -}}
+    {{- if ne $targetUrl $.RelPermalink -}}
+      {{- /* Check if already added */}}
+      {{- $exists := false -}}
+      {{- range $outgoing -}}
+        {{- if eq .title $targetTitle -}}
+          {{- $exists = true -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $exists -}}
+        {{- $outgoing = $outgoing | append (dict "url" $targetUrl "title" $targetTitle) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Find incoming links (pages that link to this page) */}}
+{{- $backlinks := slice -}}
+{{- if $allIds -}}
   {{- range site.AllPages -}}
     {{- if and .File (eq .File.Ext "org") -}}
       {{- if ne .RelPermalink $.RelPermalink -}}
@@ -32,13 +78,6 @@
         {{- if $foundId -}}
           {{- $title := partial "org-title.html" . -}}
           {{- if $title -}}
-            {{- /* Build URL with anchor if it's a sub-heading (not first ID) */}}
-            {{- $url := .RelPermalink -}}
-            {{- $anchor := index $idToAnchor $foundId -}}
-            {{- if and $anchor (ne $foundId (index $allIds 0)) -}}
-              {{- $url = printf "%s#%s" .RelPermalink $anchor -}}
-            {{- end -}}
-            {{- /* Check if already added (avoid duplicates) */}}
             {{- $exists := false -}}
             {{- range $backlinks -}}
               {{- if eq .title $title -}}
@@ -46,21 +85,47 @@
               {{- end -}}
             {{- end -}}
             {{- if not $exists -}}
-              {{- $backlinks = $backlinks | append (dict "url" $url "title" $title) -}}
+              {{- $backlinks = $backlinks | append (dict "url" .RelPermalink "title" $title) -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
-  
-  {{- if $backlinks -}}
+{{- end -}}
+
+{{- /* Filter outgoing to remove duplicates with backlinks */}}
+{{- $filteredOutgoing := slice -}}
+{{- range $outgoing -}}
+  {{- $outUrl := .url -}}
+  {{- $isDuplicate := false -}}
+  {{- range $backlinks -}}
+    {{- if eq .url $outUrl -}}
+      {{- $isDuplicate = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $isDuplicate -}}
+    {{- $filteredOutgoing = $filteredOutgoing | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Render both sections */}}
+{{- if or $backlinks $filteredOutgoing -}}
 <div class="backlinks">
+  {{- if $backlinks -}}
   <span class="backlinks-title">Referenced in: </span>
   {{- $total := len $backlinks -}}
   {{- range $i, $link := $backlinks -}}
     <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if eq (add $i 2) $total }} and {{ else if lt (add $i 1) $total }}, {{ end -}}
   {{- end -}}
-</div>
   {{- end -}}
+  {{- if and $backlinks $filteredOutgoing }}; {{ end -}}
+  {{- if $filteredOutgoing -}}
+  <span class="backlinks-title">leads to: </span>
+  {{- $total := len $filteredOutgoing -}}
+  {{- range $i, $link := $filteredOutgoing -}}
+    <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if eq (add $i 2) $total }} and {{ else if lt (add $i 1) $total }}, {{ end -}}
+  {{- end -}}
+  {{- end -}}
+</div>
 {{- end -}}
