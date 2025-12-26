@@ -751,9 +751,7 @@ Same place as [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]]
 :ID:       twm55be0elk0
 :CUSTOM_ID: twm55be0elk0
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:r98aze11tik0][Christian Art]]
-#+END_tag
+#[[id:r98aze11tik0][Christian Art]]
 
 #+DOWNLOADED: screenshot @ 2025-06-06 04:46:21
 [[file:../../media/Art_Content/2025-06-06_04-46-21_screenshot.png]]
@@ -784,9 +782,7 @@ Same place as [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]]
 :ID:       nc1ltnn0glk0
 :CUSTOM_ID: nc1ltnn0glk0
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:r98aze11tik0][Christian Art]]
-#+END_tag
+#[[id:r98aze11tik0][Christian Art]]
 
 #+DOWNLOADED: screenshot @ 2025-06-07 20:32:54
 [[file:../../media/Art_Content/2025-06-07_20-32-54_screenshot.png]]
@@ -819,9 +815,7 @@ Same place as [[id:4qi0dq416kk0][Ask Me No more, Sir Lawrence Alma-Tadema]]
 :ID:       ya364s00olk0
 :CUSTOM_ID: ya364s00olk0
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:cbv0qjh0glk0][A Young Girl Defending Herself Against  Eros, William-Adolphe Bouguereau]]
-#+END_tag
+#[[id:cbv0qjh0glk0][A Young Girl Defending Herself Against  Eros, William-Adolphe Bouguereau]]
 
 #+DOWNLOADED: screenshot @ 2025-06-13 13:56:44
 [[file:../../media/Art_Content/2025-06-13_13-56-44_screenshot.png]]
@@ -2144,10 +2138,8 @@ https://www.wikiart.org/en/Alphabet/a/text-list
   sswda
 :END:
 [2025-06-08 Sun 22:43]
-#+BEGIN_tag
-{{{t}}} [[id:r98aze11tik0][Christian Art]]
-#+END_tag
-* TODO [[https://en.wikipedia.org/wiki/History_painting][History painting - Wikipedia]]                                   :@idea:
+#[[id:r98aze11tik0][Christian Art]]
+* TODO [[https://en.wikipedia.org/wiki/History_painting][History painting - Wikipedia]]                                 :@idea:
 :LOGBOOK:
 CLOCK: [2025-12-04 Thu 23:11]--[2025-12-04 Thu 23:13] =>  0:02
 :END:
