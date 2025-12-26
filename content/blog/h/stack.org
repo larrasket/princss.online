@@ -62,56 +62,6 @@ Installing Zathura on OSX: ~==> Fetching dependencies for homebrew-zathura/zathu
 {{{t}}} [[id:4ly8im40gzj0][Emacs]]
 #+END_tag
 https://www.youtube.com/watch?v=pccwXPLd1YQ Exactly how I feel to Emacs after finding an Elisp package that does something that required me to switch my display editor to another software.
-** Some other notes on [[id:x0z0fu11qxj0][exception handling]]
-:PROPERTIES:
-:ID:       qow1lzo0aqk0
-:CUSTOM_ID: qow1lzo0aqk0
-:END:
-- [2025-11-15 Sat 15:52] \\
-  Reading https://ieeexplore.ieee.org/document/7832935/ today. It mentions that most common uses of =catch=: 1. Logs the error rather than recovering from it 2. About 80% of people are using the common "Exception" class, rather than their subclasses.
-:DATE:
-[2025-10-17 Fri 20:35]
-:END:
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
-I wrote about exception handling before in my draft on programming languages, generally, I consider exception handling to be extremely distasteful, and before you relate this to me being biased toward functional states, no I had this feeling from the first day writing C#; I was always astonished by how the MS documentation was strictly telling us "hey be careful with this thing" and hopping for the best, and for the way my app needed a "global exception handler" that swallows everything, and I looked and looked for a way in which I could just know whether a function throw or not, I assumed that I'm getting something wrong, because I couldn't believe that this is a standard practice and due to my insufficient experience back then, I couldn't find any literature discussing this problem. I wrote about a similar concern in my old mentioned draft, but it's far from complete in the regard of why throwing exceptions is generally a terrible idea. Here I'm sharing some of contributions that I found: 1. [[https://www.lighterra.com/papers/exceptionsharmful/][Exception Handling Considered Harmful]][fn:6] 2. [[https://www.joelonsoftware.com/2003/10/13/13/][13 – Joel on Software]] 3. [[https://pianomanfrazier.com/post/exceptions-considered-harmful/][Exceptions Considered Harmful]] 4. [[https://dave.cheney.net/2012/01/18/why-go-gets-exceptions-right][Why Go gets exceptions right | Dave Cheney]]. From the other side: 1. [[https://eiriktsarpalis.wordpress.com/2017/02/19/youre-better-off-using-exceptions/][You’re better off using Exceptions – Eirik Tsarpalis' blog]] and I have a quick response for some issues it demonstrates; a. An Awkward Reconciliation: this assumes that the programming language you are using, library or other called functions are going to throw, which is invalid if you can never have this state in your language. b. Boilerplate: this is a style preference IMO, most of Go developers for example do not mind the infamous ~if err != nil~ for me it's explicit and eloquent. c. Where’s my Stacktrace?: exporting the Stacktrace has nothing to do with throwing exceptions, it's very possible to expose it in almost all languages (including Go) without exceptions. 2. [[https://nedbatchelder.com/text/exceptions-vs-status.html][Exceptions vs. status returns | Ned Batchelder]][fn:7].
-** TODO [[id:50fllvj0aqk0][The Triumph of Divine Providence by Pietro da Cortona]]      :@idea:noexport:@later:
-:PROPERTIES:
-:ID:       l5v2j4k0aqk0
-:CUSTOM_ID: l5v2j4k0aqk0
-:END:
-:DATE:
-[2025-10-17 Fri 18:50]
-:END:
-#+BEGIN_tag
-{{{t}}} [[id:mvk9gc7014k0][Art]]
-#+END_tag
- The Triumph of Divine Providence by Pietro da Cortona  Mindblowing work. I can't find any good literature that explains it thoroughly. Might be worth investigating some day.
-** TODO [#C] [[id:3xifm2g0kpk0][The Romans in their Decadence]]                         :@read:noexport:@later:
-:PROPERTIES:
-:ID:       g180s3g0kpk0
-:CUSTOM_ID: g180s3g0kpk0
-:END:
-:DATE:
-[2025-09-27 Sat 23:59]
-:END:
-#+BEGIN_tag
-{{{t}}} [[id:mvk9gc7014k0][Art]]
-#+END_tag
-I really like this painting a lot, but I fail to properly interpret it. Do you know a good interpretation? Share it in the email please (this applies also if you're reading this post in a distant future, I keep track of long old TODOs).
-** "Clean Architecture"
-:PROPERTIES:
-:ID:       byb2fy71zpk0
-:CUSTOM_ID: byb2fy71zpk0
-:END:
-:DATE:
-[2025-10-09 Thu 19:10]
-:END:
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
-[[id:08oaz130rek0][I care about]] [[id:bek89831uxj0][naming]]. I wrote recently about how I hate the way [[id:7jpiga90whk0][Microsoft]] names its products ([[https://news.ycombinator.com/item?id=44930297][see here]]). Seemingly, Microsoft champions have the same issue. There's a common thing in the Microsoft Java++ (C#) ecosystem called "clean architecture". I still remember hearing the term from my coworker for the first time and I thought she was talking "clean" as in an adjective not a term. Why the hell someone would call a design pattern "clean", how clean is it?
 ** "[[https://evil.readthedocs.io/en/latest/settings.html][This variable must be set before Evil is loaded.]]"
 :PROPERTIES:
 :ID:       24u27g21apk0
@@ -126,49 +76,6 @@ I really like this painting a lot, but I fail to properly interpret it. Do you k
 {{{t}}} [[id:4ly8im40gzj0][Emacs]]
 #+END_tag
 Why?
-** Note for Windows Programmers
-:PROPERTIES:
-:ID:       tpqa1lq04pk0
-:CUSTOM_ID: tpqa1lq04pk0
-:END:
-:DATE:
-[2025-09-15 Mon 23:59]
-:END:
-#+BEGIN_tag
-{{{t}}} [[id:4u5664n02wj0][Programming]]
-#+END_tag
-Reading [cite:@hall-2023-beejs-guide]. It has an interesting note for Windows
-programmers: "At this point in the guide, historically, I’ve done a bit of
-bagging on Windows, simply due to the fact that I don’t like it very much. But
-then Windows and Microsoft (as a company) got a lot better. Windows 10 coupled
-with WSL (below) actually makes for a decent operating system. Not really a lot
-to complain about.  Well, a little—for example, I’m writing this (in 2025) on a
-2015 laptop that used to run Windows 10. Eventually it got too slow and I
-installed Linux on it. And have been using it ever since.  But now we have
-Windows 11 that apparently requires beefier hardware than Windows 10. I’m not a
-fan of that. The OS should be as unobtrusive as possible and not require you to
-spend more money.  The extra CPU power should be for apps, not the OS!
-Additionally, Microsoft knows what you want, and what you want is more
-advertising! Right? In your operating system! Weren’t you missing that? Now you
-can have it with Windows 11.  So… I still encourage you to try Linux , BSD ,
-illumos or any other flavor of Unix instead of Windows.". It's a nice harsh
-punch for newcomers. I still think that MS Windows is one of the worst blocking
-obstacles in 21th computing. Perhaps one big factor that made mobile usage
-thrive they way it is, was the way MS made the desktop experience so bad, and
-the way Apple made it unaffordable.
-
-** [[https://youtu.be/dSlMmCD5quc][Emacs bankruptcy]]
-:PROPERTIES:
-:ID:       glwbc9x01pk0
-:CUSTOM_ID: glwbc9x01pk0
-:END:
-:DATE:
-[2025-09-13 Sat 20:22]
-:END:
-I was recently introduced to the concept Emacs Bankruptcy (EB) by this cool
-video from Jake B. I have done EB maybe more than 10 times, I never knew the
-term though. I'm currently in the process of doing another one, hopefully the
-last.
 ** C#, Dating, and Ukraine War
 :PROPERTIES:
 :ID:       jxdgqja0rok0
