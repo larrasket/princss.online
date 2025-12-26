@@ -1,0 +1,9 @@
+#+title: Emacs M4 Experience
+#+DATE: <2025-07-05 Fri 02:43>
+
+
+Using Intel processor for all these years, which is quite slow compared to Apple
+Chips, made me spend a lot of work to optimize my single-threaded favorite
+display editor. The experience was pleasant overall, but using it now on a very
+fast computer, it is not just pleasant it is blazingly fast. The difference is
+just unimaginable. #[[id:4ly8im40gzj0][Emacs]]
