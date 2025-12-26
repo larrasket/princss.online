@@ -5,6 +5,7 @@
 #+date: <2023-10-07 Sat 16:37>
 #+filetags: :project_archived:
 #+cite_export: csl  harvard.csl
+
 #+BEGIN_PREVIEW
 How does the US manipulate global policy using sanctions and political aids as a
 carrot and stick strategy.
@@ -41,7 +42,7 @@ would not achieve the pulverization of Iraq.
 
 #+ATTR_HTML: :class iframe-wrapper
 #+begin_figure
-@@html:<iframe width="853" height="480" src="https://www.youtube.com/embed/2feXGli1VnE" frameborder="0" allowfullscreen></iframe>@@
+@@html:<iframe src="https://www.youtube.com/embed/2feXGli1VnE" frameborder="0" allowfullscreen></iframe>@@
 #+end_figure
 
 
@@ -103,5 +104,3 @@ CLOCK: [2023-10-07 Sat 16:37]--[2023-10-07 Sat 18:17] =>  1:40
 study, it's available for open view on
 https://www.hbs.edu/faculty/Pages/item.aspx?num=22724
 
-* References
-#+print_bibliography:
