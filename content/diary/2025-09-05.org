@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       jxdgqja0rok0
+:CUSTOM_ID: jxdgqja0rok0
+:END:
+#+title: C#, Dating, and Ukraine War
+#+DATE: <2025-12-26 Fri 02:41>
+
+
+These might sound extremely unrelated topics, and yes they are. Around 4 or 5
+years ago I used to watch a YouTuber who started his channel with the pandamic,
+and I was learning some C# patterns then. He was making these nice videos about
+C#, and his way of explaining some topics was really fun. However, he started
+also giving some dating advices[fn:5], I stopped following him when he started
+doing all that dating stuff, but later he made a single one video on Ukraine
+war, it was about the tanks. The video went so popular and since then his
+channel got around 500K followers, I don't recall him making any videos again on
+tech or dating and I'm unsure if he even kept them. The reason why I'm talking
+about him (and sorry if it will disappoint you), is that he keeps popping into
+my mind every once and a while, and I totally forgot about him and his name, and
+the story sounds very unfamiliar that if I tell anyone about it they might not
+believe me. So I'm putting this here, if you know what I'm talking about, even
+if you're reading this 5 years later, let me know that I'm not the only person
+who remembers that strange phenomena. #[[id:4u5664n02wj0][Programming]]
