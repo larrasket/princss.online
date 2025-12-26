@@ -9,7 +9,8 @@ body {
     width: 900px;
 }
 
-div {}
+div {
+}
 
 a {
     color: var(--darkbrown);
@@ -36,7 +37,8 @@ a:hover {
     -webkit-transition: 0.25s;
 }
 
-.content {}
+.content {
+}
 
 .left-header {
     box-sizing: border-box;
@@ -80,11 +82,12 @@ a:hover {
     padding-left: 17px;
 }
 
-.list li {}
+.list li {
+}
 
 .check {
     padding-left: 3px;
-    list-style-type: '✔';
+    list-style-type: "✔";
 }
 
 .calendar-header {
@@ -164,4 +167,7 @@ a:hover {
 .day:hover {
     opacity: 50%;
     -webkit-transition: 0.25s;
+}
+nav.pagination {
+    border-top: unset !important;
 }

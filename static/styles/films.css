@@ -1,32 +1,41 @@
 html {
     background-color: var(--white);
 }
+
 body {
     width: 900px;
     display: block;
     margin: auto;
     padding-top: 20px;
 }
+
 a {
     color: var(--darkbrown);
     text-decoration: 1px dotted underline var(--darkbrown);
     -webkit-transition: 0.25s;
 }
+
 a:hover {
     opacity: 75%;
     -webkit-transition: 0.25s;
 }
+
 .header {
     margin-top: -2px;
     display: flex;
     width: 900px;
     border-bottom: 1px dotted var(--darkbrown);
     background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 .header a:hover {
     letter-spacing: 1px;
     -webkit-transition: 0.25s;
 }
+
 .left-header {
     box-sizing: border-box;
     width: 202px;
@@ -35,21 +44,29 @@ a:hover {
     padding-bottom: 5px;
     border-right: 1px dotted var(--darkbrown);
 }
+
 .right-header {
     box-sizing: border-box;
     text-align: right;
     padding-top: 5px;
     width: 700px;
 }
+
 .film {
     display: flex;
     border-bottom: 1px dotted var(--darkbrown);
 }
+
+.film:last-of-type {
+    border-bottom: none;
+}
+
 .left {
     border-right: 1px dotted var(--darkbrown);
     text-align: center;
     width: 200px;
 }
+
 .info {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -59,10 +76,12 @@ a:hover {
     width: 200px;
     box-sizing: border-box;
 }
+
 .title {
     font-weight: bold;
     color: var(--gold);
 }
+
 .right {
     text-align: justify;
     padding-left: 10px;
@@ -70,6 +89,7 @@ a:hover {
     color: var(--lightgold);
     width: 700px;
 }
+
 .frame {
     text-align: center;
     z-index: 2;
