@@ -6,9 +6,6 @@
 #+OPTIONS: toc:1
 #+filetags: :project_archived:
 
-#+BEGIN_propert
-{{{s}}} [[id:13122uo02wj0][Exploring Computational Geometry]]
-#+END_propert
 
 * Terminology
 
@@ -1425,3 +1422,5 @@ path to node $B$, and it has one edge. Thus, the depth of node $B$ is $\mathsf{1
 
 As we previously mentioned, the depth of a binary tree is equal to the height of the tree.
 Therefore, the depth of the binary tree is $\mathbf{3}$.
+
+#[[id:13122uo02wj0][Exploring Computational Geometry]]
