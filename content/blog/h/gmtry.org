@@ -14,10 +14,6 @@
 Based on TopCoder's thrive and [[https://www.ti.inf.ethz.ch/ew/courses/CG13/index.html][Computational Geometry (252-1425-00L) HS13]] lecture notes.
 #+END_PREVIEW
 
-#+BEGIN_propert
-{{{s}}} [[id:13122uo02wj0][Exploring Computational Geometry]]
-#+END_propert
-
 
 (Problems mostly from [[https://leetcode.com/tag/geometry][LeetCode]])
 * Introduction
@@ -832,5 +828,5 @@ def graham_scan(points):
 $O(n \cdot log(n))$
 
 
-
+#[[id:13122uo02wj0][Exploring Computational Geometry]]
 

@@ -56,7 +56,8 @@ a {
     -webkit-transition: 0.25s;
 }
 
-.preview-block {
+.preview-block,
+.postscript-block {
     color: gray;
 }
 
@@ -124,4 +125,8 @@ a {
 .pagination-prev:hover:not(.disabled),
 .pagination-next:hover:not(.disabled) {
     text-decoration: underline;
+}
+
+img {
+    mix-blend-mode: multiply;
 }

@@ -30,8 +30,7 @@ $artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
 
       {{ if not $isTopicPage }}
       <div class="post-content">
-        {{ partial "resolve-citations.html" (partial "resolve-roam-links.html"
-        .Content) }}
+        {{ partial "fix-image-paths.html" (partial "resolve-citations.html" (partial "resolve-roam-links.html" .Content)) }}
       </div>
       {{ end }} {{ if $isTopicPage }} {{ $idDateMap := dict }} {{ range
       site.AllPages }} {{ if and .File (eq .File.Ext "org") }} {{ $rawContent :=

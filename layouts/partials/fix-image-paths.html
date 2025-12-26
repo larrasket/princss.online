@@ -1,0 +1,5 @@
+{{- $content := . -}}
+{{- /* Fix relative image paths: ../i/ -> /blog/i/ */ -}}
+{{- $content = $content | replaceRE `src="\.\.\/i\/` `src="/blog/i/` -}}
+{{- $content = $content | replaceRE `src="\.\.\/\.\.\/i\/` `src="/blog/i/` -}}
+{{- $content | safeHTML -}}

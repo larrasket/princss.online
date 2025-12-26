@@ -43,6 +43,18 @@
       {{ else }}
       <h1 class="page-title">Blog</h1>
       
+      {{/* Creative topics section */}}
+      <div class="topics-showcase">
+        <span class="topics-label">explore:</span>
+        {{ $topics := (.Site.GetPage "/blog/t").Pages }}
+        {{ range $i, $topic := $topics }}
+        {{ $title := partial "org-title.html" $topic }}
+        {{ if $title }}
+        <a href="{{ $topic.RelPermalink }}" class="topic-pill">{{ $title }}</a>{{ if lt $i (sub (len $topics) 1) }}<span class="topic-sep">·</span>{{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
+      
       {{- $allPages := slice -}}
       {{- range (.Site.GetPage "/blog").RegularPagesRecursive -}}
         {{- if in .File.Dir "p/" -}}

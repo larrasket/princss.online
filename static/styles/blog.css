@@ -292,7 +292,14 @@ body {
     display: inline;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8 {
     text-align: start !important;
     unicode-bidi: plaintext !important;
 }
@@ -319,9 +326,8 @@ p {
     margin: 1.5em auto;
     max-width: 90%;
     line-height: 2;
-
-    font-style: italic;
-    color: #6d4c41;
+    font-style: normal;
+    color: #292929;
     margin: 2em 0;
     text-align: center;
     font-size: 1.1em;
@@ -351,4 +357,63 @@ p {
 .verse-block p {
     white-space: pre-wrap;
     text-align: center !important;
+}
+
+/* Fonts */
+body,
+.blog-content {
+    font-family:
+        "Times New Roman", "Amiri", "Libre Baskerville", "Amiri", serif;
+}
+
+/* Arabic text uses Amiri */
+:lang(ar),
+[lang="ar"],
+.arabic {
+    font-family: "Amiri", serif;
+}
+
+/* Auto-detect RTL text */
+.verse-block,
+.post-content p,
+blockquote {
+    font-family: "Times New Roman", "Libre Baskerville", "Amiri", serif;
+}
+
+/* Topics showcase - creative flowing design */
+.topics-showcase {
+    margin: 20px 0 30px;
+    padding: 15px 0;
+    border-top: 1px dotted var(--darkbrown, #2a2420);
+    border-bottom: 1px dotted var(--darkbrown, #2a2420);
+    line-height: 2;
+    text-align: center;
+}
+
+.topics-label {
+    font-style: italic;
+    opacity: 0.6;
+    margin-right: 8px;
+}
+
+.topic-pill {
+    display: inline-block;
+    padding: 3px 12px;
+    margin: 3px;
+    border: 1px dotted var(--darkbrown, #2a2420);
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.topic-pill:hover {
+    background: var(--darkbrown, #2a2420);
+    color: var(--white, #faf9f7);
+    border-style: solid;
+}
+
+.topic-sep {
+    opacity: 0.3;
+    margin: 0 2px;
 }

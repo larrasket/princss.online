@@ -1,4 +1,0 @@
-#+title: Test
-#+MACRO: gnustamp  (eval (concat "* GNU/" (capitalize $1)))
-
-{{{gnustamp(linux)}}}

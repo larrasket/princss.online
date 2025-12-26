@@ -5,10 +5,6 @@
 #+title: OSS is not free
 #+DATE: <2025-07-17 Thu 20:19>
 
-#+BEGIN_tag
-{{{t}}} 
-#+END_tag
-
 The Wikipedia entry for "Open-source software movement" explicitly warns: "Not to be confused with Free software movement." This distinction matters profoundly. Software that provides source availability, while certainly superior to closed-source alternatives, does not automatically guarantee user freedom. The "open source" label has become a marketing tool that obscures the more fundamental question: does this software respect user autonomy and control?
 
 Telegram is a good example. The company markets itself as "open-source software," yet only portions of its client code are available, and even that availability is questionable[fn:1]. Compare this to Signal, which provides complete software freedom: users can examine, modify, and distribute the entire codebase. Telegram's selective transparency creates an illusion of openness while maintaining control over critical components.
