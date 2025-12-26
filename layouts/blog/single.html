@@ -1,39 +1,28 @@
 {{ define "styles" }}
 <link rel="stylesheet" href="/styles/blog.css" />
-{{ end }}
-
-{{ define "main" }}
-{{/* Generate consistent artwork index using md5 */}}
-{{ $artFiles := readDir "static/images/art" }}
-{{ $artCount := len $artFiles }}
-{{ $hash := md5 .RelPermalink }}
-{{ $hashNum := 0 }}
-{{ range $i, $c := (slice (substr $hash 0 1) (substr $hash 1 1) (substr $hash 2 1)) }}
-  {{ if eq $c "a" }}{{ $hashNum = add $hashNum 10 }}
-  {{ else if eq $c "b" }}{{ $hashNum = add $hashNum 11 }}
-  {{ else if eq $c "c" }}{{ $hashNum = add $hashNum 12 }}
-  {{ else if eq $c "d" }}{{ $hashNum = add $hashNum 13 }}
-  {{ else if eq $c "e" }}{{ $hashNum = add $hashNum 14 }}
-  {{ else if eq $c "f" }}{{ $hashNum = add $hashNum 15 }}
-  {{ else }}{{ $hashNum = add $hashNum (int $c) }}
-  {{ end }}
-{{ end }}
-{{ $artIndex := mod $hashNum $artCount }}
-{{ $artFile := index $artFiles $artIndex }}
+{{ end }} {{ define "main" }} {{/* Generate consistent artwork index using md5
+*/}} {{ $artFiles := readDir "static/images/art" }} {{ $artCount := len
+$artFiles }} {{ $hash := md5 .RelPermalink }} {{ $hashNum := 0 }} {{ range $i,
+$c := (slice (substr $hash 0 1) (substr $hash 1 1) (substr $hash 2 1)) }} {{ if
+eq $c "a" }}{{ $hashNum = add $hashNum 10 }} {{ else if eq $c "b" }}{{ $hashNum
+= add $hashNum 11 }} {{ else if eq $c "c" }}{{ $hashNum = add $hashNum 12 }} {{
+else if eq $c "d" }}{{ $hashNum = add $hashNum 13 }} {{ else if eq $c "e" }}{{
+$hashNum = add $hashNum 14 }} {{ else if eq $c "f" }}{{ $hashNum = add $hashNum
+15 }} {{ else }}{{ $hashNum = add $hashNum (int $c) }} {{ end }} {{ end }} {{
+$artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
+}}
 
 <div class="blog-layout">
   <div class="blog-content">
     <nav class="breadcrumb">
-      <a href="/">home</a> <span class="sep">→</span> 
-      {{ if in .File.Dir "t/" }}<a href="/blog/">blog</a> <span class="sep">→</span>
+      <a href="/">home</a> <span class="sep">→</span> {{ if in .File.Dir "t/"
+      }}<a href="/blog/">blog</a> <span class="sep">→</span>
       <a href="/blog/t/">topics</a>{{ else }}<a href="/blog/">blog</a>{{ end }}
     </nav>
 
     <main>
-      {{ $date := partial "org-date.html" . }}
-      {{ $isTopicPage := in .File.Dir "t/" }}
-      
-      {{ if not $isTopicPage }}
+      {{ $date := partial "org-date.html" . }} {{ $isTopicPage := in .File.Dir
+      "t/" }} {{ if not $isTopicPage }}
       <div class="post-date">{{ $date.Format "January 2, 2006" }}</div>
       {{ end }}
 
@@ -41,55 +30,36 @@
 
       {{ if not $isTopicPage }}
       <div class="post-content">
-        {{ partial "fix-image-paths.html" (partial "resolve-citations.html" (partial "resolve-roam-links.html" .Content)) }}
+        {{ partial "fix-image-paths.html" (partial "resolve-citations.html"
+        (partial "resolve-roam-links.html" .Content)) }}
       </div>
-      {{ end }}
-
-      {{ if $isTopicPage }}
-      {{/* Find all pages that link to this topic - Hugo native approach */}}
-      {{ $thisId := "" }}
-      {{ $rawContent := .RawContent }}
-      {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }}
-      {{ if $idMatch }}
-        {{ $idLine := index $idMatch 0 }}
-        {{ $thisId = replaceRE `:ID:\s+` "" $idLine }}
-      {{ end }}
-      
-      {{ $relatedPages := slice }}
-      {{ range site.AllPages }}
-        {{ if and .File (eq .File.Ext "org") }}
-          {{/* Skip topic pages and self */}}
-          {{ if not (in .File.Dir "t/") }}
-            {{ $content := .RawContent }}
-            {{/* Check if this page links to the topic's ID */}}
-            {{ if and $thisId (in $content $thisId) }}
-              {{ $pageDate := partial "org-date.html" . }}
-              {{ $pageTitle := partial "org-title.html" . }}
-              {{ if $pageTitle }}
-                {{ $relatedPages = $relatedPages | append (dict "page" . "date" $pageDate "title" $pageTitle) }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      
-      {{/* Sort by date descending */}}
-      {{ $relatedPages = sort $relatedPages "date" "desc" }}
-      
-      {{ if $relatedPages }}
+      {{ end }} {{ if $isTopicPage }} {{/* Find all pages that link to this
+      topic - Hugo native approach */}} {{ $thisId := "" }} {{ $rawContent :=
+      .RawContent }} {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }} {{ if
+      $idMatch }} {{ $idLine := index $idMatch 0 }} {{ $thisId = replaceRE
+      `:ID:\s+` "" $idLine }} {{ end }} {{ $relatedPages := slice }} {{ range
+      site.AllPages }} {{ if and .File (eq .File.Ext "org") }} {{/* Skip topic
+      pages and self */}} {{ if not (in .File.Dir "t/") }} {{ $content :=
+      .RawContent }} {{/* Check if this page links to the topic's ID */}} {{ if
+      and $thisId (in $content $thisId) }} {{ $pageDate := partial
+      "org-date.html" . }} {{ $pageTitle := partial "org-title.html" . }} {{ if
+      $pageTitle }} {{ $relatedPages = $relatedPages | append (dict "page" .
+      "date" $pageDate "title" $pageTitle) }} {{ end }} {{ end }} {{ end }} {{
+      end }} {{ end }} {{/* Sort by date descending */}} {{ $relatedPages = sort
+      $relatedPages "date" "desc" }} {{ if $relatedPages }}
       <div class="posts-list">
         {{ range $relatedPages }}
         <article class="post-entry">
-          {{ if .date }}<span class="date">{{ .date.Format "Jan 2, 2006" }}</span>{{ else }}<span class="date">—</span>{{ end }}
+          {{ if .date }}<span class="date"
+            >{{ .date.Format "Jan 2, 2006" }}</span
+          >{{ else }}<span class="date">—</span>{{ end }}
           <a href="{{ .page.RelPermalink }}">{{ .title }}</a>
         </article>
         {{ end }}
       </div>
       {{ else }}
       <p class="no-articles"><em>No articles reference this topic yet.</em></p>
-      {{ end }}
-      
-      {{ end }}
+      {{ end }} {{ end }}
     </main>
   </div>
 
@@ -99,7 +69,9 @@
     <div class="artwork-box">
       <img src="/images/art/{{ $artFile.Name }}" alt="Artwork" loading="lazy" />
       <div class="artwork-note">
-        hash: {{ substr $hash 0 8 }}… → idx {{ $artIndex }}/{{ $artCount }}
+        This is an arbitrary picked image, hashed internally and mapped to this
+        page. You will have to see it as long as you in my website. hash: {{
+        substr $hash 0 8 }}… → idx {{ $artIndex }}/{{ $artCount }}
       </div>
     </div>
   </div>

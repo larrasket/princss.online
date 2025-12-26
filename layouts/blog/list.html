@@ -49,41 +49,26 @@ $artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
         {{ end }} {{ end }}
       </div>
 
-      {{/* Topics section - sorted by post count */}}
-      {{ $topicsWithCount := slice }}
-      {{ $topics := (.Site.GetPage "/blog/t").Pages }}
-      {{ range $topic := $topics }}
-        {{ $title := partial "org-title.html" $topic }}
-        {{ if $title }}
-          {{/* Get topic ID */}}
-          {{ $topicId := "" }}
-          {{ $rawContent := $topic.RawContent }}
-          {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }}
-          {{ if $idMatch }}
-            {{ $idLine := index $idMatch 0 }}
-            {{ $topicId = replaceRE `:ID:\s+` "" $idLine }}
-          {{ end }}
-          {{/* Count pages that reference this topic */}}
-          {{ $count := 0 }}
-          {{ if $topicId }}
-            {{ range site.AllPages }}
-              {{ if and .File (eq .File.Ext "org") }}
-                {{ if not (in .File.Dir "t/") }}
-                  {{ if in .RawContent $topicId }}
-                    {{ $count = add $count 1 }}
-                  {{ end }}
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-          {{ $topicsWithCount = $topicsWithCount | append (dict "topic" $topic "title" $title "count" $count) }}
-        {{ end }}
-      {{ end }}
-      {{/* Sort by count descending */}}
-      {{ $topicsWithCount = sort $topicsWithCount "count" "desc" }}
+      {{/* Topics section - sorted by post count */}} {{ $topicsWithCount :=
+      slice }} {{ $topics := (.Site.GetPage "/blog/t").Pages }} {{ range $topic
+      := $topics }} {{ $title := partial "org-title.html" $topic }} {{ if $title
+      }} {{/* Get topic ID */}} {{ $topicId := "" }} {{ $rawContent :=
+      $topic.RawContent }} {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }}
+      {{ if $idMatch }} {{ $idLine := index $idMatch 0 }} {{ $topicId =
+      replaceRE `:ID:\s+` "" $idLine }} {{ end }} {{/* Count pages that
+      reference this topic */}} {{ $count := 0 }} {{ if $topicId }} {{ range
+      site.AllPages }} {{ if and .File (eq .File.Ext "org") }} {{ if not (in
+      .File.Dir "t/") }} {{ if in .RawContent $topicId }} {{ $count = add $count
+      1 }} {{ end }} {{ end }} {{ end }} {{ end }} {{ end }} {{ $topicsWithCount
+      = $topicsWithCount | append (dict "topic" $topic "title" $title "count"
+      $count) }} {{ end }} {{ end }} {{/* Sort by count descending */}} {{
+      $topicsWithCount = sort $topicsWithCount "count" "desc" }}
       <div class="topics-footer">
         <span class="topics-header">Tags:</span>
-        {{ range $i, $t := $topicsWithCount }}<a href="{{ $t.topic.RelPermalink }}">{{ $t.title }}</a>{{ if lt $i (sub (len $topicsWithCount) 1) }} / {{ end }}{{ end }}
+        {{ range $i, $t := $topicsWithCount }}<a
+          href="{{ $t.topic.RelPermalink }}"
+          >{{ $t.title }}</a
+        >{{ if lt $i (sub (len $topicsWithCount) 1) }} / {{ end }}{{ end }}
       </div>
 
       {{ end }}
@@ -96,7 +81,9 @@ $artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
     <div class="artwork-box">
       <img src="/images/art/{{ $artFile.Name }}" alt="Artwork" loading="lazy" />
       <div class="artwork-note">
-        hash: {{ substr $hash 0 8 }}… → idx {{ $artIndex }}/{{ $artCount }}
+        This is an arbitrary picked image, hashed internally and mapped to this
+        page. You will have to see it as long as you in my website. hash: {{
+        substr $hash 0 8 }}… → idx {{ $artIndex }}/{{ $artCount }}
       </div>
     </div>
   </div>
