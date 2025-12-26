@@ -5,10 +5,6 @@
 #+title: Is misery born of poverty, or does it precede it?
 #+DATE: <2025-11-15 Sat 22:45>
 
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
-
 On the appointed day, the students who were to assist me started early in the morning; while I, the philanthropist, only joined them at twelve o'clock. I could not come earlier, as I did not get up till ten, after which I had to take some coffee, and then smoke for the sake of my digestion. Twelve o'clock, then, found me at the door of the Rzhanoff Houses. A policeman showed me a public-house to which the census-clerks referred all those who wished to enquire for them. I entered, and found it very dirty and unsavoury. Here, right in front of me, was a counter; to the left a small room, furnished with tables covered with soiled napkins; to the right a large room on pillars, containing similar little tables placed in the windows and along the walls; with men here and there having tea, some very ragged, others well dressed, apparently workmen or small shopkeepers. There were also several women. In spite of the dirt, it was easy to see, by the business air of the man in charge, and the ready, obliging manners of the waiters, that the eating-house was driving a good trade. I had no sooner entered than one of the waiters was already preparing to assist me in getting off my overcoat, anxious to take my orders, and showing that evidently the people here were in the habit of doing their work quickly and readily.
 
 My enquiry for the census-clerks was answered by a call for “Ványa” from a little man dressed in foreign fashion, who was arranging something in a cupboard behind the counter. This was the proprietor of the public-house, a peasant from Kaluga, Iván Fedotitch by name, who also rented half of the other houses, sub-letting the rooms to lodgers. In answer to his call, a thin, sallow-faced, hook-nosed lad, about eighteen years old, came forward hastily. The landlord said, “Take this gentleman to the clerks: they have gone to the main body of the building over the well.”
@@ -51,4 +47,4 @@ But in the next lodging, and in the next again, I found only similar cases, whic
 
 However ashamed I feel in confessing it, I began to experience a certain disappointment at not finding in these houses anything resembling what I had expected. I thought to find very exceptional people; but, when I had gone over all the lodgings, I became convinced that their inhabitants were in no way extremely peculiar, but much like those amongst whom I lived.
 
-As with us, so also with them, there were some more or less good and others more or less bad: there were some more or less happy and others more or less unhappy. Those who were unhappy amongst them would have been equally wretched with us, their misery being within themselves,—a misery not to be mended by any kind of bank-note.
+As with us, so also with them, there were some more or less good and others more or less bad: there were some more or less happy and others more or less unhappy. Those who were unhappy amongst them would have been equally wretched with us, their misery being within themselves,—a misery not to be mended by any kind of bank-note. #[[id:x0egwn81crk0][What is it to be done?]]
