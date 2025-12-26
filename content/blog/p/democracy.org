@@ -6,10 +6,9 @@
 #+cite_export: csl ieee.csl
 
 #+BEGIN_tag
-{{{t}}} [[id:thc4j6p02wj0][Politics]]
+{{{t}}} 
 #+END_tag
 #+BEGIN_UNEXPORTEDTAG
-[[id:c50fn50104k0][Democracy Criticism]]
 #+END_UNEXPORTEDTAG
 #+BEGIN_PREVIEW
 Or: how democracy spoils everything.
@@ -150,5 +149,4 @@ work in science, the paper should be published if it qualifies to be. Unless you
 can provide a clear error in the content, anything you are going to use as a
 counterargument will be irrationality.
 
-* Bibliography
-#+print_bibliography:
+#[[id:thc4j6p02wj0][Politics]] #[[id:c50fn50104k0][Democracy Criticism]]
