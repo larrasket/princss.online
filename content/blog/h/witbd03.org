@@ -5,10 +5,6 @@
 #+title: Fake goodness
 #+DATE: <2025-11-15 Sat 22:49>
 
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
-
 Still more strange were my dealings with the children. In my rôle as benefactor I paid attention to the children too, wishing to save innocent beings from going to ruin in this den; and I wrote down their names in order to attend to them myself afterwards.
 
 Among these children my attention was particularly drawn to Serozha, a boy twelve years old. I sincerely pitied this clever, intelligent lad, who had been living with a bootmaker, and who was left without any place of refuge when his master was put into prison. I wished to do something for him.
@@ -31,4 +27,4 @@ In Rzhanoff's house there were a great many children in the most miserable condi
 
 While the boy was living with us I remember I took pains to hide from him our way of life, particularly that of my children. I felt that all my endeavours to lead him to a good and laborious life were frustrated by my example and that of my children. It is very easy to take away a child from a prostitute or a beggar. It is very easy, when one has money, to wash him, dress him in new clothes, feed him well, and even teach him different accomplishments; but to teach him how to earn his living, is, for us who have not been earning ours but doing just the contrary, not only difficult but quite impossible, because by our example and by the very improvements of his mode of life effected by us without any cost on our part, we teach him the very opposite.
 
-You may take a puppy, pet him, feed him, teach him to carry things after you, and be pleased with looking at him: but it is not enough to feed a man, dress him, and teach him Greek; you must teach him how to live; i.e., how to take less from others and give them more in return: and yet through our own mode of life we cannot help teaching him the very opposite whether we take him into our house or put him into a home to bring up.
+You may take a puppy, pet him, feed him, teach him to carry things after you, and be pleased with looking at him: but it is not enough to feed a man, dress him, and teach him Greek; you must teach him how to live; i.e., how to take less from others and give them more in return: and yet through our own mode of life we cannot help teaching him the very opposite whether we take him into our house or put him into a home to bring up. #[[id:x0egwn81crk0][What is it to be done?]]
