@@ -62,6 +62,8 @@ p:has(> a:target) {
 </head>
 #+end_export
 
+
+* - [2025-12-26 Fri 22:44]  This page is currently not exported fully, due to a hugo limitation, I will export it whenever it gets fixed.
 - [2025-11-22 Sat 03:01] I had a "he is literally me" reading a biography about [[id:ynx5yta0uwj0][Leonadrdo da Vinci]]: "His notebooks are ﬁlled with lists of books he acquired and passages he copied."[cite:@isaacson-2017-leonar-vinci]
 
 These are neither the books I recommend nor the ones I countenance their views.
