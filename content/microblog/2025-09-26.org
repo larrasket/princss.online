@@ -3,6 +3,6 @@
 :CUSTOM_ID: yti352w0ipk0
 :END:
 #+date: <2025-09-26 Fri 17:25>
-#+title: [[id:fzsf1xv0ipk0][Adam Et Eve]]
+#+title: Absolute art
 
-The tree, the flowers, the body, the snake. [[https://commons.wikimedia.org/wiki/File:Adam_et_Eve_-_Gustave_Courtois.jpg][Absolute art]]. #[[id:mvk9gc7014k0][Art]]
+[[id:fzsf1xv0ipk0][Adam Et Eve]]. The tree, the flowers, the body, the snake. [[https://commons.wikimedia.org/wiki/File:Adam_et_Eve_-_Gustave_Courtois.jpg][Absolute art]]. #[[id:mvk9gc7014k0][Art]]
