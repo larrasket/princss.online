@@ -1,17 +1,58 @@
-{{- $page := . -}} {{- $date := $page.Date -}} {{- $found := false -}} {{- /*
-For org files, always check RawContent first for #+date: after #+title: */ -}}
-{{- if and $page.File (eq $page.File.Ext "org") -}} {{- $rawContent :=
-$page.RawContent -}} {{- $pattern := `(?mi)^#\+date:\s*<(\d{4}-\d{2}-\d{2})` -}}
-{{- $match := findRE $pattern $rawContent 1 -}} {{- if $match -}} {{- $line :=
-index $match 0 -}} {{- $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}}
-{{- if $dateMatch -}} {{- $dateStr := index $dateMatch 0 -}} {{- $date = time
-$dateStr -}} {{- $found = true -}} {{- end -}} {{- end -}} {{- end -}} {{- /* If
-not found in RawContent, check .Params.date (for #+date: before #+title:) */ -}}
-{{- if not $found -}} {{- with $page.Params.date -}} {{- $dateStr := . | string
--}} {{- /* Handle org timestamp format
-<YYYY-MM-DD ...>
-  */ -}} {{- if findRE `<\d{4}-\d{2}-\d{2}` $dateStr -}} {{- $dateMatch :=
-  findRE `\d{4}-\d{2}-\d{2}` $dateStr 1 -}} {{- if $dateMatch -}} {{- $date =
-  time (index $dateMatch 0) -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}}
-  {{- return $date -}}
-</YYYY-MM-DD>
+{{- $page := . -}}
+{{- $date := $page.Date -}}
+{{- $found := false -}}
+
+{{- /* For org files, check RawContent for #+date: */ -}}
+{{- if and $page.File (eq $page.File.Ext "org") -}}
+  {{- $rawContent := $page.RawContent -}}
+  
+  {{- /* Try angle bracket format first: #+date: <YYYY-MM-DD ...> */ -}}
+  {{- $pattern := `(?mi)^#\+date:\s*<(\d{4}-\d{2}-\d{2})` -}}
+  {{- $match := findRE $pattern $rawContent 1 -}}
+  {{- if $match -}}
+    {{- $line := index $match 0 -}}
+    {{- $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}}
+    {{- if $dateMatch -}}
+      {{- $dateStr := index $dateMatch 0 -}}
+      {{- $date = time $dateStr -}}
+      {{- $found = true -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- /* Try plain format: #+date: YYYY-MM-DD */ -}}
+  {{- if not $found -}}
+    {{- $pattern := `(?mi)^#\+date:\s*(\d{4}-\d{2}-\d{2})` -}}
+    {{- $match := findRE $pattern $rawContent 1 -}}
+    {{- if $match -}}
+      {{- $line := index $match 0 -}}
+      {{- $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}}
+      {{- if $dateMatch -}}
+        {{- $dateStr := index $dateMatch 0 -}}
+        {{- $date = time $dateStr -}}
+        {{- $found = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Fallback: check .Params.date */ -}}
+{{- if not $found -}}
+  {{- with $page.Params.date -}}
+    {{- $dateStr := . | string -}}
+    {{- /* Handle org timestamp format <YYYY-MM-DD ...> */ -}}
+    {{- if findRE `<\d{4}-\d{2}-\d{2}` $dateStr -}}
+      {{- $dateMatch := findRE `\d{4}-\d{2}-\d{2}` $dateStr 1 -}}
+      {{- if $dateMatch -}}
+        {{- $date = time (index $dateMatch 0) -}}
+      {{- end -}}
+    {{- else if findRE `\d{4}-\d{2}-\d{2}` $dateStr -}}
+      {{- /* Handle plain date format YYYY-MM-DD */ -}}
+      {{- $dateMatch := findRE `\d{4}-\d{2}-\d{2}` $dateStr 1 -}}
+      {{- if $dateMatch -}}
+        {{- $date = time (index $dateMatch 0) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $date -}}

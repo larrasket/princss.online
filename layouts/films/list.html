@@ -18,41 +18,72 @@
     {{/* Get page size from config, default to 10, 0 = no pagination */}}
     {{ $pageSize := site.Params.filmsPageSize | default 10 }}
     
-    {{/* Apply pagination if page size > 0 */}}
-    {{ $pages := .Pages.ByDate.Reverse }}
-    {{ $paginator := false }}
-    {{ if gt $pageSize 0 }}
-      {{ $paginator = .Paginate $pages $pageSize }}
-      {{ $pages = $paginator.Pages }}
+    {{/* Build sorted pages using org-date for proper date parsing - SORT FIRST */}}
+    {{ $allSorted := slice }}
+    {{ range .Pages }}
+      {{ $orgDate := partial "org-date.html" . }}
+      {{ $allSorted = $allSorted | append (dict "page" . "orgDate" $orgDate) }}
+    {{ end }}
+    {{ $allSorted = sort $allSorted "orgDate" "desc" }}
+    
+    {{/* Manual pagination - Hugo's .Paginate reorders pages */}}
+    {{ $pageNum := 1 }}
+    {{ with .Paginator }}
+      {{ $pageNum = .PageNumber }}
+    {{ end }}
+    {{ $totalItems := len $allSorted }}
+    {{ $startIdx := mul (sub $pageNum 1) $pageSize }}
+    {{ $endIdx := add $startIdx $pageSize }}
+    {{ if gt $endIdx $totalItems }}
+      {{ $endIdx = $totalItems }}
     {{ end }}
     
-    {{ range $pages }}
+    {{/* Slice the sorted pages for current page */}}
+    {{ $sortedPages := slice }}
+    {{ if eq $pageSize 0 }}
+      {{ $sortedPages = $allSorted }}
+    {{ else }}
+      {{ range $i, $item := $allSorted }}
+        {{ if and (ge $i $startIdx) (lt $i $endIdx) }}
+          {{ $sortedPages = $sortedPages | append $item }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Still need paginator for pagination nav */}}
+    {{ $paginator := false }}
+    {{ if gt $pageSize 0 }}
+      {{ $paginator = .Paginate .Pages $pageSize }}
+    {{ end }}
+    
+    {{ range $sortedPages }}
+    {{ $film := .page }}
     <div class="film">
       <div class="left">
         <div class="frame">
-          <img src="{{ partial "org-param.html" (dict "page" . "key" "image")
+          <img src="{{ partial "org-param.html" (dict "page" $film "key" "image")
           }}" style="z-index: 1;">
         </div>
         <div class="info">
           <div class="title">
-            {{ partial "org-param.html" (dict "page" . "key" "title") }}
+            {{ partial "org-param.html" (dict "page" $film "key" "title") }}
           </div>
           <div class="genre">
-            {{ partial "org-param.html" (dict "page" . "key" "genre") }}
+            {{ partial "org-param.html" (dict "page" $film "key" "genre") }}
           </div>
           <div class="director">
-            dir. {{ partial "org-param.html" (dict "page" . "key" "director") }}
+            dir. {{ partial "org-param.html" (dict "page" $film "key" "director") }}
           </div>
         </div>
       </div>
       <div class="right">
-        {{ partial "resolve-roam-links.html" .Content }}<a
+        {{ partial "resolve-roam-links.html" $film.Content }}<a
           class="copy-permalink"
-          data-url="{{ .Permalink }}"
+          data-url="{{ $film.Permalink }}"
           title="Copy permalink"
           >[permlink]</a
         >
-        {{ partial "native-backlinks.html" . }}
+        {{ partial "native-backlinks.html" $film }}
       </div>
     </div>
     {{ end }}

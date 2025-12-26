@@ -193,3 +193,11 @@ main .pagination span {
     margin: 5px 0 15px 0;
     color: var(--darkbrown, #2a2420);
 }
+
+/* Links to entries on other pages */
+nav a.other-page {
+    opacity: 0.5;
+}
+nav a.other-page:hover {
+    opacity: 1;
+}

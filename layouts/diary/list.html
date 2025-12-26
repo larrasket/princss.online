@@ -39,10 +39,28 @@
     {{ $paginatedPages = sort $paginatedPages "date" "desc" }}
   {{ end }}
 
-  <!-- Diary Nav - only show dates for current page -->
+  <!-- Diary Nav - show ALL dates, link to correct pagination page -->
   <nav>
-    {{ range $paginatedPages }}
-    <a href="/diary/#{{ .date.Format "02012006" }}">{{ .date.Format "02/01/2006" }}</a>
+    {{ $currentPageNum := 1 }}
+    {{ with $paginator }}
+      {{ $currentPageNum = .PageNumber }}
+    {{ end }}
+    {{ range $idx, $item := $sortedPages }}
+      {{- /* Calculate which page this entry is on */ -}}
+      {{ $entryPageNum := 1 }}
+      {{ if gt $pageSize 0 }}
+        {{ $entryPageNum = add (div $idx $pageSize) 1 }}
+      {{ end }}
+      {{- /* Build the correct URL */ -}}
+      {{ $url := "" }}
+      {{ if eq $entryPageNum 1 }}
+        {{ $url = printf "/diary/#%s" (.date.Format "02012006") }}
+      {{ else }}
+        {{ $url = printf "/diary/page/%d/#%s" $entryPageNum (.date.Format "02012006") }}
+      {{ end }}
+      {{- /* Mark entries on current page differently */ -}}
+      {{ $onCurrentPage := eq $entryPageNum $currentPageNum }}
+      <a href="{{ $url }}"{{ if not $onCurrentPage }} class="other-page"{{ end }}>{{ .date.Format "02/01/2006" }}</a>
     {{ end }}
   </nav>
   
