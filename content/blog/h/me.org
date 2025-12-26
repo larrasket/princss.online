@@ -11,25 +11,8 @@
 Or; An Introduction to the Fragments of Self
 #+END_PREVIEW
 
-Around the time that he reached the unnerving milestone of turning thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing the reasons he should be given a job. He had been moderately successful as a painter in Florence, but he had trouble ﬁnishing his commissions and was searching for new horizons. In the ﬁrst ten paragraphs, he touted his engineering skills, including his ability to design bridges, waterways, cannons, armored vehicles, and public buildings. Only in the eleventh paragraph, at the end, did he add that he was also an artist. {{{hl(“Likewise in painting I can do everything possible\,” he wrote.)}}}[cite:@isaacson-2017-leonar-vinci]
+Around the time that he reached the unnerving milestone of turning thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing the reasons he should be given a job. He had been moderately successful as a painter in Florence, but he had trouble ﬁnishing his commissions and was searching for new horizons. In the ﬁrst ten paragraphs, he touted his engineering skills, including his ability to design bridges, waterways, cannons, armored vehicles, and public buildings. Only in the eleventh paragraph, at the end, did he add that he was also an artist. {{{hl(“Likewise in painting I can do everything possible” he wrote.)}}}[cite:@isaacson-2017-leonar-vinci]
 
-
-#+begin_export html
-<figure class="resright"><img src="/i/me.jpg" title="Salih M." style="
-    width: 130px;
-    clip-path: circle();
-">
-    <figcaption style="
-    font-size: smaller;
-    /* font-style: italic; */
-    font-weight: bold;
-    margin-block-start: 0;
-    margin-inline-start: 0;
-    color: gray;
-">Me.</figcaption>
-
-</figure>
-#+end_export
 
 I don't usually post many stuff about myself online, this page tries to make up for this. I don't like the aspect in general to have a virtual life, this was why I didn't care much to post details about myself online. However, this tended to make people presume things about. I hope that this page will help reducing the severity of unsupported thoughts about me.
 
