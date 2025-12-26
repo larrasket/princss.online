@@ -16,4 +16,7 @@ This is a book by [[id:jhxdza81e3k0][Leo Tolstoy]] that I picked arbitrarily, I 
 
 I find the conclusions that he arrived at mostly trivial (at least speaking from the current time), but what I find very important to me, is the emotions shared across the book, the responsibility that took place, and the story overall. Here I'm sharing my selections and [[id:2ar8en10n2k0][anthology]] of the articles from the book. #[[id:ydb1kfn02wj0][Modus Vivendi]] #[[id:2x1fmp71crk0][What Should We Do?]] #[[id:jhxdza81e3k0][Leo Tolstoy]]
 
-Update: you can find my selections, and other related stuff, in the "referenced in" section. 
+1. [[id:w654qi91crk0][Is misery born of poverty, or does it precede it?]]
+2. [[id:er8e2n91crk0][Do they deserve help?]]
+3. [[id:38we8p91crk0][Fake goodness]]
+4. [[id:drq9us91crk0][Real goodness]]
