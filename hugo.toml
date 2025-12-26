@@ -32,6 +32,6 @@ buildFuture = true
 
 [params]
   # Pagination - entries per page (set to 0 to disable)
-  diaryPageSize = 20
+  diaryPageSize = 30
   microblogPageSize = 30
   filmsPageSize = 10
