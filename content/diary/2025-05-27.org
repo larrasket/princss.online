@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       jvne8ie10lk0
+:CUSTOM_ID: jvne8ie10lk0
+:END:
+#+title: Floyd's tortoise and hare
+#+DATE: <2025-05-27 Fri 02:44>
+
+
+TIL that Robert W. Floyd is not the real author of Floyd's cycle-finding algorithm: The algorithm is named after Robert W. Floyd, who was credited with its invention by Donald Knuth. However, the algorithm does not appear in Floyd's published work, and this may be a misattribution: Floyd describes algorithms for listing all simple cycles in a directed graph in a 1967 paper, but this paper does not describe the cycle-finding problem in functional graphs that is the subject of this article. In fact, Knuth's statement (in 1969), attributing it to Floyd, without citation, is the first known appearance in print, and it thus may be a folk theorem, not attributable to a single individual. I wonder if anyone asked Donald Knuth about that in an interview. #[[id:4u5664n02wj0][Programming]] #[[id:rib7uvo02wj0][Representations and Implementations of Graphs]]
