@@ -26,9 +26,6 @@ Circumspection… 3.  Caution… [and] lastly… the habit of not being discoura
 present bad appearances in the state of our affairs.”
 
 
-#+BEGIN_tag
-{{{t}}} 
-#+END_tag
 
 Franklin’s foundation of enumerating the skills cultivated by playing chess
 eventually became the groundwork for several academic studies conducted in the
