@@ -4,9 +4,6 @@
 :CUSTOM_ID: ktb9vdd0rik0
 :ID: ktb9vdd0rik0
 :END:
-#+BEGIN_tag
-{{{t}}} [[id:6318fd43-4f0d-4c3b-9c83-5cadbeca2260][Literature]]
-#+END_tag
 Following are quick notes I toke while reading the first volume of Chekhov's
 selected works. I might add notes for the rest of the book later.
 
@@ -36,3 +33,5 @@ selected works. I might add notes for the rest of the book later.
 - Agafya :: Aesthetic story, I want to live in a world like the one Chekhov
   describes there.
 - A Misfortune :: One of the saddest stories I've ever read. Really moved me.
+
+#[[id:6318fd43-4f0d-4c3b-9c83-5cadbeca2260][Literature]]
