@@ -5,11 +5,6 @@
 #+title: Do they deserve help?
 #+DATE: <2025-11-15 Sat 22:48>
 
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
-
-
 The second class of unfortunates, whom I hoped afterwards to be able to help, were women of the town. These women were very numerous in the Rzhanoff Houses; and they were of every kind, from young girls still bearing some likeness to women, to old and fearful-looking creatures without a vestige of humanity. The hope of helping these women, whom I had not at first in view, was aroused by the following circumstances.
 
 When we had finished half of our tour, we had already acquired a somewhat mechanical method. On entering a new lodging we at once asked for the landlord. One of us sat down, clearing a space to write; and the other went from one to another, questioning each man and woman in the room, and reporting the information obtained to him who was writing.
@@ -108,4 +103,4 @@ Yet if I had thought about the antecedents of the mother, how she had given birt
 
 It was possible to take this girl away from her mother by force; but to convince her that she was doing wrong in selling her daughter was not possible. It would first be necessary to save this woman—this mother—from a condition of life approved by every one, and according to which a woman may live without marrying and without working, serving exclusively as a gratification to the passions. If I had thought about this, I should have understood that the majority of those ladies whom I wished to send here for saving this girl were not only themselves avoiding family duties, and leading idle and sensuous lives, but were consciously educating their daughters for this very same mode of existence. One mother leads her daughter to the inn, and another to court and to balls. Both the views of the world held by both mothers are the same; viz., that a woman must gratify the passions of men, and for that she must be fed, dressed, and taken care of.
 
-How, then, are our ladies to reform this woman and her daughter?
+How, then, are our ladies to reform this woman and her daughter? #[[id:x0egwn81crk0][What is it to be done?]]
