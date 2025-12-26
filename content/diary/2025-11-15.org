@@ -3,8 +3,7 @@
 :CUSTOM_ID: qow1lzo0aqk0
 :END:
 #+title: Some other notes on exception handling
-#+DATE: <2025-12-26 Fri 02:36>
-
+#+DATE: <2025-11-15 Sat 02:36>
 
 - [2025-11-15 Sat 15:52] \\
   Reading https://ieeexplore.ieee.org/document/7832935/ today. It mentions that most common uses of =catch=: 1. Logs the error rather than recovering from it 2. About 80% of people are using the common "Exception" class, rather than their subclasses.

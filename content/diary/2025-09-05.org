@@ -3,7 +3,7 @@
 :CUSTOM_ID: jxdgqja0rok0
 :END:
 #+title: C#, Dating, and Ukraine War
-#+DATE: <2025-12-26 Fri 02:41>
+#+DATE: <2025-09-05 Fri 02:41>
 
 
 These might sound extremely unrelated topics, and yes they are. Around 4 or 5

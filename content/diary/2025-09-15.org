@@ -2,8 +2,8 @@
 :ID:       tpqa1lq04pk0
 :CUSTOM_ID: tpqa1lq04pk0
 :END:
-#+title: 2025 09 15
-#+DATE: <2025-12-26 Fri 02:40>
+#+title: A note for windows programmers
+#+DATE: <2025-09-15 Mon 02:40>
 
 
 Reading [cite:@hall-2023-beejs-guide]. It has an interesting note for Windows

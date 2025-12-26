@@ -3,7 +3,7 @@
 :CUSTOM_ID: byb2fy71zpk0
 :END:
 #+title: "Clean Architecture"
-#+DATE: <2025-12-26 Fri 02:39>
+#+DATE: <2025-10-09 Thu 02:39>
 
 
 [[id:08oaz130rek0][I care about]] [[id:bek89831uxj0][naming]]. I wrote recently about how I hate the way [[id:7jpiga90whk0][Microsoft]] names its products ([[https://news.ycombinator.com/item?id=44930297][see here]]). Seemingly, Microsoft champions have the same issue. There's a common thing in the Microsoft Java++ (C#) ecosystem called "clean architecture". I still remember hearing the term from my coworker for the first time and I thought she was talking "clean" as in an adjective not a term. Why the hell someone would call a design pattern "clean", how clean is it? #[[id:4u5664n02wj0][Programming]]
