@@ -3,7 +3,7 @@ title: "La Vita Nouva"
 ---
 
 
-Welcome to my personal website. Here's a link directly to my blog if that was your intended site: <[https://lr0.org/~saleh/](https://lr0.org/~saleh/)> 
+Welcome to my personal website. Here's a link directly to my blog if that was your intended site: <[https://lr0.org/blog/](https://lr0.org/~blog/)> 
 
 >Around the time that he reached the unnerving milestone of turning
 >thirty, Leonardo da Vinci wrote a letter to the ruler of Milan listing
