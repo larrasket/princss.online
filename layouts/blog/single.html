@@ -33,6 +33,10 @@ $artIndex := mod $hashNum $artCount }} {{ $artFile := index $artFiles $artIndex
         {{ partial "fix-image-paths.html" (partial "resolve-citations.html"
         (partial "resolve-roam-links.html" .Content)) }}
       </div>
+      
+      {{/* Referenced in section for regular posts - Hugo native */}}
+      {{ partial "native-backlinks.html" . }}
+      
       {{ end }} {{ if $isTopicPage }} {{/* Find all pages that link to this
       topic - Hugo native approach */}} {{ $thisId := "" }} {{ $rawContent :=
       .RawContent }} {{ $idMatch := findRE `:ID:\s+(\S+)` $rawContent 1 }} {{ if

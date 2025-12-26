@@ -1,0 +1,34 @@
+{{- /* Native backlinks partial - finds all pages that link to this page's ID */}}
+{{- /* Usage: {{ partial "native-backlinks.html" . }} */}}
+
+{{- $thisId := "" -}}
+{{- $idMatch := findRE `:ID:\s+(\S+)` .RawContent 1 -}}
+{{- if $idMatch -}}
+  {{- $thisId = replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
+{{- end -}}
+
+{{- if $thisId -}}
+  {{- $backlinks := slice -}}
+  {{- range site.AllPages -}}
+    {{- if and .File (eq .File.Ext "org") -}}
+      {{- if ne .RelPermalink $.RelPermalink -}}
+        {{- if in .RawContent $thisId -}}
+          {{- $title := partial "org-title.html" . -}}
+          {{- if $title -}}
+            {{- $backlinks = $backlinks | append (dict "url" .RelPermalink "title" $title) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- if $backlinks -}}
+<div class="backlinks">
+  <span class="backlinks-title">Referenced in: </span>
+  {{- $total := len $backlinks -}}
+  {{- range $i, $link := $backlinks -}}
+    <a href="{{ $link.url }}">{{ $link.title }}</a>{{- if lt (add $i 1) $total }}, {{ end -}}
+  {{- end -}}
+</div>
+  {{- end -}}
+{{- end -}}

@@ -85,6 +85,7 @@ body {
 }
 
 @media (min-width: 1100px) {
+
     .separator,
     .blog-artwork {
         display: block;
@@ -436,4 +437,40 @@ blockquote {
 
 .topics-footer a:hover {
     text-decoration: 1px dotted underline;
+}
+
+/* Footnotes styling */
+.footnotes {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dotted var(--darkbrown, #2a2420);
+}
+
+.footnotes hr {
+    display: none;
+}
+
+.footnotes ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.footnotes li {
+    margin-bottom: 10px;
+}
+
+.footnotes li p {
+    margin: 0;
+    display: inline;
+}
+
+/* Diary title styling */
+.diary-title {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 5px 0 15px 0;
+    color: var(--darkbrown, #2a2420);
 }

@@ -44,7 +44,7 @@
         {{- $idMatch := findRE `:ID:\s+(\S+)` .RawContent 1 -}}
         {{- if $idMatch -}}
           {{- $id := replaceRE `:ID:\s+` "" (index $idMatch 0) -}}
-          {{ partial "backlinks.html" (dict "id" $id) }}
+          {{ partial "native-backlinks.html" . }}
         {{- end -}}
       </div>
     </div>

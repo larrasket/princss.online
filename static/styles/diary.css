@@ -184,3 +184,12 @@ main .pagination span {
     min-width: auto;
     padding: 0.25em 0.5em;
 }
+
+/* Diary title styling */
+.diary-title {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 5px 0 15px 0;
+    color: var(--darkbrown, #2a2420);
+}
