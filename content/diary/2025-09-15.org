@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       tpqa1lq04pk0
+:CUSTOM_ID: tpqa1lq04pk0
+:END:
+#+title: 2025 09 15
+#+DATE: <2025-12-26 Fri 02:40>
+
+
+Reading [cite:@hall-2023-beejs-guide]. It has an interesting note for Windows
+programmers: "At this point in the guide, historically, I’ve done a bit of
+bagging on Windows, simply due to the fact that I don’t like it very much. But
+then Windows and Microsoft (as a company) got a lot better. Windows 10 coupled
+with WSL (below) actually makes for a decent operating system. Not really a lot
+to complain about.  Well, a little—for example, I’m writing this (in 2025) on a
+2015 laptop that used to run Windows 10. Eventually it got too slow and I
+installed Linux on it. And have been using it ever since.  But now we have
+Windows 11 that apparently requires beefier hardware than Windows 10. I’m not a
+fan of that. The OS should be as unobtrusive as possible and not require you to
+spend more money.  The extra CPU power should be for apps, not the OS!
+Additionally, Microsoft knows what you want, and what you want is more
+advertising! Right? In your operating system! Weren’t you missing that? Now you
+can have it with Windows 11.  So… I still encourage you to try Linux , BSD ,
+illumos or any other flavor of Unix instead of Windows.". It's a nice harsh
+punch for newcomers. I still think that MS Windows is one of the worst blocking
+obstacles in 21th computing. Perhaps one big factor that made mobile usage
+thrive they way it is, was the way MS made the desktop experience so bad, and
+the way Apple made it unaffordable. #[[id:4u5664n02wj0][Programming]]
