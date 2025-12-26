@@ -4,9 +4,6 @@
 :END:
 #+title: Moral blindness
 #+DATE: <2025-11-15 Sat 22:57>
-#+BEGIN_propert
-{{{s}}} [[id:x0egwn81crk0][What is it to be done?]]
-#+END_propert
 
 Last March I was returning home late in the evening. On turning into a bye-lane I perceived on the snow in a distant field some black shadows. I should not have noticed this but for the policeman who stood at the end of the lane and cried in the direction of the shadows, “Vasili, why don't you come along?”
 
@@ -158,4 +155,4 @@ They reply, “If I should wear dirty linen, leave off smoking, and give this mo
 
 I am still more ashamed to answer such a reply, but at the same time I must do so. If I came among savages who gave me chops which I thought delicious, but the next day I learned (perhaps saw myself) that these delicious chops were made of a human prisoner who had been slain in order to make them; and if I think it bad to eat men, however delicious the cutlets may be, and however general the custom to eat men among the persons with whom I live, and however small the utility of my refusal to eat them may be,—to the prisoners who have been prepared for food,—I shall not and cannot eat them.
 
-It may be that I shall eat human flesh when urged by hunger; but I shall not make a feast of it, and shall not take part in feasts with human flesh, and shall not seek such feasts, nor be proud of my partaking of them.
+It may be that I shall eat human flesh when urged by hunger; but I shall not make a feast of it, and shall not take part in feasts with human flesh, and shall not seek such feasts, nor be proud of my partaking of them. #[[id:x0egwn81crk0][What is it to be done?]]
