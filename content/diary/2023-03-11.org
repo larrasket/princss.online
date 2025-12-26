@@ -7,10 +7,6 @@
 #+FILETAGS: anthology
 
 
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
-
 [[id:d786d238-caf1-4d36-ae56-e5e063f1b00a][René Descartes]] contributes to a long tradition of philosophical inquiry into the
 nature of "the passions", I find inspiration in many of Descartes writings,
 however I hesitate to share them because I don't find reading them separately
@@ -131,4 +127,4 @@ ambition represents flight as a disgrace worse than death.
 الحاضرة. ولكن لما كانت هذه في معظم الأحيان ناقضة لبعضها البعض فإنها تجذبها إلى
 جانبها الواحدة تلو الأخرى، وتستعملها لمحاربة ذاتها فتضع النفس في أسوا حال يمكن
 أن تكون عليه. وهكذا حين صور الخوف الموت كشر مستطير لا يمكن تجنبه إلا بالهرب، فإن
-الطموح يصور عار هذا الهرب كشر أسوأ من الموت.
+الطموح يصور عار هذا الهرب كشر أسوأ من الموت. #[[id:ydb1kfn02wj0][Modus Vivendi]]
