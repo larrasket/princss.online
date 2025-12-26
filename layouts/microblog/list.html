@@ -13,7 +13,7 @@
   {{/* Build a slice with parsed org dates for proper sorting */}}
   {{ $posts := slice }}
   {{ range .Pages }}
-    {{ $orgDate := partial "org-date.html" . }}
+    {{ $orgDate := partial "org-datetime.html" . }}
     {{ $posts = $posts | append (dict "page" . "orgDate" $orgDate) }}
   {{ end }}
   {{ $sortedPosts := sort $posts "orgDate" "desc" }}
@@ -32,7 +32,7 @@
     {{ $paginator = .Paginate $pageObjects $pageSize }}
     {{ $paginatedPosts = slice }}
     {{ range $paginator.Pages }}
-      {{ $orgDate := partial "org-date.html" . }}
+      {{ $orgDate := partial "org-datetime.html" . }}
       {{ $paginatedPosts = $paginatedPosts | append (dict "page" . "orgDate" $orgDate) }}
     {{ end }}
     {{ $paginatedPosts = sort $paginatedPosts "orgDate" "desc" }}

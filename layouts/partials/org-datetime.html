@@ -1,0 +1,57 @@
+{{- /* org-datetime partial - extracts full datetime from org date field including time */}}
+{{- $page := . -}}
+{{- $datetime := $page.Date -}}
+{{- $found := false -}}
+
+{{- /* For org files, check RawContent for #+date: with time */ -}}
+{{- if and $page.File (eq $page.File.Ext "org") -}}
+  {{- $rawContent := $page.RawContent -}}
+  {{- /* Match format: <YYYY-MM-DD Day HH:MM> */ -}}
+  {{- $pattern := `(?mi)^#\+date:\s*<(\d{4}-\d{2}-\d{2})\s+\w+\s+(\d{2}:\d{2})` -}}
+  {{- $match := findRE $pattern $rawContent 1 -}}
+  {{- if $match -}}
+    {{- $line := index $match 0 -}}
+    {{- /* Extract date */ -}}
+    {{- $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}}
+    {{- /* Extract time */ -}}
+    {{- $timeMatch := findRE `(\d{2}:\d{2})` $line 1 -}}
+    {{- if and $dateMatch $timeMatch -}}
+      {{- $dateStr := index $dateMatch 0 -}}
+      {{- $timeStr := index $timeMatch 0 -}}
+      {{- /* Combine into RFC3339 format */ -}}
+      {{- $datetimeStr := printf "%sT%s:00Z" $dateStr $timeStr -}}
+      {{- $datetime = time $datetimeStr -}}
+      {{- $found = true -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- /* Fallback: try date only */ -}}
+  {{- if not $found -}}
+    {{- $pattern := `(?mi)^#\+date:\s*<(\d{4}-\d{2}-\d{2})` -}}
+    {{- $match := findRE $pattern $rawContent 1 -}}
+    {{- if $match -}}
+      {{- $line := index $match 0 -}}
+      {{- $dateMatch := findRE `(\d{4}-\d{2}-\d{2})` $line 1 -}}
+      {{- if $dateMatch -}}
+        {{- $dateStr := index $dateMatch 0 -}}
+        {{- $datetime = time $dateStr -}}
+        {{- $found = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Fallback to .Params.date */ -}}
+{{- if not $found -}}
+  {{- with $page.Params.date -}}
+    {{- $dateStr := . | string -}}
+    {{- if findRE `<\d{4}-\d{2}-\d{2}` $dateStr -}}
+      {{- $dateMatch := findRE `\d{4}-\d{2}-\d{2}` $dateStr 1 -}}
+      {{- if $dateMatch -}}
+        {{- $datetime = time (index $dateMatch 0) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $datetime -}}
