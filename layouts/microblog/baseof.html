@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $title := partial "org-title.html" . }}{{ if $title }}{{ $title }} | {{ end }}{{ site.Title }}</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  {{ block "styles" . }}{{ end }}
+  <!-- Responsive CSS must load LAST to override page-specific styles -->
+  <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body{{ block "bodyAttrs" . }}{{ end }}>
+  {{ block "main" . }}{{ end }}
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>
