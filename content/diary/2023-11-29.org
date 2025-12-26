@@ -5,10 +5,6 @@
 #+date: <2023-11-29 Wed 08:21>
 
 
-#+BEGIN_tag
-{{{t}}} [[id:ydb1kfn02wj0][Modus Vivendi]]
-#+END_tag
-
 I've been experiencing random impulses of depression lately, perhaps a part of
 what's diagnosed as mood swings and mood disorders. While I can not decide
 precisely what's going wrong I'm trying to do my best to overcome it. I'm
@@ -79,7 +75,7 @@ have a severe desire to go into the same action list just like the day before.
 The trade-off here is: 1. You can develop the routine regardless of your state, if
 you feel so good today you do it and if you do not you do it. 2. It produces
 something, so even if it does not help healing, at least you are getting things
-done (I say productive and depressed is better than unproductive and depressed).
+done (I say productive and depressed is better than unproductive and depressed). #[[id:ydb1kfn02wj0][Modus Vivendi]]
 
 - [2024-02-11 Sun 05:38] I think this method still works fine after all these
   months, perhaps the only thing to focus on more is crisis management.
@@ -100,7 +96,7 @@ done (I say productive and depressed is better than unproductive and depressed).
   you believe that you might like it, do it. For me, I found out that doing my
   favorite activities that are mostly about me and taking care of myself, and
   making sure that I am doing the best for me to have a good time, that was
-  always the best way for me to get out of depression.
+  always the best way for me to get out of depression. 
 
 - [2025-12-22 Mon 22:02] Sports really help. As well as a good diet.
 
