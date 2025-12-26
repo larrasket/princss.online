@@ -4,7 +4,8 @@
 #+title: I can also paint
 #+DATE:  <2023-06-22 Thu 13:00>
 #+filetags: :project:
-#+INCLUDE: ~/roam/common/org-macros.setup
+#+MACRO: hl @@html:<span style="background-color: #FFFF00;">$1</span>@@
+
 
 #+BEGIN_PREVIEW
 Or; An Introduction to the Fragments of Self
