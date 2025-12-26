@@ -19,7 +19,7 @@ body {
     padding-top: 20px;
     display: block;
     margin: auto;
-    width: 625px;
+    width: 850px;
 }
 
 /* Blog layout with artwork */
@@ -34,7 +34,7 @@ body {
 /* Desktop: show artwork sidebar */
 @media (min-width: 1100px) {
     body {
-        width: 950px;
+        width: 1100px;
     }
 
     .blog-layout {
@@ -44,7 +44,7 @@ body {
 
     .blog-content {
         flex: 1;
-        max-width: 625px;
+        max-width: 850px;
     }
 
     .separator {
@@ -53,7 +53,7 @@ body {
     }
 
     .blog-artwork {
-        width: 320px;
+        width: 420px;
         flex-shrink: 0;
     }
 
