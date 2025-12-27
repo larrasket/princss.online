@@ -2,7 +2,7 @@
 :ID:       discovery-beethoven-moonlight-sonata
 :END:
 #+title: Moonlight Sonata
-#+date: 2023-07-15
+#+date: <2021-07-15 Thu>
 #+artist: Ludwig van Beethoven
 #+image: /media/images/music-images/beethoven_moonlight_sonata.png
 
