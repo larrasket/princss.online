@@ -3,7 +3,7 @@
 :CUSTOM_ID: s3mr0c15zgd4
 :END:
 #+title: Ted K (2021)
-#+date: 2024-12-25
+#+date: <2024-01-20 Sat>
 #+image: /media/images/films-images/ted-k.jpg
 #+genre: Drama, Biography
 #+director: Tony Stone
