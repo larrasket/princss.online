@@ -3,7 +3,7 @@
 :CUSTOM_ID: p0jo7z82wda1
 :END:
 #+title: Detachment (2011)
-#+date: 2024-12-25
+#+date: <2019-12-25 Wed>
 #+image: /media/images/films-images/detachment.jpg
 #+genre: Drama
 #+director: Tony Kaye
