@@ -57,7 +57,7 @@ reports an /assumed/ gamma for PNG decoding, not necessarily the
 presence of an actual =gAMA= chunk in the file. You were chasing a
 phantom.)
 
-*** Attempt 3: Nuclear 
+** Attempt 3: Nuclear 
 :PROPERTIES:
 :CUSTOM_ID: attempt-3-the-nuclear-option
 :END:
@@ -106,8 +106,7 @@ chunk iCCP at offset 0x00025, length 5147
 #+end_example
 
 There it is: an embedded ICC color profile, about 5KB in size.
-
-*No =gAMA= chunk. No broken alpha. Just an ICC profile.*
+No =gAMA= chunk. No broken alpha. Just an ICC profile
 
 ** What's Really Happening
 :PROPERTIES:
@@ -115,13 +114,13 @@ There it is: an embedded ICC color profile, about 5KB in size.
 :END:
 Here's the key insight that explains everything:
 
-1. *Your PNG contains an embedded ICC color profile* (likely Display-P3
+1. The PNG contains an embedded ICC color profile* (likely Display-P3
    or another wide-gamut color space)
-2. *Chrome fully honors ICC profiles* and performs proper color
+2. Chrome fully honors ICC profiles and performs proper color
    management
-3. *Desktop image viewers often ignore or approximate ICC profiles* to
+3. Desktop image viewers often ignore or approximate ICC profiles to
    keep things simple
-4. *Result:* Chrome shows you what the image /actually/ looks like
+4.Result: Chrome shows you what the image /actually/ looks like
    according to its embedded profile, while desktop apps show you a
    “helpful lie”
 
@@ -131,10 +130,6 @@ pixel values are encoded for Display-P3, but when Chrome renders them,
 it respects that color space. Desktop apps? They just assume sRGB and
 move on.
 
-** The Actual Fix
-:PROPERTIES:
-:CUSTOM_ID: the-actual-fix
-:END:
 You don't want to /strip/ the ICC profile---that would leave Display-P3
 pixel values being interpreted as sRGB, making things worse. You need to
 /convert/ the pixels to sRGB:
@@ -150,20 +145,11 @@ correct sRGB ICC profile
 After running this, Chrome will display the images correctly---matching
 what you saw in your desktop apps all along.
 
-** Why This Matters
-:PROPERTIES:
-:CUSTOM_ID: why-this-matters
-:END:
-This isn't just a quirky bug---it's a window into how modern color
-management works (and sometimes doesn't work). We're living in a world
-where:
+Unironically we're living in a world where:
 
-- *Wide-gamut displays are everywhere:* Modern devices support
-  Display-P3, DCI-P3, and other wider color spaces
-- *Software support is inconsistent:* Some apps do full color
-  management, others fake it
-- *The web is transitioning:* Chrome and Safari do proper color
-  management; many other tools don't
+- *Wide-gamut displays are everywhere:* Modern devices support Display-P3, DCI-P3, and other wider color spaces
+- *Software support is inconsistent:* Some apps do full color management, others fake it
+- *The web is transitioning:* Chrome and Safari do proper color management; many other tools don't
 
 The “helpful lies” that desktop image viewers tell you---ignoring ICC
 profiles, making assumptions about color space---work great until you
