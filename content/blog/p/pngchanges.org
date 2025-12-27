@@ -8,13 +8,11 @@
 
 Check this beautiful painting, Pleading, an artwork by Sir Lawrence Alma-Tadema:
 
-[[file:../i/2025-12-27_18-17-51_screenshot.png]]
+#+DOWNLOADED: screenshot @ 2025-12-27 18:21:51
+[[file:../i/2025-12-27_18-21-51_screenshot.png]]
 
 
-If you are using Firefox or a Chromium browser (for me =Google Chrome
-143.0.7499.170=), it's very likely that you are seeing a very foggy version of
-the painting, however, if you download the image and open it with your default
-image viewer (or open it in the Safari browser), you will see the image normally.
+If you are using Firefox or a Chromium browser (for me =Google Chrome 143.0.7499.170=), it's very likely that you are seeing a very foggy version of the painting, however, if you download the image and open it with your default image viewer (or open it in the Safari browser), you will see the image normally.
 
 My website contains some of these artworks, you're probably looking at one now on the right side of the page if you are reading from a desktop browser, I sent one of the pages to my friend and he told me that the image looks foggy, and I spent hours debugging a nasty edge case in how browsers handle PNG color profiles.
 
@@ -25,11 +23,10 @@ My website contains some of these artworks, you're probably looking at one now o
 :CUSTOM_ID: the-problem
 :END:
 You open a PNG screenshot in your desktop app, t looks great. You open the same
-image in Chrome---suddenly there's a white, foggy veil over everything. The
+image in Chrome, suddenly there's a white, foggy veil over everything. The
 contrast is wrong, colors look washed out, and you're left wondering if the file
 got corrupted somehow. The instinct? “Something must be wrong with the image
 encoding.” Maybe it's alpha transparency? Gamma? Some weird metadata?
-
 
 ** Attempt 1: Strip Metadata and Fix Alpha
 :PROPERTIES:
@@ -94,7 +91,7 @@ pngcrush -ow -rem gAMA -rem cHRM -rem iCCP -rem sRGB *.png
 
 *Result:* Still no change.
 
-Plot twist---there was never a =gAMA= chunk to begin with!
+Plot twist; here was never a =gAMA= chunk to begin with!
 
 ** The Smoking Gun
 :PROPERTIES:
@@ -134,13 +131,13 @@ Here's the key insight that explains everything:
    according to its embedded profile, while desktop apps show you a
    “helpful lie”
 
-The images came from the internet---likely screenshots from macOS, iOS,
+The images came from the internet, likely screenshots from macOS, iOS,
 or modern web tools that default to the Display-P3 color space. The
 pixel values are encoded for Display-P3, but when Chrome renders them,
 it respects that color space. Desktop apps? They just assume sRGB and
 move on.
 
-You don't want to /strip/ the ICC profile---that would leave Display-P3
+You don't want to /strip/ the ICC profile, that would leave Display-P3
 pixel values being interpreted as sRGB, making things worse. You need to
 /convert/ the pixels to sRGB:
 
@@ -152,7 +149,7 @@ This command does three things: 1. Reads the embedded ICC profile 2.
 Converts the pixel values from that color space to sRGB 3. Embeds a
 correct sRGB ICC profile
 
-After running this, Chrome will display the images correctly---matching
+After running this, Chrome will display the images correctly, matching
 what you saw in your desktop apps all along.
 
 Unironically we're living in a world where modern devices support Display-P3, DCI-P3, and other wider color spaces but some apps do full color management, others fake it.
