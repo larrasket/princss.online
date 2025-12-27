@@ -3,7 +3,7 @@
 :CUSTOM_ID: dc2ac341usk0
 :END:
 #+title: The True Man 1998 
-#+date: 2024-12-25
+#+date: <2023-07-15 Sat>
 #+image: /media/images/films-images/truman.jpg
 #+genre: Comedy, Drama
 #+director: Peter Weir
