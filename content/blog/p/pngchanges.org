@@ -164,3 +164,4 @@ Takeaways:
 4. Convert, don't strip. When dealing with ICC profiles, you must convert pixel values to the target color space, not just remove the
    profile
 
+#[[id:4u5664n02wj0][Programming]]
