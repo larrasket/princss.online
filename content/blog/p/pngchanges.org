@@ -15,7 +15,7 @@ Check this beautiful painting, Pleading, an artwork by Sir Lawrence Alma-Tadema:
 
 #+begin_export html
 If you are using Firefox or a Chromium browser (for me Google Chrome 143.0.7499.170), it's very likely that you are seeing a very foggy version of the painting, however, if you 
-<a href="/i/2025-12-27_18-21-51_screenshot.png" download="screenshot.png">
+<a href="/blog/i/2025-12-27_18-21-51_screenshot.png" download="screenshot.png">
 download the image</a> and open it with your default image viewer (or open it in the Safari browser), you will see the image normally.
 #+end_export
 
