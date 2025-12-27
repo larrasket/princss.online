@@ -3,7 +3,7 @@
 :CUSTOM_ID: t4ns1d26ahe5
 :END:
 #+title: Falling Down (1993)
-#+date: <2016-12-25 Sun>
+#+date: <2020-10-13 Tue>
 #+image: /media/images/films-images/falling-down.jpg
 #+genre: Drama, Thriller
 #+director: Joel Schumacher
