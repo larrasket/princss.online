@@ -2,7 +2,7 @@
 :ID:       discovery-fairuz-legendary
 :END:
 #+title: Legendary Fairuz
-#+date: 2024-03-01
+#+date: <2019-03-01 Fri>
 #+artist: Fairuz
 #+image: /media/images/music-images/fairuz_legendary.png
 
