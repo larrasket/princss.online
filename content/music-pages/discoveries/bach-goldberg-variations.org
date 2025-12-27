@@ -2,7 +2,7 @@
 :ID:       discovery-bach-goldberg-variations
 :END:
 #+title: Goldberg Variations
-#+date: 2023-05-22
+#+date: <2021-05-22 Sat>
 #+artist: Johann Sebastian Bach
 #+image: /media/images/music-images/bach_goldberg_variations.png
 
