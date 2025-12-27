@@ -2,7 +2,7 @@
 :ID:       discovery-death-in-june-nada
 :END:
 #+title: Nada!
-#+date: 2023-09-12
+#+date: <2023-09-12 Tue>
 #+artist: Death in June
 #+image: /media/images/music-images/death_in_june_nada.png
 
