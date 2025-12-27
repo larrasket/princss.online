@@ -3,6 +3,7 @@
 :CUSTOM_ID: psakoed0nsk0
 :END:
 #+title: Device is left behind.
+#+DATE: <2025-12-21 Sun>
 
 Apparently, if you go somewhere far from home (or any usual stay place) with multiple Apple devices and leave one behind, the FindMy App alerts: "device left behind"
 The irony is my MacBook  is named "saleh" so the notification says: "saleh is left behind" and idk about that
