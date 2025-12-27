@@ -2,7 +2,7 @@
 :ID:       discovery-bach-toccata-fugue
 :END:
 #+title: Toccata and Fugue in D minor
-#+date: 2023-04-10
+#+date: <2019-04-10 Wed>
 #+artist: Johann Sebastian Bach
 #+image: /media/images/music-images/bach_toccata_fugue.png
 
