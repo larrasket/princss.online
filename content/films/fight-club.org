@@ -3,7 +3,7 @@
 :CUSTOM_ID: j4di1t26qxu5
 :END:
 #+title: Fight Club (1999)
-#+date: 2024-12-25
+#+date: <2017-10-25 Wed>
 #+image: /media/images/films-images/fight-club.jpg
 #+genre: Drama, Thriller
 #+director: David Fincher
