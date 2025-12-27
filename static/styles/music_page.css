@@ -192,6 +192,11 @@ body {
     text-align: right;
 }
 
+.discovery-left img {
+    max-width: 118px !important;
+    height: auto !important;
+}
+
 /* Mobile responsive - for iframe content */
 @media screen and (max-width: 480px) {
     html,
