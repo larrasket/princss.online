@@ -3,7 +3,7 @@
 :CUSTOM_ID: f9be7p82mtl1
 :END:
 #+title: Black Swan (2010)
-#+date: 2024-12-25
+#+date: <2023-11-08 Wed>
 #+image: /media/images/films-images/black-swan.jpg
 #+genre: Drama, Thriller
 #+director: Darren Aronofsky
