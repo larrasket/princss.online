@@ -3,7 +3,7 @@
 :CUSTOM_ID: e8ad6o71lsk0
 :END:
 #+title: Whiplash (2014)
-#+date: 2024-12-25
+#+date: <2023-12-02 Sat>
 #+image: /media/images/films-images/whiplash.jpg
 #+genre: Drama, Music
 #+director: Damien Chazelle
