@@ -69,7 +69,7 @@ reports an /assumed/ gamma for PNG decoding, not necessarily the
 presence of an actual =gAMA= chunk in the file. You were chasing a
 phantom.)
 
-** Attempt 3: Nuclear 
+** Attempt 3: Nuclear option
 :PROPERTIES:
 :CUSTOM_ID: attempt-3-the-nuclear-option
 :END:
