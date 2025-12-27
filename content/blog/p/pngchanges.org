@@ -2,7 +2,7 @@
 :ID:       sq48ttd1vsk0
 :CUSTOM_ID: sq48ttd1vsk0
 :END:
-#+title: Opening this PNG in Chrome shows a different image than in a desktop app
+#+title: Opening this PNG in Chrome shows a different image than in Safari or any desktop app
 #+DATE: <2025-12-27 Sat>
 
 
