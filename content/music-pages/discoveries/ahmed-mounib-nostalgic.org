@@ -2,7 +2,7 @@
 :ID:       discovery-ahmed-mounib-nostalgic
 :END:
 #+title: Ya Waadi Aal Ayame
-#+date: 2024-07-01
+#+date: <2024-07-02 Tue>
 #+artist: Ahmed Mounib
 #+image: /media/images/music-images/ahmed_mounib_best.png
 
