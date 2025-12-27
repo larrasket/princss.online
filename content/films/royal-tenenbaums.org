@@ -3,7 +3,7 @@
 :CUSTOM_ID: n8hm5x60uby9
 :END:
 #+title: The Royal Tenenbaums (2001)
-#+date: 2024-12-25
+#+date: <2020-07-28 Tue>
 #+image: /media/images/films-images/royal-tenenbaums.jpg
 #+genre: Comedy, Drama
 #+director: Wes Anderson
