@@ -2,7 +2,7 @@
 :ID:       discovery-tsu-prince-gumbay
 :END:
 #+title: Prince of Gumbay
-#+date: 2024-05-15
+#+date: <2023-05-15 Mon>
 #+artist: TSU!
 #+image: /media/images/music-images/tsu_prince_gumbay.png
 
