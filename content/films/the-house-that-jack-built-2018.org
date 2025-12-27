@@ -3,7 +3,7 @@
 :CUSTOM_ID: 052d06100
 :END:
 #+title: The House That Jack Built (2018)
-#+date: <2025-12-27 Sat>
+#+date: <2020-02-06 Thu>
 #+image: /media/images/films-images/the-house-that-jack-built-2018.jpg
 #+genre: Drama, Crime
 #+director: Lars von Trier
