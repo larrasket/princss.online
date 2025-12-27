@@ -5,10 +5,21 @@
 #+title: Opening this PNG in Chrome shows a different version than in a desktop app
 #+DATE: <2025-12-27 Sat>
 
+
+Check this thumbnail of Pleading, an artwork by Sir Lawrence Alma-Tadema:
+
+#+DOWNLOADED: screenshot @ 2025-12-27 17:58:56
+[[file:../i/2025-12-27_17-58-56_screenshot.png]]
+
+
+
+
 Have you ever downloaded images from the internet that look perfectly
 fine in your desktop image viewer, but appear washed out with a strange
 white haze when viewed in Chrome? Probably not but I did. Nasty edge case in how browsers handle
 PNG color profiles
+
+
 
 * The Problem
 :PROPERTIES:
