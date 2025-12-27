@@ -2,7 +2,7 @@
 :ID:       qwclwg91vqk0
 :CUSTOM_ID: qwclwg91vqk0
 :END:
-#+date: <2025-11-02 Sun 23:59>
+#+date: <2025-11-03 Mon 23:59>
 #+title: Aljazira old website
 
 I still remember Aljazira's old Arabic UI very well, it was very alive, feature-rich, has a lot of surprises and just "alive". It was a portal to the internet. There are still snapshots of it in the Wayback Machine. I feel a lot of nostalgia for it.
