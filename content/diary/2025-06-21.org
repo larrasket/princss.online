@@ -2,7 +2,7 @@
 :ID:       dchk6n80xlk0
 :CUSTOM_ID: dchk6n80xlk0
 :END:
-#+date: <2025-06-20 Fri 12:37>
+#+date: <2025-06-21 Sat 12:37>
 #+title: Portrait of a North African (1870)
 
 [[id:eaphdi80xlk0][Alexandre Cabanel]] has a painting of this name depicting a black man with
