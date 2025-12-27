@@ -2,7 +2,7 @@
 :ID:       sq48ttd1vsk0
 :CUSTOM_ID: sq48ttd1vsk0
 :END:
-#+title: Foggy png bug
+#+title: Opening this PNG in Chrome shows a different version than in a desktop app
 #+DATE: <2025-12-27 Sat>
 
 Have you ever downloaded images from the internet that look perfectly
