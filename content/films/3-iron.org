@@ -3,7 +3,7 @@
 :CUSTOM_ID: m7gl4w59tax8
 :END:
 #+title: 3-Iron (2004)
-#+date: 2024-12-25
+#+date: <2021-12-24 Fri>
 #+image: /media/images/films-images/3-iron.jpg
 #+genre: Drama, Romance
 #+director: Kim Ki-duk
