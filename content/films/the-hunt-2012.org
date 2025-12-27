@@ -3,7 +3,7 @@
 :CUSTOM_ID: 4796e0b00
 :END:
 #+title: The Hunt (2012)
-#+date: 2025-12-26
+#+date: <2021-12-20 Mon>
 #+image: /media/images/films-images/the-hunt-2012.jpg
 #+genre: Drama
 #+director: Thomas Vinterbreg
