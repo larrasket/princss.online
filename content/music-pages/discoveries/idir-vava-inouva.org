@@ -2,7 +2,7 @@
 :ID:       discovery-idir-vava-inouva
 :END:
 #+title: A Vava Inouva
-#+date: 2024-06-10
+#+date: <2022-06-10 Fri>
 #+artist: Idir
 #+image: /media/images/music-images/idir_vava_inouva.png
 
