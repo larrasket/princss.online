@@ -6,12 +6,13 @@
 #+DATE: <2025-12-27 Sat>
 
 
-Check this thumbnail of Pleading, an artwork by Sir Lawrence Alma-Tadema:
-
-#+DOWNLOADED: screenshot @ 2025-12-27 17:58:56
-[[file:../i/2025-12-27_17-58-56_screenshot.png]]
+Check this beautiful painting, Pleading, an artwork by Sir Lawrence Alma-Tadema:
 
 
+#+DOWNLOADED: screenshot @ 2025-12-27 18:02:51
+[[file:../i/2025-12-27_18-02-51_screenshot.png]]
+
+If you are using Firefox or a Chromium browser (for me =Google Chrome 143.0.7499.170=), it's very likely that you are seeing a very foggy version of the painting, however, if you download the image and open it with your default image viewer (or open it in the Safari browser), you will see the image normally
 
 
 Have you ever downloaded images from the internet that look perfectly
