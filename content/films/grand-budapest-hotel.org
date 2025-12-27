@@ -3,7 +3,7 @@
 :CUSTOM_ID: o9in6y71vcz0
 :END:
 #+title: The Grand Budapest Hotel (2014)
-#+date: 2024-12-25
+#+date: <2019-10-14 Mon>
 #+image: /media/images/films-images/grand-budapest-hotel.jpg
 #+genre: Comedy, Drama, Adventure
 #+director: Wes Anderson
