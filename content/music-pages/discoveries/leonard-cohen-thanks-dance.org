@@ -2,7 +2,7 @@
 :ID:       discovery-leonard-cohen-thanks-dance
 :END:
 #+title: Thanks for the Dance
-#+date: 2023-08-05
+#+date: <2020-08-05 Wed>
 #+artist: Leonard Cohen
 #+image: /media/images/music-images/leonard_cohen_thanks_for_dance.png
 
