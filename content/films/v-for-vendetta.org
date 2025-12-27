@@ -3,7 +3,7 @@
 :CUSTOM_ID: q1kp8a93xeb2
 :END:
 #+title: V for Vendetta (2005)
-#+date: 2024-12-25
+#+date: <2019-11-10 Sun>
 #+image: /media/images/films-images/v-for-vendetta.jpg
 #+genre: Action, Drama, Thriller
 #+director: James McTeigue
