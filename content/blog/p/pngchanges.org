@@ -28,11 +28,10 @@ My website contains some of these artworks, you're probably looking at one now o
 :PROPERTIES:
 :CUSTOM_ID: the-problem
 :END:
-You open a PNG screenshot in your desktop app, t looks great. You open the same
-image in Chrome, suddenly there's a white, foggy veil over everything. The
+You open a PNG screenshot in your desktop app, it looks great, you include it in a web page suddenly there's a white, foggy veil over everything. The
 contrast is wrong, colors look washed out, and you're left wondering if the file
 got corrupted somehow. The instinct? “Something must be wrong with the image
-encoding.” Maybe it's alpha transparency? Gamma? Some weird metadata?
+encoding.” Maybe it's alpha transparency? Gamma? Some weird metadata? (will tbh this was not really my instinct, I first debugged my web server for 20 minutes.)
 
 ** Attempt 1: Strip Metadata and Fix Alpha
 :PROPERTIES:
@@ -84,7 +83,7 @@ mogrify -alpha remove -background white -flatten -colorspace sRGB *.png
 
 Because the problem isn't in the pixel data at all.
 
-*** Attempt 4: Remove the gAMA Chunk
+** Attempt 4: Remove the gAMA Chunk
 :PROPERTIES:
 :CUSTOM_ID: attempt-4-remove-the-gama-chunk
 :END:
@@ -125,19 +124,12 @@ No =gAMA= chunk. No broken alpha. Just an ICC profile
 :PROPERTIES:
 :CUSTOM_ID: whats-really-happening
 :END:
-Here's the key insight that explains everything:
 
-1. The PNG contains an embedded ICC color profile* (likely Display-P3
-   or another wide-gamut color space)
-2. Chrome fully honors ICC profiles and performs proper color
-   management
-3. Desktop image viewers often ignore or approximate ICC profiles to
-   keep things simple
-4.Result: Chrome shows you what the image /actually/ looks like
-   according to its embedded profile, while desktop apps show you a
-   “helpful lie”
+(1) The PNG contains an embedded ICC color profile* (likely Display-P3 or another wide-gamut color space), (2) Chrome fully honors ICC profiles and performs proper color management (3) Desktop image viewers often ignore or approximate ICC profiles to keep things simple.
 
-The images came from the internet, likely screenshots from macOS, iOS,
+Result: Chrome shows you what the image /actually/ looks like according to its embedded profile, while desktop apps (and apparently Safari) show you a “helpful lie”.
+
+The paintings came from the internet, likely screenshots from macOS, iOS,
 or modern web tools that default to the Display-P3 color space. The
 pixel values are encoded for Display-P3, but when Chrome renders them,
 it respects that color space. Desktop apps? They just assume sRGB and
