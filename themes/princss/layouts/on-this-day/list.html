@@ -186,11 +186,6 @@
     if (selected) selected.classList.add('is-selected');
     
     showDayDetail(day);
-    
-    // Scroll to day detail section
-    setTimeout(() => {
-      document.getElementById('day-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
   }
   
   function showDayDetail(day) {
@@ -268,6 +263,10 @@
   async function loadLastfmHistory(month, day) {
     const section = document.getElementById('lastfm-section');
     const content = document.getElementById('lastfm-content');
+    
+    // Show loading state immediately
+    section.style.display = 'block';
+    content.innerHTML = '<div style="color:var(--lightgold);font-style:italic;">Loading listening history...</div>';
     
     try {
       const currentYear = new Date().getFullYear();
