@@ -40,7 +40,7 @@
     </div>
 
     <div class="nav-link">
-      <a href="/blog/a/" class="link">anth.</a>
+      <a href="/blog/h/a/" class="link">anth.</a>
     </div>
 
     <div class="nav-link" style="border-right: none">
@@ -81,6 +81,64 @@
           >
             →
           </button>
+        </div>
+      </div>
+
+      <!-- Mobile: On This Day Section -->
+      <div class="mobile-widget on-this-day-widget">
+        <div class="name-header">on this day</div>
+        <div class="on-this-day-content">
+          {{/* Get current month and day */}}
+          {{ $today := now }}
+          {{ $currentMonth := $today.Month }}
+          {{ $currentDay := $today.Day }}
+          
+          {{/* Find entries from this day in previous years */}}
+          {{ $entries := slice }}
+          
+          {{ range where .Site.RegularPages "Section" "diary" }}
+            {{ $date := partial "org-date.html" . }}
+            {{ if and (eq (int $date.Month) (int $currentMonth)) (eq $date.Day $currentDay) }}
+              {{ $entries = $entries | append (dict "page" . "date" $date "type" "diary") }}
+            {{ end }}
+          {{ end }}
+          
+          {{ range where .Site.RegularPages "Section" "microblog" }}
+            {{ $date := partial "org-date.html" . }}
+            {{ if and (eq (int $date.Month) (int $currentMonth)) (eq $date.Day $currentDay) }}
+              {{ $entries = $entries | append (dict "page" . "date" $date "type" "microblog") }}
+            {{ end }}
+          {{ end }}
+          
+          {{ range where .Site.RegularPages "Section" "blog" }}
+            {{ $date := partial "org-date.html" . }}
+            {{ if and (eq (int $date.Month) (int $currentMonth)) (eq $date.Day $currentDay) }}
+              {{ $entries = $entries | append (dict "page" . "date" $date "type" "blog") }}
+            {{ end }}
+          {{ end }}
+          
+          {{ range where .Site.RegularPages "Section" "films" }}
+            {{ $date := partial "org-date.html" . }}
+            {{ if and (eq (int $date.Month) (int $currentMonth)) (eq $date.Day $currentDay) }}
+              {{ $entries = $entries | append (dict "page" . "date" $date "type" "films") }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if gt (len $entries) 0 }}
+            <div class="on-this-day-list">
+              {{ range $entries }}
+                <div class="otd-entry">
+                  <span class="otd-year">{{ .date.Year }}</span>
+                  <span class="otd-type">{{ .type }}</span>
+                  <a href="{{ .page.RelPermalink }}">{{ partial "org-title.html" .page | default .page.Title | truncate 30 }}</a>
+                </div>
+              {{ end }}
+            </div>
+          {{ else }}
+            <div class="otd-empty">Nothing on this day</div>
+          {{ end }}
+          {{ $todayHash := printf "%02d-%02d" (int $today.Month) $today.Day }}
+          <a href="/on-this-day/#{{ $todayHash }}" class="otd-link">→ see all</a>
         </div>
       </div>
 
@@ -457,7 +515,10 @@
           if (isHoliday(year, month - 1, dayCount)) {
             cssClass += " holiday";
           }
-          calendarHtml += `<td class="${cssClass}">${dayCount}</td>`;
+          // Make day clickable - navigate to on-this-day with date hash
+          const paddedMonth = String(month).padStart(2, '0');
+          const paddedDay = String(dayCount).padStart(2, '0');
+          calendarHtml += `<td class="${cssClass}" onclick="window.location.href='/on-this-day/#${paddedMonth}-${paddedDay}'">${dayCount}</td>`;
           dayCount++;
         }
       }

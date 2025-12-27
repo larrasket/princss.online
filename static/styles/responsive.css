@@ -831,3 +831,44 @@ img {
 .film-calendar {
     -webkit-overflow-scrolling: touch;
 }
+
+/* On This Day widget - full width on mobile like neighbors */
+    .on-this-day-widget {
+        grid-column: 1 / -1;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    .on-this-day-content {
+        padding: 8px;
+    }
+    
+    .otd-entry {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 11px;
+    }
+    
+    .otd-year, .otd-type {
+        display: inline;
+        min-width: auto;
+        font-size: 11px;
+    }
+    
+    .otd-year::after {
+        content: " ";
+    }
+    
+    .otd-type::after {
+        content: ": ";
+    }
+    
+    .otd-entry a {
+        display: inline;
+        font-size: 11px;
+    }
+    
+    .name-header {
+        font-size: 11px !important;
+        padding: 4px !important;
+    }

@@ -1,0 +1,360 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/styles/on-this-day.css" />
+{{ end }}
+
+{{ define "main" }}
+<img src="/media/images/diary_header.png" />
+<div class="header">
+  <div class="left-header">
+    <a href="/">vita nouva</a> / <strong>on this day</strong>
+  </div>
+  <div class="right-header">What happened on this date?</div>
+</div>
+
+<div class="content">
+  <div class="page-title">On This Day</div>
+  
+  <!-- Navigation -->
+  <div class="month-nav">
+    <button id="prev-month" class="nav-btn">← Prev</button>
+    <span class="current-month" id="current-month"></span>
+    <button id="next-month" class="nav-btn">Next →</button>
+  </div>
+  
+  <!-- Month Calendar Grid -->
+  <div class="month-grid" id="month-grid"></div>
+  
+  <!-- Selected Day Detail -->
+  <div class="day-detail" id="day-detail" style="display: none;">
+    <div class="selected-date" id="selected-date"></div>
+    <p class="subtitle">Content posted on this date across all years</p>
+    <div id="results"></div>
+    
+    <!-- Last.fm Listening History -->
+    <div class="lastfm-section" id="lastfm-section" style="display: none;">
+      <h2>Listened to on this day</h2>
+      <div id="lastfm-content">Loading...</div>
+    </div>
+  </div>
+  
+  <div class="back-link">
+    <a href="/">← Back to home</a>
+  </div>
+</div>
+
+<div class="footer">c. lr0 2025</div>
+
+{{/* Build all content with dates for JavaScript to filter */}}
+{{ $allContent := slice }}
+
+{{/* Diary entries */}}
+{{ range where .Site.RegularPages "Section" "diary" }}
+  {{ $date := partial "org-date.html" . }}
+  {{ $allContent = $allContent | append (dict 
+    "url" .RelPermalink 
+    "title" (partial "org-title.html" . | default .Title)
+    "month" (printf "%d" (int $date.Month))
+    "day" (printf "%d" $date.Day)
+    "year" (printf "%d" $date.Year)
+    "type" "diary"
+  ) }}
+{{ end }}
+
+{{/* Microblog entries */}}
+{{ range where .Site.RegularPages "Section" "microblog" }}
+  {{ $date := partial "org-date.html" . }}
+  {{ $allContent = $allContent | append (dict 
+    "url" .RelPermalink 
+    "title" (partial "org-title.html" . | default .Title | truncate 60)
+    "month" (printf "%d" (int $date.Month))
+    "day" (printf "%d" $date.Day)
+    "year" (printf "%d" $date.Year)
+    "type" "microblog"
+  ) }}
+{{ end }}
+
+{{/* Blog entries */}}
+{{ range where .Site.RegularPages "Section" "blog" }}
+  {{ $date := partial "org-date.html" . }}
+  {{ $allContent = $allContent | append (dict 
+    "url" .RelPermalink 
+    "title" (partial "org-title.html" . | default .Title)
+    "month" (printf "%d" (int $date.Month))
+    "day" (printf "%d" $date.Day)
+    "year" (printf "%d" $date.Year)
+    "type" "blog"
+  ) }}
+{{ end }}
+
+{{/* Films entries */}}
+{{ range where .Site.RegularPages "Section" "films" }}
+  {{ $date := partial "org-date.html" . }}
+  {{ $allContent = $allContent | append (dict 
+    "url" .RelPermalink 
+    "title" (partial "org-title.html" . | default .Title)
+    "month" (printf "%d" (int $date.Month))
+    "day" (printf "%d" $date.Day)
+    "year" (printf "%d" $date.Year)
+    "type" "films"
+  ) }}
+{{ end }}
+
+<script src="/js/lastfm.js"></script>
+<script>
+  const allContent = {{ $allContent | jsonify | safeJS }};
+  
+  const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+  
+  const typeLabels = {
+    'diary': 'Diary',
+    'microblog': 'Microblog', 
+    'blog': 'Blog',
+    'films': 'Films'
+  };
+  
+  let currentMonth, currentYear;
+  let selectedDay = null;
+  
+  // Initialize
+  function init() {
+    const now = new Date();
+    currentMonth = now.getMonth();
+    currentYear = now.getFullYear();
+    selectedDay = now.getDate(); // Default to today
+    
+    // Check for hash override
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const parts = hash.split('-');
+      if (parts.length === 2) {
+        currentMonth = parseInt(parts[0]) - 1;
+        selectedDay = parseInt(parts[1]);
+      }
+    }
+    
+    renderMonth();
+    
+    // Show today's content by default
+    if (selectedDay) {
+      showDayDetail(selectedDay);
+    }
+  }
+  
+  function renderMonth() {
+    document.getElementById('current-month').textContent = `${months[currentMonth]} ${currentYear}`;
+    
+    const grid = document.getElementById('month-grid');
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+    
+    let html = '<div class="month-days">';
+    
+    for (let day = 1; day <= daysInMonth; day++) {
+      const month = currentMonth + 1;
+      const hasContent = allContent.some(item => 
+        parseInt(item.month) === month && parseInt(item.day) === day
+      );
+      
+      const isToday = today.getDate() === day && 
+                      today.getMonth() === currentMonth && 
+                      today.getFullYear() === currentYear;
+      
+      const isSelected = selectedDay === day;
+      
+      let classes = 'day-cell';
+      if (hasContent) classes += ' has-content';
+      if (isToday) classes += ' is-today';
+      if (isSelected) classes += ' is-selected';
+      
+      html += `<div class="${classes}" data-day="${day}" onclick="selectDay(${day})">${day}</div>`;
+    }
+    
+    html += '</div>';
+    grid.innerHTML = html;
+  }
+  
+  function selectDay(day) {
+    selectedDay = day;
+    const month = String(currentMonth + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    window.history.replaceState(null, '', `#${month}-${dayStr}`);
+    
+    // Update selected state
+    document.querySelectorAll('.day-cell').forEach(el => el.classList.remove('is-selected'));
+    const selected = document.querySelector(`[data-day="${day}"]`);
+    if (selected) selected.classList.add('is-selected');
+    
+    showDayDetail(day);
+    
+    // Scroll to day detail section
+    setTimeout(() => {
+      document.getElementById('day-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+  
+  function showDayDetail(day) {
+    const month = currentMonth + 1;
+    document.getElementById('day-detail').style.display = 'block';
+    document.getElementById('selected-date').textContent = `${months[currentMonth]} ${day}`;
+    
+    // Filter content for this month/day
+    const filtered = allContent.filter(item => 
+      parseInt(item.month) === month && parseInt(item.day) === day
+    );
+    
+    // Group by year
+    const byYear = {};
+    filtered.forEach(item => {
+      if (!byYear[item.year]) byYear[item.year] = {};
+      if (!byYear[item.year][item.type]) byYear[item.year][item.type] = [];
+      byYear[item.year][item.type].push(item);
+    });
+    
+    const years = Object.keys(byYear).sort((a, b) => b - a);
+    const resultsEl = document.getElementById('results');
+    
+    if (years.length === 0) {
+      resultsEl.innerHTML = '<div class="no-content">Nothing happened on this day... yet!</div>';
+    } else {
+      let html = '';
+      years.forEach(year => {
+        html += `<div class="year-section"><h2>${year}</h2>`;
+        const types = ['diary', 'microblog', 'blog', 'films'];
+        types.forEach(type => {
+          const items = byYear[year][type];
+          if (items && items.length > 0) {
+            html += `<div class="content-type"><h3>${typeLabels[type]}</h3><ul>`;
+            items.forEach(item => {
+              html += `<li><a href="${item.url}">${item.title}</a></li>`;
+            });
+            html += '</ul></div>';
+          }
+        });
+        html += '</div>';
+      });
+      resultsEl.innerHTML = html;
+    }
+    
+    // Load Last.fm
+    loadLastfmHistory(month, day);
+  }
+  
+  function prevMonth() {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    selectedDay = null;
+    document.getElementById('day-detail').style.display = 'none';
+    window.history.replaceState(null, '', window.location.pathname);
+    renderMonth();
+  }
+  
+  function nextMonth() {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    selectedDay = null;
+    document.getElementById('day-detail').style.display = 'none';
+    window.history.replaceState(null, '', window.location.pathname);
+    renderMonth();
+  }
+  
+  // Last.fm integration using existing API from lastfm.js
+  async function loadLastfmHistory(month, day) {
+    const section = document.getElementById('lastfm-section');
+    const content = document.getElementById('lastfm-content');
+    
+    try {
+      const currentYear = new Date().getFullYear();
+      let allTracks = [];
+      
+      // Check last 5 years
+      for (let year = currentYear; year >= currentYear - 5; year--) {
+        const dateStart = new Date(year, month - 1, day, 0, 0, 0);
+        const dateEnd = new Date(year, month - 1, day, 23, 59, 59);
+        
+        const from = Math.floor(dateStart.getTime() / 1000);
+        const to = Math.floor(dateEnd.getTime() / 1000);
+        
+        const apiUrl = `${LASTFM_API_URL}?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&from=${from}&to=${to}&format=json&limit=10`;
+        
+        try {
+          const res = await fetch(apiUrl);
+          if (res.ok) {
+            const data = await res.json();
+            if (data.recenttracks && data.recenttracks.track) {
+              const tracks = Array.isArray(data.recenttracks.track) 
+                ? data.recenttracks.track 
+                : [data.recenttracks.track];
+              
+              tracks.filter(t => t.date).forEach(t => {
+                // Get album image (small size = index 1, medium = 2)
+                const imgArr = t.image;
+                const albumImg = imgArr && imgArr.length > 1 ? (imgArr[1]['#text'] || imgArr[0]['#text']) : '';
+                allTracks.push({
+                  artist: t.artist['#text'],
+                  track: t.name,
+                  image: albumImg,
+                  year: year
+                });
+              });
+            }
+          }
+        } catch (e) {
+          console.warn(`Failed to fetch Last.fm for ${year}:`, e);
+        }
+      }
+      
+      if (allTracks.length === 0) {
+        section.style.display = 'none';
+        return;
+      }
+      
+      section.style.display = 'block';
+      
+      // Group by year
+      const byYear = {};
+      allTracks.forEach(t => {
+        if (!byYear[t.year]) byYear[t.year] = [];
+        byYear[t.year].push(t);
+      });
+      
+      let html = '';
+      Object.keys(byYear).sort((a, b) => b - a).forEach(year => {
+        html += `<div class="lastfm-year-header">${year}</div>`;
+        html += '<div class="lastfm-tracks">';
+        byYear[year].slice(0, 8).forEach(t => {
+          const img = t.image || '/media/images/default-album.png';
+          html += `<div class="lastfm-track">
+            <img src="${img}" alt="" onerror="this.style.display='none'">
+            <div class="lastfm-track-info">
+              <div class="lastfm-artist">${t.artist}</div>
+              <div class="lastfm-name">${t.track}</div>
+            </div>
+          </div>`;
+        });
+        if (byYear[year].length > 8) {
+          html += `<div class="lastfm-track" style="justify-content:center;font-style:italic;color:var(--lightgold);">+${byYear[year].length - 8} more</div>`;
+        }
+        html += '</div>';
+      });
+      
+      content.innerHTML = html;
+    } catch (err) {
+      console.error('Last.fm error:', err);
+      section.style.display = 'none';
+    }
+  }
+  
+  document.getElementById('prev-month').addEventListener('click', prevMonth);
+  document.getElementById('next-month').addEventListener('click', nextMonth);
+  window.addEventListener('hashchange', init);
+  
+  init();
+</script>
+{{ end }}

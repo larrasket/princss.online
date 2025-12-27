@@ -289,3 +289,110 @@ a.dropdown-link:hover {
     border-left: 1px dotted var(--darkbrown);
     padding-right: 0px;
 }
+
+/* On This Day Mobile Widget */
+.on-this-day-widget {
+    border: 1px dotted var(--darkbrown);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.on-this-day-content {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.on-this-day-list {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.otd-entry {
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+}
+
+.otd-year {
+    font-weight: bold;
+    color: var(--gold);
+    min-width: 40px;
+}
+
+.otd-type {
+    color: var(--lightgold);
+    font-size: 10px;
+    min-width: 50px;
+}
+
+.otd-entry a {
+    color: var(--darkbrown);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.otd-entry a:hover {
+    text-decoration: underline;
+}
+
+.otd-empty {
+    color: var(--lightgold);
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.otd-link {
+    display: block;
+    margin-top: 10px;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.otd-link:hover {
+    text-decoration: underline;
+}
+
+/* Calendar clickable days */
+#calendar td:not(.is-disabled) {
+    cursor: pointer;
+}
+
+#calendar td:not(.is-disabled):hover {
+    background-color: var(--gold);
+    color: white;
+}
+
+/* Fix On This Day widget mobile layout */
+@media (max-width: 480px) {
+    .on-this-day-widget {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .on-this-day-content {
+        padding: 8px;
+        font-size: 11px;
+    }
+    
+    .otd-entry {
+        flex-wrap: wrap;
+    }
+    
+    .otd-year {
+        min-width: 35px;
+        font-size: 11px;
+    }
+    
+    .otd-type {
+        min-width: 45px;
+        font-size: 9px;
+    }
+    
+    .otd-entry a {
+        max-width: 100%;
+        font-size: 11px;
+    }
+}
