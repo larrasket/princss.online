@@ -8,9 +8,8 @@
 
 Check this beautiful painting, Pleading, an artwork by Sir Lawrence Alma-Tadema:
 
-[[file:../i/old/2022-01-03_18-06-48_screenshot.png]]
+[[file:../i/2025-12-27_18-17-51_screenshot.png]]
 
-[[file:../i/2025-12-27_18-02-51_screenshot.png]]
 
 If you are using Firefox or a Chromium browser (for me =Google Chrome
 143.0.7499.170=), it's very likely that you are seeing a very foggy version of
