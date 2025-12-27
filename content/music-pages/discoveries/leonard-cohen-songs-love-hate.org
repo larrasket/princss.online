@@ -2,7 +2,7 @@
 :ID:       discovery-leonard-cohen-songs-love-hate
 :END:
 #+title: Songs of Love and Hate
-#+date: 2023-06-20
+#+date: <2019-06-20 Thu>
 #+artist: Leonard Cohen
 #+image: /media/images/music-images/leonard_cohen_songs_of_love_and_hate.png
 
