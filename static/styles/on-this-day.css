@@ -1,0 +1,313 @@
+/* On This Day Page - compact matching diary style */
+html {
+    background-color: var(--white);
+}
+
+body {
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 625px;
+}
+
+a {
+    color: var(--darkbrown);
+    text-decoration: 1px dotted underline;
+}
+
+a:hover {
+    opacity: 70%;
+}
+
+.header {
+    z-index: 4;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    border-bottom: 1px dotted var(--darkbrown);
+    background-color: var(--white);
+}
+
+.left-header {
+    padding: 5px 0;
+    width: 150px;
+}
+
+.right-header {
+    border-left: 1px dotted var(--darkbrown);
+    text-align: right;
+    padding: 5px;
+    width: 475px;
+    color: var(--lightgold);
+    font-style: italic;
+}
+
+.content {
+    padding-top: 10px;
+}
+
+.page-title {
+    font-weight: bold;
+    color: var(--darkbrown);
+    margin-bottom: 5px;
+}
+
+/* Compact Month Navigation */
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    border: 1px dotted var(--darkbrown);
+}
+
+.nav-btn {
+    background: var(--white);
+    border: 1px dotted var(--darkbrown);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    color: var(--darkbrown);
+}
+
+.nav-btn:hover {
+    background: var(--darkbrown);
+    color: var(--white);
+}
+
+.current-month {
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--darkbrown);
+}
+
+/* Compact Month Grid */
+.month-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    margin-bottom: 10px;
+}
+
+.day-cell {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted var(--lightgold);
+    cursor: pointer;
+    font-size: 10px;
+    background: var(--white);
+    color: var(--darkbrown);
+}
+
+.day-cell:hover {
+    background: var(--darkbrown);
+    color: var(--white);
+}
+
+.day-cell.has-content {
+    background: rgba(42, 36, 32, 0.1);
+    border-color: var(--darkbrown);
+    font-weight: bold;
+}
+
+.day-cell.is-today {
+    border: 1px solid var(--darkbrown);
+    font-weight: bold;
+}
+
+.day-cell.is-selected {
+    background: var(--darkbrown);
+    color: var(--white);
+}
+
+/* Compact Day Detail */
+.day-detail {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dotted var(--darkbrown);
+}
+
+.selected-date {
+    font-weight: bold;
+    color: var(--darkbrown);
+    margin-bottom: 3px;
+}
+
+.subtitle {
+    color: var(--lightgold);
+    font-style: italic;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.year-section {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted var(--lightgold);
+}
+
+.year-section:last-child {
+    border-bottom: none;
+}
+
+.year-section h2 {
+    font-size: 13px;
+    color: var(--darkbrown);
+    margin-bottom: 8px;
+}
+
+.content-type {
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.content-type h3 {
+    font-size: 11px;
+    color: var(--lightgold);
+    margin-bottom: 4px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.content-type ul {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.content-type li {
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+
+.content-type li::before {
+    content: "→ ";
+    color: var(--lightgold);
+}
+
+.no-content {
+    color: var(--lightgold);
+    font-style: italic;
+    padding: 15px 0;
+    font-size: 12px;
+}
+
+.back-link {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dotted var(--darkbrown);
+    font-size: 12px;
+}
+
+.footer {
+    margin-top: 15px;
+    padding: 5px 0;
+    border-top: 1px dotted var(--darkbrown);
+    text-align: right;
+    color: var(--lightgold);
+    font-size: 11px;
+}
+
+/* Last.fm section with album art */
+.lastfm-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dotted var(--lightgold);
+}
+
+.lastfm-section h2 {
+    font-size: 13px;
+    color: var(--darkbrown);
+    margin-bottom: 10px;
+}
+
+.lastfm-tracks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 6px;
+}
+
+.lastfm-track {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px;
+    border: 1px dotted var(--lightgold);
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    min-height: 50px;
+}
+
+.lastfm-track img {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    object-fit: cover;
+    filter: grayscale(50%);
+    background: var(--lightgold);
+}
+
+.lastfm-track:hover img {
+    filter: none;
+}
+
+.lastfm-track-info {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.lastfm-artist {
+    font-weight: bold;
+    color: var(--darkbrown);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lastfm-name {
+    color: var(--lightgold);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lastfm-year-header {
+    font-size: 11px;
+    color: var(--darkbrown);
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    body {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .left-header,
+    .right-header {
+        width: 100%;
+        border: none;
+    }
+
+    .right-header {
+        text-align: left;
+    }
+
+    .lastfm-track {
+        max-width: 100%;
+        flex: 1 1 calc(50% - 4px);
+    }
+}
